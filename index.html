@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игры в профессию — цикл аналитических статей</title>
+<meta name="description" content="Игры в профессию: цикл о воспроизводстве профессиональной компетенции в эпоху ИИ. Четыре актора, три времени, диагностическая карта.">
+<meta property="og:title" content="Игры в профессию">
+<meta property="og:description" content="Цикл аналитических статей о воспроизводстве профессиональной компетенции в эпоху ИИ.">
+<meta property="og:type" content="website">
+<style>
+:root {
+  --bg: #fbfaf7;
+  --bg-card: #ffffff;
+  --bg-soft: #f4f2ec;
+  --bg-warm: #f8f3ea;
+  --text: #1a1a1a;
+  --text-muted: #5a5a58;
+  --text-light: #888780;
+  --accent: #5a4a3f;
+  --rule: rgba(0,0,0,0.12);
+  --rule-soft: rgba(0,0,0,0.06);
+
+  --c-published: #0F6E56;
+  --c-draft: #9B7B0E;
+  --c-pending: #888780;
+
+  --serif: 'Charter', 'Iowan Old Style', 'Source Serif Pro', 'Cambria', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 32px 96px;
+}
+
+/* === Hero === */
+.hero {
+  margin-bottom: 64px;
+  padding-bottom: 32px;
+  border-bottom: 0.5px solid var(--rule);
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+}
+
+.tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 22px;
+  line-height: 1.45;
+  margin: 0 0 32px;
+}
+
+.hero-meta {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--text-light);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.hero-meta a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(90, 74, 63, 0.5);
+}
+.hero-meta a:hover { border-bottom-style: solid; }
+
+/* === Intro === */
+.intro {
+  margin-bottom: 56px;
+}
+.intro p {
+  font-size: 18px;
+  line-height: 1.65;
+  margin: 0 0 18px;
+  color: var(--text);
+}
+.intro p strong {
+  font-weight: 600;
+}
+
+/* === Articles section === */
+section.articles {
+  margin-bottom: 72px;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.005em;
+  margin: 0 0 8px;
+}
+h2 + .section-intro {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 16.5px;
+  line-height: 1.5;
+  margin: 0 0 28px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid var(--rule);
+}
+
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-item {
+  display: block;
+  padding: 22px 24px;
+  margin-bottom: 12px;
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s ease;
+  position: relative;
+}
+.article-item:hover {
+  background: var(--bg-warm);
+  border-color: var(--accent);
+  transform: translateX(2px);
+}
+.article-item.unavailable {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: default;
+}
+.article-item.unavailable:hover {
+  background: var(--bg-card);
+  border-color: var(--rule);
+  transform: none;
+}
+
+.article-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.article-num {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--bg-soft);
+  color: var(--accent);
+  padding: 3px 9px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.article-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  flex: 1;
+  margin: 0;
+}
+
+.article-status {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.article-status.published { color: var(--c-published); }
+.article-status.draft { color: var(--c-draft); }
+.article-status.pending { color: var(--c-pending); }
+
+.article-desc {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0 0 10px;
+  padding-left: 0;
+}
+
+.article-meta {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  color: var(--text-light);
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.article-meta .formats {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.article-meta .format-link {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--accent);
+  background: var(--bg-soft);
+  padding: 2px 7px;
+  border-radius: 3px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.article-meta .format-link:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* === About section === */
+section.about {
+  margin-bottom: 56px;
+  padding: 28px 32px;
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 6px;
+}
+section.about h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  padding: 0;
+  border: none;
+}
+section.about p {
+  font-size: 16.5px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+  color: var(--text-muted);
+}
+section.about p:last-child { margin-bottom: 0; }
+section.about a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(90, 74, 63, 0.5);
+}
+section.about a:hover { border-bottom-style: solid; }
+
+/* === Footer === */
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 0.5px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+footer p { margin: 0 0 8px; }
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(90, 74, 63, 0.5);
+}
+footer a:hover { border-bottom-style: solid; }
+
+footer .author {
+  margin-top: 20px;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* === Mobile === */
+@media (max-width: 700px) {
+  body { font-size: 16.5px; }
+  .container { padding: 48px 20px 72px; }
+  h1 { font-size: 32px; }
+  .tagline { font-size: 18px; }
+  .article-item { padding: 18px 18px; }
+  .article-head { flex-wrap: wrap; }
+  .article-title { font-size: 18px; }
+  section.about { padding: 22px 22px; }
+  .hero-meta { gap: 14px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="hero">
+  <div class="eyebrow">цикл аналитических статей</div>
+  <h1>Игры в профессию</h1>
+  <p class="tagline">О воспроизводстве профессиональной компетенции в эпоху ИИ. Четыре актора, три времени, карта в тумане.</p>
+  <div class="hero-meta">
+    <span>Сергей Гордейчик</span>
+    <span>·</span>
+    <a href="https://teletype.in/@sergey_gordey" target="_blank" rel="noopener">teletype</a>
+    <a href="https://github.com/scadastrangelove/profgames" target="_blank" rel="noopener">github</a>
+    <span>тег <strong>#profgames</strong></span>
+  </div>
+</header>
+
+<section class="intro">
+<p>Десятилетиями устоявшиеся институты раскачивает. Собеседования. Карьерные траектории. Дипломы. Профессии, которые казались вечными. Что-то из этого треснет и распадётся, что-то перестроится, что-то выглядит как кризис, а на самом деле — обычное циклическое сжатие.</p>
+<p>Различить — сложно. Этот цикл — попытка разобраться системно: какие силы работают, кто играет, какие ходы возможны и что отличает короткую рациональность от длинной. Не описание будущего, а карта реперов в тумане, чтобы раз в пару месяцев заново определять текущую точку и предстоящие развилки.</p>
+</section>
+
+<section class="articles">
+<h2>Статьи цикла</h2>
+<p class="section-intro">Нумерация массива с нулевого индекса: <strong>0</strong> — манифест, <strong>A–D</strong> — статьи, <strong>Z</strong> — фактологическая основа. Цикл публикуется по мере готовности.</p>
+
+<ul class="article-list">
+
+  <li>
+    <a href="0-manifesto.html" class="article-item">
+      <div class="article-head">
+        <span class="article-num">0</span>
+        <h3 class="article-title">Карта в тумане</h3>
+        <span class="article-status published">опубликовано</span>
+      </div>
+      <p class="article-desc">Манифест цикла. Зачем эта серия, кто автор, какие у него горизонты и почему четырёх акторов оказывается достаточно.</p>
+      <div class="article-meta">
+        <span>~3 минуты чтения</span>
+        <span>·</span>
+        <span>апрель–май 2026</span>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <div class="article-item unavailable">
+      <div class="article-head">
+        <span class="article-num">A</span>
+        <h3 class="article-title">Четыре актора, три времени</h3>
+        <span class="article-status pending">готовится</span>
+      </div>
+      <p class="article-desc">Теоретическая рамка цикла. Работодатель, сотрудник, образование, государство — каждый со своим горизонтом и своей рациональностью. Что меняет ИИ в их игре.</p>
+      <div class="article-meta">
+        <span>основной текст</span>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <div class="article-item unavailable">
+      <div class="article-head">
+        <span class="article-num">B</span>
+        <h3 class="article-title">Одна теория, разные параметры</h3>
+        <span class="article-status pending">готовится</span>
+      </div>
+      <p class="article-desc">Параметризация теоретической рамки на трёх странах: США как baseline, Россия и Китай. ОАЭ как пограничный случай малой страны между гигантами.</p>
+      <div class="article-meta">
+        <span>страновая статья</span>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <div class="article-item unavailable">
+      <div class="article-head">
+        <span class="article-num">C</span>
+        <h3 class="article-title">Четыре актора, пять биографий</h3>
+        <span class="article-status pending">готовится</span>
+      </div>
+      <p class="article-desc">Пять профессиональных траекторий и работа provenance translator-ов: как опыт переводится в локальный статус, доверие, ответственность через регистры, лицензии, employer pedigree.</p>
+      <div class="article-meta">
+        <span>биографический срез</span>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <div class="article-item unavailable">
+      <div class="article-head">
+        <span class="article-num">D</span>
+        <h3 class="article-title">Семь симптомов и четыре актора</h3>
+        <span class="article-status pending">готовится</span>
+      </div>
+      <p class="article-desc">Диагностическая карта. Семь видимых симптомов кризиса воспроизводства профессии × четыре актора, каждый со своим срезом. Не рецепт — инструмент различения.</p>
+      <div class="article-meta">
+        <span>диагностическая карта</span>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <a href="factcheck.html" class="article-item">
+      <div class="article-head">
+        <span class="article-num">Z</span>
+        <h3 class="article-title">Фактологическая основа</h3>
+        <span class="article-status published">опубликовано</span>
+      </div>
+      <p class="article-desc">Независимый фактчек 41 утверждения с разнесением уровней доказательности (A: административные/каузальные данные; B: наблюдательные; C: корпоративный нарратив; D: мнения и прогнозы). С первоисточниками, оговорками и рекомендованными формулировками.</p>
+      <div class="article-meta">
+        <div class="formats">
+          <span>форматы:</span>
+          <a href="factcheck.html" class="format-link">html</a>
+          <a href="factcheck.json" class="format-link">json</a>
+        </div>
+        <span>·</span>
+        <span>41 утверждение, 15 пробелов</span>
+      </div>
+    </a>
+  </li>
+
+</ul>
+</section>
+
+<section class="about">
+<h2>Машиночитаемая основа</h2>
+<p>Фактологическая база <a href="factcheck.json">factcheck.json</a> публикуется отдельно как самостоятельный артефакт. Все имена полей на английском, единая шкала статусов и уровней доказательности, ссылки на первоисточники.</p>
+<p>Можно скормить её агенту и попросить найти новое — это может стать следующим репером на пути.</p>
+</section>
+
+<footer>
+<p>Цикл публикуется параллельно на <a href="https://github.com/scadastrangelove/profgames" target="_blank" rel="noopener">github.com/scadastrangelove/profgames</a> и в <a href="https://teletype.in/@sergey_gordey" target="_blank" rel="noopener">teletype</a> с тегом <strong>#profgames</strong>.</p>
+<p>Будущее уже здесь, оно просто неравномерно распределено.</p>
+<p class="author">Сергей Гордейчик · 2026</p>
+</footer>
+
+</div>
+
+</body>
+</html>
