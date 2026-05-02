@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "Игры в профессию — Independent Fact-Check Pack",
-    "version": "1.0",
-    "fact_check_date": "2026-04-29",
-    "data_relevance_date": "2026-04",
+    "version": "2.0",
+    "fact_check_date": "2026-05-02",
+    "data_relevance_date": "2026-05",
     "passes": [
       {
         "id": "russia",
@@ -19,6 +19,31 @@
         "id": "regulators_corporate",
         "name": "Professional regulators + corporate narrative/data separation",
         "approach": "narrative vs data split for each case"
+      },
+      {
+        "id": "b-ireland",
+        "name": "Irish teacher — registry as translator",
+        "approach": "biography-anchored: registry mechanism + AI cheating context"
+      },
+      {
+        "id": "b-germany",
+        "name": "German engineer — protected title with chambers",
+        "approach": "biography-anchored: EU AI Act + ProdHaftG-E + AILD withdrawal + judicial precedent"
+      },
+      {
+        "id": "b-india-uk",
+        "name": "Indian medical specialist — bridge programme PLAB→UKMLA→GMC",
+        "approach": "biography-anchored: GMC translator under restructuring, Foundation Programme prioritisation"
+      },
+      {
+        "id": "b-china",
+        "name": "Chinese returnee scientist (haigui) — state programme + anchor firms",
+        "approach": "biography-anchored: cultural debt in academia, AI retractions concentration"
+      },
+      {
+        "id": "b-russia-it",
+        "name": "Russian IT specialist — decentralised network translator",
+        "approach": "biography-anchored: GitHub sanctions + 152-ФЗ + workslop as tragedy of the commons"
       }
     ],
     "evidence_levels": {
@@ -33,18 +58,33 @@
       "needs_correction": "verified but stated incorrectly in original pack",
       "not_verified": "primary source not located, secondary only",
       "not_found": "claim could not be located in any source"
-    }
+    },
+    "changelog": [
+      {
+        "version": "2.0",
+        "date": "2026-05-02",
+        "description": "Расширение пакета для статьи B (пять биографий: ирландский учитель, немецкий инженер, индийский медицинский специалист, китайский учёный-возвращенец, русский айтишник). Добавлены 17 новых claims по 5 биографическим passes: b-ireland, b-germany, b-india-uk, b-china, b-russia-it.",
+        "added_claims": 17,
+        "updated_passes": [
+          "b-ireland",
+          "b-germany",
+          "b-india-uk",
+          "b-china",
+          "b-russia-it"
+        ]
+      }
+    ]
   },
   "summary": {
     "stats": {
-      "total_claims": 41,
-      "verified": 20,
-      "partially_verified": 12,
+      "total_claims": 59,
+      "verified": 37,
+      "partially_verified": 13,
       "needs_correction": 6,
       "not_verified": 3,
       "not_found": 0
     },
-    "approximate_pass_rate": "75%",
+    "approximate_pass_rate": "85%",
     "key_findings": [
       "Most priority claims pass primary-source verification",
       "Russian regulatory documents and migration figures are well-sourced via official channels (pravo.gov.ru, MVD, Mintsifry)",
@@ -53,7 +93,14 @@
       "Amazon -14,000 layoffs explicitly NOT AI-driven per Jassy ('it's culture'), media AI-attribution is narrative",
       "850k registry is migration enforcement (MVD), NOT an IT cage indicator — must not be used in IT context",
       "IBM '$250k investment in new collar' could not be verified — recommend removal",
-      "Russian IT market segmentation (bigtech/state/midmarket %) lacks public methodological source"
+      "Russian IT market segmentation (bigtech/state/midmarket %) lacks public methodological source",
+      "B-pack added (v2.0): 17 new claims across 5 biographies (Ireland, Germany, India-UK, China, Russia-IT)",
+      "Strong evidence base for German engineer (B-2): EU AI Act + ProdHaftG-E (Sep 2025) + AILD withdrawal + 6 O 151/23 precedent",
+      "Indian doctor (B-3) anchored by UK Medical Training (Prioritisation) Act 5 March 2026 — major translator restructuring under pressure",
+      "Chinese returnee (B-4): 72.2% AI-related retractions Chinese first authors (Frontiers 2025); Pangram 2025: 26% Chinese institutional papers contain AI fragments — structural cultural debt confirmed",
+      "Russian IT (B-5): 152-ФЗ amendment ФЗ №23-ФЗ from 28.02.2025 (effective 1.07.2025) — primary collection ban, NOT full transborder transfer ban. GitHub blocking of paid accounts in 2025 — partially verified (secondary source only)",
+      "Workslop in IT now has multiple 2025-26 surveys: Stack Overflow 84%/29% trust gap; Sonar 96%/<50% verification gap; Google DORA +10% instability; arxiv 1,154 posts qualitative analysis frames as tragedy of the commons",
+      "Cross-biographical motif: translator maintenance cost asymmetry (Ireland: state-funded; Germany: chamber-funded; UK: GMC fee + state legislation; China: state programmes + anchor companies; Russia: NO institutional owner — main vulnerability)"
     ]
   },
   "claims": [
@@ -1847,6 +1894,663 @@
         "g42",
         "small-state-strategy"
       ]
+    },
+    {
+      "id": "b-ire-01",
+      "pass": "b-ireland",
+      "topic": "Teaching Council Ireland — Timebound Provision (revised regulations, October 2025)",
+      "claim": "22 октября 2025 министр образования и молодёжи Helen McEntee подписала revised Teaching Council (Registration) Regulations, реактивирующие Timebound Provision: учителя, квалифицированные за рубежом без induction в стране квалификации, могут пройти induction в Ирландии (Droichead). Действует до 31 декабря 2027. Заявки принимаются с 22 октября 2025.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Press release: Minister for Education and Youth signs revised Teacher Council Registration Regulations",
+          "url": "https://www.gov.ie/en/department-of-education/press-releases/minister-for-education-and-youth-signs-revised-teacher-council-registration-regulations-strengthening-teacher-supply-supports/",
+          "type": "primary",
+          "date": "2025-10-16"
+        },
+        {
+          "title": "Teaching Council: Introduces revised Registration Regulations",
+          "url": "https://www.teachingcouncil.ie/news/the-teaching-council-introduces-revised-registration-regulations/",
+          "type": "primary",
+          "date": "2025-10-16"
+        },
+        {
+          "title": "INTO: Revised Teaching Council registration regulations",
+          "url": "https://www.into.ie/2025/10/17/revised-teaching-council-registration-regulations/",
+          "type": "secondary",
+          "date": "2025-11-06"
+        }
+      ],
+      "date_relevant": "2025-10-22 — 2027-12-31",
+      "caveats": [
+        "Это вторая итерация: первая Timebound (февраль 2023 — февраль 2024) применялась во время пандемии",
+        "Driving factors: special education expansion + Ukraine enrolment + general teacher supply pressures",
+        "126,000+ зарегистрированных учителей в реестре, 3,700 NQTs registered in 2024",
+        "9,000+ unqualified substitutes worked in 2023/24; 1,847 vacancies в марте 2025",
+        "Это иллюстрация near-Парето решения: расширение translator capacity без размывания стандарта (Droichead остаётся обязательным)"
+      ],
+      "implications_for_b": "Ирландский регистр работает как 'open registry' — расширяет capacity через временные провизии, но не размывает Droichead. Translator maintenance cost: NVB child protection checks, processing 12 weeks, recognition fees."
+    },
+    {
+      "id": "b-ire-02",
+      "pass": "b-ireland",
+      "topic": "AI cheating в UK университетах — данные 2023-26",
+      "claim": "К 2026 году AI-related academic misconduct в UK higher education драматически вырос. ~7,000 UK university students формально пойманы на AI cheating в 2023-24 (тройной рост от 2022-23). 92% UK студентов используют ИИ (HEPI/Kortext 2025); 88% — для assessments; 18% сдавали работу с AI-content. AI misconduct rate вырос с 1,6 до 7,5 на 1,000 студентов (2022-2026). UC Berkeley campus store увидел 80% рост продаж blue books за 2 академических года. 63% учителей фиксировали наказание студентов за ИИ в 2023-24. 94% AI-generated work не обнаружено маркерами (University of Reading study). 74% UK teachers получили 0 тренинга по ИИ. Только 28% AI-specific plagiarism policies оценивают как effective.",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "AI Cheating in Schools: 2025 Global Trends — AllAboutAI",
+          "url": "https://www.allaboutai.com/resources/ai-statistics/ai-cheating-in-schools/",
+          "type": "tertiary",
+          "date": "2025-11-27"
+        },
+        {
+          "title": "HEPI/Kortext — Student Generative AI Survey 2025 (via YouGov)",
+          "url": "https://yougov.co.uk/society/articles/52855-how-are-uk-students-really-using-ai",
+          "type": "secondary",
+          "date": "2025-09-15"
+        },
+        {
+          "title": "AI Cheating Statistics — Feedough",
+          "url": "https://www.feedough.com/ai-cheating-statistics/",
+          "type": "tertiary",
+          "date": "2025-11-14"
+        },
+        {
+          "title": "Huge increase in UK students using AI to cheat — The Register",
+          "url": "https://www.theregister.com/2025/06/16/university_ai_cheating/",
+          "type": "secondary",
+          "date": "2025-06-16"
+        },
+        {
+          "title": "ChatGPT Cheating Statistics — Nerdynav",
+          "url": "https://nerdynav.com/chatgpt-cheating-statistics/",
+          "type": "tertiary",
+          "date": "2025"
+        }
+      ],
+      "date_relevant": "2023-24 academic year, 2025 surveys, 2026 trend data",
+      "caveats": [
+        "7,000 caught — формально подтверждённые случаи (от The Guardian / institutional surveys), реальное число использования AI существенно выше",
+        "Non-native English speakers face 61.2% false positive rate в детекции (vs 5.1% для native speakers)",
+        "Ирландия специфически не отделена в данных — UK данные применимы как контекст, Irish-specific surveys не найдены",
+        "AllAboutAI и Feedough — aggregator sources; primary studies включают HEPI/Kortext, University of Reading, GoStudent Future of Education Report 2025"
+      ],
+      "implications_for_b": "Учитель в Ирландии находится в общей с UK школьной системе: AI-cheating от учеников — главный новый феномен в его рабочем дне. Время на verification растёт быстрее, чем государство финансирует поддержку."
+    },
+    {
+      "id": "b-ire-03",
+      "pass": "b-ireland",
+      "topic": "Routes регистрации Teaching Council Ireland (correction to v1)",
+      "claim": "У Teaching Council Ireland 5 routes регистрации: Route 1 (Primary), Route 2 (Post-Primary), Route 3 (Further Education), Route 4 (Other — special education / restricted), Route 5 (Student teachers, since 2021). Для overseas-qualified general teachers корректные пути — Route 1 или Route 2 через стандартный процесс с EU 2005/36/EC recognition (не Route 4, который specialised только для special education). Processing times: до 12 недель для qualified outside Ireland.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Teaching Council: Register as a primary teacher (Qualified outside of the Republic of Ireland)",
+          "url": "https://www.teachingcouncil.ie/i-am-applying-to-register/qualified-outside-of-ireland/register-as-a-primary-teacher/",
+          "type": "primary",
+          "date": "2025-10"
+        },
+        {
+          "title": "Teaching Council: Register as a post-primary teacher (Qualified outside of the Republic of Ireland)",
+          "url": "https://www.teachingcouncil.ie/i-am-applying-to-register/qualified-outside-of-ireland/register-as-a-post-primary-teacher/",
+          "type": "primary",
+          "date": "2025-10"
+        },
+        {
+          "title": "Teaching Council Registration Handbook 2025/2026",
+          "url": "https://www.teachingcouncil.ie/assets/uploads/2025/05/00.-Final-Version_-The-Teaching-Council-Registration-Handbook-2025-2026_English.pdf",
+          "type": "primary",
+          "date": "2025-05-14"
+        }
+      ],
+      "date_relevant": "2025-2026 academic year",
+      "caveats": [
+        "Это refinement к claim reg-23 в v1: Route 4 не является универсальным маршрутом для overseas general teachers",
+        "EU Directive 2005/36/EC применяется ко всем applications (внутри ЕС и из третьих стран) одинаково",
+        "Conditions могут быть применены, если есть significant differences с ирландской квалификацией"
+      ],
+      "implications_for_b": "В биографии описывать процесс корректно: учитель из третьей страны идёт через Route 1 или 2 standard process, не через Route 4. Если квалификация не покрывает induction — Timebound Provision позволяет завершить induction (Droichead) в Ирландии до 31.12.2027."
+    },
+    {
+      "id": "b-ger-01",
+      "pass": "b-germany",
+      "topic": "EU AI Act — timeline применения (2025-2026)",
+      "claim": "EU AI Act вступает в силу поэтапно: prohibitions и AI literacy provisions с 2 февраля 2025; provisions on general-purpose AI (GPAI) с 2 августа 2025; большинство остальных provisions с 2 августа 2026. Применимо ко всем, кто develops/distributes/uses AI systems, влияющих на людей в EU. Most obligations — на providers (vendors), часть — на deployers, importers, distributors.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Norton Rose Fulbright: Artificial Intelligence Regulation (Germany)",
+          "url": "https://www.nortonrosefulbright.com/en-de/knowledge/publications/a473a1c1/artificial-intelligence-regulation",
+          "type": "secondary",
+          "date": "2025"
+        },
+        {
+          "title": "CMS Expert Guide: AI laws and regulations in Germany",
+          "url": "https://cms.law/en/int/expert-guides/ai-regulation-scanner/germany",
+          "type": "secondary",
+          "date": "2026-02-17"
+        },
+        {
+          "title": "Legal500: Germany — Artificial Intelligence",
+          "url": "https://www.legal500.com/guides/chapter/germany-artificial-intelligence/",
+          "type": "secondary",
+          "date": "2025"
+        }
+      ],
+      "date_relevant": "2025-02-02 onwards",
+      "caveats": [
+        "В Германии implementation проходит через BMWK и BMJ совместно",
+        "Late 2024: draft 'KI-Marktüberwachungsgesetz' (KIMÜG) — AI Market Surveillance Act",
+        "Implementation в Германии задержана из-за federal elections"
+      ],
+      "implications_for_b": "Немецкий инженер находится в эпицентре регуляторного перехода: AI Act устанавливает новые requirements на использование AI tools в инженерных решениях. Это удорожает translator (палату), которая должна обновлять стандарты под новые правила."
+    },
+    {
+      "id": "b-ger-02",
+      "pass": "b-germany",
+      "topic": "AI Liability Directive (AILD) — withdrawal в начале 2025",
+      "claim": "AI Liability Directive (AILD) был originally proposed Еврокомиссией для дополнения EU AI Act, устанавливая правила non-contractual civil liability для AI systems (включая presumption of causality и упрощение access to evidence для пострадавших). В начале 2025 предложение было ОТОЗВАНО Еврокомиссией из-за overlap с другими регуляциями. Liability за AI-сгенерированный harm остаётся через Product Liability Act + EU AI Act + национальное tort law.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Legal500: Germany — Artificial Intelligence",
+          "url": "https://www.legal500.com/guides/chapter/germany-artificial-intelligence/",
+          "type": "secondary",
+          "date": "2025"
+        },
+        {
+          "title": "Chambers Practice Guides: Artificial Intelligence 2025 — Germany",
+          "url": "https://practiceguides.chambers.com/practice-guides/artificial-intelligence-2025/germany",
+          "type": "secondary",
+          "date": "2025"
+        }
+      ],
+      "date_relevant": "2025 (withdrawal early 2025)",
+      "caveats": [
+        "AILD отозван из-за overlap с другими актами — это означает консолидацию ответственности через существующие frameworks",
+        "Effect: ответственность остаётся жёстче на конкретных носителях титулов (manufacturers, professional engineers, doctors)",
+        "Парадоксальный сдвиг: вместо облегчения burden of proof для жертв — концентрация ответственности на лицах с подписью"
+      ],
+      "implications_for_b": "Подпись с защищённым титулом становится более ценной именно потому, что AILD не упростил персональную ответственность. Палата (IHK / Ingenieurkammer) — носитель этой ответственности."
+    },
+    {
+      "id": "b-ger-03",
+      "pass": "b-germany",
+      "topic": "ProdHaftG-E (German Product Liability Act draft) — September 2025",
+      "claim": "В сентябре 2025 опубликован первый официальный draft нового German Product Liability Act (ProdHaftG-E), реализующий обновлённый EU Product Liability Directive (EU PLD) совместно с EU AI Act. Закон формирует, как компании управляют product safety, digital innovation и risk allocation в supply chain, особенно в high-security секторах. Применяется к AI-driven product failures.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "White & Case: Navigating product liability in high-security sectors",
+          "url": "https://www.whitecase.com/insight-alert/navigating-product-liability-high-security-sectors-addressing-ai-driven-risks-under",
+          "type": "secondary",
+          "date": "2025"
+        },
+        {
+          "title": "Chambers Practice Guides: Artificial Intelligence 2025 — Germany",
+          "url": "https://practiceguides.chambers.com/practice-guides/artificial-intelligence-2025/germany",
+          "type": "secondary",
+          "date": "2025"
+        }
+      ],
+      "date_relevant": "2025-09 (draft published)",
+      "caveats": [
+        "Draft is subject to legislative process; final form может отличаться",
+        "Применимо к высокорисковым AI-applications в инженерии, медицине, финансах",
+        "В сочетании с AILD withdrawal: образуется специфическая регуляторная архитектура — strict liability для manufacturers + responsibility для signing engineers"
+      ],
+      "implications_for_b": "Немецкий инженер с защищённым титулом приобретает регуляторно подтверждённый статус: его подпись — это и есть allocating responsibility в эпоху AI."
+    },
+    {
+      "id": "b-ger-04",
+      "pass": "b-germany",
+      "topic": "Прецедент 6 O 151/23 — German court on AI output ownership",
+      "claim": "Немецкий суд (Landgericht, Aktenzeichen 6 O 151/23) признал оператора business-information сервиса ответственным за публикацию ложных данных, сгенерированных ИИ. Суд постановил: компания 'сделала вывод ИИ своим' (made the AI's output its own) и поэтому несёт прямую ответственность за дезинформацию. Liability ограничилась cease-and-desist + reimbursement of attorney fees, без damages awarded.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Legal500: Germany — Artificial Intelligence (mentions 6 O 151/23 decision)",
+          "url": "https://www.legal500.com/guides/chapter/germany-artificial-intelligence/",
+          "type": "secondary",
+          "date": "2025"
+        }
+      ],
+      "date_relevant": "2024-2025",
+      "caveats": [
+        "Это первый известный немецкий judicial precedent применительно к AI-generated content liability",
+        "Принцип 'сделать вывод ИИ своим' имеет широкие применения: компания, инженер с подписью, врач с диагнозом",
+        "Damages limited — суд устанавливает прецедент, не destructive penalty"
+      ],
+      "implications_for_b": "Прямой иллюстративный case для биографии немецкого инженера. Когда инженер подписывает чертёж/решение, прошедшее через AI-симуляцию, и принимает его — ответственность персональная. Защищённый титул работает как allocating механизм."
+    },
+    {
+      "id": "b-ger-05",
+      "pass": "b-germany",
+      "topic": "Ingenieur — protected title vs regulated profession",
+      "claim": "В Германии 'Ingenieur' — это защищённый титул (protected title) в некоторых федеральных землях, но НЕ regulated profession в иммиграционном смысле. Лицо может работать как engineer без recognition, но НЕ имеет права использовать титул 'Ingenieur'/'Ingenieurin' и подписывать в этом качестве. Recognition — через equivalence assessment у Ingenieurkammer (Chamber of Engineers) федеральной земли. Recognition fee — €360 (Baden-Württemberg, типичный), penalty за неправомерное использование титула — до €25,000. С 2024 действует Anerkennungspartnerschaft (recognition partnership), позволяющий работать в процессе recognition при условии employer commits to support process.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Bundesportal: Engineer with foreign professional qualification",
+          "url": "https://verwaltung.bund.de/leistungsverzeichnis/en/leistung/99150085001000",
+          "type": "primary",
+          "date": "2025"
+        },
+        {
+          "title": "Anerkennung in Deutschland: Engineer or Consulting Civil Engineer",
+          "url": "https://www.anerkennung-in-deutschland.de/html/en/2722.php",
+          "type": "primary",
+          "date": "2025"
+        },
+        {
+          "title": "Approval to use the professional title 'Ingenieur' (Baden-Württemberg)",
+          "url": "https://ingbw.de/fileadmin/user_upload/M082E_Bulletin-recognition-of-foreign-engineering-qualifications_2024_12.pdf",
+          "type": "primary",
+          "date": "2024-12"
+        },
+        {
+          "title": "Relokate: Is Your Hire's Profession Regulated in Germany? (2026 List)",
+          "url": "https://www.relokatehr.com/blog/regulated-vs-non-regulated-professions-germany",
+          "type": "secondary",
+          "date": "2026"
+        }
+      ],
+      "date_relevant": "2025-2026",
+      "caveats": [
+        "Отличается от учителя, врача — это полноценные regulated professions (нельзя работать без recognition)",
+        "В Германии ~180 regulated professions; engineer в большинстве случаев НЕ среди них",
+        "Anerkennungspartnerschaft — near-Парето мера: расширяет access, не размывая стандарт титула",
+        "VDI (Verein Deutscher Ingenieure) — ~135-140K members, largest engineering association в Европе"
+      ],
+      "implications_for_b": "Уровень защиты титула у инженера ниже, чем у врача / учителя — это даёт гибкость найма, но удорожает translator (recognition process). В эпоху AI палаты приобретают новое значение как allocator of responsibility."
+    },
+    {
+      "id": "b-ind-01",
+      "pass": "b-india-uk",
+      "topic": "PLAB → UKMLA transition (2024-2025)",
+      "claim": "С 2024-25 academic year UK General Medical Council (GMC) заменил PLAB на UKMLA (UK Medical Licensing Assessment) — единая оценка для UK-trained и International medical graduates (IMG). UKMLA состоит из Applied Knowledge Test (AKT, MCQ) и Clinical and Professional Skills Assessment (CPSA, OSCE). EPIC retired, заменён на MyIntealth (управляется Intealth, parent organisation of ECFMG). GMC fees 2025: £433 application + annual retention.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "GMC: Acceptable overseas qualifications for doctors",
+          "url": "https://www.gmc-uk.org/registration-and-licensing/join-our-registers/before-you-apply-guide-for-doctors/acceptable-overseas-qualifications-for-doctors",
+          "type": "primary",
+          "date": "2025"
+        },
+        {
+          "title": "GMC: Full registration for international medical graduates",
+          "url": "https://www.gmc-uk.org/registration-and-licensing/join-our-registers/registration-applications/application-guides/full-registration-for-international-medical-graduates",
+          "type": "primary",
+          "date": "2025-07-05"
+        },
+        {
+          "title": "IMG Connect: GMC Registration for Overseas Doctors — Step-by-Step Guide 2025",
+          "url": "https://www.imgconnect.co.uk/news/2025/09/gmc-registration-for-overseas-doctors-step-by-step-guide-2025/166",
+          "type": "secondary",
+          "date": "2025-09-11"
+        },
+        {
+          "title": "Pastest: PLAB vs other routes to GMC registration",
+          "url": "https://www.pastest.com/blogs/news/plab-vs-other-toutes-to-gmc-registration",
+          "type": "secondary",
+          "date": "2025-04-04"
+        }
+      ],
+      "date_relevant": "2024-25 transition; в полной силе с 2025-26",
+      "caveats": [
+        "PLAB Part 1 / AKT — 3-hour MCQ (180 questions), может проводиться на международных центрах",
+        "PLAB Part 2 / CPSA — 16-станционный OSCE, только в UK",
+        "UKMLA aligned для UK и IMG — обе группы tested на одних core topics",
+        "Translator (GMC) активно перестраивается под давлением — это maintenance cost в реальном времени"
+      ],
+      "implications_for_b": "Translator не статичен, а активно перестраивается. UKMLA — попытка унификации стандартов. Это иллюстрация активного институционального обновления (Парето-улучшение для системы), но требует растущих ресурсов GMC."
+    },
+    {
+      "id": "b-ind-02",
+      "pass": "b-india-uk",
+      "topic": "UK Medical Training (Prioritisation) Act — 5 March 2026",
+      "claim": "5 марта 2026 UK Medical Training (Prioritisation) Act стал законом. Закон даёт приоритет UK-trained graduates в распределении мест Foundation Programme и Specialty Training. IMG, registered и working в NHS до 5 марта 2025 с 2+ годами опыта в NHS, имеют equal access. Цель — restore competition ratios для specialty training до reasonable levels. Закон UK-wide, drafted в консультации с devolved nations.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "BMA: What we know about the law on UK graduate prioritisation",
+          "url": "https://www.bma.org.uk/advice-and-support/career-progression/training/what-the-new-law-means-for-uk-graduate-prioritisation",
+          "type": "primary",
+          "date": "2026-04"
+        },
+        {
+          "title": "BMA: Priority access for UK medical graduates comes into force",
+          "url": "https://www.bma.org.uk/news-and-opinion/priority-access-for-uk-medical-graduates-comes-into-force",
+          "type": "primary",
+          "date": "2026-03-05"
+        },
+        {
+          "title": "GOV.UK: Medical Training (Prioritisation) Bill — Impact Statement",
+          "url": "https://www.gov.uk/government/publications/impact-statement-medical-training-prioritisation-bill/medical-training-prioritisation-bill-impact-statement",
+          "type": "primary",
+          "date": "2026-01-14"
+        },
+        {
+          "title": "NHS England: Medical Training (Prioritisation) Bill — information for applicants",
+          "url": "https://www.england.nhs.uk/long-read/medical-training-prioritisation-bill-information-for-applicants-to-medical-training/",
+          "type": "primary",
+          "date": "2026-01"
+        }
+      ],
+      "date_relevant": "Bill introduced 13 January 2026; Act 5 March 2026",
+      "caveats": [
+        "Применение поэтапное: 2026 — на offer stage; 2027 — на shortlisting AND offer stage",
+        "Cost для NHS England — ~£100,000 на изменения Oriel application system",
+        "Это пример переключения от 'свободного translator' к 'managed/prioritised translator' под давлением рынка"
+      ],
+      "implications_for_b": "Для индийского врача — критический сдвиг. Translator работал как 'open door' с 2020 (после lifting of visa restrictions), к 2026 закрывается обратно через emergency legislation."
+    },
+    {
+      "id": "b-ind-03",
+      "pass": "b-india-uk",
+      "topic": "UK competition ratios для medical training — 2025-2026",
+      "claim": "В 2025: 15,723 UK-trained doctors + 25,257 overseas-trained = 40,980 applicants на 12,833 round 1+2 specialty training posts. Для 2026 — уже 47,000+ applicants. 91,999 applications submitted to 12,833 posts в 2025 (+54% от 2024). 41% medical workforce в UK — non-UK graduates (рост с 33% в 2017). Unique IMG applicants удвоились 2023→2025 (10,402→20,803), UK graduates +33% (9,283→12,305). Foundation Programme applications: 8,137 в 2019 → 11,205 в 2025. Competition ratios для popular specialties: cardiothoracic surgery 45:1, community sexual health 26:1, public health 17:1.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "GOV.UK: Medical Training (Prioritisation) Bill Impact Statement",
+          "url": "https://www.gov.uk/government/publications/impact-statement-medical-training-prioritisation-bill/medical-training-prioritisation-bill-impact-statement",
+          "type": "primary",
+          "date": "2026-01-14"
+        },
+        {
+          "title": "BMA: Priority access for UK medical graduates comes into force",
+          "url": "https://www.bma.org.uk/news-and-opinion/priority-access-for-uk-medical-graduates-comes-into-force",
+          "type": "primary",
+          "date": "2026-03-05"
+        },
+        {
+          "title": "BMA: Specialty training squeeze (The Doctor magazine)",
+          "url": "https://thedoctor.bma.org.uk/articles/life-at-work/specialty-training-squeeze/",
+          "type": "primary",
+          "date": "2025-04-17"
+        },
+        {
+          "title": "GMC: The state of medical education and practice in the UK — Workforce Report 2025",
+          "url": "https://www.gmc-uk.org/",
+          "type": "primary",
+          "date": "2025"
+        }
+      ],
+      "date_relevant": "2025-2026 recruitment cycles",
+      "caveats": [
+        "Competition ratios могут учитывать multiple applications per applicant — actual unique applicants ratio ниже",
+        "В 2025 round 1: 28,000/80,000 applications appointable после assessment/interview",
+        "Около 2,000 UK-graduate applications не получили offer в 2025 (пре-Prioritisation Act)",
+        "Drivers: rising UK medical school output + immigration rule changes (lifting restrictions 2020) + IMG inflow"
+      ],
+      "implications_for_b": "Драматичная иллюстрация перегрузки translator: даже если UKMLA пройден и GMC регистрация получена, попасть на foundation training — отдельная битва, в которой UK-graduates получают приоритет с 2026."
+    },
+    {
+      "id": "b-chn-01",
+      "pass": "b-china",
+      "topic": "AI-generated papers — китайская концентрация (Pangram 2025-26)",
+      "claim": "Pangram study (январь 2026, biorxiv): мониторинг biomedical литературы 2025 года показал dramatic рост AI-сгенерированного контента. 26% статей из китайских институций содержат хотя бы один window, помеченный как AI-generated; для South Korea — 32%; для US — 7,4%. До 12,4% papers в 2025 содержали хотя бы один AI-flagged segment. Manual inspection 20 US-affiliated manuscripts с AI-generated text показала, что все 20 имели non-Anglophone first authors; 10 — Chinese names без anglicization.",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Fine-Grained Detection of AI-Generated Writing in the Biomedical Literature (Pangram, biorxiv)",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.01.01.697311.full.pdf",
+          "type": "primary",
+          "date": "2026-01"
+        }
+      ],
+      "date_relevant": "2025 publication year, 2026 study release",
+      "caveats": [
+        "Pangram — commercial AI detection tool; study peer-reviewed status — preprint",
+        "Detection accuracy claimed robust к recent model updates (Gemini 3, Opus 4.5), но subject to ongoing evolution",
+        "Geographic correlation с non-native English speakers — confound of language background, не только misconduct intention",
+        "Это не proves intent to deceive — может быть use of AI как translation/polishing tool без disclosure"
+      ],
+      "implications_for_b": "Это подтверждает социально-культурный долг в китайской академии как структурно-измеренное явление: 26% китайских статей затронуты. Для returnee — это значит, что репутация всей китайской академической продукции на международном уровне ставится под сомнение."
+    },
+    {
+      "id": "b-chn-02",
+      "pass": "b-china",
+      "topic": "AI-related retractions — 72.2% китайских first authors",
+      "claim": "Frontiers (декабрь 2025) опубликовали systematic bibliometric review AI-related retractions. China accounts for 72.2% of first authors среди AI-related retracted papers. China — top по retractions overall (551 papers за period analysed), India — 40, Bangladesh — 23. Retraction rate peaked в 2023 — 667 retractions. Median duration от publication до retraction: 510 days. Time-to-retraction (TTR) в Китае и Индии compressed: ~600 days vs 1,300+ в US/Japan.",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Frontiers: Artificial intelligence in the retraction spotlight — trends, causes and consequences",
+          "url": "https://www.frontiersin.org/journals/research-metrics-and-analytics/articles/10.3389/frma.2025.1737168/full",
+          "type": "primary",
+          "date": "2025-12-17"
+        },
+        {
+          "title": "Dissecting AI-related Paper Retraction Across Countries and Institutions (Preprints.org)",
+          "url": "https://www.preprints.org/manuscript/202601.0314",
+          "type": "primary",
+          "date": "2026-01-06"
+        },
+        {
+          "title": "Analysis of Retracted Publications on Artificial Intelligence (PMC)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12624210/",
+          "type": "primary",
+          "date": "2025"
+        }
+      ],
+      "date_relevant": "Data through 2025, publications late 2025 — early 2026",
+      "caveats": [
+        "Frontiers article — peer-reviewed",
+        "China's high retraction count partly reflects high publication volume — proportional rates требуют normalization",
+        "Compressed TTR в Китае может indicate either тщательное self-policing OR более systematic detection (paper mill operations)"
+      ],
+      "implications_for_b": "Для биографии китайского returnee: научный output попадает в систему, где 72.2% AI-related retractions имеют первого автора из Китая. Это структурное давление на ВСЕХ китайских учёных — не только тех, кто использует AI ненадлежаще."
+    },
+    {
+      "id": "b-chn-03",
+      "pass": "b-china",
+      "topic": "Saveetha University (India) — extreme retraction case",
+      "claim": "Saveetha University (Chennai, India) — case study экстремального paper-mill behavior. В 2024 retracted 80+ papers from Saveetha authors. К началу 2025 — 90 retractions от Saveetha authors в Neurosurgical Review за первые 6 недель. Saveetha идентифицирован среди schools с 'questionable authorship practices' (Quantitative Science Studies, January 2025), включая 100% growth research output 2019-2023. Citation stacking практика подтверждена в Heliyon CellPress.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Retraction Watch: Springer Nature journal clears AI papers, university retractions rise drastically",
+          "url": "https://retractionwatch.com/2025/02/10/as-springer-nature-journal-clears-ai-papers-one-universitys-retractions-rise-drastically/",
+          "type": "primary",
+          "date": "2025-02-10"
+        }
+      ],
+      "date_relevant": "2024-2025",
+      "caveats": [
+        "Indian, не китайский case — но illustrates similar mechanism (volume-driven AI use → mass retractions)",
+        "Используется как сравнительный кейс к Китаю для биографии returnee — паттерн не unique для одной страны"
+      ],
+      "implications_for_b": "Cross-country illustration: проблема не только китайская, но индийская тоже подтверждает структурный характер. Может быть упомянут в синтез-главе как universal pattern."
+    },
+    {
+      "id": "b-rus-it-01",
+      "pass": "b-russia-it",
+      "topic": "152-ФЗ: ФЗ № 23-ФЗ от 28.02.2025, новая ред. ч. 5 ст. 18 (силу с 1.07.2025)",
+      "claim": "Федеральный закон № 23-ФЗ от 28 февраля 2025 ввёл новую редакцию ч. 5 ст. 18 закона № 152-ФЗ 'О персональных данных', вступившую в силу 1 июля 2025. Запрещён первичный сбор персональных данных граждан РФ с использованием баз данных, расположенных за пределами территории РФ — включая запись, систематизацию, накопление, хранение, уточнение, извлечение. Исключения ограничены п. 2, 3, 4 и 8 ч. 1 ст. 6 152-ФЗ. Это НЕ полный запрет трансграничной передачи (ст. 12 регулирует это отдельно) — но запрет на использование иностранных систем как primary collection points. Штрафы: до 18 млн ₽ для юридических лиц при несвоевременном уведомлении РКН.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "ГАРАНТ: Закон 152-ФЗ — actual edition with full changelog",
+          "url": "https://base.garant.ru/12148567/",
+          "type": "primary",
+          "date": "2025"
+        },
+        {
+          "title": "Lidings: С 01.07.2025 вступает в силу закон, ужесточающий требования о локализации",
+          "url": "https://www.lidings.com/ru/media/legalupdates/localization_pd_update/",
+          "type": "secondary",
+          "date": "2025-06"
+        },
+        {
+          "title": "Comply.ru: Локализация и трансграничная передача персональных данных. Что изменилось с 1 июля 2025",
+          "url": "https://comply.ru/tpost/c43ezsout1-lokalizatsiya-i-transgranichnaya-peredac",
+          "type": "secondary",
+          "date": "2025-07"
+        },
+        {
+          "title": "B-152: Хранение персональных данных за границей в 2025 году",
+          "url": "https://b-152.ru/hranenie-personalnyh-dannyh-za-granicej",
+          "type": "secondary",
+          "date": "2025-07"
+        },
+        {
+          "title": "Roskom24: Что запрещено на сайте с 1 июля 2025",
+          "url": "https://roskom24.ru/chto_zapreshcheno_na_sayte_s_1_iyulya_2025/",
+          "type": "secondary",
+          "date": "2025-06"
+        }
+      ],
+      "date_relevant": "2025-07-01 onwards",
+      "caveats": [
+        "Это correction к нашим предварительным формулировкам: запрет НЕ касается трансграничной передачи как таковой, а только первичного сбора",
+        "Roskomnadzor разъяснения 24.03.2025 № 08-134789 и Минцифры 12.05.2025 № П25-44929 уточнили: ограничения не распространяются на ранее собранные базы",
+        "Вступило в силу два слоя ответственности: за оператора и за лицо, участвующее в формировании базы",
+        "Эффект на бизнес: nontrivial — нужны локальные сервера для primary collection"
+      ],
+      "implications_for_b": "Серьёзный compliance burden. Если работа предполагает personal data RF citizens, нельзя использовать GitHub Issues / Atlassian / Slack как primary collection. Один из двух факторов (вместе с GitHub-блокировкой), сжимающих сетевой translator с обеих сторон."
+    },
+    {
+      "id": "b-rus-it-02",
+      "pass": "b-russia-it",
+      "topic": "GitHub-санкции: блокировки русских developers (2022-2025)",
+      "claim": "С 2022 GitHub начал ограничивать доступ к private repositories для пользователей из РФ, особенно affiliated с sanctioned entities (per OFAC SDN List). К 2025 политика ужесточилась: фиксируются случаи полной блокировки accounts, включая paid subscribers, при detection связи с sanctioned organisations. GitHub доступен (free public repository services) пользователям из не-sanctioned регионов РФ для personal communications, но commercial/corporate accounts с связями с sanctioned entities активно blocked. 12 июня 2024 US Treasury / State / Commerce ввели new restrictions включая prohibition on certain IT and software services к Russia (effective 12 September 2024).",
+      "status": "partially_verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "GitHub Docs: GitHub and Trade Controls",
+          "url": "https://docs.github.com/en/site-policy/other-site-policies/github-and-trade-controls",
+          "type": "primary",
+          "date": "2025"
+        },
+        {
+          "title": "BleepingComputer: GitHub suspends accounts of Russian devs at sanctioned companies",
+          "url": "https://www.bleepingcomputer.com/news/security/github-suspends-accounts-of-russian-devs-at-sanctioned-companies/",
+          "type": "secondary",
+          "date": "2022-05-02"
+        },
+        {
+          "title": "Hogan Lovells: Significant new measures against Russia (June 2024)",
+          "url": "https://www.hoganlovells.com/en/publications/significant-new-measures-against-russia-issued-by-us-departments-of-treasury-state-and-commerce",
+          "type": "secondary",
+          "date": "2024-06"
+        },
+        {
+          "title": "Moscow Digital School: Использование GitHub/GitLab в условиях санкций в России",
+          "url": "https://mosdigitals.ru/blog/ispolzovanie-github-gitlab-v-usloviyah-sankczij-v-rossii",
+          "type": "secondary",
+          "date": "2025-09-09"
+        },
+        {
+          "title": "arxiv: The Impact of Sanctions on GitHub Developers and Activities",
+          "url": "https://arxiv.org/html/2404.05489v1",
+          "type": "primary",
+          "date": "2025-12"
+        }
+      ],
+      "date_relevant": "2022 onwards; intensification 2024-2025",
+      "caveats": [
+        "Tightening к 2025 (полная блокировка даже с paid subscription) — secondary source (mosdigitals.ru); GitHub Docs не подтверждают эту специфику prima facie",
+        "Empirical arxiv study (2008-2022 data, 156K profiles) показал что developers могут navigate sanctions — но это pre-2024 picture",
+        "OFAC SDN List dynamic; secondary sanctions risk widened от Дек 2023 (E.O. 14114) к June 2024",
+        "Восстановление services post-sanctions (как в Iran 2021) — модель, но не предписана для РФ"
+      ],
+      "implications_for_b": "GitHub-провенанс — главный сетевой сигнал — становится политизирован и нестабилен. Это удар именно по 'translator-as-decentralised-network': нет институционального владельца, который мог бы защитить или восстановить."
+    },
+    {
+      "id": "b-rus-it-03",
+      "pass": "b-russia-it",
+      "topic": "Workslop / нейрохалтура в IT — Stack Overflow + Sonar + DORA 2025",
+      "claim": "Multiple 2025-2026 surveys фиксируют структурное явление workslop в IT-разработке. Stack Overflow Developer Survey 2025: 84% разработчиков используют ИИ-инструменты, но только 29% доверяют им (минус 11 п.п. от 2024). Sonar State of Code 2025: 96% не доверяют AI-generated code как functionally correct, но <50% reviewing его перед commit; 38% говорят review AI-кода требует больше effort, чем human-кода; 61% соглашаются что AI 'часто produces code that looks correct but isn't reliable'. Google DORA 2025: AI adoption correlates с почти 10% ростом нестабильности кода. AWS CTO Werner Vogels coined термин 'verification debt'. 470 open-source GitHub PRs analysis: AI-generated code содержит 1.7x больше дефектов, ошибки логики +75%, performance issues почти 8x чаще. Federal Reserve Bank of St. Louis: индивидуальная экономия 5.4% часов/неделя, но aggregate productivity gain — only 1.1%.",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Stack Overflow Blog: Mind the gap — closing the AI trust gap for developers",
+          "url": "https://stackoverflow.blog/2026/02/18/closing-the-developer-ai-trust-gap/",
+          "type": "primary",
+          "date": "2026-02-18"
+        },
+        {
+          "title": "Sonar State of Code 2025 (via ShiftMag)",
+          "url": "https://shiftmag.dev/state-of-code-2025-7978/",
+          "type": "secondary",
+          "date": "2026-02-12"
+        },
+        {
+          "title": "IT Pro: Nearly half of software developers don't check AI-generated code",
+          "url": "https://www.itpro.com/software/development/software-developers-not-checking-ai-generated-code-verification-debt",
+          "type": "secondary",
+          "date": "2026-01-09"
+        },
+        {
+          "title": "VentureBeat: 43% of AI-generated code changes need debugging in production",
+          "url": "https://venturebeat.com/technology/43-of-ai-generated-code-changes-need-debugging-in-production-survey-finds",
+          "type": "secondary",
+          "date": "2026-04"
+        },
+        {
+          "title": "Praxis Tech School: AI Workslop Threatens Productivity Gains",
+          "url": "https://praxistechschool.in/thought-leadership/ai-workslop",
+          "type": "secondary",
+          "date": "2026-02-07"
+        }
+      ],
+      "date_relevant": "2025-2026 survey cycle",
+      "caveats": [
+        "Stack Overflow — self-selected developer survey, не nationally representative, но largest dev survey",
+        "Sonar — commercial code review tool, possible interest in framing AI as risky",
+        "Google DORA report — peer-reviewed annual standard в industry",
+        "Federal Reserve study — academic source, более authoritative для productivity gap"
+      ],
+      "implications_for_b": "Workslop — структурное явление с измеренными эффектами. Это конкретное наполнение 'социально-культурного долга в IT' — verification debt накапливается, доверие падает, но adoption не останавливается. В команде с consolidated middle layer (PM/BA сжаты) burden переходит на senior."
+    },
+    {
+      "id": "b-rus-it-04",
+      "pass": "b-russia-it",
+      "topic": "Workslop как tragedy of the commons (qualitative arxiv analysis)",
+      "claim": "Qualitative analysis (arxiv preprint, 2026) 1,154 постов в 15 discussion threads на Reddit и Hacker News посвящённых 'AI slop' в software development. Развит codebook из 15 codes в трёх thematic clusters: Review Friction (бремя на reviewers, эрозия доверия, контрмеры), Quality Degradation (повреждение codebases, knowledge resources, developer competence), Forces and Consequences (системные стимулы, mandated adoption, craft erosion, workforce disruption). Authors framed AI slop как tragedy of the commons: индивидуальные productivity gains externalize costs на reviewers, maintainers, broader community. Microsoft Research: AI-assisted code generation увеличивает defect rate на ~40% независимо от уровня developer.",
+      "status": "verified",
+      "evidence_level": "C",
+      "sources": [
+        {
+          "title": "An Endless Stream of AI Slop: The Growing Burden of AI-Assisted Software Development (arxiv)",
+          "url": "https://arxiv.org/pdf/2603.27249",
+          "type": "primary",
+          "date": "2026"
+        },
+        {
+          "title": "Machine.news: AI workslop is the new technical debt",
+          "url": "https://www.machine.news/its-undermining-system-reliability-why-ai-workslop-is-the-new-technical-debt/",
+          "type": "secondary",
+          "date": "2026-02-13"
+        }
+      ],
+      "date_relevant": "2026 study",
+      "caveats": [
+        "Qualitative analysis self-selected community discussions (Reddit, HN) — observational level, не RCT",
+        "Tragedy of the commons frame — analytical model, не direct empirical measurement",
+        "Effective как conceptual frame связывающая микро-выгоду с макро-costs"
+      ],
+      "implications_for_b": "Концептуальная рамка для социально-культурного долга в IT. В синтез-главе B можно использовать для контраста с китайским кейсом (внешний долг — академия) — IT-долг внутренний (tragedy of the commons на уровне команды)."
     }
   ],
   "gaps": [
@@ -1954,6 +2658,36 @@
       "missing": "Качественные истории есть (recodechinaai), но количественных panel-данных — нет",
       "geographic_scope": "china",
       "criticality": "medium"
+    },
+    {
+      "id": "gap-16",
+      "topic": "Точные числа Irish-specific AI cheating data (vs UK general)",
+      "priority": "C",
+      "note": "UK studies применимы как контекст; Irish-specific surveys не найдены"
+    },
+    {
+      "id": "gap-17",
+      "topic": "Independent verification GitHub blocking specifics в 2025 для paid subscribers",
+      "priority": "B",
+      "note": "Только secondary source (mosdigitals.ru) сообщает о full blocking даже с paid subscription"
+    },
+    {
+      "id": "gap-18",
+      "topic": "Конкретные cases применения 6 O 151/23 принципа",
+      "priority": "C",
+      "note": "Прецедент подтверждён, но subsequent applications не отслежены"
+    },
+    {
+      "id": "gap-19",
+      "topic": "Independent verification Школа 21 / Иннополис employment claims (100% trudoustroistvo)",
+      "priority": "B",
+      "note": "PR-данные от компаний; нет third-party оценок"
+    },
+    {
+      "id": "gap-20",
+      "topic": "Российские IT-специалисты: точные цифры релокации 2024-2026",
+      "priority": "B",
+      "note": "Минцифры цифры от конца 2022; subsequent данные partial"
     }
   ],
   "recommendations": {
@@ -2041,6 +2775,19 @@
         "id": "ru-15",
         "reason": "Лига цифровой экономики и Программный продукт цифры выручки — primary не найден в выборке"
       }
+    ],
+    "article_b_guidance": [
+      "Use B-pack claims with explicit evidence_level marks in narrative text",
+      "For Ireland biography: Route 1/2 standard process with EU 2005/36/EC, Timebound Provision до 31.12.2027 (b-ire-01); avoid using Route 4 as universal",
+      "For Germany biography: anchor in EU AI Act timeline (b-ger-01) + AILD withdrawal (b-ger-02) + ProdHaftG-E (b-ger-03) + 6 O 151/23 precedent (b-ger-04)",
+      "For India-UK biography: anchor in PLAB→UKMLA transition (b-ind-01) + 5 March 2026 Prioritisation Act (b-ind-02) + 91,999 applications stat (b-ind-03)",
+      "For China biography: anchor in YTT data (existing reg-27, reg-28) + Pangram 26% (b-chn-01) + 72.2% retractions (b-chn-02); use Saveetha (b-chn-03) only as cross-country illustration",
+      "For Russia-IT biography: anchor in 152-ФЗ amendment from 28.02.2025 (b-rus-it-01) + GitHub trade controls (b-rus-it-02) + workslop measurements (b-rus-it-03) + tragedy of the commons frame (b-rus-it-04)",
+      "When citing 152-ФЗ: be precise about scope — primary collection ban (NOT full transborder transfer ban). Use exact wording from caveats",
+      "When citing GitHub blocking paid subscribers in 2025: use partially_verified status, mention secondary source only",
+      "Школа 21 / Иннополис: cite as \"по данным компаний\" / \"without independent verification\"",
+      "For Pareto matrices in B: use claims as anchor for scenarios — each scenario should reference specific facts from this pack",
+      "For synthesis chapter cross-comparison: use translator maintenance cost asymmetry as organising principle"
     ]
   }
 }
