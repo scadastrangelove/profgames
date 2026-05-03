@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игры в профессию — methodology pack v0.5 unified</title>
+<style>
+:root {
+  --bg: #fbfaf7;
+  --bg-card: #ffffff;
+  --bg-soft: #f4f2ec;
+  --text: #1a1a1a;
+  --text-muted: #5a5a58;
+  --text-light: #888780;
+  --accent: #5a4a3f;
+  --rule: rgba(0,0,0,0.12);
+  --rule-soft: rgba(0,0,0,0.06);
+
+  --c-verified: #0F6E56; --c-verified-bg: #E1F5EE;
+  --c-partial:  #9B7B0E; --c-partial-bg:  #FAEEDA;
+  --c-correction: #993C1D; --c-correction-bg: #FAECE7;
+  --c-notverified: #6B6356; --c-notverified-bg: #ECE9E0;
+
+  --c-A: #0F6E56;
+  --c-B: #5B6CB8;
+  --c-C: #9B7B0E;
+  --c-D: #6B6356;
+
+  --c-v05: #993C1D;
+  --c-v05-bg: #FAECE7;
+
+  --serif: 'Charter','Iowan Old Style','Source Serif Pro','Cambria',Georgia,serif;
+  --sans:  'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
+  --mono:  'IBM Plex Mono','SF Mono',Consolas,monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 48px 32px 96px;
+}
+
+/* Header */
+.doc-head { margin-bottom: 36px; padding-bottom: 24px; border-bottom: 0.5px solid var(--rule); }
+.eyebrow {
+  font-family: var(--sans); font-size: 12px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-light); margin-bottom: 12px;
+}
+.doc-head h1 {
+  font-family: var(--serif); font-weight: 500;
+  font-size: 34px; line-height: 1.2;
+  letter-spacing: -0.01em; margin: 0 0 12px;
+}
+.subtitle {
+  font-family: var(--serif); font-style: italic;
+  color: var(--text-muted); font-size: 18px;
+  line-height: 1.45; margin: 0 0 16px;
+}
+.doc-meta {
+  font-family: var(--sans); font-size: 13px;
+  color: var(--text-light); margin-top: 20px;
+}
+.doc-meta span + span:before { content: " · "; margin: 0 4px; }
+
+/* Summary */
+.summary {
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 8px;
+  padding: 26px 30px;
+  margin-bottom: 40px;
+}
+.summary h2 {
+  font-family: var(--serif); font-weight: 500;
+  font-size: 22px; margin: 0 0 16px;
+}
+.summary .stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.summary .stat {
+  text-align: center;
+  padding: 12px 8px;
+  background: var(--bg-soft);
+  border-radius: 6px;
+}
+.summary .stat-num {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--accent);
+}
+.summary .stat-num.s-A { color: var(--c-A); }
+.summary .stat-num.s-B { color: var(--c-B); }
+.summary .stat-num.s-C { color: var(--c-C); }
+.summary .stat-num.s-D { color: var(--c-D); }
+.summary .stat-num.s-v05 { color: var(--c-v05); }
+.summary .stat-label {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.summary .findings { margin: 0; padding-left: 20px; }
+.summary .findings li { margin-bottom: 6px; line-height: 1.55; font-size: 14.5px; }
+
+/* Filters */
+.filters {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  padding: 16px 0;
+  margin-bottom: 24px;
+  border-bottom: 0.5px solid var(--rule);
+  font-family: var(--sans);
+}
+.filter-group { margin-bottom: 8px; }
+.filter-group:last-child { margin-bottom: 0; }
+.filter-label {
+  display: inline-block;
+  width: 86px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-right: 8px;
+}
+.filter-btn {
+  display: inline-block;
+  padding: 4px 10px;
+  margin: 2px 4px 2px 0;
+  font-size: 12.5px;
+  font-family: var(--sans);
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+.filter-btn:hover { background: var(--bg-soft); }
+.filter-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.filter-counts {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-light);
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Section */
+section.pass-section { margin: 40px 0; }
+section.pass-section > h2 {
+  font-family: var(--serif); font-weight: 500;
+  font-size: 26px; letter-spacing: -0.005em;
+  margin: 36px 0 8px; padding-bottom: 6px;
+  border-bottom: 0.5px solid var(--rule);
+}
+section.pass-section > .section-intro {
+  font-family: var(--serif); font-style: italic;
+  color: var(--text-muted); margin: 0 0 24px;
+}
+section.pass-section.empty {
+  opacity: 0.4;
+}
+
+/* Claim */
+.claim {
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 8px;
+  padding: 22px 26px;
+  margin-bottom: 18px;
+  scroll-margin-top: 200px;
+}
+.claim.hidden { display: none; }
+.claim-head {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid var(--rule-soft);
+}
+.claim-id {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+.claim-topic {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0 0 10px;
+}
+.claim-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 3px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.tag.kind {
+  background: var(--bg-soft);
+  color: var(--accent);
+  border: 0.5px solid var(--rule);
+}
+.tag.kind.kind-dimension { color: #5B6CB8; }
+.tag.kind.kind-agency { color: #0F6E56; }
+.tag.kind.kind-indicator { color: #993C1D; }
+.tag.kind.kind-source { color: #5a4a3f; }
+.tag.kind.kind-gap { color: #9B7B0E; }
+.tag.kind.kind-neighbor { color: #6B6356; }
+.tag.kind.kind-country { color: #5B6CB8; }
+.tag.kind.kind-survey { color: #0F6E56; }
+
+.tag.level { color: white; }
+.tag.level.level-a { background: var(--c-A); }
+.tag.level.level-b { background: var(--c-B); }
+.tag.level.level-c { background: var(--c-C); }
+.tag.level.level-d { background: var(--c-D); }
+
+.tag.geo, .tag.date, .tag.publisher, .tag.axis, .tag.direction {
+  background: var(--bg-soft);
+  color: var(--text-muted);
+}
+.tag.direction.dir-exit { color: #993C1D; }
+.tag.direction.dir-return { color: #0F6E56; }
+.dir-exit { color: #993C1D; }
+.dir-return { color: #0F6E56; }
+
+.tag.vintage.v05 {
+  color: var(--c-v05);
+  background: var(--c-v05-bg);
+  border: 0.5px solid var(--c-v05);
+  font-weight: 600;
+}
+.tag.gap-crit.crit-high { background: var(--c-correction-bg); color: var(--c-correction); }
+.tag.gap-crit.crit-medium { background: var(--c-partial-bg); color: var(--c-partial); }
+.tag.gap-crit.crit-low { background: var(--c-notverified-bg); color: var(--c-notverified); }
+
+.claim-body .block { margin: 14px 0; }
+.claim-body h4 {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+.claim-body h5.domain-h {
+  font-family: var(--sans);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 12px 0 4px;
+}
+.claim-body .block p { margin: 0; line-height: 1.6; }
+.claim-body ul { margin: 0; padding-left: 20px; }
+.claim-body ul li { margin-bottom: 4px; line-height: 1.55; }
+.claim-body ul.meta-list { list-style: none; padding-left: 0; }
+.claim-body ul.meta-list li {
+  padding: 4px 0;
+  border-bottom: 0.5px dashed var(--rule-soft);
+  font-size: 14px;
+}
+.claim-body ul.meta-list li:last-child { border-bottom: none; }
+
+.block.caveats {
+  background: var(--bg-soft);
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 2px solid var(--c-partial);
+}
+.block.recommended {
+  background: #F1F8F5;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 2px solid var(--c-verified);
+}
+.block.v05 {
+  background: var(--c-v05-bg);
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 2px solid var(--c-v05);
+}
+.block.v05 h4 { color: var(--c-v05); }
+
+ul.sources { list-style: none; padding: 0; margin: 0; }
+ul.sources li {
+  padding: 6px 0;
+  border-bottom: 0.5px dashed var(--rule-soft);
+  font-size: 14px;
+  font-family: var(--sans);
+}
+ul.sources li:last-child { border-bottom: none; }
+ul.sources a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+ul.sources a:hover { border-bottom-style: solid; }
+.src-meta { color: var(--text-light); font-size: 12.5px; }
+
+.kw {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  padding: 2px 7px;
+  margin: 2px 4px 2px 0;
+  border-radius: 3px;
+}
+
+.muted-i { font-size: 13px; color: var(--text-light); font-style: italic; margin: 8px 0 0; }
+
+.formula {
+  font-family: var(--mono);
+  font-size: 13px;
+  background: var(--bg-soft);
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 0.5px solid var(--rule);
+}
+.formula code { font-family: inherit; background: transparent; padding: 0; }
+
+/* Country grid (used inside dimension cards) */
+.cgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 4px;
+}
+.cgrid-cell {
+  background: var(--bg-soft);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+.cgrid-flag {
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+.cgrid-grade {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 2px 0 4px;
+  line-height: 1;
+}
+.cgrid-notes { font-size: 12px; line-height: 1.4; color: var(--text-muted); }
+
+/* Footer */
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 0.5px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 12.5px;
+  color: var(--text-light);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .container { padding: 28px 16px 56px; }
+  body { font-size: 15px; }
+  .doc-head h1 { font-size: 26px; }
+  section.pass-section > h2 { font-size: 22px; }
+  .claim { padding: 18px 18px; }
+  .claim-topic { font-size: 16px; }
+  .filters { padding: 10px 0; }
+  .filter-btn { font-size: 11.5px; padding: 3px 8px; }
+  .filter-label { display: block; width: auto; margin-bottom: 4px; }
+  .summary .stats { grid-template-columns: repeat(3, 1fr); }
+  .cgrid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="doc-head">
+<div class="eyebrow">Игры в профессию · D-материалы · methodology pack v0.5</div>
+<h1>Methodology Pack v0.5 — Unified</h1>
+<p class="subtitle">Unified Methodology Pack: 10 Mobility Dimensions × Exit/Return + 7 Agency Parameters + Gap Closure Layer + Residual Gap Deep Research</p>
+<div class="doc-meta">
+  <span>Версия: 0.5_unified</span>
+  <span>Создан: 2026-05-03</span>
+  <span>Статус: merged_v04_unified_plus_v05_patch_plus_deep_research_corrections</span>
+  <span>Машиночитаемый источник: <a href="methodology_pack_v05_unified.json">methodology_pack_v05_unified.json</a></span>
+</div>
+</header>
+
+
+<section class="summary">
+<h2>Сводка / Pack at a glance</h2>
+<div class="stats">
+  <div class="stat"><div class="stat-num">10</div><div class="stat-label">dimensions</div></div>
+  <div class="stat"><div class="stat-num">7</div><div class="stat-label">agency</div></div>
+  <div class="stat"><div class="stat-num">7</div><div class="stat-label">indicators</div></div>
+  <div class="stat"><div class="stat-num">46</div><div class="stat-label">sources</div></div>
+  <div class="stat"><div class="stat-num s-v05">+24</div><div class="stat-label">v0.5 sources</div></div>
+</div>
+<div class="stats" style="margin-top:8px">
+  <div class="stat"><div class="stat-num s-A">25</div><div class="stat-label">A — primary</div></div>
+  <div class="stat"><div class="stat-num s-B">15</div><div class="stat-label">B — observational</div></div>
+  <div class="stat"><div class="stat-num s-C">4</div><div class="stat-label">C — practitioner</div></div>
+  <div class="stat"><div class="stat-num s-D">2</div><div class="stat-label">D — concept</div></div>
+  <div class="stat"><div class="stat-num">7</div><div class="stat-label">residual gaps</div></div>
+</div>
+<h3 style="font-family: var(--serif); font-weight: 500; font-size: 16px; margin: 20px 0 10px;">Главные выводы v0.5</h3>
+<ul class="findings">
+<li>10 dimensions × 7 agency × 7 derived indicators × 4 страны (US/EU/CN/RU) — единая операционная архитектура, не новый конструкт.</li>
+<li>v0.5 deep research добавил 8 источников за пределами патча и сделал 5 attribution corrections: CARINAS → D'Huyvetter et al. 2025; Xu → Nature HSS Comm 2021; Baldi-Trigeorgis → JIC, организационный уровень (downgrade); Failla-Melillo-Reichstein → Danish IDA, не SOEP; Hoffmann JPIM 2016 — авторство.</li>
+<li>Bottleneck rule применен последовательно: I07_ICAS остаётся на C для CN/RU из-за отсутствия cross-cultural invariance у CFI-R / Work Capability Set / CARINAS / Career Sustainability Scale.</li>
+<li>RU baseline для самозанятых — 14M (end-2024) / 15.4M (end-2025), не 10M+ как в v0.4. CN — 200M flexible workers (NBS 2021).</li>
+<li>O*NET 30.2 (24 Feb 2026) — четырёхуровневая Job Zone (1+2 объединены). ESCO at v1.2.1 (10 Dec 2025). PIAAC Cycle 2 — 31 страна, без RU и без CN.</li>
+<li>Russia post-2022 credentials: исключение из Совета Европы 16 марта 2022 + LRC restriction 28 февраля 2023; Постановление № 792 от 12.06.2024 + Приказ Минтруда № 359 от 18.07.2024 — двухслойная архитектура профстандартов (de-fanging vs. methodology).</li>
+</ul>
+</section>
+
+
+
+<div class="filters" id="filters">
+  <div class="filter-group">
+    <span class="filter-label">Тип:</span>
+    <button class="filter-btn active" data-filter="kind" data-value="all">все</button>
+    <button class="filter-btn" data-filter="kind" data-value="dimension">dimensions</button>
+    <button class="filter-btn" data-filter="kind" data-value="agency">agency</button>
+    <button class="filter-btn" data-filter="kind" data-value="indicator">indicators</button>
+    <button class="filter-btn" data-filter="kind" data-value="source">sources</button>
+    <button class="filter-btn" data-filter="kind" data-value="neighbor">neighbours</button>
+    <button class="filter-btn" data-filter="kind" data-value="country">country</button>
+    <button class="filter-btn" data-filter="kind" data-value="survey">survey</button>
+    <button class="filter-btn" data-filter="kind" data-value="gap">gaps</button>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Уровень:</span>
+    <button class="filter-btn active" data-filter="level" data-value="all">все</button>
+    <button class="filter-btn" data-filter="level" data-value="A">A</button>
+    <button class="filter-btn" data-filter="level" data-value="B">B</button>
+    <button class="filter-btn" data-filter="level" data-value="C">C</button>
+    <button class="filter-btn" data-filter="level" data-value="D">D</button>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">География:</span>
+    <button class="filter-btn active" data-filter="geo" data-value="all">все</button>
+    <button class="filter-btn" data-filter="geo" data-value="us">США</button>
+    <button class="filter-btn" data-filter="geo" data-value="eu">EU</button>
+    <button class="filter-btn" data-filter="geo" data-value="cn">Китай</button>
+    <button class="filter-btn" data-filter="geo" data-value="ru">РФ</button>
+    <button class="filter-btn" data-filter="geo" data-value="global">глоб.</button>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Ось:</span>
+    <button class="filter-btn active" data-filter="axis" data-value="all">все</button>
+    <button class="filter-btn" data-filter="axis" data-value="geographic">geographic</button>
+    <button class="filter-btn" data-filter="axis" data-value="vertical">vertical</button>
+    <button class="filter-btn" data-filter="axis" data-value="lateral_professional">lateral</button>
+    <button class="filter-btn" data-filter="axis" data-value="industry">industry</button>
+    <button class="filter-btn" data-filter="axis" data-value="employment_form">employment form</button>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Версия:</span>
+    <button class="filter-btn active" data-filter="vintage" data-value="all">все</button>
+    <button class="filter-btn" data-filter="vintage" data-value="v04">v0.4 base</button>
+    <button class="filter-btn" data-filter="vintage" data-value="v05">v0.5 added/updated</button>
+  </div>
+  <div class="filter-group" style="margin-top:6px">
+    <span class="filter-counts" id="visible-count"></span>
+  </div>
+</div>
+
+
+<section class="pass-section" id="dimensions">
+<h2>Ten mobility dimensions (D01–D10) <span style="font-family:var(--mono);font-size:14px;color:var(--text-light)">(10)</span></h2>
+<p class="section-intro">Десять измерений мобильности: пять осей × два направления (exit / return). Каждое измерение скорится отдельно.</p>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="geographic" data-geo="us eu cn ru" data-vintage="v04" id="D01_geographic_exit">
+<div class="claim-head">
+<div class="claim-id">D01_geographic_exit</div>
+<div class="claim-topic">geographic <span class="dir-exit">/ exit</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">geographic</span>
+<span class="tag direction dir-exit">exit</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to leave current geography for another labor market.</p></div>
+<div class="block"><h4>measurement maturity</h4><p>medium_high_for_population_flows; low_for_individual_agency</p></div>
+<div class="block"><h4>derived indicator</h4><p><code>I05_GRCS</code></p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A4_network_capital</code> <code class="kw">A5_credential_portability</code> <code class="kw">A6_labor_market_liquidity</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">saxenian_amanzadeh_kermani_brain_circulation</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_NBER_RETURN_MIGRATION"><code>SRC_NBER_RETURN_MIGRATION</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— individual-panel hazard model evidence</span></li><li><a href="#SRC_LEHD_J2J"><code>SRC_LEHD_J2J</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— US interstate/MSA flows</span></li><li><a href="#SRC_EUROSTAT_LFS_LONG"><code>SRC_EUROSTAT_LFS_LONG</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— EU intra-EU mobility tracking</span></li><li><a href="#SRC_CENSUS_SIPP"><code>SRC_CENSUS_SIPP</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— US individual panel of geographic transitions</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">A-</div><div class="cgrid-notes">LEHD J2J + ACS migration + NBER hazard models give strong individual-level signal</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">B+</div><div class="cgrid-notes">LFS + EU-SILC give intra-EU mobility; ESCO + EQF + Lisbon RC support credential portability</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C+</div><div class="cgrid-notes">Internal migration data via population census; international outflow harder to measure individually</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C</div><div class="cgrid-notes">Rosstat outmigration data limited; post-2022 emigration flows poorly observable; OECD Migration Outlook is best external proxy</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>Individual-level exit-readiness scoring (vs. realized flows) requires survey augmentation; no off-the-shelf instrument.</p></div>
+</div></article>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="geographic" data-geo="us eu cn ru" data-vintage="v04" id="D02_geographic_return">
+<div class="claim-head">
+<div class="claim-id">D02_geographic_return</div>
+<div class="claim-topic">geographic <span class="dir-return">/ return</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">geographic</span>
+<span class="tag direction dir-return">return</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to return to prior geography or origin labor market.</p></div>
+<div class="block"><h4>measurement maturity</h4><p>medium_for_cohort_evidence; low_for_individual_score</p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A4_network_capital</code> <code class="kw">A5_credential_portability</code> <code class="kw">A6_labor_market_liquidity</code> <code class="kw">A7_institutional_constraints</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">saxenian_amanzadeh_kermani_brain_circulation</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_NBER_RETURN_MIGRATION"><code>SRC_NBER_RETURN_MIGRATION</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— Amanzadeh-Kermani-McQuade 2024: 38% return within 10 years; asymmetric exposure to negative firm growth</span></li><li><a href="#SRC_AKKERMANS_CCQ"><code>SRC_AKKERMANS_CCQ</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— individual-level home network continuity (survey)</span></li><li><a href="#SRC_ESCO"><code>SRC_ESCO</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— credential recognition / regulated profession info</span></li><li><a href="#SRC_RU_PROFSTANDARDS"><code>SRC_RU_PROFSTANDARDS</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— RU occupation content for matching foreign qualifications domestically</span></li><li><a href="#SRC_CHINA_OCC_DICT"><code>SRC_CHINA_OCC_DICT</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— CN occupation directory for repatriating Chinese workers</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">B+</div><div class="cgrid-notes">Strong NBER-style empirical anchor; LEHD return-to-prior-state observable in some panels; iRelaunch C-level data for career-break return</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">B</div><div class="cgrid-notes">Lisbon RC + EQF give credential return mechanism; LFS-Long tracks short-cycle returns</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C+</div><div class="cgrid-notes">Returnee literature qualitative; Tokyo Convention 2011/2018 gives credential mechanism; &#x27;海归&#x27; (haigui) corpus large but methodologically weak</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C-</div><div class="cgrid-notes">Lisbon RC ratified (2000) but practical operation degraded post-March 2022 (Russia ceased CoE membership); profstandards weakened as binding rule (Постановление № 792 от 13 июня 2024). Empirical return-migration data sparse and methodologically constrained.</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>Individual-level return-capacity score requires combining hazard-model baseline + survey add-on + credential-portability check. Asymmetric exposure to destination shocks (Amanzadeh-Kermani-McQuade) is empirically established but not turned into individual instrument.</p></div>
+</div></article>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="vertical" data-geo="us eu cn ru" data-vintage="v04" id="D03_vertical_exit">
+<div class="claim-head">
+<div class="claim-id">D03_vertical_exit</div>
+<div class="claim-topic">vertical <span class="dir-exit">/ exit</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">vertical</span>
+<span class="tag direction dir-exit">exit</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to move up, down, or out of current hierarchical track (manager/IC/expert ladders).</p></div>
+<div class="block"><h4>measurement maturity</h4><p>medium_for_ex_post_mobility; low_for_individual_capacity</p></div>
+<div class="block"><h4>derived indicator</h4><p><code>I06_VRCS</code></p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A1_skills_capital</code> <code class="kw">A2_career_identity</code> <code class="kw">A3_adaptability_self_efficacy</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">benko_mass_career_customization</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_LEHD_J2J"><code>SRC_LEHD_J2J</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— earnings-quartile and firm-level transitions</span></li><li><a href="#SRC_DUAL_LADDER_RAELIN"><code>SRC_DUAL_LADDER_RAELIN</code></a> <span class="tag level level-c">C</span> <span class="src-meta">— structural availability of dual track</span></li><li><a href="#SRC_ONET_DOL"><code>SRC_ONET_DOL</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— Job Zones (4-level since 30.2 Feb 2026) for level mapping</span></li><li><a href="#SRC_ONET_CONTENT"><code>SRC_ONET_CONTENT</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— responsibility/autonomy/complexity descriptors</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">B+</div><div class="cgrid-notes">Strong O*NET level mapping; LEHD earnings quartile transitions; tech-sector dual ladder C-level prevalent</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">B-</div><div class="cgrid-notes">ESCO ISCO-08 levels; weaker dual-ladder formalisation outside tech</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C</div><div class="cgrid-notes">Occupation dictionary classification levels exist; SOE vs. private firm vertical structures heterogeneous</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C</div><div class="cgrid-notes">OKZ ISCO-08 alignment + profstandards qualification levels; weak dual-ladder culture outside multinational corporations and IT</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>Vertical exit at individual level (ready/willing/able to step up, down, or out) requires survey add-on combining career identity (CCQ) + level recency (O*NET) + market liquidity (LEHD/Skills-OVATE).</p></div>
+</div></article>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="vertical" data-geo="us eu cn ru" data-vintage="v04" id="D04_vertical_return">
+<div class="claim-head">
+<div class="claim-id">D04_vertical_return</div>
+<div class="claim-topic">vertical <span class="dir-return">/ return</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">vertical</span>
+<span class="tag direction dir-return">return</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to re-enter prior seniority, management, or IC track after a track switch (manager→IC→manager, IC→manager→IC, post-break re-entry to senior level).</p></div>
+<div class="block"><h4>measurement maturity</h4><p>low_for_individual_score</p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A1_skills_capital</code> <code class="kw">A2_career_identity</code> <code class="kw">A3_adaptability_self_efficacy</code> <code class="kw">A6_labor_market_liquidity</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">benko_mass_career_customization</code> <code class="kw">briscoe_hall_pcas_bcas</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_DUAL_LADDER_RAELIN"><code>SRC_DUAL_LADDER_RAELIN</code></a> <span class="tag level level-c">C</span> <span class="src-meta">— structural availability</span></li><li><a href="#SRC_ONET_DOL"><code>SRC_ONET_DOL</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— level equivalence between tracks</span></li><li><a href="#SRC_ONET_CONTENT"><code>SRC_ONET_CONTENT</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— responsibility/autonomy mapping</span></li><li><a href="#SRC_AKKERMANS_CCQ"><code>SRC_AKKERMANS_CCQ</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— career identity + reflection on motivation</span></li><li><a href="#SRC_LEHD_J2J"><code>SRC_LEHD_J2J</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— track-switch flow rates and earnings outcomes</span></li><li><a href="#SRC_CEDEFOP_OVATE"><code>SRC_CEDEFOP_OVATE</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— openings at target level</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">B-</div><div class="cgrid-notes">Tech-sector dual ladder culturally normalized (Shopify crafters, Google IC ladder); 7 signals all operationalisable</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">C+</div><div class="cgrid-notes">Less dual-ladder culture outside tech; some sectors strongly hierarchical</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C</div><div class="cgrid-notes">Tech sectors (Alibaba, Tencent, ByteDance) have IC tracks; weaker outside tech</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C</div><div class="cgrid-notes">Limited dual-ladder outside multinationals; track-switch stigma reportedly higher than in US</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>Major gap. No off-the-shelf measure for return-after-track-switch. Closure path: combine VR_01 dual ladder availability (Raelin C-level) + VR_02 level equivalence (O*NET A-level) + VR_03 recency (O*NET + CCQ) + VR_04 evidence portfolio + VR_05 market liquidity + VR_06 identity fit + VR_07 stigma — see I06_VRCS.</p></div>
+</div></article>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="lateral_professional" data-geo="us eu cn ru" data-vintage="v04" id="D05_lateral_professional_exit">
+<div class="claim-head">
+<div class="claim-id">D05_lateral_professional_exit</div>
+<div class="claim-topic">lateral_professional <span class="dir-exit">/ exit</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">lateral_professional</span>
+<span class="tag direction dir-exit">exit</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to move into adjacent or distant occupations based on transferable skills and tasks.</p></div>
+<div class="block"><h4>measurement maturity</h4><p>high_for_occupation_pair_distance; medium_low_for_individual_capacity</p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A1_skills_capital</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">robinson_oecd_task_distance</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_ONET_DOL"><code>SRC_ONET_DOL</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— task / skill / work-context vectors (30.2 Feb 2026)</span></li><li><a href="#SRC_ONET_CONTENT"><code>SRC_ONET_CONTENT</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— Content Model 277 descriptors</span></li><li><a href="#SRC_ESCO"><code>SRC_ESCO</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— EU-side: 3,039 occupations × 13,939 skills × 28 languages (v1.2)</span></li><li><a href="#SRC_CEDEFOP_OVATE"><code>SRC_CEDEFOP_OVATE</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— demand-weighted skill vectors from OJAs</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">A</div><div class="cgrid-notes">O*NET 30.2 + Robinson 2018 + Bechichi et al. 2018-2019 give strongest infrastructure globally</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">A-</div><div class="cgrid-notes">ESCO 3,039 × 13,939 × 28 languages; multilingual is unique advantage</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C+</div><div class="cgrid-notes">1,639 professions (MoHRSS 2022) + 158 new since 2015 + 97 digital. NO state-published task-vector layer; Xu et al. 2020 (arXiv 2001.02863) academic prototype exists</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C</div><div class="cgrid-notes">OKZ ISCO-08 alignment + profstandards content; no task-vector layer; pseudo-vector via NLP on profstandards text feasible (gap_closure cn_ru_comparability)</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>Methodologically mature for US/EU; CN/RU need pseudo-vector construction with confidence penalties (see I04_CCS).</p></div>
+</div></article>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="lateral_professional" data-geo="us eu cn ru" data-vintage="v04" id="D06_lateral_professional_return">
+<div class="claim-head">
+<div class="claim-id">D06_lateral_professional_return</div>
+<div class="claim-topic">lateral_professional <span class="dir-return">/ return</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">lateral_professional</span>
+<span class="tag direction dir-return">return</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to return to prior occupation after occupational switch.</p></div>
+<div class="block"><h4>measurement maturity</h4><p>low</p></div>
+<div class="block"><h4>derived indicator</h4><p><code>I02_ROVS</code></p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A1_skills_capital</code> <code class="kw">A4_network_capital</code> <code class="kw">A5_credential_portability</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">robinson_oecd_task_distance</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_LEHD_J2J"><code>SRC_LEHD_J2J</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— occupational switch and return flow rates</span></li><li><a href="#SRC_ONET_DOL"><code>SRC_ONET_DOL</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— skill decay / re-entry skill gap measurement</span></li><li><a href="#SRC_ESCO"><code>SRC_ESCO</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— EU credential recognition + skill mapping</span></li><li><a href="#SRC_CEDEFOP_OVATE"><code>SRC_CEDEFOP_OVATE</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— demand for return target occupation</span></li><li><a href="#SRC_AKKERMANS_CCQ"><code>SRC_AKKERMANS_CCQ</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— individual return readiness via career identity + work exploration</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">B-</div><div class="cgrid-notes">Skill decay observable in O*NET vector recency + LEHD occupation flow rates</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">C+</div><div class="cgrid-notes">ESCO + Lisbon RC for credentials; LFS-Long short panels limit return detection</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C-</div><div class="cgrid-notes">Pseudo-vector + qualitative returnee literature only</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C-</div><div class="cgrid-notes">Pseudo-vector + profstandards content; Lisbon RC nominally available but practical operation constrained post-2022</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>Lateral-professional return is consistently the weakest dimension across all four countries. Individual-level instrument would require: occupation pair distance × skill decay × credential renewal cost × demand for return target. None of these are bundled in a ready instrument.</p></div>
+</div></article>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="industry" data-geo="us eu cn ru" data-vintage="v04" id="D07_industry_exit">
+<div class="claim-head">
+<div class="claim-id">D07_industry_exit</div>
+<div class="claim-topic">industry <span class="dir-exit">/ exit</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">industry</span>
+<span class="tag direction dir-exit">exit</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to transfer skills and networks into another industry.</p></div>
+<div class="block"><h4>measurement maturity</h4><p>low_medium</p></div>
+<div class="block"><h4>derived indicator</h4><p><code>I03_IRAS</code></p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A1_skills_capital</code> <code class="kw">A4_network_capital</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">robinson_oecd_task_distance</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_ONET_DOL"><code>SRC_ONET_DOL</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— occupation-skill vectors aggregated to industry</span></li><li><a href="#SRC_ESCO"><code>SRC_ESCO</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— EU industry-occupation crosswalks</span></li><li><a href="#SRC_LEHD_J2J"><code>SRC_LEHD_J2J</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— industry-to-industry flow rates by NAICS</span></li><li><a href="#SRC_CEDEFOP_OVATE"><code>SRC_CEDEFOP_OVATE</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— skill demand by NACE rev.2 sector</span></li><li><a href="#SRC_EUROSTAT_LFS_LONG"><code>SRC_EUROSTAT_LFS_LONG</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— EU sectoral transitions</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">B+</div><div class="cgrid-notes">LEHD industry flows + O*NET task vectors; Aufiero et al. 2024 (Sci Rep) job-fitness/skill-coherence into wages</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">B</div><div class="cgrid-notes">ESCO + NACE + Skills-OVATE near-real-time</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C+</div><div class="cgrid-notes">Industrial classification exists; flow data limited</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C</div><div class="cgrid-notes">OKVED industry codes; transition data via Rosstat aggregates only</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>Demand-side network specificity (sector-specific weak ties) is the missing piece — Akkermans CCQ touches on networking but not industry-specific.</p></div>
+</div></article>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="industry" data-geo="us eu cn ru" data-vintage="v04" id="D08_industry_return">
+<div class="claim-head">
+<div class="claim-id">D08_industry_return</div>
+<div class="claim-topic">industry <span class="dir-return">/ return</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">industry</span>
+<span class="tag direction dir-return">return</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to re-enter prior industry after exit (academia↔industry, finance↔tech, public↔private, regulated↔unregulated transitions).</p></div>
+<div class="block"><h4>measurement maturity</h4><p>low</p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A1_skills_capital</code> <code class="kw">A4_network_capital</code> <code class="kw">A5_credential_portability</code> <code class="kw">A7_institutional_constraints</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">robinson_oecd_task_distance</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_LEHD_J2J"><code>SRC_LEHD_J2J</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— directional inter-industry flow ratios</span></li><li><a href="#SRC_EUROSTAT_LFS_LONG"><code>SRC_EUROSTAT_LFS_LONG</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— EU sectoral re-entry</span></li><li><a href="#SRC_CEDEFOP_OVATE"><code>SRC_CEDEFOP_OVATE</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— demand-weighted skill overlap between industries</span></li><li><a href="#SRC_ONET_DOL"><code>SRC_ONET_DOL</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— skill overlap vectors</span></li><li><a href="#SRC_ESCO"><code>SRC_ESCO</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— EU credential / regulated profession barriers</span></li><li><a href="#SRC_RU_PROFSTANDARDS"><code>SRC_RU_PROFSTANDARDS</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— RU credential content by sector</span></li><li><a href="#SRC_CHINA_OCC_DICT"><code>SRC_CHINA_OCC_DICT</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— CN credential / occupation barriers by sector</span></li><li><a href="#SRC_AKKERMANS_CCQ"><code>SRC_AKKERMANS_CCQ</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— industry-specific networking + reflection</span></li><li><a href="#SRC_JACOBS_ACAD_INDUSTRY"><code>SRC_JACOBS_ACAD_INDUSTRY</code></a> <span class="tag level level-c">C</span> <span class="src-meta">— academia↔industry transition literature (basket of references — see fact_check_v03)</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">B-</div><div class="cgrid-notes">LEHD flow asymmetry + signal preservation observable; academia↔industry literature sparse but present</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">C+</div><div class="cgrid-notes">Skills-OVATE + LFS-Long; cross-country EU heterogeneity high</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C</div><div class="cgrid-notes">Public-private transition literature (Hu Lin et al.) qualitative</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C-</div><div class="cgrid-notes">Limited inter-sector transition data; profstandards weakened post-June 2024 as regulatory barrier</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>MAJOR. Asymmetric industry re-entry (especially academia↔industry, finance↔tech, public↔private, regulated↔unregulated) is the weakest measured dimension after employment-form return. I03_IRAS proposes proxy from 6 signals but indicator is not validated. Residual gap is high severity.</p></div>
+</div></article>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="employment_form" data-geo="us eu cn ru" data-vintage="v04" id="D09_employment_form_exit">
+<div class="claim-head">
+<div class="claim-id">D09_employment_form_exit</div>
+<div class="claim-topic">employment_form <span class="dir-exit">/ exit</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">employment_form</span>
+<span class="tag direction dir-exit">exit</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to move from salaried employment into freelance, gig, founder, contractor, or portfolio work.</p></div>
+<div class="block"><h4>measurement maturity</h4><p>low</p></div>
+<div class="block"><h4>derived indicator</h4><p><code>I01_EFBCS</code></p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A1_skills_capital</code> <code class="kw">A2_career_identity</code> <code class="kw">A3_adaptability_self_efficacy</code> <code class="kw">A4_network_capital</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">benko_mass_career_customization</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_BLS_CWS_2023"><code>SRC_BLS_CWS_2023</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— US contingent + alternative work arrangements; 6.9M contingent (4.3%); 7.4% independent contractors</span></li><li><a href="#SRC_CENSUS_SIPP"><code>SRC_CENSUS_SIPP</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— US individual panel of form switches</span></li><li><a href="#SRC_EUROSTAT_LFS_LONG"><code>SRC_EUROSTAT_LFS_LONG</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— EU self-employment transitions</span></li><li><a href="#SRC_EU_SILC"><code>SRC_EU_SILC</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— EU income / form continuity</span></li><li><a href="#SRC_EUROFOUND_EWCS"><code>SRC_EUROFOUND_EWCS</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— EU job quality across forms</span></li><li><a href="#SRC_AKKERMANS_CCQ"><code>SRC_AKKERMANS_CCQ</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— individual readiness + work exploration</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">B+</div><div class="cgrid-notes">BLS CWS 2023 (next May 2025) + SIPP + LEHD give strong baseline; LEHD excludes self-employed — important caveat</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">B</div><div class="cgrid-notes">EU-LFS + EU-SILC + EWCS triangulation</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C+</div><div class="cgrid-notes">Platform-work and gig economy literature growing; 97 digital-economy professions in 2022 dictionary</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C</div><div class="cgrid-notes">Самозанятые (self-employed under НПД tax regime since 2019) ~10M+ on FNS register; transitions to/from employee status observable in tax data but not consolidated in single labor-market panel</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>LEHD&#x27;s exclusion of self-employed is the structural blind spot in the US. The &#x27;inferred from status changes in CPS basic monthly survey + administrative tax data + CWS supplement&#x27; triangulation is feasible but not bundled.</p></div>
+</div></article>
+<article class="claim" data-kind="dimension" data-level="A" data-axis="employment_form" data-geo="us eu cn ru" data-vintage="v04" id="D10_employment_form_return">
+<div class="claim-head">
+<div class="claim-id">D10_employment_form_return</div>
+<div class="claim-topic">employment_form <span class="dir-return">/ return</span></div>
+<div class="claim-tags">
+<span class="tag kind kind-dimension">dimension</span>
+<span class="tag axis">employment_form</span>
+<span class="tag direction dir-return">return</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Capacity to return from freelance, gig, founder, contractor, or portfolio work into salaried employment.</p></div>
+<div class="block"><h4>measurement maturity</h4><p>low</p></div>
+<div class="block"><h4>agency parameter links</h4><code class="kw">A1_skills_capital</code> <code class="kw">A2_career_identity</code> <code class="kw">A3_adaptability_self_efficacy</code> <code class="kw">A4_network_capital</code> <code class="kw">A5_credential_portability</code> <code class="kw">A6_labor_market_liquidity</code></div>
+<div class="block"><h4>field neighbours</h4><code class="kw">benko_mass_career_customization</code></div>
+<div class="block"><h4>canonical sources</h4><ul class="sources"><li><a href="#SRC_BLS_CWS_2023"><code>SRC_BLS_CWS_2023</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— baseline form prevalence</span></li><li><a href="#SRC_CENSUS_SIPP"><code>SRC_CENSUS_SIPP</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— individual panel; rare ready evidence on independent→employee return</span></li><li><a href="#SRC_LEHD_J2J"><code>SRC_LEHD_J2J</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— destination employer characteristics for those entering payroll from non-payroll states (limited by self-employed exclusion)</span></li><li><a href="#SRC_EUROSTAT_LFS_LONG"><code>SRC_EUROSTAT_LFS_LONG</code></a> <span class="tag level level-b">B</span> <span class="src-meta">— EU</span></li><li><a href="#SRC_AKKERMANS_CCQ"><code>SRC_AKKERMANS_CCQ</code></a> <span class="tag level level-a">A</span> <span class="src-meta">— individual return-readiness signals</span></li><li><a href="#SRC_LUEHRMAN_REAL_OPTIONS"><code>SRC_LUEHRMAN_REAL_OPTIONS</code></a> <span class="tag level level-c">C</span> <span class="src-meta">— rhetorical predecessor for option-value framing only</span></li><li><a href="#SRC_BALDI_REAL_OPTIONS_HUMAN_CAPITAL"><code>SRC_BALDI_REAL_OPTIONS_HUMAN_CAPITAL</code></a> <span class="tag level level-d">D</span> <span class="src-meta">— theoretical extension to human capital</span></li></ul></div>
+<div class="block"><h4>country readiness</h4><div class="cgrid"><div class="cgrid-cell"><div class="cgrid-flag">US</div><div class="cgrid-grade">C+</div><div class="cgrid-notes">iRelaunch returnship statistics (~70+ employer programs, ~80% returnship-to-hire rate, C-level corporate self-disclosure) PARTIALLY closes employment_form_return for career-break case. CWS + SIPP + LEHD triangulation is feasible but not bundled.</div></div><div class="cgrid-cell"><div class="cgrid-flag">EU</div><div class="cgrid-grade">C</div><div class="cgrid-notes">LFS-Long + EU-SILC + EWCS; ESCO credential recognition; no equivalent to iRelaunch programmatic infrastructure</div></div><div class="cgrid-cell"><div class="cgrid-flag">CN</div><div class="cgrid-grade">C-</div><div class="cgrid-notes">Platform-to-employee return literature minimal; no tracking infrastructure</div></div><div class="cgrid-cell"><div class="cgrid-flag">RU</div><div class="cgrid-grade">C-</div><div class="cgrid-notes">Самозанятые → employee transitions observable in tax data; не консолидировано как panel</div></div></div></div>
+<div class="block caveats"><h4>residual gap</h4><p>MAXIMAL gap (severity: high). Together with D08 (industry_return) and D04 (vertical_return), the three return dimensions form the framework&#x27;s hardest measurement frontier. Closure path: I01_EFBCS bidirectional capacity score combining transition propensity + income continuity + skill continuity + market demand for return job + survey add-on (S1_form_reversibility 3 items + S2_return_option_assets 3 items). I02_ROVS adds option-value layer (probability × payoff × switching cost × time decay × volatility × reversibility assets).</p></div>
+</div></article>
+</section><section class="pass-section" id="agency">
+<h2>Seven agency parameters (A1–A7) <span style="font-family:var(--mono);font-size:14px;color:var(--text-light)">(7)</span></h2>
+<p class="section-intro">Семь параметров индивидуальной агентности — психологические и структурные посредники между экзит/возвратом.</p>
+<article class="claim" data-kind="agency" data-level="A" data-geo="global" data-vintage="v04" id="A1_skills_capital">
+<div class="claim-head">
+<div class="claim-id">A1_skills_capital</div>
+<div class="claim-topic">Skills and human capital</div>
+<div class="claim-tags">
+<span class="tag kind kind-agency">agency</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>v02 sources</h4><code class="kw">O*NET</code> <code class="kw">PIAAC</code> <code class="kw">OECD Skills for Jobs</code> <code class="kw">Cedefop ESI</code></div>
+<div class="block"><h4>extractable from</h4><ul class="sources"><li><a href="#SRC_ONET_DOL"><code>SRC_ONET_DOL</code></a></li><li><a href="#SRC_ESCO"><code>SRC_ESCO</code></a></li><li><a href="#SRC_CEDEFOP_OVATE"><code>SRC_CEDEFOP_OVATE</code></a></li><li><a href="#SRC_CENSUS_SIPP"><code>SRC_CENSUS_SIPP</code></a></li></ul></div>
+<div class="block"><h4>operational signals</h4><ul><li>skill level</li><li>skill breadth</li><li>skill recency</li><li>transferable/transversal skills</li><li>PIAAC-style adaptive problem-solving where coverage exists</li></ul></div>
+<div class="block"><h4>scoring hint</h4><p>Normalize individual skill vector against target occupation/industry/geography demands</p></div>
+<div class="block caveats"><h4>caveat</h4><p>PIAAC Russian Cycle 1 sample EXCLUDED Moscow municipal area — under-represents the high-skill segment most relevant to this framework</p></div>
+</div></article>
+<article class="claim" data-kind="agency" data-level="A" data-geo="global" data-vintage="v04" id="A2_career_identity">
+<div class="claim-head">
+<div class="claim-id">A2_career_identity</div>
+<div class="claim-topic">Career identity and knowing-why</div>
+<div class="claim-tags">
+<span class="tag kind kind-agency">agency</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>v02 sources</h4><code class="kw">DeFillippi-Arthur Intelligent Career</code> <code class="kw">Briscoe-Hall PCAS</code> <code class="kw">Savickas CAAS</code></div>
+<div class="block"><h4>extractable from</h4><ul class="sources"><li><a href="#SRC_AKKERMANS_CCQ"><code>SRC_AKKERMANS_CCQ</code></a></li></ul></div>
+<div class="block"><h4>operational signals</h4><ul><li>reflection on motivation</li><li>reflection on qualities</li><li>values clarity</li><li>career goal clarity</li></ul></div>
+<div class="block"><h4>scoring hint</h4><p>Survey/scale-based; do not infer reliably from labour statistics alone</p></div>
+</div></article>
+<article class="claim" data-kind="agency" data-level="A" data-geo="global" data-vintage="v04" id="A3_adaptability_self_efficacy">
+<div class="claim-head">
+<div class="claim-id">A3_adaptability_self_efficacy</div>
+<div class="claim-topic">Adaptability and self-efficacy</div>
+<div class="claim-tags">
+<span class="tag kind kind-agency">agency</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>v02 sources</h4><code class="kw">Savickas CAAS</code> <code class="kw">Bandura social-cognitive agency</code> <code class="kw">return-to-work self-efficacy scales (RTW-SE)</code></div>
+<div class="block"><h4>extractable from</h4><ul class="sources"><li><a href="#SRC_AKKERMANS_CCQ"><code>SRC_AKKERMANS_CCQ</code></a></li></ul></div>
+<div class="block"><h4>operational signals</h4><ul><li>career control</li><li>work exploration</li><li>self-profiling</li><li>confidence in transition tasks</li></ul></div>
+<div class="block"><h4>scoring hint</h4><p>Use CAAS/CCQ-style survey items; domain-specific self-efficacy for return should be added</p></div>
+</div></article>
+<article class="claim" data-kind="agency" data-level="B" data-geo="global" data-vintage="v04" id="A4_network_capital">
+<div class="claim-head">
+<div class="claim-id">A4_network_capital</div>
+<div class="claim-topic">Network and social capital</div>
+<div class="claim-tags">
+<span class="tag kind kind-agency">agency</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>v02 sources</h4><code class="kw">DeFillippi-Arthur knowing-whom</code> <code class="kw">Saxenian brain circulation</code> <code class="kw">migration and returnee network literature</code></div>
+<div class="block"><h4>extractable from</h4><ul class="sources"><li><a href="#SRC_AKKERMANS_CCQ"><code>SRC_AKKERMANS_CCQ</code></a></li><li><a href="#SRC_NBER_RETURN_MIGRATION"><code>SRC_NBER_RETURN_MIGRATION</code></a></li></ul></div>
+<div class="block"><h4>operational signals</h4><ul><li>networking competence</li><li>origin/destination ties</li><li>referral channels</li><li>industry-specific weak ties</li></ul></div>
+<div class="block"><h4>scoring hint</h4><p>Network capital is often location/industry-specific; score it separately for each exit/return path</p></div>
+</div></article>
+<article class="claim" data-kind="agency" data-level="A" data-geo="global" data-vintage="v04" id="A5_credential_portability">
+<div class="claim-head">
+<div class="claim-id">A5_credential_portability</div>
+<div class="claim-topic">Credential and recognition portability</div>
+<div class="claim-tags">
+<span class="tag kind kind-agency">agency</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>v02 sources</h4><code class="kw">EQF</code> <code class="kw">Bologna Process</code> <code class="kw">Lisbon Recognition Convention</code> <code class="kw">national occupation and qualification frameworks</code></div>
+<div class="block"><h4>extractable from</h4><ul class="sources"><li><a href="#SRC_ESCO"><code>SRC_ESCO</code></a></li><li><a href="#SRC_RU_PROFSTANDARDS"><code>SRC_RU_PROFSTANDARDS</code></a></li><li><a href="#SRC_CHINA_OCC_DICT"><code>SRC_CHINA_OCC_DICT</code></a></li></ul></div>
+<div class="block"><h4>operational signals</h4><ul><li>credential recognition</li><li>license validity</li><li>professional standard match</li><li>renewal cost</li><li>regulated profession barrier</li></ul></div>
+<div class="block"><h4>scoring hint</h4><p>Treat as a CONVERSION FACTOR (in capability-approach sense), not as personal motivation</p></div>
+</div></article>
+<article class="claim" data-kind="agency" data-level="B" data-geo="global" data-vintage="v04" id="A6_labor_market_liquidity">
+<div class="claim-head">
+<div class="claim-id">A6_labor_market_liquidity</div>
+<div class="claim-topic">Labor-market liquidity and opportunity structure</div>
+<div class="claim-tags">
+<span class="tag kind kind-agency">agency</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>v02 sources</h4><code class="kw">BLS</code> <code class="kw">OECD labor-market indicators</code> <code class="kw">EU-LFS</code> <code class="kw">NBER migration hazard models</code></div>
+<div class="block"><h4>extractable from</h4><ul class="sources"><li><a href="#SRC_LEHD_J2J"><code>SRC_LEHD_J2J</code></a></li><li><a href="#SRC_CEDEFOP_OVATE"><code>SRC_CEDEFOP_OVATE</code></a></li><li><a href="#SRC_BLS_CWS_2023"><code>SRC_BLS_CWS_2023</code></a></li><li><a href="#SRC_EUROSTAT_EU_LFS"><code>SRC_EUROSTAT_EU_LFS</code></a></li></ul></div>
+<div class="block"><h4>operational signals</h4><ul><li>vacancy density</li><li>job-to-job flow rate</li><li>hire-separation balance</li><li>earnings dispersion at target level</li></ul></div>
+<div class="block"><h4>scoring hint</h4><p>Liquidity is location/occupation-specific; aggregate liquidity is a poor proxy for individual mobility opportunity</p></div>
+</div></article>
+<article class="claim" data-kind="agency" data-level="A" data-geo="global" data-vintage="v04" id="A7_institutional_constraints">
+<div class="claim-head">
+<div class="claim-id">A7_institutional_constraints</div>
+<div class="claim-topic">Institutional, legal, and professional-closure constraints</div>
+<div class="claim-tags">
+<span class="tag kind kind-agency">agency</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>v02 sources</h4><code class="kw">Abbott System of Professions (1988)</code> <code class="kw">Freidson &#x27;professional autonomy / Third Logic&#x27; (2001)</code> <code class="kw">Larson 1977 &#x27;closure&#x27; (Weberian closure tradition)</code> <code class="kw">Witz 1992 (gendered closure)</code> <code class="kw">credentialing and licensing regimes</code> <code class="kw">country-specific employment law</code></div>
+<div class="block"><h4>extractable from</h4><ul class="sources"><li><a href="#SRC_RU_PROFSTANDARDS"><code>SRC_RU_PROFSTANDARDS</code></a></li><li><a href="#SRC_CHINA_OCC_DICT"><code>SRC_CHINA_OCC_DICT</code></a></li><li><a href="#SRC_ESCO"><code>SRC_ESCO</code></a></li></ul></div>
+<div class="block"><h4>operational signals</h4><ul><li>regulated profession (yes/no)</li><li>license required</li><li>tenure clock</li><li>security clearance</li><li>professional registration requirement</li><li>continuing education rule</li><li>post-2022 emigration constraints (RU)</li></ul></div>
+<div class="block"><h4>scoring hint</h4><p>Treat as a HARD CAP / GATE rather than additive signal — geometric mean or multiplicative cap is methodologically preferable (per v0.3 schema aggregation_warning)</p></div>
+</div></article>
+</section><section class="pass-section" id="indicators">
+<h2>Seven derived indicators (I01–I07) <span style="font-family:var(--mono);font-size:14px;color:var(--text-light)">(7)</span></h2>
+<p class="section-intro">Семь производных gap-closing индикаторов (I01–I07). Это операционные прокси, ожидающие валидации, а не валидированные инструменты. Доверие наследует от слабейшего сигнала (bottleneck rule).</p>
+<article class="claim" data-kind="indicator" data-level="B" data-geo="global" data-vintage="v05" id="I01_EFBCS">
+<div class="claim-head">
+<div class="claim-id">I01_EFBCS</div>
+<div class="claim-topic">EmploymentFormBidirectionalCapacityScore</div>
+<div class="claim-tags">
+<span class="tag kind kind-indicator">indicator</span>
+<span class="tag level level-b">B</span>
+<span class="tag vintage v05">v0.5 updated</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>indicator metadata</h4><ul class="meta-list"><li><strong>primary dimension:</strong> D09 + D10 (employment_form_exit AND employment_form_return)</li><li><strong>gap closed:</strong> employment_form_exit_return</li><li><strong>output scale:</strong> 0_100</li><li><strong>key signals:</strong> 6</li><li><strong>data need:</strong> medium</li><li><strong>public-data buildable:</strong> partial</li><li><strong>survey add-on:</strong> yes</li><li><strong>confidence by country:</strong> medium for US (CWS+SIPP+LEHD bundle); medium for EU (LFS-Long+SILC+EWCS); low for CN/RU</li><li><strong>validation target:</strong> observed employee↔self-employed/independent/payroll transitions in CPS-CWS, SIPP, LFS-Long, EU-SILC</li></ul></div>
+<div class="block"><h4>construction principle</h4><p>Geometric mean preferred over additive: structural bottlenecks (legal access, regulated profession barriers) should cap rather than be averaged out</p></div>
+<div class="block"><h4>validation strategy</h4><p>predictive validity → outcome validity → cross-country invariance → sensitivity analysis (per v0.3 implementation_notes)</p></div>
+<div class="block v05"><h4>v0.5 added signals</h4><ul><li>realized_return_rate_from_self_employment_to_wage_work</li><li>time_to_first_wage_job_after_independent_work</li><li>return_quality_ratio_returned_wage_over_pre_exit_wage</li><li>occupational_similarity_of_return_job</li><li>benefit_security_recovery</li><li>evidence_legibility_from_independent_phase</li><li>network_return_assets</li></ul></div>
+<div class="block caveats"><h4>v0.5 warning</h4><p>Existing panels can observe transitions; capacity and comparable-return quality still need survey/linked data.</p></div>
+<div class="block v05"><h4>v0.5 baseline updates</h4><ul class="meta-list"><li><strong>RU_baseline:</strong> ~14M НПД by end-2024, ~15.4M by end-2025 (was &#x27;10M+&#x27; in v0.4). Source: ФНС/Мой налог, end-2025.</li><li><strong>CN_baseline:</strong> ~200M flexible employment workers / 灵活就业 (NBS 2021). Definition flag: mixes voluntary and distress.</li><li><strong>US_baseline:</strong> BLS CWS July 2023: 6.9M contingent (4.3% of employed); 7.4% independent contractors. May 2025 collected; July 2026 next round.</li></ul></div>
+</div></article>
+<article class="claim" data-kind="indicator" data-level="B" data-geo="global" data-vintage="v05" id="I02_ROVS">
+<div class="claim-head">
+<div class="claim-id">I02_ROVS</div>
+<div class="claim-topic">ReturnOptionValueScore</div>
+<div class="claim-tags">
+<span class="tag kind kind-indicator">indicator</span>
+<span class="tag level level-b">B</span>
+<span class="tag vintage v05">v0.5 updated</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>indicator metadata</h4><ul class="meta-list"><li><strong>primary dimension:</strong> all return dimensions: D02, D04, D06, D08, D10</li><li><strong>gap closed:</strong> option_value_of_return</li><li><strong>output scale:</strong> 0_100</li><li><strong>key signals:</strong> 6</li><li><strong>data need:</strong> high</li><li><strong>public-data buildable:</strong> partial</li><li><strong>survey add-on:</strong> yes</li><li><strong>confidence by country:</strong> medium-low overall — rhetorical predecessors (Luehrman 1998 C, Baldi D) do not give individual-level instrument</li></ul></div>
+<div class="block"><h4>validation strategy</h4><p>predictive validity primarily; option-value as latent construct requires structural model</p></div>
+<div class="block caveats"><h4>v0.5 warning</h4><p>Combined return-option-value score remains unvalidated.</p></div>
+<div class="block v05"><h4>formula stub (v0.5)</h4><p class="formula"><code>P_return × Payoff_quality × Reversibility_assets × Volatility_value - Switching_cost - Time_decay - Credential_decay</code></p></div>
+<div class="block v05"><h4>v0.5 validated subcomponents</h4><ul><li>CFI-R career agency</li><li>CFI-R occupational awareness</li><li>Work Capability Set enabled-realized gap</li><li>Career Inaction reverse score</li><li>Career Sustainability environmental awareness</li></ul></div>
+</div></article>
+<article class="claim" data-kind="indicator" data-level="B" data-geo="global" data-vintage="v05" id="I03_IRAS">
+<div class="claim-head">
+<div class="claim-id">I03_IRAS</div>
+<div class="claim-topic">IndustryReentryAsymmetryScore</div>
+<div class="claim-tags">
+<span class="tag kind kind-indicator">indicator</span>
+<span class="tag level level-b">B</span>
+<span class="tag vintage v05">v0.5 updated</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>indicator metadata</h4><ul class="meta-list"><li><strong>primary dimension:</strong> D07 + D08 (industry_exit AND industry_return)</li><li><strong>gap closed:</strong> asymmetric_industry_reentry</li><li><strong>output scale:</strong> signed; positive = easier exit than return; absolute value = friction</li><li><strong>key signals:</strong> 6</li><li><strong>data need:</strong> medium</li><li><strong>public-data buildable:</strong> partial</li><li><strong>survey add-on:</strong> yes</li><li><strong>confidence by country:</strong> medium for US (LEHD strong); low-medium for EU/CN/RU</li></ul></div>
+<div class="block v05"><h4>v0.5 domain signal taxonomy</h4><h5 class="domain-h">academia</h5><ul><li>publication_recency</li><li>citation_velocity</li><li>grant_eligibility</li><li>coauthor_network_continuity</li><li>conference_visibility</li><li>patents_or_industry_research_outputs</li></ul><h5 class="domain-h">finance</h5><ul><li>active_or_recent_registration</li><li>license_exam_status</li><li>BrokerCheck_clean_record</li><li>Form_U4_employment_history_continuity</li><li>Form_U5_termination_reason</li><li>continuing_education_compliance</li></ul><h5 class="domain-h">public_private</h5><ul><li>cooling_off_period_completed</li><li>security_clearance_status</li><li>policy_domain_specificity</li><li>lobbying_or_regulatory_experience</li><li>conflict_of_interest_barriers</li><li>seniority_of_prior_public_role</li></ul><h5 class="domain-h">regulated_professions</h5><ul><li>license_validity</li><li>continuing_education_status</li><li>disciplinary_record</li><li>credential_recognition</li><li>practice_hours_recency</li></ul><h5 class="domain-h">tech</h5><ul><li>portfolio_recentness</li><li>open_source_activity</li><li>technical_stack_recency</li><li>public_technical_reputation</li><li>product_or_launch_evidence</li></ul><p class="muted-i">Wrapper: <code>recency × legibility × institutional_validity × network_continuity × demand</code></p></div>
+</div></article>
+<article class="claim" data-kind="indicator" data-level="B" data-geo="global" data-vintage="v04" id="I04_CCS">
+<div class="claim-head">
+<div class="claim-id">I04_CCS</div>
+<div class="claim-topic">ComparabilityConfidenceScore</div>
+<div class="claim-tags">
+<span class="tag kind kind-indicator">indicator</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>indicator metadata</h4><ul class="meta-list"><li><strong>primary dimension:</strong> applied to D05/D06 cross-country (lateral_professional)</li><li><strong>gap closed:</strong> cn_ru_comparability</li><li><strong>output scale:</strong> 0_100</li><li><strong>key signals:</strong> 4</li><li><strong>data need:</strong> low</li><li><strong>public-data buildable:</strong> fully</li><li><strong>survey add-on:</strong> no</li><li><strong>confidence by country:</strong> high methodologically; low practically until pseudo-vectors are built and validated</li></ul></div>
+<div class="block v05"><h4>v0.5 country updates</h4><p><strong>CN:</strong> Use Xu et al. 2020 as a B-level prototype: NOCC descriptions + ML mapping to O*NET-style 161 skills/knowledge/abilities. Use Xu et al. 2021 Nature HSS Comm (peer-reviewed) as primary cite, not the 2020 arXiv preprint.</p><p><strong>RU:</strong> Use profstandards as B/C-level NLP input: трудовые функции, трудовые действия, знания, умения. Apply confidence penalty until validated. No peer-reviewed Russian NLP work on профстандарты→skill embeddings exists as of May 2026 — I04_CCS_RU stays at C.</p></div>
+</div></article>
+<article class="claim" data-kind="indicator" data-level="B" data-geo="global" data-vintage="v04" id="I05_GRCS">
+<div class="claim-head">
+<div class="claim-id">I05_GRCS</div>
+<div class="claim-topic">GeographicReturnCapacityScore</div>
+<div class="claim-tags">
+<span class="tag kind kind-indicator">indicator</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>indicator metadata</h4><ul class="meta-list"><li><strong>primary dimension:</strong> D02 (geographic_return)</li><li><strong>gap closed:</strong> geographic_return_individual_score</li><li><strong>output scale:</strong> 0_100</li><li><strong>key signals:</strong> 7</li><li><strong>data need:</strong> medium</li><li><strong>public-data buildable:</strong> partial</li><li><strong>survey add-on:</strong> yes</li><li><strong>confidence by country:</strong> medium for US (NBER+LEHD); medium for EU; low for CN; low for RU (post-2022 emigration constraints make Russian case harder to instrument)</li></ul></div>
+</div></article>
+<article class="claim" data-kind="indicator" data-level="C" data-geo="global" data-vintage="v05" id="I06_VRCS">
+<div class="claim-head">
+<div class="claim-id">I06_VRCS</div>
+<div class="claim-topic">VerticalReturnCapacityScore</div>
+<div class="claim-tags">
+<span class="tag kind kind-indicator">indicator</span>
+<span class="tag level level-c">C</span>
+<span class="tag vintage v05">v0.5 updated</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>indicator metadata</h4><ul class="meta-list"><li><strong>primary dimension:</strong> D04 (vertical_return)</li><li><strong>gap closed:</strong> vertical_return</li><li><strong>output scale:</strong> 0_100</li><li><strong>key signals:</strong> 7</li><li><strong>data need:</strong> medium</li><li><strong>public-data buildable:</strong> partial</li><li><strong>survey add-on:</strong> yes</li><li><strong>confidence by country:</strong> medium for US tech; low elsewhere</li></ul></div>
+<div class="block v05"><h4>v0.5 VR07 split</h4><ul><li>structural_track_parity</li><li>perceived_track_switch_stigma</li></ul></div>
+<div class="block v05"><h4>v0.5 added survey items</h4><ul><li>Returning from management to a senior IC/expert role is seen as legitimate, not a demotion.</li><li>Senior IC/expert tracks have compensation and status comparable to managerial tracks.</li><li>A period as IC/expert after management would not reduce future eligibility for management.</li><li>Hiring managers understand manager↔IC switches as skill-preserving rather than signal-damaging.</li></ul></div>
+</div></article>
+<article class="claim" data-kind="indicator" data-level="B" data-geo="global" data-vintage="v05" id="I07_ICAS">
+<div class="claim-head">
+<div class="claim-id">I07_ICAS</div>
+<div class="claim-topic">IntegratedCareerAgencyScore</div>
+<div class="claim-tags">
+<span class="tag kind kind-indicator">indicator</span>
+<span class="tag level level-b">B</span>
+<span class="tag vintage v05">v0.5 updated</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>indicator metadata</h4><ul class="meta-list"><li><strong>primary dimension:</strong> all 10 dimensions × 7 agency parameters (composite)</li><li><strong>gap closed:</strong> integrated_agency_measurement</li><li><strong>output scale:</strong> 0_100</li><li><strong>data need:</strong> high</li><li><strong>public-data buildable:</strong> partial</li><li><strong>survey add-on:</strong> yes</li><li><strong>confidence by country:</strong> low — composite of mixed-evidence components; requires extensive validation</li></ul></div>
+<div class="block"><h4>validation strategy</h4><p>must include sensitivity_analysis comparing scores with/without structural bottleneck multipliers — exposes how much agency is psychological vs institutional</p></div>
+<div class="block v05"><h4>v0.5 latent blocks</h4><ul><li>psychological_agency</li><li>career_competence</li><li>capability_conversion_factor</li><li>labor_market_liquidity</li><li>institutional_bottlenecks</li><li>negative_agency_or_inaction_risk</li></ul></div>
+<div class="block v05"><h4>v0.5 validation required</h4><ul><li>CFA</li><li>measurement_invariance_US_EU_CN_RU</li><li>predictive_validity_against_exit_return_events</li><li>outcome_validity_against_wage_job_quality_agency</li></ul></div>
+</div></article>
+</section><section class="pass-section" id="sources">
+<h2>Unified datasource registry <span style="font-family:var(--mono);font-size:14px;color:var(--text-light)">(46)</span></h2>
+<p class="section-intro">46 источников: 22 базовых (v0.4) + 16 из v0.5-патча + 8 добавленных deep research. Каждый источник имеет evidence level и покрываемые dimensions/agency.</p>
+<article class="claim" data-kind="source" data-level="A" data-geo="us" data-vintage="v04" id="SRC_ONET_DOL">
+<div class="claim-head">
+<div class="claim-id">SRC_ONET_DOL</div>
+<div class="claim-topic">O*NET (US Department of Labor)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">30.2 (Feb 2026)</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>occupation/task/skill/work-context vectors; 277 Content Model descriptors; new four-level Job Zone framework since 30.2</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener">https://www.onetcenter.org/database.html</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D03, D04, D05, D06, D07, D08 &middot; <strong>agency:</strong> A1, A7</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v04" id="SRC_ONET_CONTENT">
+<div class="claim-head">
+<div class="claim-id">SRC_ONET_CONTENT</div>
+<div class="claim-topic">O*NET Content Model</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">30.2</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Six domains of work descriptors organized hierarchically</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.onetonline.org/help/onet/database" target="_blank" rel="noopener">https://www.onetonline.org/help/onet/database</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D03, D04, D05, D06, D07, D08 &middot; <strong>agency:</strong> A1</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="eu" data-vintage="v04" id="SRC_ESCO">
+<div class="claim-head">
+<div class="claim-id">SRC_ESCO</div>
+<div class="claim-topic">European Skills, Competences, Qualifications and Occupations</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">v1.2 (May 2024)</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>EU-side multilingual occupation-skill classification</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://esco.ec.europa.eu/en/about-esco/what-esco" target="_blank" rel="noopener">https://esco.ec.europa.eu/en/about-esco/what-esco</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D05, D06, D07, D08, D02 &middot; <strong>agency:</strong> A1, A5</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="us" data-vintage="v04" id="SRC_BLS_CWS_2023">
+<div class="claim-head">
+<div class="claim-id">SRC_BLS_CWS_2023</div>
+<div class="claim-topic">BLS Contingent Worker Supplement (CPS, July 2023)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>US contingent + alternative employment arrangements; 6.9M contingent (4.3% of employed); 7.4% independent contractors; ~60K household monthly CPS sample; series 1995/97/99/2001/2005/2017/2023, next May 2025; 2023 added digital platform / app-based work questions</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.bls.gov/news.release/conemp.htm" target="_blank" rel="noopener">https://www.bls.gov/news.release/conemp.htm</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D09, D10 &middot; <strong>agency:</strong> A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="us" data-vintage="v04" id="SRC_CENSUS_SIPP">
+<div class="claim-head">
+<div class="claim-id">SRC_CENSUS_SIPP</div>
+<div class="claim-topic">Survey of Income and Program Participation</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>US individual-panel longitudinal household survey; ~14,000-52,000 households per panel × 4 years; detailed employment, earnings, transitions, self-employment</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.census.gov/programs-surveys/sipp.html" target="_blank" rel="noopener">https://www.census.gov/programs-surveys/sipp.html</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D01, D02, D09, D10, D07 &middot; <strong>agency:</strong> A1, A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="us" data-vintage="v04" id="SRC_LEHD_J2J">
+<div class="claim-head">
+<div class="claim-id">SRC_LEHD_J2J</div>
+<div class="claim-topic">LEHD Job-to-Job Flows (US Census)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Quarterly J2J data based on linked UI records + QCEW; series since 2000Q2, latest national 2023Q4; state and MSA level</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://lehd.ces.census.gov/data/" target="_blank" rel="noopener">https://lehd.ces.census.gov/data/</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D03, D04, D05, D06, D07, D08, D01 &middot; <strong>agency:</strong> A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="eu" data-vintage="v04" id="SRC_EUROSTAT_LFS_LONG">
+<div class="claim-head">
+<div class="claim-id">SRC_EUROSTAT_LFS_LONG</div>
+<div class="claim-topic">Eurostat Labour Market Transitions (LFS Longitudinal)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>EU-LFS 2-quarter and 4-quarter panel; transitions employment/unemployment/inactivity; 27 MS + EFTA</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://ec.europa.eu/eurostat/web/microdata/european-union-labour-force-survey" target="_blank" rel="noopener">https://ec.europa.eu/eurostat/web/microdata/european-union-labour-force-survey</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D01, D02, D05, D06, D07, D08, D09, D10 &middot; <strong>agency:</strong> A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="eu" data-vintage="v04" id="SRC_EUROSTAT_EU_LFS">
+<div class="claim-head">
+<div class="claim-id">SRC_EUROSTAT_EU_LFS</div>
+<div class="claim-topic">EU Labour Force Survey (microdata, full)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Eurostat&#x27;s main labour-force survey across EU</p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D05, D06, D07, D08, D09, D10 &middot; <strong>agency:</strong> A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="eu" data-vintage="v04" id="SRC_EU_SILC">
+<div class="claim-head">
+<div class="claim-id">SRC_EU_SILC</div>
+<div class="claim-topic">EU Statistics on Income and Living Conditions</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>EU income, poverty, living conditions; 4-year rotating panel</p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D09, D10 &middot; <strong>agency:</strong> A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="eu" data-vintage="v04" id="SRC_CEDEFOP_OVATE">
+<div class="claim-head">
+<div class="claim-id">SRC_CEDEFOP_OVATE</div>
+<div class="claim-topic">Cedefop Skills-OVATE</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Online job ads aggregation across 32 European countries (27 EU + EFTA + UK); quarterly updates; powered by Cedefop + Eurostat Web Intelligence Hub; ISCO-08/NACE rev.2/NUTS-2/ESCO v1/O*NET cross-walks</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.cedefop.europa.eu/en/tools/skills-online-vacancies" target="_blank" rel="noopener">https://www.cedefop.europa.eu/en/tools/skills-online-vacancies</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D04, D05, D06, D07, D08, D09, D10 &middot; <strong>agency:</strong> A6, A1</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v04" id="SRC_NBER_RETURN_MIGRATION">
+<div class="claim-head">
+<div class="claim-id">SRC_NBER_RETURN_MIGRATION</div>
+<div class="claim-topic">NBER return-migration hazard models (Amanzadeh-Kermani-McQuade 2024)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">2024</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Individual-panel hazard model on Revelio Labs data (~450M individuals, 180 countries); 38% return within 10 years; asymmetric exposure to negative firm growth</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.nber.org/papers/w32352" target="_blank" rel="noopener">https://www.nber.org/papers/w32352</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D01, D02 &middot; <strong>agency:</strong> A4, A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="cn" data-vintage="v04" id="SRC_CHINA_OCC_DICT">
+<div class="claim-head">
+<div class="claim-id">SRC_CHINA_OCC_DICT</div>
+<div class="claim-topic">China Occupation Dictionary 2022</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+<span class="tag publisher">Ministry of Human Resources and Social Security (MoHRSS)</span>
+<span class="tag date">2022</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Chinese state-published occupation classification; 3rd edition since 1999</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://english.www.gov.cn/statecouncil/ministries/202209/30/content_WS633647bbc6d0a757729e0bb6.html" target="_blank" rel="noopener">https://english.www.gov.cn/statecouncil/ministries/202209/30/content_WS633647bbc6d0a757729e0bb6.html</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D05, D06, D07, D08, D02 &middot; <strong>agency:</strong> A1, A5, A7</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="ru" data-vintage="v04" id="SRC_RU_OKZ">
+<div class="claim-head">
+<div class="claim-id">SRC_RU_OKZ</div>
+<div class="claim-topic">ОКЗ ОК 010-2014 (МСКЗ-08) Общероссийский классификатор занятий</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag publisher">Минтруд России / Росстандарт</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Russian occupation classifier harmonised with ISCO-08</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.consultant.ru/document/cons_doc_LAW_177953/" target="_blank" rel="noopener">https://www.consultant.ru/document/cons_doc_LAW_177953/</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D05, D06, D07, D08 &middot; <strong>agency:</strong> A1, A5</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="ru" data-vintage="v04" id="SRC_RU_PROFSTANDARDS">
+<div class="claim-head">
+<div class="claim-id">SRC_RU_PROFSTANDARDS</div>
+<div class="claim-topic">Реестр профессиональных стандартов (Минтруд РФ)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Russian professional standards registry; occupation content (трудовые функции, требуемые знания/умения, уровни квалификации)</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://profstandart.rosmintrud.ru/" target="_blank" rel="noopener">https://profstandart.rosmintrud.ru/</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D04, D05, D06, D07, D08, D02 &middot; <strong>agency:</strong> A1, A5, A7</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v04" id="SRC_AKKERMANS_CCQ">
+<div class="claim-head">
+<div class="claim-id">SRC_AKKERMANS_CCQ</div>
+<div class="claim-topic">Career Competencies Questionnaire (Akkermans et al. 2013)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">2013</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>21-item scale; 3 dimensions × 6 competencies (reflection on motivation/qualities; networking; self-profiling; work exploration; career control)</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://journals.sagepub.com/doi/abs/10.1177/0894845312467501" target="_blank" rel="noopener">https://journals.sagepub.com/doi/abs/10.1177/0894845312467501</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D04, D06, D08, D09, D10 &middot; <strong>agency:</strong> A2, A3, A4</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v04" id="SRC_ANAND_CAPABILITY_INDICATORS">
+<div class="claim-head">
+<div class="claim-id">SRC_ANAND_CAPABILITY_INDICATORS</div>
+<div class="claim-topic">Anand-Hunter-Smith 2005 &#x27;The Measurement of Capabilities&#x27;</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">2005</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Sen-Nussbaum capability approach operationalised on British Household Panel Survey (BHPS)</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://academic.oup.com/oep/article-abstract/57/Suppl_1/9/2362317" target="_blank" rel="noopener">https://academic.oup.com/oep/article-abstract/57/Suppl_1/9/2362317</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>agency:</strong> A6, A7</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="C" data-geo="global" data-vintage="v04" id="SRC_LUEHRMAN_REAL_OPTIONS">
+<div class="claim-head">
+<div class="claim-id">SRC_LUEHRMAN_REAL_OPTIONS</div>
+<div class="claim-topic">Luehrman 1998 &#x27;Strategy as a Portfolio of Real Options&#x27;</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-c">C</span>
+<span class="tag date">1998</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Practitioner-strategic real-options framework; two-metric Option Space + tomato garden metaphor</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://hbr.org/1998/09/strategy-as-a-portfolio-of-real-options" target="_blank" rel="noopener">https://hbr.org/1998/09/strategy-as-a-portfolio-of-real-options</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D02, D04, D06, D08, D10</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="D" data-geo="global" data-vintage="v04" id="SRC_BALDI_REAL_OPTIONS_HUMAN_CAPITAL">
+<div class="claim-head">
+<div class="claim-id">SRC_BALDI_REAL_OPTIONS_HUMAN_CAPITAL</div>
+<div class="claim-topic">Baldi (real options + human capital, 2012/2013)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-d">D</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Theoretical extension of real-options framework to individual career investment decisions; no validated instrument</p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D02, D04, D06, D08, D10</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="C" data-geo="global" data-vintage="v04" id="SRC_JACOBS_ACAD_INDUSTRY">
+<div class="claim-head">
+<div class="claim-id">SRC_JACOBS_ACAD_INDUSTRY</div>
+<div class="claim-topic">Academia↔industry transition literature (basket)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-c">C</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Mangematin 2000 (Research Policy on PhDs in industry); Roach-Sauermann 2010 (Research Policy on academic vs industry careers); Lam 2007 (R&amp;D Management on hybrid academic-industry roles); Nature Careers + Science Careers + ASAPbio guides</p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D08 &middot; <strong>agency:</strong> A2, A4</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="C" data-geo="global" data-vintage="v04" id="SRC_DUAL_LADDER_RAELIN">
+<div class="claim-head">
+<div class="claim-id">SRC_DUAL_LADDER_RAELIN</div>
+<div class="claim-topic">Raelin 1987 &#x27;Two-Track Plans for One-Track Careers&#x27;</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-c">C</span>
+<span class="tag date">1987</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Foundational practitioner article on dual ladder; widely cited; modern academic update Allen-Katz 1986, Petroni-Colacino 2008</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3928594" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3928594</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D03, D04 &middot; <strong>agency:</strong> A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="eu" data-vintage="v04" id="SRC_EUROFOUND_EWCS">
+<div class="claim-head">
+<div class="claim-id">SRC_EUROFOUND_EWCS</div>
+<div class="claim-topic">European Working Conditions Survey (Eurofound)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>EU-wide working conditions survey; job quality, autonomy, work intensity, prospects, social environment, working time, physical environment</p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D03, D04, D09, D10 &middot; <strong>agency:</strong> A3, A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="global" data-vintage="v04" id="SRC_ORIGINAL_PACK">
+<div class="claim-head">
+<div class="claim-id">SRC_ORIGINAL_PACK</div>
+<div class="claim-topic">Baseline research pack (uploaded)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Project&#x27;s own baseline mapping; treated as internal reference, not external citation</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="us" data-vintage="v05" id="SRC_CENSUS_SIPP_SELF_EMPLOYMENT_TRANSITIONS">
+<div class="claim-head">
+<div class="claim-id">SRC_CENSUS_SIPP_SELF_EMPLOYMENT_TRANSITIONS</div>
+<div class="claim-topic">Employment Transitions among the Self-Employed during the Great Recession (SEHSD-WP2014-13)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag publisher">U.S. Census Bureau, SEHSD</span>
+<span class="tag date">2014</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>SIPP longitudinal panel tracks self-employed↔wage-work↔unemployed transitions during 2007-2009 recession</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.census.gov/library/working-papers/2014/demo/SEHSD-WP2014-13.html" target="_blank" rel="noopener">https://www.census.gov/library/working-papers/2014/demo/SEHSD-WP2014-13.html</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D10 &middot; <strong>agency:</strong> A6</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Title contains &#x27;Great Recession&#x27;, not just &#x27;Recession&#x27; as in patch. SIPP panel is the primary data infrastructure.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v05" id="SRC_UKHLS_UNDERSTANDING_SOCIETY">
+<div class="claim-head">
+<div class="claim-id">SRC_UKHLS_UNDERSTANDING_SOCIETY</div>
+<div class="claim-topic">UK Household Longitudinal Study / Understanding Society</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag publisher">ISER University of Essex (ESRC-funded)</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Annual waves since 2009; ~40,000 households at start, ~25,000 active by Wave 13; covers self-employment status, transitions, business ownership via JBSEMP/J2SEMP variables</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.understandingsociety.ac.uk/topic-page/employment/" target="_blank" rel="noopener">https://www.understandingsociety.ac.uk/topic-page/employment/</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D10 &middot; <strong>agency:</strong> A6</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Sample-attrition caveat for return-transition estimates; coverage verified via supplementary self-employment modules</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="eu" data-vintage="v05" id="SRC_FAILLA_MELILLO_REICHSTEIN_2017_JBV">
+<div class="claim-head">
+<div class="claim-id">SRC_FAILLA_MELILLO_REICHSTEIN_2017_JBV</div>
+<div class="claim-topic">Entrepreneurship and employment stability — Job matching, labour market value, and personal commitment</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2017</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Danish IDA matched employer-employee microdata; entrepreneurs returning to wage employment; stronger empirical anchor than the SOEP-labeled patch source</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0927537115000391" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/abs/pii/S0927537115000391</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D10 &middot; <strong>agency:</strong> A6</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Patch labeled this source as SRC_SOEP_SELF_EMPLOYMENT_FALLBACK but the underlying data are Danish IDA register, not German SOEP. ID renamed accordingly. Co-add Mahieu-Melillo-Reichstein-Thompson 2021 SEJ as supplement.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="eu" data-vintage="v05" id="SRC_HILDA_SELF_EMPLOYMENT_LONGITUDINAL">
+<div class="claim-head">
+<div class="claim-id">SRC_HILDA_SELF_EMPLOYMENT_LONGITUDINAL</div>
+<div class="claim-topic">HILDA Survey panel (Hessels-Rietveld-van der Zwan 2020 health-earnings paper for SE)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag publisher">Melbourne Institute, University of Melbourne</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Australian Household, Income and Labour Dynamics Survey; longitudinal panel including self-employment status. Cited paper measures health-earnings link in SE rather than direct return-to-wage transitions</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00801/full" target="_blank" rel="noopener">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00801/full</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D10 &middot; <strong>agency:</strong> A6</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Patch&#x27;s intended use of HILDA for D10 employment-form return is supportable via the panel itself (PMC10830572 / Frontiers Psych 2022 Big-Five SE-survival study uses 12 HILDA waves for stint termination) — but the cited Hessels et al. 2020 Frontiers Psych paper does NOT directly measure return probability. Recommend: keep HILDA as data infrastructure; cite Caliendo et al. for SE termination via 12 waves.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="C" data-geo="global" data-vintage="v05" id="SRC_BALDI_TRIGEORGIS_2020_CDOV">
+<div class="claim-head">
+<div class="claim-id">SRC_BALDI_TRIGEORGIS_2020_CDOV</div>
+<div class="claim-topic">Valuing human capital career development: a real options approach</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-c">C</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2020</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Multi-case study of 10 Fortune 500 &#x27;best companies to work for&#x27; applying real-options modeling to firm-level career-development programs. EXPLICITLY organization/SHRM level — NOT an individual return-option-value scale.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.emerald.com/insight/content/doi/10.1108/JIC-06-2019-0134/full/html" target="_blank" rel="noopener">https://www.emerald.com/insight/content/doi/10.1108/JIC-06-2019-0134/full/html</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D02, D04, D06, D08, D10</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Patch labeled evidence_level B/C — deep research DOWNGRADES to C. Reason: organization-level case study with no individual-level instrument validation. Should be cited as conceptual / theoretical support for I02_ROVS framing, NOT as supporting evidence for an individual return-option-value scale. Replace as primary I02 anchor with Failla-Melillo-Reichstein 2017 JBV (admin data) + Hirschi-Wilhelm 2025 CSM-C (individual scale).</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v05" id="SRC_CFI_R_CAREER_AGENCY">
+<div class="claim-head">
+<div class="claim-id">SRC_CFI_R_CAREER_AGENCY</div>
+<div class="claim-topic">Career Futures Inventory–Revised (CFI-R)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2012</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>28 items, 5 subscales: Career Agency, Occupational Awareness, Support, Work–Life Balance, Negative Career Outlook</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://journals.sagepub.com/doi/abs/10.1177/1069072711420849" target="_blank" rel="noopener">https://journals.sagepub.com/doi/abs/10.1177/1069072711420849</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>agency:</strong> A2, A3</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Patch listed only 4 of 5 subscales — Work-Life Balance subscale was missing. Now corrected. Validation samples are US college students; Park et al. 2019 measurement invariance across general vs. client samples — both still US. Cross-cultural validation for RU/CN: UNTESTED.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v05" id="SRC_WORK_CAPABILITY_SET">
+<div class="claim-head">
+<div class="claim-id">SRC_WORK_CAPABILITY_SET</div>
+<div class="claim-topic">Capability Set for Work questionnaire</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2016</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Seven capability aspects for work, operationalizing Sen&#x27;s capability approach</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://cris.maastrichtuniversity.nl/files/8184117/1501264.pdf" target="_blank" rel="noopener">https://cris.maastrichtuniversity.nl/files/8184117/1501264.pdf</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>agency:</strong> A6, A7</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Validated in Dutch working population only; cross-jurisdiction invariance not established. Subsequent literature (Brouwer et al.) extends to occupational-health populations, not labor-mobility specifically.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="us" data-vintage="v05" id="SRC_CARINAS_CAREER_INACTION_SCALE">
+<div class="claim-head">
+<div class="claim-id">SRC_CARINAS_CAREER_INACTION_SCALE</div>
+<div class="claim-topic">Career Inaction Scale (CARINAS)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2025</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>8 items; four studies (Belgian + US samples; total N≈1,425). Theoretical antecedent: Verbruggen &amp; De Vos (2020) AMR 45(2): 376-394 — but the scale paper is D&#x27;Huyvetter et al. 2025.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://iaap-journals.onlinelibrary.wiley.com/doi/abs/10.1111/apps.12590" target="_blank" rel="noopener">https://iaap-journals.onlinelibrary.wiley.com/doi/abs/10.1111/apps.12590</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>agency:</strong> A2, A3</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Patch attributed authorship to &#x27;Verbruggen &amp; De Vos&#x27; but the scale paper is D&#x27;Huyvetter, Verbruggen, Jing &amp; Akkermans 2025. Verbruggen-De Vos 2020 AMR is the THEORY paper without an instrument. Reverse-coding interpretation as proxy for career agency is reasonable but indirect — career inaction and career agency are conceptually related but not inverse constructs. Treat as B-level evidence for I07_ICAS, not direct A-level measure of agency.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="global" data-vintage="v05" id="SRC_CAREER_SUSTAINABILITY_SCALE_2024">
+<div class="claim-head">
+<div class="claim-id">SRC_CAREER_SUSTAINABILITY_SCALE_2024</div>
+<div class="claim-topic">Career Sustainability Scale for mid-career employees</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2024</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Four subscales: meaning perception, skill acquisition, relationship building, environmental awareness. Korean mid-career employee sample only.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1442119/full" target="_blank" rel="noopener">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1442119/full</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>agency:</strong> A3</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Single-country (South Korea) validation. Cross-cultural invariance unstudied. Affiliations: Chung-Ang University.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="D" data-geo="global" data-vintage="v05" id="SRC_JACOBS_2024_NHB">
+<div class="claim-head">
+<div class="claim-id">SRC_JACOBS_2024_NHB</div>
+<div class="claim-topic">How to transition from academia to industry and back</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-d">D</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2024</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Single-author commentary/perspective. NO empirical methodology, NO sample, NO instrument.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://doi.org/10.1038/s41562-024-01864-1" target="_blank" rel="noopener">https://doi.org/10.1038/s41562-024-01864-1</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D08</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Provides ONLY conceptual framing of D08↔D09 industry exit-and-return. Patch should not anchor A or B confidence on I03_IRAS using this source. Affiliation: University at Buffalo, SUNY.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="us" data-vintage="v05" id="SRC_FINRA_BROKERCHECK_U4_U5">
+<div class="claim-head">
+<div class="claim-id">SRC_FINRA_BROKERCHECK_U4_U5</div>
+<div class="claim-topic">FINRA Forms U4 and U5 + BrokerCheck registry</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag publisher">Financial Industry Regulatory Authority (FINRA)</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Form U4 collects 10-year employment history, residential history, disclosure events. Form U5 records reason for termination. Public surface via brokercheck.finra.org. Coverage: broker-dealer + investment-adviser representatives. US-only.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.finra.org/registration-exams-ce/broker-dealers/registration-forms" target="_blank" rel="noopener">https://www.finra.org/registration-exams-ce/broker-dealers/registration-forms</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D08 &middot; <strong>agency:</strong> A5</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="cn" data-vintage="v05" id="SRC_XU_ET_AL_2021_CHINA_WORKFORCE_SKILL_TAXONOMY">
+<div class="claim-head">
+<div class="claim-id">SRC_XU_ET_AL_2021_CHINA_WORKFORCE_SKILL_TAXONOMY</div>
+<div class="claim-topic">Developing China&#x27;s workforce skill taxonomy reveals extent of labor market polarization</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2021</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Academic prototype using ML to map NOCC text descriptions into O*NET-style space. 161 O*NET-style skills/knowledge/abilities. Portal: skills.sysu.edu.cn. NOT a state-published Chinese government taxonomy — academic prototype from Sun Yat-sen University + Data61 + MIT/Pittsburgh.</p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D05, D06, D07, D08 &middot; <strong>agency:</strong> A1</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Patch cited only the 2020 arXiv preprint (arXiv:2001.02863). The peer-reviewed version is Xu et al. 2021 in Nature HSS Comm. Use 2021 as primary, arXiv 2020 as secondary. Explicitly NOT the official Chinese government skill taxonomy — China&#x27;s official source remains the Ministry of Human Resources &amp; Social Security&#x27;s Occupation Classification Code (NOCC) + GBT/T 4754 industry codes, which are text-only without skill-vector embeddings.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="us ru" data-vintage="v05" id="SRC_MINTRUD_PRIKAZ_359_2024">
+<div class="claim-head">
+<div class="claim-id">SRC_MINTRUD_PRIKAZ_359_2024</div>
+<div class="claim-topic">Приказ Минтруда РФ от 18 июля 2024 г. № 359</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2024</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Methodological recommendations for developing/updating профстандарты. Replaces previous Минтруд приказ № 170н от 29.04.2013. Operates under Постановление Правительства РФ № 580 от 10.04.2023.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://normativ.kontur.ru/document?moduleId=1&amp;documentId=484867" target="_blank" rel="noopener">https://normativ.kontur.ru/document?moduleId=1&amp;documentId=484867</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D04, D05, D06, D07, D08 &middot; <strong>agency:</strong> A5, A7</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Order № 359 regulates HOW to develop/update profstandards — does NOT restore mandatory/binding force. Postановление Правительства № 792 (12 June 2024) earlier removed обязательные требования профстандартов from regulatory-guillotine exclusion list. Letter Минтруда от 11 июля 2024 N 14-3/ООГ-4236 confirms: несоблюдение профстандартов не может быть основанием для административной ответственности. Use profstandards as content-NLP layer for I04_CCS_RU; do NOT use as binding credential portability mechanism.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="eu ru" data-vintage="v05" id="SRC_COE_RUSSIA_EXCLUSION_2022">
+<div class="claim-head">
+<div class="claim-id">SRC_COE_RUSSIA_EXCLUSION_2022</div>
+<div class="claim-topic">CoE Committee of Ministers Resolution CM/Res(2022)2 of 16 March 2022</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2022</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Adopted under Article 8 of the Statute of the Council of Europe. Russia ceases to be a member effective 16 March 2022. Russia ceased to be a Party to the ECHR on 16 September 2022 (CM Resolution of 23 March 2022).</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.coe.int/en/web/portal/-/the-russian-federation-is-excluded-from-the-council-of-europe" target="_blank" rel="noopener">https://www.coe.int/en/web/portal/-/the-russian-federation-is-excluded-from-the-council-of-europe</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D02_RU &middot; <strong>agency:</strong> A5_RU, A7_RU</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Resolution language is &#x27;ceases to be a member&#x27; — NOT &#x27;expulsion&#x27; or &#x27;exclusion&#x27; procedurally. Verfassungsblog notes Russia withdrew on 15 March before formal cessation on 16 March. Operative legal status unambiguous. Belarus relations suspended 17 March 2022 (CM/Del/Dec(2022)1429/2.5).</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="eu ru" data-vintage="v05" id="SRC_LRC_RU_BY_RESTRICTION_2023">
+<div class="claim-head">
+<div class="claim-id">SRC_LRC_RU_BY_RESTRICTION_2023</div>
+<div class="claim-topic">Lisbon Recognition Convention Committee Declaration restricting RU/BY participation</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2023</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Restricts: (a) RU/BY candidates cannot be elected as Bureau member, Chair, Vice-Chair, working-group chair, rapporteur, or coordinator; (b) Secretariats advised of restriction on RU/BY representatives&#x27; participation in LRCC meetings. Does NOT terminate RU/BY treaty membership in the Lisbon Recognition Convention itself.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.coe.int/en/web/education/-/declaration-adopted-by-the-lisbon-recognition-convention-committee-on-the-participation-of-the-russian-federation-and-belarus" target="_blank" rel="noopener">https://www.coe.int/en/web/education/-/declaration-adopted-by-the-lisbon-recognition-convention-committee-on-the-participation-of-the-russian-federation-and-belarus</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D02_RU, D08_RU &middot; <strong>agency:</strong> A5_RU</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Patch listed 2023 as ID (correct year for declaration). Critical distinction: committee work participation is RESTRICTED but treaty membership is NOT terminated. Russia ratified LRC in 2000 and remains formally a Party. ENIC-NARIC operational evaluation of Russian credentials in EU continues but with degraded throughput. Belarus is also a Party (non-CoE-member ratifier). Upstream CM decisions: 30 June and 5 October 2022.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v05" id="SRC_DUAL_LADDER_JUSTICE_HOFFMANN_2016">
+<div class="claim-head">
+<div class="claim-id">SRC_DUAL_LADDER_JUSTICE_HOFFMANN_2016</div>
+<div class="claim-topic">A contemporary justice perspective on dual ladders for R&amp;D professionals</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2016</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Cross-level study: 9 R&amp;D dept heads, 32 HR managers, 382 R&amp;D professionals from 32 organizations. Constructs: perceived equality of technical ladder + transparency of dual ladder → organizational commitment + career satisfaction; moderated by age, self-directed career management, firm size.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/jpim.12310" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/10.1111/jpim.12310</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D04 &middot; <strong>agency:</strong> A2</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Author list confirmation needed via direct DOI fetch — likely Hoffmann + Lechner + Kreutzer based on contemporaneous German R&amp;D-management cluster, but the v0.5 assembler should verify by fetching the doi.org/10.1111/jpim.12310 record. Petroni-Colacino 2008 (J Tech Mgmt Innov 3(3): 21-32) is the seminal critique; Allen-Katz 1986 R&amp;D Management is the foundational early critique — both should be cited as background.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="eu" data-vintage="v05" id="SRC_MAHIEU_MELILLO_REICHSTEIN_2021_SEJ">
+<div class="claim-head">
+<div class="claim-id">SRC_MAHIEU_MELILLO_REICHSTEIN_2021_SEJ</div>
+<div class="claim-topic">Shooting stars? Uncertainty in hiring entrepreneurs</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2021</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Danish IDA matched employer-employee microdata; how returning entrepreneurs are valued in wage labor market</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://onlinelibrary.wiley.com/doi/10.1002/sej.1339" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/10.1002/sej.1339</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D10 &middot; <strong>agency:</strong> A6</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v05" id="SRC_FED_SCF_PANEL">
+<div class="claim-head">
+<div class="claim-id">SRC_FED_SCF_PANEL</div>
+<div class="claim-topic">Federal Reserve Survey of Consumer Finances (SCF) — panel substructure</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag publisher">Federal Reserve Board (NORC at U Chicago is field operator)</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Triennial. Panel substructure: 1983 respondents re-interviewed in 1986 and 1989; 2007 respondents re-interviewed in 2009. SCF 2025 in field.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.federalreserve.gov/scf/scf.htm" target="_blank" rel="noopener">https://www.federalreserve.gov/scf/scf.htm</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D09, D10 &middot; <strong>agency:</strong> A6</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Patch focused on SIPP/CWS; missed SCF panel structure for balance-sheet capacity to return (savings/wealth dimension of return option value)</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="cn" data-vintage="v05" id="SRC_NBS_CHINA_FLEXIBLE_EMPLOYMENT_2021">
+<div class="claim-head">
+<div class="claim-id">SRC_NBS_CHINA_FLEXIBLE_EMPLOYMENT_2021</div>
+<div class="claim-topic">China NBS aggregate: 200 million flexible workers (灵活就业人员)</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag publisher">National Bureau of Statistics of China (2022 announcement, year-end-2021 data)</span>
+<span class="tag date">2022</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>State-published aggregate count of 灵活就业 (flexible employment) workers. Definition mixes part-time, gig, freelance, displaced.</p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D09_CN, D10_CN &middot; <strong>agency:</strong> A6</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Independent verification (RFA, Stanford, scholar critique) notes the figure may conflate distress employment with chosen flexibility. Use as baseline scale signal, NOT as measure of voluntary self-employment. CN has no individual-level micro panel publicly available equivalent to SIPP/HILDA.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="B" data-geo="ru" data-vintage="v05" id="SRC_FNS_NPD_2025">
+<div class="claim-head">
+<div class="claim-id">SRC_FNS_NPD_2025</div>
+<div class="claim-topic">ФНС России / приложение «Мой налог» — registry of самозанятые / НПД payers</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-b">B</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag publisher">Федеральная налоговая служба РФ</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Aggregate count: ~14M registered by end-2024; ~15.4M by end-2025; cumulative income &gt;3 trln RUB in 2025; 136 bln RUB taxes paid. October 2025 ФНС survey of 11.2M НПД-active. NPD experiment legally extended to 31 December 2028.</p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D09_RU, D10_RU &middot; <strong>agency:</strong> A6</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>v0.4 cited &#x27;~10M+&#x27; which is now outdated by ~50%. Update RU D10 baseline. From 1 Jan 2026: voluntary sickness-insurance pilot (456-ФЗ от 15.12.2025); enhanced labor-relations risk indicators (Минтруд приказ 685н от 8.12.2025) for 35+ counterparty НПД cases.</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v05" id="SRC_HIRSCHI_WILHELM_2025_CSM_C">
+<div class="claim-head">
+<div class="claim-id">SRC_HIRSCHI_WILHELM_2025_CSM_C</div>
+<div class="claim-topic">Career Self-Management Competencies (CSM-C) scale</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2025</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>8-item validated scale; integrates Bandura agency framework with self-regulation theory. Strong fit for I07_ICAS.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://journals.sagepub.com/doi/10.1177/10690727251391209" target="_blank" rel="noopener">https://journals.sagepub.com/doi/10.1177/10690727251391209</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>agency:</strong> A2, A3</p></div>
+<div class="block recommended"><h4>deep research note (v0.5)</h4><p>Closest individual-level career-agency instrument with 2025 validation. Recommended as primary anchor for I02_ROVS individual subjective component (replacing the Baldi-Trigeorgis firm-level cite).</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="us" data-vintage="v05" id="SRC_ROACH_SAUERMANN_2010_RP">
+<div class="claim-head">
+<div class="claim-id">SRC_ROACH_SAUERMANN_2010_RP</div>
+<div class="claim-topic">A taste for science? PhD scientists&#x27; academic orientation and self-selection into research careers in industry</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2010</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>N&gt;400 S&amp;E PhD students, US</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1621309" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1621309</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D08 &middot; <strong>agency:</strong> A2</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="global" data-vintage="v05" id="SRC_BLANES_VIDAL_DRACA_FONS_ROSEN_2012_AER">
+<div class="claim-head">
+<div class="claim-id">SRC_BLANES_VIDAL_DRACA_FONS_ROSEN_2012_AER</div>
+<div class="claim-topic">Revolving Door Lobbyists</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag date">2012</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Quantifies revolving-door capital depreciation: ~24% revenue drop when connected Senator leaves office. Public-private transition signal-preservation evidence.</p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D08 &middot; <strong>agency:</strong> A4</p></div>
+</div></article>
+<article class="claim" data-kind="source" data-level="A" data-geo="us" data-vintage="v05" id="SRC_HRSA_NPDB_PUBLIC_USE">
+<div class="claim-head">
+<div class="claim-id">SRC_HRSA_NPDB_PUBLIC_USE</div>
+<div class="claim-topic">National Practitioner Data Bank (NPDB) Public Use Data File</div>
+<div class="claim-tags">
+<span class="tag kind kind-source">source</span>
+<span class="tag level level-a">A</span>
+<span class="tag vintage v05">v0.5</span>
+<span class="tag publisher">Health Resources and Services Administration (HRSA), USA</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>scope</h4><p>Malpractice payments + adverse-action reports on US health practitioners since 1990; updated quarterly; de-identified public file. Supports I03_IRAS for healthcare-domain reentry signals.</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.npdb.hrsa.gov/resources/publicData.jsp" target="_blank" rel="noopener">https://www.npdb.hrsa.gov/resources/publicData.jsp</a></p></div>
+<div class="block"><h4>covers</h4><p><strong>dimensions:</strong> D08 &middot; <strong>agency:</strong> A5</p></div>
+</div></article>
+</section><section class="pass-section" id="neighbors">
+<h2>Field neighbours <span style="font-family:var(--mono);font-size:14px;color:var(--text-light)">(8)</span></h2>
+<p class="section-intro">Соседние конструкции из career-mobility литературы — используются как сравнители, не заменители.</p>
+<article class="claim" data-kind="neighbor" data-level="A" data-geo="global" data-vintage="v04" id="briscoe_hall_pcas_bcas">
+<div class="claim-head">
+<div class="claim-id">briscoe_hall_pcas_bcas</div>
+<div class="claim-topic">Briscoe-Hall Protean / Boundaryless Career Attitudes Scales</div>
+<div class="claim-tags">
+<span class="tag kind kind-neighbor">neighbour</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">2006</span>
+<span class="tag axis">career_attitudes_scale</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>lineage</h4><p>Briscoe, Hall, Frautschy DeMuth</p></div>
+<div class="block"><h4>items count</h4><p>PCAS 14 + BCAS 13 = 27 items</p></div>
+<div class="block"><h4>key differences vs. this pack</h4><ul><li>attitude rather than capacity</li><li>does not separate exit from return</li><li>does not cover all five mobility axes</li><li>trait malleability has been demonstrated empirically (Supeli &amp; Creed 2016, Waters et al.) — methodologically relevant when plugging into dynamic exit/return measurement</li></ul></div>
+<div class="block"><h4>use in pack</h4><p>primary psychological comparator; touches D03/D04 (vertical) and D09/D10 (employment-form)</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0001879105001077" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/abs/pii/S0001879105001077</a></p></div>
+</div></article>
+<article class="claim" data-kind="neighbor" data-level="A" data-geo="global" data-vintage="v04" id="savickas_caas">
+<div class="claim-head">
+<div class="claim-id">savickas_caas</div>
+<div class="claim-topic">Career Adapt-Abilities Scale</div>
+<div class="claim-tags">
+<span class="tag kind kind-neighbor">neighbour</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">2012</span>
+<span class="tag axis">career_adaptability_resources_scale</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>lineage</h4><p>Savickas, Porfeli</p></div>
+<div class="block"><h4>items count</h4><p>24 items (4 subscales × 6 items)</p></div>
+<div class="block"><h4>psychometric properties</h4><p>α=0.92 total; metric invariance across 13 countries; residual/strict invariance NOT achieved (France and Taiwan show poorer fit)</p></div>
+<div class="block"><h4>key differences vs. this pack</h4><ul><li>psychosocial resource scale</li><li>not a structural mobility index</li><li>does not measure exit/return asymmetry</li></ul></div>
+<div class="block"><h4>use in pack</h4><p>validated adaptability comparator for A3; touches all 10 dimensions indirectly via individual adaptability</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0001879112000139" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/abs/pii/S0001879112000139</a></p></div>
+<div class="block"><h4>subscales</h4><ul><li>concern</li><li>control</li><li>curiosity</li><li>confidence</li></ul></div>
+</div></article>
+<article class="claim" data-kind="neighbor" data-level="B" data-geo="global" data-vintage="v04" id="defillippi_arthur_intelligent_career">
+<div class="claim-head">
+<div class="claim-id">defillippi_arthur_intelligent_career</div>
+<div class="claim-topic">DeFillippi-Arthur Intelligent Career / Career Capital</div>
+<div class="claim-tags">
+<span class="tag kind kind-neighbor">neighbour</span>
+<span class="tag level level-b">B</span>
+<span class="tag date">1994 (DeFillippi-Arthur, JOB) + 1995 (Arthur-Claman-DeFillippi, AME 9(4))</span>
+<span class="tag axis">conceptual_career_capital_framework</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>lineage</h4><p>DeFillippi, Arthur, Claman</p></div>
+<div class="block"><h4>key differences vs. this pack</h4><ul><li>conceptual rather than indexed</li><li>does not operationalize ten dimensions</li><li>exit/return asymmetry is implicit at best</li><li>the &#x27;three ways of knowing&#x27; trio crystallises in the 1995 paper, not the 1994 paper</li></ul></div>
+<div class="block"><h4>use in pack</h4><p>conceptual ancestor of portability thinking; foundation for A1/A2/A4</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/job.4030150403" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/abs/10.1002/job.4030150403</a></p></div>
+<div class="block"><h4>dimensions</h4><ul><li>knowing-why</li><li>knowing-how</li><li>knowing-whom</li></ul></div>
+</div></article>
+<article class="claim" data-kind="neighbor" data-level="B" data-geo="global" data-vintage="v04" id="de_vos_van_der_heijden_sustainable_careers">
+<div class="claim-head">
+<div class="claim-id">de_vos_van_der_heijden_sustainable_careers</div>
+<div class="claim-topic">Sustainable Careers Model</div>
+<div class="claim-tags">
+<span class="tag kind kind-neighbor">neighbour</span>
+<span class="tag level level-b">B</span>
+<span class="tag date">2020 (JVB 117) for dimensions; 2005 (Van der Heijden) for outcomes</span>
+<span class="tag axis">macro_career_framework</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>lineage</h4><p>De Vos, Van der Heijden, Akkermans</p></div>
+<div class="block"><h4>key differences vs. this pack</h4><ul><li>framework rather than index</li><li>does not provide exit/return matrix</li><li>not organized around mobility-axis asymmetry</li><li>dimensions (person/context/time) from De Vos-Van der Heijden-Akkermans 2020; outcomes triad (happiness/health/productivity) from Van der Heijden 2005 — explicitly cited as &#x27;cf. Van der Heijden 2005&#x27; in De Vos et al. 2020</li></ul></div>
+<div class="block"><h4>use in pack</h4><p>macro-theoretical comparator for the integration argument; the unified pack&#x27;s positioning explicitly distinguishes its 10×7 decomposition from the more abstract person/context/time × happiness/health/productivity scaffolding of Sustainable Careers</p></div>
+<div class="block"><h4>URL</h4><p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0001879118300769" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/abs/pii/S0001879118300769</a></p></div>
+<div class="block"><h4>dimensions</h4><ul><li>person</li><li>context</li><li>time</li></ul></div>
+<div class="block"><h4>outcomes</h4><ul><li>happiness</li><li>health</li><li>productivity</li></ul></div>
+</div></article>
+<article class="claim" data-kind="neighbor" data-level="C" data-geo="global" data-vintage="v04" id="benko_mass_career_customization">
+<div class="claim-head">
+<div class="claim-id">benko_mass_career_customization</div>
+<div class="claim-topic">Mass Career Customization / Corporate Lattice</div>
+<div class="claim-tags">
+<span class="tag kind kind-neighbor">neighbour</span>
+<span class="tag level level-c">C</span>
+<span class="tag date">2007 (Benko-Weisberg, HBS Press) + 2010 (Benko-Anderson, HBR Press)</span>
+<span class="tag axis">practitioner_hr_framework</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>lineage</h4><p>Benko, Weisberg, Anderson</p></div>
+<div class="block"><h4>key differences vs. this pack</h4><ul><li>primarily intra-organizational</li><li>does not measure exit beyond firm</li><li>does not measure return capacity</li><li>C-level evidence: corporate self-disclosure with limited quantitative validation outside Deloitte&#x27;s internal data</li></ul></div>
+<div class="block"><h4>use in pack</h4><p>closest HR-practitioner comparator; touches D03/D04 (vertical) and D09/D10 (employment-form within firm)</p></div>
+<div class="block"><h4>dimensions</h4><ul><li>pace</li><li>workload</li><li>location_schedule</li><li>role</li></ul></div>
+</div></article>
+<article class="claim" data-kind="neighbor" data-level="B" data-geo="global" data-vintage="v04" id="cedefop_esi">
+<div class="claim-head">
+<div class="claim-id">cedefop_esi</div>
+<div class="claim-topic">Cedefop European Skills Index</div>
+<div class="claim-tags">
+<span class="tag kind kind-neighbor">neighbour</span>
+<span class="tag level level-b">B</span>
+<span class="tag date">2024 (latest release)</span>
+<span class="tag axis">country_level_composite_index</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>lineage</h4><p>Cedefop</p></div>
+<div class="block"><h4>key differences vs. this pack</h4><ul><li>country-level not individual-level</li><li>skills-system performance not worker agency</li><li>not exit/return oriented</li><li>covers EU-27 + UK, Iceland, Norway, Switzerland</li></ul></div>
+<div class="block"><h4>use in pack</h4><p>methodological template for composite index construction, NOT a direct competitor; provides EU country-context layer for A6 (liquidity) and skills-system framing</p></div>
+<div class="block"><h4>dimensions</h4><ul><li>skills development</li><li>skills activation</li><li>skills matching</li></ul></div>
+<div class="block"><h4>structure</h4><p>3 pillars × 6 sub-pillars × 15 indicators</p></div>
+</div></article>
+<article class="claim" data-kind="neighbor" data-level="A" data-geo="global" data-vintage="v04" id="robinson_oecd_task_distance">
+<div class="claim-head">
+<div class="claim-id">robinson_oecd_task_distance</div>
+<div class="claim-topic">Robinson / OECD Bechichi occupational skill-distance methodology</div>
+<div class="claim-tags">
+<span class="tag kind kind-neighbor">neighbour</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">Robinson 2018 (JHR 53(2): 513-551); Bechichi et al. 2018 (OECD STI 52); 2019 (OECD STI 70)</span>
+<span class="tag axis">occupation_pair_distance_methodology</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>lineage</h4><p>Robinson, Bechichi et al., OECD STI</p></div>
+<div class="block"><h4>key differences vs. this pack</h4><ul><li>occupation-pair rather than individual score</li><li>mostly exit/transition rather than return</li><li>does not cover geographic, vertical, industry, or employment-form axes</li></ul></div>
+<div class="block"><h4>use in pack</h4><p>strongest quantitative lateral-mobility comparator; foundation for D05 / D06 + I04_CCS</p></div>
+<div class="block"><h4>dimensions</h4><ul><li>skill distance</li><li>task distance</li><li>training needs</li><li>human-capital loss</li></ul></div>
+<div class="block"><h4>extension 2024</h4><p>Aufiero, De Marzo, Sbardella, Zaccaria 2024 (Sci Rep 14:11752) — economic-complexity-inspired extension applying job-fitness/skill-coherence to wages on O*NET. Replaces the v0.2 misattribution to &#x27;Pugliese et al.&#x27;</p></div>
+</div></article>
+<article class="claim" data-kind="neighbor" data-level="A" data-geo="global" data-vintage="v04" id="saxenian_amanzadeh_kermani_brain_circulation">
+<div class="claim-head">
+<div class="claim-id">saxenian_amanzadeh_kermani_brain_circulation</div>
+<div class="claim-topic">Brain circulation / skilled migration and return-migration literature</div>
+<div class="claim-tags">
+<span class="tag kind kind-neighbor">neighbour</span>
+<span class="tag level level-a">A</span>
+<span class="tag date">Saxenian 2006 (qualitative); Amanzadeh-Kermani-McQuade 2024 NBER WP 32352 (quantitative individual-panel)</span>
+<span class="tag axis">migration_and_return_migration_research</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>lineage</h4><p>Saxenian, Amanzadeh, Kermani, McQuade</p></div>
+<div class="block"><h4>key differences vs. this pack</h4><ul><li>population or cohort-level (not individual instrument)</li><li>geographic axis only</li><li>main empirical anchor for exit/return ASYMMETRY argument across all axes (by extension)</li></ul></div>
+<div class="block"><h4>use in pack</h4><p>main evidence base for D02 (geographic_return); the asymmetric-exposure finding generalises rhetorically to other axes but not empirically</p></div>
+<div class="block"><h4>key findings</h4><p>38% of skilled migrants return within 10 years (33% within 5 years; 10% within 1 year). Return migration is asymmetrically exposed to negative firm employment growth (declines have substantially larger impact on return than equivalent growth has on staying). Returns to a year of US experience are 59-204% higher than a year in origin country for emerging-economy workers.</p></div>
+</div></article>
+</section><section class="pass-section" id="country">
+<h2>Country profiles <span style="font-family:var(--mono);font-size:14px;color:var(--text-light)">(4)</span></h2>
+<p class="section-intro">Профили готовности по странам US / EU / CN / RU: данные, сильные стороны, слабости, лучше и хуже всего покрытые dimensions.</p>
+<article class="claim" data-kind="country" data-level="" data-geo="us" data-vintage="v04" id="country-US">
+<div class="claim-head">
+<div class="claim-id">country / US</div>
+<div class="claim-topic">US country profile</div>
+<div class="claim-tags">
+<span class="tag kind kind-country">country</span>
+<span class="tag geo">США</span>
+<span class="tag publisher">grade: A-</span>
+<span class="tag publisher">closure: highest</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>main sources</h4><ul><li>O*NET 30.2</li><li>BLS ORS / OEWS / EP / CWS 2023</li><li>BLS CPS basic monthly</li><li>Census SIPP</li><li>LEHD QWI/J2J/LODES/PSEO</li><li>NLSY79/NLSY97</li><li>PIAAC Cycle 1+2</li><li>iRelaunch (C-level corporate)</li><li>SCF panel substructure (1983-86-89; 2007-09; 2025 in field)</li><li>BLS CWS May 2025 (collected; results pending) + July 2026 next round</li><li>FINRA BrokerCheck/U4/U5 for finance industry signal-preservation</li><li>HRSA NPDB Public Use File for healthcare practitioner reentry</li></ul></div>
+<div class="block"><h4>strengths</h4><ul><li>Richest occupation-task-skill infrastructure globally (O*NET)</li><li>Strong individual-panel infrastructure (SIPP, NLSY, LEHD)</li><li>Strong contingent/alternative work data (CWS 2023; next May 2025)</li><li>Migration research is robust (NBER tradition; Amanzadeh-Kermani-McQuade 2024 anchor)</li></ul></div>
+<div class="block"><h4>weaknesses</h4><ul><li>Return capacity usually inferred rather than directly measured</li><li>Employment-form return has only C-level corporate data (iRelaunch)</li><li>LEHD excludes self-employed and federal defense employees</li></ul></div>
+<div class="block"><h4>best supported dimensions</h4><ul><li>D05_lateral_professional_exit (A)</li><li>D03_vertical_exit (B+)</li><li>D07_industry_exit (B+)</li><li>D09_employment_form_exit (B+)</li><li>D01_geographic_exit (A-)</li></ul></div>
+<div class="block"><h4>weakest dimensions</h4><ul><li>D10_employment_form_return (C+)</li><li>D04_vertical_return (B-)</li><li>D08_industry_return (B-)</li></ul></div>
+<div class="block"><h4>recommended minimum viable pipeline</h4><ul><li>O*NET 30.2 task/skill vectors as occupation backbone</li><li>LEHD J2J for industry/geographic flows + earnings continuity (caveat: excludes self-employed)</li><li>Census SIPP for individual employment-form panel</li><li>BLS CWS 2023 baseline for contingent prevalence (next May 2025)</li><li>Light survey module (28 items) for individual readiness signals not in admin data</li></ul></div>
+<div class="block"><h4>v05 corrections</h4><ul><li>BLS CWS May 2025 confirmed collected; results not yet released as of Federal Register notice 10 Feb 2026; July 2026 next supplement proposed</li><li>FINRA U4/U5 + BrokerCheck add A-level industry-reentry signal for broker-dealer + investment-adviser segments specifically (not all &#x27;adjacent professionals&#x27;)</li><li>HRSA NPDB Public Use File adds A-level healthcare-domain signal (malpractice + adverse-action reports since 1990)</li></ul></div>
+</div></article>
+<article class="claim" data-kind="country" data-level="" data-geo="eu" data-vintage="v04" id="country-EU">
+<div class="claim-head">
+<div class="claim-id">country / EU</div>
+<div class="claim-topic">EU country profile</div>
+<div class="claim-tags">
+<span class="tag kind kind-country">country</span>
+<span class="tag geo">EU</span>
+<span class="tag publisher">grade: B+</span>
+<span class="tag publisher">closure: high_for_system_context_medium_for_individual_transitions</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>main sources</h4><ul><li>ESCO v1.2 (3,039 × 13,939 × 28 lang, May 2024)</li><li>EU-LFS + LFS-Long</li><li>EU-SILC</li><li>Cedefop ESI 2024 (3 pillars × 15 indicators)</li><li>Cedefop Skills-OVATE (32 countries)</li><li>OECD PIAAC Cycle 2 (for participating EU countries)</li><li>Eurofound EWCS</li><li>EQF + Lisbon Recognition Convention (1997, 57 Parties as of 1 July 2025)</li><li>ESCO v1.2.1 (10 Dec 2025) + UKHLS / Understanding Society (UK ISER)</li></ul></div>
+<div class="block"><h4>strengths</h4><ul><li>Multilingual ESCO classification — unique advantage for cross-country pseudo-vector matching</li><li>Strong labour-force survey infrastructure (LFS, SILC)</li><li>Country-level skills-system context (ESI)</li><li>Credential-portability frameworks relatively explicit (EQF, Bologna, Lisbon RC)</li><li>Skills-OVATE provides near-real-time demand-side data</li></ul></div>
+<div class="block"><h4>weaknesses</h4><ul><li>Heterogeneity across member states</li><li>Country-level ESI cannot be directly converted into individual agency</li><li>Task-level granularity weaker than O*NET unless mapped carefully</li><li>LFS-Long short panels (2-4 quarters) limit long-cycle return detection</li></ul></div>
+<div class="block"><h4>best supported dimensions</h4><ul><li>A5_credential_portability (A)</li><li>D05_lateral_professional_exit (A-)</li><li>D01_geographic_exit_within_EU (B+)</li><li>D07_industry_exit (B)</li></ul></div>
+<div class="block"><h4>weakest dimensions</h4><ul><li>D10_employment_form_return (C)</li><li>D08_industry_return (C+)</li><li>D04_vertical_return (C+)</li></ul></div>
+<div class="block"><h4>recommended minimum viable pipeline</h4><ul><li>ESCO v1.2 as occupation-skill backbone (multilingual)</li><li>EU-LFS + LFS-Long for transitions</li><li>EU-SILC for income continuity across form switches</li><li>Skills-OVATE for demand-side near-real-time signal</li><li>Light survey module for individual-level signals</li></ul></div>
+<div class="block"><h4>v05 corrections</h4><ul><li>ESCO version updated: v1.2.1 (10 Dec 2025) is current minor release; v1.2 major was 21 May 2024 with 35 new occupations + 42 new skills + 196 new knowledge concepts; 28 languages including Ukrainian</li><li>UKHLS / Understanding Society added as primary D10 panel for UK side</li></ul></div>
+</div></article>
+<article class="claim" data-kind="country" data-level="" data-geo="cn" data-vintage="v04" id="country-CN">
+<div class="claim-head">
+<div class="claim-id">country / CN</div>
+<div class="claim-topic">CN country profile</div>
+<div class="claim-tags">
+<span class="tag kind kind-country">country</span>
+<span class="tag geo">Китай</span>
+<span class="tag publisher">grade: C+</span>
+<span class="tag publisher">closure: partial_classification_bridge</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>main sources</h4><ul><li>China Occupation Dictionary 2022 (MoHRSS): 1,639 professions, 158 new since 2015, 97 digital</li><li>Tokyo Convention 2011/2018 for credential portability (Asia-Pacific)</li><li>Xu et al. 2020 &#x27;China&#x27;s First Workforce Skill Taxonomy&#x27; (arXiv 2001.02863) — academic O*NET prototype</li><li>Platform-work and new-employment-form literature</li><li>Returnee literature (海归/haigui)</li><li>Internal migration data via population census</li><li>Xu et al. 2021 (Nature HSS Comm 8:195) — peer-reviewed academic skill taxonomy prototype</li><li>NBS 灵活就业 ~200M flexible workers (2021)</li></ul></div>
+<div class="block"><h4>strengths</h4><ul><li>Official profession classification exists with recent updates</li><li>Large policy interest in new forms of employment</li><li>Returnee and internal migration literature is relevant</li></ul></div>
+<div class="block"><h4>weaknesses</h4><ul><li>NO state-published O*NET-equivalent task-vector layer (academic prototype Xu et al. 2020 exists but not policy-adopted)</li><li>NEVER covered by PIAAC (any cycle)</li><li>Limited comparability with US/EU occupation-skill datasets</li><li>Data access and longitudinal linkage may be constrained</li></ul></div>
+<div class="block"><h4>best supported dimensions</h4><ul><li>D01_geographic_exit_internal_migration (B-)</li><li>D09_employment_form_exit (C+)</li><li>D02_returnee_population_analysis (C+)</li></ul></div>
+<div class="block"><h4>weakest dimensions</h4><ul><li>D05_lateral_professional_exit_task_vector (C+)</li><li>D10_employment_form_return (C-)</li><li>D08_industry_return (C-)</li></ul></div>
+<div class="block"><h4>recommended minimum viable pipeline</h4><ul><li>Anchor to ISCO-08 via dictionary crosswalk</li><li>Build pseudo-task-vectors via NLP on dictionary entries + job ads</li><li>Apply I04_CCS comparability confidence penalty when crossing into US/EU vector space</li><li>Use Xu et al. 2020 academic prototype as research-grade supplement</li></ul></div>
+<div class="block"><h4>v05 corrections</h4><ul><li>Xu et al. citation upgraded from 2020 arXiv preprint to 2021 Nature HSS Comm peer-reviewed publication</li><li>NBS 灵活就业 200M figure added as state-published aggregate scale baseline (with definition caveat: mixes voluntary and distress flexible employment)</li><li>China Tokyo Convention 2011/2018 still applies for credential portability; PRC has never participated in PIAAC (any cycle)</li></ul></div>
+</div></article>
+<article class="claim" data-kind="country" data-level="" data-geo="ru" data-vintage="v04" id="country-RU">
+<div class="claim-head">
+<div class="claim-id">country / RU</div>
+<div class="claim-topic">RU country profile</div>
+<div class="claim-tags">
+<span class="tag kind kind-country">country</span>
+<span class="tag geo">РФ</span>
+<span class="tag publisher">grade: C</span>
+<span class="tag publisher">closure: partial_classification_and_profstandard_bridge</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>main sources</h4><ul><li>OKZ ОК 010-2014 (МСКЗ-08) (current rev. 18.02.2021, ISCO-08 aligned)</li><li>Реестр профстандартов Минтруда РФ (~1,263+ active)</li><li>Rosstat labor-force methodology</li><li>Lisbon Recognition Convention (signed 2000, ratified)</li><li>PIAAC Cycle 1 Round 1 (2011-2012) historical data — WITH MOSCOW EXCLUSION CAVEAT</li><li>Постановление Правительства РФ № 792 от 12 июня 2024 (regulatory-guillotine de-fanging)</li><li>Приказ Минтруда РФ № 359 от 18 июля 2024 (development methodology)</li><li>Письма Минтруда от 5 и 11 июля 2024 г. № 14-3/ООГ-4236 (interpretive guidance)</li><li>ФНС/Мой налог НПД register: ~15.4M by end-2025</li><li>RANEPA / Florinskaya / Makarentseva 2023 SSRN + Stanford CDDRL OutRush 2024 (post-2022 emigration)</li><li>LRC RU/BY restriction (28 Feb 2023 declaration)</li></ul></div>
+<div class="block"><h4>strengths</h4><ul><li>Occupation classification aligned with ISCO-08</li><li>Profstandards provide credential and occupation content context</li><li>Domestic literature on professional mobility exists</li></ul></div>
+<div class="block"><h4>weaknesses</h4><ul><li>NEVER covered by PIAAC Cycle 2 (2022-2023)</li><li>PIAAC Cycle 1 Round 1 sample EXCLUDED Moscow municipal area — under-represents the very segment most relevant to this framework</li><li>No open O*NET-like task descriptor layer</li><li>Limited cross-country comparability</li><li>Lisbon Recognition Convention nominally available but practical operation degraded post-March 2022 (Russia ceased CoE membership)</li><li>Profstandards weakened as binding regulatory rule per Постановление № 792 от 13 июня 2024 — content-only role for most professions</li><li>Post-2022 emigration constraints (visa/banking/recognition) materially reduce realised geographic return capacity</li><li>No peer-reviewed Russian NLP work on профстандарты→skill-vector embeddings exists (May 2026)</li><li>Rosstat individual-level border-crossing data contaminated with tourism — return-migration statistics depend on survey-based estimates and indirect proxies</li><li>I07_ICAS: no career-agency instrument with documented psychometric invariance for Russian populations</li></ul></div>
+<div class="block"><h4>best supported dimensions</h4><ul><li>A5_credential_portability_domestic (B)</li><li>D03_vertical_exit + D07_industry_exit conceptualisation (C)</li><li>D05_occupation_classification_mapping (C)</li></ul></div>
+<div class="block"><h4>weakest dimensions</h4><ul><li>D05_lateral_professional_exit_task_vector (C)</li><li>D10_employment_form_return (C-)</li><li>D02_geographic_return_individual_score (C-)</li><li>D08_industry_return (C-)</li></ul></div>
+<div class="block"><h4>recommended minimum viable pipeline</h4><ul><li>Anchor to ISCO-08 via OKZ direct match</li><li>Build pseudo-task-vectors via NLP on profstandards content (трудовые функции, требуемые знания/умения)</li><li>Apply I04_CCS comparability confidence penalty</li><li>Use samozanyatye (НПД) registry data for D09/D10 employment-form transitions where available</li><li>Add Moscow-exclusion warning whenever PIAAC Cycle 1 data is used for skills-capital baseline</li><li>Light survey module is essential — administrative data alone cannot ground individual-level scores in current RU conditions</li></ul></div>
+<div class="block"><h4>v05 corrections</h4><ul><li>RU самозанятые volume corrected: ~14M end-2024, ~15.4M end-2025 (was &#x27;10M+&#x27; in v0.4 — outdated by ~50%)</li><li>NPD experiment legally extended to 31 Dec 2028; from 1 Jan 2026 voluntary sickness insurance + enhanced risk indicators for 35+ counterparties</li><li>Постановление № 792 effective date is 13 June 2024 (Постановление signed 12 June 2024 with effect from 13 June)</li><li>Приказ Минтруда № 359 of 18 July 2024 regulates HOW to develop/update profstandards — does NOT restore mandatory force</li><li>LRC RU/BY restriction: 28 February 2023 declaration; restricts committee work participation but does NOT terminate treaty membership</li><li>Russia formally remains a Party to the Lisbon Recognition Convention (ratified 2000)</li><li>Post-2022 emigration estimates contested 300K-1M+ depending on wave/methodology; OutRush longitudinal data shows most emigrants do NOT plan to return absent political change; RU government &#x27;IT 85% return&#x27; claim unsubstantiated</li></ul></div>
+</div></article>
+</section><section class="pass-section" id="survey">
+<h2>Light survey module <span style="font-family:var(--mono);font-size:14px;color:var(--text-light)">(5)</span></h2>
+<p class="section-intro">32-пунктовый легкий survey-модуль для индивидуального скоринга. Заполняет gap&#x27;ы, которые публичные источники не закрывают.</p>
+<article class="claim" data-kind="survey" data-level="" data-geo="global" data-vintage="v04" id="survey-S1_form_reversibility">
+<div class="claim-head">
+<div class="claim-id">S1_form_reversibility</div>
+<div class="claim-topic">S1_form_reversibility (3 items)</div>
+<div class="claim-tags">
+<span class="tag kind kind-survey">survey</span>
+<span class="tag axis">D09</span>
+<span class="tag axis">D10</span>
+<span class="tag axis">I01_EFBCS</span>
+<span class="tag axis">I02_ROVS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>items</h4><ol><li>I could return to a salaried role comparable to my last employee role within 6 months.</li><li>My current independent/freelance/founder work produces evidence employers in my prior field would value.</li><li>At least three clients, collaborators or former colleagues could refer me into a salaried role.</li></ol></div>
+</div></article>
+<article class="claim" data-kind="survey" data-level="" data-geo="global" data-vintage="v04" id="survey-S2_return_option_assets">
+<div class="claim-head">
+<div class="claim-id">S2_return_option_assets</div>
+<div class="claim-topic">S2_return_option_assets (3 items)</div>
+<div class="claim-tags">
+<span class="tag kind kind-survey">survey</span>
+<span class="tag axis">D02</span>
+<span class="tag axis">D08</span>
+<span class="tag axis">D04</span>
+<span class="tag axis">D10</span>
+<span class="tag axis">I02_ROVS</span>
+<span class="tag axis">I05_GRCS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>items</h4><ol><li>My licenses, credentials or certifications needed for my prior field are still valid.</li><li>I have maintained active professional ties in the field/geography/industry I might return to.</li><li>The cost of returning would be manageable for my household within the next 12 months.</li></ol></div>
+</div></article>
+<article class="claim" data-kind="survey" data-level="" data-geo="global" data-vintage="v04" id="survey-S3_industry_reentry">
+<div class="claim-head">
+<div class="claim-id">S3_industry_reentry</div>
+<div class="claim-topic">S3_industry_reentry (3 items)</div>
+<div class="claim-tags">
+<span class="tag kind kind-survey">survey</span>
+<span class="tag axis">D08</span>
+<span class="tag axis">I03_IRAS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>items</h4><ol><li>I have recent, visible work output that is legible to employers in my prior industry.</li><li>My prior industry still recognizes my current experience as relevant.</li><li>I know the current hiring channels and qualification screens in my prior industry.</li></ol></div>
+</div></article>
+<article class="claim" data-kind="survey" data-level="" data-geo="global" data-vintage="v04" id="survey-S4_vertical_track">
+<div class="claim-head">
+<div class="claim-id">S4_vertical_track</div>
+<div class="claim-topic">S4_vertical_track (3 items)</div>
+<div class="claim-tags">
+<span class="tag kind kind-survey">survey</span>
+<span class="tag axis">D04</span>
+<span class="tag axis">I06_VRCS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>items</h4><ol><li>If I moved from management to an IC/expert role, I could demonstrate current hands-on skill.</li><li>If I moved from an IC/expert role to management, I could demonstrate recent people/project leadership.</li><li>My field has credible senior IC and managerial tracks with comparable status and compensation.</li></ol></div>
+</div></article>
+<article class="claim" data-kind="survey" data-level="" data-geo="global" data-vintage="v05" id="survey-S5_track_switch_stigma_v05">
+<div class="claim-head">
+<div class="claim-id">S5_track_switch_stigma_v05</div>
+<div class="claim-topic">S5_track_switch_stigma_v05 (4 items)</div>
+<div class="claim-tags">
+<span class="tag kind kind-survey">survey</span>
+<span class="tag vintage v05">v0.5 added</span>
+<span class="tag axis">D04</span>
+<span class="tag axis">I06_VRCS</span>
+</div></div>
+<div class="claim-body">
+<div class="block v05"><h4>split construct</h4><p>VR_07 split into structural_track_parity + perceived_track_switch_stigma per v0.5 patch</p></div>
+<div class="block"><h4>items</h4><ol><li>Returning from management to a senior IC/expert role is seen as legitimate, not a demotion.</li><li>Senior IC/expert tracks have compensation and status comparable to managerial tracks.</li><li>A period as IC/expert after management would not reduce future eligibility for management.</li><li>Hiring managers understand manager↔IC switches as skill-preserving rather than signal-damaging.</li></ol></div>
+</div></article>
+</section><section class="pass-section" id="gaps">
+<h2>Residual gaps &amp; v0.5 frontier <span style="font-family:var(--mono);font-size:14px;color:var(--text-light)">(7)</span></h2>
+<p class="section-intro">Что НЕ закрыто даже после v0.5. Severity по bottleneck rule — слабейший сигнал задает уровень.</p>
+<article class="claim" data-kind="gap" data-level="" data-geo="ru eu" data-vintage="v04" data-criticality="high" id="gap-individual_panel_for_employment_form_return">
+<div class="claim-head">
+<div class="claim-id">individual_panel_for_employment_form_return</div>
+<div class="claim-topic">Even with CWS+SIPP+LEHD+CCQ bundle, no single ready instrument tracks employee→independent→employee bidirectional transitions at individual </div>
+<div class="claim-tags">
+<span class="tag kind kind-gap">gap</span>
+<span class="tag gap-crit crit-high">severity: high</span>
+<span class="tag axis">D10</span>
+<span class="tag axis">I01_EFBCS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Even with CWS+SIPP+LEHD+CCQ bundle, no single ready instrument tracks employee→independent→employee bidirectional transitions at individual level for the same person across 3+ years. Needs purpose-built panel.</p></div>
+<div class="block v05"><h4>v0.5 previous severity</h4><p>high</p></div>
+<div class="block v05"><h4>v0.5 new status</h4><p>medium_high_for_realized_transitions; high_for_capacity_and_quality_comparable_return</p></div>
+<div class="block v05"><h4>v0.5 finding</h4><p>SIPP, UKHLS/Understanding Society, SOEP, HILDA and EU-LFS longitudinal can observe realized self-employment/freelance-to-wage transitions. They do not directly measure capacity to return to a comparable salaried role.</p></div>
+</div></article>
+<article class="claim" data-kind="gap" data-level="" data-geo="ru us" data-vintage="v04" data-criticality="high" id="gap-validated_individual_return_option_value">
+<div class="claim-head">
+<div class="claim-id">validated_individual_return_option_value</div>
+<div class="claim-topic">Real-options theory is rich (Luehrman 1998 C-level; Baldi D-level; academic real-options literature B-level for firms) but no validated indi</div>
+<div class="claim-tags">
+<span class="tag kind kind-gap">gap</span>
+<span class="tag gap-crit crit-high">severity: high</span>
+<span class="tag axis">D02</span>
+<span class="tag axis">D04</span>
+<span class="tag axis">D06</span>
+<span class="tag axis">D08</span>
+<span class="tag axis">D10</span>
+<span class="tag axis">I02_ROVS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Real-options theory is rich (Luehrman 1998 C-level; Baldi D-level; academic real-options literature B-level for firms) but no validated individual-level instrument operationalises return optionality numerically. I02_ROVS is a proxy structure, not a validated scale.</p></div>
+<div class="block v05"><h4>v0.5 previous severity</h4><p>high</p></div>
+<div class="block v05"><h4>v0.5 new status</h4><p>high_but_better_theoretically_anchored</p></div>
+<div class="block v05"><h4>v0.5 finding</h4><p>Baldi &amp; Trigeorgis 2020 quantify career-development option value at organization/HR-program level. CFI-R career agency, Work Capability Set, Career Inaction Scale, and Career Sustainability Scale can serve as validated subcomponents, but no validated individual return-option-value instrument was found.</p></div>
+</div></article>
+<article class="claim" data-kind="gap" data-level="" data-geo="us" data-vintage="v04" data-criticality="high" id="gap-industry_reentry_signal_preservation_metric">
+<div class="claim-head">
+<div class="claim-id">industry_reentry_signal_preservation_metric</div>
+<div class="claim-topic">Signal-preservation across industries (publications/portfolios/clearance) is field-specific and lacks a unified scale. Each domain (academia</div>
+<div class="claim-tags">
+<span class="tag kind kind-gap">gap</span>
+<span class="tag gap-crit crit-high">severity: high</span>
+<span class="tag axis">D08</span>
+<span class="tag axis">I03_IRAS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Signal-preservation across industries (publications/portfolios/clearance) is field-specific and lacks a unified scale. Each domain (academia, finance, regulated professions) has its own marker set.</p></div>
+<div class="block v05"><h4>v0.5 previous severity</h4><p>high</p></div>
+<div class="block v05"><h4>v0.5 new status</h4><p>high_for_unified_metric; medium_for_domain_specific_metrics</p></div>
+<div class="block v05"><h4>v0.5 finding</h4><p>Domain-specific signal registries exist: publications/patents for academia, FINRA BrokerCheck/U4/U5 for finance, revolving-door datasets for public-private transitions, professional licensing for regulated professions. A universal signal-preservation score remains unvalidated.</p></div>
+</div></article>
+<article class="claim" data-kind="gap" data-level="" data-geo="ru cn us eu" data-vintage="v04" data-criticality="high" id="gap-cn_ru_task_vector">
+<div class="claim-head">
+<div class="claim-id">cn_ru_task_vector</div>
+<div class="claim-topic">State-published O*NET-equivalents do not exist for CN/RU. Pseudo-vectors via NLP on profstandards (RU) and occupation dictionary entries (CN</div>
+<div class="claim-tags">
+<span class="tag kind kind-gap">gap</span>
+<span class="tag gap-crit crit-high">severity: medium_high</span>
+<span class="tag axis">D05</span>
+<span class="tag axis">D06</span>
+<span class="tag axis">D07</span>
+<span class="tag axis">D08</span>
+<span class="tag axis">I04_CCS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>State-published O*NET-equivalents do not exist for CN/RU. Pseudo-vectors via NLP on profstandards (RU) and occupation dictionary entries (CN) are feasible but not built. Xu et al. 2020 (CN academic prototype) is a research-grade starting point.</p></div>
+<div class="block v05"><h4>v0.5 previous severity</h4><p>medium_high</p></div>
+<div class="block v05"><h4>v0.5 new status</h4><p>medium_for_CN_prototype; medium_high_for_RU</p></div>
+<div class="block v05"><h4>v0.5 finding</h4><p>China has an academic O*NET-mapped skill-taxonomy prototype predicting 161 O*NET-style skills/knowledge/abilities from Chinese occupation descriptions. Russia still lacks a comparable validated public task-vector layer; profstandards can support NLP pseudo-vectors.</p></div>
+</div></article>
+<article class="claim" data-kind="gap" data-level="" data-geo="ru us eu" data-vintage="v04" data-criticality="high" id="gap-ru_post_2022_credential_practical_operation">
+<div class="claim-head">
+<div class="claim-id">ru_post_2022_credential_practical_operation</div>
+<div class="claim-topic">Lisbon RC nominally ratified by Russia (2000) but practical operation degraded after Russia ceased CoE membership in March 2022. Profstandar</div>
+<div class="claim-tags">
+<span class="tag kind kind-gap">gap</span>
+<span class="tag gap-crit crit-high">severity: high_for_RU_only</span>
+<span class="tag axis">D02_RU</span>
+<span class="tag axis">D08_RU</span>
+<span class="tag axis">I05_GRCS</span>
+<span class="tag axis">I03_IRAS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>Lisbon RC nominally ratified by Russia (2000) but practical operation degraded after Russia ceased CoE membership in March 2022. Profstandards weakened as binding rule by Постановление № 792 от 13 июня 2024. Russian credential portability is theoretically present but practically constrained — neither v0.3 nor v0.4 fully resolves how to score this in I05_GRCS for RU.</p></div>
+<div class="block v05"><h4>v0.5 previous severity</h4><p>high_for_RU_only</p></div>
+<div class="block v05"><h4>v0.5 new status</h4><p>high_for_practical_cross_border_operation; medium_for_domestic_content_mapping</p></div>
+<div class="block v05"><h4>v0.5 finding</h4><p>Council of Europe exclusion and LRC participation restrictions confirm practical-operational constraints. 2024 Mintrud recommendations keep profstandards useful as structured occupation-content artifacts, not general binding credential gates.</p></div>
+</div></article>
+<article class="claim" data-kind="gap" data-level="" data-geo="ru" data-vintage="v04" data-criticality="medium" id="gap-vertical_return_track_switch_stigma_quantification">
+<div class="claim-head">
+<div class="claim-id">vertical_return_track_switch_stigma_quantification</div>
+<div class="claim-topic">VR_07 track-switch stigma signal in I06_VRCS is essentially qualitative. No validated scale of perceived stigma against IC↔manager track swi</div>
+<div class="claim-tags">
+<span class="tag kind kind-gap">gap</span>
+<span class="tag gap-crit crit-medium">severity: medium</span>
+<span class="tag axis">D04</span>
+<span class="tag axis">I06_VRCS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>VR_07 track-switch stigma signal in I06_VRCS is essentially qualitative. No validated scale of perceived stigma against IC↔manager track switches.</p></div>
+<div class="block v05"><h4>v0.5 previous severity</h4><p>medium</p></div>
+<div class="block v05"><h4>v0.5 new status</h4><p>medium_low_for_dual_ladder_parity; medium_for_track_switch_stigma</p></div>
+<div class="block v05"><h4>v0.5 finding</h4><p>Dual-ladder literature provides measurable constructs such as perceived equality/parity of technical and managerial tracks. Stigma of manager↔IC return remains under-measured and should be captured by added survey items.</p></div>
+</div></article>
+<article class="claim" data-kind="gap" data-level="" data-geo="ru us" data-vintage="v04" data-criticality="high" id="gap-integrated_agency_validation">
+<div class="claim-head">
+<div class="claim-id">integrated_agency_validation</div>
+<div class="claim-topic">I07_ICAS combines components of mixed evidence levels (CCQ A + Anand A + LEHD B + Raelin C) into a single composite score. Composite validat</div>
+<div class="claim-tags">
+<span class="tag kind kind-gap">gap</span>
+<span class="tag gap-crit crit-high">severity: high</span>
+<span class="tag axis">all 10</span>
+<span class="tag axis">I07_ICAS</span>
+</div></div>
+<div class="claim-body">
+<div class="block"><h4>description</h4><p>I07_ICAS combines components of mixed evidence levels (CCQ A + Anand A + LEHD B + Raelin C) into a single composite score. Composite validation requires concurrent measurement of all components on a substantial multi-country sample. Not available.</p></div>
+<div class="block v05"><h4>v0.5 previous severity</h4><p>high</p></div>
+<div class="block v05"><h4>v0.5 new status</h4><p>high_for_full_index_validation; medium_for_component_validity</p></div>
+<div class="block v05"><h4>v0.5 finding</h4><p>Component-level validated scales are stronger than v0.4 reflected: CFI-R, Work Capability Set, Career Sustainability Scale, Career Inaction Scale, CCQ/CAAS. No combined ICAS-style index linking psychological agency to structural constraints has been validated.</p></div>
+</div></article>
+</section>
+
+<footer>
+<p>Generated from <code>methodology_pack_v05_unified.json</code>. A/B/C/D evidence classification: A — primary peer-reviewed / official registry / pre-registered RCT / national stats; B — strong observational / quasi-experimental / large survey; C — practitioner literature / corporate self-disclosure; D — concept / theoretical analogy without operational instrument. Bottleneck rule: derived-indicator confidence inherits from the weakest essential signal.</p>
+<p>Цикл «Игры в профессию» — серия аналитических статей о воспроизводстве профессиональной компетенции в эпоху ИИ. Этот документ — D-материал (полевая методологическая база), не самостоятельная статья цикла.</p>
+</footer>
+
+</div>
+
+
+<script>
+(function() {
+  const filters = { kind: 'all', level: 'all', geo: 'all', axis: 'all', vintage: 'all' };
+  const claims = Array.from(document.querySelectorAll('.claim'));
+  const sections = Array.from(document.querySelectorAll('section.pass-section'));
+  const counter = document.getElementById('visible-count');
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const fname = btn.dataset.filter;
+      const fval = btn.dataset.value;
+      filters[fname] = fval;
+      document.querySelectorAll('.filter-btn[data-filter="' + fname + '"]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  function matchSetFilter(claimAttr, filterVal) {
+    if (filterVal === 'all') return true;
+    if (!claimAttr) return false;
+    // Multi-value attributes (geo can be "us eu", axis can be empty or single)
+    const tokens = claimAttr.split(/\s+/);
+    return tokens.includes(filterVal);
+  }
+
+  function applyFilters() {
+    let visibleCount = 0;
+    claims.forEach(claim => {
+      let show = true;
+      if (filters.kind !== 'all' && claim.dataset.kind !== filters.kind) show = false;
+      if (filters.level !== 'all' && claim.dataset.level !== filters.level) show = false;
+      if (!matchSetFilter(claim.dataset.geo, filters.geo)) show = false;
+      // Axis filter only applies to dimensions; for non-dimensions, axis filter is ignored
+      if (filters.axis !== 'all' && claim.dataset.kind === 'dimension') {
+        if (claim.dataset.axis !== filters.axis) show = false;
+      } else if (filters.axis !== 'all' && claim.dataset.kind !== 'dimension') {
+        // When axis filter is active and claim is not a dimension, hide it
+        // unless kind filter allows multi-kind view. Simpler: hide.
+        show = false;
+      }
+      if (filters.vintage !== 'all' && claim.dataset.vintage !== filters.vintage) show = false;
+      claim.classList.toggle('hidden', !show);
+      if (show) visibleCount++;
+    });
+
+    // Hide sections that have no visible claims
+    sections.forEach(sec => {
+      const visible = sec.querySelectorAll('.claim:not(.hidden)').length;
+      sec.classList.toggle('empty', visible === 0);
+      // Update count badge in section header
+      const countEl = sec.querySelector('h2 span');
+      if (countEl) {
+        const totalInSec = sec.querySelectorAll('.claim').length;
+        countEl.textContent = '(' + visible + ' / ' + totalInSec + ')';
+      }
+    });
+
+    counter.textContent = visibleCount + ' visible';
+  }
+
+  // Init counter
+  applyFilters();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,3162 @@
+{
+  "pack_meta": {
+    "title": "Unified Methodology Pack: 10 Mobility Dimensions × Exit/Return + 7 Agency Parameters + Gap Closure Layer + Residual Gap Deep Research",
+    "version": "0.5_unified",
+    "created_at": "2026-05-03",
+    "language": "ru_en_mixed",
+    "status": "merged_v04_unified_plus_v05_patch_plus_deep_research_corrections",
+    "merges": [
+      "methodology_pack.json v0.2_fact_checked (user-supplied)",
+      "gap_closure_research_pack_v0_3.json (user-supplied)",
+      "methodology_pack_v02_factcheck.json (independent re-verification)",
+      "methodology_pack_v04_unified.json (10-dimension unified base)",
+      "residual_gap_deep_research_v0_5_patch.json (user-supplied residual gap research patch)",
+      "deep_research_v0_5_findings (this conversation: 16-source verification + 8 additional sources + 5 attribution corrections + contextual updates)"
+    ],
+    "scope": {
+      "framework": "10 dimensions (5 axes × exit/return) + 7 agency parameters + 7 derived gap-closing indicators",
+      "axes": [
+        "geographic",
+        "vertical",
+        "lateral_professional",
+        "industry",
+        "employment_form"
+      ],
+      "countries": [
+        "US",
+        "EU",
+        "CN",
+        "RU"
+      ],
+      "gap_policy": "maximally_close_with_accessible_sources_and_proxies; keep residual gaps explicit"
+    },
+    "positioning": {
+      "recommended_claim": "An integrating operational architecture rather than a wholly new construct.",
+      "defensible_novelty": [
+        "explicit separation of exit capacity and return capacity within each axis (10 dimensions)",
+        "multi-axis treatment across geographic, vertical, lateral/professional, industry, and employment-form mobility",
+        "individual-level agency framing that links psychological constructs (CAAS, CCQ, PCAS/BCAS) to structural labour-market data (LEHD J2J, BLS CWS, Eurostat LFS-Long, Cedefop Skills-OVATE) via 7 derived gap-closing indicators",
+        "explicit A/B/C/D evidence classification at the source and claim level",
+        "explicit Postановление № 792 / Приказ Минтруда № 359 dual-layer treatment of Russian credential portability (de-fanging vs. content methodology)"
+      ],
+      "avoid_claims": [
+        "do not claim that no prior work measures career mobility at all",
+        "do not claim that all dimensions are completely new",
+        "do not treat country-level indices such as Cedefop ESI as individual-level agency instruments",
+        "do not describe derived indicators (I01-I07) as validated instruments — they are operational proxies awaiting validation",
+        "do not merge CN/RU pseudo-task-vectors into O*NET/PIAAC data without confidence penalties",
+        "do not claim that Baldi-Trigeorgis 2020 is an individual-level option-value instrument — it is a Fortune-500 case study at organization/SHRM level (J of Intellectual Capital 21(5))",
+        "do not anchor I07_ICAS at A-level for CN/RU — none of the four patch instruments (CFI-R, Work Capability Set, CARINAS, Career Sustainability Scale) has documented psychometric invariance for those jurisdictions; bottleneck rule caps confidence at C for CN/RU"
+      ]
+    },
+    "overall_confidence_by_country": {
+      "US": "medium_high",
+      "EU": "medium",
+      "CN": "low_medium",
+      "RU": "low_medium",
+      "note_v05": "Confidence levels unchanged from v0.4. Deep research downgraded several individual instruments but did not change country-level overall confidence."
+    }
+  },
+  "evidence_classification": {
+    "definition_source": "project convention, applied consistently across packs",
+    "levels": {
+      "A": {
+        "label": "primary",
+        "description": "primary peer-reviewed / official registry / pre-registered RCT / national statistics with published methodology",
+        "examples": [
+          "O*NET 30.2 Database",
+          "OECD PIAAC Cycle 2 (Dec 2024)",
+          "ESCO v1.2",
+          "BLS CWS 2023",
+          "ISCO-08 / OKZ ОК 010-2014 / SOC",
+          "Lisbon Recognition Convention 1997",
+          "Savickas-Porfeli 2012 CAAS (JVB)",
+          "Akkermans et al. 2013 CCQ (Journal of Career Development)",
+          "Briscoe-Hall-Frautschy DeMuth 2006 PCAS/BCAS (JVB)",
+          "Amanzadeh-Kermani-McQuade 2024 (NBER WP 32352)",
+          "Aufiero-De Marzo-Sbardella-Zaccaria 2024 (Sci Rep)",
+          "Robinson 2018 (JHR) + Bechichi et al. 2018-2019 (OECD STI)"
+        ]
+      },
+      "B": {
+        "label": "strong_observational",
+        "description": "observational / quasi-experimental / large survey / well-attested administrative data; non-experimental but methodologically rigorous",
+        "examples": [
+          "LEHD Job-to-Job Flows (Census + state UI data)",
+          "Eurostat EU-LFS longitudinal",
+          "EU-SILC",
+          "Cedefop Skills-OVATE (online job ads)",
+          "Eurofound EWCS",
+          "Cedefop ESI 2024",
+          "Russian profstandards registry (Минтруд)",
+          "Saxenian 2006 (qualitative ethnography of brain circulation)",
+          "Census SIPP",
+          "China Occupation Dictionary 2022 (state-published)",
+          "Jacobs academia↔industry literature (descriptive)"
+        ]
+      },
+      "C": {
+        "label": "practitioner",
+        "description": "practitioner literature / corporate self-disclosure / industry survey / non-peer-reviewed but widely used",
+        "examples": [
+          "Benko-Weisberg 2007 Mass Career Customization (HBR Press, Deloitte)",
+          "Benko-Anderson 2010 Corporate Lattice (HBR Press)",
+          "Raelin 1987 dual ladder (Personnel Journal)",
+          "iRelaunch returnship statistics",
+          "Luehrman 1998 'Strategy as a Portfolio of Real Options' (HBR — practitioner-strategic framework)",
+          "Baldi 2012 real options + human capital (theoretical-applied)",
+          "Tech companies' dual ladder programs (Shopify, Atlassian, Walmart)"
+        ]
+      },
+      "D": {
+        "label": "concept_or_analogy",
+        "description": "opinion / forecast / pure concept / theoretical analogy without operational instrument",
+        "examples": [
+          "Real options as analogy for career decisions (without instrument)",
+          "Bandura social-cognitive agency applied to career exit/return without domain-specific scale",
+          "abstract claim that some phenomenon 'can be measured' without proposed operationalisation"
+        ]
+      }
+    },
+    "application_rule": "Each source in datasources_unified, each field neighbour, each gap-closure signal carries an evidence_level field. When a derived indicator combines multiple sources of mixed evidence levels, the indicator's confidence inherits from the weakest essential signal (the bottleneck rule)."
+  },
+  "fact_check_v03_gap_closures": {
+    "summary": {
+      "total_v03_claims_checked": 12,
+      "verified": 10,
+      "partially_verified": 2,
+      "needs_correction": 0,
+      "verdict": "v0.3 gap closure pack passes fact-check at HIGH CONFIDENCE. All 22 sources in source_registry are correctly identified and accurately characterized. Two refinements proposed: (1) add the Russian Moscow PIAAC exclusion as a comparability penalty in CR_04; (2) note the 2024 weakening of Russian profstandards binding status (Постановление Правительства № 792)."
+    },
+    "v03_source_verifications": [
+      {
+        "source_id": "SRC_BLS_CWS_2023",
+        "verified": true,
+        "evidence_level": "A",
+        "primary_findings": "BLS CWS July 2023 confirmed: 6.9M contingent workers (4.3% of employed, up from 3.8% in May 2017); 7.4% independent contractors; 1.7% on-call; 0.6% temp help; 0.5% contract firm workers; 16.3M (10.1%) in alternative arrangements; 8.4M multiple jobholders (5.2%); CWS history: 1995/97/99/2001/2005/2017/2023, next May 2025; ~60K households monthly CPS sample. 2023 added digital platform / app-based work questions and second-job questions.",
+        "url": "https://www.bls.gov/news.release/conemp.htm"
+      },
+      {
+        "source_id": "SRC_LEHD_J2J",
+        "verified": true,
+        "evidence_level": "B",
+        "primary_findings": "Census LEHD Job-to-Job Flows: quarterly data based on linked UI records + QCEW; series since 2000Q2, latest national release 2023Q4 (R2025Q1); state and MSA level. Critical limitation: excludes self-employed and federal defense employees — relevant for employment_form_exit_return dimension. Multiple measures: J2J transition rate, hires/separations, earnings changes, origin/destination job characteristics.",
+        "url": "https://lehd.ces.census.gov/data/",
+        "limitations_to_add": [
+          "excludes self-employed individuals — direct cap on usefulness for employment_form transitions",
+          "excludes federal defense employees",
+          "multiplicative noise infusion (fuzz factor) on all releases for confidentiality"
+        ]
+      },
+      {
+        "source_id": "SRC_AKKERMANS_CCQ",
+        "verified": true,
+        "evidence_level": "A",
+        "primary_findings": "Akkermans, Brenninkmeijer, Huibers, Blonk (2013), Journal of Career Development 40(3): 245-267. Three-dimension framework (reflective/communicative/behavioral) × 6 competencies: reflection on motivation, reflection on qualities, networking, self-profiling, work exploration, career control. Initially validated on Dutch young employees age 16-30 (two samples). Six-factor structure with second-order common factor. Good content, factorial, discriminant, and incremental validity.",
+        "url": "https://journals.sagepub.com/doi/abs/10.1177/0894845312467501",
+        "caveats_to_add": [
+          "Original validation sample was young employees (16-30) — generalisability to mid-career exit/return populations needs additional validation",
+          "Strong instrument for A2 (career_identity) and A3 (adaptability_self_efficacy) and A4 (network_capital)"
+        ]
+      },
+      {
+        "source_id": "SRC_LUEHRMAN_REAL_OPTIONS",
+        "verified": true,
+        "evidence_level": "C",
+        "primary_findings": "Luehrman T.A. (1998). 'Strategy as a Portfolio of Real Options.' Harvard Business Review 76(5), Sept-Oct 1998, pp. 89-99. Paired with 'Investment Opportunities as Real Options' (HBR July-Aug 1998). Two-metric Option Space + 'tomato garden' metaphor. Foundational practitioner-strategic real-options paper.",
+        "url": "https://hbr.org/1998/09/strategy-as-a-portfolio-of-real-options",
+        "caveats_to_add": [
+          "Strategic-investment context, not careers — Luehrman is rhetorical predecessor for OV (option value) thinking, NOT direct operational instrument for individual career return options",
+          "For career real-options literature specifically, more relevant: Bowman-Hurry 1993 (option lens for strategic investments under uncertainty); McGrath 1997 (real options and strategic investment); Foote-Folta 2002 (real options applied to firm-level human capital). Career-individual-level real options remains conceptual."
+        ]
+      },
+      {
+        "source_id": "SRC_DUAL_LADDER_RAELIN",
+        "verified": true,
+        "evidence_level": "C",
+        "primary_findings": "Raelin J.A. (1987). 'Two-Track Plans for One-Track Careers.' Personnel Journal 66, January 1987, pp. 96-101. Foundational practitioner article on dual ladder (technical track + managerial track with comparable prestige, salary, status). Now widely implemented in tech: Shopify (crafters/managers), Google, Atlassian, Walmart Global Tech, Microsoft, Meta. Operationalisation varies across firms.",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3928594",
+        "caveats_to_add": [
+          "C-level evidence: practitioner journal, not peer-reviewed",
+          "Construct widely cited but no single validated psychometric scale measures the worker's perception of dual-ladder availability",
+          "Modern academic treatment: Allen-Katz 1986 'Dual ladders revisited' (Research-Technology Management); Petroni-Colacino 2008 (R&D Management). Academic work confirms continued relevance and identifies failure modes (poor parity, prestige asymmetry)."
+        ]
+      },
+      {
+        "source_id": "SRC_RU_PROFSTANDARDS",
+        "verified": true,
+        "evidence_level": "B",
+        "primary_findings": "Реестр профессиональных стандартов Минтруда России. ~1,263+ active профстандартов (2019 figure; current larger). Maintained by ФГБУ 'ВНИИ труда' Минтруда России. Each profstandard contains: трудовые функции (job functions), требуемые знания/умения (required knowledge/skills), уровни квалификации (qualification levels). Foundation in TK RF (Federal Law No. 236-FZ from 03.12.2012).",
+        "url": "https://profstandart.rosmintrud.ru/obshchiy-informatsionnyy-blok/natsionalnyy-reestr-professionalnykh-standartov/reestr-professionalnykh-standartov/",
+        "critical_finding_for_v04": "On 13 June 2024, Постановление Правительства РФ № 792 came into force: при осуществлении государственного контроля (надзора) больше не допускается оценка соблюдения требований профстандартов как обязательных, и несоблюдение требований профстандартов не может являться основанием для административной ответственности (with narrow exceptions, e.g. accountants under Federal Law No. 402-FZ). This SIGNIFICANTLY weakens profstandards as a credential/regulatory barrier in Russia. They remain useful as occupation-content layer (verbs, functions, knowledge) for pseudo-vector construction (gap_closure cn_ru_comparability), but should NOT be treated as a binding credential portability mechanism.",
+        "implication_for_pack": "In gap_closures.option_value_of_return.OV_03_switching_cost and gap_closures.cn_ru_comparability.IR_04, soften how profstandards are used: occupation-content yes; binding credential rule no (for most professions, post June 2024)."
+      },
+      {
+        "source_id": "SRC_CENSUS_SIPP",
+        "verified": true,
+        "evidence_level": "B",
+        "primary_findings": "Survey of Income and Program Participation — longitudinal household survey by US Census Bureau. Each panel ~14,000-52,000 households, followed for 4 years. Captures detailed employment, earnings, transitions, self-employment. Foundational US source for individual-panel transition analysis. Latest panel: 2022 panel.",
+        "url": "https://www.census.gov/programs-surveys/sipp.html"
+      },
+      {
+        "source_id": "SRC_EUROSTAT_LFS_LONG",
+        "verified": true,
+        "evidence_level": "B",
+        "primary_findings": "Eurostat EU-LFS longitudinal microdata: 2-quarter and 4-quarter panel constructions tracking labour-market transitions across 27 EU member states + EFTA. Standard dataset code lfsi_long, lfsi_jht. Quarterly transitions between employment/unemployment/inactivity. Limitations: short panels (2-4 quarters) limit detection of long-term return cycles; sample size varies by country; self-employment status changes captured but with low granularity.",
+        "url": "https://ec.europa.eu/eurostat/web/microdata/european-union-labour-force-survey"
+      },
+      {
+        "source_id": "SRC_CEDEFOP_OVATE",
+        "verified": true,
+        "evidence_level": "B",
+        "primary_findings": "Cedefop Skills-OVATE: online job ads aggregation across 32 European countries (27 EU + EFTA + UK), launched 2015, quarterly updates. Powered by Cedefop + Eurostat Web Intelligence Hub. Hundreds of millions of OJAs analyzed. Cross-walks ISCO-08 / NACE rev.2 / NUTS-2 / ESCO v1 / O*NET. Demand-side near-real-time data for occupations and skills.",
+        "url": "https://www.cedefop.europa.eu/en/tools/skills-online-vacancies",
+        "caveats_to_add": [
+          "Online-only — under-represents informal hiring channels; some sectors over-represented (tech, professional services), others under-represented (agriculture, manual trades)",
+          "Snapshot of demand (vacancies), not realized hires"
+        ]
+      },
+      {
+        "source_id": "SRC_BALDI_REAL_OPTIONS_HUMAN_CAPITAL",
+        "verified": true,
+        "evidence_level": "D",
+        "primary_findings": "Baldi 2012/2013 work on real options applied to human-capital career development. Conceptual extension of Luehrman framework to individual career investment decisions (training, occupation choice). Primarily theoretical; no validated individual-level instrument.",
+        "rationale_for_D": "Theoretical analogy without operationalisation at individual level; useful as conceptual scaffolding for OV indicator but not as data source."
+      },
+      {
+        "source_id": "SRC_JACOBS_ACAD_INDUSTRY",
+        "verified_status": "partially_verified",
+        "evidence_level": "C",
+        "primary_findings": "Jacobs 'How to transition from academia to industry and back' literature exists in scattered form (Nature Careers columns, ASAPbio guides, AAAS Science Careers, individual academic blogs). No single canonical Jacobs reference identified — likely refers to the broader academia↔industry transition literature including Mangematin 2000 (Research Policy on PhDs in industry), Roach-Sauermann 2010 (Research Policy on academic vs industry careers), and Gaughan-Robin 2004 (PhD careers).",
+        "edits_suggested": [
+          "Either pin a specific Jacobs reference (year, journal) OR rename source to SRC_ACADEMIA_INDUSTRY_TRANSITION_LITERATURE pointing to a basket of references (Mangematin 2000, Roach-Sauermann 2010, Lam 2007 R&D Management on hybrid academic-industry roles)"
+        ]
+      },
+      {
+        "source_id": "SRC_ANAND_CAPABILITY_INDICATORS",
+        "verified": true,
+        "evidence_level": "A",
+        "primary_findings": "Anand-Hunter-Smith 2005 'The measurement of capabilities' — Sen-Nussbaum capability approach operationalised on British Household Panel Survey (BHPS). Cited correctly in v0.3.",
+        "url": "https://academic.oup.com/oep/article-abstract/57/Suppl_1/9/2362317"
+      }
+    ]
+  },
+  "ten_mobility_dimensions": [
+    {
+      "dimension_id": "D01_geographic_exit",
+      "axis": "geographic",
+      "direction": "exit",
+      "description": "Capacity to leave current geography for another labor market.",
+      "measurement_maturity": "medium_high_for_population_flows; low_for_individual_agency",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_NBER_RETURN_MIGRATION",
+          "evidence_level": "A",
+          "role": "individual-panel hazard model evidence"
+        },
+        {
+          "source_id": "SRC_LEHD_J2J",
+          "evidence_level": "B",
+          "role": "US interstate/MSA flows"
+        },
+        {
+          "source_id": "SRC_EUROSTAT_LFS_LONG",
+          "evidence_level": "B",
+          "role": "EU intra-EU mobility tracking"
+        },
+        {
+          "source_id": "SRC_CENSUS_SIPP",
+          "evidence_level": "B",
+          "role": "US individual panel of geographic transitions"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "saxenian_amanzadeh_kermani_brain_circulation"
+      ],
+      "agency_parameter_links": [
+        "A4_network_capital",
+        "A5_credential_portability",
+        "A6_labor_market_liquidity"
+      ],
+      "derived_indicator_partial": "I05_GRCS",
+      "country_readiness": {
+        "US": {
+          "grade": "A-",
+          "notes": "LEHD J2J + ACS migration + NBER hazard models give strong individual-level signal"
+        },
+        "EU": {
+          "grade": "B+",
+          "notes": "LFS + EU-SILC give intra-EU mobility; ESCO + EQF + Lisbon RC support credential portability"
+        },
+        "CN": {
+          "grade": "C+",
+          "notes": "Internal migration data via population census; international outflow harder to measure individually"
+        },
+        "RU": {
+          "grade": "C",
+          "notes": "Rosstat outmigration data limited; post-2022 emigration flows poorly observable; OECD Migration Outlook is best external proxy"
+        }
+      },
+      "residual_gap": "Individual-level exit-readiness scoring (vs. realized flows) requires survey augmentation; no off-the-shelf instrument."
+    },
+    {
+      "dimension_id": "D02_geographic_return",
+      "axis": "geographic",
+      "direction": "return",
+      "description": "Capacity to return to prior geography or origin labor market.",
+      "measurement_maturity": "medium_for_cohort_evidence; low_for_individual_score",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_NBER_RETURN_MIGRATION",
+          "evidence_level": "A",
+          "role": "Amanzadeh-Kermani-McQuade 2024: 38% return within 10 years; asymmetric exposure to negative firm growth"
+        },
+        {
+          "source_id": "SRC_AKKERMANS_CCQ",
+          "evidence_level": "A",
+          "role": "individual-level home network continuity (survey)"
+        },
+        {
+          "source_id": "SRC_ESCO",
+          "evidence_level": "A",
+          "role": "credential recognition / regulated profession info"
+        },
+        {
+          "source_id": "SRC_RU_PROFSTANDARDS",
+          "evidence_level": "B",
+          "role": "RU occupation content for matching foreign qualifications domestically"
+        },
+        {
+          "source_id": "SRC_CHINA_OCC_DICT",
+          "evidence_level": "B",
+          "role": "CN occupation directory for repatriating Chinese workers"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "saxenian_amanzadeh_kermani_brain_circulation"
+      ],
+      "agency_parameter_links": [
+        "A4_network_capital",
+        "A5_credential_portability",
+        "A6_labor_market_liquidity",
+        "A7_institutional_constraints"
+      ],
+      "derived_indicator_primary": "I05_GRCS",
+      "indicator_signals_count": 7,
+      "country_readiness": {
+        "US": {
+          "grade": "B+",
+          "notes": "Strong NBER-style empirical anchor; LEHD return-to-prior-state observable in some panels; iRelaunch C-level data for career-break return"
+        },
+        "EU": {
+          "grade": "B",
+          "notes": "Lisbon RC + EQF give credential return mechanism; LFS-Long tracks short-cycle returns"
+        },
+        "CN": {
+          "grade": "C+",
+          "notes": "Returnee literature qualitative; Tokyo Convention 2011/2018 gives credential mechanism; '海归' (haigui) corpus large but methodologically weak"
+        },
+        "RU": {
+          "grade": "C-",
+          "notes": "Lisbon RC ratified (2000) but practical operation degraded post-March 2022 (Russia ceased CoE membership); profstandards weakened as binding rule (Постановление № 792 от 13 июня 2024). Empirical return-migration data sparse and methodologically constrained."
+        }
+      },
+      "residual_gap": "Individual-level return-capacity score requires combining hazard-model baseline + survey add-on + credential-portability check. Asymmetric exposure to destination shocks (Amanzadeh-Kermani-McQuade) is empirically established but not turned into individual instrument."
+    },
+    {
+      "dimension_id": "D03_vertical_exit",
+      "axis": "vertical",
+      "direction": "exit",
+      "description": "Capacity to move up, down, or out of current hierarchical track (manager/IC/expert ladders).",
+      "measurement_maturity": "medium_for_ex_post_mobility; low_for_individual_capacity",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_LEHD_J2J",
+          "evidence_level": "B",
+          "role": "earnings-quartile and firm-level transitions"
+        },
+        {
+          "source_id": "SRC_DUAL_LADDER_RAELIN",
+          "evidence_level": "C",
+          "role": "structural availability of dual track"
+        },
+        {
+          "source_id": "SRC_ONET_DOL",
+          "evidence_level": "A",
+          "role": "Job Zones (4-level since 30.2 Feb 2026) for level mapping"
+        },
+        {
+          "source_id": "SRC_ONET_CONTENT",
+          "evidence_level": "A",
+          "role": "responsibility/autonomy/complexity descriptors"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "benko_mass_career_customization"
+      ],
+      "agency_parameter_links": [
+        "A1_skills_capital",
+        "A2_career_identity",
+        "A3_adaptability_self_efficacy"
+      ],
+      "derived_indicator_partial": "I06_VRCS",
+      "country_readiness": {
+        "US": {
+          "grade": "B+",
+          "notes": "Strong O*NET level mapping; LEHD earnings quartile transitions; tech-sector dual ladder C-level prevalent"
+        },
+        "EU": {
+          "grade": "B-",
+          "notes": "ESCO ISCO-08 levels; weaker dual-ladder formalisation outside tech"
+        },
+        "CN": {
+          "grade": "C",
+          "notes": "Occupation dictionary classification levels exist; SOE vs. private firm vertical structures heterogeneous"
+        },
+        "RU": {
+          "grade": "C",
+          "notes": "OKZ ISCO-08 alignment + profstandards qualification levels; weak dual-ladder culture outside multinational corporations and IT"
+        }
+      },
+      "residual_gap": "Vertical exit at individual level (ready/willing/able to step up, down, or out) requires survey add-on combining career identity (CCQ) + level recency (O*NET) + market liquidity (LEHD/Skills-OVATE)."
+    },
+    {
+      "dimension_id": "D04_vertical_return",
+      "axis": "vertical",
+      "direction": "return",
+      "description": "Capacity to re-enter prior seniority, management, or IC track after a track switch (manager→IC→manager, IC→manager→IC, post-break re-entry to senior level).",
+      "measurement_maturity": "low_for_individual_score",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_DUAL_LADDER_RAELIN",
+          "evidence_level": "C",
+          "role": "structural availability"
+        },
+        {
+          "source_id": "SRC_ONET_DOL",
+          "evidence_level": "A",
+          "role": "level equivalence between tracks"
+        },
+        {
+          "source_id": "SRC_ONET_CONTENT",
+          "evidence_level": "A",
+          "role": "responsibility/autonomy mapping"
+        },
+        {
+          "source_id": "SRC_AKKERMANS_CCQ",
+          "evidence_level": "A",
+          "role": "career identity + reflection on motivation"
+        },
+        {
+          "source_id": "SRC_LEHD_J2J",
+          "evidence_level": "B",
+          "role": "track-switch flow rates and earnings outcomes"
+        },
+        {
+          "source_id": "SRC_CEDEFOP_OVATE",
+          "evidence_level": "B",
+          "role": "openings at target level"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "benko_mass_career_customization",
+        "briscoe_hall_pcas_bcas"
+      ],
+      "agency_parameter_links": [
+        "A1_skills_capital",
+        "A2_career_identity",
+        "A3_adaptability_self_efficacy",
+        "A6_labor_market_liquidity"
+      ],
+      "derived_indicator_primary": "I06_VRCS",
+      "indicator_signals_count": 7,
+      "country_readiness": {
+        "US": {
+          "grade": "B-",
+          "notes": "Tech-sector dual ladder culturally normalized (Shopify crafters, Google IC ladder); 7 signals all operationalisable"
+        },
+        "EU": {
+          "grade": "C+",
+          "notes": "Less dual-ladder culture outside tech; some sectors strongly hierarchical"
+        },
+        "CN": {
+          "grade": "C",
+          "notes": "Tech sectors (Alibaba, Tencent, ByteDance) have IC tracks; weaker outside tech"
+        },
+        "RU": {
+          "grade": "C",
+          "notes": "Limited dual-ladder outside multinationals; track-switch stigma reportedly higher than in US"
+        }
+      },
+      "residual_gap": "Major gap. No off-the-shelf measure for return-after-track-switch. Closure path: combine VR_01 dual ladder availability (Raelin C-level) + VR_02 level equivalence (O*NET A-level) + VR_03 recency (O*NET + CCQ) + VR_04 evidence portfolio + VR_05 market liquidity + VR_06 identity fit + VR_07 stigma — see I06_VRCS."
+    },
+    {
+      "dimension_id": "D05_lateral_professional_exit",
+      "axis": "lateral_professional",
+      "direction": "exit",
+      "description": "Capacity to move into adjacent or distant occupations based on transferable skills and tasks.",
+      "measurement_maturity": "high_for_occupation_pair_distance; medium_low_for_individual_capacity",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_ONET_DOL",
+          "evidence_level": "A",
+          "role": "task / skill / work-context vectors (30.2 Feb 2026)"
+        },
+        {
+          "source_id": "SRC_ONET_CONTENT",
+          "evidence_level": "A",
+          "role": "Content Model 277 descriptors"
+        },
+        {
+          "source_id": "SRC_ESCO",
+          "evidence_level": "A",
+          "role": "EU-side: 3,039 occupations × 13,939 skills × 28 languages (v1.2)"
+        },
+        {
+          "source_id": "SRC_CEDEFOP_OVATE",
+          "evidence_level": "B",
+          "role": "demand-weighted skill vectors from OJAs"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "robinson_oecd_task_distance"
+      ],
+      "agency_parameter_links": [
+        "A1_skills_capital"
+      ],
+      "country_readiness": {
+        "US": {
+          "grade": "A",
+          "notes": "O*NET 30.2 + Robinson 2018 + Bechichi et al. 2018-2019 give strongest infrastructure globally"
+        },
+        "EU": {
+          "grade": "A-",
+          "notes": "ESCO 3,039 × 13,939 × 28 languages; multilingual is unique advantage"
+        },
+        "CN": {
+          "grade": "C+",
+          "notes": "1,639 professions (MoHRSS 2022) + 158 new since 2015 + 97 digital. NO state-published task-vector layer; Xu et al. 2020 (arXiv 2001.02863) academic prototype exists"
+        },
+        "RU": {
+          "grade": "C",
+          "notes": "OKZ ISCO-08 alignment + profstandards content; no task-vector layer; pseudo-vector via NLP on profstandards text feasible (gap_closure cn_ru_comparability)"
+        }
+      },
+      "residual_gap": "Methodologically mature for US/EU; CN/RU need pseudo-vector construction with confidence penalties (see I04_CCS)."
+    },
+    {
+      "dimension_id": "D06_lateral_professional_return",
+      "axis": "lateral_professional",
+      "direction": "return",
+      "description": "Capacity to return to prior occupation after occupational switch.",
+      "measurement_maturity": "low",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_LEHD_J2J",
+          "evidence_level": "B",
+          "role": "occupational switch and return flow rates"
+        },
+        {
+          "source_id": "SRC_ONET_DOL",
+          "evidence_level": "A",
+          "role": "skill decay / re-entry skill gap measurement"
+        },
+        {
+          "source_id": "SRC_ESCO",
+          "evidence_level": "A",
+          "role": "EU credential recognition + skill mapping"
+        },
+        {
+          "source_id": "SRC_CEDEFOP_OVATE",
+          "evidence_level": "B",
+          "role": "demand for return target occupation"
+        },
+        {
+          "source_id": "SRC_AKKERMANS_CCQ",
+          "evidence_level": "A",
+          "role": "individual return readiness via career identity + work exploration"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "robinson_oecd_task_distance"
+      ],
+      "agency_parameter_links": [
+        "A1_skills_capital",
+        "A4_network_capital",
+        "A5_credential_portability"
+      ],
+      "derived_indicator_partial": "I02_ROVS",
+      "country_readiness": {
+        "US": {
+          "grade": "B-",
+          "notes": "Skill decay observable in O*NET vector recency + LEHD occupation flow rates"
+        },
+        "EU": {
+          "grade": "C+",
+          "notes": "ESCO + Lisbon RC for credentials; LFS-Long short panels limit return detection"
+        },
+        "CN": {
+          "grade": "C-",
+          "notes": "Pseudo-vector + qualitative returnee literature only"
+        },
+        "RU": {
+          "grade": "C-",
+          "notes": "Pseudo-vector + profstandards content; Lisbon RC nominally available but practical operation constrained post-2022"
+        }
+      },
+      "residual_gap": "Lateral-professional return is consistently the weakest dimension across all four countries. Individual-level instrument would require: occupation pair distance × skill decay × credential renewal cost × demand for return target. None of these are bundled in a ready instrument."
+    },
+    {
+      "dimension_id": "D07_industry_exit",
+      "axis": "industry",
+      "direction": "exit",
+      "description": "Capacity to transfer skills and networks into another industry.",
+      "measurement_maturity": "low_medium",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_ONET_DOL",
+          "evidence_level": "A",
+          "role": "occupation-skill vectors aggregated to industry"
+        },
+        {
+          "source_id": "SRC_ESCO",
+          "evidence_level": "A",
+          "role": "EU industry-occupation crosswalks"
+        },
+        {
+          "source_id": "SRC_LEHD_J2J",
+          "evidence_level": "B",
+          "role": "industry-to-industry flow rates by NAICS"
+        },
+        {
+          "source_id": "SRC_CEDEFOP_OVATE",
+          "evidence_level": "B",
+          "role": "skill demand by NACE rev.2 sector"
+        },
+        {
+          "source_id": "SRC_EUROSTAT_LFS_LONG",
+          "evidence_level": "B",
+          "role": "EU sectoral transitions"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "robinson_oecd_task_distance"
+      ],
+      "agency_parameter_links": [
+        "A1_skills_capital",
+        "A4_network_capital"
+      ],
+      "derived_indicator_partial": "I03_IRAS",
+      "country_readiness": {
+        "US": {
+          "grade": "B+",
+          "notes": "LEHD industry flows + O*NET task vectors; Aufiero et al. 2024 (Sci Rep) job-fitness/skill-coherence into wages"
+        },
+        "EU": {
+          "grade": "B",
+          "notes": "ESCO + NACE + Skills-OVATE near-real-time"
+        },
+        "CN": {
+          "grade": "C+",
+          "notes": "Industrial classification exists; flow data limited"
+        },
+        "RU": {
+          "grade": "C",
+          "notes": "OKVED industry codes; transition data via Rosstat aggregates only"
+        }
+      },
+      "residual_gap": "Demand-side network specificity (sector-specific weak ties) is the missing piece — Akkermans CCQ touches on networking but not industry-specific."
+    },
+    {
+      "dimension_id": "D08_industry_return",
+      "axis": "industry",
+      "direction": "return",
+      "description": "Capacity to re-enter prior industry after exit (academia↔industry, finance↔tech, public↔private, regulated↔unregulated transitions).",
+      "measurement_maturity": "low",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_LEHD_J2J",
+          "evidence_level": "B",
+          "role": "directional inter-industry flow ratios"
+        },
+        {
+          "source_id": "SRC_EUROSTAT_LFS_LONG",
+          "evidence_level": "B",
+          "role": "EU sectoral re-entry"
+        },
+        {
+          "source_id": "SRC_CEDEFOP_OVATE",
+          "evidence_level": "B",
+          "role": "demand-weighted skill overlap between industries"
+        },
+        {
+          "source_id": "SRC_ONET_DOL",
+          "evidence_level": "A",
+          "role": "skill overlap vectors"
+        },
+        {
+          "source_id": "SRC_ESCO",
+          "evidence_level": "A",
+          "role": "EU credential / regulated profession barriers"
+        },
+        {
+          "source_id": "SRC_RU_PROFSTANDARDS",
+          "evidence_level": "B",
+          "role": "RU credential content by sector"
+        },
+        {
+          "source_id": "SRC_CHINA_OCC_DICT",
+          "evidence_level": "B",
+          "role": "CN credential / occupation barriers by sector"
+        },
+        {
+          "source_id": "SRC_AKKERMANS_CCQ",
+          "evidence_level": "A",
+          "role": "industry-specific networking + reflection"
+        },
+        {
+          "source_id": "SRC_JACOBS_ACAD_INDUSTRY",
+          "evidence_level": "C",
+          "role": "academia↔industry transition literature (basket of references — see fact_check_v03)"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "robinson_oecd_task_distance"
+      ],
+      "agency_parameter_links": [
+        "A1_skills_capital",
+        "A4_network_capital",
+        "A5_credential_portability",
+        "A7_institutional_constraints"
+      ],
+      "derived_indicator_primary": "I03_IRAS",
+      "indicator_signals_count": 6,
+      "country_readiness": {
+        "US": {
+          "grade": "B-",
+          "notes": "LEHD flow asymmetry + signal preservation observable; academia↔industry literature sparse but present"
+        },
+        "EU": {
+          "grade": "C+",
+          "notes": "Skills-OVATE + LFS-Long; cross-country EU heterogeneity high"
+        },
+        "CN": {
+          "grade": "C",
+          "notes": "Public-private transition literature (Hu Lin et al.) qualitative"
+        },
+        "RU": {
+          "grade": "C-",
+          "notes": "Limited inter-sector transition data; profstandards weakened post-June 2024 as regulatory barrier"
+        }
+      },
+      "residual_gap": "MAJOR. Asymmetric industry re-entry (especially academia↔industry, finance↔tech, public↔private, regulated↔unregulated) is the weakest measured dimension after employment-form return. I03_IRAS proposes proxy from 6 signals but indicator is not validated. Residual gap is high severity."
+    },
+    {
+      "dimension_id": "D09_employment_form_exit",
+      "axis": "employment_form",
+      "direction": "exit",
+      "description": "Capacity to move from salaried employment into freelance, gig, founder, contractor, or portfolio work.",
+      "measurement_maturity": "low",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_BLS_CWS_2023",
+          "evidence_level": "A",
+          "role": "US contingent + alternative work arrangements; 6.9M contingent (4.3%); 7.4% independent contractors"
+        },
+        {
+          "source_id": "SRC_CENSUS_SIPP",
+          "evidence_level": "B",
+          "role": "US individual panel of form switches"
+        },
+        {
+          "source_id": "SRC_EUROSTAT_LFS_LONG",
+          "evidence_level": "B",
+          "role": "EU self-employment transitions"
+        },
+        {
+          "source_id": "SRC_EU_SILC",
+          "evidence_level": "B",
+          "role": "EU income / form continuity"
+        },
+        {
+          "source_id": "SRC_EUROFOUND_EWCS",
+          "evidence_level": "B",
+          "role": "EU job quality across forms"
+        },
+        {
+          "source_id": "SRC_AKKERMANS_CCQ",
+          "evidence_level": "A",
+          "role": "individual readiness + work exploration"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "benko_mass_career_customization"
+      ],
+      "agency_parameter_links": [
+        "A1_skills_capital",
+        "A2_career_identity",
+        "A3_adaptability_self_efficacy",
+        "A4_network_capital"
+      ],
+      "derived_indicator_partial": "I01_EFBCS",
+      "country_readiness": {
+        "US": {
+          "grade": "B+",
+          "notes": "BLS CWS 2023 (next May 2025) + SIPP + LEHD give strong baseline; LEHD excludes self-employed — important caveat"
+        },
+        "EU": {
+          "grade": "B",
+          "notes": "EU-LFS + EU-SILC + EWCS triangulation"
+        },
+        "CN": {
+          "grade": "C+",
+          "notes": "Platform-work and gig economy literature growing; 97 digital-economy professions in 2022 dictionary"
+        },
+        "RU": {
+          "grade": "C",
+          "notes": "Самозанятые (self-employed under НПД tax regime since 2019) ~10M+ on FNS register; transitions to/from employee status observable in tax data but not consolidated in single labor-market panel"
+        }
+      },
+      "residual_gap": "LEHD's exclusion of self-employed is the structural blind spot in the US. The 'inferred from status changes in CPS basic monthly survey + administrative tax data + CWS supplement' triangulation is feasible but not bundled."
+    },
+    {
+      "dimension_id": "D10_employment_form_return",
+      "axis": "employment_form",
+      "direction": "return",
+      "description": "Capacity to return from freelance, gig, founder, contractor, or portfolio work into salaried employment.",
+      "measurement_maturity": "low",
+      "canonical_sources": [
+        {
+          "source_id": "SRC_BLS_CWS_2023",
+          "evidence_level": "A",
+          "role": "baseline form prevalence"
+        },
+        {
+          "source_id": "SRC_CENSUS_SIPP",
+          "evidence_level": "B",
+          "role": "individual panel; rare ready evidence on independent→employee return"
+        },
+        {
+          "source_id": "SRC_LEHD_J2J",
+          "evidence_level": "B",
+          "role": "destination employer characteristics for those entering payroll from non-payroll states (limited by self-employed exclusion)"
+        },
+        {
+          "source_id": "SRC_EUROSTAT_LFS_LONG",
+          "evidence_level": "B",
+          "role": "EU"
+        },
+        {
+          "source_id": "SRC_AKKERMANS_CCQ",
+          "evidence_level": "A",
+          "role": "individual return-readiness signals"
+        },
+        {
+          "source_id": "SRC_LUEHRMAN_REAL_OPTIONS",
+          "evidence_level": "C",
+          "role": "rhetorical predecessor for option-value framing only"
+        },
+        {
+          "source_id": "SRC_BALDI_REAL_OPTIONS_HUMAN_CAPITAL",
+          "evidence_level": "D",
+          "role": "theoretical extension to human capital"
+        }
+      ],
+      "field_neighbours_touching_this_dimension": [
+        "benko_mass_career_customization"
+      ],
+      "agency_parameter_links": [
+        "A1_skills_capital",
+        "A2_career_identity",
+        "A3_adaptability_self_efficacy",
+        "A4_network_capital",
+        "A5_credential_portability",
+        "A6_labor_market_liquidity"
+      ],
+      "derived_indicator_primary": "I01_EFBCS",
+      "indicator_signals_count": 6,
+      "associated_indicator": "I02_ROVS (option value of return)",
+      "country_readiness": {
+        "US": {
+          "grade": "C+",
+          "notes": "iRelaunch returnship statistics (~70+ employer programs, ~80% returnship-to-hire rate, C-level corporate self-disclosure) PARTIALLY closes employment_form_return for career-break case. CWS + SIPP + LEHD triangulation is feasible but not bundled."
+        },
+        "EU": {
+          "grade": "C",
+          "notes": "LFS-Long + EU-SILC + EWCS; ESCO credential recognition; no equivalent to iRelaunch programmatic infrastructure"
+        },
+        "CN": {
+          "grade": "C-",
+          "notes": "Platform-to-employee return literature minimal; no tracking infrastructure"
+        },
+        "RU": {
+          "grade": "C-",
+          "notes": "Самозанятые → employee transitions observable in tax data; не консолидировано как panel"
+        }
+      },
+      "residual_gap": "MAXIMAL gap (severity: high). Together with D08 (industry_return) and D04 (vertical_return), the three return dimensions form the framework's hardest measurement frontier. Closure path: I01_EFBCS bidirectional capacity score combining transition propensity + income continuity + skill continuity + market demand for return job + survey add-on (S1_form_reversibility 3 items + S2_return_option_assets 3 items). I02_ROVS adds option-value layer (probability × payoff × switching cost × time decay × volatility × reversibility assets)."
+    }
+  ],
+  "agency_parameters": [
+    {
+      "parameter_id": "A1_skills_capital",
+      "name": "Skills and human capital",
+      "v02_sources": [
+        "O*NET",
+        "PIAAC",
+        "OECD Skills for Jobs",
+        "Cedefop ESI"
+      ],
+      "v03_extractable_from": [
+        "SRC_ONET_DOL",
+        "SRC_ESCO",
+        "SRC_CEDEFOP_OVATE",
+        "SRC_CENSUS_SIPP"
+      ],
+      "operational_signals": [
+        "skill level",
+        "skill breadth",
+        "skill recency",
+        "transferable/transversal skills",
+        "PIAAC-style adaptive problem-solving where coverage exists"
+      ],
+      "scoring_hint": "Normalize individual skill vector against target occupation/industry/geography demands",
+      "evidence_level_dominant": "A",
+      "moscow_caveat": "PIAAC Russian Cycle 1 sample EXCLUDED Moscow municipal area — under-represents the high-skill segment most relevant to this framework"
+    },
+    {
+      "parameter_id": "A2_career_identity",
+      "name": "Career identity and knowing-why",
+      "v02_sources": [
+        "DeFillippi-Arthur Intelligent Career",
+        "Briscoe-Hall PCAS",
+        "Savickas CAAS"
+      ],
+      "v02_lineage_correction": "DeFillippi-Arthur 1994 (boundaryless career, JOB) + Arthur-Claman-DeFillippi 1995 (intelligent enterprise/intelligent career, AME 9(4)) — the 'three ways of knowing' (knowing-why/how/whom) trio crystallises in the 1995 paper",
+      "v03_extractable_from": [
+        "SRC_AKKERMANS_CCQ"
+      ],
+      "operational_signals": [
+        "reflection on motivation",
+        "reflection on qualities",
+        "values clarity",
+        "career goal clarity"
+      ],
+      "scoring_hint": "Survey/scale-based; do not infer reliably from labour statistics alone",
+      "evidence_level_dominant": "A"
+    },
+    {
+      "parameter_id": "A3_adaptability_self_efficacy",
+      "name": "Adaptability and self-efficacy",
+      "v02_sources": [
+        "Savickas CAAS",
+        "Bandura social-cognitive agency",
+        "return-to-work self-efficacy scales (RTW-SE)"
+      ],
+      "rtw_se_caveat": "RTW-SE validated only in CLINICAL contexts (sick leave for mental disorders, musculoskeletal disease, post-surgery). For non-clinical exit/return-after-career-break scenarios, RTW-SE is conceptually relevant but not directly validated — domain-specific self-efficacy for return needs new validation.",
+      "v03_extractable_from": [
+        "SRC_AKKERMANS_CCQ"
+      ],
+      "operational_signals": [
+        "career control",
+        "work exploration",
+        "self-profiling",
+        "confidence in transition tasks"
+      ],
+      "scoring_hint": "Use CAAS/CCQ-style survey items; domain-specific self-efficacy for return should be added",
+      "evidence_level_dominant": "A"
+    },
+    {
+      "parameter_id": "A4_network_capital",
+      "name": "Network and social capital",
+      "v02_sources": [
+        "DeFillippi-Arthur knowing-whom",
+        "Saxenian brain circulation",
+        "migration and returnee network literature"
+      ],
+      "v03_extractable_from": [
+        "SRC_AKKERMANS_CCQ",
+        "SRC_NBER_RETURN_MIGRATION"
+      ],
+      "operational_signals": [
+        "networking competence",
+        "origin/destination ties",
+        "referral channels",
+        "industry-specific weak ties"
+      ],
+      "scoring_hint": "Network capital is often location/industry-specific; score it separately for each exit/return path",
+      "evidence_level_dominant": "B"
+    },
+    {
+      "parameter_id": "A5_credential_portability",
+      "name": "Credential and recognition portability",
+      "v02_sources": [
+        "EQF",
+        "Bologna Process",
+        "Lisbon Recognition Convention",
+        "national occupation and qualification frameworks"
+      ],
+      "v03_extractable_from": [
+        "SRC_ESCO",
+        "SRC_RU_PROFSTANDARDS",
+        "SRC_CHINA_OCC_DICT"
+      ],
+      "operational_signals": [
+        "credential recognition",
+        "license validity",
+        "professional standard match",
+        "renewal cost",
+        "regulated profession barrier"
+      ],
+      "scoring_hint": "Treat as a CONVERSION FACTOR (in capability-approach sense), not as personal motivation",
+      "evidence_level_dominant": "A",
+      "country_specific": {
+        "EU": "Lisbon Recognition Convention (1997, 57 Parties as of 1 July 2025) + EQF + Bologna",
+        "US": "no equivalent multilateral framework; state-level licensing dominates",
+        "CN": "Tokyo Convention 2011/2018 (Asia-Pacific) for higher education",
+        "RU": "Lisbon RC ratified 2000 but practical operation degraded post-March 2022 (Russia ceased CoE membership). Profstandards weakened as binding rule per Постановление № 792 от 13 июня 2024 — content-only role from then on for most professions."
+      }
+    },
+    {
+      "parameter_id": "A6_labor_market_liquidity",
+      "name": "Labor-market liquidity and opportunity structure",
+      "v02_sources": [
+        "BLS",
+        "OECD labor-market indicators",
+        "EU-LFS",
+        "NBER migration hazard models"
+      ],
+      "v03_extractable_from": [
+        "SRC_LEHD_J2J",
+        "SRC_CEDEFOP_OVATE",
+        "SRC_BLS_CWS_2023",
+        "SRC_EUROSTAT_EU_LFS"
+      ],
+      "operational_signals": [
+        "vacancy density",
+        "job-to-job flow rate",
+        "hire-separation balance",
+        "earnings dispersion at target level"
+      ],
+      "scoring_hint": "Liquidity is location/occupation-specific; aggregate liquidity is a poor proxy for individual mobility opportunity",
+      "evidence_level_dominant": "B"
+    },
+    {
+      "parameter_id": "A7_institutional_constraints",
+      "name": "Institutional, legal, and professional-closure constraints",
+      "v02_sources": [
+        "Abbott System of Professions (1988)",
+        "Freidson 'professional autonomy / Third Logic' (2001)",
+        "Larson 1977 'closure' (Weberian closure tradition)",
+        "Witz 1992 (gendered closure)",
+        "credentialing and licensing regimes",
+        "country-specific employment law"
+      ],
+      "v02_terminology_correction": "Original v0.2 used 'Freidson professional closure' — terminologically loose. Freidson's signature concepts are autonomy / dominance / Third Logic. Closure as a concept traces to Larson 1977 and Witz 1992 in the Weberian tradition. v0.4 separates the two attributions.",
+      "v03_extractable_from": [
+        "SRC_RU_PROFSTANDARDS",
+        "SRC_CHINA_OCC_DICT",
+        "SRC_ESCO"
+      ],
+      "operational_signals": [
+        "regulated profession (yes/no)",
+        "license required",
+        "tenure clock",
+        "security clearance",
+        "professional registration requirement",
+        "continuing education rule",
+        "post-2022 emigration constraints (RU)"
+      ],
+      "scoring_hint": "Treat as a HARD CAP / GATE rather than additive signal — geometric mean or multiplicative cap is methodologically preferable (per v0.3 schema aggregation_warning)",
+      "evidence_level_dominant": "A"
+    }
+  ],
+  "field_neighbors": [
+    {
+      "neighbor_id": "briscoe_hall_pcas_bcas",
+      "name": "Briscoe-Hall Protean / Boundaryless Career Attitudes Scales",
+      "lineage": [
+        "Briscoe",
+        "Hall",
+        "Frautschy DeMuth"
+      ],
+      "year_canonical": 2006,
+      "construct_type": "career_attitudes_scale",
+      "items_count": "PCAS 14 + BCAS 13 = 27 items",
+      "evidence_level": "A",
+      "key_difference": [
+        "attitude rather than capacity",
+        "does not separate exit from return",
+        "does not cover all five mobility axes",
+        "trait malleability has been demonstrated empirically (Supeli & Creed 2016, Waters et al.) — methodologically relevant when plugging into dynamic exit/return measurement"
+      ],
+      "use_in_pack": "primary psychological comparator; touches D03/D04 (vertical) and D09/D10 (employment-form)",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0001879105001077"
+    },
+    {
+      "neighbor_id": "savickas_caas",
+      "name": "Career Adapt-Abilities Scale",
+      "lineage": [
+        "Savickas",
+        "Porfeli"
+      ],
+      "year_canonical": 2012,
+      "construct_type": "career_adaptability_resources_scale",
+      "items_count": "24 items (4 subscales × 6 items)",
+      "subscales": [
+        "concern",
+        "control",
+        "curiosity",
+        "confidence"
+      ],
+      "psychometric_properties": "α=0.92 total; metric invariance across 13 countries; residual/strict invariance NOT achieved (France and Taiwan show poorer fit)",
+      "evidence_level": "A",
+      "key_difference": [
+        "psychosocial resource scale",
+        "not a structural mobility index",
+        "does not measure exit/return asymmetry"
+      ],
+      "use_in_pack": "validated adaptability comparator for A3; touches all 10 dimensions indirectly via individual adaptability",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0001879112000139"
+    },
+    {
+      "neighbor_id": "defillippi_arthur_intelligent_career",
+      "name": "DeFillippi-Arthur Intelligent Career / Career Capital",
+      "lineage": [
+        "DeFillippi",
+        "Arthur",
+        "Claman"
+      ],
+      "year_canonical": "1994 (DeFillippi-Arthur, JOB) + 1995 (Arthur-Claman-DeFillippi, AME 9(4))",
+      "construct_type": "conceptual_career_capital_framework",
+      "dimensions": [
+        "knowing-why",
+        "knowing-how",
+        "knowing-whom"
+      ],
+      "evidence_level": "B",
+      "key_difference": [
+        "conceptual rather than indexed",
+        "does not operationalize ten dimensions",
+        "exit/return asymmetry is implicit at best",
+        "the 'three ways of knowing' trio crystallises in the 1995 paper, not the 1994 paper"
+      ],
+      "use_in_pack": "conceptual ancestor of portability thinking; foundation for A1/A2/A4",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/job.4030150403"
+    },
+    {
+      "neighbor_id": "de_vos_van_der_heijden_sustainable_careers",
+      "name": "Sustainable Careers Model",
+      "lineage": [
+        "De Vos",
+        "Van der Heijden",
+        "Akkermans"
+      ],
+      "year_canonical": "2020 (JVB 117) for dimensions; 2005 (Van der Heijden) for outcomes",
+      "construct_type": "macro_career_framework",
+      "dimensions": [
+        "person",
+        "context",
+        "time"
+      ],
+      "outcomes": [
+        "happiness",
+        "health",
+        "productivity"
+      ],
+      "evidence_level": "B",
+      "key_difference": [
+        "framework rather than index",
+        "does not provide exit/return matrix",
+        "not organized around mobility-axis asymmetry",
+        "dimensions (person/context/time) from De Vos-Van der Heijden-Akkermans 2020; outcomes triad (happiness/health/productivity) from Van der Heijden 2005 — explicitly cited as 'cf. Van der Heijden 2005' in De Vos et al. 2020"
+      ],
+      "use_in_pack": "macro-theoretical comparator for the integration argument; the unified pack's positioning explicitly distinguishes its 10×7 decomposition from the more abstract person/context/time × happiness/health/productivity scaffolding of Sustainable Careers",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0001879118300769"
+    },
+    {
+      "neighbor_id": "benko_mass_career_customization",
+      "name": "Mass Career Customization / Corporate Lattice",
+      "lineage": [
+        "Benko",
+        "Weisberg",
+        "Anderson"
+      ],
+      "year_canonical": "2007 (Benko-Weisberg, HBS Press) + 2010 (Benko-Anderson, HBR Press)",
+      "construct_type": "practitioner_hr_framework",
+      "dimensions": [
+        "pace",
+        "workload",
+        "location_schedule",
+        "role"
+      ],
+      "evidence_level": "C",
+      "key_difference": [
+        "primarily intra-organizational",
+        "does not measure exit beyond firm",
+        "does not measure return capacity",
+        "C-level evidence: corporate self-disclosure with limited quantitative validation outside Deloitte's internal data"
+      ],
+      "use_in_pack": "closest HR-practitioner comparator; touches D03/D04 (vertical) and D09/D10 (employment-form within firm)"
+    },
+    {
+      "neighbor_id": "cedefop_esi",
+      "name": "Cedefop European Skills Index",
+      "lineage": [
+        "Cedefop"
+      ],
+      "year_canonical": "2024 (latest release)",
+      "construct_type": "country_level_composite_index",
+      "dimensions": [
+        "skills development",
+        "skills activation",
+        "skills matching"
+      ],
+      "structure": "3 pillars × 6 sub-pillars × 15 indicators",
+      "evidence_level": "B",
+      "key_difference": [
+        "country-level not individual-level",
+        "skills-system performance not worker agency",
+        "not exit/return oriented",
+        "covers EU-27 + UK, Iceland, Norway, Switzerland"
+      ],
+      "use_in_pack": "methodological template for composite index construction, NOT a direct competitor; provides EU country-context layer for A6 (liquidity) and skills-system framing"
+    },
+    {
+      "neighbor_id": "robinson_oecd_task_distance",
+      "name": "Robinson / OECD Bechichi occupational skill-distance methodology",
+      "lineage": [
+        "Robinson",
+        "Bechichi et al.",
+        "OECD STI"
+      ],
+      "year_canonical": "Robinson 2018 (JHR 53(2): 513-551); Bechichi et al. 2018 (OECD STI 52); 2019 (OECD STI 70)",
+      "construct_type": "occupation_pair_distance_methodology",
+      "dimensions": [
+        "skill distance",
+        "task distance",
+        "training needs",
+        "human-capital loss"
+      ],
+      "evidence_level": "A",
+      "key_difference": [
+        "occupation-pair rather than individual score",
+        "mostly exit/transition rather than return",
+        "does not cover geographic, vertical, industry, or employment-form axes"
+      ],
+      "use_in_pack": "strongest quantitative lateral-mobility comparator; foundation for D05 / D06 + I04_CCS",
+      "extension_2024": "Aufiero, De Marzo, Sbardella, Zaccaria 2024 (Sci Rep 14:11752) — economic-complexity-inspired extension applying job-fitness/skill-coherence to wages on O*NET. Replaces the v0.2 misattribution to 'Pugliese et al.'"
+    },
+    {
+      "neighbor_id": "saxenian_amanzadeh_kermani_brain_circulation",
+      "name": "Brain circulation / skilled migration and return-migration literature",
+      "lineage": [
+        "Saxenian",
+        "Amanzadeh",
+        "Kermani",
+        "McQuade"
+      ],
+      "year_canonical": "Saxenian 2006 (qualitative); Amanzadeh-Kermani-McQuade 2024 NBER WP 32352 (quantitative individual-panel)",
+      "construct_type": "migration_and_return_migration_research",
+      "evidence_level": "A",
+      "key_findings": "38% of skilled migrants return within 10 years (33% within 5 years; 10% within 1 year). Return migration is asymmetrically exposed to negative firm employment growth (declines have substantially larger impact on return than equivalent growth has on staying). Returns to a year of US experience are 59-204% higher than a year in origin country for emerging-economy workers.",
+      "key_difference": [
+        "population or cohort-level (not individual instrument)",
+        "geographic axis only",
+        "main empirical anchor for exit/return ASYMMETRY argument across all axes (by extension)"
+      ],
+      "use_in_pack": "main evidence base for D02 (geographic_return); the asymmetric-exposure finding generalises rhetorically to other axes but not empirically"
+    }
+  ],
+  "datasources_unified": [
+    {
+      "source_id": "SRC_ONET_DOL",
+      "name": "O*NET (US Department of Labor)",
+      "current_version": "30.2 (Feb 2026)",
+      "evidence_level": "A",
+      "scope": "occupation/task/skill/work-context vectors; 277 Content Model descriptors; new four-level Job Zone framework since 30.2",
+      "url": "https://www.onetcenter.org/database.html",
+      "covers_dimensions": [
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A1",
+        "A7"
+      ]
+    },
+    {
+      "source_id": "SRC_ONET_CONTENT",
+      "name": "O*NET Content Model",
+      "current_version": "30.2",
+      "evidence_level": "A",
+      "scope": "Six domains of work descriptors organized hierarchically",
+      "url": "https://www.onetonline.org/help/onet/database",
+      "covers_dimensions": [
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A1"
+      ]
+    },
+    {
+      "source_id": "SRC_ESCO",
+      "name": "European Skills, Competences, Qualifications and Occupations",
+      "current_version": "v1.2 (May 2024)",
+      "scale": "3,039 occupations × 13,939 skills × 28 languages (24 EU + Icelandic, Norwegian, Ukrainian, Arabic)",
+      "evidence_level": "A",
+      "scope": "EU-side multilingual occupation-skill classification",
+      "url": "https://esco.ec.europa.eu/en/about-esco/what-esco",
+      "covers_dimensions": [
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D02"
+      ],
+      "covers_agency_parameters": [
+        "A1",
+        "A5"
+      ]
+    },
+    {
+      "source_id": "SRC_BLS_CWS_2023",
+      "name": "BLS Contingent Worker Supplement (CPS, July 2023)",
+      "evidence_level": "A",
+      "scope": "US contingent + alternative employment arrangements; 6.9M contingent (4.3% of employed); 7.4% independent contractors; ~60K household monthly CPS sample; series 1995/97/99/2001/2005/2017/2023, next May 2025; 2023 added digital platform / app-based work questions",
+      "url": "https://www.bls.gov/news.release/conemp.htm",
+      "covers_dimensions": [
+        "D09",
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ]
+    },
+    {
+      "source_id": "SRC_CENSUS_SIPP",
+      "name": "Survey of Income and Program Participation",
+      "evidence_level": "B",
+      "scope": "US individual-panel longitudinal household survey; ~14,000-52,000 households per panel × 4 years; detailed employment, earnings, transitions, self-employment",
+      "url": "https://www.census.gov/programs-surveys/sipp.html",
+      "covers_dimensions": [
+        "D01",
+        "D02",
+        "D09",
+        "D10",
+        "D07"
+      ],
+      "covers_agency_parameters": [
+        "A1",
+        "A6"
+      ]
+    },
+    {
+      "source_id": "SRC_LEHD_J2J",
+      "name": "LEHD Job-to-Job Flows (US Census)",
+      "evidence_level": "B",
+      "scope": "Quarterly J2J data based on linked UI records + QCEW; series since 2000Q2, latest national 2023Q4; state and MSA level",
+      "url": "https://lehd.ces.census.gov/data/",
+      "limitations": "EXCLUDES self-employed individuals and federal defense employees — direct cap on usefulness for D09/D10 employment-form transitions; multiplicative noise infusion for confidentiality",
+      "covers_dimensions": [
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D01"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ]
+    },
+    {
+      "source_id": "SRC_EUROSTAT_LFS_LONG",
+      "name": "Eurostat Labour Market Transitions (LFS Longitudinal)",
+      "evidence_level": "B",
+      "scope": "EU-LFS 2-quarter and 4-quarter panel; transitions employment/unemployment/inactivity; 27 MS + EFTA",
+      "url": "https://ec.europa.eu/eurostat/web/microdata/european-union-labour-force-survey",
+      "limitations": "short panels (2-4 quarters) limit detection of long-term return cycles",
+      "covers_dimensions": [
+        "D01",
+        "D02",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ]
+    },
+    {
+      "source_id": "SRC_EUROSTAT_EU_LFS",
+      "name": "EU Labour Force Survey (microdata, full)",
+      "evidence_level": "B",
+      "scope": "Eurostat's main labour-force survey across EU",
+      "covers_dimensions": [
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ]
+    },
+    {
+      "source_id": "SRC_EU_SILC",
+      "name": "EU Statistics on Income and Living Conditions",
+      "evidence_level": "B",
+      "scope": "EU income, poverty, living conditions; 4-year rotating panel",
+      "covers_dimensions": [
+        "D09",
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ]
+    },
+    {
+      "source_id": "SRC_CEDEFOP_OVATE",
+      "name": "Cedefop Skills-OVATE",
+      "evidence_level": "B",
+      "scope": "Online job ads aggregation across 32 European countries (27 EU + EFTA + UK); quarterly updates; powered by Cedefop + Eurostat Web Intelligence Hub; ISCO-08/NACE rev.2/NUTS-2/ESCO v1/O*NET cross-walks",
+      "url": "https://www.cedefop.europa.eu/en/tools/skills-online-vacancies",
+      "limitations": "online-only (under-represents informal hiring); demand snapshot, not realized hires",
+      "covers_dimensions": [
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6",
+        "A1"
+      ]
+    },
+    {
+      "source_id": "SRC_NBER_RETURN_MIGRATION",
+      "name": "NBER return-migration hazard models (Amanzadeh-Kermani-McQuade 2024)",
+      "year": 2024,
+      "wp_number": "NBER WP 32352",
+      "evidence_level": "A",
+      "scope": "Individual-panel hazard model on Revelio Labs data (~450M individuals, 180 countries); 38% return within 10 years; asymmetric exposure to negative firm growth",
+      "url": "https://www.nber.org/papers/w32352",
+      "covers_dimensions": [
+        "D01",
+        "D02"
+      ],
+      "covers_agency_parameters": [
+        "A4",
+        "A6"
+      ]
+    },
+    {
+      "source_id": "SRC_CHINA_OCC_DICT",
+      "name": "China Occupation Dictionary 2022",
+      "publisher": "Ministry of Human Resources and Social Security (MoHRSS)",
+      "year": 2022,
+      "scale": "1,639 professions; 158 new since 2015; 97 digital-economy professions; 700+ profession descriptions adjusted; 8 categories",
+      "evidence_level": "B",
+      "scope": "Chinese state-published occupation classification; 3rd edition since 1999",
+      "url": "https://english.www.gov.cn/statecouncil/ministries/202209/30/content_WS633647bbc6d0a757729e0bb6.html",
+      "covers_dimensions": [
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D02"
+      ],
+      "covers_agency_parameters": [
+        "A1",
+        "A5",
+        "A7"
+      ],
+      "academic_supplement": "Xu et al. 2020 (arXiv 2001.02863) 'China's First Workforce Skill Taxonomy' — academic O*NET prototype"
+    },
+    {
+      "source_id": "SRC_RU_OKZ",
+      "name": "ОКЗ ОК 010-2014 (МСКЗ-08) Общероссийский классификатор занятий",
+      "publisher": "Минтруд России / Росстандарт",
+      "in_force_from": "01.07.2015",
+      "current_revision": "Изменение 1/2021 (Приказ Росстандарта 18.02.2021 N 83-ст)",
+      "evidence_level": "A",
+      "scope": "Russian occupation classifier harmonised with ISCO-08",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_177953/",
+      "covers_dimensions": [
+        "D05",
+        "D06",
+        "D07",
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A1",
+        "A5"
+      ]
+    },
+    {
+      "source_id": "SRC_RU_PROFSTANDARDS",
+      "name": "Реестр профессиональных стандартов (Минтруд РФ)",
+      "scale": "~1,263+ active профстандартов",
+      "evidence_level": "B",
+      "scope": "Russian professional standards registry; occupation content (трудовые функции, требуемые знания/умения, уровни квалификации)",
+      "url": "https://profstandart.rosmintrud.ru/",
+      "critical_caveat": "Per Постановление Правительства РФ № 792 от 13 июня 2024, profstandards no longer treated as binding requirements in state control/oversight, except in narrow cases (e.g., accountants per Federal Law No. 402-FZ). Useful as occupation-CONTENT layer for pseudo-vector construction; NOT as binding credential portability mechanism.",
+      "covers_dimensions": [
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D02"
+      ],
+      "covers_agency_parameters": [
+        "A1",
+        "A5",
+        "A7"
+      ]
+    },
+    {
+      "source_id": "SRC_AKKERMANS_CCQ",
+      "name": "Career Competencies Questionnaire (Akkermans et al. 2013)",
+      "year": 2013,
+      "publication": "Journal of Career Development 40(3): 245-267",
+      "evidence_level": "A",
+      "scope": "21-item scale; 3 dimensions × 6 competencies (reflection on motivation/qualities; networking; self-profiling; work exploration; career control)",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0894845312467501",
+      "limitations": "Original validation on Dutch young employees age 16-30; mid-career generalisability not directly demonstrated",
+      "covers_dimensions": [
+        "D04",
+        "D06",
+        "D08",
+        "D09",
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "source_id": "SRC_ANAND_CAPABILITY_INDICATORS",
+      "name": "Anand-Hunter-Smith 2005 'The Measurement of Capabilities'",
+      "year": 2005,
+      "evidence_level": "A",
+      "scope": "Sen-Nussbaum capability approach operationalised on British Household Panel Survey (BHPS)",
+      "url": "https://academic.oup.com/oep/article-abstract/57/Suppl_1/9/2362317",
+      "covers_agency_parameters": [
+        "A6",
+        "A7"
+      ],
+      "covers_dimensions": []
+    },
+    {
+      "source_id": "SRC_LUEHRMAN_REAL_OPTIONS",
+      "name": "Luehrman 1998 'Strategy as a Portfolio of Real Options'",
+      "year": 1998,
+      "publication": "Harvard Business Review 76(5): 89-99",
+      "evidence_level": "C",
+      "scope": "Practitioner-strategic real-options framework; two-metric Option Space + tomato garden metaphor",
+      "url": "https://hbr.org/1998/09/strategy-as-a-portfolio-of-real-options",
+      "limitations": "Strategic-investment context, not careers — rhetorical predecessor only for individual-level career return-option work",
+      "covers_dimensions": [
+        "D02",
+        "D04",
+        "D06",
+        "D08",
+        "D10"
+      ],
+      "covers_agency_parameters": []
+    },
+    {
+      "source_id": "SRC_BALDI_REAL_OPTIONS_HUMAN_CAPITAL",
+      "name": "Baldi (real options + human capital, 2012/2013)",
+      "evidence_level": "D",
+      "scope": "Theoretical extension of real-options framework to individual career investment decisions; no validated instrument",
+      "covers_dimensions": [
+        "D02",
+        "D04",
+        "D06",
+        "D08",
+        "D10"
+      ],
+      "covers_agency_parameters": []
+    },
+    {
+      "source_id": "SRC_JACOBS_ACAD_INDUSTRY",
+      "name": "Academia↔industry transition literature (basket)",
+      "evidence_level": "C",
+      "scope": "Mangematin 2000 (Research Policy on PhDs in industry); Roach-Sauermann 2010 (Research Policy on academic vs industry careers); Lam 2007 (R&D Management on hybrid academic-industry roles); Nature Careers + Science Careers + ASAPbio guides",
+      "limitations": "No single canonical Jacobs reference identified — recommended to rename to SRC_ACADEMIA_INDUSTRY_TRANSITION_LITERATURE",
+      "covers_dimensions": [
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A2",
+        "A4"
+      ]
+    },
+    {
+      "source_id": "SRC_DUAL_LADDER_RAELIN",
+      "name": "Raelin 1987 'Two-Track Plans for One-Track Careers'",
+      "year": 1987,
+      "publication": "Personnel Journal 66, January 1987, pp. 96-101",
+      "evidence_level": "C",
+      "scope": "Foundational practitioner article on dual ladder; widely cited; modern academic update Allen-Katz 1986, Petroni-Colacino 2008",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3928594",
+      "limitations": "Practitioner journal; no validated psychometric scale of dual-ladder availability at worker level",
+      "covers_dimensions": [
+        "D03",
+        "D04"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ]
+    },
+    {
+      "source_id": "SRC_EUROFOUND_EWCS",
+      "name": "European Working Conditions Survey (Eurofound)",
+      "evidence_level": "B",
+      "scope": "EU-wide working conditions survey; job quality, autonomy, work intensity, prospects, social environment, working time, physical environment",
+      "covers_dimensions": [
+        "D03",
+        "D04",
+        "D09",
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A3",
+        "A6"
+      ]
+    },
+    {
+      "source_id": "SRC_ORIGINAL_PACK",
+      "name": "Baseline research pack (uploaded)",
+      "evidence_level": "B",
+      "scope": "Project's own baseline mapping; treated as internal reference, not external citation"
+    },
+    {
+      "source_id": "SRC_CENSUS_SIPP_SELF_EMPLOYMENT_TRANSITIONS",
+      "name": "Employment Transitions among the Self-Employed during the Great Recession (SEHSD-WP2014-13)",
+      "publisher": "U.S. Census Bureau, SEHSD",
+      "year": 2014,
+      "evidence_level": "A",
+      "scope": "SIPP longitudinal panel tracks self-employed↔wage-work↔unemployed transitions during 2007-2009 recession",
+      "url": "https://www.census.gov/library/working-papers/2014/demo/SEHSD-WP2014-13.html",
+      "covers_dimensions": [
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ],
+      "deep_research_note": "Title contains 'Great Recession', not just 'Recession' as in patch. SIPP panel is the primary data infrastructure."
+    },
+    {
+      "source_id": "SRC_UKHLS_UNDERSTANDING_SOCIETY",
+      "name": "UK Household Longitudinal Study / Understanding Society",
+      "publisher": "ISER University of Essex (ESRC-funded)",
+      "year_started": 2009,
+      "evidence_level": "A",
+      "scope": "Annual waves since 2009; ~40,000 households at start, ~25,000 active by Wave 13; covers self-employment status, transitions, business ownership via JBSEMP/J2SEMP variables",
+      "url": "https://www.understandingsociety.ac.uk/topic-page/employment/",
+      "covers_dimensions": [
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ],
+      "deep_research_note": "Sample-attrition caveat for return-transition estimates; coverage verified via supplementary self-employment modules"
+    },
+    {
+      "source_id": "SRC_FAILLA_MELILLO_REICHSTEIN_2017_JBV",
+      "name": "Entrepreneurship and employment stability — Job matching, labour market value, and personal commitment",
+      "authors": [
+        "Failla",
+        "Melillo",
+        "Reichstein"
+      ],
+      "year": 2017,
+      "publication": "Journal of Business Venturing 32(2): 162-177",
+      "evidence_level": "A",
+      "scope": "Danish IDA matched employer-employee microdata; entrepreneurs returning to wage employment; stronger empirical anchor than the SOEP-labeled patch source",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0927537115000391",
+      "covers_dimensions": [
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ],
+      "deep_research_correction": "Patch labeled this source as SRC_SOEP_SELF_EMPLOYMENT_FALLBACK but the underlying data are Danish IDA register, not German SOEP. ID renamed accordingly. Co-add Mahieu-Melillo-Reichstein-Thompson 2021 SEJ as supplement."
+    },
+    {
+      "source_id": "SRC_HILDA_SELF_EMPLOYMENT_LONGITUDINAL",
+      "name": "HILDA Survey panel (Hessels-Rietveld-van der Zwan 2020 health-earnings paper for SE)",
+      "publisher": "Melbourne Institute, University of Melbourne",
+      "year_started": 2001,
+      "evidence_level": "B",
+      "scope": "Australian Household, Income and Labour Dynamics Survey; longitudinal panel including self-employment status. Cited paper measures health-earnings link in SE rather than direct return-to-wage transitions",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00801/full",
+      "covers_dimensions": [
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ],
+      "deep_research_caveat": "Patch's intended use of HILDA for D10 employment-form return is supportable via the panel itself (PMC10830572 / Frontiers Psych 2022 Big-Five SE-survival study uses 12 HILDA waves for stint termination) — but the cited Hessels et al. 2020 Frontiers Psych paper does NOT directly measure return probability. Recommend: keep HILDA as data infrastructure; cite Caliendo et al. for SE termination via 12 waves."
+    },
+    {
+      "source_id": "SRC_BALDI_TRIGEORGIS_2020_CDOV",
+      "name": "Valuing human capital career development: a real options approach",
+      "authors": [
+        "Baldi",
+        "Trigeorgis"
+      ],
+      "year": 2020,
+      "publication": "Journal of Intellectual Capital 21(5): 781-807, doi:10.1108/JIC-06-2019-0134",
+      "evidence_level": "C",
+      "scope": "Multi-case study of 10 Fortune 500 'best companies to work for' applying real-options modeling to firm-level career-development programs. EXPLICITLY organization/SHRM level — NOT an individual return-option-value scale.",
+      "url": "https://www.emerald.com/insight/content/doi/10.1108/JIC-06-2019-0134/full/html",
+      "covers_dimensions": [
+        "D02",
+        "D04",
+        "D06",
+        "D08",
+        "D10"
+      ],
+      "covers_agency_parameters": [],
+      "deep_research_correction": "Patch labeled evidence_level B/C — deep research DOWNGRADES to C. Reason: organization-level case study with no individual-level instrument validation. Should be cited as conceptual / theoretical support for I02_ROVS framing, NOT as supporting evidence for an individual return-option-value scale. Replace as primary I02 anchor with Failla-Melillo-Reichstein 2017 JBV (admin data) + Hirschi-Wilhelm 2025 CSM-C (individual scale)."
+    },
+    {
+      "source_id": "SRC_CFI_R_CAREER_AGENCY",
+      "name": "Career Futures Inventory–Revised (CFI-R)",
+      "authors": [
+        "Rottinghaus",
+        "Buelow",
+        "Matyja",
+        "Schneider"
+      ],
+      "year": 2012,
+      "publication": "Journal of Career Assessment 20(2): 123-139, doi:10.1177/1069072711420849",
+      "evidence_level": "A",
+      "scope": "28 items, 5 subscales: Career Agency, Occupational Awareness, Support, Work–Life Balance, Negative Career Outlook",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/1069072711420849",
+      "covers_dimensions": [],
+      "covers_agency_parameters": [
+        "A2",
+        "A3"
+      ],
+      "supports_indicators": [
+        "I02_ROVS",
+        "I07_ICAS"
+      ],
+      "deep_research_note": "Patch listed only 4 of 5 subscales — Work-Life Balance subscale was missing. Now corrected. Validation samples are US college students; Park et al. 2019 measurement invariance across general vs. client samples — both still US. Cross-cultural validation for RU/CN: UNTESTED."
+    },
+    {
+      "source_id": "SRC_WORK_CAPABILITY_SET",
+      "name": "Capability Set for Work questionnaire",
+      "authors": [
+        "Abma",
+        "Brouwer",
+        "de Vries",
+        "Arends",
+        "Robroek",
+        "Cuijpers",
+        "van der Wilt",
+        "Bültmann",
+        "van der Klink"
+      ],
+      "year": 2016,
+      "publication": "Scandinavian Journal of Work, Environment & Health 42(1): 34-42, doi:10.5271/sjweh.3532",
+      "evidence_level": "A",
+      "scope": "Seven capability aspects for work, operationalizing Sen's capability approach",
+      "url": "https://cris.maastrichtuniversity.nl/files/8184117/1501264.pdf",
+      "covers_dimensions": [],
+      "covers_agency_parameters": [
+        "A6",
+        "A7"
+      ],
+      "supports_indicators": [
+        "I07_ICAS"
+      ],
+      "deep_research_caveat": "Validated in Dutch working population only; cross-jurisdiction invariance not established. Subsequent literature (Brouwer et al.) extends to occupational-health populations, not labor-mobility specifically."
+    },
+    {
+      "source_id": "SRC_CARINAS_CAREER_INACTION_SCALE",
+      "name": "Career Inaction Scale (CARINAS)",
+      "authors": [
+        "D'Huyvetter",
+        "Verbruggen",
+        "Jing",
+        "Akkermans"
+      ],
+      "year": 2025,
+      "publication": "Applied Psychology 74(1): e12590, doi:10.1111/apps.12590",
+      "evidence_level": "A",
+      "scope": "8 items; four studies (Belgian + US samples; total N≈1,425). Theoretical antecedent: Verbruggen & De Vos (2020) AMR 45(2): 376-394 — but the scale paper is D'Huyvetter et al. 2025.",
+      "url": "https://iaap-journals.onlinelibrary.wiley.com/doi/abs/10.1111/apps.12590",
+      "covers_dimensions": [],
+      "covers_agency_parameters": [
+        "A2",
+        "A3"
+      ],
+      "supports_indicators": [
+        "I02_ROVS",
+        "I07_ICAS"
+      ],
+      "deep_research_correction": "Patch attributed authorship to 'Verbruggen & De Vos' but the scale paper is D'Huyvetter, Verbruggen, Jing & Akkermans 2025. Verbruggen-De Vos 2020 AMR is the THEORY paper without an instrument. Reverse-coding interpretation as proxy for career agency is reasonable but indirect — career inaction and career agency are conceptually related but not inverse constructs. Treat as B-level evidence for I07_ICAS, not direct A-level measure of agency."
+    },
+    {
+      "source_id": "SRC_CAREER_SUSTAINABILITY_SCALE_2024",
+      "name": "Career Sustainability Scale for mid-career employees",
+      "authors": [
+        "Kim",
+        "Lee",
+        "Jin"
+      ],
+      "year": 2024,
+      "publication": "Frontiers in Psychology 15:1442119, doi:10.3389/fpsyg.2024.1442119, published 27 Dec 2024",
+      "evidence_level": "B",
+      "scope": "Four subscales: meaning perception, skill acquisition, relationship building, environmental awareness. Korean mid-career employee sample only.",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1442119/full",
+      "covers_dimensions": [],
+      "covers_agency_parameters": [
+        "A3"
+      ],
+      "supports_indicators": [
+        "I07_ICAS"
+      ],
+      "deep_research_caveat": "Single-country (South Korea) validation. Cross-cultural invariance unstudied. Affiliations: Chung-Ang University."
+    },
+    {
+      "source_id": "SRC_JACOBS_2024_NHB",
+      "name": "How to transition from academia to industry and back",
+      "authors": [
+        "Jacobs"
+      ],
+      "year": 2024,
+      "publication": "Nature Human Behaviour 8(5): 807-809, doi:10.1038/s41562-024-01864-1, May 2024",
+      "evidence_level": "D",
+      "scope": "Single-author commentary/perspective. NO empirical methodology, NO sample, NO instrument.",
+      "url": "https://doi.org/10.1038/s41562-024-01864-1",
+      "covers_dimensions": [
+        "D08"
+      ],
+      "covers_agency_parameters": [],
+      "supports_indicators": [
+        "I03_IRAS"
+      ],
+      "deep_research_note": "Provides ONLY conceptual framing of D08↔D09 industry exit-and-return. Patch should not anchor A or B confidence on I03_IRAS using this source. Affiliation: University at Buffalo, SUNY."
+    },
+    {
+      "source_id": "SRC_FINRA_BROKERCHECK_U4_U5",
+      "name": "FINRA Forms U4 and U5 + BrokerCheck registry",
+      "publisher": "Financial Industry Regulatory Authority (FINRA)",
+      "evidence_level": "A",
+      "scope": "Form U4 collects 10-year employment history, residential history, disclosure events. Form U5 records reason for termination. Public surface via brokercheck.finra.org. Coverage: broker-dealer + investment-adviser representatives. US-only.",
+      "url": "https://www.finra.org/registration-exams-ce/broker-dealers/registration-forms",
+      "covers_dimensions": [
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A5"
+      ],
+      "supports_indicators": [
+        "I03_IRAS"
+      ],
+      "deep_research_caveats": [
+        "Coverage limited to broker-dealer + investment-adviser representatives — NOT all 'adjacent professionals'",
+        "BrokerCheck shows certain disclosures only; full CRD record has more, public access restricted",
+        "US-only",
+        "SEC IAPD complements the IA-side"
+      ]
+    },
+    {
+      "source_id": "SRC_XU_ET_AL_2021_CHINA_WORKFORCE_SKILL_TAXONOMY",
+      "name": "Developing China's workforce skill taxonomy reveals extent of labor market polarization",
+      "authors": [
+        "Xu",
+        "Qin",
+        "Li",
+        "Chen",
+        "Frank",
+        "Rutherford",
+        "Reeson",
+        "Rahwan"
+      ],
+      "year": 2021,
+      "publication": "Humanities and Social Sciences Communications 8(1) article 195, doi:10.1057/s41599-021-00862-2 (Nature/Palgrave)",
+      "evidence_level": "B",
+      "scope": "Academic prototype using ML to map NOCC text descriptions into O*NET-style space. 161 O*NET-style skills/knowledge/abilities. Portal: skills.sysu.edu.cn. NOT a state-published Chinese government taxonomy — academic prototype from Sun Yat-sen University + Data61 + MIT/Pittsburgh.",
+      "url_published": "https://www.nature.com/articles/s41599-021-00862-2",
+      "url_preprint": "https://arxiv.org/pdf/2001.02863",
+      "covers_dimensions": [
+        "D05",
+        "D06",
+        "D07",
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A1"
+      ],
+      "supports_indicators": [
+        "I04_CCS"
+      ],
+      "deep_research_correction": "Patch cited only the 2020 arXiv preprint (arXiv:2001.02863). The peer-reviewed version is Xu et al. 2021 in Nature HSS Comm. Use 2021 as primary, arXiv 2020 as secondary. Explicitly NOT the official Chinese government skill taxonomy — China's official source remains the Ministry of Human Resources & Social Security's Occupation Classification Code (NOCC) + GBT/T 4754 industry codes, which are text-only without skill-vector embeddings."
+    },
+    {
+      "source_id": "SRC_MINTRUD_PRIKAZ_359_2024",
+      "name": "Приказ Минтруда РФ от 18 июля 2024 г. № 359",
+      "title_full": "Об утверждении методических рекомендаций по разработке и актуализации профессионального стандарта",
+      "year": 2024,
+      "evidence_level": "A",
+      "scope": "Methodological recommendations for developing/updating профстандарты. Replaces previous Минтруд приказ № 170н от 29.04.2013. Operates under Постановление Правительства РФ № 580 от 10.04.2023.",
+      "url": "https://normativ.kontur.ru/document?moduleId=1&documentId=484867",
+      "covers_dimensions": [
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A5",
+        "A7"
+      ],
+      "deep_research_critical_finding": "Order № 359 regulates HOW to develop/update profstandards — does NOT restore mandatory/binding force. Postановление Правительства № 792 (12 June 2024) earlier removed обязательные требования профстандартов from regulatory-guillotine exclusion list. Letter Минтруда от 11 июля 2024 N 14-3/ООГ-4236 confirms: несоблюдение профстандартов не может быть основанием для административной ответственности. Use profstandards as content-NLP layer for I04_CCS_RU; do NOT use as binding credential portability mechanism."
+    },
+    {
+      "source_id": "SRC_COE_RUSSIA_EXCLUSION_2022",
+      "name": "CoE Committee of Ministers Resolution CM/Res(2022)2 of 16 March 2022",
+      "scope": "Adopted under Article 8 of the Statute of the Council of Europe. Russia ceases to be a member effective 16 March 2022. Russia ceased to be a Party to the ECHR on 16 September 2022 (CM Resolution of 23 March 2022).",
+      "year": 2022,
+      "evidence_level": "A",
+      "url": "https://www.coe.int/en/web/portal/-/the-russian-federation-is-excluded-from-the-council-of-europe",
+      "covers_dimensions": [
+        "D02_RU"
+      ],
+      "covers_agency_parameters": [
+        "A5_RU",
+        "A7_RU"
+      ],
+      "supports_indicators": [
+        "I05_GRCS"
+      ],
+      "deep_research_note": "Resolution language is 'ceases to be a member' — NOT 'expulsion' or 'exclusion' procedurally. Verfassungsblog notes Russia withdrew on 15 March before formal cessation on 16 March. Operative legal status unambiguous. Belarus relations suspended 17 March 2022 (CM/Del/Dec(2022)1429/2.5)."
+    },
+    {
+      "source_id": "SRC_LRC_RU_BY_RESTRICTION_2023",
+      "name": "Lisbon Recognition Convention Committee Declaration restricting RU/BY participation",
+      "date": "28 February 2023 (extraordinary session in Paris, announced 2 March 2023)",
+      "year": 2023,
+      "evidence_level": "A",
+      "scope": "Restricts: (a) RU/BY candidates cannot be elected as Bureau member, Chair, Vice-Chair, working-group chair, rapporteur, or coordinator; (b) Secretariats advised of restriction on RU/BY representatives' participation in LRCC meetings. Does NOT terminate RU/BY treaty membership in the Lisbon Recognition Convention itself.",
+      "url": "https://www.coe.int/en/web/education/-/declaration-adopted-by-the-lisbon-recognition-convention-committee-on-the-participation-of-the-russian-federation-and-belarus",
+      "covers_dimensions": [
+        "D02_RU",
+        "D08_RU"
+      ],
+      "covers_agency_parameters": [
+        "A5_RU"
+      ],
+      "supports_indicators": [
+        "I05_GRCS"
+      ],
+      "deep_research_correction": "Patch listed 2023 as ID (correct year for declaration). Critical distinction: committee work participation is RESTRICTED but treaty membership is NOT terminated. Russia ratified LRC in 2000 and remains formally a Party. ENIC-NARIC operational evaluation of Russian credentials in EU continues but with degraded throughput. Belarus is also a Party (non-CoE-member ratifier). Upstream CM decisions: 30 June and 5 October 2022."
+    },
+    {
+      "source_id": "SRC_DUAL_LADDER_JUSTICE_HOFFMANN_2016",
+      "name": "A contemporary justice perspective on dual ladders for R&D professionals",
+      "authors_likely": [
+        "Hoffmann",
+        "Lechner",
+        "Kreutzer"
+      ],
+      "year": 2016,
+      "publication": "Journal of Product Innovation Management 33(5)+, doi:10.1111/jpim.12310",
+      "evidence_level": "A",
+      "scope": "Cross-level study: 9 R&D dept heads, 32 HR managers, 382 R&D professionals from 32 organizations. Constructs: perceived equality of technical ladder + transparency of dual ladder → organizational commitment + career satisfaction; moderated by age, self-directed career management, firm size.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jpim.12310",
+      "covers_dimensions": [
+        "D04"
+      ],
+      "covers_agency_parameters": [
+        "A2"
+      ],
+      "supports_indicators": [
+        "I06_VRCS"
+      ],
+      "deep_research_caveat": "Author list confirmation needed via direct DOI fetch — likely Hoffmann + Lechner + Kreutzer based on contemporaneous German R&D-management cluster, but the v0.5 assembler should verify by fetching the doi.org/10.1111/jpim.12310 record. Petroni-Colacino 2008 (J Tech Mgmt Innov 3(3): 21-32) is the seminal critique; Allen-Katz 1986 R&D Management is the foundational early critique — both should be cited as background."
+    },
+    {
+      "source_id": "SRC_MAHIEU_MELILLO_REICHSTEIN_2021_SEJ",
+      "name": "Shooting stars? Uncertainty in hiring entrepreneurs",
+      "authors": [
+        "Mahieu",
+        "Melillo",
+        "Reichstein",
+        "Thompson"
+      ],
+      "year": 2021,
+      "publication": "Strategic Entrepreneurship Journal 15(4): 526-567, doi:10.1002/sej.1339",
+      "evidence_level": "A",
+      "scope": "Danish IDA matched employer-employee microdata; how returning entrepreneurs are valued in wage labor market",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/sej.1339",
+      "covers_dimensions": [
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ],
+      "supports_indicators": [
+        "I02_ROVS"
+      ],
+      "added_by": "deep_research_v0_5"
+    },
+    {
+      "source_id": "SRC_FED_SCF_PANEL",
+      "name": "Federal Reserve Survey of Consumer Finances (SCF) — panel substructure",
+      "publisher": "Federal Reserve Board (NORC at U Chicago is field operator)",
+      "evidence_level": "A",
+      "scope": "Triennial. Panel substructure: 1983 respondents re-interviewed in 1986 and 1989; 2007 respondents re-interviewed in 2009. SCF 2025 in field.",
+      "url": "https://www.federalreserve.gov/scf/scf.htm",
+      "covers_dimensions": [
+        "D09",
+        "D10"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ],
+      "supports_indicators": [
+        "I01_EFBCS",
+        "I02_ROVS"
+      ],
+      "deep_research_note": "Patch focused on SIPP/CWS; missed SCF panel structure for balance-sheet capacity to return (savings/wealth dimension of return option value)",
+      "added_by": "deep_research_v0_5"
+    },
+    {
+      "source_id": "SRC_NBS_CHINA_FLEXIBLE_EMPLOYMENT_2021",
+      "name": "China NBS aggregate: 200 million flexible workers (灵活就业人员)",
+      "publisher": "National Bureau of Statistics of China (2022 announcement, year-end-2021 data)",
+      "year": 2022,
+      "evidence_level": "B",
+      "scope": "State-published aggregate count of 灵活就业 (flexible employment) workers. Definition mixes part-time, gig, freelance, displaced.",
+      "url_announcement": "http://english.scio.gov.cn/pressroom/2022-02/16/content_78051896.htm",
+      "covers_dimensions": [
+        "D09_CN",
+        "D10_CN"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ],
+      "supports_indicators": [
+        "I01_EFBCS"
+      ],
+      "deep_research_caveat": "Independent verification (RFA, Stanford, scholar critique) notes the figure may conflate distress employment with chosen flexibility. Use as baseline scale signal, NOT as measure of voluntary self-employment. CN has no individual-level micro panel publicly available equivalent to SIPP/HILDA.",
+      "added_by": "deep_research_v0_5"
+    },
+    {
+      "source_id": "SRC_FNS_NPD_2025",
+      "name": "ФНС России / приложение «Мой налог» — registry of самозанятые / НПД payers",
+      "publisher": "Федеральная налоговая служба РФ",
+      "evidence_level": "B",
+      "scope": "Aggregate count: ~14M registered by end-2024; ~15.4M by end-2025; cumulative income >3 trln RUB in 2025; 136 bln RUB taxes paid. October 2025 ФНС survey of 11.2M НПД-active. NPD experiment legally extended to 31 December 2028.",
+      "year_data": "end-2025",
+      "covers_dimensions": [
+        "D09_RU",
+        "D10_RU"
+      ],
+      "covers_agency_parameters": [
+        "A6"
+      ],
+      "supports_indicators": [
+        "I01_EFBCS"
+      ],
+      "deep_research_critical_finding": "v0.4 cited '~10M+' which is now outdated by ~50%. Update RU D10 baseline. From 1 Jan 2026: voluntary sickness-insurance pilot (456-ФЗ от 15.12.2025); enhanced labor-relations risk indicators (Минтруд приказ 685н от 8.12.2025) for 35+ counterparty НПД cases.",
+      "added_by": "deep_research_v0_5"
+    },
+    {
+      "source_id": "SRC_HIRSCHI_WILHELM_2025_CSM_C",
+      "name": "Career Self-Management Competencies (CSM-C) scale",
+      "authors": [
+        "Hirschi",
+        "Wilhelm"
+      ],
+      "year": 2025,
+      "publication": "Journal of Career Assessment, doi:10.1177/10690727251391209",
+      "evidence_level": "A",
+      "scope": "8-item validated scale; integrates Bandura agency framework with self-regulation theory. Strong fit for I07_ICAS.",
+      "url": "https://journals.sagepub.com/doi/10.1177/10690727251391209",
+      "covers_dimensions": [],
+      "covers_agency_parameters": [
+        "A2",
+        "A3"
+      ],
+      "supports_indicators": [
+        "I07_ICAS"
+      ],
+      "deep_research_note": "Closest individual-level career-agency instrument with 2025 validation. Recommended as primary anchor for I02_ROVS individual subjective component (replacing the Baldi-Trigeorgis firm-level cite).",
+      "added_by": "deep_research_v0_5"
+    },
+    {
+      "source_id": "SRC_ROACH_SAUERMANN_2010_RP",
+      "name": "A taste for science? PhD scientists' academic orientation and self-selection into research careers in industry",
+      "authors": [
+        "Roach",
+        "Sauermann"
+      ],
+      "year": 2010,
+      "publication": "Research Policy 39(3): 422-434",
+      "evidence_level": "A",
+      "scope": "N>400 S&E PhD students, US",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1621309",
+      "covers_dimensions": [
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A2"
+      ],
+      "supports_indicators": [
+        "I03_IRAS"
+      ],
+      "added_by": "deep_research_v0_5"
+    },
+    {
+      "source_id": "SRC_BLANES_VIDAL_DRACA_FONS_ROSEN_2012_AER",
+      "name": "Revolving Door Lobbyists",
+      "authors": [
+        "Blanes i Vidal",
+        "Draca",
+        "Fons-Rosen"
+      ],
+      "year": 2012,
+      "publication": "American Economic Review 102(7): 3731-3748, doi:10.1257/aer.102.7.3731",
+      "evidence_level": "A",
+      "scope": "Quantifies revolving-door capital depreciation: ~24% revenue drop when connected Senator leaves office. Public-private transition signal-preservation evidence.",
+      "covers_dimensions": [
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A4"
+      ],
+      "supports_indicators": [
+        "I03_IRAS"
+      ],
+      "added_by": "deep_research_v0_5"
+    },
+    {
+      "source_id": "SRC_HRSA_NPDB_PUBLIC_USE",
+      "name": "National Practitioner Data Bank (NPDB) Public Use Data File",
+      "publisher": "Health Resources and Services Administration (HRSA), USA",
+      "evidence_level": "A",
+      "scope": "Malpractice payments + adverse-action reports on US health practitioners since 1990; updated quarterly; de-identified public file. Supports I03_IRAS for healthcare-domain reentry signals.",
+      "url": "https://www.npdb.hrsa.gov/resources/publicData.jsp",
+      "covers_dimensions": [
+        "D08"
+      ],
+      "covers_agency_parameters": [
+        "A5"
+      ],
+      "supports_indicators": [
+        "I03_IRAS"
+      ],
+      "added_by": "deep_research_v0_5"
+    }
+  ],
+  "derived_indicators": [
+    {
+      "indicator_id": "I01_EFBCS",
+      "name": "EmploymentFormBidirectionalCapacityScore",
+      "primary_dimension": "D09 + D10 (employment_form_exit AND employment_form_return)",
+      "gap_id_closed": "employment_form_exit_return",
+      "data_need_level": "medium",
+      "can_be_built_from_public_data": "partial",
+      "needs_survey_addon": true,
+      "output_scale": "0_100",
+      "key_signals_count": 6,
+      "validation_target": "observed employee↔self-employed/independent/payroll transitions in CPS-CWS, SIPP, LFS-Long, EU-SILC",
+      "confidence": "medium for US (CWS+SIPP+LEHD bundle); medium for EU (LFS-Long+SILC+EWCS); low for CN/RU",
+      "evidence_level_overall": "B",
+      "construction_principle": "Geometric mean preferred over additive: structural bottlenecks (legal access, regulated profession barriers) should cap rather than be averaged out",
+      "validation_strategy": "predictive validity → outcome validity → cross-country invariance → sensitivity analysis (per v0.3 implementation_notes)",
+      "v05_added_signals": [
+        "realized_return_rate_from_self_employment_to_wage_work",
+        "time_to_first_wage_job_after_independent_work",
+        "return_quality_ratio_returned_wage_over_pre_exit_wage",
+        "occupational_similarity_of_return_job",
+        "benefit_security_recovery",
+        "evidence_legibility_from_independent_phase",
+        "network_return_assets"
+      ],
+      "v05_warning": "Existing panels can observe transitions; capacity and comparable-return quality still need survey/linked data.",
+      "v05_baselines_updated": {
+        "RU_baseline": "~14M НПД by end-2024, ~15.4M by end-2025 (was '10M+' in v0.4). Source: ФНС/Мой налог, end-2025.",
+        "CN_baseline": "~200M flexible employment workers / 灵活就业 (NBS 2021). Definition flag: mixes voluntary and distress.",
+        "US_baseline": "BLS CWS July 2023: 6.9M contingent (4.3% of employed); 7.4% independent contractors. May 2025 collected; July 2026 next round."
+      }
+    },
+    {
+      "indicator_id": "I02_ROVS",
+      "name": "ReturnOptionValueScore",
+      "primary_dimension": "all return dimensions: D02, D04, D06, D08, D10",
+      "gap_id_closed": "option_value_of_return",
+      "data_need_level": "high",
+      "can_be_built_from_public_data": "partial",
+      "needs_survey_addon": true,
+      "output_scale": "0_100",
+      "key_signals_count": 6,
+      "components": [
+        "exercise_probability (hazard)",
+        "payoff_spread",
+        "switching_cost",
+        "expiry_and_skill_decay",
+        "volatility_and_upside",
+        "reversibility_assets"
+      ],
+      "confidence": "medium-low overall — rhetorical predecessors (Luehrman 1998 C, Baldi D) do not give individual-level instrument",
+      "evidence_level_overall": "B for objective realized option-value (admin data); C for subjective option-value perception",
+      "warning": "Do not treat return probability as return value — probability of return can be high because the destination failed, not because return is attractive (per v0.3 implementation_notes.do_not_overclaim)",
+      "validation_strategy": "predictive validity primarily; option-value as latent construct requires structural model",
+      "v05_formula_stub": "P_return × Payoff_quality × Reversibility_assets × Volatility_value - Switching_cost - Time_decay - Credential_decay",
+      "v05_validated_subcomponents": [
+        "CFI-R career agency",
+        "CFI-R occupational awareness",
+        "Work Capability Set enabled-realized gap",
+        "Career Inaction reverse score",
+        "Career Sustainability environmental awareness"
+      ],
+      "v05_warning": "Combined return-option-value score remains unvalidated.",
+      "v05_deep_research_correction": "Baldi-Trigeorgis 2020 downgraded to C-level conceptual (firm/HRM, not individual). PRIMARY admin-data anchor: Failla-Melillo-Reichstein 2017 JBV (Danish IDA). Supplement: Mahieu-Melillo-Reichstein-Thompson 2021 SEJ. Individual-level scale anchor: Hirschi-Wilhelm 2025 CSM-C (replaces Baldi as I02 individual anchor)."
+    },
+    {
+      "indicator_id": "I03_IRAS",
+      "name": "IndustryReentryAsymmetryScore",
+      "primary_dimension": "D07 + D08 (industry_exit AND industry_return)",
+      "gap_id_closed": "asymmetric_industry_reentry",
+      "data_need_level": "medium",
+      "can_be_built_from_public_data": "partial",
+      "needs_survey_addon": true,
+      "output_scale": "signed; positive = easier exit than return; absolute value = friction",
+      "key_signals_count": 6,
+      "components": [
+        "directional_flow_ratio (LEHD)",
+        "reentry_probability (LEHD/SIPP/SILC)",
+        "skill_overlap_demand_weighted (O*NET/ESCO/OVATE)",
+        "credential_regulatory_barrier (profstandards/ESCO/CN dict)",
+        "network_specificity (CCQ + literature)",
+        "signal_preservation (publications/portfolios/clearance)"
+      ],
+      "confidence": "medium for US (LEHD strong); low-medium for EU/CN/RU",
+      "evidence_level_overall": "B",
+      "v05_domain_signal_taxonomy": {
+        "academia": [
+          "publication_recency",
+          "citation_velocity",
+          "grant_eligibility",
+          "coauthor_network_continuity",
+          "conference_visibility",
+          "patents_or_industry_research_outputs"
+        ],
+        "finance": [
+          "active_or_recent_registration",
+          "license_exam_status",
+          "BrokerCheck_clean_record",
+          "Form_U4_employment_history_continuity",
+          "Form_U5_termination_reason",
+          "continuing_education_compliance"
+        ],
+        "public_private": [
+          "cooling_off_period_completed",
+          "security_clearance_status",
+          "policy_domain_specificity",
+          "lobbying_or_regulatory_experience",
+          "conflict_of_interest_barriers",
+          "seniority_of_prior_public_role"
+        ],
+        "regulated_professions": [
+          "license_validity",
+          "continuing_education_status",
+          "disciplinary_record",
+          "credential_recognition",
+          "practice_hours_recency"
+        ],
+        "tech": [
+          "portfolio_recentness",
+          "open_source_activity",
+          "technical_stack_recency",
+          "public_technical_reputation",
+          "product_or_launch_evidence"
+        ]
+      },
+      "v05_wrapper": "recency × legibility × institutional_validity × network_continuity × demand",
+      "v05_added_sources": [
+        "SRC_ROACH_SAUERMANN_2010_RP",
+        "SRC_BLANES_VIDAL_DRACA_FONS_ROSEN_2012_AER",
+        "SRC_HRSA_NPDB_PUBLIC_USE",
+        "SRC_FINRA_BROKERCHECK_U4_U5",
+        "SRC_JACOBS_2024_NHB"
+      ],
+      "v05_country_levels": "A (US), B (EU), C (CN), C (RU)"
+    },
+    {
+      "indicator_id": "I04_CCS",
+      "name": "ComparabilityConfidenceScore",
+      "primary_dimension": "applied to D05/D06 cross-country (lateral_professional)",
+      "gap_id_closed": "cn_ru_comparability",
+      "data_need_level": "low",
+      "can_be_built_from_public_data": "fully",
+      "needs_survey_addon": false,
+      "output_scale": "0_100",
+      "key_signals_count": 4,
+      "components": [
+        "code_crosswalk_strength (1.0 direct ISCO/SOC/ESCO match → 0.25 weak/manual)",
+        "descriptor_density (verbs/skills/tools per occupation)",
+        "multilingual_mapping_coverage (ESCO term match)",
+        "PIAAC_gap_penalty"
+      ],
+      "bridge_strategy": [
+        "anchor all countries to ISCO-08 / SOC / ESCO / OKZ",
+        "create task/skill pseudo-vectors for CN/RU from occupation dictionaries + profstandards + job ads",
+        "label confidence by evidence level (direct/title/description/job-ad/expert)",
+        "separate measurement comparability from labor-market comparability (credentials + legal + market are conversion factors)"
+      ],
+      "moscow_caveat": "Russian PIAAC Cycle 1 sample EXCLUDED Moscow municipal area — under-represents the high-skill segment that is most relevant to this framework; PIAAC_gap_penalty for RU should be MAX (no Cycle 2) AND noted Moscow-exclusion warning even when Cycle 1 data is used",
+      "confidence": "high methodologically; low practically until pseudo-vectors are built and validated",
+      "evidence_level_overall": "B",
+      "v05_CN_update": "Use Xu et al. 2020 as a B-level prototype: NOCC descriptions + ML mapping to O*NET-style 161 skills/knowledge/abilities. Use Xu et al. 2021 Nature HSS Comm (peer-reviewed) as primary cite, not the 2020 arXiv preprint.",
+      "v05_RU_update": "Use profstandards as B/C-level NLP input: трудовые функции, трудовые действия, знания, умения. Apply confidence penalty until validated. No peer-reviewed Russian NLP work on профстандарты→skill embeddings exists as of May 2026 — I04_CCS_RU stays at C.",
+      "v05_country_levels": "A (US, O*NET 30.2 four-level Job Zone since 24 Feb 2026), A (EU, ESCO v1.2.1 from 10 Dec 2025), B (CN, Xu et al. 2021), C (RU, profstandards as NLP input only, unvalidated)"
+    },
+    {
+      "indicator_id": "I05_GRCS",
+      "name": "GeographicReturnCapacityScore",
+      "primary_dimension": "D02 (geographic_return)",
+      "gap_id_closed": "geographic_return_individual_score",
+      "data_need_level": "medium",
+      "can_be_built_from_public_data": "partial",
+      "needs_survey_addon": true,
+      "output_scale": "0_100",
+      "key_signals_count": 7,
+      "components": [
+        "baseline_return_hazard (NBER)",
+        "origin_demand_pull (OVATE/LEHD/NBER)",
+        "destination_push_or_lock_in",
+        "experience_transfer_premium",
+        "home_network_continuity (CCQ)",
+        "credential_legal_reentry (ESCO/profstandards/CN dict)",
+        "relocation_cost_family_constraints"
+      ],
+      "confidence": "medium for US (NBER+LEHD); medium for EU; low for CN; low for RU (post-2022 emigration constraints make Russian case harder to instrument)",
+      "evidence_level_overall": "B",
+      "v05_RU_split_fields": [
+        "formal_status",
+        "practical_operation",
+        "domestic_content_mapping",
+        "sanctions_or_trust_penalty"
+      ],
+      "v05_RU_default_post_2022": {
+        "formal_status": "case_specific",
+        "practical_operation": "constrained",
+        "profstandards_role": "content_mapping_not_general_binding_gate",
+        "confidence": "low_medium"
+      },
+      "v05_volume_estimates": "300K-1M+ Russian post-2022 emigrants depending on wave. First wave (Feb-Mar 2022): 300-400K. Second wave (post-Sept-2022 mobilization): additional 400-700K. Total: ~700K-1.3M with high uncertainty. Sectoral concentration: ~45% IT, ~15% culture/media, ~15% science/teaching, ~8% journalism. Sources: RANEPA Florinskaya, Stanford CDDRL OutRush 2024 longitudinal.",
+      "v05_RU_evidence_level": "C for point estimates (no Rosstat panel); B for ranges (RANEPA + OutRush survey-based). RU government 'IT 85% return' claim NOT corroborated by independent demographers."
+    },
+    {
+      "indicator_id": "I06_VRCS",
+      "name": "VerticalReturnCapacityScore",
+      "primary_dimension": "D04 (vertical_return)",
+      "gap_id_closed": "vertical_return",
+      "data_need_level": "medium",
+      "can_be_built_from_public_data": "partial",
+      "needs_survey_addon": true,
+      "output_scale": "0_100",
+      "track_types": [
+        "IC_to_Manager_return_to_IC",
+        "Manager_to_IC_return_to_Manager",
+        "Manager_to_Manager_after_break",
+        "Senior_IC_to_Senior_IC_after_management_spell",
+        "Downshift_to_re-upshift"
+      ],
+      "key_signals_count": 7,
+      "components": [
+        "dual_ladder_availability (Raelin C)",
+        "level_equivalence (O*NET A)",
+        "recency_of_core_skill (O*NET + CCQ)",
+        "role_specific_evidence_portfolio",
+        "organizational_ladder_liquidity (LEHD/OVATE)",
+        "identity_and_preference_fit (CCQ)",
+        "track_switch_stigma"
+      ],
+      "confidence": "medium for US tech; low elsewhere",
+      "evidence_level_overall": "C (limited by Raelin C-level + stigma signal which is qualitative)",
+      "v05_split_VR07": [
+        "structural_track_parity",
+        "perceived_track_switch_stigma"
+      ],
+      "v05_added_items": [
+        "Returning from management to a senior IC/expert role is seen as legitimate, not a demotion.",
+        "Senior IC/expert tracks have compensation and status comparable to managerial tracks.",
+        "A period as IC/expert after management would not reduce future eligibility for management.",
+        "Hiring managers understand manager↔IC switches as skill-preserving rather than signal-damaging."
+      ],
+      "v05_added_sources": [
+        "SRC_DUAL_LADDER_JUSTICE_HOFFMANN_2016"
+      ],
+      "v05_supplementary_practitioner_C": [
+        "Petroni & Colacino (2008) J Tech Mgmt Innov 3(3): 21-32 — foundational dual-ladder critique",
+        "Allen & Katz (1986) R&D Management — original critique",
+        "Charity Majors (2017) 'The Engineer/Manager Pendulum' charity.wtf",
+        "Will Larson (2021) 'Staff Engineer'",
+        "levels.fyi / Blind app — aggregate IC↔manager comp data"
+      ],
+      "v05_country_coverage": "B for US/EU; C for CN/RU (no validated multi-country instrument for track-switch stigma)"
+    },
+    {
+      "indicator_id": "I07_ICAS",
+      "name": "IntegratedCareerAgencyScore",
+      "primary_dimension": "all 10 dimensions × 7 agency parameters (composite)",
+      "gap_id_closed": "integrated_agency_measurement",
+      "data_need_level": "high",
+      "can_be_built_from_public_data": "partial",
+      "needs_survey_addon": true,
+      "output_scale": "0_100",
+      "principle": "Do not make agency purely psychological. A person can score high on confidence/adaptability but low on FEASIBLE agency if labour-market liquidity, credential portability or legal constraints block exit/return.",
+      "structure": "individual_resources × conversion_factors × opportunity_structure × constraints (per Sen-Nussbaum capability approach via Anand-Hunter-Smith 2005)",
+      "confidence": "low — composite of mixed-evidence components; requires extensive validation",
+      "evidence_level_overall": "B for US/EU (multiple validated components); C for CN/RU (no validated cross-cultural instruments)",
+      "validation_strategy": "must include sensitivity_analysis comparing scores with/without structural bottleneck multipliers — exposes how much agency is psychological vs institutional",
+      "v05_latent_blocks": [
+        "psychological_agency",
+        "career_competence",
+        "capability_conversion_factor",
+        "labor_market_liquidity",
+        "institutional_bottlenecks",
+        "negative_agency_or_inaction_risk"
+      ],
+      "v05_validation_required": [
+        "CFA",
+        "measurement_invariance_US_EU_CN_RU",
+        "predictive_validity_against_exit_return_events",
+        "outcome_validity_against_wage_job_quality_agency"
+      ],
+      "v05_validated_components": [
+        {
+          "source_id": "SRC_CFI_R_CAREER_AGENCY",
+          "covers": "career agency",
+          "limitation": "US college students validation only"
+        },
+        {
+          "source_id": "SRC_WORK_CAPABILITY_SET",
+          "covers": "capability conversion factor",
+          "limitation": "Dutch validation only"
+        },
+        {
+          "source_id": "SRC_CARINAS_CAREER_INACTION_SCALE",
+          "covers": "negative agency / inaction risk (reverse)",
+          "limitation": "Belgian + US validation only"
+        },
+        {
+          "source_id": "SRC_CAREER_SUSTAINABILITY_SCALE_2024",
+          "covers": "career sustainability",
+          "limitation": "Korean validation only"
+        },
+        {
+          "source_id": "SRC_HIRSCHI_WILHELM_2025_CSM_C",
+          "covers": "career self-management competencies",
+          "limitation": "fresh 2025 — international invariance not yet established"
+        },
+        {
+          "source_id": "savickas_caas (CAAS)",
+          "covers": "adaptability resources",
+          "advantage": "13-country invariance — strongest cross-cultural foundation"
+        }
+      ],
+      "v05_deep_research_critical_caveat": "Bottleneck rule: I07_ICAS confidence cannot exceed C for CN/RU because none of the four patch instruments (CFI-R, Work Capability Set, CARINAS, Career Sustainability Scale) has documented psychometric invariance for those jurisdictions. CAAS (Savickas-Porfeli 2012, 13-country invariance) is the only instrument with broad cross-cultural foundation. Adding Hirschi-Wilhelm 2025 CSM-C as a Western-validated supplement does not change the CN/RU bottleneck."
+    }
+  ],
+  "country_operationalization": {
+    "US": {
+      "v02_readiness_grade": "A-",
+      "v03_overall_gap_closure_readiness": "highest",
+      "main_sources": [
+        "O*NET 30.2",
+        "BLS ORS / OEWS / EP / CWS 2023",
+        "BLS CPS basic monthly",
+        "Census SIPP",
+        "LEHD QWI/J2J/LODES/PSEO",
+        "NLSY79/NLSY97",
+        "PIAAC Cycle 1+2",
+        "iRelaunch (C-level corporate)",
+        "SCF panel substructure (1983-86-89; 2007-09; 2025 in field)",
+        "BLS CWS May 2025 (collected; results pending) + July 2026 next round",
+        "FINRA BrokerCheck/U4/U5 for finance industry signal-preservation",
+        "HRSA NPDB Public Use File for healthcare practitioner reentry"
+      ],
+      "strengths": [
+        "Richest occupation-task-skill infrastructure globally (O*NET)",
+        "Strong individual-panel infrastructure (SIPP, NLSY, LEHD)",
+        "Strong contingent/alternative work data (CWS 2023; next May 2025)",
+        "Migration research is robust (NBER tradition; Amanzadeh-Kermani-McQuade 2024 anchor)"
+      ],
+      "weaknesses": [
+        "Return capacity usually inferred rather than directly measured",
+        "Employment-form return has only C-level corporate data (iRelaunch)",
+        "LEHD excludes self-employed and federal defense employees"
+      ],
+      "best_supported_dimensions": [
+        "D05_lateral_professional_exit (A)",
+        "D03_vertical_exit (B+)",
+        "D07_industry_exit (B+)",
+        "D09_employment_form_exit (B+)",
+        "D01_geographic_exit (A-)"
+      ],
+      "weakest_dimensions": [
+        "D10_employment_form_return (C+)",
+        "D04_vertical_return (B-)",
+        "D08_industry_return (B-)"
+      ],
+      "recommended_minimum_viable_pipeline": [
+        "O*NET 30.2 task/skill vectors as occupation backbone",
+        "LEHD J2J for industry/geographic flows + earnings continuity (caveat: excludes self-employed)",
+        "Census SIPP for individual employment-form panel",
+        "BLS CWS 2023 baseline for contingent prevalence (next May 2025)",
+        "Light survey module (28 items) for individual readiness signals not in admin data"
+      ],
+      "v05_corrections": [
+        "BLS CWS May 2025 confirmed collected; results not yet released as of Federal Register notice 10 Feb 2026; July 2026 next supplement proposed",
+        "FINRA U4/U5 + BrokerCheck add A-level industry-reentry signal for broker-dealer + investment-adviser segments specifically (not all 'adjacent professionals')",
+        "HRSA NPDB Public Use File adds A-level healthcare-domain signal (malpractice + adverse-action reports since 1990)"
+      ]
+    },
+    "EU": {
+      "v02_readiness_grade": "B+",
+      "v03_overall_gap_closure_readiness": "high_for_system_context_medium_for_individual_transitions",
+      "main_sources": [
+        "ESCO v1.2 (3,039 × 13,939 × 28 lang, May 2024)",
+        "EU-LFS + LFS-Long",
+        "EU-SILC",
+        "Cedefop ESI 2024 (3 pillars × 15 indicators)",
+        "Cedefop Skills-OVATE (32 countries)",
+        "OECD PIAAC Cycle 2 (for participating EU countries)",
+        "Eurofound EWCS",
+        "EQF + Lisbon Recognition Convention (1997, 57 Parties as of 1 July 2025)",
+        "ESCO v1.2.1 (10 Dec 2025) + UKHLS / Understanding Society (UK ISER)"
+      ],
+      "strengths": [
+        "Multilingual ESCO classification — unique advantage for cross-country pseudo-vector matching",
+        "Strong labour-force survey infrastructure (LFS, SILC)",
+        "Country-level skills-system context (ESI)",
+        "Credential-portability frameworks relatively explicit (EQF, Bologna, Lisbon RC)",
+        "Skills-OVATE provides near-real-time demand-side data"
+      ],
+      "weaknesses": [
+        "Heterogeneity across member states",
+        "Country-level ESI cannot be directly converted into individual agency",
+        "Task-level granularity weaker than O*NET unless mapped carefully",
+        "LFS-Long short panels (2-4 quarters) limit long-cycle return detection"
+      ],
+      "best_supported_dimensions": [
+        "A5_credential_portability (A)",
+        "D05_lateral_professional_exit (A-)",
+        "D01_geographic_exit_within_EU (B+)",
+        "D07_industry_exit (B)"
+      ],
+      "weakest_dimensions": [
+        "D10_employment_form_return (C)",
+        "D08_industry_return (C+)",
+        "D04_vertical_return (C+)"
+      ],
+      "recommended_minimum_viable_pipeline": [
+        "ESCO v1.2 as occupation-skill backbone (multilingual)",
+        "EU-LFS + LFS-Long for transitions",
+        "EU-SILC for income continuity across form switches",
+        "Skills-OVATE for demand-side near-real-time signal",
+        "Light survey module for individual-level signals"
+      ],
+      "v05_corrections": [
+        "ESCO version updated: v1.2.1 (10 Dec 2025) is current minor release; v1.2 major was 21 May 2024 with 35 new occupations + 42 new skills + 196 new knowledge concepts; 28 languages including Ukrainian",
+        "UKHLS / Understanding Society added as primary D10 panel for UK side"
+      ]
+    },
+    "CN": {
+      "v02_readiness_grade": "C+",
+      "v03_overall_gap_closure_readiness": "partial_classification_bridge",
+      "main_sources": [
+        "China Occupation Dictionary 2022 (MoHRSS): 1,639 professions, 158 new since 2015, 97 digital",
+        "Tokyo Convention 2011/2018 for credential portability (Asia-Pacific)",
+        "Xu et al. 2020 'China's First Workforce Skill Taxonomy' (arXiv 2001.02863) — academic O*NET prototype",
+        "Platform-work and new-employment-form literature",
+        "Returnee literature (海归/haigui)",
+        "Internal migration data via population census",
+        "Xu et al. 2021 (Nature HSS Comm 8:195) — peer-reviewed academic skill taxonomy prototype",
+        "NBS 灵活就业 ~200M flexible workers (2021)"
+      ],
+      "strengths": [
+        "Official profession classification exists with recent updates",
+        "Large policy interest in new forms of employment",
+        "Returnee and internal migration literature is relevant"
+      ],
+      "weaknesses": [
+        "NO state-published O*NET-equivalent task-vector layer (academic prototype Xu et al. 2020 exists but not policy-adopted)",
+        "NEVER covered by PIAAC (any cycle)",
+        "Limited comparability with US/EU occupation-skill datasets",
+        "Data access and longitudinal linkage may be constrained"
+      ],
+      "best_supported_dimensions": [
+        "D01_geographic_exit_internal_migration (B-)",
+        "D09_employment_form_exit (C+)",
+        "D02_returnee_population_analysis (C+)"
+      ],
+      "weakest_dimensions": [
+        "D05_lateral_professional_exit_task_vector (C+)",
+        "D10_employment_form_return (C-)",
+        "D08_industry_return (C-)"
+      ],
+      "recommended_minimum_viable_pipeline": [
+        "Anchor to ISCO-08 via dictionary crosswalk",
+        "Build pseudo-task-vectors via NLP on dictionary entries + job ads",
+        "Apply I04_CCS comparability confidence penalty when crossing into US/EU vector space",
+        "Use Xu et al. 2020 academic prototype as research-grade supplement"
+      ],
+      "v05_corrections": [
+        "Xu et al. citation upgraded from 2020 arXiv preprint to 2021 Nature HSS Comm peer-reviewed publication",
+        "NBS 灵活就业 200M figure added as state-published aggregate scale baseline (with definition caveat: mixes voluntary and distress flexible employment)",
+        "China Tokyo Convention 2011/2018 still applies for credential portability; PRC has never participated in PIAAC (any cycle)"
+      ]
+    },
+    "RU": {
+      "v02_readiness_grade": "C",
+      "v03_overall_gap_closure_readiness": "partial_classification_and_profstandard_bridge",
+      "main_sources": [
+        "OKZ ОК 010-2014 (МСКЗ-08) (current rev. 18.02.2021, ISCO-08 aligned)",
+        "Реестр профстандартов Минтруда РФ (~1,263+ active)",
+        "Rosstat labor-force methodology",
+        "Lisbon Recognition Convention (signed 2000, ratified)",
+        "PIAAC Cycle 1 Round 1 (2011-2012) historical data — WITH MOSCOW EXCLUSION CAVEAT",
+        "Постановление Правительства РФ № 792 от 12 июня 2024 (regulatory-guillotine de-fanging)",
+        "Приказ Минтруда РФ № 359 от 18 июля 2024 (development methodology)",
+        "Письма Минтруда от 5 и 11 июля 2024 г. № 14-3/ООГ-4236 (interpretive guidance)",
+        "ФНС/Мой налог НПД register: ~15.4M by end-2025",
+        "RANEPA / Florinskaya / Makarentseva 2023 SSRN + Stanford CDDRL OutRush 2024 (post-2022 emigration)",
+        "LRC RU/BY restriction (28 Feb 2023 declaration)"
+      ],
+      "strengths": [
+        "Occupation classification aligned with ISCO-08",
+        "Profstandards provide credential and occupation content context",
+        "Domestic literature on professional mobility exists"
+      ],
+      "weaknesses": [
+        "NEVER covered by PIAAC Cycle 2 (2022-2023)",
+        "PIAAC Cycle 1 Round 1 sample EXCLUDED Moscow municipal area — under-represents the very segment most relevant to this framework",
+        "No open O*NET-like task descriptor layer",
+        "Limited cross-country comparability",
+        "Lisbon Recognition Convention nominally available but practical operation degraded post-March 2022 (Russia ceased CoE membership)",
+        "Profstandards weakened as binding regulatory rule per Постановление № 792 от 13 июня 2024 — content-only role for most professions",
+        "Post-2022 emigration constraints (visa/banking/recognition) materially reduce realised geographic return capacity",
+        "No peer-reviewed Russian NLP work on профстандарты→skill-vector embeddings exists (May 2026)",
+        "Rosstat individual-level border-crossing data contaminated with tourism — return-migration statistics depend on survey-based estimates and indirect proxies",
+        "I07_ICAS: no career-agency instrument with documented psychometric invariance for Russian populations"
+      ],
+      "best_supported_dimensions": [
+        "A5_credential_portability_domestic (B)",
+        "D03_vertical_exit + D07_industry_exit conceptualisation (C)",
+        "D05_occupation_classification_mapping (C)"
+      ],
+      "weakest_dimensions": [
+        "D05_lateral_professional_exit_task_vector (C)",
+        "D10_employment_form_return (C-)",
+        "D02_geographic_return_individual_score (C-)",
+        "D08_industry_return (C-)"
+      ],
+      "recommended_minimum_viable_pipeline": [
+        "Anchor to ISCO-08 via OKZ direct match",
+        "Build pseudo-task-vectors via NLP on profstandards content (трудовые функции, требуемые знания/умения)",
+        "Apply I04_CCS comparability confidence penalty",
+        "Use samozanyatye (НПД) registry data for D09/D10 employment-form transitions where available",
+        "Add Moscow-exclusion warning whenever PIAAC Cycle 1 data is used for skills-capital baseline",
+        "Light survey module is essential — administrative data alone cannot ground individual-level scores in current RU conditions"
+      ],
+      "v05_corrections": [
+        "RU самозанятые volume corrected: ~14M end-2024, ~15.4M end-2025 (was '10M+' in v0.4 — outdated by ~50%)",
+        "NPD experiment legally extended to 31 Dec 2028; from 1 Jan 2026 voluntary sickness insurance + enhanced risk indicators for 35+ counterparties",
+        "Постановление № 792 effective date is 13 June 2024 (Постановление signed 12 June 2024 with effect from 13 June)",
+        "Приказ Минтруда № 359 of 18 July 2024 regulates HOW to develop/update profstandards — does NOT restore mandatory force",
+        "LRC RU/BY restriction: 28 February 2023 declaration; restricts committee work participation but does NOT terminate treaty membership",
+        "Russia formally remains a Party to the Lisbon Recognition Convention (ratified 2000)",
+        "Post-2022 emigration estimates contested 300K-1M+ depending on wave/methodology; OutRush longitudinal data shows most emigrants do NOT plan to return absent political change; RU government 'IT 85% return' claim unsubstantiated"
+      ]
+    }
+  },
+  "light_survey_module": {
+    "purpose": "Minimal add-on to make public labour-market proxies individual-level without trying to solve all gaps with one long questionnaire.",
+    "estimated_items_total": 32,
+    "modules": [
+      {
+        "module_id": "S1_form_reversibility",
+        "items_count": 3,
+        "items": [
+          "I could return to a salaried role comparable to my last employee role within 6 months.",
+          "My current independent/freelance/founder work produces evidence employers in my prior field would value.",
+          "At least three clients, collaborators or former colleagues could refer me into a salaried role."
+        ],
+        "maps_to": [
+          "D09",
+          "D10",
+          "I01_EFBCS",
+          "I02_ROVS"
+        ]
+      },
+      {
+        "module_id": "S2_return_option_assets",
+        "items_count": 3,
+        "items": [
+          "My licenses, credentials or certifications needed for my prior field are still valid.",
+          "I have maintained active professional ties in the field/geography/industry I might return to.",
+          "The cost of returning would be manageable for my household within the next 12 months."
+        ],
+        "maps_to": [
+          "D02",
+          "D08",
+          "D04",
+          "D10",
+          "I02_ROVS",
+          "I05_GRCS"
+        ]
+      },
+      {
+        "module_id": "S3_industry_reentry",
+        "items_count": 3,
+        "items": [
+          "I have recent, visible work output that is legible to employers in my prior industry.",
+          "My prior industry still recognizes my current experience as relevant.",
+          "I know the current hiring channels and qualification screens in my prior industry."
+        ],
+        "maps_to": [
+          "D08",
+          "I03_IRAS"
+        ]
+      },
+      {
+        "module_id": "S4_vertical_track",
+        "items_count": 3,
+        "items": [
+          "If I moved from management to an IC/expert role, I could demonstrate current hands-on skill.",
+          "If I moved from an IC/expert role to management, I could demonstrate recent people/project leadership.",
+          "My field has credible senior IC and managerial tracks with comparable status and compensation."
+        ],
+        "maps_to": [
+          "D04",
+          "I06_VRCS"
+        ]
+      },
+      {
+        "module_id": "S5_track_switch_stigma_v05",
+        "items_count": 4,
+        "items": [
+          "Returning from management to a senior IC/expert role is seen as legitimate, not a demotion.",
+          "Senior IC/expert tracks have compensation and status comparable to managerial tracks.",
+          "A period as IC/expert after management would not reduce future eligibility for management.",
+          "Hiring managers understand manager↔IC switches as skill-preserving rather than signal-damaging."
+        ],
+        "maps_to": [
+          "D04",
+          "I06_VRCS"
+        ],
+        "split_construct": "VR_07 split into structural_track_parity + perceived_track_switch_stigma per v0.5 patch",
+        "added_by": "v05_patch"
+      }
+    ],
+    "scoring_note": "Items use 5-point Likert; module score is the mean. Survey module is an ESSENTIAL augmentation — the 7 derived indicators cannot reach individual-level granularity from public administrative data alone.",
+    "estimated_full_module_count_with_remaining_signals": "~28 items total when extended with: 4 items for D03/D07 exit propensity, 4 items for D01 geographic exit, 4 items for psychological agency (CCQ-derived short form for A2/A3), 4 items for A4 network capital localization.",
+    "v05_note": "Added S5 track-switch stigma module (4 items) per patch recommendation. Total items now 32 (was 28). Maps to I06_VRCS split fields."
+  },
+  "implementation_notes": {
+    "do_not_overclaim": [
+      "Do not describe the 7 derived indicators (I01-I07) as VALIDATED instruments — they are operational proxies awaiting validation",
+      "Do not merge CN/RU pseudo-task-vectors into O*NET/PIAAC data without confidence penalties (I04_CCS)",
+      "Do not treat return PROBABILITY as return VALUE — probability of return can be high because the destination failed, not because return is attractive",
+      "Do not treat psychological agency as sufficient for realized mobility (per I07_ICAS principle)",
+      "Do not claim no prior work measures career mobility at all — Robinson 2018, Bechichi et al. 2018-2019, Amanzadeh-Kermani-McQuade 2024 all measure components",
+      "Do not treat country-level indices (Cedefop ESI) as individual-level agency instruments"
+    ],
+    "recommended_language_for_methodology_article": "The framework is best positioned as an integrating operational architecture: it organises existing measurement infrastructures (O*NET, ESCO, PIAAC, BLS CWS, LEHD J2J, NBER hazard models, ISCO-aligned classifiers) around a 10-dimension exit/return matrix and proposes 7 derived indicators that close identified gaps via proxy scores. The resulting model is operationally usable but requires validation before being presented as a validated index.",
+    "validation_strategy": [
+      {
+        "stage": "predictive_validity",
+        "description": "Test whether each derived indicator score predicts observed exit/return events in longitudinal data (LEHD J2J, SIPP, LFS-Long)."
+      },
+      {
+        "stage": "outcome_validity",
+        "description": "Test whether predicted high-capacity transitions preserve or improve wage, job quality, employment stability and subjective agency."
+      },
+      {
+        "stage": "cross_country_invariance",
+        "description": "Test whether items and scores mean the same thing in US/EU/CN/RU; where they do not, report country-specific modules rather than forced comparisons."
+      },
+      {
+        "stage": "sensitivity_analysis",
+        "description": "Run scores with and without structural bottleneck multipliers to expose how much agency is psychological versus institutional. Aggregation: geometric mean preferred over additive when hard bottlenecks (legal access, credential recognition, missing demand) are present."
+      }
+    ],
+    "aggregation_warning": "When a dimension has hard bottlenecks such as legal access, credential recognition or missing demand, geometric means and caps are preferable to simple additive scores. This applies particularly to A7 (institutional constraints) and to RU/CN country scores where post-2022 / regulated-profession gates dominate.",
+    "evidence_level_inheritance_rule": "When a derived indicator combines multiple sources of mixed evidence levels, the indicator's confidence inherits from the WEAKEST ESSENTIAL signal (bottleneck rule). Indicator-level evidence_level_overall in derived_indicators reflects this rule.",
+    "v05_deep_research_additions": {
+      "I07_ICAS_bottleneck_caveat": "Bottleneck rule applied strictly: I07_ICAS confidence cannot exceed C for CN/RU because no instrument in the patch (CFI-R, Work Capability Set, CARINAS, Career Sustainability Scale) has documented psychometric invariance for those jurisdictions. CAAS (Savickas-Porfeli 2012, 13-country invariance) and CCQ (Akkermans et al. 2013) are the only instruments with broader cross-cultural foundation, but RU and PRC are not in their original validation samples either.",
+      "I02_ROVS_anchor_change": "Baldi-Trigeorgis 2020 (Journal of Intellectual Capital) DOWNGRADED from B/C to C — it is a Fortune-500 firm-level case study, not an individual return-option-value scale. PRIMARY admin-data anchor for I02_ROVS realized option-value is now Failla-Melillo-Reichstein 2017 JBV (Danish IDA matched employer-employee microdata). PRIMARY individual-level scale anchor is Hirschi-Wilhelm 2025 CSM-C (Career Self-Management Competencies).",
+      "RU_credential_dual_layer_reminder": "Russia profstandards have a TWO-LAYER architecture that v0.5 stores explicitly: (1) Постановление Правительства № 792 от 12 июня 2024 — REMOVES обязательные требования профстандартов from regulatory-guillotine exclusion list (effect from 13 June 2024). (2) Приказ Минтруда № 359 от 18 июля 2024 — regulates HOW to develop/update profstandards but does NOT restore mandatory force. Letter № 14-3/ООГ-4236 от 11 июля 2024 confirms: несоблюдение профстандартов не может быть основанием для административной ответственности (with narrow exceptions for accountants under FZ № 402-FZ where binding nature comes from a separate federal law).",
+      "RU_return_migration_estimate_caveat": "Russian post-2022 emigration volume estimates are inherently contested (300K–1M+ depending on wave and methodology). The bottleneck rule means I05_GRCS_RU stays at C for any point estimate, B for ranges. Best non-state sources: RANEPA (Florinskaya, Makarentseva, Mkrtchyan, Khasanova 2023 SSRN) and Stanford CDDRL OutRush 2024 longitudinal.",
+      "BLS_CWS_2025_status": "BLS Contingent Worker Supplement May 2025 was collected on schedule but results not officially released as of Federal Register notice 10 Feb 2026. July 2026 next CWS proposed with consolidated 24-question digital-platform module. v0.5 baseline for D10_US remains July 2023 CWS (4.3% contingent / 7.4% IC) until 2025 release."
+    }
+  },
+  "gaps_residual": [
+    {
+      "gap_id": "individual_panel_for_employment_form_return",
+      "severity": "high",
+      "description": "Even with CWS+SIPP+LEHD+CCQ bundle, no single ready instrument tracks employee→independent→employee bidirectional transitions at individual level for the same person across 3+ years. Needs purpose-built panel.",
+      "affected_dimensions": [
+        "D10"
+      ],
+      "affected_indicators": [
+        "I01_EFBCS"
+      ],
+      "v05_previous_severity": "high",
+      "v05_new_status": "medium_high_for_realized_transitions; high_for_capacity_and_quality_comparable_return",
+      "v05_finding": "SIPP, UKHLS/Understanding Society, SOEP, HILDA and EU-LFS longitudinal can observe realized self-employment/freelance-to-wage transitions. They do not directly measure capacity to return to a comparable salaried role."
+    },
+    {
+      "gap_id": "validated_individual_return_option_value",
+      "severity": "high",
+      "description": "Real-options theory is rich (Luehrman 1998 C-level; Baldi D-level; academic real-options literature B-level for firms) but no validated individual-level instrument operationalises return optionality numerically. I02_ROVS is a proxy structure, not a validated scale.",
+      "affected_dimensions": [
+        "D02",
+        "D04",
+        "D06",
+        "D08",
+        "D10"
+      ],
+      "affected_indicators": [
+        "I02_ROVS"
+      ],
+      "v05_previous_severity": "high",
+      "v05_new_status": "high_but_better_theoretically_anchored",
+      "v05_finding": "Baldi & Trigeorgis 2020 quantify career-development option value at organization/HR-program level. CFI-R career agency, Work Capability Set, Career Inaction Scale, and Career Sustainability Scale can serve as validated subcomponents, but no validated individual return-option-value instrument was found."
+    },
+    {
+      "gap_id": "industry_reentry_signal_preservation_metric",
+      "severity": "high",
+      "description": "Signal-preservation across industries (publications/portfolios/clearance) is field-specific and lacks a unified scale. Each domain (academia, finance, regulated professions) has its own marker set.",
+      "affected_dimensions": [
+        "D08"
+      ],
+      "affected_indicators": [
+        "I03_IRAS"
+      ],
+      "v05_previous_severity": "high",
+      "v05_new_status": "high_for_unified_metric; medium_for_domain_specific_metrics",
+      "v05_finding": "Domain-specific signal registries exist: publications/patents for academia, FINRA BrokerCheck/U4/U5 for finance, revolving-door datasets for public-private transitions, professional licensing for regulated professions. A universal signal-preservation score remains unvalidated."
+    },
+    {
+      "gap_id": "cn_ru_task_vector",
+      "severity": "medium_high",
+      "description": "State-published O*NET-equivalents do not exist for CN/RU. Pseudo-vectors via NLP on profstandards (RU) and occupation dictionary entries (CN) are feasible but not built. Xu et al. 2020 (CN academic prototype) is a research-grade starting point.",
+      "affected_dimensions": [
+        "D05",
+        "D06",
+        "D07",
+        "D08"
+      ],
+      "affected_indicators": [
+        "I04_CCS"
+      ],
+      "v05_previous_severity": "medium_high",
+      "v05_new_status": "medium_for_CN_prototype; medium_high_for_RU",
+      "v05_finding": "China has an academic O*NET-mapped skill-taxonomy prototype predicting 161 O*NET-style skills/knowledge/abilities from Chinese occupation descriptions. Russia still lacks a comparable validated public task-vector layer; profstandards can support NLP pseudo-vectors."
+    },
+    {
+      "gap_id": "ru_post_2022_credential_practical_operation",
+      "severity": "high_for_RU_only",
+      "description": "Lisbon RC nominally ratified by Russia (2000) but practical operation degraded after Russia ceased CoE membership in March 2022. Profstandards weakened as binding rule by Постановление № 792 от 13 июня 2024. Russian credential portability is theoretically present but practically constrained — neither v0.3 nor v0.4 fully resolves how to score this in I05_GRCS for RU.",
+      "affected_dimensions": [
+        "D02_RU",
+        "D08_RU"
+      ],
+      "affected_indicators": [
+        "I05_GRCS",
+        "I03_IRAS"
+      ],
+      "v05_previous_severity": "high_for_RU_only",
+      "v05_new_status": "high_for_practical_cross_border_operation; medium_for_domestic_content_mapping",
+      "v05_finding": "Council of Europe exclusion and LRC participation restrictions confirm practical-operational constraints. 2024 Mintrud recommendations keep profstandards useful as structured occupation-content artifacts, not general binding credential gates."
+    },
+    {
+      "gap_id": "vertical_return_track_switch_stigma_quantification",
+      "severity": "medium",
+      "description": "VR_07 track-switch stigma signal in I06_VRCS is essentially qualitative. No validated scale of perceived stigma against IC↔manager track switches.",
+      "affected_dimensions": [
+        "D04"
+      ],
+      "affected_indicators": [
+        "I06_VRCS"
+      ],
+      "v05_previous_severity": "medium",
+      "v05_new_status": "medium_low_for_dual_ladder_parity; medium_for_track_switch_stigma",
+      "v05_finding": "Dual-ladder literature provides measurable constructs such as perceived equality/parity of technical and managerial tracks. Stigma of manager↔IC return remains under-measured and should be captured by added survey items."
+    },
+    {
+      "gap_id": "integrated_agency_validation",
+      "severity": "high",
+      "description": "I07_ICAS combines components of mixed evidence levels (CCQ A + Anand A + LEHD B + Raelin C) into a single composite score. Composite validation requires concurrent measurement of all components on a substantial multi-country sample. Not available.",
+      "affected_dimensions": [
+        "all 10"
+      ],
+      "affected_indicators": [
+        "I07_ICAS"
+      ],
+      "v05_previous_severity": "high",
+      "v05_new_status": "high_for_full_index_validation; medium_for_component_validity",
+      "v05_finding": "Component-level validated scales are stronger than v0.4 reflected: CFI-R, Work Capability Set, Career Sustainability Scale, Career Inaction Scale, CCQ/CAAS. No combined ICAS-style index linking psychological agency to structural constraints has been validated."
+    }
+  ],
+  "v05_residual_frontier": [
+    "No validated individual-level return-option-value scale.",
+    "No single panel captures employee→freelance/founder/gig→employee with comparable-return quality, agency assets and psychological readiness together.",
+    "No universal industry re-entry signal-preservation metric; domain modules are required.",
+    "No validated public RU/CN O*NET-equivalent task-vector layer with official status.",
+    "No multi-country validation of the integrated agency index."
+  ],
+  "micro_edits_applied": [
+    {
+      "edit_id": "ME01",
+      "from": "v0.2 + v0.3",
+      "change": "Added Moscow-exclusion caveat to PIAAC RU references in datasources_unified, country_operationalization.RU, A1, and I04_CCS"
+    },
+    {
+      "edit_id": "ME02",
+      "from": "v0.2",
+      "change": "Replaced 'Freidson professional closure' with explicit dual lineage: 'Freidson professional autonomy / Third Logic 2001' for autonomy concept + 'Larson 1977 / Witz 1992 (Weberian closure)' for closure concept (in A7)"
+    },
+    {
+      "edit_id": "ME03",
+      "from": "v0.2",
+      "change": "Refined Sustainable Careers attribution: outcomes triad (happiness/health/productivity) → Van der Heijden 2005; dimensions (person/context/time) → De Vos-Van der Heijden-Akkermans 2020 (in field_neighbors[3])"
+    },
+    {
+      "edit_id": "ME04",
+      "from": "v0.2",
+      "change": "Added DeFillippi-Arthur lineage note: 'three ways of knowing' trio crystallises in Arthur-Claman-DeFillippi 1995 AME, not 1994 JOB paper (in field_neighbors[2] and A2)"
+    },
+    {
+      "edit_id": "ME05",
+      "from": "v0.2",
+      "change": "Added trait-malleability caveat to Briscoe-Hall PCAS/BCAS (Supeli & Creed 2016, Waters et al.) — relevant when plugging into dynamic exit/return measurement (in field_neighbors[0])"
+    },
+    {
+      "edit_id": "ME06",
+      "from": "v0.2",
+      "change": "Added RTW-SE clinical-context caveat to A3 (validated only for sick-leave / clinical contexts; not directly validated for non-clinical career-break return)"
+    },
+    {
+      "edit_id": "ME07",
+      "from": "v0.2",
+      "change": "Quantified ESCO scale in EU country block: 3,039 occupations × 13,939 skills × 28 languages (v1.2 May 2024)"
+    },
+    {
+      "edit_id": "ME08",
+      "from": "v0.2",
+      "change": "Quantified China dictionary scale in CN country block: 1,639 professions / 158 new since 2015 / 97 digital (MoHRSS 2022 revision)"
+    },
+    {
+      "edit_id": "ME09",
+      "from": "v0.2",
+      "change": "Softened CN 'no O*NET-equivalent' to 'no STATE-published O*NET-equivalent'; noted Xu et al. 2020 (arXiv 2001.02863) academic prototype"
+    },
+    {
+      "edit_id": "ME10",
+      "from": "v0.2",
+      "change": "Added Tokyo Convention 2011/2018 to CN main_sources for credential portability (parallel to Lisbon for EU)"
+    },
+    {
+      "edit_id": "ME11",
+      "from": "v0.2",
+      "change": "Added iRelaunch + STEM Re-entry Task Force to US main_sources as C-level corporate-program data layer for D10 employment_form_return"
+    },
+    {
+      "edit_id": "ME12",
+      "from": "v0.2 + new v0.3 finding",
+      "change": "CRITICAL ADDITION: Russian profstandards weakened as binding rule per Постановление Правительства № 792 от 13 июня 2024 — content-only role for most professions from then on. Affects A5/A7/D08/I03_IRAS for RU."
+    },
+    {
+      "edit_id": "ME13",
+      "from": "v0.3",
+      "change": "Added LEHD self-employed exclusion as explicit limitation in datasources_unified.SRC_LEHD_J2J — direct cap on usefulness for D09/D10"
+    },
+    {
+      "edit_id": "ME14",
+      "from": "new structure",
+      "change": "Reorganized around 10 mobility dimensions × A/B/C/D evidence levels at source / claim / indicator level — section ten_mobility_dimensions is the new central object"
+    },
+    {
+      "edit_id": "ME15",
+      "from": "v0.3",
+      "change": "Added evidence_level_inheritance_rule (bottleneck rule) to implementation_notes — derived indicators inherit confidence from weakest essential signal"
+    },
+    {
+      "edit_id": "ME16",
+      "from": "v0.2",
+      "change": "Replaced Pugliese et al. attribution with Aufiero, De Marzo, Sbardella, Zaccaria 2024 (Sci Rep 14:11752) for the job-fitness/skill-coherence-into-wages paper (in field_neighbors[6])"
+    },
+    {
+      "edit_id": "ME17",
+      "from": "v0.2",
+      "change": "Renamed Cleveland Fed reference: not a formal 'Job Quality Index'; refer to 'Cleveland Fed work on job-quality quartiles + Occupational Mobility Explorer' (Fee 2022 CDR)"
+    },
+    {
+      "edit_id": "ME18",
+      "from": "v0.3 fact-check",
+      "change": "Recommended renaming SRC_JACOBS_ACAD_INDUSTRY to SRC_ACADEMIA_INDUSTRY_TRANSITION_LITERATURE (basket: Mangematin 2000, Roach-Sauermann 2010, Lam 2007) — no single canonical Jacobs reference identified"
+    },
+    {
+      "edit_id": "ME19",
+      "from": "v0.3 fact-check",
+      "change": "Added explicit limitation to Cedefop Skills-OVATE: online-only data; under-represents informal hiring; demand snapshot not realized hires"
+    },
+    {
+      "edit_id": "ME20",
+      "from": "v0.3 fact-check",
+      "change": "Added age-30 ceiling caveat to Akkermans CCQ original validation; mid-career generalisability needs additional validation"
+    },
+    {
+      "edit_id": "ME21",
+      "from": "v0.5_patch",
+      "change": "Applied 7 patch status_changes to gaps_residual: severity refinements based on what new sources actually narrow (not close)"
+    },
+    {
+      "edit_id": "ME22",
+      "from": "v0.5_patch",
+      "change": "Added 16 new sources from patch + 8 deep-research additions = 24 new datasources (datasources_unified now 46 total)"
+    },
+    {
+      "edit_id": "ME23",
+      "from": "deep_research_v0_5",
+      "change": "CARINAS authorship corrected: D'Huyvetter, Verbruggen, Jing & Akkermans 2025 (not Verbruggen-De Vos as in patch). Verbruggen-De Vos 2020 AMR is the theory paper."
+    },
+    {
+      "edit_id": "ME24",
+      "from": "deep_research_v0_5",
+      "change": "Xu et al. China taxonomy upgraded from 2020 arXiv-only to 2021 Nature HSS Comm peer-reviewed (doi:10.1057/s41599-021-00862-2)"
+    },
+    {
+      "edit_id": "ME25",
+      "from": "deep_research_v0_5",
+      "change": "Baldi-Trigeorgis 2020 DOWNGRADED to C-level (J Intellectual Capital, organization/SHRM case study, NOT individual-level instrument). I02_ROVS individual-level anchor replaced with Hirschi-Wilhelm 2025 CSM-C."
+    },
+    {
+      "edit_id": "ME26",
+      "from": "deep_research_v0_5",
+      "change": "SOEP source mis-attribution corrected: Failla-Melillo-Reichstein 2017 JBV uses Danish IDA register data, not German SOEP. Source ID renamed SRC_FAILLA_MELILLO_REICHSTEIN_2017_JBV."
+    },
+    {
+      "edit_id": "ME27",
+      "from": "deep_research_v0_5",
+      "change": "Hoffmann JPIM 2016 dual-ladder paper: confirmed cross-level study on N=382 R&D professionals + 32 firms. Co-authors likely Lechner & Kreutzer (verification recommended via direct DOI fetch)."
+    },
+    {
+      "edit_id": "ME28",
+      "from": "deep_research_v0_5",
+      "change": "LRC RU/BY restriction date corrected: 28 February 2023 (extraordinary session in Paris, announced 2 March 2023). Russia ratified LRC in 2000 and remains formally a Party — restriction is on committee work participation only, NOT treaty membership."
+    },
+    {
+      "edit_id": "ME29",
+      "from": "deep_research_v0_5",
+      "change": "RU самозанятые volume corrected: ~15.4M by end-2025 (was '10M+' in v0.4). Source: ФНС/Мой налог. NPD experiment extended to 31 Dec 2028."
+    },
+    {
+      "edit_id": "ME30",
+      "from": "deep_research_v0_5",
+      "change": "CN flexible employment baseline added: 200M 灵活就业 (NBS 2021). Definition flag: mixes voluntary and distress flexible employment."
+    },
+    {
+      "edit_id": "ME31",
+      "from": "deep_research_v0_5",
+      "change": "ESCO v1.2.1 confirmed as current (10 Dec 2025); v1.3 not yet released as of May 2026"
+    },
+    {
+      "edit_id": "ME32",
+      "from": "deep_research_v0_5",
+      "change": "O*NET 30.2 release date confirmed: 24 February 2026; four-level Job Zone framework consolidated Job Zones 1+2 into 'Job Zone 1-2'; 325 occupations had Job Zone reassignments"
+    },
+    {
+      "edit_id": "ME33",
+      "from": "deep_research_v0_5",
+      "change": "PIAAC Cycle 2 Round 1 results confirmed released 10 Dec 2024 with 31 countries; Russia not in Cycle 2; China never in any PIAAC cycle"
+    },
+    {
+      "edit_id": "ME34",
+      "from": "deep_research_v0_5",
+      "change": "Added I07_ICAS bottleneck rule: confidence cannot exceed C for CN/RU due to absence of validated cross-cultural instruments. Hirschi-Wilhelm 2025 CSM-C added as Western-validated supplement."
+    },
+    {
+      "edit_id": "ME35",
+      "from": "deep_research_v0_5",
+      "change": "Added 8 deep-research sources beyond patch: Mahieu-Melillo-Reichstein 2021 SEJ; Federal Reserve SCF panel; NBS China 200M flexible workers; ФНС НПД 2025 register; Hirschi-Wilhelm 2025 CSM-C; Roach-Sauermann 2010 RP; Blanes i Vidal-Draca-Fons-Rosen 2012 AER; HRSA NPDB Public Use File"
+    },
+    {
+      "edit_id": "ME36",
+      "from": "deep_research_v0_5",
+      "change": "Added S5 track-switch stigma module (4 items) to light_survey_module per I06_VRCS split. Total module items now 32 (was 28)."
+    },
+    {
+      "edit_id": "ME37",
+      "from": "deep_research_v0_5",
+      "change": "Russia Постановление № 792 effective date clarified: signed 12 June 2024 with effect from 13 June 2024 (regulatory-guillotine exclusion removal)"
+    },
+    {
+      "edit_id": "ME38",
+      "from": "deep_research_v0_5",
+      "change": "BLS CWS May 2025 status: collected, results not yet released; July 2026 next round proposed (Federal Register notice 10 Feb 2026)"
+    }
+  ],
+  "summary_stats": {
+    "total_dimensions": 10,
+    "total_agency_parameters": 7,
+    "total_field_neighbors": 8,
+    "total_datasources": 46,
+    "total_datasources_v04": 22,
+    "total_datasources_added_v05_patch": 16,
+    "total_datasources_added_deep_research_v05": 8,
+    "total_derived_indicators": 7,
+    "total_residual_gaps": 7,
+    "v05_residual_frontier_count": 5,
+    "total_micro_edits_applied": 38,
+    "evidence_level_distribution": {
+      "A_sources": 25,
+      "B_sources": 15,
+      "C_sources": 4,
+      "D_sources": 2,
+      "B_or_C_sources": 0,
+      "no_grade": 0
+    },
+    "v05_status_changes_count": 7,
+    "v05_indicator_updates_applied": 7
+  }
+}
