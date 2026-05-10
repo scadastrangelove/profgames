@@ -353,7 +353,7 @@ section.about { padding: 22px 22px; }
 
 <section class="articles">
 <h2>Статьи цикла</h2>
-<p class="section-intro">Нумерация массива с нулевого индекса: <strong>0</strong> — манифест, <strong>A–D</strong> — статьи, <strong>Z</strong> — фактологическая основа. Подкатегории вида <strong>A1</strong> — событийные слои и приложения к статьям. Цикл публикуется по мере готовности.</p>
+<p class="section-intro">Нумерация массива с нулевого индекса: <strong>0</strong> — манифест, <strong>A–D</strong> — статьи, <strong>Y</strong> — психологический срез, <strong>Z</strong> — фактологическая основа. Подкатегории вида <strong>A1</strong> — событийные слои и приложения к статьям. Цикл публикуется по мере готовности.</p>
 
 <ul class="article-list">
 
@@ -457,6 +457,28 @@ section.about { padding: 22px 22px; }
 <li>
 <div class="article-item">
 <div class="article-head">
+<span class="article-num">Y</span>
+<h3 class="article-title">AI-Mind: что ИИ делает с психикой</h3>
+<span class="article-status published">опубликовано</span>
+</div>
+<p class="article-desc">Параллельная серия к профессиональному циклу. Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. 41 сигнал 2023–2026, 15 феноменов (от парасоциальной привязанности и ИИ-индуцированного психоза до социального замещения и character grooming), 7 параметров уязвимости, общая с Z шкала доказательности A/B/C/D. Регуляторные landmark-ы (CA SB 243, NY S-3008C, China CAC, EU AI Act, Italy Garante), судебные кейсы (Setzer, Раин, Peralta, Brooks, SMVLC seven, Roberts UK), peer-reviewed исследования (MIT/OpenAI, Cheng/Jurafsky Science, JAMA Perlis, Wysa NHS Sussex).</p>
+<div class="article-meta">
+<div class="formats">
+<span>форматы:</span>
+<a href="aimind/aimind.html" class="format-link">html</a>
+<a href="aimind/aimind_signals_v0_7.jsonl" class="format-link">jsonl</a>
+<a href="aimind/aimind_factcheck_v0_7.json" class="format-link">json</a>
+</div>
+<span>·</span>
+<span>41 сигнал, 37 claims, 15 феноменов</span>
+</div>
+<a class="article-link" href="aimind/aimind.html" aria-label="AI-Mind: что ИИ делает с психикой"></a>
+</div>
+</li>
+
+<li>
+<div class="article-item">
+<div class="article-head">
 <span class="article-num">Z</span>
 <h3 class="article-title">Фактологическая основа</h3>
 <span class="article-status published">опубликовано</span>
@@ -480,7 +502,7 @@ section.about { padding: 22px 22px; }
 
 <section class="about">
 <h2>Машиночитаемая основа</h2>
-<p>Фактологическая база <a href="https://github.com/scadastrangelove/profgames/blob/main/Z%20-%20factcheck.json">factcheck.json</a> и событийный массив <a href="https://github.com/scadastrangelove/profgames/blob/main/profgames_ai_signals_v0_3.jsonl">profgames_ai_signals_v0_3.jsonl</a> публикуются отдельно как самостоятельные артефакты. Все имена полей на английском, единая шкала статусов и уровней доказательности, ссылки на первоисточники.</p>
+<p>Фактологическая база <a href="https://github.com/scadastrangelove/profgames/blob/main/Z%20-%20factcheck.json">factcheck.json</a> и событийный массив <a href="https://github.com/scadastrangelove/profgames/blob/main/profgames_ai_signals_v0_3.jsonl">profgames_ai_signals_v0_3.jsonl</a> публикуются отдельно как самостоятельные артефакты. К ним добавлен параллельный массив психологического среза <a href="https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals_v0_7.jsonl">aimind/aimind_signals_v0_7.jsonl</a> и его фактчек <a href="https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck_v0_7.json">aimind/aimind_factcheck_v0_7.json</a> с общей шкалой доказательности и совместимой структурой полей.</p>
 <p>Можно скормить их агенту и попросить найти новое — это может стать следующим репером на пути.</p>
 </section>
 
