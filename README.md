@@ -22,12 +22,12 @@
 | **B** | Одна теория, разные параметры | Параметризация теоретической рамки на трёх странах: США как baseline, Россия и Китай. ОАЭ как пограничный случай малой страны между гигантами. | 🟡 готовится |
 | **C** | Четыре актора, пять биографий | Пять профессиональных траекторий и работа provenance translator-ов: как опыт переводится в локальный статус, доверие, ответственность через регистры, лицензии, employer pedigree. | 🟡 готовится |
 | **D** | Семь симптомов и четыре актора | Диагностическая карта. Семь видимых симптомов кризиса воспроизводства профессии × четыре актора, каждый со своим срезом. Не рецепт — инструмент различения. | 🟡 готовится |
-| **Y** | [AI-Mind: что ИИ делает с психикой](https://scadastrangelove.github.io/profgames/aimind/aimind.html) | Параллельная серия к профессиональному циклу. Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. 41 сигнал 2023–2026, 15 феноменов (от парасоциальной привязанности и ИИ-индуцированного психоза до социального замещения и character grooming), 7 параметров уязвимости, общая с **Z** шкала доказательности A/B/C/D. Регуляторные landmark-ы (CA SB 243, NY S-3008C, China CAC, EU AI Act, Italy Garante), судебные кейсы (Setzer, Раин, Peralta, Brooks, SMVLC seven, Roberts UK), peer-reviewed исследования (MIT/OpenAI, Cheng/Jurafsky Science, JAMA Perlis, Wysa NHS Sussex). [HTML](https://scadastrangelove.github.io/profgames/aimind/aimind.html) · [JSONL](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals_v0_7.jsonl) · [JSON](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck_v0_7.json) | ✅ опубликовано |
+| **Y** | [AI-Mind: что ИИ делает с психикой](https://scadastrangelove.github.io/profgames/aimind/aimind.html) | Параллельная серия к профессиональному циклу. Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. 41 сигнал 2023–2026, 15 феноменов (от парасоциальной привязанности и ИИ-индуцированного психоза до социального замещения и character grooming), 7 параметров уязвимости (включая операционализованную V5 — нейроотличие с AuDHD sub-category), общая с **Z** шкала доказательности A/B/C/D. Регуляторные landmark-ы (CA SB 243, NY S-3008C, China CAC, EU AI Act, Italy Garante €5M fine), судебные кейсы (Setzer, Раин, Peralta, Brooks, SMVLC seven, Roberts UK, Gavalas v Google Gemini), peer-reviewed исследования (MIT/OpenAI, Cheng/Jurafsky Science, JAMA Perlis, Wysa NHS Sussex), statistical_meta_summary с применением 11 фильтров (GRADE≥2, I²<50%, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023–2026. [HTML](https://scadastrangelove.github.io/profgames/aimind/aimind.html) · [JSONL](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals_v0_7.jsonl) · [JSON](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck_v0_8.json) | ✅ опубликовано |
 | **Z** | [Фактологическая основа](https://scadastrangelove.github.io/profgames/factcheck.html) | Независимый фактчек 41 утверждения с разнесением уровней доказательности. С первоисточниками, оговорками и рекомендованными формулировками. [HTML](https://scadastrangelove.github.io/profgames/factcheck.html) · [JSON](https://scadastrangelove.github.io/profgames/factcheck.json) | ✅ опубликовано |
 
 ## Машиночитаемая основа
 
-Фактологическая база [`factcheck.json`](https://github.com/scadastrangelove/profgames/blob/main/factcheck.json) и событийный массив [`profgames_ai_signals_v0_3.jsonl`](https://github.com/scadastrangelove/profgames/blob/main/profgames_ai_signals_v0_3.jsonl) публикуются отдельно как самостоятельные артефакты. К ним добавлен параллельный массив психологического среза [`aimind/aimind_signals_v0_7.jsonl`](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals_v0_7.jsonl) и его фактчек [`aimind/aimind_factcheck_v0_7.json`](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck_v0_7.json) с общей шкалой доказательности и совместимой структурой полей. Все имена полей на английском, единая шкала статусов, ссылки на первоисточники.
+Фактологическая база [`factcheck.json`](https://github.com/scadastrangelove/profgames/blob/main/factcheck.json) и событийный массив [`profgames_ai_signals_v0_3.jsonl`](https://github.com/scadastrangelove/profgames/blob/main/profgames_ai_signals_v0_3.jsonl) публикуются отдельно как самостоятельные артефакты. К ним добавлен параллельный массив психологического среза [`aimind/aimind_signals_v0_7.jsonl`](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals_v0_7.jsonl) и его фактчек [`aimind/aimind_factcheck_v0_8.json`](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck_v0_8.json) с общей шкалой доказательности и совместимой структурой полей. Все имена полей на английском, единая шкала статусов, ссылки на первоисточники.
 
 Можно скормить их агенту и попросить найти новое — это может стать следующим репером на пути.
 
@@ -99,9 +99,9 @@ event_year        — год события
 schema_version    — aimind_signal_schema_v0.1
 ```
 
-### Структура `aimind/aimind_factcheck_v0_7.json`
+### Структура `aimind/aimind_factcheck_v0_8.json`
 
-Аналогично `factcheck.json`, но с проходами под Y: `psychosis_and_delusion`, `parasocial_and_attachment`, `minors_and_legal_cases`, `research_signal_audit`, `regulatory_landmark`, `industry_disclosure`. 37 проверенных утверждений, 26 пробелов, 6 dataset audits.
+Аналогично `factcheck.json`, но с проходами под Y: `psychosis_and_delusion`, `parasocial_and_attachment`, `minors_and_legal_cases`, `research_signal_audit`, `regulatory_landmark`, `industry_disclosure`. 37 проверенных утверждений, 23 пробела (gap-01 ↔ gap-13 консолидированы, gap-13 как canonical для RU кейсов), 7 dataset audits. Дополнительный top-level раздел `statistical_meta_summary` — применение 11 строгих фильтров (GRADE≥2, I²<50%, мощность≥80%, n>100/arm, recency≤10y, NNT<10, Cohen d≥0.5, IF≥1, peer review>2 weeks, препринт<18 мес) к 6 крупным мета-анализам 2023–2026 (Feng N=29,637; Zhang N=6,314; npj 2026 N=7,401; Li N=1,974; He N=6,089; npj 2023 N=35 RCT). Survivor pool после всех фильтров — 2 subgroup-specific findings; APA Health Advisory 13.11.2025 коррoborates.
 
 ### Уровни доказательности
 
@@ -134,14 +134,14 @@ profgames/
 ├── aimind/                             # Y — параллельный психологический срез
 │   ├── aimind.html                     #   single-page рендер каталога
 │   ├── aimind_signals_v0_7.jsonl       #   событийный массив (41 сигнал)
-│   ├── aimind_factcheck_v0_7.json      #   фактчек (37 claims, 26 gaps, 6 audits)
-│   └── aimind_methodology_pack_v0_4.json  # рамка феноменов / уязвимости / engagement
+│   ├── aimind_factcheck_v0_8.json      #   фактчек (37 claims, 23 gaps, 7 audits, statistical_meta_summary)
+│   └── aimind_methodology_pack_v0_5.json  # рамка феноменов / уязвимости / engagement (15 PH + 7 V + 6 E)
 └── README.md
 ```
 
 ## Лицензия
 
-Тексты — Сергей Гордейчик, 2026. Машиночитаемые базы (`factcheck.json`, `profgames_ai_signals_v0_3.jsonl`, `aimind/aimind_signals_v0_7.jsonl`, `aimind/aimind_factcheck_v0_7.json`) свободны для использования агентами и исследователями с указанием источника.
+Тексты — Сергей Гордейчик, 2026. Машиночитаемые базы (`factcheck.json`, `profgames_ai_signals_v0_3.jsonl`, `aimind/aimind_signals_v0_7.jsonl`, `aimind/aimind_factcheck_v0_8.json`) свободны для использования агентами и исследователями с указанием источника.
 
 ---
 
