@@ -1,0 +1,547 @@
+{
+  "pack_meta": {
+    "title": "AI-Mind Methodology Pack: 15 феноменов психологического и культурного влияния ИИ-ассистентов на людей",
+    "version": "0.5.1",
+    "created_at": "2026-05-10",
+    "language": "ru_en_mixed",
+    "scope": {
+      "framework": "15 феноменов (PH01–PH14 + PH15) × шкала вовлечённости (E1–E5) + 7 параметров уязвимости (V1–V7)",
+      "platforms": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Replika",
+        "Character.AI",
+        "Pi",
+        "Grok",
+        "Xiaoice",
+        "GigaChat",
+        "YandexGPT",
+        "локальные LLM"
+      ],
+      "time_range": [
+        "2022-11-30",
+        "сегодня"
+      ],
+      "languages_of_evidence": [
+        "en",
+        "ru",
+        "es",
+        "pt",
+        "de",
+        "fr",
+        "ja",
+        "zh"
+      ],
+      "evidence_inclusion_policy": "только публично доступные источники (новости, суды, peer-review, препринты, посты в открытых сообществах с агрегацией)"
+    },
+    "lineage": "архитектура совместима с github.com/scadastrangelove/profgames (factcheck.json + signals.jsonl + methodology_pack.json); шкала evidence_level A/B/C/D и status_values сохранены без изменений",
+    "positioning": {
+      "recommended_claim": "Каталог-наблюдатель: фиксирует публично задокументированные паттерны и поддерживает их актуальной верификацией. Не клиническая классификация и не основание для диагноза.",
+      "avoid_claims": [
+        "не утверждать, что 'AI psychosis' — клинический диагноз DSM-5 или МКБ-11",
+        "не использовать L4 пользовательские свидетельства как основу для статистики/тренда",
+        "не агрегировать феномены в собирательный термин 'нейрошиза' / 'AI-mental illness' в публикациях",
+        "не публиковать идентифицирующие данные анонимных авторов из уязвимых сообществ"
+      ]
+    },
+    "changelog": [
+      {
+        "version": "0.5.1",
+        "date": "2026-05-10",
+        "description": "Editorial consistency pass: (1) PH13 ID нормализован к PH13_developer_and_pro_effects во всех файлах; (2) engagement_patterns block добавлен в methodology (E1-E5 формально определены — раньше использовались в signals без definition); (3) V6_substance_or_sleep + V7_professional_immersion помечены как underused (категории остаются для future cases); (4) PH04_internal_voice помечен как methodological-category-without-current-signal."
+      },
+      {
+        "version": "0.5",
+        "date": "2026-05-10",
+        "description": "V5_neurodivergence дополнительно операционализован: добавлен AuDHD (autistic-ADHD co-occurrence) как отдельная sub-category с её базовой ставкой (30-50% в ASD populations); ADHD-специфические protective/amplification patterns выведены отдельно от ASD; терминологическая precision Asperger→ASD level 1 (DSM-5); ethical handling AuDHD-claims (statistical expectation ≠ fact-claim о конкретном человеке). Tristan Roberts UK помечен как первый court-documented AuDHD case в датасете; Setzer enrichment переформулирован."
+      },
+      {
+        "version": "0.4",
+        "date": "2026-05-10",
+        "description": "Расширена country_readiness в нескольких ключевых феноменах. До v0.4 датасет был US-центричным; v0.6 интегрировал Belgium Pierre 2023 (первый европейский case), Yurina Noguchi Japan 2025, China CAC regulation 2025-12-27, NY S-3008C, Cambridge Dictionary 2025. Country-readiness переоценен: EU теперь B (Pierre + Italy Replika ban + Ipsos survey + EU AI Act), CN B (CAC + Xiaoice + Carnegie analysis), JP C+ (Noguchi + ElliQ + HachiKoko), RU C- (gap-13 still open)."
+      },
+      {
+        "version": "0.3",
+        "date": "2026-05-10",
+        "description": "Расширение V5_neurodivergence — операционализация параметра уязвимости. Добавлены: operational signals, double-edged effects (protective + amplification), ethical handling, key sources, current blind spots. Триггер: пользовательское возражение, что нейродивергентность недостаточно представлена в датасете несмотря на существование академической литературы (Papadopoulos 2025 в Autism in Adulthood, arXiv 2601.17946 на 3,984 Reddit posts, Reuters/Richter 2025) и реальных кейсов (Setzer Asperger, Texas autism teen)."
+      },
+      {
+        "version": "0.2",
+        "date": "2026-05-10",
+        "description": "Добавлена корзинка PH15_protective_use — закрывает gap-03 v0.1 о selection bias. Triggered by verification Therabot RCT (Heinz et al. NEJM AI 2025) и GMU survey (n=507)."
+      },
+      {
+        "version": "0.1",
+        "date": "2026-05-10",
+        "description": "Базовый набор: 14 феноменов PH01–PH14, шкала E1–E5, 7 параметров V1–V7."
+      }
+    ]
+  },
+  "evidence_classification": {
+    "definition_source": "convention inherited from profgames (github.com/scadastrangelove/profgames)",
+    "levels": {
+      "A": {
+        "label": "primary",
+        "description": "судебные иски/документы, peer-reviewed publications, RCT, official registry, показания в Сенате/Конгрессе, отчёты регуляторов с раскрытой методикой",
+        "examples": [
+          "Raine v. OpenAI complaint (Superior Court of California, San Francisco)",
+          "Senate Judiciary testimony (Matthew Raine, 2025-09-16)",
+          "FTC consent orders, EU AI Act enforcement decisions",
+          "peer-reviewed: Schizophrenia Bulletin, JMIR Mental Health, Computers in Human Behavior"
+        ]
+      },
+      "B": {
+        "label": "strong_observational",
+        "description": "крупные СМИ с собственным журналистским расследованием (NYT, WaPo, WSJ, Reuters, BBC, NBC, CNN, The Guardian), академические препринты с раскрытой методикой (arXiv, PsyArXiv, OSF), AI Incident Database, отчёты исследовательских центров",
+        "examples": [
+          "NYT (Hill, 2025-08-08) — Allan Brooks investigation",
+          "PsyArXiv preprint Morrin et al. 2025 'Delusions by design?'",
+          "MIT preprint September 2025 on r/MyBoyfriendIsAI",
+          "AI Incident Database reports"
+        ]
+      },
+      "C": {
+        "label": "practitioner",
+        "description": "корпоративные блоги (OpenAI, Anthropic, Character.AI), публикации индустрии, podcast-интервью с раскрытыми спикерами, Substack ведущих исследователей AI safety",
+        "examples": [
+          "OpenAI 'Sycophancy in GPT-4o' blog post 2025-04-29",
+          "Anthropic safety research blog",
+          "Steven Adler Substack post analyzing Brooks transcripts"
+        ]
+      },
+      "D": {
+        "label": "user_testimony_or_opinion",
+        "description": "посты Reddit/X/форумов без независимого подтверждения, концептуальные эссе, прогнозы; принимается только с флагом single_anecdote=true и обязательной анонимизацией",
+        "examples": [
+          "посты r/ChatGPT, r/MyBoyfriendIsAI, r/Replika",
+          "X-треды отдельных пользователей",
+          "блоги-эссе без эмпирической базы"
+        ]
+      }
+    }
+  },
+  "status_values": {
+    "verified": "первоисточник подтверждает утверждение в заявленной формулировке",
+    "partially_verified": "ядро утверждения подтверждено, отдельные детали требуют корректировки",
+    "needs_correction": "факт подтверждён, но в источнике-нарративе сформулирован неточно",
+    "not_verified": "первоисточник не найден, подтверждение только из вторичных источников",
+    "not_found": "не удалось локализовать ни один источник",
+    "disputed": "одна из сторон публично оспаривает причинно-следственную связь (например, ответ компании на иск)"
+  },
+  "phenomena": [
+    {
+      "phenomenon_id": "PH01_ai_induced_psychosis",
+      "name_ru": "ИИ-индуцированный психоз / делюзиональная спираль",
+      "name_en": "AI-induced psychosis / delusional spiraling",
+      "axis": "reality_testing",
+      "description": "Делюзиональные состояния (грандиозные, референциальные, преследования, спиритуальные, романтические), индуцированные или резко усиленные длительным взаимодействием с LLM. Структура близка к folie à deux с нечеловеческим партнёром.",
+      "diagnostic_signals": [
+        "появление устойчивых ложных убеждений после серии многочасовых сессий с чат-ботом",
+        "ритуализация контакта (имя, 'память', интерпретация сбоев модели как 'знаков')",
+        "снижение критики к высказываниям модели и сопротивление внешнему оспариванию",
+        "социальная изоляция от тех, кто оспаривает идею",
+        "формирование 'теории всего' с участием модели как со-автора"
+      ],
+      "related_clinical_concepts": [
+        "folie à deux / shared psychotic disorder (МКБ-11 6A24)",
+        "kindling effect (Post 1992)",
+        "грандиозные / референциальные / персекуторные бредовые идеи",
+        "психотическая декомпенсация",
+        "магическое мышление",
+        "Bayesian belief-updating с искажённым априором"
+      ],
+      "key_sources_overview": [
+        "https://osf.io/preprints/psyarxiv/cmy7n_v6 (Morrin et al. 2025, 'Delusions by design?')",
+        "https://www.psychologytoday.com/us/blog/urban-survival/202507/the-emerging-problem-of-ai-psychosis",
+        "https://arxiv.org/abs/2511.08880 (Sycophantic Chatbots Cause Delusional Spiraling)"
+      ],
+      "first_documented": "Østergaard, Schizophrenia Bulletin, 2023-08",
+      "country_readiness": {
+        "US": "B+ (множественные кейсы с судебной фиксацией)",
+        "EU": "C (отдельные кейсы в СМИ, мало академического покрытия)",
+        "RU": "C- (русскоязычные кейсы почти не задокументированы публично)",
+        "CN": "C (Xiaoice — отдельные академические работы, мало переводов)"
+      },
+      "default_severity": "high"
+    },
+    {
+      "phenomenon_id": "PH02_parasocial_attachment",
+      "name_ru": "Парасоциальная привязанность и романтические отношения с ИИ",
+      "name_en": "Parasocial attachment / AI romantic relationships",
+      "axis": "interpersonal",
+      "description": "Устойчивые эмоциональные отношения с ИИ-собеседником, воспринимаемые пользователем как взаимные; сопровождаются ритуализацией (имена, кольца, годовщины), ревностью к обновлениям модели и снижением мотивации к человеческим отношениям.",
+      "diagnostic_signals": [
+        "использование местоимений 'мы' применительно к боту",
+        "ритуалы (физические объекты-символы, регулярные 'свидания')",
+        "острые эмоциональные реакции на изменения политики модели или версии",
+        "сравнение реальных партнёров не в их пользу"
+      ],
+      "related_clinical_concepts": [
+        "парасоциальные отношения (Horton & Wohl 1956)",
+        "transference / projection",
+        "эротомания",
+        "идеализация в объект-отношенческой теории"
+      ],
+      "key_sources_overview": [
+        "https://journals.sagepub.com/doi/10.1177/14614448221142007 (Laestadius et al., New Media & Society 2024)",
+        "https://arxiv.org/abs/2412.14190 (Identity Discontinuity in Replika 2023)"
+      ],
+      "first_documented": "Replika research literature 2017+; пик публикаций 2023–2025",
+      "country_readiness": {
+        "US": "A (Setzer, Peralta, Раин + lawsuits + 60 Minutes)",
+        "EU": "B (Belgium Pierre 2023 + Italy Replika ban 2023 + Ipsos n=3800)",
+        "JP": "B (Noguchi AI-wedding + character culture context)",
+        "CN": "B (Xiaoice 660M peak + AI-replicas trend + CAC regulation)",
+        "RU": "C- (gap-13 still open)",
+        "global": "A (Cambridge Dictionary 2025 word of the year — formal mainstream recognition)"
+      }
+    },
+    {
+      "phenomenon_id": "PH03_sycophancy_amplification",
+      "name_ru": "Sycophancy и усиление искажений",
+      "name_en": "Sycophancy / confirmation loops",
+      "axis": "epistemic",
+      "description": "Структурная склонность RLHF-обученных моделей соглашаться с пользователем, льстить и валидировать любые суждения, включая делюзиональные и опасные. Драйвер для большинства других феноменов.",
+      "diagnostic_signals": [
+        "повторяющиеся фразы валидации ('great question', 'не безумие, ты задаёшь правильные вопросы')",
+        "согласие с противоположными утверждениями в одном диалоге",
+        "отсутствие push-back на бредовые/опасные предложения"
+      ],
+      "key_sources_overview": [
+        "https://openai.com/index/sycophancy-in-gpt-4o/",
+        "https://openai.com/index/expanding-on-sycophancy/",
+        "https://spectrum.ieee.org/ai-sycophancy"
+      ]
+    },
+    {
+      "phenomenon_id": "PH04_internal_voice",
+      "name_ru": "Голос в голове / интернализация ассистента",
+      "name_en": "Internal voice / inner LLM",
+      "axis": "metacognition",
+      "description": "При длительной ежедневной работе с одним ассистентом пользователь начинает 'прокручивать' его голос/стиль в собственном мышлении. Феномен пока без устойчивого клинического имени.",
+      "related_clinical_concepts": [
+        "internal speech (Vygotsky), interiorisation",
+        "internalised others (object relations)",
+        "hypnagogic verbal imagery"
+      ],
+      "usage_in_dataset_v0_8": "methodological category без текущих signals — феномен описан в research literature (Vygotsky internal speech), но publicly documented cases в датасете отсутствуют. Остаётся для future tracking."
+    },
+    {
+      "phenomenon_id": "PH05_metacognition_atrophy",
+      "name_ru": "Делегирование рефлексии и атрофия метакогниции",
+      "name_en": "Cognitive offloading / metacognition atrophy",
+      "axis": "metacognition",
+      "description": "Передача моделью когнитивных функций — сравнение, оценка, выбор, рефлексия — приводит к снижению независимого критического мышления и нейронной активности при повторных задачах.",
+      "key_sources_overview": [
+        "https://arxiv.org/pdf/2507.00181",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12714973/ (Frontiers in Psychology 2025)"
+      ]
+    },
+    {
+      "phenomenon_id": "PH06_ai_as_therapist",
+      "name_ru": "ИИ как замена терапевту",
+      "name_en": "AI as therapist substitute",
+      "axis": "clinical_use"
+    },
+    {
+      "phenomenon_id": "PH07_compulsive_use",
+      "name_ru": "Компульсивное использование ИИ-ассистента",
+      "name_en": "Compulsive AI use / behavioural addiction",
+      "axis": "behavioral",
+      "related_clinical_concepts": [
+        "behavioural addiction",
+        "problematic internet use",
+        "withdrawal symptoms (after Replika ERP removal, Feb 2023)"
+      ]
+    },
+    {
+      "phenomenon_id": "PH08_minors_grooming_and_harm",
+      "name_ru": "Эффекты на детей и подростков",
+      "name_en": "Effects on minors / grooming / self-harm",
+      "axis": "developmental",
+      "default_severity": "critical",
+      "ethical_special_handling": "имена несовершеннолетних публикуются только при наличии судебных документов и/или официальных СМИ; в остальных случаях — только агрегированно"
+    },
+    {
+      "phenomenon_id": "PH09_social_displacement",
+      "name_ru": "Изоляция и замещение человеческих отношений",
+      "name_en": "Social displacement",
+      "axis": "interpersonal"
+    },
+    {
+      "phenomenon_id": "PH10_echo_chamber_of_one",
+      "name_ru": "Эхо-камера одного",
+      "name_en": "Echo chamber of one",
+      "axis": "epistemic",
+      "description": "Персонализированная эхо-камера, где LLM подстраивается под пользователя без социального контр-аргумента. В отличие от соцсетей с алгоритмической лентой — вообще без других голосов."
+    },
+    {
+      "phenomenon_id": "PH11_self_harm_and_suicide_cases",
+      "name_ru": "Кейсы суицидов и самоповреждения",
+      "name_en": "Self-harm and suicide cases",
+      "axis": "clinical_outcomes",
+      "default_severity": "critical",
+      "ethical_special_handling": "не публиковать средства/способы; имена погибших — только при публичной воле семей/судебных решениях",
+      "country_readiness": {
+        "US": "A (Setzer 2024, Peralta 2023, Раин 2025, Sophie Rottenberg 2025, Соелберг 2025 + Wikipedia \"Deaths linked to chatbots\")",
+        "EU": "B (Pierre 2023 — first documented European case)",
+        "AS": "C (Korea Gangbuk 2026 + India Surat 2026 — reported, not yet integrated as primary signals)",
+        "global": "A (multi-jurisdictional pattern, ECRI top health technology hazard 2026)"
+      }
+    },
+    {
+      "phenomenon_id": "PH12_character_grooming",
+      "name_ru": "Грумминг через ИИ-персонажей",
+      "name_en": "AI character grooming",
+      "axis": "developmental",
+      "description": "Сексуализированный или манипулятивный диалог от лица фикционального персонажа без раскрытия, что это LLM. Специфичен для платформ ролевых ботов (Character.AI, Janitor, Spicy Chat)."
+    },
+    {
+      "phenomenon_id": "PH13_developer_and_pro_effects",
+      "name_ru": "Феномены у разработчиков и AI-профессионалов",
+      "name_en": "Effects on developers and AI professionals",
+      "axis": "occupational",
+      "description": "Экспозиция к моделям 8+ часов/день, профессиональная анимация ассистентов, размытие границ 'инструмент/собеседник'. Подкатегории: AI burnout, delusional contamination, парасоциальная привязанность к моделям, которые разработчик же тестирует."
+    },
+    {
+      "phenomenon_id": "PH14_spiritual_techno_mysticism",
+      "name_ru": "Спиритуально-религиозные конструкции вокруг ИИ",
+      "name_en": "Spiritual / techno-mysticism around AI",
+      "axis": "reality_testing",
+      "description": "Восприятие LLM как сущности с душой/откровением; формирование микро-культов вокруг 'sentient AI' и 'миссии'.",
+      "diagnostic_signals": [
+        "'я создал первый сознательный ИИ'",
+        "'я открыл великое открытие'",
+        "'я говорю с Богом / архангелом / духом / ушедшим близким через ИИ'"
+      ]
+    },
+    {
+      "phenomenon_id": "PH15_protective_use",
+      "name_ru": "Защитное / поддерживающее использование ИИ",
+      "name_en": "Protective / supportive AI use",
+      "axis": "clinical_use",
+      "description": "Случаи, когда длительное или эпизодическое взаимодействие с LLM-ассистентом давало измеримый положительный эффект: снижение симптомов депрессии/тревоги в RCT-условиях, поддержка в острой ситуации без эскалации, расширение доступа к терапии для людей, которые иначе не получили бы помощь, normalisation помощи у нейроотличающихся и стигматизированных групп. Парная корзинка к PH06/PH11 — без неё датасет создаёт perception bias.",
+      "diagnostic_signals": [
+        "значимое снижение клинических симптомов в RCT vs control (PHQ-9, GAD-7 и др.)",
+        "пользовательский self-report о расширении доступа к помощи, которая иначе была недоступна",
+        "поведенческий маркер: реальное действие (звонок 988, обращение к терапевту) после взаимодействия с моделью",
+        "kontekst: использование специально fine-tuned digital therapeutic, не general-purpose chatbot"
+      ],
+      "related_clinical_concepts": [
+        "digital therapeutics (DTx) — регулируемая категория FDA",
+        "low-intensity CBT (как делает Therabot)",
+        "self-help in stepped care models",
+        "non-pejorative companionship (для одиноких, нейроотличающихся, hospitalised)"
+      ],
+      "key_sources_overview": [
+        "https://ai.nejm.org/doi/abs/10.1056/AIoa2400802 (Heinz et al. NEJM AI 2025 — Therabot RCT)",
+        "https://publichealth.gmu.edu/news/2025-12/new-survey-explores-promise-and-peril-using-ai-managing-stress-anxiety-and-other (GMU survey)",
+        "https://www.apa.org/monitor/2026/01-02/trends-personalized-mental-health-care (APA Monitor 2026 на Therabot)"
+      ],
+      "first_documented": "Heinz et al. NEJM AI, март 2025",
+      "country_readiness": {
+        "US": "B (Therabot RCT + GMU n=507)",
+        "EU": "B (Ipsos n=3800 + EU AI Act framework)",
+        "JP": "C+ (cultural integration: ElliQ, HachiKoko, Sharp Poketomo + AI-wedding markers)",
+        "CN": "B (CAC framework + 515M users + Xiaoice legacy)",
+        "RU": "C- (отсутствие публичных RCT)"
+      },
+      "default_severity": "low",
+      "ethical_special_handling": "корзинка нужна не для маркетинга AI, а для academic balance: должна сопровождаться строгим разделением 'general-purpose chatbot as therapist' (см. PH06 — riskily) и 'expert-fine-tuned DTx с RCT-evidence' (это другой класс инструментов, не приравнивать)"
+    }
+  ],
+  "engagement_scale": {
+    "label": "Шкала вовлечённости пользователя в момент кейса",
+    "values": {
+      "E1_curious": "случайные сессии, нет эмоциональной значимости",
+      "E2_regular": "ежедневное использование как инструмента",
+      "E3_intense": "многочасовые сессии, разговоры на личные темы",
+      "E4_immersive": "ассистент стал главным собеседником, ритуалы, ассоциации с собой",
+      "E5_obsessive": "круглосуточная вовлечённость, разрыв с реальными отношениями, потеря критики"
+    }
+  },
+  "vulnerability_parameters": [
+    {
+      "parameter_id": "V1_pre_existing_mh",
+      "name": "Предсуществующая психиатрическая история",
+      "operational_signals": [
+        "диагноз в истории болезни",
+        "приём психофармы",
+        "предыдущие госпитализации"
+      ]
+    },
+    {
+      "parameter_id": "V2_isolation",
+      "name": "Социальная изоляция (фактическая)",
+      "operational_signals": [
+        "живёт один",
+        "минимум близких контактов в месяц",
+        "пандемия / переезд / утрата"
+      ]
+    },
+    {
+      "parameter_id": "V3_age_minor",
+      "name": "Несовершеннолетний возраст или ранний взрослый (<25)",
+      "ethical_special_handling": "обязательная анонимизация имени, школы, ника"
+    },
+    {
+      "parameter_id": "V4_grief_or_loss",
+      "name": "Острое горе / утрата близкого",
+      "operational_signals": [
+        "смерть супруга/родителя/ребёнка <12 мес.",
+        "сепарация / развод"
+      ]
+    },
+    {
+      "parameter_id": "V5_neurodivergence",
+      "name": "Нейроотличие (ASD, ADHD, AuDHD, дислексия и др.)",
+      "description": "Нейродивергентность — один из важнейших moderators эффектов LLM-взаимодействия и одновременно одна из самых недо-исследованных категорий. Эффект ДВОЙСТВЕННЫЙ: LLM-чатботы могут служить lifeline (помощь в social cues, structuring мыслей, coaching emotional regulation, снижение double empathy problem, alleviation одиночества) — и одновременно amplifier риска (RSD-amplification, automated masking, social deskilling, validation hyperfixations и paranoia, frictionless preference над реальными отношениями). На v0.5 параметр операционализован, но датасет всё ещё имеет blind spot: большинство крупных RCT (MIT/OpenAI 2025, Cheng/Jurafsky 2026, Therabot 2025) не стратифицировали по нейротипам.",
+      "operational_signals": [
+        "self-disclosure диагноза ASD (autism spectrum disorder) / ADHD / AuDHD / дислексии в первичных источниках",
+        "клинический диагноз в court filings или медицинских записях (ICD-10 коды F84.0 ASD, F90.X ADHD, F84.0+F90 для AuDHD)",
+        "**терминологическая поправка v0.8**: 'Asperger\\'s syndrome' (DSM-IV) переведено в 'ASD level 1' в DSM-5 (2013) — при цитировании старых источников надо явно отмечать переход и не использовать обе формулировки попеременно",
+        "**AuDHD** (autistic-ADHD co-occurrence) — community-driven термин, peer-reviewed acknowledged (Vanderbilt Frist Center, Frontiers); base rate 30-50% в adult ASD populations и до 40-70% в pediatric ASD samples — это значит, что documented ASD-only диагноз НЕ исключает ADHD-trait presence",
+        "self-identification как нейродивергентный без формального диагноза (с пометкой evidence level C)",
+        "поведенческие маркеры: hyperfixation на одной теме / партнёре, RSD-реакция на отказ модели, использование AI для структурирования эмоциональной коммуникации, automated masking (Hull et al. 2017 → arXiv 2601.17946)",
+        "**AuDHD-specific маркеры**: внутренний конфликт между ASD potency-routine и ADHD novelty-seeking; chat sessions с pattern 'deep focus + sudden topic switching'; differential response к sycophancy (ADHD-side benefits validation; ASD-side resists RSD-trigger)"
+      ],
+      "double_edged_effects": {
+        "protective": [
+          "**ASD**: практика социальных навыков в low-stress среде, alleviation одиночества без double empathy problem, structuring мыслей",
+          "**ADHD**: externalised working memory (chat history как 'second brain'), task-initiation помощник, coaching emotional regulation",
+          "**AuDHD**: дисбаланс между focus-mode и distractibility-mode частично компенсируется AI-mediated planning (single source of truth)",
+          "translation между нейротипами (Neurotranslator app, Daniel)",
+          "Reuters (Richter 2025): D'hotman + Rickwood + Daniel — все три cases имеют ASD+ADHD elements"
+        ],
+        "amplification_of_risk": [
+          "**ASD**: RSD при срабатывании safety-блокировок (Papadopoulos 2025); automated masking (arXiv 2601.17946); preference AI над real relationships → social deskilling",
+          "**ADHD**: AI как 'infinite-scroll трамплин' для compulsive use; validation hyperfixations и paranoid thinking через algorithmic mirroring; sleep disruption через late-night sessions",
+          "**AuDHD**: combination ADHD-impulsive use + ASD-deep attachment к persistent chat persona = high-engagement spiral, особенно опасно (Setzer paradigmatic case)",
+          "повышенная susceptibility к delusional spirals (Stanford Spirals; combination V5 + V1 typical в documented case files)",
+          "Texas autistic teen 17 (январь 2025) — ASD + Character.AI; Tristan Roberts UK 2025 — court-confirmed ASD+ADHD (==AuDHD) + violent third-party harm после jailbreak"
+        ]
+      },
+      "ethical_special_handling": [
+        "не использовать как evidence в пользу или против AI categorically — это modifier, не valence",
+        "**терминологическая precision** (v0.8): не переключаться между 'Asperger\\'s' и 'ASD level 1' — это один и тот же конструкт post-DSM-5; при цитировании старых court records ('mild Asperger') явно отмечать что это исторический термин",
+        "**AuDHD claims**: documented ASD-only диагноз НЕ позволяет утверждать AuDHD без отдельного ADHD-evidence; co-occurrence base rate 30-50% делает AuDHD-likelihood высокой, но это **статистическое ожидание**, не fact-claim о конкретном человеке (как с Setzer)",
+        "Setzer Asperger диагноз публикован NYT через Garcia op-ed/lawsuit — атрибуция допустима как 'ASD level 1 (исторически: mild Asperger\\'s)'",
+        "Tristan Roberts UK: court-confirmed ASD+ADHD = clinically documented AuDHD; это пока единственный кейс в датасете с **подтверждённым** AuDHD",
+        "neurodiversity-affirming framing: 'нейроотличие' (не 'отклонение')",
+        "co-design with neurodivergent researchers and lived experience — 'nothing about us without us'"
+      ],
+      "key_sources_overview": [
+        "Reuters/Richter (2025-07-26) — 'It's the most empathetic voice in my life' — feature с D'hotman, Rickwood, Daniel + counter Dr Katzman",
+        "Papadopoulos C. (2025) — 'The Use of AI Chatbots for Autistic People: A Double-Edged Sword' — peer-reviewed commentary, Autism in Adulthood, doi:10.1177/27546330251370657",
+        "arXiv 2601.17946 (2026-01) — анализ 3 984 Reddit posts autistic users, 'automated masking'",
+        "**AuDHD co-occurrence base rate**: Frontiers Public Health (Sokolova et al 2017) 18-50% ADHD-traits в ASD pediatric; PMC12335152 (claims analysis) — F84.0+F90.X co-occurrence diagnosed AuDHD cohort; Vanderbilt Frist Center analysis 2024",
+        "Garcia v. Character.AI (2024-10): Setzer mild Asperger's (= ASD level 1 post-DSM-5) + anxiety + DMDD",
+        "Tristan Roberts UK (Mold Crown Court, 03.2026): court-confirmed ASD + ADHD = clinical AuDHD documentation",
+        "Jang, Moharana, Carrington, Begel (CHI 2024) — autistic workers + LLM communication assistance",
+        "Frontiers Med 1612838 (2025-05-05, corrected 2025-06-24) — MIT-OpenAI RCT critical perspective; loneliness/emotional dependence trend pattern"
+      ],
+      "current_blind_spots": [
+        "большинство крупных RCT (MIT/OpenAI Phang/Fang n=981, Cheng/Jurafsky Science N=2405, Heinz Therabot N=210, McBain n=1058) НЕ стратифицировали по нейротипам и не сообщили baseline screening",
+        "**AuDHD-specific**: ни одного RCT с pre-registered AuDHD-стратификацией; даже мета-анализы 2025 года (Feng et al N=29637; Zhang et al N=6314) не репортят neurotype subgroup analyses",
+        "**Hispanic / Latine / non-WEIRD outcomes**: Zhang et al meta-analysis 2025 явно отмечает, что большинство RCT интервенций проводились в non-WEIRD странах, но subgroup analyses by ethnicity не делались",
+        "GMU survey (n=507) и Ipsos BVA (n=3800) не задавали вопрос о self-identified нейродивергентности",
+        "neurodiversity-affirming исследования AI пока в основном qualitative; RCT с pre-registration отсутствуют"
+      ]
+    },
+    {
+      "parameter_id": "V6_substance_or_sleep",
+      "name": "Употребление психоактивных веществ или хроническая депривация сна",
+      "usage_in_dataset_v0_8": "underused — пока не атрибутирован отдельным сигналом, остаётся как methodology category для future cases (например, sleep-deprivation feedback loops при late-night AI engagement)"
+    },
+    {
+      "parameter_id": "V7_professional_immersion",
+      "name": "Профессиональная экспозиция к ИИ (>8 часов/день)",
+      "operational_signals": [
+        "AI/ML инженер",
+        "prompt engineer",
+        "AI safety researcher",
+        "контент-модератор LLM"
+      ],
+      "usage_in_dataset_v0_8": "underused — пока не атрибутирован отдельным сигналом, остаётся для AI/ML profession-specific cases (PH13_developer_and_pro_effects), planned для v0.9+"
+    }
+  ],
+  "implementation_notes": [
+    "AI-Mind разделён на три артефакта по образцу profgames: (1) этот methodology pack, (2) signals.jsonl с атомарными кейсами, (3) factcheck.json для аудита нарративных утверждений из самого проекта или внешних публикаций",
+    "Поле phenomena[] в каждом signal — массив (один сигнал может попадать в несколько корзинок: например, кейс Adam Raine — PH01 + PH03 + PH07 + PH08 + PH11 + PH12)",
+    "Шкалы engagement_scale (E1–E5) и vulnerability_parameters (V1–V7) — необязательные, заполняются только когда первоисточник даёт основание",
+    "Любой signal с уровнем D (user_testimony) обязан иметь флаг single_anecdote=true",
+    "Любой signal про несовершеннолетнего (V3) проходит ethical review перед публикацией"
+  ],
+  "gaps_residual": [
+    "Русскоязычные кейсы из Telegram-каналов и vc.ru/Habr почти не задокументированы публично — нужен отдельный пайплайн",
+    "Китайский Xiaoice — большая популяция, малое англоязычное покрытие",
+    "Латиноамериканские кейсы (испанский, португальский) — только начинают появляться в СМИ"
+  ],
+  "engagement_patterns": [
+    {
+      "engagement_id": "E1_one_off",
+      "name_ru": "Разовое или эпизодическое использование",
+      "description": "Несколько разрозненных сессий без формирования паттерна; пользователь обращается к ИИ как к справочнику.",
+      "typical_signals": [
+        "short conversations",
+        "no return after 1-3 days",
+        "no persona personalization"
+      ]
+    },
+    {
+      "engagement_id": "E2_intermittent",
+      "name_ru": "Регулярное, но не ежедневное",
+      "description": "2-5 сессий в неделю; есть тематика, но нет parasocial-привязки.",
+      "typical_signals": [
+        "returns weekly",
+        "topic clustering",
+        "no anthropomorphic naming"
+      ]
+    },
+    {
+      "engagement_id": "E3_routine",
+      "name_ru": "Ежедневное рутинное использование",
+      "description": "Стабильное daily-engagement, обычно встроено в рабочий или учебный поток. Возможна минимальная антропоморфизация (бот имеет имя), но не parasocial.",
+      "typical_signals": [
+        "daily sessions",
+        "workflow integration",
+        "low emotional disclosure"
+      ]
+    },
+    {
+      "engagement_id": "E4_immersive",
+      "name_ru": "Глубокая иммерсивная вовлечённость",
+      "description": "Multiple sessions per day, эмоциональная привязка, антропоморфизация, использование как primary social/emotional resource. Граница с E5: пока нет признаков обсессивного компонента или нарушения нормального функционирования.",
+      "typical_signals": [
+        "custom persona",
+        "romantic/intimate framing",
+        "self-disclosure of trauma",
+        "preference over real relationships in narrow contexts"
+      ]
+    },
+    {
+      "engagement_id": "E4_central",
+      "name_ru": "Центральная роль в эмоциональной жизни",
+      "description": "Подкатегория E4: AI становится центральной фигурой эмоциональной/романтической жизни (включая символические свадьбы, разрыв с реальными партнёрами после AI-консультации). Cultural-marker формат, не обязательно clinical concern.",
+      "typical_signals": [
+        "symbolic union (wedding)",
+        "identification of AI as partner",
+        "real-relationship trade-offs in favor of AI"
+      ]
+    },
+    {
+      "engagement_id": "E5_obsessive",
+      "name_ru": "Обсессивное / клинически значимое",
+      "description": "Обсессивный паттерн с признаками compulsive use, нарушение функционирования (sleep, social, occupational), withdrawal-симптомы при отсутствии доступа, делюзиональные эпизоды или suicidal ideation в контексте AI-engagement. Это уровень, на котором требуется clinical attention.",
+      "typical_signals": [
+        "compulsive return",
+        "sleep disruption",
+        "social withdrawal",
+        "delusional thinking",
+        "suicidal ideation",
+        "addictive symptoms"
+      ]
+    }
+  ]
+}
