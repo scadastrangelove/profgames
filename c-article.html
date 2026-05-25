@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игры в профессию. C — Одна теория, разные параметры</title>
+<style>
+:root {
+  --bg: #fbfaf7;
+  --bg-card: #ffffff;
+  --bg-soft: #f4f2ec;
+  --text: #1a1a1a;
+  --text-muted: #5a5a58;
+  --text-light: #888780;
+  --accent: #5a4a3f;
+  --rule: rgba(0,0,0,0.12);
+  --rule-soft: rgba(0,0,0,0.06);
+  --c-us: #993C1D;
+  --c-ru: #9B7B0E;
+  --c-ae: #0F6E56;
+  --c-us-bg: #FAECE7;
+  --c-ru-bg: #FAEEDA;
+  --c-ae-bg: #E1F5EE;
+  --c-cn: #2A4D7A;
+  --c-cn-bg: #E8EEF6;
+  --serif: 'Charter', 'Iowan Old Style', 'Source Serif Pro', 'Cambria', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+}
+
+.container {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 64px 32px 96px;
+}
+
+.doc-head {
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 0.5px solid var(--rule);
+}
+.doc-head .eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+.doc-head h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+}
+.doc-head .subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 19px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+h2 {
+  font-size: 26px;
+  line-height: 1.25;
+  margin: 56px 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 0.5px solid var(--rule);
+}
+h3 {
+  font-size: 21px;
+  line-height: 1.3;
+  margin: 40px 0 14px;
+}
+h4 {
+  font-size: 17px;
+  line-height: 1.35;
+  margin: 28px 0 10px;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+p { margin: 0 0 16px; }
+p strong { font-weight: 600; color: var(--text); }
+em { font-style: italic; }
+
+p strong:first-child {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  color: var(--accent);
+}
+
+ul, ol { margin: 0 0 18px; padding-left: 24px; }
+li { margin-bottom: 8px; line-height: 1.6; }
+ul li { list-style: none; position: relative; padding-left: 4px; }
+ul li::before { content: '—'; position: absolute; left: -22px; color: var(--text-light); }
+ul li ul li::before { content: '·'; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+th, td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 0.5px solid var(--rule);
+  vertical-align: top;
+}
+th {
+  font-weight: 600;
+  background: var(--bg-soft);
+  color: var(--text);
+  border-bottom: 1px solid var(--rule);
+}
+
+hr { border: none; border-top: 0.5px solid var(--rule); margin: 48px 0; }
+
+blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+blockquote strong { font-style: normal; color: var(--text); font-weight: 600; }
+blockquote em { font-style: italic; color: var(--text); }
+
+code {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  background: var(--bg-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* === INFOGRAPHIC base === */
+figure.infographic {
+  margin: 36px 0;
+  padding: 24px 26px 26px;
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 6px;
+  font-family: var(--sans);
+  page-break-inside: avoid;
+}
+.ig-title {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: var(--text);
+}
+.ig-sub {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+.ig-note {
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: var(--bg-soft);
+  border-radius: 4px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.ig-note strong { color: var(--text); font-weight: 600; }
+.ig-note em { font-style: italic; color: var(--text); }
+
+/* === Parameters bars === */
+.ig-param-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.ig-param {
+  background: var(--bg-soft);
+  border-radius: 4px;
+  padding: 14px;
+}
+.ig-param-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.ig-param-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+.ig-param-row:last-child { margin-bottom: 0; }
+.ig-c-us, .ig-c-ru, .ig-c-ae, .ig-c-cn {
+  display: inline-block;
+  width: 28px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+.ig-c-us { color: var(--c-us); }
+.ig-c-ru { color: var(--c-ru); }
+.ig-c-ae { color: var(--c-ae); }
+.ig-bar {
+  flex: 0 0 80px;
+  height: 6px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.ig-bar-fill { height: 100%; }
+.ig-param-val {
+  flex: 1;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* === Three regimes cards === */
+.ig-regimes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.ig-regime {
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  padding: 14px;
+  border-top: 3px solid;
+}
+.ig-regime-us { border-top-color: var(--c-us); }
+.ig-regime-ru { border-top-color: var(--c-ru); }
+.ig-regime-ae { border-top-color: var(--c-ae); }
+.ig-regime-cn { border-top-color: var(--c-cn); }
+.ig-regime-flag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+.ig-regime-us .ig-regime-flag { color: var(--c-us); }
+.ig-regime-ru .ig-regime-flag { color: var(--c-ru); }
+.ig-regime-ae .ig-regime-flag { color: var(--c-ae); }
+.ig-regime-name {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.ig-regime-mech, .ig-regime-pro, .ig-regime-con {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.ig-regime-mech strong, .ig-regime-pro strong, .ig-regime-con strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* === Hold-up payoff matrix === */
+svg.ig-payoff {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* === Provenance table === */
+.ig-provenance-table {
+  display: grid;
+  grid-template-columns: 104px 1fr 1fr 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ig-prov-header {
+  background: var(--bg-soft);
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+.ig-prov-header:nth-child(2) { color: var(--c-us); }
+.ig-prov-header:nth-child(3) { color: var(--c-ru); }
+.ig-prov-header:nth-child(4) { color: var(--c-ae); }
+.ig-prov-row-label {
+  background: var(--bg-soft);
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.ig-prov-cell {
+  background: var(--bg-card);
+  padding: 12px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* === Evidence status grid === */
+.ig-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.ig-ev-block {
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  padding: 14px;
+  border-left: 4px solid;
+}
+.ig-ev-a { border-left-color: #185FA5; }
+.ig-ev-b { border-left-color: #0F6E56; }
+.ig-ev-c { border-left-color: #9B7B0E; }
+.ig-ev-d { border-left-color: var(--accent); }
+.ig-ev-level {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.ig-ev-a .ig-ev-level { color: #185FA5; }
+.ig-ev-b .ig-ev-level { color: #0F6E56; }
+.ig-ev-c .ig-ev-level { color: #9B7B0E; }
+.ig-ev-d .ig-ev-level { color: var(--accent); }
+.ig-ev-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+.ig-ev-items {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.ig-ev-items > div {
+  padding: 4px 0;
+  border-top: 0.5px solid var(--rule-soft);
+}
+.ig-ev-items > div:first-child { border-top: none; padding-top: 0; }
+
+/* === Final tasks grid === */
+.ig-final-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.ig-final-block {
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.ig-final-flag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  display: inline-block;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.ig-final-us { background: var(--c-us-bg); color: var(--c-us); }
+.ig-final-ru { background: var(--c-ru-bg); color: var(--c-ru); }
+.ig-final-ae { background: var(--c-ae-bg); color: var(--c-ae); }
+.ig-final-cn { background: var(--c-cn-bg); color: var(--c-cn); }
+.ig-final-task {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--text);
+  line-height: 1.25;
+}
+.ig-final-text {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  flex: 1;
+}
+.ig-final-question {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-light);
+  padding-top: 10px;
+  border-top: 0.5px solid var(--rule);
+}
+.ig-final-question strong { color: var(--text-muted); font-weight: 600; }
+
+/* Print */
+@media print {
+  body { background: white; font-size: 11pt; }
+  .container { max-width: 100%; padding: 0; }
+  figure.infographic { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container { padding: 32px 18px 64px; }
+  body { font-size: 16px; }
+  .doc-head h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+  h3 { font-size: 18px; }
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    font-size: 12.5px;
+    -webkit-overflow-scrolling: touch;
+  }
+  th, td { padding: 8px 10px; }
+  figure.infographic { overflow-x: auto; }
+  .ig-provenance-table {
+    grid-template-columns: 80px repeat(4, minmax(120px, 1fr));
+    min-width: 600px;
+    font-size: 11px;
+  }
+  .ig-prov-cell { padding: 8px; font-size: 11.5px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="doc-head">
+<div class="eyebrow"><a href="index.html" style="color: inherit; text-decoration: none;">Игры в профессию</a> · Статья C</div>
+<h1>Одна теория, разные параметры</h1>
+<p class="subtitle">США, Россия, Китай и ОАЭ как четыре институциональные конфигурации одной общей теории</p>
+<div class="author-line" style="margin-top: 18px; font-family: var(--sans); font-size: 13.5px; color: var(--text-muted);">
+  <span>Сергей Гордейчик</span>
+  <span style="color: var(--text-light); margin: 0 8px;">·</span>
+  <a href="https://teletype.in/@sergey_gordey" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">teletype</a>
+  <span style="color: var(--text-light); margin: 0 8px;">·</span>
+  <a href="https://t.me/aiakyn" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">telegram</a>
+  <span style="color: var(--text-light); margin: 0 8px;">·</span>
+  <a href="https://github.com/scadastrangelove/profgames" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">github</a>
+  <span style="color: var(--text-light); margin: 0 8px;">·</span>
+  <span style="font-family: var(--mono); font-size: 12.5px; background: var(--bg-soft); padding: 2px 8px; border-radius: 3px;">#profgames</span>
+</div>
+</header>
+
+<main>
+<p><strong>Назначение.</strong> Это статья C цикла «Игры в профессию». В первой — «Четыре актора, три времени» — собрана общая рамка: работодатель, сотрудник, образование и государство действуют с разными горизонтами, а ИИ меняет цену входа в профессию, качество сигналов и стимулы к обучению. Здесь та же рамка применяется к четырём институциональным конфигурациям — США, России, Китаю и ОАЭ. Вопрос не в том, «где ИИ сильнее», а в том, какие параметры делают одну и ту же игру разной: мобильность работников, сжатие зарплат, сила посредников, горизонт работодателя, роль государства и качество международных сигналов.</p>
+<p>США — опорный случай рыночного недоинвестирования. Россия — сегментированный рынок с якорными работодателями и сильным государством. Китай — государственно-промышленная машина возврата зарубежного провенанса. ОАЭ — малая страна-хаб, импортирующая готовый человеческий капитал.</p>
+<p><strong>Базовая идея.</strong> В первой статье показано, что одни и те же механики (<a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D0%BB%D0%B5%D0%BC%D0%BC%D0%B0_%D0%B7%D0%B0%D0%BA%D0%BB%D1%8E%D1%87%D1%91%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE">дилемма заключённого</a>, <a href="https://en.wikipedia.org/wiki/Hold-up_problem">проблема удержания инвестиций</a> (hold-up problem), <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D0%BD%D1%81,_%D0%9C%D0%B0%D0%B9%D0%BA%D0%BB">сигнальная теория Спенса</a>, <a href="https://ru.wikipedia.org/wiki/%D0%A0%D1%8B%D0%BD%D0%BE%D0%BA_%C2%AB%D0%BB%D0%B8%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2%C2%BB:_%D0%BD%D0%B5%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%91%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C_%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0_%D0%B8_%D1%80%D1%8B%D0%BD%D0%BE%D1%87%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D0%B8%D0%B7%D0%BC">рынок лимонов Акерлофа</a>, провалы координации, <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE">общественные блага при многих участниках</a>) дают разные равновесия при разных параметрах рынка — мобильности, силе сжатия зарплат, наличии институциональных посредников, горизонте работодателя, качестве сигналов. Германия не «исключение из теории игр», а другая параметризация той же модели. Эта статья применяет ту же логику к четырём конфигурациям, лежащим на разных точках параметрического пространства.</p>
+<p><strong>Что и почему сравнивается.</strong> США взяты как опорная точка — большинство данных там о них. Россия — страна с принципиально иной конфигурацией: высокая концентрация работодателей, сильная роль государства, слабые независимые профессиональные организации, специфическая структура мобильности. Китай — государственно-промышленная машина возврата: программы привлечения исследователей, сильная абсорбция таланта, но высокий риск искажения публикационного провенанса. ОАЭ — малая страна-хаб, явно построенная вокруг привлечения мобильного человеческого капитала; именно она показывает, что <em>межстрановой арбитраж кадров</em> — самостоятельная игра, а не побочный эффект.</p>
+<p>Индия, Сингапур, Япония и европейские страны остаются за пределами этой статьи: Индия — модель массового экспорта кадров и услуг, Сингапур — координированный глобальный центр, Япония — внутренние рынки труда. Каждая требует отдельного разбора; попытка покрыть всё сразу размыла бы фокус на четырёх конфигурациях, которые сами по себе содержательно богаты.</p>
+<p><strong>Эпистемический регистр.</strong> Статья опирается на материалы предыдущих обзоров (Stanford Digital Economy Lab, Anthropic Economic Index, Harvard Project on Workforce, ВШЭ ИСИЭЗ, hh.ru, Минцифры, рейтинги IB, результаты IMO/IOI, государственные стратегии ОАЭ). По многим пунктам — особенно по РФ — эмпирическая база тоньше, чем по США. Где это так, говорю прямо. Статья не претендует на полное эмпирическое исследование российского или эмиратского рынка; здесь общая теория применяется к доступным данным и формулирует проверяемые гипотезы и контр-гипотезы. Сводная таблица статуса доказательств приведена в части IV.</p>
+<hr />
+<h2 id="i">Часть I. Параметрический сдвиг</h2>
+<p>В первой статье показано, что недоинвестирование в переносимые навыки — <em>базовое предсказание для конкурентных рынков труда и высокого риска переманивания</em>; при несовершенных рынках и координированных институтах фирменные инвестиции в обучение могут быть равновесными. Чтобы понять, как одна и та же игра по-разному проигрывается в США, России, Китае и ОАЭ, нужно сначала зафиксировать параметры.</p>
+<h3 id="_1">Семь параметров, в которых различаются США, Россия, Китай и ОАЭ</h3>
+
+<figure class="infographic" id="fig-parameters">
+<figcaption class="ig-title">Семь параметров: США, Россия, Китай, ОАЭ</figcaption>
+<p class="ig-sub">Карта параметрического сдвига. Та же базовая теория из первой статьи даёт разные равновесия при разных значениях этих параметров.</p>
+
+<div class="ig-param-grid">
+
+  <div class="ig-param">
+    <div class="ig-param-label">Мобильность работников</div>
+    <div class="ig-param-row"><span class="ig-c-us">США</span><div class="ig-bar"><div class="ig-bar-fill" style="width:90%; background:#993C1D"></div></div><span class="ig-param-val">очень высокая</span></div>
+    <div class="ig-param-row"><span class="ig-c-ru">РФ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:55%; background:#9B7B0E"></div></div><span class="ig-param-val">средняя, асимметричная</span></div>
+    <div class="ig-param-row"><span class="ig-c-cn">КНР</span><div class="ig-bar"><div class="ig-bar-fill" style="width:75%; background:#2A4D7A"></div></div><span class="ig-param-val">высокая, управляемый возврат</span></div>
+    <div class="ig-param-row"><span class="ig-c-ae">ОАЭ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:90%; background:#0F6E56"></div></div><span class="ig-param-val">высокая (внешняя)</span></div>
+  </div>
+
+  <div class="ig-param">
+    <div class="ig-param-label">Сжатие зарплат</div>
+    <div class="ig-param-row"><span class="ig-c-us">США</span><div class="ig-bar"><div class="ig-bar-fill" style="width:25%; background:#993C1D"></div></div><span class="ig-param-val">низкое</span></div>
+    <div class="ig-param-row"><span class="ig-c-ru">РФ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:60%; background:#9B7B0E"></div></div><span class="ig-param-val">высокое в госсекторе</span></div>
+    <div class="ig-param-row"><span class="ig-c-cn">КНР</span><div class="ig-bar"><div class="ig-bar-fill" style="width:45%; background:#2A4D7A"></div></div><span class="ig-param-val">среднее, программно-зависимое</span></div>
+    <div class="ig-param-row"><span class="ig-c-ae">ОАЭ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:25%; background:#0F6E56"></div></div><span class="ig-param-val">низкое</span></div>
+  </div>
+
+  <div class="ig-param">
+    <div class="ig-param-label">Профессиональные посредники</div>
+    <div class="ig-param-row"><span class="ig-c-us">США</span><div class="ig-bar"><div class="ig-bar-fill" style="width:55%; background:#993C1D"></div></div><span class="ig-param-val">средние, фрагментированные</span></div>
+    <div class="ig-param-row"><span class="ig-c-ru">РФ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:25%; background:#9B7B0E"></div></div><span class="ig-param-val">слабые</span></div>
+    <div class="ig-param-row"><span class="ig-c-cn">КНР</span><div class="ig-bar"><div class="ig-bar-fill" style="width:65%; background:#2A4D7A"></div></div><span class="ig-param-val">гос-промышленные сильны, независимые слабы</span></div>
+    <div class="ig-param-row"><span class="ig-c-ae">ОАЭ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:15%; background:#0F6E56"></div></div><span class="ig-param-val">почти отсутствуют</span></div>
+  </div>
+
+  <div class="ig-param">
+    <div class="ig-param-label">Горизонт работодателя</div>
+    <div class="ig-param-row"><span class="ig-c-us">США</span><div class="ig-bar"><div class="ig-bar-fill" style="width:50%; background:#993C1D"></div></div><span class="ig-param-val">от очень короткого до длинного</span></div>
+    <div class="ig-param-row"><span class="ig-c-ru">РФ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:60%; background:#9B7B0E"></div></div><span class="ig-param-val">бимодальный</span></div>
+    <div class="ig-param-row"><span class="ig-c-cn">КНР</span><div class="ig-bar"><div class="ig-bar-fill" style="width:70%; background:#2A4D7A"></div></div><span class="ig-param-val">длинный у государства и госиндустрии</span></div>
+    <div class="ig-param-row"><span class="ig-c-ae">ОАЭ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:30%; background:#0F6E56"></div></div><span class="ig-param-val">короткий, привязан к контрактам</span></div>
+  </div>
+
+  <div class="ig-param">
+    <div class="ig-param-label">Роль государства</div>
+    <div class="ig-param-row"><span class="ig-c-us">США</span><div class="ig-bar"><div class="ig-bar-fill" style="width:20%; background:#993C1D"></div></div><span class="ig-param-val">минимальная в найме</span></div>
+    <div class="ig-param-row"><span class="ig-c-ru">РФ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:80%; background:#9B7B0E"></div></div><span class="ig-param-val">высокая, прямая</span></div>
+    <div class="ig-param-row"><span class="ig-c-cn">КНР</span><div class="ig-bar"><div class="ig-bar-fill" style="width:95%; background:#2A4D7A"></div></div><span class="ig-param-val">очень высокая, архитектор возврата</span></div>
+    <div class="ig-param-row"><span class="ig-c-ae">ОАЭ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:90%; background:#0F6E56"></div></div><span class="ig-param-val">очень высокая, через холдинги</span></div>
+  </div>
+
+  <div class="ig-param">
+    <div class="ig-param-label">Качество международных сигналов</div>
+    <div class="ig-param-row"><span class="ig-c-us">США</span><div class="ig-bar"><div class="ig-bar-fill" style="width:90%; background:#993C1D"></div></div><span class="ig-param-val">высокое, читаемое</span></div>
+    <div class="ig-param-row"><span class="ig-c-ru">РФ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:35%; background:#9B7B0E"></div></div><span class="ig-param-val">искажённое после 2022</span></div>
+    <div class="ig-param-row"><span class="ig-c-cn">КНР</span><div class="ig-bar"><div class="ig-bar-fill" style="width:70%; background:#2A4D7A"></div></div><span class="ig-param-val">высокое по объёму, риск перегрева</span></div>
+    <div class="ig-param-row"><span class="ig-c-ae">ОАЭ</span><div class="ig-bar"><div class="ig-bar-fill" style="width:55%; background:#0F6E56"></div></div><span class="ig-param-val">строится, опора на репутацию работодателя</span></div>
+  </div>
+
+</div>
+
+<aside class="ig-note">
+<strong>Как читать.</strong> Это не количественные измерения, а качественная карта различий — насколько каждый параметр выражен в четырёх странах. Эти параметры определяют, какое равновесие будет устойчивым в данной стране при тех же базовых механиках теории игр.
+</aside>
+</figure>
+
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>США</th>
+<th>РФ</th>
+<th>Китай</th>
+<th>ОАЭ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Мобильность работников</td>
+<td>очень высокая</td>
+<td>средняя, асимметричная</td>
+<td>высокая внешняя, но с управляемым возвратом</td>
+<td>очень высокая, но в основном внешняя (иммигранты)</td>
+</tr>
+<tr>
+<td>Риск переманивания</td>
+<td>высокий</td>
+<td>высокий внутри сегмента, ограниченный между сегментами</td>
+<td>высокий, но частично интернализуется государством и индустрией</td>
+<td>очень высокий между фирмами в одном секторе</td>
+</tr>
+<tr>
+<td>Сжатие зарплат</td>
+<td>низкое</td>
+<td>высокое в госсекторе, низкое в частном</td>
+<td>среднее, зависит от программ и приоритетных направлений</td>
+<td>низкое</td>
+</tr>
+<tr>
+<td>Профессиональные посредники</td>
+<td>средние, фрагментированные</td>
+<td>слабые</td>
+<td>государственно-промышленные программы сильны, независимые слабы</td>
+<td>почти отсутствуют для большинства профессий</td>
+</tr>
+<tr>
+<td>Горизонт работодателя</td>
+<td>от очень короткого (стартапы) до длинного (банки, оборонка)</td>
+<td>бимодальный: длинный у крупных, короткий у малых</td>
+<td>длинный у государства и госиндустрии, короткий у частных</td>
+<td>в основном короткий, привязан к контрактам</td>
+</tr>
+<tr>
+<td>Роль государства</td>
+<td>минимальная в найме</td>
+<td>высокая, прямая</td>
+<td>очень высокая: архитектор возврата и размещения таланта</td>
+<td>очень высокая, через крупные госхолдинги и стратегии</td>
+</tr>
+<tr>
+<td>Качество международных сигналов</td>
+<td>высокое, читаемое</td>
+<td>искажённое после 2022</td>
+<td>высокое по объёму, но с растущим риском перегрева провенанса</td>
+<td>строится; сильно зависит от репутации работодателя</td>
+</tr>
+</tbody>
+</table>
+<p>Эта таблица — не описательное упражнение, а карта того, <em>где будут разные равновесия</em>. Механизмы из первой статьи те же, но параметры рынка другие.</p>
+<h3 id="_2">Что это означает для базовой игры</h3>
+<p>Когда параметры в четырёх странах различаются настолько сильно, тезис «ИИ разрушает начальный уровень» теряет универсальный смысл. Он превращается в условный: при каких параметрах ИИ разрушает начальный уровень больнее всего, а при каких смягчается институциональной конфигурацией.</p>
+<p>Грубая формула:</p>
+<p><strong>США.</strong> Высокая мобильность × низкое сжатие зарплат × слабые посредники × короткий горизонт у части работодателей = классическая ситуация классической Беккеровской модели. ИИ ускоряет уже существующее равновесие недоинвестирования.</p>
+<p><strong>РФ.</strong> Бимодальный горизонт × сильная роль государства × слабые посредники × асимметричная мобильность = не недоинвестирование на уровне рынка, а <em>расслоение</em> на сегменты с разными равновесиями.</p>
+<p><strong>Китай.</strong> Высокая внешняя мобильность × очень высокая роль государства × сильные государственно-промышленные посредники × длинный горизонт у госиндустрии = не недоинвестирование и не чистый импорт, а <em>машина возврата</em>: зарубежный человеческий капитал конвертируется в локальную продуктивность, но та же система создаёт давление на провенанс, потому что ИИ удешевляет производство сигналов, которыми она измеряет успех.</p>
+<p><strong>ОАЭ.</strong> Высокая внешняя мобильность × очень короткий горизонт × почти полное отсутствие посредников для сегмента с преобладанием иностранных специалистов × массивное государственное участие = модель, в которой обучение исходно не ожидается от работодателя в сегменте иностранных специалистов; страна импортирует уже обученных. Параллельно существует отдельная государственно-координируемая программа для граждан ОАЭ (Emiratisation), играющая по другой логике.</p>
+<p>Это четыре разные игры с одной и той же базовой механикой.</p>
+<h3 id="_3">Четыре режима</h3>
+
+<figure class="infographic" id="fig-regimes">
+<figcaption class="ig-title">Четыре режима воспроизводства компетенции</figcaption>
+<p class="ig-sub">Компактная карта документа. К ней можно возвращаться при чтении дальнейших разделов.</p>
+
+<div class="ig-regimes">
+
+  <div class="ig-regime ig-regime-us">
+    <div class="ig-regime-flag">США</div>
+    <div class="ig-regime-name">Режим рыночного недоинвестирования</div>
+    <div class="ig-regime-mech"><strong>Механизм:</strong> высокая мобильность × краткосрочные стимулы × слабая отраслевая координация. ИИ ускоряет уже существующее равновесие недоинвестирования.</div>
+    <div class="ig-regime-pro"><strong>Сильная сторона:</strong> рынок труда быстро находит новые конфигурации.</div>
+    <div class="ig-regime-con"><strong>Слабая сторона:</strong> канал подготовки хрупок, деградация может быть необратимой на горизонте 7–10 лет.</div>
+  </div>
+
+  <div class="ig-regime ig-regime-ru">
+    <div class="ig-regime-flag">РФ</div>
+    <div class="ig-regime-name">Сегментированный режим: якорные компании плюс государство</div>
+    <div class="ig-regime-mech"><strong>Механизм:</strong> бимодальный горизонт × сильная роль государства = три разных равновесия в трёх сегментах рынка (якорные компании / малый бизнес / госсектор).</div>
+    <div class="ig-regime-pro"><strong>Сильная сторона:</strong> потенциально мощные координаторы — государство и якорные компании.</div>
+    <div class="ig-regime-con"><strong>Слабая сторона:</strong> слабость независимых посредников, риск имитации контроля вместо реального равновесия обучения.</div>
+  </div>
+
+  <div class="ig-regime ig-regime-cn">
+    <div class="ig-regime-flag">Китай</div>
+    <div class="ig-regime-name">Государственно-промышленная машина возврата</div>
+    <div class="ig-regime-mech"><strong>Механизм:</strong> государство, университеты и индустрия совместно конвертируют зарубежный провенанс в локальную позицию, ресурсы и лабораторию (программы привлечения исследователей, инфраструктура абсорбции).</div>
+    <div class="ig-regime-pro"><strong>Сильная сторона:</strong> высокая способность возвращать и размещать талант; географический возврат сильнее, чем у большинства открытых рынков.</div>
+    <div class="ig-regime-con"><strong>Слабая сторона:</strong> чем сильнее система награждает число публикаций и статус вернувшегося, тем дешевле становится сигнал качества — растёт риск перегрева провенанса.</div>
+  </div>
+
+  <div class="ig-regime ig-regime-ae">
+    <div class="ig-regime-flag">ОАЭ</div>
+    <div class="ig-regime-name">Режим импортированного таланта</div>
+    <div class="ig-regime-mech"><strong>Механизм:</strong> страна импортирует уже сформированный человеческий капитал, минуя локальную фазу обучения для большинства специалистов.</div>
+    <div class="ig-regime-pro"><strong>Сильная сторона:</strong> скорость, гибкость, способность быстро собрать высококвалифицированные команды.</div>
+    <div class="ig-regime-con"><strong>Слабая сторона:</strong> зависимость от устойчивости импортного канала, риск формирования слоя иностранных специалистов без локального умножения.</div>
+  </div>
+
+</div>
+
+<aside class="ig-note">
+Четыре режима не оценочны. Они описывают, <em>куда вкладывается институциональная сила страны</em>: США — в рыночные сигналы и селекцию; РФ — в координирующую роль крупных акторов; Китай — в государственно-промышленную машину возврата; ОАЭ — в комплекс условий для специалистов и правовую инфраструктуру. Каждый режим решает одни задачи лучше других.
+</aside>
+</figure>
+
+<p>Прежде чем разбирать игры по отдельности, полезно зафиксировать <em>общий тип режима</em>, в котором каждая страна находится. Это компактная карта, к которой можно возвращаться при чтении дальнейших разделов.</p>
+<p><strong>США — режим рыночного недоинвестирования.</strong> Главный механизм: высокая мобильность плюс краткосрочные стимулы плюс слабая отраслевая координация делают сокращение набора начинающих рациональным для каждой отдельной фирмы. ИИ усиливает уже существующее равновесие. Сильная сторона: рынок труда быстро находит новые конфигурации. Слабая сторона: канал подготовки хрупок, и его деградация может быть необратимой на горизонте 7–10 лет.</p>
+<p><strong>РФ — режим расслоения вокруг якорных компаний и государства.</strong> Главный механизм: бимодальный горизонт работодателей и сильная роль государства создают не общее равновесие, а <em>три разных равновесия в трёх сегментах рынка</em>. Крупные якорные компании могут стабилизировать обучение, малые становятся донорами, госсектор работает по логике квази-внутреннего рынка. Сильная сторона: потенциально мощные координаторы (государство, якорные компании). Слабая сторона: слабость независимых профессиональных посредников и риск того, что координация сверху произведёт имитацию контроля вместо реального равновесия обучения.</p>
+<p><strong>ОАЭ — режим импортированного таланта.</strong> Главный механизм: страна систематически импортирует сформированный человеческий капитал, минуя локальную фазу обучения для большинства специалистов. Сильная сторона: скорость, гибкость, способность быстро собрать высококвалифицированные команды. Слабая сторона: зависимость от устойчивости импортного канала и риск формирования слоя иностранных специалистов без локального умножения.</p>
+<hr />
+<h2 id="ii_1">Часть II. Семь игр в новых параметрах</h2>
+<h3 id="ii1-hold-up">II.1. Формирование квалификации и проблема удержания инвестиций</h3>
+
+<figure class="infographic" id="fig-holdup">
+<figcaption class="ig-title">Двухигровая опорная модель: проблема удержания инвестиций</figcaption>
+<p class="ig-sub">Одна компания, один потенциальный работник. При определённых параметрах рынка эта структура становится социальной дилеммой, похожей на дилемму заключённого.</p>
+
+<svg class="ig-payoff" viewBox="0 0 710 380" role="img" aria-label="Матрица выигрышей в игре на удержание: компания и работник, 2x2 структура с равновесием взаимного отказа от кооперации.">
+<defs>
+<style>
+.cell { fill: var(--bg-card); stroke: var(--rule); stroke-width: 0.5; }
+.cell-good { fill: #E1F5EE; }
+.cell-bad { fill: #FAECE7; }
+.cell-mixed { fill: #FAEEDA; }
+.cell-neutral { fill: var(--bg-soft); }
+.label { font-family: var(--sans); font-size: 13px; fill: var(--text); font-weight: 500; }
+.label-small { font-family: var(--sans); font-size: 11px; fill: var(--text-muted); }
+.payoff { font-family: var(--serif); font-size: 13px; fill: var(--text); }
+.axis-label { font-family: var(--sans); font-size: 13px; fill: var(--text); font-weight: 600; letter-spacing: 0.02em; }
+</style>
+</defs>
+
+<text class="axis-label" x="395" y="30" text-anchor="middle">Работник</text>
+<text class="label" x="270" y="60" text-anchor="middle">Остаётся</text>
+<text class="label" x="520" y="60" text-anchor="middle">Уходит</text>
+
+<text class="axis-label" x="28" y="200" text-anchor="middle" transform="rotate(-90 28 200)">Компания</text>
+<text class="label" x="150" y="155" text-anchor="end">Инвестирует</text>
+<text class="label" x="150" y="280" text-anchor="end">Не инвестирует</text>
+
+<rect class="cell cell-good" x="160" y="80" width="220" height="120" rx="6"/>
+<text class="payoff" x="270" y="115" text-anchor="middle" font-weight="500">Оба выигрывают</text>
+<text class="label-small" x="270" y="140" text-anchor="middle">Фирма получает качественный результат</text>
+<text class="label-small" x="270" y="158" text-anchor="middle">Работник получает навык</text>
+<text class="label-small" x="270" y="176" text-anchor="middle">+ пожизненный доход</text>
+
+<rect class="cell cell-bad" x="410" y="80" width="220" height="120" rx="6"/>
+<text class="payoff" x="520" y="115" text-anchor="middle" font-weight="500">Компания проиграла</text>
+<text class="label-small" x="520" y="140" text-anchor="middle">Заплатила за обучение</text>
+<text class="label-small" x="520" y="158" text-anchor="middle">Работник выиграл больше всего</text>
+<text class="label-small" x="520" y="176" text-anchor="middle">(получил навык бесплатно)</text>
+
+<rect class="cell cell-mixed" x="160" y="210" width="220" height="120" rx="6"/>
+<text class="payoff" x="270" y="245" text-anchor="middle" font-weight="500">Компания экономит</text>
+<text class="label-small" x="270" y="270" text-anchor="middle">Не получает результат</text>
+<text class="label-small" x="270" y="288" text-anchor="middle">Работник проигрывает:</text>
+<text class="label-small" x="270" y="306" text-anchor="middle">не получает навык</text>
+
+<rect class="cell cell-neutral" x="410" y="210" width="220" height="120" rx="6"/>
+<text class="payoff" x="520" y="245" text-anchor="middle" font-weight="500">Статус-кво</text>
+<text class="label-small" x="520" y="270" text-anchor="middle">Положение сохраняется</text>
+<text class="label-small" x="520" y="290" text-anchor="middle" font-style="italic">равновесие взаимного отказа</text>
+<text class="label-small" x="520" y="308" text-anchor="middle" font-style="italic">— рациональный выбор обоих</text>
+
+<text class="label-small" x="355" y="360" text-anchor="middle" font-style="italic">Без изменения параметров рынка обе стороны рационально приходят к нижнему правому квадрату — равновесие, которое хуже для обоих, чем кооперативное.</text>
+</svg>
+
+<aside class="ig-note">
+<strong>Почему это важно для документа.</strong> При высокой мобильности и слабой координации (США) равновесие взаимного отказа — естественное. При координированных институтах (Германия) или внутренних рынках труда (Япония) — параметры меняются, и кооперативный исход тоже становится равновесным. РФ потенциально может сместить параметры через государственную координацию — но это задача измерения, не автопилот.
+</aside>
+</figure>
+
+<p>В первой статье эта игра разворачивается так: фирма инвестирует в обучение → работник получает переносимый навык → конкурент может переманить → фирма недоинвестирует. ИИ ухудшает равновесие, потому что часть производственной ценности начинающего съедают ИИ-инструменты, обучающий компонент становится виднее, и краткосрочные фирмы рационально уходят в модель «старший специалист + агенты».</p>
+<p><strong>США.</strong> Игра близка к модели почти буквально. Сжатие найма начинающих в данных Stanford по платёжным ведомостям (−13–16% у 22–25 лет в наиболее затронутых ИИ профессиях) хорошо согласуется с этой логикой, хотя прямой каузальный вывод требует более тонкой эконометрики, чем доступна на текущих данных. Раскол между IBM (утроил наём начинающих) и типичным SaaS-стартапом (заморозка) объясняется разной длиной горизонта: IBM играет в повторяющуюся игру, стартап — в одноходовую.</p>
+<p><strong>РФ.</strong> Игра другая. В РФ работают минимум три рынка одновременно:</p>
+<p>— <em>Крупные банки, платформы, телеком, госкорпорации.</em> Длинный горизонт, способны внутренне присвоить часть отдачи от обучения. Здесь обучение начинающих может оставаться равновесным даже в эпоху ИИ — особенно если внедрение ИИ идёт через те же крупные структуры, и они контролируют подбор задач, на которых начинающие учатся.</p>
+<p>— <em>Малый и средний IT, диджитал-бизнес, маркетинг, дизайн, креативные индустрии.</em> Высокая мобильность, низкая способность защититься от переманивания. Здесь равновесие хуже американского: малый работодатель не может конкурировать с банками и платформами по зарплатам и проектам, и его рациональная стратегия — не обучать, а нанимать готовых. Это создаёт эффект, в котором малый бизнес перестаёт быть школой профессии.</p>
+<p>— <em>Госсектор, оборонка, регулируемые отрасли.</em> Квази-внутренний рынок труда: ограниченная мобильность из-за допусков, специфики, географии. Здесь равновесие обучения сохраняется по той же логике, что в Японии XX века — длинный горизонт делает фирменные инвестиции рациональными.</p>
+<p>Российская гипотеза, которую стоит проверить: <em>канал подготовки начинающих не исчезает, а раздваивается</em>. Крупные акторы сохраняют когортный набор; малые перестают быть школой. Это не «сжатие найма начинающих», а <em>донорство кадров</em>: малый бизнес обучает за свой счёт, крупные забирают.</p>
+<p><strong>Китай.</strong> Здесь у государства и госиндустрии есть третий путь: частично интернализовать отдачу от обучения через программы привлечения и возврата. Большая часть фундаментального обучения нередко происходит за рубежом, а затем зарубежный провенанс «доращивается» внутри страны — через университет, лабораторию и индустриального партнёра. Это снижает классическую проблему удержания инвестиций для верхнего сегмента, но не решает её для массового нижнего входа.</p>
+<p><strong>ОАЭ.</strong> Базовая институциональная установка для рынка труда с преобладанием иностранных специалистов — импорт уже обученных специалистов на временной основе, не выращивание собственных через классическое обучение, оплаченное работодателем. Локальный канал подготовки существует для граждан ОАЭ через программы <a href="https://en.wikipedia.org/wiki/Emiratisation">Emiratisation</a> и национальные образовательные институты, но он работает в отдельной институциональной логике. Для иностранных специалистов ОАЭ — это не школа профессии, а площадка для уже сформировавшихся.</p>
+<p>Из этого следует контр-интуитивный вывод: ОАЭ структурно меньше зависят от шока, описанного в первой статье в сегменте иностранных специалистов, потому что классическая игра обучение, оплаченное работодателем там не является базовой. Но именно поэтому у них уязвимость другого типа — отсутствие в сегменте иностранных специалистов локальной системы, способной заменить импортный канал, если он по каким-то причинам прервётся. Параллельная национальная программа существует, но её масштаб и темп в значительной степени зависят от государственной воли и капитала, не от рыночной динамики.</p>
+<h3 id="ii2">II.2. Кто оплачивает канал подготовки: общественное благо при многих участниках</h3>
+<p>В первой статье показано, что на индустриальном уровне канал подготовки начинающих ведёт себя как квази-общественное благо: при отсутствии координации каждый игрок рационально не вкладывается, и канал подготовки разрушается через эффект разматывания.</p>
+<p><strong>США.</strong> Канал подготовки плохо координируется: нет сильных профессиональных палат, нет общеотраслевого фонда обучения, нет общего сбора на ученичество. Каждая фирма рассуждает: «пусть обучает кто-то другой». Это объясняет, почему американские попытки скопировать немецкую модель регулярно проваливались — параметры рынка не делают её равновесной.</p>
+<p><strong>РФ.</strong> Здесь логика интереснее. Слабых независимых профессиональных посредников нет, но есть потенциальный координатор другого типа — государство и крупные квазигосударственные заказчики. Если государство и его агенты являются крупнейшими заказчиками цифровизации, ИИ-проектов, инфраструктурных программ и импортозамещения, они могут <em>встроить в правила закупок требования к воспроизводству кадров</em>: квоты на стажёров, оплачиваемые стажировки, цели по переходу с начального на средний уровень, обязательные часы наставничества, совместные кафедры и лаборатории, доказуемая передача компетенций подрядчиком.</p>
+<p>Это не немецкая палатная модель. Это другая форма интернализации внешнего эффекта: <em>ученичество, обеспеченное госзакупками</em>. Рабочая гипотеза в том, что в РФ это потенциально более совместимый инструмент, чем сбор на ученичество в британском стиле.</p>
+<p>Здесь стоит проговорить, что эта совместимость — <em>условная</em>, и условие тонкое. Государство, играющее координирующую роль, само является игроком в теоретико-игровом смысле — со своими проблемами стимулов. Ведомства оптимизируют отчётность, не результат. Закупочные процедуры минимизируют формальный риск, не качество обучения. Крупные подрядчики профессиональны в производстве формального соответствия. Любой набор показателей подвержен манипулированию. Краткосрочные показатели ведомств конфликтуют с 7–10-летним горизонтом подготовки кадров.</p>
+<p>Поэтому корректнее сформулировать так: <em>в РФ проблема не в отсутствии координатора, а в том, что координатор должен отличать реальное накопление компетенции от отчётной активности</em>. Это превращает ученичество, обеспеченное госзакупками, из простой политической идеи в <em>задачу измерения</em>: государственная координация работает только если государство умеет измерять обучение, а не активность.</p>
+<p>Эта измерительная задача нетривиальна. Часы наставничества легко отчитать; реальное накопление неявного знания у конкретного начинающего — нет. Доля переходов с начального на средний уровень измерима, но уязвима к манипулированию (компании могут переименовывать роли). Доля «молодых специалистов в проектной команде» формализуема, но не отвечает на вопрос, что эти специалисты реально делают. Любая попытка проверить <em>глубину</em> передачи компетенции упирается в то, что глубина — нелинейный, отложенный, плохо наблюдаемый процесс.</p>
+<p>Это не аргумент против координации через госзакупки. Это аргумент за то, что её дизайн требует серьёзной работы — иначе механизм производит имитацию контроля вместо нового равновесия обучения.</p>
+<p><strong>Китай.</strong> Координатор есть и действует на уровне всей системы: государство строит не отдельный фонд обучения, а целую архитектуру возврата и размещения таланта. Программы вроде Young Thousand Talents работают как переводчик статуса — зарубежная продуктивность превращается в локальную позицию, бюджет и команду. Но чем сильнее вознаграждается измеримый результат, тем дороже становится проверка его качества.</p>
+<p><strong>ОАЭ.</strong> Координатор есть, и очень мощный. <em>UAE AI Strategy 2031</em> — это документ, в котором государство явно берёт на себя координационную функцию, выводя ИИ в приоритет вместе с конкретными секторами. Но координирует не подготовку кадров, а <em>привлечение готовых</em>. Это другая игра — не общественное благо при многих участниках, а стратегия привлечения специалистов (ниже).</p>
+<h3 id="ii3">II.3. Сигналы: диплом, резюме, провенанс</h3>
+
+<figure class="infographic" id="fig-provenance">
+<figcaption class="ig-title">Провенанс в разных профессиях и странах</figcaption>
+<p class="ig-sub">Из первой статьи: ИИ удешевляет производство деклараций, но не верификацию документов. Рынок смещается к затратным верифицируемым сигналам. Конкретные сигналы зависят от профессии и страны.</p>
+
+<div class="ig-provenance-table">
+  <div class="ig-prov-header"></div>
+  <div class="ig-prov-header">США</div>
+  <div class="ig-prov-header">РФ</div>
+  <div class="ig-prov-header">Китай</div>
+  <div class="ig-prov-header">ОАЭ</div>
+
+  <div class="ig-prov-row-label">IT и разработка</div>
+  <div class="ig-prov-cell">GitHub, открытые проекты, технические доклады, блог с многолетней историей</div>
+  <div class="ig-prov-cell">GitHub + репутация работодателя (Сбер, Яндекс), вуз, рекомендации</div>
+  <div class="ig-prov-cell">Топ-вуз, опыт в Huawei/Alibaba/Tencent, участие в гос-программах, статус возвращенца</div>
+  <div class="ig-prov-cell">Импортируется через зарубежные дипломы и опыт в международных компаниях</div>
+
+  <div class="ig-prov-row-label">Медицина</div>
+  <div class="ig-prov-cell">Часы контролируемой практики, сертификация специальности, признание коллег</div>
+  <div class="ig-prov-cell">Лицензия + ординатура + публикации; сильна академическая школа</div>
+  <div class="ig-prov-cell">Госквалификация + публикации; сильное давление на число статей</div>
+  <div class="ig-prov-cell">Иностранные дипломы, опыт в западных клиниках, международные сертификации</div>
+
+  <div class="ig-prov-row-label">Наука</div>
+  <div class="ig-prov-cell">Публикации в ведущих журналах, цитируемость, аффилиация, рекомендации</div>
+  <div class="ig-prov-cell">Степень + публикации + академическая школа; ослаблена санкционной изоляцией</div>
+  <div class="ig-prov-cell">Статус возвращенца, программы привлечения, публикационный послужной список — но с риском перегрева</div>
+  <div class="ig-prov-cell">Импортируется: зарубежные степени, аффилиация с глобальными лабораториями</div>
+
+  <div class="ig-prov-row-label">Творческие</div>
+  <div class="ig-prov-cell">Портфолио клиентских работ с поддержкой признанных имён</div>
+  <div class="ig-prov-cell">Портфолио + участие в выставках, фестивалях, коллаборациях</div>
+  <div class="ig-prov-cell">Портфолио + платформенный охват + господдержка отрасли</div>
+  <div class="ig-prov-cell">Международные награды, клиенты, сотрудничество с глобальными брендами</div>
+</div>
+
+<aside class="ig-note">
+<strong>Общая логика.</strong> Затратный, верифицируемый, накапливаемый во времени след работы. Что именно считается затратным сигналом — зависит от страны и профессии. Универсальная модель «GitHub-провенанс» работает только для IT и смежной интеллектуальной работы.
+</aside>
+</figure>
+
+<p>В первой статье показано, что ИИ удешевляет производство деклараций (сопроводительные письма, вычищенные резюме, шаблонные портфолио), но не удешевляет производство верифицируемых сигналов (дипломы, история работы, контролируемая практика, признание коллег). Рынок смещается к затратным верифицируемым сигналам.</p>
+<p><strong>США.</strong> Этот сдвиг разворачивается напрямую: история коммитов в GitHub, вклады в открытый код, технические доклады с записями, длинные блоги, идентичность в профессиональных сообществах, рекомендации опытных мейнтейнеров. Резюме обесценилось как слой самоописания, но дипломы топ-университетов и история работы в известных компаниях сохраняют силу.</p>
+<p><strong>РФ.</strong> Сигнальная инфраструктура устроена иначе. То, что в США сейчас становится дорогим сигналом по умолчанию (длинный публичный послужной список), в РФ работает только для части рынка — преимущественно международно-ориентированной IT-индустрии. Для остальных сегментов работают другие сигналы:</p>
+<p>— <em>Олимпиадная и STEM-биография.</em> На IMO 2021 российская команда заняла второе место (5 золотых, 1 серебро). На IOI 2021 — 3 золота, 1 серебро. Это не «прошлое» — это до сих пор живая биографическая валюта, которая открывает входные двери.</p>
+<p>— <em>Топовые школы и вузы.</em> Сильная стартовая позиция: Letovo в 2021 году — второе место в Global Top IB Schools, в 2022 — первое; в таблице 2025 года всё ещё первое с 43,2 средними баллами. Это означает, что исчезновение российских команд из части международных рейтингов после 2022 <em>нельзя автоматически читать как падение качества подготовки</em>. Это политическая видимость, не уровень.</p>
+<p>— <em>Опыт в якорных компаниях.</em> Сбер, Яндекс, Тинькофф, ВТБ, Газпромнефть, Роснефть — работа в таких компаниях работает как сильный сигнал внутри страны, и частично за её пределами в русскоязычном профессиональном пространстве.</p>
+<p>— <em>Узкие профессиональные сети.</em> Внутренние рекомендации, выходцы из конкретных школ или вузов, профильные сообщества — всё это в РФ играет более структурирующую роль, чем в США.</p>
+<p>— <em>Хакатоны, проектные школы, корпоративные треки.</em> Меньшая, но растущая роль.</p>
+<p>— <em>Допуски и доверие в чувствительных секторах.</em> Это сигнал, не имеющий аналога в открытой американской системе.</p>
+<p>Российская версия гипотезы о сигналах: <em>ИИ удешевляет резюме и сертификаты, но в РФ особенно дорожают «тяжёлые» сигналы — олимпиадная траектория, сильный вуз, опыт в якорной компании, рекомендации из узких сетей, доказуемое участие в реальных проектах</em>.</p>
+<p>Риск этого пути — усиление закрытости входа. В первой статье это названо биографической регрессивностью: когда сигналы становятся дороже, их легче собрать тем, у кого <em>уже</em> есть стартовый капитал. В РФ этот эффект может быть сильнее, чем в США, потому что:</p>
+<p>— Доступ к топ-школам и вузам сильно зависит от семьи, региона, ранней академической подготовки.
+— Якорные компании нанимают преимущественно из ограниченного пула вузов.
+— Узкие профессиональные сети по определению трудно проницаемы извне.
+— Олимпиадная траектория начинается в школе, и её упустить почти невозможно потом.</p>
+<p>Это не уникальная российская проблема — то же самое происходит в США с элитными университетами. Но в РФ она проявляется на уровне <em>средней</em> профессии, не только на верхушке.</p>
+<p><strong>Китай.</strong> Дорогим сигналом становятся статус вернувшегося, участие в программах привлечения, публикационный послужной список и принадлежность к университету или лаборатории. Именно здесь — главная уязвимость: ИИ удешевляет производство тех самых публикационных сигналов, которыми система измеряет качество. По данным Pangram (2025), 26% статей из китайских институций содержат хотя бы один фрагмент, помеченный как сгенерированный ИИ, против 7,4% для США; обзор Frontiers по отзывам статей связывает с Китаем 72,2% первых авторов среди работ, отозванных в связи с использованием ИИ. Это сигнал риска, а не доказательство умысла: ИИ может работать и как переводчик, и как стилистическая шлифовка.</p>
+<p><strong>ОАЭ.</strong> Сигнальная система в основном <em>импортируется</em>. Фирма-наниматель смотрит на дипломы зарубежных университетов, на работу в известных международных компаниях, на международные сертификации (AWS, CFA, медицинские лицензии). Локальная система сигнализации только формируется и сильно опирается на иностранные стандарты. Это особенность конфигурации центра притяжения талантов: страна не выращивает свою иерархию сигналов, она пользуется чужими.</p>
+<h3 id="ii3a">II.3a. Образование как инфраструктура подготовки кадров</h3>
+<p>У образования здесь две функции: сигнал и <em>воспроизводство компетенции</em>. ИИ бьёт по ним по-разному: монополия университета на доступ к знанию обесценена, но структурированное обучение, контролируемая практика, обучение у коллег, формирование идентичности, сеть и селекция остаются ценными. Эта развилка по-разному играется в четырёх странах.</p>
+<p><strong>США.</strong> Университеты остаются глобальным сигналом и магнитом таланта. Но разрыв между университетом и первой работой усиливается, и именно эта точка наиболее чувствительна к описанному в первой статье шоку начального уровня. Когда ИИ забирает часть рутинных задач, на которых выпускник учился превращать общие знания в производственную компетенцию, университет всё хуже конвертирует диплом в первый профессиональный опыт. Топ-университеты держатся за счёт сети и селекции; средние теряют функцию.</p>
+<p><strong>РФ.</strong> Сильная дотрудовая STEM-инфраструктура: математические школы, олимпиадная система, сильные вузы технического профиля. Это редкий институциональный актив — мало где в мире сохранилась такая глубокая система ранней академической селекции и подготовки. Но её сильная сторона связана с <em>входом в профессию через академическую дверь</em>; вопрос конверсии «школа → олимпиада → вуз → производственная компетенция → средний и старший уровень» — отдельный, и здесь система значительно слабее, чем в фазе ранней подготовки.</p>
+<p>Якорные компании частично компенсируют этот разрыв через корпоративные университеты, кафедры и совместные программы (Сбер, Яндекс, ВТБ, ИТМО, Физтех, ВШЭ). Но это работает в основном для выпускников ограниченного пула топовых вузов и не масштабируется на регионы. Для региональных университетов разрыв между академической программой и реальной производственной задачей в эпоху ИИ становится глубже, не мельче — потому что ИИ забирает именно те простые задачи, на которых выпускник раньше учился через первые два-три года работы.</p>
+<p><strong>Китай.</strong> Университетская и лабораторная инфраструктура — не импортированная витрина, а часть машины возврата: возвращенец становится профессором, руководителем группы, ведущим лаборатории. Исследование Shi, Liu, Wang в Science по Young Thousand Talents показывает, что вернувшиеся публикуют на 27% больше работ и имеют +144% публикаций последним автором по сравнению с зарубежными сверстниками (выборка 339 вернувшихся и 419 контрольных). Это и есть конвертация провенанса в локальную продуктивность — при условии, что качество результата проверяется, а не только подсчитывается.</p>
+<p><strong>ОАЭ.</strong> Университетская инфраструктура активно строится — NYU Abu Dhabi, Mohamed bin Zayed University of AI, Khalifa University, локальные кампусы Sorbonne и других. Но значительная часть доверия к квалификации высокого уровня импортируется через иностранные дипломы, иностранных преподавателей, репутацию работодателя. Локальный академический сигнал в большинстве дисциплин ещё не достиг уровня, при котором он самостоятельно работает на международном рынке.</p>
+<p>Здесь важен темп: ОАЭ строят университетскую систему <em>одновременно</em> с импортом таланта, и часть приехавших становятся профессорами, исследователями, основателями лабораторий. Это потенциально решает способность к усвоению (ниже), если построение будет последовательным. Но это требует десятилетий, и коридор ошибок в построении институциональной репутации значительно меньше, чем в построении комплекса условий для специалистов.</p>
+<p>Резюме по образованию: <em>в США главная проблема — разрыв между университетом и первой работой; в РФ главная проблема — конверсия академической подготовки в производственную компетенцию; в ОАЭ главная проблема — построение собственной академической репутации, не сводимой к импорту чужих дипломов</em>.</p>
+<h3 id="ii4-ai-fluency">II.4. Координация: владение ИИ и нормы команд</h3>
+<p>В первой статье показано, что разрыв в уровне владения ИИ создаёт провал координации внутри команд: ожидания рассинхронизированы, активные пользователи воспринимают коллег как медленных, возникает <a href="https://hbr.org/2026/01/why-people-create-ai-workslop-and-how-to-stop-it">нейрохалтура (workslop, термин HBR)</a> и эрозия доверия.</p>
+<p><strong>США.</strong> Здесь координация преимущественно снизу вверх, через эволюцию командных норм. Менеджеры часто не задают чётких правил, потому что сами не уверены, и это усиливает рассинхронизацию.</p>
+<p><strong>РФ.</strong> В крупных российских организациях есть структурный плюс: координация сверху работает быстрее. Регламенты «как использовать ИИ», ограничения на загрузку данных в облако, правила проверки результата, распределение ответственности — всё это может быть навязано сверху и быстро становится нормой.</p>
+<p>Но это создаёт другую проблему. <em>Координация сверху может быстро создать равновесие отчётности, но не обязательно равновесие обучения</em>. Регламент «как использовать ИИ» — это не регламент того, как через работу с ИИ передаётся неформальное знание от старших к начинающим. Может возникнуть «галочная ИИ-трансформация»: инструменты внедрены, отчёты подаются, аудит проходит — но накопления компетенции не происходит.</p>
+<p>Здесь данные ВШЭ ИСИЭЗ важны: среди крупных и средних российских организаций — пользователей ИИ — только 15% заявили о снижении численности из-за внедрения ИИ, 63% отрицали влияние на численность, около половины отметили улучшение качества и эффективности процессов. Это похоже на организационную перестройку, не на массовую замену труда. Но также не похоже и на трансформацию системы обучения.</p>
+<p><strong>Китай.</strong> Координация сильна и идёт сверху, как и в России, но опирается на более глубокую государственно-промышленную интеграцию. Норму «как и где использовать ИИ» способны задавать и государство, и крупные технологические компании. Риск тот же, что и с провенансом: директивная координация хорошо синхронизирует процессы, но не гарантирует, что измеряемый сигнал останется честным.</p>
+<p><strong>ОАЭ.</strong> Координация ещё более директивна. В стране, где значительная часть внедрения ИИ идёт через крупные госхолдинги, нормы устанавливаются на уровне стратегии и дальше каскадом. Равновесие формального соответствия достигается легко. Равновесие обучения — открытый вопрос той же природы, что и в РФ.</p>
+<h3 id="ii5-ai">II.5. Распространение ИИ: где удар сильнее</h3>
+<p>В первой статье показан парадокс производительности 2.0: на уровне макроданных взрывного роста нет, но эффекты на уровне задач и фирм реальны. Распространение асимметрично — концентрируется у крупных организаций.</p>
+<p><strong>США.</strong> Распространение проходит через множество каналов: технологии, SaaS, консалтинг, медиа, интеллектуальный труд. Шок виден в найме молодых разработчиков, в найме начинающих консультантов, в маркетинге, в производстве части контента. Это создаёт эффект, при котором значительная часть рабочей силы сталкивается с ИИ непосредственно через рынок труда.</p>
+<p><strong>РФ.</strong> Распространение значительно более концентрированное. Свежие данные ВШЭ ИСИЭЗ: ИИ-решения применяют 4,8% организаций в среднем; у крупных предприятий с численностью более 500 работников — 14,9%; у организаций до 100 человек — 4,1%. Разрыв в 3,6 раза.</p>
+<p>Это означает: <em>в РФ ИИ-шок сначала проходит через крупных акторов</em>. И те же крупные акторы — потенциальные координаторы канала подготовки. Это и риск (если они начнут заменять обучение покупкой готовых), и возможность (если они выступят якорем для нового равновесия обучения).</p>
+<p>В США многие ИИ-шоки идут через рынок, массовые увольнения, SaaS-эффективность, стартапы. В РФ — через банки, платформы, интеграторов, госзаказ, крупные промышленные и инфраструктурные контуры. Это меняет, <em>где именно</em> возникнет первое заметное равновесие, и кто будет его автором.</p>
+<p><strong>Китай.</strong> Распространение концентрируется в государственных программах, ведущих университетах и крупных технологических компаниях; именно там ИИ сильнее всего давит на исследовательский и публикационный слой. Удар приходится не столько на нижний производственный вход, сколько на провенанс-слой: качество и проверяемость результата после возврата.</p>
+<p><strong>ОАЭ.</strong> Распространение идёт через государственные программы и крупных подрядчиков. Стратегия ОАЭ в области ИИ до 2031 года (<em>UAE AI Strategy 2031</em>) явно ставит цели по внедрению ИИ и управлению данными. Это похоже на российскую концентрированную модель, но с двумя отличиями: государство ОАЭ значительно богаче капиталом и менее ограничено санкциями, и оно явно выстраивает себя как <em>глобальный</em> ИИ-хаб, не только локальный.</p>
+<h3 id="ii6-squeeze-vs">II.6. Сигнал на рынке труда: сжатие против расслоения</h3>
+<p>В первой статье показан американский паттерн: сжатие найма начинающих без массовых увольнений; эффект концентрируется в замедлении найма, а не в волне увольнений.</p>
+<p><strong>США.</strong> Это и наблюдается в данных: платёжные ведомости Stanford, AI Index 2026, WEF/Revelio. Молодые разработчики — главная индикативная группа.</p>
+<p><strong>РФ.</strong> Картина другая. Не «начальный уровень исчез», а <em>начальный уровень расслоился</em>.</p>
+<p>С одной стороны, hh.ru фиксирует рост конкуренции среди белых воротничков: hh.индекс вырос примерно с 3,7 в апреле 2024 до выше 5,9 к маю 2025. Число вакансий для белых воротничков в июне 2025 на 25% ниже год к году. Активных резюме — на 25% больше, новых — на 36% больше. Это объективный рост давления на вход в часть профессий.</p>
+<p>С другой стороны, рабочие, логистические, производственные и инфраструктурные роли «без опыта» растут — здесь дефицит кадров, не избыток. То есть начальный уровень не исчезает как явление, а <em>перераспределяется по отраслям</em>.</p>
+<p>Российская формулировка: <em>ИИ и автоматизация сжимают часть позиций начального уровня в офисном и цифровом труде, но не уничтожают начальный уровень в целом. Начальный уровень смещается в другие отрасли и другие институциональные формы</em>.</p>
+<p>Это структурно отличается от американского нарратива «ИИ разрушает начальный уровень». В РФ ИИ разрушает <em>часть</em> начального уровня в одном сегменте, и одновременно усиливает дефицит на другом конце спектра.</p>
+<p><strong>Китай.</strong> Здесь сжимается не столько найм начинающих, сколько доверие к исследовательскому и публикационному сигналу. Машина возврата по-прежнему работает, но переводчик начинает перегреваться: он действует, однако его всё чаще приходится перепроверять. Отдельный фон — рекордный выпуск вузов (около 12,7 млн в 2026-м), усиливающий конкуренцию на входе.</p>
+<p><strong>ОАЭ.</strong> Здесь это вообще другой вопрос. Базовая структура рынка — импорт труда снизу доверху. Начальный уровень в традиционном смысле (молодые местные специалисты) — узкая программа Emiratisation для эмиратских граждан. Для остальных «начальный уровень» — это вход иностранного специалиста на ранней стадии карьеры в Дубай. Это не та же категория.</p>
+<h3 id="ii7">II.7. Миграция и межстрановой арбитраж кадров</h3>
+<p>В первой статье этот сюжет затронут вскользь. Здесь он становится центральным, потому что именно через миграцию четыре страны взаимодействуют как игроки одной системы.</p>
+<p><strong>США.</strong> Остаются крупнейшим магнитом глобальных талантов: университеты, венчурный капитал, передовые лаборатории, английский язык, сетевой эффект. Но внутренние перестройки, вызванные ИИ, делают часть специалистов среднего и старшего уровня мобильнее, чем они были до 2022 года.</p>
+<p><strong>РФ.</strong> Двойственная переменная. С одной стороны, IT-эмиграция бьёт по слой наставников — даже если возвращается часть людей, важно <em>кто именно</em> возвращается: старшие архитекторы, тимлиды, преподаватели, способные обучать когорты, или более заменимые роли. Минцифры в 2024 году заявляло, что две трети IT-специалистов, уехавших в 2022, вернулись, и общее число IT-кадров выросло на 13% до 857 тыс. в 2023. В том же сообщении упоминался рост спроса на европейские ВНЖ среди IT-специалистов — то есть сигнал неоднозначный.</p>
+<p>Гипотеза, которую стоит проверять отдельно: <em>возврат — это не количественный, а качественный показатель</em>. Вернулось ли 65% от общую численность, или 65% от общего числа уехавших — это арифметика. Что важнее: какая <em>доля слоя наставников</em> вернулась, и в каких организациях они закрепились.</p>
+<p>С другой стороны, западная турбулентность создаёт окно для <em>селективного</em> возврата и привлечения. Не «все поедут в РФ», а потенциально:</p>
+<p>— Российские специалисты, уехавшие после 2022, но не встроившиеся устойчиво за рубежом.
+— Русскоязычные инженеры и разработчики из СНГ, для которых российский рынок остаётся понятной траекторией.
+— Специалисты среднего и старшего уровня, которым нужны реальные инженерные задачи, а не только глобальная компенсация.
+— Преподаватели, олимпиадные тренеры, исследователи.</p>
+<p>РФ не может выиграть как универсальный глобальный центр притяжения талантов. Структурные параметры этого не позволяют: визовые ограничения, репутационные риски, ограничения международной коммуникации, слабое глобальное чтение российских сигналов после 2022. Но РФ может выиграть как <em>селективный евразийский / с акцентом на естественные и точные науки / русскоязычный коридор</em>, если будет рассматривать миграцию как инструмент закрытия конкретного институционального дефицита, а не как маркетинговую программу.</p>
+<p><strong>Китай.</strong> Здесь миграция — это управляемый возврат, а не только отъезд. По данным Министерства образования КНР, в 1978–2024 годах за рубеж уехали учиться 8,88 млн человек, вернулись 6,44 млн; только в 2024-м вернулось 495 тыс. (+19,1% год к году), а после 2012-го — 5,63 млн, то есть 87% накопленного исторического потока. Это самая оформленная в мире машина географического возврата; вопрос не в том, возвращаются ли люди, а в том, конвертируется ли возврат в качество и наставничество.</p>
+<p><strong>ОАЭ.</strong> Идут по противоположному пути — явная стратегия превращения в глобальный центр притяжения талантов. Стратегия ОАЭ по привлечению и удержанию специалистов (<em>Talent Attraction and Retention Strategy</em>) ставит цель войти в топ-10 стран по глобальной конкурентоспособности за таланты. Стратегия ОАЭ в области ИИ до 2031 года (<em>UAE AI Strategy 2031</em>) — превратить страну в одного из мировых лидеров ИИ к 2031 году. Golden Visa — долгосрочная резиденция на 5 или 10 лет, без необходимости в спонсоре, с правом спонсировать семью. Это работающий комплекс условий для специалистов, и он привлекает.</p>
+<p>Ниже это станет отдельной игрой — институциональным арбитражем.</p>
+<hr />
+<h2 id="iii-transfer">Часть III. Что переносится на российский контекст, а что нет</h2>
+<p>Эта часть — операционная сводка. Для каждого тезиса первой статьи — оценка переносимости в российский контекст.</p>
+<table>
+<thead>
+<tr>
+<th>Тезис первой статьи</th>
+<th>Переносимость</th>
+<th>Комментарий</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ИИ снижает ценность части рутинного производственного вклада начинающих</td>
+<td>высокая</td>
+<td>Особенно в цифровых офисных и креативных индустриях</td>
+</tr>
+<tr>
+<td>Найм начинающих сжимается без массовых увольнений</td>
+<td>высокая</td>
+<td>Данные ВШЭ/Росстата скорее согласуются с интерпретацией организационной перестройки, чем массового сокращения</td>
+</tr>
+<tr>
+<td>Дефицит старших специалистов через 7–10 лет</td>
+<td>средняя–высокая</td>
+<td>Особенно если выгорят или уедут носители слоя наставничества</td>
+</tr>
+<tr>
+<td>Диплом теряет сигнальную силу</td>
+<td>частичная</td>
+<td>Слабые дипломы дешевеют, но топ-STEM и олимпиадные сигналы остаются сильными</td>
+</tr>
+<tr>
+<td>Провенанс заменяет резюме</td>
+<td>частичная</td>
+<td>GitHub и портфолио важны для IT, но в РФ сильнее работают репутация работодателя, вуз, рекомендации</td>
+</tr>
+<tr>
+<td>Найм по навыкам как имидж</td>
+<td>высокая</td>
+<td>В РФ риск тот же — декларация без перестройки практики найма</td>
+</tr>
+<tr>
+<td>Государство как координатор</td>
+<td>выше, чем в США</td>
+<td>Но риск формализма и имитация контроля</td>
+</tr>
+<tr>
+<td>Профессиональные посредники как координатор</td>
+<td>ниже, чем в Европе и США</td>
+<td>Слабое место РФ</td>
+</tr>
+<tr>
+<td>Якорные компании как координатор</td>
+<td>выше, чем в США</td>
+<td>Банки, платформы, госкорпорации, интеграторы</td>
+</tr>
+<tr>
+<td>Межстрановой арбитраж кадров</td>
+<td>средняя</td>
+<td>Не глобальный хаб, но возможен селективный коридор</td>
+</tr>
+<tr>
+<td>разрыв в уровне владения ИИ психологически измерим</td>
+<td>высокая</td>
+<td>Тот же механизм, та же ошибка перенастройки</td>
+</tr>
+<tr>
+<td>Культурный долг как накопление последствий</td>
+<td>высокая</td>
+<td>Усиливается в иерархических структурах, где формальное соответствие проще, чем рефлексия</td>
+</tr>
+<tr>
+<td>Workslop</td>
+<td>высокая</td>
+<td>Та же механика, но в РФ риск выше из-за давления на формальную отчётность</td>
+</tr>
+<tr>
+<td>Парадокс производительности 2.0</td>
+<td>высокая</td>
+<td>Все пять механизмов работают; распределение между ними может быть другим</td>
+</tr>
+<tr>
+<td>Биографическая регрессивность</td>
+<td>возможно выше</td>
+<td>Сильная зависимость от ранней академической траектории и репутации работодателя</td>
+</tr>
+<tr>
+<td>Невозможность механического переноса немецких и британских институтов</td>
+<td>абсолютная</td>
+<td>Тот самый структурный аргумент: РФ не может скопировать ни США, ни Германию, ни ОАЭ</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">Главная сравнительная формула</h3>
+<p><strong>В США ИИ-шок усиливает уже существующее равновесие недоинвестирования: высокая мобильность, слабая отраслевая координация и краткосрочные стимулы делают сокращение набора начинающих рациональным для отдельной фирмы и опасным для отрасли.</strong></p>
+<p><strong>В РФ ИИ-шок проходит через более концентрированную институциональную структуру: крупные работодатели и государство потенциально могут стабилизировать равновесие обучения, но слабость независимых профессиональных посредников, асимметрия между якорными компаниями и малыми компаниями, IT-эмиграция и риск бюрократического формализма создают собственные уязвимости.</strong></p>
+<hr />
+<h2 id="iv">Часть IV. Российские гипотезы для проверки</h2>
+<p>В отличие от первой статьи, где гипотезы формулировались как исследовательская программа, здесь они конкретнее: для каждой указано, <em>какие данные могли бы её подтвердить или опровергнуть</em>. Это важно, потому что без эмпирической операционализации гипотеза превращается в риторику.</p>
+<h3 id="_5">Статус доказательств: общая карта</h3>
+
+<figure class="infographic" id="fig-evidence">
+<figcaption class="ig-title">Статус доказательств: общая карта</figcaption>
+<p class="ig-sub">Это дисциплинирующая карта: одно дело — данные административной отчётности, другое — структурный аргумент, третье — концептуальная гипотеза.</p>
+
+<div class="ig-evidence-grid">
+
+  <div class="ig-ev-block ig-ev-a">
+    <div class="ig-ev-level">A</div>
+    <div class="ig-ev-label">Платёжные ведомости / каузальные данные</div>
+    <div class="ig-ev-items">
+      <div>Сжатие найма начинающих в США (Stanford, AI Index, Anthropic)</div>
+      <div>Постинги вакансий (WEF/Revelio, Harvard)</div>
+    </div>
+  </div>
+
+  <div class="ig-ev-block ig-ev-b">
+    <div class="ig-ev-level">B</div>
+    <div class="ig-ev-label">Опросы / наблюдательные данные</div>
+    <div class="ig-ev-items">
+      <div>РФ: концентрация внедрения ИИ (ВШЭ ИСИЭЗ)</div>
+      <div>hh.индекс рынка труда</div>
+      <div>Возврат IT-эмигрантов (Минцифры)</div>
+    </div>
+  </div>
+
+  <div class="ig-ev-block ig-ev-c">
+    <div class="ig-ev-level">C</div>
+    <div class="ig-ev-label">Политические документы / институциональное</div>
+    <div class="ig-ev-items">
+      <div>Комплекс условий для специалистов в ОАЭ (Golden Visa, AI Strategy 2031)</div>
+      <div>Параметрический сдвиг (разновидности капитализма)</div>
+      <div>Четыре режима (организационная карта)</div>
+    </div>
+  </div>
+
+  <div class="ig-ev-block ig-ev-d">
+    <div class="ig-ev-level">D</div>
+    <div class="ig-ev-label">Структурные гипотезы и сценарии</div>
+    <div class="ig-ev-items">
+      <div>РФ — расслоение, дефицит наставников, ужесточение сигналов</div>
+      <div>Ученичество через госзакупки</div>
+      <div>ОАЭ — способность к усвоению / риск слоя иностранных специалистов</div>
+      <div>Все H1–H11 и CH1–CH4 — преимущественно здесь</div>
+    </div>
+  </div>
+
+</div>
+
+<aside class="ig-note">
+Эта таблица — не упражнение в самоумалении. Это чёткое разделение того, что уже зафиксировано в данных, и того, что предложено как структурный аргумент. Дальнейшие гипотезы и контр-гипотезы — преимущественно второй и третий уровень.
+</aside>
+</figure>
+
+<p>Прежде чем перейти к гипотезам, полезно зафиксировать, <em>какие блоки документа на каком уровне доказательств находятся</em>. Это дисциплинирует чтение: одно дело — данные административной отчётности, другое — структурный аргумент, третье — концептуальная гипотеза.</p>
+<table>
+<thead>
+<tr>
+<th>Блок</th>
+<th>Статус доказательств</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>США сжатие найма начинающих (раздел II.1, II.6)</td>
+<td>платёжные ведомости / вакансии / опросы — относительно сильная база (Stanford, AI Index, Anthropic, WEF/Revelio, Harvard)</td>
+</tr>
+<tr>
+<td>РФ: концентрация внедрения ИИ (II.5)</td>
+<td>опросы / официальная статистика — средняя база (ВШЭ ИСИЭЗ)</td>
+</tr>
+<tr>
+<td>РФ гипотеза расслоения (H1, II.1)</td>
+<td>структурный аргумент из параметров рынка, прямых данных пока мало</td>
+</tr>
+<tr>
+<td>РФ узкое место наставничества (H2)</td>
+<td>концептуальная гипотеза, требует возрастной структуры IT-кадров и качественных интервью</td>
+</tr>
+<tr>
+<td>РФ ученичество, обеспеченное госзакупками (II.2)</td>
+<td>политическая идея, выведенная из российских параметров; примеров реализации пока нет</td>
+</tr>
+<tr>
+<td>Задача измерения для государства РФ (II.2)</td>
+<td>теоретический аргумент, опирающийся на общие свойства принципал-агентских структур</td>
+</tr>
+<tr>
+<td>РФ: ужесточение сигнала (H4)</td>
+<td>согласуется с описанием рынка, но количественных данных по премии за «жёсткие» сигналы 2022–2026 нет</td>
+</tr>
+<tr>
+<td>РФ возврат миграции (II.7, CH3)</td>
+<td>ведомственные заявления Минцифры, без независимой проверки структуры возврата</td>
+</tr>
+<tr>
+<td>ОАЭ комплекс условий для специалистов (V.3)</td>
+<td>стратегические документы + правовая инфраструктура — сильное институциональное подтверждение, слабее по данным о результатах</td>
+</tr>
+<tr>
+<td>ОАЭ способность к усвоению (H9, CH4)</td>
+<td>концептуальная гипотеза, требует долгосрочных данных</td>
+</tr>
+<tr>
+<td>Параметрический сдвиг (часть I)</td>
+<td>стандартная экономика труда плюс разновидности капитализма — теоретически хорошо обоснованы</td>
+</tr>
+<tr>
+<td>Четыре режима (часть I)</td>
+<td>организационная карта документа, не самостоятельный эмпирический тезис</td>
+</tr>
+</tbody>
+</table>
+<p>Эта таблица — не упражнение в самоумалении. Это чёткое разделение того, <em>что уже зафиксировано в данных</em>, и того, <em>что предложено как структурный аргумент или гипотеза</em>. Дальнейшие H1–H11 и CH1–CH4 — преимущественно второй и третий уровень: они логически выведены из параметров и требуют эмпирической проверки. Статья формулирует их именно как гипотезы, а не как утверждения.</p>
+<h3 id="_6">Основные гипотезы</h3>
+<p><strong>H1. Гипотеза расслоения.</strong> В РФ канал подготовки начинающих не исчезает, а раздваивается: крупные якорные компании сохраняют когортный набор, малые и средние компании сокращают обучение и становятся донорами кадров.</p>
+<p><em>Что проверить:</em> доли найма начинающих в компаниях разного размера за 2022–2026. Динамика перехода специалистов из малого бизнеса в крупный. Время от первой работы до первого крупного работодателя. Доля компаний с формальными программами стажировок по размеру.</p>
+<p><strong>H2. Гипотеза узкого места наставничества.</strong> Главное ограничение РФ — не количество начинающих, а количество старших и ведущих специалистов, способных обучать и передавать неформальное знание.</p>
+<p><em>Что проверить:</em> возрастная структура IT-кадров (Минцифры 857 тыс. в 2023 — это общая численность, не структура по уровням). Соотношение старших и начинающих в якорных компаниях. Качественные интервью с тимлидами и техлидами в крупных российских компаниях о том, кто реально обучает начинающих. Доля времени старших, потраченного на наставничество, по самооценке.</p>
+<p><strong>H3. Гипотеза координации через госзакупки.</strong> Госзакупки и крупнокорпоративные контракты могут стать российским функциональным аналогом сбора на ученичество, если в них встроить проверяемые обязательства по подготовке кадров.</p>
+<p><em>Что проверить:</em> существуют ли уже примеры таких условий в крупных IT-контрактах с госсектором. Можно ли в существующих закупочных процедурах закрепить требования по квотам на стажёров, часам наставничества, переходу с начального на средний уровень. Как это сделано в немецких и скандинавских госзакупках.</p>
+<p><strong>H4. Гипотеза ужесточения сигналов.</strong> ИИ удешевляет резюме и сертификаты, но усиливает ценность «жёстких» сигналов: олимпиад, топ-вузов, сильных работодателей, рекомендаций, реальных проектов.</p>
+<p><em>Что проверить:</em> динамика премий за олимпиадные и топ-вузовские дипломы в зарплатах 2022–2026. Доля найма через рекомендации в якорных компаниях. Эффект публичного портфолио на собеседования в IT по разным сегментам.</p>
+<p><strong>H5. Гипотеза искажения международной видимости.</strong> Падение или исчезновение российских участников из международных рейтингов после 2022 не должно автоматически трактоваться как падение качества; нужен дорыночный (до 2022 года) базовый уровень и альтернативные метрики.</p>
+<p><em>Что проверить:</em> результаты на международных олимпиадах до и после 2022 (где участие ещё происходит — IB, отдельные академические турниры). Динамика принятия российских студентов в топ-зарубежные программы (где это ещё возможно). Цитируемость российских публикаций по ИИ. Качественные оценки из практики найма.</p>
+<p><strong>H6. Гипотеза концентрации внедрения ИИ.</strong> В РФ внедрение ИИ будет более концентрированным у крупных организаций; именно они станут главной ареной перестройки начального уровня и канала подготовки кадров.</p>
+<p><em>Что проверить:</em> данные ВШЭ ИСИЭЗ за 2025–2027 о доле организаций-пользователей ИИ по размеру. Сектор, в котором первое заметное изменение найма начинающих коррелирует с внедрением ИИ. Соотношение внедрения ИИ сверху и низового использования ИИ в РФ против США.</p>
+<p><strong>H7. Гипотеза регрессивности.</strong> Если новые сигналы становятся дороже — топ-школы, сильные стажировки, публичное портфолио, рекомендации, наставники — люди без стартового капитала будут вытесняться сильнее, чем в старой системе «вуз → первая работа».</p>
+<p><em>Что проверить:</em> первое поколение в семье среди новых наёмных в крупных компаниях. SES-распределение завершения интенсивных программ переподготовки. Доля рекрутеров, использующих репутацию работодателя как первичный фильтр. Долгосрочные траектории выпускников, не имевших доступа к олимпиадному треку.</p>
+<h3 id="-">Контр-гипотезы</h3>
+<p>Гипотезы H1–H7 поддерживают основную аналитическую рамку. Для эпистемической дисциплины полезно явно сформулировать те, которые её <em>оспаривают</em>. Это не риторические возражения — это содержательные альтернативы, которые при определённой эмпирике могут оказаться ближе к реальности.</p>
+<p><strong>CH1. Иллюзия обучения в крупных компаниях.</strong> Крупные российские якорные компании могут сохранять программы стажировок как имидж работодателя, а фактический переход с начального на средний уровень при этом может быть низким. Бимодальное расслоение из H1 может оказаться кажущимся: крупные демонстрируют обучение, малые перестают обучать, а в реальности накопления компетенции не происходит ни там, ни там — просто по разным причинам.</p>
+<p><em>Что проверить:</em> для крупных якорных компаний — реальная доля стажёров, дошедших до среднего уровня через 3–4 года. Доля стажировок, после которых стажёр не получил оффера или ушёл в течение года. Соотношение «формальные программы / реальные траектории».</p>
+<p><strong>CH2. ИИ как сжатие, а не замена.</strong> ИИ может не разрушать канал подготовки начинающих, а просто повышать базовые ожидания по производительности. Начинающие останутся, но входной стандарт станет выше: то, что раньше делал начинающий в первый год, теперь делает претендент <em>перед</em> первым собеседованием. Это не «исчезновение начального уровня», а <em>смещение порога входа</em> — болезненное для тех, у кого нет ресурсов на самоподготовку, но не структурное разрушение канала подготовки.</p>
+<p><em>Что проверить:</em> динамика требований к кандидатам начального уровня в описаниях вакансий 2022–2026. Растёт ли требуемый объём опыта до первой работы. Меняется ли средний возраст «начинающего» в якорных компаниях. Растёт ли роль проектов до трудоустройства (стажировки, школы, личные проекты) в успешном найме.</p>
+<p>Эта контр-гипотеза важна, потому что от неё зависит политическая интерпретация: если CH2 верна, проблема не в исчезновении канала входа, а в распределении ресурсов на дотрудовую подготовку. Это другой политический вызов.</p>
+<p><strong>CH3. Разрыв качества обратной миграции.</strong> Даже если количественно значимая часть IT-эмигрантов вернулась в РФ, <em>слой наставников</em> мог не вернуться пропорционально. Возврат может быть смещён в пользу более заменимых ролей и против старших специалистов с глобально востребованными навыками. Это превращает позитивный заголовок «две трети вернулись» в скрыто негативный сигнал по структуре.</p>
+<p><em>Что проверить:</em> возрастная и грейдовая структура вернувшихся (в той мере, в какой это поддаётся измерению через косвенные индикаторы — зарплаты, должности, отрасли). Сравнение через интервью с HR в крупных российских IT-компаниях. Динамика численности тимлидов и архитекторов в якорных компаниях в 2022–2026 годах.</p>
+<p><strong>CH4. Успех локального умножения в ОАЭ.</strong> ОАЭ могут оказаться лучше в локальном умножении, чем предполагает слой иностранных специалистов. Если государство эффективно свяжет Golden Visa, исследовательские лаборатории, университеты и Emiratisation, то приехавшие специалисты могут стать менторами, профессорами, основателями — и способность к усвоению сработает. Тогда «слой иностранных специалистов без локального умножения» окажется не структурным риском, а кратковременным переходным состоянием.</p>
+<p><em>Что проверить:</em> доля иностранных обладателей докторской степени, ведущих локальные исследовательские программы в ОАЭ. Доля основателей с международным опытом, нанимающих и обучающих эмиратцев. Метрики из сравнительной таблицы — ниже.</p>
+<p>Каждая из этих контр-гипотез — не возражение ради баланса, а реальная альтернатива. Принципиальная позиция документа: пока эмпирика не позволяет однозначно различить H и CH, обе должны рассматриваться как живые опции. Это и есть та самая эпистемическая дисциплина, которая отличает анализ от адвокатирования.</p>
+<hr />
+<h2 id="v">Часть V. Одна игра, разные игроки</h2>
+<p>Разговор о России можно вести изолированно — как параметрическую перенастройку американского кейса. Но в реальности США, Россия, Китай и ОАЭ — это игроки одной глобальной игры за человеческий капитал. И вот тут появляется отдельный сюжет, который не сводится к первой статье.</p>
+<h3 id="v1-institutional-arbitrage">V.1. Третья игра: институциональный арбитраж</h3>
+<p>В первой статье описаны четыре актора (работодатель, сотрудник, образование, государство) и проблема воспроизводства компетенции <em>внутри</em> одной страны. Но как только мы смотрим на страны как на игроков, появляется новая игра:</p>
+<p><em>Страна или фирма-получатель принимает решение: импортировать готовых специалистов или инвестировать в локальный канал подготовки?</em></p>
+<p>Плохое равновесие выглядит так. Страна привлекает старших специалистов извне → локальные компании меньше выращивают начинающих, потому что есть более дешёвый путь → собственный канал подготовки деградирует → страна становится зависимой от постоянного импорта → если импортный канал по любой причине прерывается, у страны нет внутреннего ресурса.</p>
+<p>Хорошее равновесие выглядит иначе. Страна привлекает старших специалистов → они становятся менторами, основателями, руководителями лабораторий → растёт локальный переход с начального на средний уровень → страна усиливает собственный канал подготовки и одновременно остаётся привлекательной для новых старших специалистов.</p>
+<p>Главный вопрос здесь не «сколько талантов привлечь», а: <em>превращаются ли привлечённые люди в умножающие узлы внутри локальной системы компетенции</em>?</p>
+<p>Это новая игра, которой в первой статье не было. Назовём её <em>игрой на способность к усвоению</em>.</p>
+<h3 id="v2">V.2. США: одновременно источник шока и главный конкурент</h3>
+<p>США в этой игре в особом положении. Они одновременно:</p>
+<p>— <em>Источник шока.</em> Массовые увольнения, заморозка найма, сжатие найма начинающих, повышение порога входа — всё это делает карьерные траектории менее предсказуемыми для части людей, в первую очередь для иностранных специалистов с временным статусом.</p>
+<p>— <em>Главный абсорбер талантов.</em> Несмотря на турбулентность, лучшие специалисты по-прежнему стремятся в США. Университеты, венчурный капитал, передовые лаборатории, английский язык, сетевой эффект, размер рынка — это устойчивые активы, которые турбулентность не разрушает быстро.</p>
+<p>— <em>Источник мобильного капитала.</em> Часть специалистов среднего и старшего уровня, часть основателей, часть исследователей в условиях неопределённости начинают рассматривать альтернативные юрисдикции. Это не «массовый отток», а <em>селективный сдвиг</em> в распределении мобильности.</p>
+<p>— <em>Источник стандартов.</em> Американские сигналы компетенции по-прежнему глобально читаемы. Диплом MIT работает в Дубае и в Москве. Докторская степень Стэнфорда читается везде. Это устойчивая инфраструктура, которую другие страны не могут быстро воспроизвести.</p>
+<p>Поэтому окно возможностей для РФ и ОАЭ существует, но это окно <em>относительное</em>. Конкурировать приходится не со «слабым Западом», а с очень сильной системой, которая временно стала менее предсказуемой для части людей. Этого достаточно для предельного арбитража, но не для структурного сдвига.</p>
+<h3 id="v3">V.3. ОАЭ: наиболее оформленная модель «глобальный центр притяжения талантов»</h3>
+<p>ОАЭ — наиболее ясный пример страны, явно строящей режим привлечения специалистов.</p>
+<p>Стратегия ОАЭ по привлечению и удержанию специалистов (<em>Talent Attraction and Retention Strategy</em>) ставит конкретную цель: войти в топ-10 стран по глобальной конкурентоспособности за таланты, обеспечить специалистов для стратегических секторов (информационно-коммуникационные технологии; передовые технологии и космос; наука и образование; здравоохранение; финансовые услуги; логистика; креативные индустрии; предпринимательство), закрепить имидж страны как места для жизни и работы.</p>
+<p>Стратегия ОАЭ в области ИИ до 2031 года (<em>UAE AI Strategy 2031</em>) явно ставит цель превратить страну в одного из мировых лидеров ИИ к 2031 году. Среди направлений — внедрение ИИ государством, управление данными, и «новое поколение регионального таланта».</p>
+<p><a href="https://en.wikipedia.org/wiki/UAE_Golden_Visa">Golden Visa</a> — операционный инструмент. Долгосрочная резиденция 5 или 10 лет, без необходимости в спонсоре, с правом спонсировать семью, с возможностью оставаться вне страны дольше обычного без потери статуса. Категории включают инвесторов, предпринимателей, учёных, выдающихся студентов, обладателей докторской степени, специалистов в приоритетных научных и инженерных областях.</p>
+<p>Это не маркетинговая декларация. Это связка из четырёх элементов: стратегия + категории + правовой статус + операционная поддержка. Она работает.</p>
+<p>Главный риск ОАЭ — <em>слой иностранных специалистов без локального воспроизводства</em>. Импортируемые старшие специалисты могут работать в международных компаниях, жить в анклаве иностранных специалистов, мало передавать компетенции локальным начинающим. Тогда страна получает <em>запас человеческого капитала</em> без глубокой системы формирования квалификации.</p>
+<p>Метрика, которая важнее числа выданных виз Golden Visa:</p>
+<table>
+<thead>
+<tr>
+<th>Метрика</th>
+<th>Что показывает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Доля привлечённых специалистов, ведущих локальные команды</td>
+<td>Передача неформального знания</td>
+</tr>
+<tr>
+<td>Число локальных начинающих под наставничеством приехавших старших специалистов</td>
+<td>Усиление канала подготовки</td>
+</tr>
+<tr>
+<td>Доля основателей, нанимающих и обучающих местных</td>
+<td>Эффект переноса</td>
+</tr>
+<tr>
+<td>Исследовательские лаборатории с локальными студентами и докторантами</td>
+<td>Производство знания, не только потребление</td>
+</tr>
+<tr>
+<td>Удержание специалистов через 5–10 лет</td>
+<td>Хаб или транзитная зона</td>
+</tr>
+</tbody>
+</table>
+<p>Это и есть та самая способность к усвоению, которую V.1 поставил как центральный вопрос.</p>
+<h3 id="v4-stem">V.4. РФ: модель «селективная STEM/евразийская консолидация»</h3>
+<p>РФ не может копировать ОАЭ напрямую. Слабее глобальное предложение по мобильности: санкции, визовые ограничения, репутационные риски, меньше международной нейтральности, более сложные условия для глобального класса иностранных специалистов.</p>
+<p>Но у РФ есть другая возможная игра, не сводимая к копированию ОАЭ.</p>
+<p>Потенциальные группы для привлечения:</p>
+<p>— Российские специалисты, уехавшие после 2022, но не встроившиеся устойчиво за рубежом.
+— Русскоязычные инженеры и разработчики из СНГ.
+— Специалисты из стран, где российский рынок, язык или образование остаются понятной траекторией.
+— Специалисты среднего и старшего уровня, которым нужны реальные инженерные задачи, а не только глобальная компенсация.
+— Преподаватели, олимпиадные тренеры, исследователи, способные усиливать слой наставничества.</p>
+<p>Юридическая инфраструктура для высококвалифицированных специалистов уже частично существует. Закон 316-ФЗ закрепил возможность бессрочного ВНЖ для ВКС, проработавшего в РФ не менее двух лет, и членов его семьи.</p>
+<p>Но для межстрановой арбитраж кадров юридической возможности недостаточно. Нужен полноценный <em>комплекс условий для специалистов</em>:</p>
+<table>
+<thead>
+<tr>
+<th>Компонент</th>
+<th>Что должно быть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Правовой статус</td>
+<td>Понятный быстрый трек для ВКС, семей, исследователей, основателей</td>
+</tr>
+<tr>
+<td>Притяжение через проекты</td>
+<td>Сильные инженерные, ИИ, промышленные, инфраструктурные задачи</td>
+</tr>
+<tr>
+<td>Институциональный дом</td>
+<td>Лаборатория, кафедра, компания, R&amp;D-центр</td>
+</tr>
+<tr>
+<td>Обязательство по наставничеству</td>
+<td>Привязка льгот к обучению начинающих</td>
+</tr>
+<tr>
+<td>Восстановление репутации</td>
+<td>Чтобы переезд не выглядел карьерным тупиком</td>
+</tr>
+<tr>
+<td>Региональная стратегия</td>
+<td>Не только Москва и СПб, но сильные центры подготовки в естественных и точных науках</td>
+</tr>
+<tr>
+<td>Ясность в режимах допуска</td>
+<td>Понятные правила для чувствительных отраслей</td>
+</tr>
+</tbody>
+</table>
+<p>И теперь — место для одной оговорки. Стратегия привлечения специалистов чувствительна к операционной среде. Для мобильного специалиста важны не только визовый статус и наличие проектов, но и повседневная совместимость с глобальной профессиональной инфраструктурой: международные платежи, коммуникации, доступ к инструментам, возможность участвовать в международных сетях, предсказуемость цифровой среды. Если эти элементы ухудшаются, они снижают ценность всего комплекс условий для специалистов — даже при наличии сильных проектов и льготного правового статуса.</p>
+<p>Это не политическое заявление. Это структурное наблюдение из теории игр: <em>комплекс условий для специалистов — это сложный многокомпонентный сигнал, и одна слабая компонента обесценивает остальные</em>. Разрыв между декларацией «приезжайте, у нас интересные проекты» и операционной средой ловится мобильным специалистом мгновенно — ровно потому, что он мобильный, и у него есть с чем сравнить.</p>
+<blockquote>
+<p><strong>Операционный риск.</strong> Если страна одновременно строит инфраструктуру для привлечения таланта и ужесточает условия для всего, что делает мобильного специалиста мобильным — ограничения на международные платежи, нестабильность VPN, фрагментация интернет-инфраструктуры, импорт роуминговых SIM-карт как побочный бизнес — то она работает против собственной стратегии привлечения специалистов. Это не риторическая иллюстрация: каждое из этих ограничений измеримо снижает совместимость страны с мобильным профессиональным контуром, и ни одно из них не компенсируется ростом локальных зарплат или льготным ВНЖ. Мобильный специалист быстро считывает этот разрыв, потому что сравнивает не декларации, а повседневную операционную совместимость.</p>
+</blockquote>
+<p>Поэтому главная возможность РФ — не в количестве, а в <em>закрытии узкого места наставничества</em>. Не «переманить всех», а привлечь людей с высокой мультипликативностью: старший инженер, исследователь, тимлид, основатель, преподаватель, который способен вырастить десятки начинающих за несколько лет. Это меньшая по объёму, но качественно другая программа.</p>
+<p>Главный риск РФ зеркален главному риску ОАЭ. Если крупные работодатели начнут использовать межстрановой арбитраж кадров как замену локальному обучению — <em>проще купить или вернуть готового старшего специалиста, чем строить канал подготовки начинающих</em> — РФ повторит ту же проблему недоинвестирования, только в другой институциональной форме. Крупные игроки высасывают рынок, малые перестают обучать, университеты теряют связь с практикой, слой наставников остаётся узким, и вся система воспроизводства компетенции остаётся хрупкой.</p>
+<h3 id="v5-china">V.5. Китай: государственно-промышленная машина возврата</h3>
+<p>Если ОАЭ показывают предельный случай импорта готового таланта, то Китай — предельный случай противоположной стратегии: не купить специалиста снаружи, а построить машину, которая возвращает и встраивает своих. Это и есть третья игра — институциональный арбитраж — но решённая через возврат, а не через привлечение чужих.</p>
+<p>Административный слой сильный. По данным Министерства образования КНР, в 1978–2024 годах за рубеж уехали учиться 8,88 млн человек, 7,43 млн завершили обучение, 6,44 млн вернулись; только в 2024-м вернулось 495 тыс. (+19,1% год к году), а после 2012-го — 5,63 млн, то есть 87% накопленного исторического потока. На уровне высокой науки возврат конвертируется в продуктивность: по исследованию Shi, Liu, Wang в Science, участники Young Thousand Talents после возврата публикуют на 27% больше работ и имеют +144% публикаций последним автором по сравнению с зарубежными сверстниками (339 вернувшихся против 419 контрольных).</p>
+<p>Но у этой модели своя уязвимость, которой нет у США и ОАЭ: <em>перегрев провенанса</em>. Чем сильнее система награждает число публикаций, статус вернувшегося и быстрый рост результата, тем дешевле для отдельного исследователя произвести именно те сигналы, которыми измеряется качество, — а ИИ удешевляет это производство ещё больше. По данным Pangram (2025), 26% статей из китайских институций содержат хотя бы один сгенерированный ИИ фрагмент (против 7,4% для США); обзор Frontiers по отзывам статей, связанных с ИИ, связывает с Китаем 72,2% первых авторов отозванных работ и наибольшее общее число отзывов. Оба показателя требуют нормализации по объёму публикаций и не доказывают умысел — ИИ может быть переводчиком или средством стилистической шлифовки, — но как сигнал риска для слоя признания они работают сильно.</p>
+<p>Китайский режим, таким образом, не «сильнее» или «слабее» американского — он решает другую задачу. США рискуют недоинвестировать в собственный нижний вход; Китай умеет возвращать и размещать верхний слой, но рискует тем, что переводчик, который он построил, начнёт перегреваться и потребует всё более дорогой проверки.</p>
+
+<h3 id="v5">V.6. Сравнение четырёх моделей</h3>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>США</th>
+<th>РФ</th>
+<th>Китай</th>
+<th>ОАЭ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Базовая стратегия</td>
+<td>Магнит по умолчанию</td>
+<td>Селективный коридор для специалистов в естественных и точных науках</td>
+<td>Государственно-промышленная машина возврата и абсорбции</td>
+<td>Глобальный центр притяжения талантов</td>
+</tr>
+<tr>
+<td>Главный актив</td>
+<td>Университеты, венчур, английский</td>
+<td>STEM-база, якорные работодатели, язык</td>
+<td>Масштаб, гос-промышленная интеграция, программы возврата</td>
+<td>Капитал, визы, нейтральность</td>
+</tr>
+<tr>
+<td>Главный инструмент</td>
+<td>Существующая инфраструктура</td>
+<td>ВКС-трек + университеты + госзаказ</td>
+<td>Программы привлечения (Young Thousand Talents и др.) + университеты + индустрия</td>
+<td>Golden Visa + стратегия по ИИ + экосистема</td>
+</tr>
+<tr>
+<td>Главный риск</td>
+<td>Недоинвестирование в канал подготовки</td>
+<td>Замена локального обучения импортом, плюс структурный самосаботаж</td>
+<td>Перегрев публикационного и статусного провенанса</td>
+<td>Слой иностранных специалистов без локального умножения</td>
+</tr>
+<tr>
+<td>Лучший координирующий механизм</td>
+<td>Якорные компании, частично сертифицирующие органы</td>
+<td>Ученичество, обеспеченное госзакупками + совместные университетско-индустриальные лаборатории</td>
+<td>Государство + университеты + индустрия как единая архитектура</td>
+<td>Виза для специалистов + лаборатории + экосистема</td>
+</tr>
+<tr>
+<td>Ключевая метрика успеха</td>
+<td>Устойчивость канала подготовки</td>
+<td>Эффект умножения через наставничество и переход с начального на средний уровень</td>
+<td>Качество результата после возврата, а не только число вернувшихся</td>
+<td>Локальное умножение от привлечённых специалистов</td>
+</tr>
+<tr>
+<td>Структурное ограничение</td>
+<td>Краткосрочные стимулы</td>
+<td>Политические и инфраструктурные барьеры</td>
+<td>Честность сигнала зависит от дисциплины проверки качества</td>
+<td>Зависимость от внешнего запаса человеческого капитала</td>
+</tr>
+</tbody>
+</table>
+<h3 id="v6-h8h11-institutional-arbitrage">V.7. Гипотезы H8–H11: институциональный арбитраж</h3>
+<p><strong>H8. Гипотеза межстранового арбитража кадров.</strong> Вызванная ИИ турбулентность в западных рынках труда увеличивает мобильность части специалистов среднего и старшего уровня, основателей и исследователей, создавая селективные возможности для не-западных центров притяжения талантов.</p>
+<p><em>Что проверить:</em> динамика международных переездов специалистов из США в третьи страны 2022–2026. Доля мобильных в общем найме. Сравнение с дорыночным (до 2022 года) уровнем.</p>
+<p><strong>H9. Гипотеза способности к усвоению.</strong> Страны выигрывают от притока талантов только когда могут конвертировать импортированный человеческий капитал в локальное наставничество, формирование фирм, исследовательские лаборатории и переходы с начального на средний уровень.</p>
+<p><em>Что проверить:</em> для ОАЭ и РФ — доля приехавших, обучающих локальных. Доля основателей с международным опытом, нанимающих локально. Долгосрочное удержание.</p>
+<p><strong>H10. Гипотеза провала слоя иностранных специалистов.</strong> Стратегии привлечения талантов проваливаются, когда импортированные специалисты остаются социально и профессионально отделены от локальной системы формирования квалификации.</p>
+<p><em>Что проверить:</em> социометрия профессиональных связей в крупных компаниях, нанимающих международных специалистов. Доля спикеров на локальных профессиональных мероприятиях из числа иностранных специалистов. Перенос навыков через смену работы внутри страны.</p>
+<p><strong>H11. Гипотеза эффекта умножения через наставничество.</strong> Для стран с сильной базой в естественных и точных науках, но ограниченной глобальной мобильностью, наиболее ценная цель миграционной политики — не индивидуально продуктивный специалист, а специалист, способный обучать когорты, вести команды и институционализировать неформальное знание.</p>
+<p><em>Что проверить:</em> сравнение долгосрочного эффекта от привлечения 100 индивидуальных специалистов и от привлечения 10 фигур-наставников. Эта гипотеза наиболее трудная для прямой проверки — требует долгосрочного исследования на 5–10 лет.</p>
+<hr />
+<h2 id="vi">Часть VI. Открытые вопросы и ограничения</h2>
+<h3 id="_7">Что недоказано</h3>
+<p>Большая часть гипотез H1–H11 опирается на правдоподобные структурные аргументы, не на завершённую эмпирику. Это сознательная позиция: лучше явно обозначить открытые вопросы, чем создавать видимость доказанных утверждений. Особенно это касается российского блока, где административных данных уровня платёжные ведомости Stanford просто нет.</p>
+<h3 id="nelzya">Что нельзя утверждать сильнее текущей базы</h3>
+<p>Дисциплина чтения требует явно отделить то, что подтверждено, от того, что остаётся структурной гипотезой. Семь ограничений, которые нельзя нарушать даже ради связности:</p>
+<ol>
+<li>Нельзя утверждать, что ОАЭ уже доказали успешное локальное воспроизводство ИИ-компетенции. Доказан продукт привлечения талантов, не доказан полный перенос в локальную систему.</li>
+<li>Нельзя утверждать, что российские IT-эмигранты массово вернулись в структуре, полезной для слоя наставников. Надёжнее: есть оценки 80–100 тыс. IT-эмиграции; OutRush фиксирует около 8% вернувшихся в 2023–2024 и 5% планирующих; оценка РАНХиГС около 10% проходит только через вторичные источники.</li>
+<li>Нельзя использовать 850 тыс. в реестре контролируемых лиц как IT-индикатор. Это миграционный контроль иностранцев с прекращёнными основаниями пребывания, а не показатель IT-рынка.</li>
+<li>Нельзя писать, что «Софтлайн» — чистое доказательство прямого ИИ-замещения. Это кейс эффективности и перераспределения в эпоху ИИ: ИИ назван одним из факторов наряду с интеграцией после слияний и оценкой эффективности.</li>
+<li>Нельзя писать, что Сбер сократил 20% всех сотрудников без подтверждения в годовой отчётности. Сильный факт — публичная формулировка кейса об ИИ как инструменте выявления неэффективности и спор об управленческой ответственности, а не точная численность.</li>
+<li>Нельзя читать китайские публикации, помеченные ИИ-детекторами, как прямое доказательство обмана. Это может быть перевод, стилистическая шлифовка или эффект неанглоязычного письма. Сигнал риска есть, намерение не доказано.</li>
+<li>Нельзя использовать старую цифру Stanford HAI «до 72% в маркетинге». Текущая рекомендованная формулировка — до 50% в маркетинге; 72% убрать.</li>
+</ol>
+
+<h3 id="_8">Что требует данных</h3>
+<p>Для серьёзной эмпирической работы по РФ необходимы:</p>
+<p>— Возрастная структура IT-кадров и динамика 2020–2026.
+— Соотношение начинающих и старших в якорных компаниях по сегментам.
+— Реальная доля обязательства по подготовке кадров в крупных IT-контрактах с госсектором.
+— Источники найма в якорных компаниях по каналам (вуз, рекомендация, открытая воронка).
+— Долгосрочные эффекты IT-эмиграции на слой наставников.
+— Качественные интервью с тимлидами и техлидами в крупных российских компаниях о реальной механике обучения.</p>
+<p>Часть из этого собирается ВШЭ ИСИЭЗ, hh.ru, Минцифры. Часть требует целевого исследования.</p>
+<h3 id="_9">Чего сознательно не делается</h3>
+<p>Эта статья не разбирает Индию, Сингапур, Японию и ЕС в целом. Каждая из этих систем требует отдельной работы. Поверхностное включение их в текст создало бы иллюзию полноты и размыло бы фокус на четырёх конфигурациях, которые сами по себе содержательно богаты.</p>
+<p>Эта статья также не превращается в политическую рекомендацию. В нескольких местах есть нормативные оговорки — там, где из анализа естественно следует операционное следствие. Но программу действий строить — это другая задача и другой жанр.</p>
+<h3 id="_10">Главный вопрос для следующей итерации</h3>
+<p>Если первая статья поставила вопрос «как остановить деградацию системы воспроизводства компетенции», эта статья ставит более узкий, но более операциональный вопрос:</p>
+<p><em>Сумеют ли в России государство, крупные работодатели и университеты превратить переход к ИИ в новое равновесие обучения — а не в систему, где крупные игроки просто покупают готовых старших специалистов и высасывают рынок?</em></p>
+<p>Структурный ответ из теории: это возможно, если процедуры закупок встроят верифицируемые обязательства по подготовке кадров, если крупные якорные компании примут на себя обязательства по переходу с начального на средний уровень, и если межстрановой арбитраж кадров будет привязан к эффекту умножения через наставничество. Не теоретически невозможно. Но и не автоматически. Главное препятствие — не идеологическое, а измерительное: координатор должен научиться отличать накопление компетенции от отчётной активности. Без этого никакая политическая идея не работает.</p>
+<h3 id="_11">Финальная формула</h3>
+
+<figure class="infographic" id="fig-final">
+<figcaption class="ig-title">Структурные задачи на 7–10 лет</figcaption>
+<p class="ig-sub">Не четыре уровня успеха. Четыре разные задачи, у каждой страны свой набор сильных и слабых сторон.</p>
+
+<div class="ig-final-grid">
+
+  <div class="ig-final-block">
+    <div class="ig-final-flag ig-final-us">США</div>
+    <div class="ig-final-task">Удержать канал подготовки</div>
+    <div class="ig-final-text">Даже самая сильная система привлечения и удержания талантов может недоинвестировать в воспроизводство, если рынок вознаграждает краткосрочную эффективность.</div>
+    <div class="ig-final-question"><strong>Открытый вопрос:</strong> сможет ли рынок самостоятельно найти координацию, или потребуются институциональные интервенции.</div>
+  </div>
+
+  <div class="ig-final-block">
+    <div class="ig-final-flag ig-final-cn">Китай</div>
+    <div class="ig-final-task">Защитить честность сигнала</div>
+    <div class="ig-final-text">Государство может построить машину возврата и абсорбции таланта — но тогда главным риском становится качество сигналов, которыми эта машина измеряет успех.</div>
+    <div class="ig-final-question"><strong>Открытый вопрос:</strong> удержит ли система проверяемость результата, когда ИИ удешевляет производство публикационного провенанса.</div>
+  </div>
+
+  <div class="ig-final-block">
+    <div class="ig-final-flag ig-final-ae">ОАЭ</div>
+    <div class="ig-final-task">Превратить скорость в умножение</div>
+    <div class="ig-final-text">Специалистов можно быстро привлечь, если страна умеет упаковать правовой статус, капитал, инфраструктуру и стратегический спрос в единый комплекс условий для специалистов.</div>
+    <div class="ig-final-question"><strong>Открытый вопрос:</strong> превратится ли скорость в локальное умножение или останется слоем иностранных специалистов.</div>
+  </div>
+
+  <div class="ig-final-block">
+    <div class="ig-final-flag ig-final-ru">РФ</div>
+    <div class="ig-final-task">Решить задачу измерения</div>
+    <div class="ig-final-text">Превратить сильную базу в естественных и точных науках, якорных работодателей и государственный спрос в устойчивое равновесие обучения — не столько привлечь глобальных специалистов, сколько координировать собственную систему.</div>
+    <div class="ig-final-question"><strong>Открытый вопрос:</strong> справится ли координатор с измерительной задачей, и не разрушит ли свои собственные операционные опоры.</div>
+  </div>
+
+</div>
+
+<aside class="ig-note">
+Главный сравнительный вопрос — не «кто победит», а <em>какая система быстрее научится решать проблему воспроизводства компетенции в эпоху, когда ИИ меняет цену каждой её компоненты</em>. Эмпирический ответ будет виден не раньше 2030 года.
+</aside>
+</figure>
+
+<p>США демонстрируют, что даже самая сильная система привлечения и удержания талантов может недоинвестировать в канал подготовки, если рынок вознаграждает краткосрочную эффективность.</p>
+<p>ОАЭ демонстрируют, что специалистов можно быстро привлечь, если страна умеет упаковать правовой статус, капитал, инфраструктуру и стратегический спрос в единый комплекс условий для специалистов. Открытый вопрос ОАЭ — насколько эта скорость превратится в локальное умножение, а не в слой иностранных специалистов.</p>
+<p>РФ демонстрирует третью задачу: не столько привлечь глобальных специалистов любой ценой, сколько превратить сильную базу в естественных и точных науках, якорных работодателей и государственный спрос в устойчивое равновесие обучения. Открытый вопрос РФ — справится ли координатор с измерительной задачей, и не разрушит ли свои собственные операционные опоры.</p>
+<p>Это не четыре уровня успеха. Это четыре разные структурные задачи на 7–10 лет, и у каждой страны свой набор сильных и слабых сторон. Главный сравнительный вопрос — не «кто победит», а <em>какая система быстрее научится решать проблему воспроизводства компетенции в эпоху, когда ИИ меняет цену каждой её компоненты</em>. Возможно, что все четыре научатся, но разными способами; возможно, что не научится никто; возможно, что одни решат хорошо именно ту задачу, которая для них главная, а другие провалятся именно на ней. Эмпирический ответ будет виден не раньше 2030 года, и сегодняшние уверенные рецепты преждевременны для всех четырёх систем.</p>
+<hr />
+<p><em>Статья написана как продолжение рамки «Четыре актора, три времени». Она опирается на открытые данные и фактчек цикла; по России, Китаю и ОАЭ эмпирическая база неоднородна, поэтому часть выводов сформулирована как проверяемые гипотезы. Тексты и машиночитаемые материалы цикла доступны на GitHub.</em></p>
+<h2 id="anchors">Приложение. Рабочая карта факт-якорей</h2>
+<p>Все числовые утверждения статьи привязаны к узлам фактологической базы (<code>factcheck.json</code> / <code>profgames_ai_signals.jsonl</code>). Карта приведена для проверяемости и переноса между статьями цикла.</p>
+<table>
+<thead>
+<tr><th>Блок</th><th>Claim-id</th></tr>
+</thead>
+<tbody>
+<tr><td>США: сжатие найма начинающих</td><td><code>ai-22</code></td></tr>
+<tr><td>Anthropic: экспозиция профессий к ИИ</td><td><code>ai-20</code>, <code>ai-21</code></td></tr>
+<tr><td>Stanford HAI: макро-факты по ИИ (с исправлением «72%→50% в маркетинге»)</td><td><code>ai-19</code></td></tr>
+<tr><td>Российский IT-рынок 2025</td><td><code>ru-05</code></td></tr>
+<tr><td>Российская IT-эмиграция и возврат</td><td><code>ru-06</code>, <code>ru-08</code></td></tr>
+<tr><td>Миграционная политика РФ</td><td><code>ru-09</code>, с оговоркой <code>ru-10</code></td></tr>
+<tr><td>Минцифры 2030 / IT-образование (Постановление №1949)</td><td><code>ru-16</code>, <code>ru-01</code>, <code>ru-17</code></td></tr>
+<tr><td>Российское сжатие найма начинающих 2025–2026</td><td><code>b-rus-it-09</code></td></tr>
+<tr><td>Софтлайн / Сбер / Positive Technologies</td><td><code>b-rus-it-06</code>, <code>b-rus-it-07</code>, <code>b-rus-it-08</code></td></tr>
+<tr><td>Зарплатная поляризация в IT РФ</td><td><code>b-rus-it-10</code></td></tr>
+<tr><td>152-ФЗ и инфраструктурная локализация</td><td><code>b-rus-it-01</code></td></tr>
+<tr><td>GitHub / санкционный провенанс</td><td><code>b-rus-it-02</code></td></tr>
+<tr><td>Воркслоп / долг верификации</td><td><code>b-rus-it-03</code>, <code>b-rus-it-04</code></td></tr>
+<tr><td>Китай: Young Thousand Talents (продуктивность возвращенцев)</td><td><code>reg-27</code></td></tr>
+<tr><td>Китай: возвращенцы (масштаб возврата)</td><td><code>reg-28</code></td></tr>
+<tr><td>Китай: ИИ-флаги в публикациях / ретракции</td><td><code>b-chn-01</code>, <code>b-chn-02</code>, <code>b-chn-03</code></td></tr>
+<tr><td>ОАЭ: AI Strategy 2031 / Stargate UAE</td><td><code>reg-30</code></td></tr>
+</tbody>
+</table>
+
+</main>
+</div>
+</body>
+</html>

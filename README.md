@@ -4,6 +4,8 @@
 
 **🌐 Сайт цикла: [scadastrangelove.github.io/profgames](https://scadastrangelove.github.io/profgames/)**
 
+**Сергей Гордейчик** · [teletype](https://teletype.in/@sergey_gordey) · [telegram](https://t.me/aiakyn) · [github](https://github.com/scadastrangelove/profgames) · тег **#profgames**
+
 ---
 
 Десятилетиями устоявшиеся институты раскачивает. Собеседования. Карьерные траектории. Дипломы. Профессии, которые казались вечными. Что-то из этого треснет и распадётся, что-то перестроится, что-то выглядит как кризис, а на самом деле — обычное циклическое сжатие.
@@ -20,8 +22,8 @@
 | **A** | [Четыре актора, три времени](https://scadastrangelove.github.io/profgames/a-article.html) | Теоретическая рамка цикла. Работодатель, сотрудник, образование, государство — каждый со своим горизонтом и своей рациональностью. Сжатие канала входа в профессию, сжатие посреднических ролей с матрицей четырёх уровней, сцепленный кризис, расщепление государства на короткое и длинное окно, коллапс канала как сквозной механизм, Парето-логика и асимметрия стоимости поддержания. | ✅ опубликовано |
 | **A1** | [События как стресс-тест рамки](https://scadastrangelove.github.io/profgames/a-events.html) | Событийный слой к рамке A. 177 проверенных сигналов 2020–2026 на четырёх акторов с интерактивной timeline. Семь связанных сюжетов показывают, как теоретические механизмы рамки проявляются в реальных событиях: сжатие входа junior-ролей, сжатие коммуникационных профессий, петля имитации в найме, отступление в регулируемых профессиях, школьная параллель, технический ответ на провенанс-коллапс, провал AI-детекции. Walkback-пары и split-решения — отдельные геометрии причинно-следственных связей. [HTML](https://scadastrangelove.github.io/profgames/a-events.html) · [JSONL](https://github.com/scadastrangelove/profgames/blob/main/profgames_ai_signals.jsonl) | ✅ опубликовано |
 | **B** | [Пять биографий, три развилки](https://scadastrangelove.github.io/profgames/b-article.html) | Пять профессиональных траекторий и работа переводчиков провенанса: как опыт переводится в локальный статус, доверие и ответственность через регистры, лицензии, палаты, государственные программы и сетевой след. Ирландский учитель, немецкий инженер, индийский врач в UK, китайский возвращенец и русский айтишник показывают, где дверь работает в обе стороны, где закрывается обратно, а где обе двери сжимаются одновременно. | ✅ опубликовано |
-| **C** | Одна теория, разные параметры | Параметризация теоретической рамки на страновых конфигурациях: США как baseline, Россия и Китай. ОАЭ как пограничный случай малой страны между гигантами. | 🟡 готовится |
-| **D** | Семь симптомов и четыре актора | Диагностическая карта. Семь видимых симптомов кризиса воспроизводства профессии × четыре актора, каждый со своим срезом. Не рецепт — инструмент различения. | 🟡 готовится |
+| **C** | [Одна теория, разные параметры](https://scadastrangelove.github.io/profgames/c-article.html) | Параметризация рамки на четырёх институциональных конфигурациях: США, Россия, Китай и ОАЭ. Та же теория даёт разные равновесия при разных параметрах рынка, государства, образования и международных сигналов. | ✅ опубликовано |
+| **D** | [Семь симптомов и четыре актора](https://scadastrangelove.github.io/profgames/d-article.html) | Диагностическая карта. Семь видимых симптомов кризиса воспроизводства профессии × четыре актора, каждый со своим срезом. Не рецепт — инструмент различения. | ✅ опубликовано |
 | **Y** | [AI-Mind: что ИИ делает с психикой](https://scadastrangelove.github.io/profgames/aimind/aimind.html) | Параллельная серия к профессиональному циклу. Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. 41 сигнал 2023–2026, 15 феноменов (от парасоциальной привязанности и ИИ-индуцированного психоза до социального замещения и character grooming), 7 параметров уязвимости (включая операционализованную V5 — нейроотличие с AuDHD sub-category), общая с **Z** шкала доказательности A/B/C/D. Регуляторные landmark-ы (CA SB 243, NY S-3008C, China CAC, EU AI Act, Italy Garante €5M fine), судебные кейсы (Setzer, Раин, Peralta, Brooks, SMVLC seven, Roberts UK, Gavalas v Google Gemini), peer-reviewed исследования (MIT/OpenAI, Cheng/Jurafsky Science, JAMA Perlis, Wysa NHS Sussex), statistical_meta_summary с применением 11 фильтров (GRADE≥2, I²<50%, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023–2026. [HTML](https://scadastrangelove.github.io/profgames/aimind/aimind.html) · [JSONL](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals_v0_7.jsonl) · [JSON](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck_v0_8.json) | ✅ опубликовано |
 | **Z** | [Фактологическая основа](https://scadastrangelove.github.io/profgames/factcheck.html) | Независимый фактчек 65 утверждений с разнесением уровней доказательности. С первоисточниками, оговорками и рекомендованными формулировками. [HTML](https://scadastrangelove.github.io/profgames/factcheck.html) · [JSON](https://scadastrangelove.github.io/profgames/factcheck.json) | ✅ опубликовано |
 
@@ -114,11 +116,12 @@ schema_version    — aimind_signal_schema_v0.1
 
 ## Где публикуется
 
-Цикл выходит параллельно в трёх каналах:
+Цикл выходит параллельно в четырёх каналах:
 
 * **GitHub Pages**: [scadastrangelove.github.io/profgames](https://scadastrangelove.github.io/profgames/) — основной сайт со всеми статьями
 * **GitHub repo**: [github.com/scadastrangelove/profgames](https://github.com/scadastrangelove/profgames) — исходные файлы, JSON-факт-база и JSONL событийные массивы
 * **Teletype**: [teletype.in/@sergey\_gordey](https://teletype.in/@sergey_gordey) с тегом **#profgames**
+* **Telegram**: [t.me/aiakyn](https://t.me/aiakyn) — канал «Айкын»
 
 ## Файлы в репозитории
 
@@ -128,6 +131,8 @@ profgames/
 ├── 0-manifesto.html                    # 0 — манифест цикла
 ├── a-article.html                      # A — четыре актора, три времени
 ├── b-article.html                      # B — пять биографий и три развилки
+├── c-article.html                      # C — одна теория, разные параметры
+├── d-article.html                      # D — семь симптомов и четыре актора
 ├── a-events.html                       # A1 — события как стресс-тест рамки (интерактивный)
 ├── profgames_ai_signals.jsonl          # A1 — машиночитаемый событийный массив
 ├── factcheck.html                      # Z — фактологическая основа (для людей)

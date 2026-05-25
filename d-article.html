@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игры в профессию. D — Семь симптомов и четыре актора</title>
+<style>
+:root {
+  --bg: #fbfaf7;
+  --bg-card: #ffffff;
+  --bg-soft: #f4f2ec;
+  --bg-warm: #f8f3ea;
+  --text: #1a1a1a;
+  --text-muted: #5a5a58;
+  --text-light: #888780;
+  --accent: #5a4a3f;
+  --rule: rgba(0,0,0,0.12);
+  --rule-soft: rgba(0,0,0,0.06);
+  --c-employer: #4A6FA5;
+  --c-employee: #6B8E5A;
+  --c-education: #B07A3C;
+  --c-state: #8B5A6B;
+  --serif: 'Charter', 'Iowan Old Style', 'Source Serif Pro', 'Cambria', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 760px) 220px 1fr;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.container {
+  grid-column: 2;
+  padding: 64px 32px 96px;
+}
+.toc {
+  grid-column: 3;
+  position: sticky;
+  top: 32px;
+  align-self: start;
+  margin-top: 64px;
+  padding: 16px 0 16px 24px;
+  border-left: 0.5px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 12.5px;
+  line-height: 1.45;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+.toc h4 {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin: 0 0 14px;
+}
+.toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: toc;
+}
+.toc li {
+  counter-increment: toc;
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+.toc li::before {
+  content: counter(toc);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--text-light);
+}
+.toc a {
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+}
+.toc a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.toc-meta {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 0.5px solid var(--rule-soft);
+  font-size: 11.5px;
+}
+.toc-meta a { display: block; margin-bottom: 6px; }
+
+.doc-head {
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 0.5px solid var(--rule);
+}
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+h1 {
+  font-size: 38px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+.subtitle {
+  font-size: 19px;
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 0 0 18px;
+}
+.meta {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-light);
+}
+h2 {
+  font-size: 26px;
+  line-height: 1.25;
+  margin: 64px 0 8px;
+  scroll-margin-top: 24px;
+}
+h3 {
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 32px 0 12px;
+}
+p { margin: 0 0 16px; }
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(90,74,63,0.4);
+}
+a:hover { border-bottom-style: solid; }
+strong { font-weight: 600; }
+em { font-style: italic; }
+
+.lead {
+  font-size: 19px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+.frame {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--text-muted);
+  margin: 30px 0;
+  padding-left: 22px;
+  border-left: 2px solid var(--rule);
+}
+.symptom-num {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 64px;
+  margin-bottom: 4px;
+}
+h2 + .lede {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 17.5px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid var(--rule);
+}
+.signature {
+  background: var(--bg-warm);
+  border-left: 2px solid var(--accent);
+  padding: 16px 20px;
+  margin: 0 0 26px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.signature p { margin: 0 0 8px; }
+.signature p:last-child { margin-bottom: 0; }
+.signature strong {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 6px;
+}
+.equilibrium {
+  background: var(--bg-soft);
+  border-left: 2px solid var(--rule);
+  border-radius: 4px;
+  padding: 13px 16px;
+  margin: -8px 0 26px;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.equilibrium p { margin: 0; }
+.equilibrium strong {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.actors {
+  display: grid;
+  gap: 14px;
+  margin: 20px 0 8px;
+}
+.actor {
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-left-width: 3px;
+  border-radius: 4px;
+  padding: 15px 18px 14px;
+}
+.actor.employer { border-left-color: var(--c-employer); }
+.actor.employee { border-left-color: var(--c-employee); }
+.actor.education { border-left-color: var(--c-education); }
+.actor.state { border-left-color: var(--c-state); }
+.actor-label {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.actor.employer .actor-label { color: var(--c-employer); }
+.actor.employee .actor-label { color: var(--c-employee); }
+.actor.education .actor-label { color: var(--c-education); }
+.actor.state .actor-label { color: var(--c-state); }
+.actor p {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+figure.infographic {
+  margin: 36px 0;
+  padding: 24px 26px 26px;
+  background: var(--bg-card);
+  border: 0.5px solid var(--rule);
+  border-radius: 6px;
+  font-family: var(--sans);
+  page-break-inside: avoid;
+}
+.ig-title {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: var(--text);
+}
+.ig-sub {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+.ig-note {
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: var(--bg-soft);
+  border-radius: 4px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.ig-note strong { color: var(--text); font-weight: 600; }
+.ig-actor-field {
+  display: grid;
+  grid-template-columns: 1fr minmax(150px, 0.85fr) 1fr;
+  grid-template-areas:
+    "employer center education"
+    "employee center state";
+  gap: 12px;
+  align-items: stretch;
+}
+.ig-node {
+  background: var(--bg-soft);
+  border: 0.5px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  border-radius: 4px;
+  padding: 12px 13px;
+  min-height: 118px;
+}
+.ig-node-employer { grid-area: employer; border-left-color: var(--c-employer); }
+.ig-node-employee { grid-area: employee; border-left-color: var(--c-employee); }
+.ig-node-education { grid-area: education; border-left-color: var(--c-education); }
+.ig-node-state { grid-area: state; border-left-color: var(--c-state); }
+.ig-node-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.ig-node-employer .ig-node-label { color: var(--c-employer); }
+.ig-node-employee .ig-node-label { color: var(--c-employee); }
+.ig-node-education .ig-node-label { color: var(--c-education); }
+.ig-node-state .ig-node-label { color: var(--c-state); }
+.ig-node p {
+  margin: 0;
+  font-size: 12.8px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+.ig-center {
+  grid-area: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-height: 248px;
+  text-align: center;
+  background: var(--bg-warm);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  padding: 16px 14px;
+}
+.ig-center-kicker {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+.ig-center-main {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--text);
+}
+.ig-center-sub {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+.ig-boundary-grid {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+.ig-boundary {
+  display: grid;
+  grid-template-columns: 156px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 12px;
+  background: var(--bg-soft);
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.ig-boundary-label {
+  font-weight: 700;
+  color: var(--text);
+}
+.ig-boundary-text { color: var(--text-muted); }
+.ig-loop-columns {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+}
+.ig-chain {
+  display: grid;
+  gap: 8px;
+}
+.ig-chain-step {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 10px;
+  align-items: start;
+  background: var(--bg-soft);
+  border: 0.5px solid var(--rule-soft);
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+.ig-step-code {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-light);
+  padding-top: 2px;
+}
+.ig-step-text {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+.ig-step-text strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.ig-chain-arrow {
+  margin: -3px 0 -3px 16px;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--text-light);
+}
+.ig-dampers {
+  background: var(--bg-warm);
+  border: 0.5px solid var(--rule);
+  border-radius: 4px;
+  padding: 14px;
+}
+.ig-dampers h4 {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  color: var(--accent);
+}
+.ig-dampers ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ig-dampers li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+.ig-dampers li:last-child { margin-bottom: 0; }
+.ig-dampers li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.65;
+}
+.ig-dampers strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 72px;
+  padding-top: 24px;
+  border-top: 0.5px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+footer p { margin: 0 0 8px; }
+
+@media (max-width: 1100px) {
+  .layout { display: block; }
+  .container { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  .toc { display: none; }
+}
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .container { padding: 32px 16px 64px; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 22px; }
+  .subtitle, .lead { font-size: 17px; }
+  .signature, .actor { padding: 12px 14px; }
+  figure.infographic { padding: 18px 16px; }
+  .ig-actor-field {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "center"
+      "employer"
+      "employee"
+      "education"
+      "state";
+  }
+  .ig-center { min-height: 0; }
+  .ig-boundary { grid-template-columns: 1fr; gap: 4px; }
+  .ig-loop-columns { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+<main class="container">
+
+<header class="doc-head">
+<div class="eyebrow"><a href="index.html" style="color: inherit; text-decoration: none;">Игры в профессию</a> · статья D · диагностическая карта</div>
+<h1>Семь симптомов и четыре актора</h1>
+<p class="subtitle">Не рецепт и не прогноз. Карта признаков, по которым можно отличить один механизм кризиса от другого.</p>
+<div class="author-line" style="margin-top: 18px; font-family: var(--sans); font-size: 13.5px; color: var(--text-muted);">
+  <span>Сергей Гордейчик</span>
+  <span style="color: var(--text-light); margin: 0 8px;">·</span>
+  <a href="https://teletype.in/@sergey_gordey" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">teletype</a>
+  <span style="color: var(--text-light); margin: 0 8px;">·</span>
+  <a href="https://t.me/aiakyn" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">telegram</a>
+  <span style="color: var(--text-light); margin: 0 8px;">·</span>
+  <a href="https://github.com/scadastrangelove/profgames" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">github</a>
+  <span style="color: var(--text-light); margin: 0 8px;">·</span>
+  <span style="font-family: var(--mono); font-size: 12.5px; background: var(--bg-soft); padding: 2px 8px; border-radius: 3px;">#profgames</span>
+</div>
+</header>
+
+<section id="intro">
+<p class="lead">Статья A дала рамку: работодатель, сотрудник, образование и государство живут в разных горизонтах. A1 показала 177 событий, где рамка проверяется на фактах. B добавила биографии и переводчиков провенанса. C разбирает страновые параметры. D делает другое: переводит цикл в диагностическую карту.</p>
+
+<p>Симптом не равен диагнозу. Сокращение входных вакансий может быть ИИ-замещением, обычным охлаждением рынка или сдвигом требований. Рост продуктивности может быть реальным выигрышем, а может быть переносом проверки на других людей. Возврат к рукописным экзаменам может выглядеть архаикой, но быть рациональным ответом на провал детекции.</p>
+
+<p>Поэтому здесь нет универсального совета. Для каждого симптома есть три вещи: что видно снаружи, с чем это нельзя путать, и какой вопрос должен задать каждый из четырёх акторов.</p>
+
+<p class="frame">Диагностика начинается не с вопроса «что делать с ИИ?», а с вопроса «какой канал воспроизводства профессии сейчас истончается?»</p>
+
+<h3>Как читать равновесие</h3>
+
+<p>Каждый симптом ниже — след равновесия. Отдельному актору может быть рационально действовать так, что общий канал воспроизводства профессии истончается. Работодатель экономит на обучении, сотрудник оптимизирует видимые сигналы, образование защищает привычную оценку, государство выбирает быстрый показатель.</p>
+
+<p>Поэтому важен не только симптом, но и параметр игры: кто платит за обучение, кто несёт проверку, кто держит ответственность, кому выгодно сохранить канал на горизонте пяти-десяти лет. Иногда параметр может изменить работодатель. Иногда профессиональный регистр. Иногда только длинное государство.</p>
+
+<p>Короткое государство считает выпускников, вакансии, внедрения и соглашения. Длинное государство считает переходы: выпускник → начинающий специалист → специалист среднего уровня → наставник. Если второго счётчика нет, политика может выглядеть успешной и одновременно разрушать будущий слой компетенции.</p>
+
+<figure class="infographic" id="fig-actor-boundaries">
+<figcaption class="ig-title">Границы акторов: где один выбор становится чужим ограничением</figcaption>
+<p class="ig-sub">Каждый актор видит свою рациональность. Диагностика начинается там, где решение одного меняет свободу выбора другого.</p>
+
+<div class="ig-actor-field">
+<div class="ig-node ig-node-employer">
+<div class="ig-node-label">Работодатель</div>
+<p>Сокращает вход, покупает готовую компетенцию, распределяет наставничество и решает, какие сигналы считать опытом.</p>
+</div>
+<div class="ig-node ig-node-employee">
+<div class="ig-node-label">Сотрудник</div>
+<p>Собирает проверяемый след, выбирает скорость или качество, переносит статус между организациями и странами.</p>
+</div>
+<div class="ig-center">
+<div class="ig-center-kicker">центр игры</div>
+<div class="ig-center-main">воспроизводство профессии</div>
+<div class="ig-center-sub">не численность людей сейчас, а канал, по которому появляются следующие компетентные специалисты</div>
+</div>
+<div class="ig-node ig-node-education">
+<div class="ig-node-label">Образование</div>
+<p>Даёт диплом, практику, оценку процесса и первый мост от учебной работы к работе под ответственностью.</p>
+</div>
+<div class="ig-node ig-node-state">
+<div class="ig-node-label">Государство</div>
+<p>Задаёт регистры, льготы, миграцию, ответственность и горизонт, на котором дефицит становится политической проблемой.</p>
+</div>
+</div>
+
+<div class="ig-boundary-grid">
+<div class="ig-boundary"><div class="ig-boundary-label">Работодатель → образование</div><div class="ig-boundary-text">Если входных вакансий меньше, диплом теряет канал проверки практикой.</div></div>
+<div class="ig-boundary"><div class="ig-boundary-label">Образование → работодатель</div><div class="ig-boundary-text">Если выпускник приходит без проверяемого опыта, отбор и адаптация дорожают.</div></div>
+<div class="ig-boundary"><div class="ig-boundary-label">Сотрудник → работодатель</div><div class="ig-boundary-text">Если резюме, тестовое и текст дешевеют, работодатель переносит проверку на процесс.</div></div>
+<div class="ig-boundary"><div class="ig-boundary-label">Государство → все</div><div class="ig-boundary-text">Если считаются только выпускники, вакансии и внедрения, исчезает метрика перехода между уровнями.</div></div>
+</div>
+
+<div class="ig-note"><strong>Смысл схемы:</strong> свобода одного актора почти всегда является параметром игры для другого. Поэтому D смотрит не на моральную правоту, а на границы выбора.</div>
+</figure>
+</section>
+
+<div class="symptom-num">Симптом 1</div>
+<h2 id="s1">Вход в профессию сужается</h2>
+<p class="lede">Начинающим стало труднее получить первую работу, а работодателю — дешевле отложить их обучение.</p>
+
+<div class="signature">
+<p><strong>Видно</strong> В США Stanford Digital Economy Lab фиксирует спад занятости 22–25-летних в наиболее затронутых ИИ профессиях; у молодых разработчиков падение около 20% от пика. В России ИТ-вакансий меньше, резюме на вакансию больше, а входной уровень конкурирует не только с другими начинающими, но и с ИИ-инструментами.</p>
+<p><strong>Не путать</strong> Это не доказательство «конца профессии». Слой старших специалистов может расти одновременно со сжатием входа. Критична не текущая численность, а вопрос: кто станет специалистом среднего уровня через пять лет?</p>
+</div>
+
+<div class="equilibrium"><p><strong>Равновесие</strong> Отдельной фирме рационально не обучать начинающих специалистов, если ИИ закрыл дешёвые учебные задачи. Для отрасли в целом это создаёт будущий дефицит специалистов среднего уровня и наставников.</p></div>
+
+<h3>Вопросы по акторам</h3>
+<div class="actors">
+<div class="actor employer"><div class="actor-label">Работодатель</div><p>Какая доля начинающих специалистов нужна не для сегодняшней выработки, а для будущего слоя специалистов среднего и старшего уровня? Если вы её не считаете, вы экономите на невидимом запасе.</p></div>
+<div class="actor employee"><div class="actor-label">Сотрудник</div><p>Где собрать проверяемый опыт, если первая штатная позиция недоступна: стажировка, открытый проект, проект с пользователями, лицензируемая практика? Нужен не красивый текст, а след работы.</p></div>
+<div class="actor education"><div class="actor-label">Образование</div><p>Какая часть программы даёт выпускнику практику под наблюдением наставника, а не только диплом и портфолио? Если выпускник выходит без проверенного опыта, диплом дешевеет.</p></div>
+<div class="actor state"><div class="actor-label">Государство</div><p>Измеряется ли переход «выпускник → начинающий специалист → специалист среднего уровня», а не только число бюджетных мест и выпускников? Без этой метрики образовательная политика слепа.</p></div>
+</div>
+
+<div class="symptom-num">Симптом 2</div>
+<h2 id="s2">Дешевеет рутинное посредничество</h2>
+<p class="lede">Роли, которые передавали сообщения и собирали статусы, сжимаются. Роли, которые держат ответственность за результат, не исчезают так же быстро.</p>
+
+<div class="signature">
+<p><strong>Видно</strong> В событиях A1 сжимаются поддержка клиентов, проектная координация, переводческие и контентные подрядчики. Klarna, Duolingo, Salesforce и Oracle дают разные варианты одной линии: ИИ хорошо берёт часть коммуникационной работы, но откаты и уточнения показывают, что ответственность за результат никуда не делась.</p>
+<p><strong>Не путать</strong> Посредник бывает двух типов. Один просто маршрутизирует информацию. Второй принимает решение, держит бюджет, риск, доверие клиента или подпись. ИИ сильнее бьёт по первому.</p>
+</div>
+
+<div class="equilibrium"><p><strong>Равновесие</strong> Рационально убрать координаторов, пока не выяснится, что часть из них держала ответственность. Экономия видна сразу, потеря координации — с лагом.</p></div>
+
+<h3>Вопросы по акторам</h3>
+<div class="actors">
+<div class="actor employer"><div class="actor-label">Работодатель</div><p>После сокращения координаторов кто отвечает за конкретный исход? Если ответ размыт, вы сократили не лишний слой, а механизм ответственности.</p></div>
+<div class="actor employee"><div class="actor-label">Сотрудник</div><p>Ваша роль держится на передаче информации или на решениях, за которые вы отвечаете? Первое надо либо автоматизировать самому, либо уходить выше — к владению результатом.</p></div>
+<div class="actor education"><div class="actor-label">Образование</div><p>Учите ли вы координации как набору ритуалов или как управлению ответственностью? Заполнение трекера, статусы и резюме встреч ИИ уже делает; конфликт, приоритет и подпись остаются человеческими.</p></div>
+<div class="actor state"><div class="actor-label">Государство</div><p>В каких процессах закон требует ответственного человека, но фактически решение уже проходит через ИИ и безымянный операционный слой?</p></div>
+</div>
+
+<div class="symptom-num">Симптом 3</div>
+<h2 id="s3">Работа выглядит готовой, но требует проверки</h2>
+<p class="lede">ИИ ускоряет производство черновика. Он не всегда ускоряет путь до ответственного результата.</p>
+
+<div class="signature">
+<p><strong>Видно</strong> Текст, код, презентация, резюме или отчёт выглядят связно, но другой человек тратит время на проверку фактов, скрытых допущений и ответственности. В корпоративных кейсах это проявляется как разрыв между обещанной продуктивностью и качеством сервиса; в образовании — как работа студента, происхождение которой нельзя прочитать.</p>
+<p><strong>Не путать</strong> Быстро написано не значит быстро завершено. Диагностическая единица — не время генерации, а время «создать → проверить → исправить → принять ответственность».</p>
+</div>
+
+<div class="equilibrium"><p><strong>Равновесие</strong> Рационально генерировать быстрее, если стоимость проверки несёт другой. Это даёт частный выигрыш и общий долг качества.</p></div>
+
+<h3>Вопросы по акторам</h3>
+<div class="actors">
+<div class="actor employer"><div class="actor-label">Работодатель</div><p>Считаете ли вы время проверки так же строго, как время генерации? Если нет, продуктивность одного сотрудника может быть расходом другого.</p></div>
+<div class="actor employee"><div class="actor-label">Сотрудник</div><p>Какие задачи вы отдаёте ИИ без потери навыка, а какие формировали вашу профессиональную интуицию? Не всякая экономия времени полезна для биографии.</p></div>
+<div class="actor education"><div class="actor-label">Образование</div><p>Какая доля оценки проверяет процесс, а не только финальный текст? Если процесс невидим, учебная работа перестаёт быть доказательством знания.</p></div>
+<div class="actor state"><div class="actor-label">Государство</div><p>Где ИИ уже используется в документах, услугах и решениях, но нет отдельного контура проверки качества? В госсекторе плохой результат часто виден позже, чем в бизнесе.</p></div>
+</div>
+
+<div class="symptom-num">Симптом 4</div>
+<h2 id="s4">Провенанс работы схлопывается</h2>
+<p class="lede">Становится труднее понять, кто сделал работу, на каких данных, каким путём и может ли он повторить результат без подсказки.</p>
+
+<div class="signature">
+<p><strong>Видно</strong> В найме ИИ помогает кандидатам массово производить резюме и тестовые задания. В школе и университете он размывает границу между работой ученика и работой модели. В контенте растёт ответный стек: C2PA, водяные знаки, лейблы платформ, иски об обучающих данных.</p>
+<p><strong>Не путать</strong> Это не моральная паника. Это информационная проблема: старый сигнал перестал отделять реальный опыт от имитации.</p>
+</div>
+
+<div class="equilibrium"><p><strong>Равновесие</strong> Рационально производить дешёвые сигналы, пока рынок читает их как дорогие. После этого дорожает не текст, а проверяемый след работы.</p></div>
+
+<h3>Вопросы по акторам</h3>
+<div class="actors">
+<div class="actor employer"><div class="actor-label">Работодатель</div><p>Какие этапы отбора проверяют процесс и ответственность, а не только финальный артефакт? Тестовое задание без защиты быстро дешевеет.</p></div>
+<div class="actor employee"><div class="actor-label">Сотрудник</div><p>Какие ваши сигналы трудно сгенерировать: публичный вклад, работа с пользователями, подпись, рекомендация, история правок, производственный контекст?</p></div>
+<div class="actor education"><div class="actor-label">Образование</div><p>Где диплом опирается на задания, которые можно сдать через ИИ без освоения материала? Эти места надо менять первыми.</p></div>
+<div class="actor state"><div class="actor-label">Государство</div><p>Какие публичные реестры, лицензии и процедуры признания теперь должны подтверждать не только квалификацию, но и способность проверять происхождение результата?</p></div>
+</div>
+
+<div class="symptom-num">Симптом 5</div>
+<h2 id="s5">Детектор не создаёт доверия</h2>
+<p class="lede">Попытка решить происхождение работы одним детектором быстро упирается в ложные срабатывания, обходы и спор о процедуре.</p>
+
+<div class="signature">
+<p><strong>Видно</strong> OpenAI сняла AI Text Classifier из-за низкой точности; Vanderbilt отключал ИИ-детектор Turnitin; исследования показывали смещение детекторов против неносителей английского. Исследование University of Reading показало: ИИ-ответы на экзаменах часто проходили незамеченными и нередко получали высокие оценки.</p>
+<p><strong>Не путать</strong> Детектор может быть вспомогательным сигналом. Он не может быть судьёй. Надёжная система строится вокруг процесса, прокторинга, устной защиты, подписи и возможности апелляции.</p>
+</div>
+
+<div class="equilibrium"><p><strong>Равновесие</strong> Рационально купить детектор, потому что это дешевле перестройки оценки. Но детектор снижает тревогу, а доверия не создаёт.</p></div>
+
+<h3>Вопросы по акторам</h3>
+<div class="actors">
+<div class="actor employer"><div class="actor-label">Работодатель</div><p>Используете ли вы детектор как фильтр или как повод для дополнительной проверки? Автоматический отказ без процедуры — источник юридического и репутационного риска.</p></div>
+<div class="actor employee"><div class="actor-label">Сотрудник</div><p>Есть ли у вас способ показать процесс работы, если результат сочтут сгенерированным? История версий и защита решения становятся частью провенанса.</p></div>
+<div class="actor education"><div class="actor-label">Образование</div><p>Можно ли обжаловать обвинение в ИИ-плагиате? Если нет, детектор превращается в непрозрачный дисциплинарный орган.</p></div>
+<div class="actor state"><div class="actor-label">Государство</div><p>Где автоматическая проверка уже влияет на права человека: экзамены, найм, пособия, миграция? Там нужна процедура, а не только модель.</p></div>
+</div>
+
+<div class="symptom-num">Симптом 6</div>
+<h2 id="s6">Сокращения и дефицит идут вместе</h2>
+<p class="lede">Рынок может одновременно увольнять людей и жаловаться на нехватку кадров. Это не парадокс, если сокращаются одни роли, а дефицитны другие.</p>
+
+<div class="signature">
+<p><strong>Видно</strong> В глобальном техсекторе продолжаются сокращения. В России Softline сократил около 800 сотрудников, Сбер публично связал часть кадровых решений с ИИ-оценкой эффективности, Positive Technologies описывается как кейс тихой реструктуризации. Одновременно специалисты по ИИ, машинному обучению, ИБ, инфраструктуре и надёжности, а также профили старших специалистов остаются дорогими.</p>
+<p><strong>Не путать</strong> «Людей сокращают» не означает «люди больше не нужны». Часто это переразметка ценности: дешевеет массовая исполнительская работа и дорожает редкая ответственность.</p>
+</div>
+
+<div class="equilibrium"><p><strong>Равновесие</strong> Рационально резать массовые роли и одновременно переплачивать за редкие. Одна статистика занятости плохо видит такой разлом.</p></div>
+
+<h3>Вопросы по акторам</h3>
+<div class="actors">
+<div class="actor employer"><div class="actor-label">Работодатель</div><p>Какие роли вы сокращаете, а какие не можете закрыть? Если это разные слои одной профессии, проблема не в численности, а в воспроизводстве навыка.</p></div>
+<div class="actor employee"><div class="actor-label">Сотрудник</div><p>На каком участке цепочки вы находитесь: массовое исполнение, проверка, архитектура, ответственность, клиентское доверие? Риск распределён не по названию профессии, а по функции.</p></div>
+<div class="actor education"><div class="actor-label">Образование</div><p>Готовите ли вы людей к той части профессии, которая дешевеет, или к той, где возникает дефицит? Учебная программа должна отвечать на этот вопрос явно.</p></div>
+<div class="actor state"><div class="actor-label">Государство</div><p>Кадровый дефицит нельзя измерять одним числом. Нужна разбивка по уровню, роли и функции: начинающий специалист, специалист среднего уровня, старший специалист, наставник, архитектор, проверяющий.</p></div>
+</div>
+
+<div class="symptom-num">Симптом 7</div>
+<h2 id="s7">Готовую компетенцию покупают вместо того, чтобы выращивать</h2>
+<p class="lede">Когда внутренний канал обучения дорогой и медленный, страна или компания пытается купить уже сформированного специалиста.</p>
+
+<div class="signature">
+<p><strong>Видно</strong> ОАЭ упаковывают правовой статус, капитал и инфраструктуру в продукт привлечения талантов. Китай строит машину возврата своих исследователей. Российские крупные компании и государство связывают ИТ-льготы с вузами и подготовкой кадров. Корпоративные академии становятся ответом на сужение внешнего входа.</p>
+<p><strong>Не путать</strong> Импорт старших специалистов не равен воспроизводству профессии. Он становится воспроизводством только если старший специалист учит, подписывает, передаёт ответственность и готовит следующий слой.</p>
+</div>
+
+<div class="equilibrium"><p><strong>Равновесие</strong> Рационально купить готового старшего специалиста, если подготовка дорогая и долгая. Система ломается, если купленный специалист не готовит следующих.</p></div>
+
+<h3>Вопросы по акторам</h3>
+<div class="actors">
+<div class="actor employer"><div class="actor-label">Работодатель</div><p>Сколько часов старшего специалиста уходит на наставничество, ревью и передачу ответственности? Если ноль, вы не строите канал воспроизводства, а арендуете готовую компетенцию.</p></div>
+<div class="actor employee"><div class="actor-label">Сотрудник</div><p>Программа или страна даёт вам переносимый статус или только внутреннюю зависимость? Проверка простая: признаёт ли ваш новый опыт внешний рынок?</p></div>
+<div class="actor education"><div class="actor-label">Образование</div><p>Университет в этой схеме — партнёр по выращиванию навыка или поставщик формального соответствия требованиям? Разница видна по наличию реальных задач, наставников и обратной связи от работодателей.</p></div>
+<div class="actor state"><div class="actor-label">Государство</div><p>Какая доля привлечённых или возвращённых специалистов создаёт локальный средний и старший слой? Без этой метрики политика талантов может выглядеть успешной и не оставлять после себя школу.</p></div>
+</div>
+
+<figure class="infographic" id="fig-symptom-loop">
+<figcaption class="ig-title">Как семь симптомов замыкаются друг на друга</figcaption>
+<p class="ig-sub">Симптомы не идут списком. Они образуют несколько петель: одни связи усиливают кризис, другие могут его демпфировать.</p>
+
+<div class="ig-loop-columns">
+<div class="ig-chain">
+<div class="ig-chain-step"><div class="ig-step-code">2</div><div class="ig-step-text"><strong>Дешевеет рутинное посредничество.</strong> Из работы исчезают задачи, на которых раньше учились начинающие.</div></div>
+<div class="ig-chain-arrow">↓ усиливает</div>
+<div class="ig-chain-step"><div class="ig-step-code">1</div><div class="ig-step-text"><strong>Вход сужается.</strong> Меньше людей проходит путь от первой задачи к самостоятельной ответственности.</div></div>
+<div class="ig-chain-arrow">↓ через лаг</div>
+<div class="ig-chain-step"><div class="ig-step-code">6</div><div class="ig-step-text"><strong>Сокращения и дефицит идут вместе.</strong> Массовые роли режутся, а редкие роли дорожают.</div></div>
+<div class="ig-chain-arrow">↓ толкает</div>
+<div class="ig-chain-step"><div class="ig-step-code">7</div><div class="ig-step-text"><strong>Готовую компетенцию покупают.</strong> Если купленный специалист не учит следующих, петля возвращается к сужению входа.</div></div>
+<div class="ig-chain-arrow">↘ параллельная петля</div>
+<div class="ig-chain-step"><div class="ig-step-code">3</div><div class="ig-step-text"><strong>Работа выглядит готовой, но требует проверки.</strong> Выигрыш в генерации переносит стоимость на проверяющих.</div></div>
+<div class="ig-chain-arrow">↓ делает видимым</div>
+<div class="ig-chain-step"><div class="ig-step-code">4</div><div class="ig-step-text"><strong>Провенанс схлопывается.</strong> Старый сигнал перестаёт отделять опыт от имитации.</div></div>
+<div class="ig-chain-arrow">↓ рождает быстрый ответ</div>
+<div class="ig-chain-step"><div class="ig-step-code">5</div><div class="ig-step-text"><strong>Детектор не создаёт доверия.</strong> Без процедуры он повышает тревогу и порог входа, возвращая давление к симптому 1.</div></div>
+</div>
+
+<div class="ig-dampers">
+<h4>Что демпфирует петлю</h4>
+<ul>
+<li><strong>Наставничество:</strong> часы старших специалистов считаются как инвестиция, а не как потеря выработки.</li>
+<li><strong>Проверяемый след работы:</strong> история правок, защита решения, работа с пользователями и подпись.</li>
+<li><strong>Оценка процесса:</strong> образование проверяет не только финальный текст, но и путь к результату.</li>
+<li><strong>Процедура вместо детектора:</strong> апелляция, устная защита, человек, отвечающий за решение.</li>
+<li><strong>Длинная метрика:</strong> измеряется переход «выпускник → начинающий специалист → специалист среднего уровня → наставник».</li>
+</ul>
+</div>
+</div>
+
+<div class="ig-note"><strong>Практический вывод:</strong> если лечить только один симптом, петля часто возвращает систему в ту же точку. Менять надо тот параметр, который связывает симптомы: обучение, проверку, ответственность или горизонт измерения.</div>
+</figure>
+
+<h2 id="conclusion">Заключение: симптомы сцеплены</h2>
+
+<p>Семь симптомов нельзя лечить по одному. Если работодатель сужает вход, он через несколько лет получает дефицит среднего уровня. Если вместо обучения покупает старших специалистов, он усиливает зависимость от внешнего рынка. Если сокращает посредников, но не назначает ответственность, получает красивую скорость и плохую координацию. Если пытается заменить доверие детектором, получает спор о процедуре.</p>
+
+<p>Карта D нужна для другой привычки. Не спрашивать: «ИИ заменит эту профессию?» Спрашивать точнее: где сжимается вход, кто проверяет происхождение работы, кто держит подпись, где накапливается качество, откуда через пять лет появится следующий слой профессионалов.</p>
+
+<p class="frame">Главный риск не в том, что профессии исчезнут. Главный риск в том, что система примет инструменты за средство производства и забудет: главным средством производства остаётся подготовленный человек. Тогда начнётся новое противостояние за «средства производства»: за людей, которых одни уже списали на свалку истории, а другие по инерции продолжали готовить.</p>
+
+<p>Если оставить три диагностических вопроса, они такие. Какой сигнал стал слишком дешёвым? Кто теперь платит за проверку? Откуда возьмутся следующие специалисты среднего и старшего уровня, если сегодняшний вход закрывается?</p>
+
+<footer>
+<p><strong>Игры в профессию</strong> · цикл аналитических статей о воспроизводстве профессиональной компетенции в эпоху ИИ.</p>
+<p>D — диагностическая карта · опорный слой: <a href="https://scadastrangelove.github.io/profgames/a-events.html">177 событий A1</a> и <a href="https://scadastrangelove.github.io/profgames/factcheck.html">фактологическая база</a>.</p>
+</footer>
+
+</main>
+
+<aside class="toc">
+<h4>Содержание</h4>
+<ol>
+<li><a href="#s1">Вход сужается</a></li>
+<li><a href="#s2">Посредничество дешевеет</a></li>
+<li><a href="#s3">Работа требует проверки</a></li>
+<li><a href="#s4">Провенанс схлопывается</a></li>
+<li><a href="#s5">Детектор и доверие</a></li>
+<li><a href="#s6">Сокращения и дефицит</a></li>
+<li><a href="#s7">Покупка компетенции</a></li>
+</ol>
+<div class="toc-meta">
+<a href="#intro">↑ Введение</a>
+<a href="#fig-actor-boundaries">→ Границы акторов</a>
+<a href="#fig-symptom-loop">→ Петля симптомов</a>
+<a href="#conclusion">↓ Заключение</a>
+<a href="https://scadastrangelove.github.io/profgames/a-events.html">→ A1 события</a>
+<a href="https://scadastrangelove.github.io/profgames/factcheck.html">→ Фактчек</a>
+</div>
+</aside>
+
+</div>
+
+</body>
+</html>
