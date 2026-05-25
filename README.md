@@ -18,16 +18,16 @@
 | --- | --- | --- | --- |
 | **0** | [Карта в тумане](https://scadastrangelove.github.io/profgames/0-manifesto.html) | Манифест цикла. Зачем эта серия, кто автор, какие у него горизонты и почему четырёх акторов оказывается достаточно. | ✅ опубликовано |
 | **A** | [Четыре актора, три времени](https://scadastrangelove.github.io/profgames/a-article.html) | Теоретическая рамка цикла. Работодатель, сотрудник, образование, государство — каждый со своим горизонтом и своей рациональностью. Сжатие канала входа в профессию, сжатие посреднических ролей с матрицей четырёх уровней, сцепленный кризис, расщепление государства на короткое и длинное окно, коллапс канала как сквозной механизм, Парето-логика и асимметрия стоимости поддержания. | ✅ опубликовано |
-| **A1** | [События как стресс-тест рамки](https://scadastrangelove.github.io/profgames/a-events.html) | Событийный слой к рамке A. 171 проверенный сигнал 2020–2026 на четырёх акторов с интерактивной timeline. Семь связанных сюжетов показывают, как теоретические механизмы рамки проявляются в реальных событиях: сжатие входа junior-ролей, сжатие коммуникационных профессий, петля имитации в найме, отступление в регулируемых профессиях, школьная параллель, технический ответ на провенанс-коллапс, провал AI-детекции. Walkback-пары и split-решения — отдельные геометрии причинно-следственных связей. [HTML](https://scadastrangelove.github.io/profgames/a-events.html) · [JSONL](https://github.com/scadastrangelove/profgames/blob/main/profgames_ai_signals_v0_3.jsonl) | ✅ опубликовано |
+| **A1** | [События как стресс-тест рамки](https://scadastrangelove.github.io/profgames/a-events.html) | Событийный слой к рамке A. 177 проверенных сигналов 2020–2026 на четырёх акторов с интерактивной timeline. Семь связанных сюжетов показывают, как теоретические механизмы рамки проявляются в реальных событиях: сжатие входа junior-ролей, сжатие коммуникационных профессий, петля имитации в найме, отступление в регулируемых профессиях, школьная параллель, технический ответ на провенанс-коллапс, провал AI-детекции. Walkback-пары и split-решения — отдельные геометрии причинно-следственных связей. [HTML](https://scadastrangelove.github.io/profgames/a-events.html) · [JSONL](https://github.com/scadastrangelove/profgames/blob/main/profgames_ai_signals.jsonl) | ✅ опубликовано |
 | **B** | Одна теория, разные параметры | Параметризация теоретической рамки на трёх странах: США как baseline, Россия и Китай. ОАЭ как пограничный случай малой страны между гигантами. | 🟡 готовится |
 | **C** | Четыре актора, пять биографий | Пять профессиональных траекторий и работа provenance translator-ов: как опыт переводится в локальный статус, доверие, ответственность через регистры, лицензии, employer pedigree. | 🟡 готовится |
 | **D** | Семь симптомов и четыре актора | Диагностическая карта. Семь видимых симптомов кризиса воспроизводства профессии × четыре актора, каждый со своим срезом. Не рецепт — инструмент различения. | 🟡 готовится |
 | **Y** | [AI-Mind: что ИИ делает с психикой](https://scadastrangelove.github.io/profgames/aimind/aimind.html) | Параллельная серия к профессиональному циклу. Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. 41 сигнал 2023–2026, 15 феноменов (от парасоциальной привязанности и ИИ-индуцированного психоза до социального замещения и character grooming), 7 параметров уязвимости (включая операционализованную V5 — нейроотличие с AuDHD sub-category), общая с **Z** шкала доказательности A/B/C/D. Регуляторные landmark-ы (CA SB 243, NY S-3008C, China CAC, EU AI Act, Italy Garante €5M fine), судебные кейсы (Setzer, Раин, Peralta, Brooks, SMVLC seven, Roberts UK, Gavalas v Google Gemini), peer-reviewed исследования (MIT/OpenAI, Cheng/Jurafsky Science, JAMA Perlis, Wysa NHS Sussex), statistical_meta_summary с применением 11 фильтров (GRADE≥2, I²<50%, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023–2026. [HTML](https://scadastrangelove.github.io/profgames/aimind/aimind.html) · [JSONL](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals_v0_7.jsonl) · [JSON](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck_v0_8.json) | ✅ опубликовано |
-| **Z** | [Фактологическая основа](https://scadastrangelove.github.io/profgames/factcheck.html) | Независимый фактчек 41 утверждения с разнесением уровней доказательности. С первоисточниками, оговорками и рекомендованными формулировками. [HTML](https://scadastrangelove.github.io/profgames/factcheck.html) · [JSON](https://scadastrangelove.github.io/profgames/factcheck.json) | ✅ опубликовано |
+| **Z** | [Фактологическая основа](https://scadastrangelove.github.io/profgames/factcheck.html) | Независимый фактчек 65 утверждений с разнесением уровней доказательности. С первоисточниками, оговорками и рекомендованными формулировками. [HTML](https://scadastrangelove.github.io/profgames/factcheck.html) · [JSON](https://scadastrangelove.github.io/profgames/factcheck.json) | ✅ опубликовано |
 
 ## Машиночитаемая основа
 
-Фактологическая база [`factcheck.json`](https://github.com/scadastrangelove/profgames/blob/main/factcheck.json) и событийный массив [`profgames_ai_signals_v0_3.jsonl`](https://github.com/scadastrangelove/profgames/blob/main/profgames_ai_signals_v0_3.jsonl) публикуются отдельно как самостоятельные артефакты. К ним добавлен параллельный массив психологического среза [`aimind/aimind_signals_v0_7.jsonl`](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals_v0_7.jsonl) и его фактчек [`aimind/aimind_factcheck_v0_8.json`](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck_v0_8.json) с общей шкалой доказательности и совместимой структурой полей. Все имена полей на английском, единая шкала статусов, ссылки на первоисточники.
+Фактологическая база [`factcheck.json`](https://github.com/scadastrangelove/profgames/blob/main/factcheck.json) и событийный массив [`profgames_ai_signals.jsonl`](https://github.com/scadastrangelove/profgames/blob/main/profgames_ai_signals.jsonl) публикуются отдельно как самостоятельные артефакты. К ним добавлен параллельный массив психологического среза [`aimind/aimind_signals_v0_7.jsonl`](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals_v0_7.jsonl) и его фактчек [`aimind/aimind_factcheck_v0_8.json`](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck_v0_8.json) с общей шкалой доказательности и совместимой структурой полей. Все имена полей на английском, единая шкала статусов, ссылки на первоисточники.
 
 Можно скормить их агенту и попросить найти новое — это может стать следующим репером на пути.
 
@@ -36,7 +36,7 @@
 ```
 meta              — описание прохода фактчека, шкалы уровней и статусов
 summary           — агрегированная статистика и ключевые находки
-claims[]          — 41 проверенное утверждение
+claims[]          — 65 проверенных утверждений
   ├── id          — стабильный идентификатор (ru-01, ai-19, corp-29f)
   ├── pass        — russia | ai_research | regulators_corporate
   ├── status      — verified | partially_verified | needs_correction | not_verified | not_found
@@ -45,13 +45,13 @@ claims[]          — 41 проверенное утверждение
   ├── caveats[]   — методологические оговорки
   ├── corrections[] — что нужно исправить в оригинальной формулировке
   └── recommended_phrasing — корректная формулировка для публикации
-gaps[]            — 15 идентифицированных пробелов в данных
+gaps[]            — 20 идентифицированных пробелов в данных
 recommendations   — что готово к публикации, что нужно исправить, что удалить
 ```
 
-### Структура `profgames_ai_signals_v0_3.jsonl`
+### Структура `profgames_ai_signals.jsonl`
 
-JSONL: один сигнал на строку. 171 событие 2020–2026 с привязкой к рамке A.
+JSONL: один сигнал на строку. 177 событий 2020–2026 с привязкой к рамке A.
 
 ```
 id                — стабильный идентификатор (SIG_2024_KLARNA_700_AGENT_EQUIVALENT)
@@ -76,7 +76,7 @@ schema_version    — signal_schema_v0.1
 
 ### Структура `aimind/aimind_signals_v0_7.jsonl`
 
-JSONL: один сигнал на строку. 41 событие 2023–2026 с привязкой к рамке Y. Структура совместима с `profgames_ai_signals_v0_3.jsonl`, но с другими привязками к рамке.
+JSONL: один сигнал на строку. 41 событие 2023–2026 с привязкой к рамке Y. Структура совместима с `profgames_ai_signals.jsonl`, но с другими привязками к рамке.
 
 ```
 id                — стабильный идентификатор (SIG_2024_SETZER_CHARACTER_AI)
@@ -128,7 +128,7 @@ profgames/
 ├── 0-manifesto.html                    # 0 — манифест цикла
 ├── a-article.html                      # A — четыре актора, три времени
 ├── a-events.html                       # A1 — события как стресс-тест рамки (интерактивный)
-├── profgames_ai_signals_v0_3.jsonl     # A1 — машиночитаемый событийный массив
+├── profgames_ai_signals.jsonl          # A1 — машиночитаемый событийный массив
 ├── factcheck.html                      # Z — фактологическая основа (для людей)
 ├── factcheck.json                      # Z — фактологическая основа (для агентов)
 ├── aimind/                             # Y — параллельный психологический срез
@@ -141,7 +141,7 @@ profgames/
 
 ## Лицензия
 
-Тексты — Сергей Гордейчик, 2026. Машиночитаемые базы (`factcheck.json`, `profgames_ai_signals_v0_3.jsonl`, `aimind/aimind_signals_v0_7.jsonl`, `aimind/aimind_factcheck_v0_8.json`) свободны для использования агентами и исследователями с указанием источника.
+Тексты — Сергей Гордейчик, 2026. Машиночитаемые базы (`factcheck.json`, `profgames_ai_signals.jsonl`, `aimind/aimind_signals_v0_7.jsonl`, `aimind/aimind_factcheck_v0_8.json`) свободны для использования агентами и исследователями с указанием источника.
 
 ---
 

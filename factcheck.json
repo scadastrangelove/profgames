@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Игры в профессию — Independent Fact-Check Pack",
-    "version": "2.0",
-    "fact_check_date": "2026-05-02",
+    "version": "2.1",
+    "fact_check_date": "2026-05-25",
     "data_relevance_date": "2026-05",
     "passes": [
       {
@@ -61,6 +61,15 @@
     },
     "changelog": [
       {
+        "version": "2.1",
+        "date": "2026-05-25",
+        "description": "B-5 Russian IT labor update: global tech-layoff frame, Softline AI-linked optimization, Sber AI-assisted efficiency cuts, Positive Technologies quiet restructuring, junior squeeze, wage polarization and shortage-with-layoffs paradox.",
+        "added_claims": 6,
+        "updated_passes": [
+          "b-russia-it"
+        ]
+      },
+      {
         "version": "2.0",
         "date": "2026-05-02",
         "description": "Расширение пакета для статьи B (пять биографий: ирландский учитель, немецкий инженер, индийский медицинский специалист, китайский учёный-возвращенец, русский айтишник). Добавлены 17 новых claims по 5 биографическим passes: b-ireland, b-germany, b-india-uk, b-china, b-russia-it.",
@@ -77,14 +86,14 @@
   },
   "summary": {
     "stats": {
-      "total_claims": 59,
-      "verified": 37,
-      "partially_verified": 13,
+      "total_claims": 65,
+      "verified": 38,
+      "partially_verified": 18,
       "needs_correction": 6,
       "not_verified": 3,
       "not_found": 0
     },
-    "approximate_pass_rate": "85%",
+    "approximate_pass_rate": "86%",
     "key_findings": [
       "Most priority claims pass primary-source verification",
       "Russian regulatory documents and migration figures are well-sourced via official channels (pravo.gov.ru, MVD, Mintsifry)",
@@ -100,7 +109,13 @@
       "Chinese returnee (B-4): 72.2% AI-related retractions Chinese first authors (Frontiers 2025); Pangram 2025: 26% Chinese institutional papers contain AI fragments — structural cultural debt confirmed",
       "Russian IT (B-5): 152-ФЗ amendment ФЗ №23-ФЗ from 28.02.2025 (effective 1.07.2025) — primary collection ban, NOT full transborder transfer ban. GitHub blocking of paid accounts in 2025 — partially verified (secondary source only)",
       "Workslop in IT now has multiple 2025-26 surveys: Stack Overflow 84%/29% trust gap; Sonar 96%/<50% verification gap; Google DORA +10% instability; arxiv 1,154 posts qualitative analysis frames as tragedy of the commons",
-      "Cross-biographical motif: translator maintenance cost asymmetry (Ireland: state-funded; Germany: chamber-funded; UK: GMC fee + state legislation; China: state programmes + anchor companies; Russia: NO institutional owner — main vulnerability)"
+      "Cross-biographical motif: translator maintenance cost asymmetry (Ireland: state-funded; Germany: chamber-funded; UK: GMC fee + state legislation; China: state programmes + anchor companies; Russia: NO institutional owner — main vulnerability)",
+      "B-5 update (2026-05-25): Softline is the strongest local Russian analogue to Oracle — AI-linked efficiency optimization, about 800 fewer employees, while Q1 2026 turnover grew 5% YoY.",
+      "Sber provides a rare public allocator-case: AI-assisted identification of inefficient employees plus an explicit political/managerial-responsibility rebuttal from Putin.",
+      "Russian IT junior squeeze is directionally confirmed: fewer vacancies, more resumes per vacancy, stronger employer selectivity, and AI shifting the entry-level productivity bar.",
+      "Russian IT wage dynamics are polarizing: aggregate growth slowed to ~4.1% YoY while AI/ML, cybersecurity, DevOps/SRE and senior roles remain expensive.",
+      "Positive Technologies is useful as a quiet-restructuring case, but not as an AI-causality case; do not code it as AI replacement.",
+      "Global RationalFX layoff figures are useful as frame only: first six weeks / early-2026 estimate, not official labor statistics and not a January-only value."
     ]
   },
   "claims": [
@@ -2551,6 +2566,218 @@
         "Effective как conceptual frame связывающая микро-выгоду с макро-costs"
       ],
       "implications_for_b": "Концептуальная рамка для социально-культурного долга в IT. В синтез-главе B можно использовать для контраста с китайским кейсом (внешний долг — академия) — IT-долг внутренний (tragedy of the commons на уровне команды)."
+    },
+    {
+      "id": "b-rus-it-05",
+      "pass": "b-russia-it",
+      "topic": "Глобальный tech-layoff фон 2026 — RationalFX early-2026 estimate",
+      "status": "partially_verified",
+      "evidence_level": "B/C",
+      "claim": "RationalFX estimate for the first six weeks / early 2026 counted about 30,700 global technology-sector layoffs, including about 24,600 in the US, and projected that a constant pace could exceed 270,000 layoffs in 2026 vs roughly 245,000 in 2025. The same reporting attributes about 69,840 / 28.5% of 2025 tech layoffs to automation and AI adoption. This is a framing estimate, not an official labor-statistics series.",
+      "sources": [
+        {
+          "title": "TNGlobal: Tech sector layoffs reach 30,700 just 6 weeks into 2026 (RationalFX)",
+          "url": "https://technode.global/2026/02/13/tech-sector-layoffs-reach-30700-just-6-weeks-into-2026-on-track-to-surpass-2025s-job-cuts-rationalfx/",
+          "type": "secondary",
+          "date": "2026-02-13"
+        },
+        {
+          "title": "Business Standard: Over 30,000 tech jobs cut globally in first two months of 2026",
+          "url": "https://www.business-standard.com/industry/news/over-30-000-tech-jobs-cut-globally-in-first-two-months-of-2026-report-126021300972_1",
+          "type": "secondary",
+          "date": "2026-02-13"
+        },
+        {
+          "title": "3DNews: технологический сектор лишился более 240 тыс. сотрудников в 2025 году",
+          "url": "https://3dnews.ru/1135097/tehnologicheskiy-sektor-lishilsya-bolee-240-tis-sotrudnikov-v-2025-godu",
+          "type": "secondary",
+          "date": "2026"
+        }
+      ],
+      "caveats": [
+        "Do not phrase as \"January 2026\" only: the confirmed framing is first six weeks / early 2026.",
+        "RationalFX is an aggregator/analysis source, not an official labor-statistics authority.",
+        "The 2026 projection is a straight-line run-rate scenario, not a forecast with a labor-market model.",
+        "AI/automation attribution is employer/reporting-category based and should be used as directional context."
+      ],
+      "recommended_phrasing": "По оценке RationalFX, за первые шесть недель 2026 года мировой tech-сектор уже объявил около 30,7 тыс. сокращений; если такой темп сохранится, год может превысить уровень 2025-го. В 2025 году около 28,5% tech-сокращений в этой базе были связаны с automation/AI adoption. Использовать как глобальную рамку, не как официальную статистику."
+    },
+    {
+      "id": "b-rus-it-06",
+      "pass": "b-russia-it",
+      "topic": "Софтлайн — AI-linked staff optimization, Q3 2025 to Q1 2026",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "claim": "ПАО Софтлайн disclosed 10.3k employees as of 31 March 2026 vs about 11.1k in Q1 2025 materials, implying roughly 800 fewer employees / about 7.2% headcount reduction. CNews and company materials connect the optimization to AI adoption, post-acquisition integration and performance assessment. The highly qualified engineers/developers layer fell from about 6.2k to about 5.7k by share calculation, roughly a 10% decline, while Q1 2026 turnover grew 5% YoY to 25.1 bn RUB.",
+      "sources": [
+        {
+          "title": "CNews line: ПАО Софтлайн объявляет операционные результаты за I квартал 2026 года",
+          "url": "https://www.cnews.ru/news/line/2026-05-21_pao_softlajn_obyavlyaet",
+          "type": "secondary/company_reprint",
+          "date": "2026-05-21"
+        },
+        {
+          "title": "CNews: Российский ИТ-гигант радикально сократил штат из-за ИИ",
+          "url": "https://www.cnews.ru/news/top/2026-05-22_rossijskij_it-gigant_radikalno",
+          "type": "secondary",
+          "date": "2026-05-22"
+        },
+        {
+          "title": "Softline: операционные результаты Q1 2025 (PDF)",
+          "url": "https://softline.ru/upload/files/Softline_1Q25_Final.pdf",
+          "type": "primary/company",
+          "date": "2025-Q1"
+        }
+      ],
+      "caveats": [
+        "The 800 / 7.2% figure is derived from disclosed headcount, not a separately filed mass-layoff notice.",
+        "AI is one explicitly named factor among several: routine-process automation, development/testing efficiency, integration after 17 acquisitions, and systematic performance assessment.",
+        "Engineer/developer decline is a share-based calculation from disclosed headcount composition; phrase as approximate.",
+        "This is stronger as an AI-era efficiency/reallocation case than as one-for-one AI replacement evidence."
+      ],
+      "recommended_phrasing": "Софтлайн — локальный российский аналог Oracle-case: компания снизила численность примерно на 800 человек при росте оборота Q1 2026 на 5% г/г; среди причин публично названы внедрение ИИ в рутинные процессы разработки/тестирования, интеграция после M&A и оценка эффективности."
+    },
+    {
+      "id": "b-rus-it-07",
+      "pass": "b-russia-it",
+      "topic": "Сбер — AI-assisted efficiency cuts and responsibility dispute",
+      "status": "partially_verified",
+      "evidence_level": "B/C",
+      "claim": "At AI Journey in November 2025, Herman Gref publicly said Sber had reduced almost / up to 20% of personnel identified as inefficient with AI assistance. Putin replied that there are no inefficient employees, only employees with whom management worked poorly. Later reporting said Sber paused or softened the process because the cuts and perceived competition with AI became a shock inside the company. Numeric headcount estimates around 13.5k-15k are secondary and should not be used as the primary fact without a filing.",
+      "sources": [
+        {
+          "title": "ТАСС: Греф рассказал о сокращении почти 20% персонала, признанного ИИ неэффективным",
+          "url": "https://tass.ru/ekonomika/25672541",
+          "type": "secondary",
+          "date": "2025-11-19"
+        },
+        {
+          "title": "РБК: Путин ответил Грефу на слова о неэффективных сотрудниках",
+          "url": "https://www.rbc.ru/finances/19/11/2025/691e05f39a7947863a9cc7d8",
+          "type": "secondary",
+          "date": "2025-11-19"
+        },
+        {
+          "title": "РИА Новости: Путин заявил, что неэффективных сотрудников не бывает",
+          "url": "https://ria.ru/20251119/gref-2056146460.html",
+          "type": "secondary",
+          "date": "2025-11-19"
+        },
+        {
+          "title": "Ведомости: Сбербанк приостановил сокращения после внедрения ИИ",
+          "url": "https://www.vedomosti.ru/finance/news/2026/02/11/1175604-sberbank-vnedreniya-ii",
+          "type": "secondary",
+          "date": "2026-02-11"
+        }
+      ],
+      "caveats": [
+        "Some reports say personnel broadly, others central apparatus; avoid claiming 20% of all Sber employees without annual-report confirmation.",
+        "The strongest verified fact is the public first-person statement and the responsibility dispute, not a precise headcount count.",
+        "Frank RG / 13.5k-15k numbers are useful context but secondary."
+      ],
+      "recommended_phrasing": "Сбер даёт редкий публичный allocator-case: первое лицо прямо говорит об ИИ как инструменте выявления неэффективности, а ответ Путина переводит спор в плоскость управленческой ответственности за людей, которых алгоритм пометил как слабых."
+    },
+    {
+      "id": "b-rus-it-08",
+      "pass": "b-russia-it",
+      "topic": "Positive Technologies — quiet restructuring / layoffs without confirmed AI causality",
+      "status": "partially_verified",
+      "evidence_level": "B/C",
+      "claim": "Employee and union-linked reports in 2025 described mass layoffs at Positive Technologies: a first wave of about 150-300 people and possible total reductions around 500. Company responses framed the process as internal transformation / profitability discipline. AI causality is not confirmed; the case is useful for the \"quiet layoffs\" mechanism where reductions may not pass through formal redundancy procedure.",
+      "sources": [
+        {
+          "title": "CNews: В крупной ИБ-компании с миллиардной выручкой начались массовые увольнения",
+          "url": "https://www.cnews.ru/news/top/2025-02-02_v_krupnoj_ib-kompanii_s_milliardnoj",
+          "type": "secondary",
+          "date": "2025-02-02"
+        },
+        {
+          "title": "RUITUnion: Positive Technologies tag / worker reports",
+          "url": "https://ruitunion.org/tags/positive-technologies/",
+          "type": "community_union",
+          "date": "2025"
+        }
+      ],
+      "caveats": [
+        "Do not code as AI replacement: public evidence supports restructuring/profitability pressure, not AI causality.",
+        "The strongest value is employment-form visibility: not every reduction appears as an official redundancy event.",
+        "Employee/union reports need cautious phrasing and should be paired with the company-response context."
+      ],
+      "recommended_phrasing": "Positive Technologies стоит использовать не как ИИ-замещение, а как пример тихой оптимизации в российском IT: часть увольнений может проходить вне публичной процедуры сокращения, что делает рынок хуже видимым для внешней статистики."
+    },
+    {
+      "id": "b-rus-it-09",
+      "pass": "b-russia-it",
+      "topic": "Russian IT junior squeeze and employer-market shift, 2025-2026",
+      "status": "partially_verified",
+      "evidence_level": "B",
+      "claim": "Russian IT labor-market reporting for 2025-2026 shows a shift from candidate market to employer market: IT vacancies declined roughly 20-30% vs 2024 in several analyses, resumes per vacancy rose sharply (secondary reports cite about 13 on average and up to 16 for some IT positions), and entry-level developers face stronger competition from both experienced candidates and AI-enabled workflow changes. Demand remains comparatively stronger for AI/ML, cybersecurity, DevOps/SRE and senior roles.",
+      "sources": [
+        {
+          "title": "Tproger: Кого возьмут на работу в 2026 — разбор IT-рынка после сокращений",
+          "url": "https://tproger.ru/articles/kogo-vozmut-na-rabotu-v-2026--razbor-it-rynka-posle-sokrashhenij",
+          "type": "secondary",
+          "date": "2026"
+        },
+        {
+          "title": "Коммерсантъ: ИТ-рынок труда — рынок работодателя",
+          "url": "https://www.kommersant.ru/doc/8381259",
+          "type": "secondary",
+          "date": "2026"
+        },
+        {
+          "title": "CNews line: рост зарплат и спроса в IT / iTrend-ЦАМТ",
+          "url": "https://www.cnews.ru/news/line/2026-02-11_rost_zarplat_v_it_ostanovilsya",
+          "type": "secondary",
+          "date": "2026-02-11"
+        },
+        {
+          "title": "CNews: рост ИТ-зарплат замедлился",
+          "url": "https://www.cnews.ru/news/top/2026-05-13_rost_it-zarplat_zamedlilsya",
+          "type": "secondary",
+          "date": "2026-05-13"
+        }
+      ],
+      "caveats": [
+        "Exact 13/16 resumes-per-vacancy figures are secondary/aggregated and should not be treated as official hh.ru primary values unless traced to hh.ru release.",
+        "Junior squeeze is directionally robust, but segment definitions vary by source.",
+        "AI competition should be phrased as one mechanism among budget tightening, return migration, seniority bias and hiring selectivity."
+      ],
+      "recommended_phrasing": "Для Биографии 5 это входная дверь: джуниоры оказываются между сжавшимися вакансиями, выросшим числом резюме на позицию и ИИ-инструментами, которые повышают планку производительности для entry-level работы."
+    },
+    {
+      "id": "b-rus-it-10",
+      "pass": "b-russia-it",
+      "topic": "Russian IT wage polarization and shortage-with-layoffs paradox",
+      "status": "partially_verified",
+      "evidence_level": "B",
+      "claim": "Russian IT salary growth slowed to about 4.1% YoY by 2026, below inflation in the cited reporting, while AI/ML engineers, cybersecurity specialists, DevOps/SRE and data roles retained much stronger salary bands. At the same time, Russian IT still reports structural shortages (official estimates around 500k-700k depending on period and methodology), while layoffs and involuntary exits are rising. This supports the \"shortage and cuts at once\" frame, not a simple oversupply story.",
+      "sources": [
+        {
+          "title": "CNews: Рост ИТ-зарплат замедлился до 4,1%",
+          "url": "https://www.cnews.ru/news/top/2026-05-13_rost_it-zarplat_zamedlilsya",
+          "type": "secondary",
+          "date": "2026-05-13"
+        },
+        {
+          "title": "CNews line: рост зарплат в IT остановился / iTrend-ЦАМТ",
+          "url": "https://www.cnews.ru/news/line/2026-02-11_rost_zarplat_v_it_ostanovilsya",
+          "type": "secondary",
+          "date": "2026-02-11"
+        },
+        {
+          "title": "Tproger: разбор IT-рынка после сокращений",
+          "url": "https://tproger.ru/articles/kogo-vozmut-na-rabotu-v-2026--razbor-it-rynka-posle-sokrashhenij",
+          "type": "secondary",
+          "date": "2026"
+        }
+      ],
+      "caveats": [
+        "Salary bands differ strongly by city, stack, grade and source methodology.",
+        "Shortage figures around 500k-700k are not directly comparable across years and should be framed as official/market estimates, not a single stable deficit.",
+        "The paradox is structural: shortage in frontier/senior/security roles can coexist with cuts in lower-productivity, duplicated or post-M&A roles."
+      ],
+      "recommended_phrasing": "Российский IT-рынок одновременно режет людей и сохраняет дефицит: нижний вход и массовые роли сжимаются, а AI/ML, ИБ, DevOps/SRE и senior-профили остаются дорогими. Это не обычный спад, а переразметка ценности навыков."
     }
   ],
   "gaps": [
