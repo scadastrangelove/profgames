@@ -1951,7 +1951,7 @@
       "id": "b-ire-02",
       "pass": "b-ireland",
       "topic": "AI cheating в UK университетах — данные 2023-26",
-      "claim": "К 2026 году AI-related academic misconduct в UK higher education драматически вырос. ~7,000 UK university students формально пойманы на AI cheating в 2023-24 (тройной рост от 2022-23). 92% UK студентов используют ИИ (HEPI/Kortext 2025); 88% — для assessments; 18% сдавали работу с AI-content. AI misconduct rate вырос с 1,6 до 7,5 на 1,000 студентов (2022-2026). UC Berkeley campus store увидел 80% рост продаж blue books за 2 академических года. 63% учителей фиксировали наказание студентов за ИИ в 2023-24. 94% AI-generated work не обнаружено маркерами (University of Reading study). 74% UK teachers получили 0 тренинга по ИИ. Только 28% AI-specific plagiarism policies оценивают как effective.",
+      "claim": "К 2026 году AI-related academic misconduct в UK higher education драматически вырос. ~7,000 UK university students формально пойманы на AI cheating в 2023-24 (тройной рост от 2022-23). 95% UK студентов используют ИИ (HEPI/Kortext 2026); 94% — для assessed work; 12% сдавали работу с AI-content (рост с 8% в 2025 и 3% в 2024). AI misconduct rate вырос с 1,6 до 5,1 на 1,000 студентов (2022/23→2023/24, Guardian). UC Berkeley campus store увидел 80% рост продаж blue books за 2 академических года. 63% учителей фиксировали наказание студентов за ИИ в 2023-24. 94% AI-generated work не обнаружено маркерами (University of Reading study). 74% UK teachers получили 0 тренинга по ИИ. Только 28% AI-specific plagiarism policies оценивают как effective.",
       "status": "verified",
       "evidence_level": "B",
       "sources": [
@@ -1962,10 +1962,10 @@
           "date": "2025-11-27"
         },
         {
-          "title": "HEPI/Kortext — Student Generative AI Survey 2025 (via YouGov)",
-          "url": "https://yougov.co.uk/society/articles/52855-how-are-uk-students-really-using-ai",
-          "type": "secondary",
-          "date": "2025-09-15"
+          "title": "HEPI/Kortext — Student Generative AI Survey 2026",
+          "url": "https://www.hepi.ac.uk/reports/student-generative-ai-survey-2026/",
+          "type": "primary",
+          "date": "2026-03-12"
         },
         {
           "title": "AI Cheating Statistics — Feedough",
@@ -1980,6 +1980,12 @@
           "date": "2025-06-16"
         },
         {
+          "title": "The Guardian: Thousands of UK university students caught cheating using AI",
+          "url": "https://www.theguardian.com/education/2025/jun/15/thousands-of-uk-university-students-caught-cheating-using-ai-artificial-intelligence-survey",
+          "type": "secondary",
+          "date": "2025-06-15"
+        },
+        {
           "title": "ChatGPT Cheating Statistics — Nerdynav",
           "url": "https://nerdynav.com/chatgpt-cheating-statistics/",
           "type": "tertiary",
@@ -1991,7 +1997,8 @@
         "7,000 caught — формально подтверждённые случаи (от The Guardian / institutional surveys), реальное число использования AI существенно выше",
         "Non-native English speakers face 61.2% false positive rate в детекции (vs 5.1% для native speakers)",
         "Ирландия специфически не отделена в данных — UK данные применимы как контекст, Irish-specific surveys не найдены",
-        "AllAboutAI и Feedough — aggregator sources; primary studies включают HEPI/Kortext, University of Reading, GoStudent Future of Education Report 2025"
+        "AllAboutAI и Feedough — aggregator sources; primary studies включают HEPI/Kortext, University of Reading, GoStudent Future of Education Report 2025",
+        "Цифры синхронизированы со статьёй под HEPI/Kortext 2026 (95% / 94% / 12%, рост AI-text с 8% в 2025 и 3% в 2024); misconduct 1,6→5,1 на 1 000 — The Guardian (2022/23→2023/24)"
       ],
       "implications_for_b": "Учитель в Ирландии находится в общей с UK школьной системе: AI-cheating от учеников — главный новый феномен в его рабочем дне. Время на verification растёт быстрее, чем государство финансирует поддержку."
     },
