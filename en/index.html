@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProfGames — English Starter Layer</title>
+<style>
+:root {
+  --bg: #fbfaf7;
+  --card: #fff;
+  --text: #1a1713;
+  --muted: #665d52;
+  --rule: rgba(40, 24, 10, .14);
+  --accent: #8b5a24;
+  --serif: Charter, Iowan Old Style, Georgia, serif;
+  --sans: Inter, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.62 var(--serif); }
+.wrap { max-width: 920px; margin: 0 auto; padding: 54px 28px 80px; }
+.eyebrow { font: 12px/1.4 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-size: 48px; line-height: 1.04; margin: 18px 0 12px; font-weight: 520; }
+.lede { color: var(--muted); font-size: 20px; max-width: 760px; }
+.links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 34px; }
+.card { display: block; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 20px 22px; color: inherit; text-decoration: none; }
+.card:hover { border-color: var(--accent); }
+.card h2 { margin: 0 0 8px; font-size: 22px; }
+.card p { margin: 0; color: var(--muted); }
+.meta { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--rule); font: 13px var(--sans); color: var(--muted); display: flex; flex-wrap: wrap; gap: 12px; }
+a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="eyebrow"><a href="../index.html">ProfGames</a> · English starter layer</div>
+  <h1>ProfGames in English</h1>
+  <p class="lede">A first English-facing layer for the project: the fact-check audit pack, the A1 event explorer and a 30-slide talk deck. The canonical Russian artifacts remain in the repository root.</p>
+  <section class="links">
+    <a class="card" href="a-events.html">
+      <h2>A1 Event Explorer</h2>
+      <p>177 signals from 2020-2026, with filters by year, region, evidence level and framework dimension.</p>
+    </a>
+    <a class="card" href="factcheck.html">
+      <h2>Fact-Check HTML</h2>
+      <p>65 audited claims, 20 evidence gaps, evidence levels and source URLs.</p>
+    </a>
+    <a class="card" href="factcheck.json">
+      <h2>Fact-Check JSON</h2>
+      <p>Machine-readable English audit layer with original Russian wording preserved.</p>
+    </a>
+    <a class="card" href="presentations/profgames-cycle-talk-en.pptx">
+      <h2>Presentation</h2>
+      <p>30-slide English talk deck about the cycle, with a Russian-specific conclusion.</p>
+    </a>
+    <a class="card" href="presentations/profgames-cycle-talk-en-contact-sheet.png">
+      <h2>Contact Sheet</h2>
+      <p>Quick visual review of the deck.</p>
+    </a>
+  </section>
+  <div class="meta">
+    <span>Sergey Gordeychik</span>
+    <span><a href="https://t.me/aiakyn">telegram</a></span>
+    <span><a href="https://teletype.in/@sergey_gordey">teletype</a></span>
+    <span><a href="https://github.com/scadastrangelove/profgames">github</a></span>
+    <span>#profgames</span>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProfGames — English Fact-Check Audit Layer</title>
+<style>
+:root {
+  --bg:#fbfaf7; --card:#fff; --soft:#f3f0e8; --text:#1a1713; --muted:#6c6257;
+  --rule:rgba(40,24,10,.14); --accent:#8b5a24; --green:#0f6e56; --blue:#315a9c; --gold:#9b7b0e; --red:#993c1d;
+  --serif: Charter, Iowan Old Style, Georgia, serif; --sans: Inter, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --mono: IBM Plex Mono, SFMono-Regular, Menlo, Consolas, monospace;
+}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.58 var(--serif)}
+.wrap{max-width:1080px;margin:auto;padding:46px 28px 80px} a{color:var(--accent)} .eyebrow{font:12px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:42px;line-height:1.08;margin:14px 0 10px;font-weight:520} .subtitle{font-size:19px;color:var(--muted);max-width:860px}
+.meta{font:13px var(--sans);color:var(--muted);display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid var(--rule)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:30px 0} .stat{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:15px;text-align:center}
+.num{font-size:31px;line-height:1;font-weight:600} .label{font:11px var(--sans);text-transform:uppercase;color:var(--muted);margin-top:6px}
+.note,.findings{background:var(--soft);border-radius:8px;padding:18px 22px;margin:22px 0} .findings li{margin:6px 0}
+.filters{position:sticky;top:0;background:rgba(251,250,247,.96);border-bottom:1px solid var(--rule);padding:12px 0;margin:26px 0;z-index:2}
+button{font:12px var(--sans);padding:6px 10px;margin:3px;border:1px solid var(--rule);background:var(--card);border-radius:4px;cursor:pointer} button.active{background:#3b2a1d;color:white}
+.pass-section{margin:46px 0} .pass-section>h2{font-size:28px;border-bottom:1px solid var(--rule);padding-bottom:8px}
+.claim,.gap{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:20px 23px;margin:16px 0} .claim.hidden{display:none}
+.claim-id{font:11px var(--mono);letter-spacing:.05em;color:var(--muted);text-transform:uppercase} h3{font-size:21px;line-height:1.24;margin:7px 0 10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px} .tag{font:11px var(--sans);padding:3px 8px;border-radius:4px;background:var(--soft);color:var(--muted)}
+.status.verified{background:#e1f5ee;color:var(--green)} .status.partially-verified{background:#faeeda;color:var(--gold)} .status.needs-correction{background:#faece7;color:var(--red)} .status.not-verified{background:#ece9e0;color:var(--muted)}
+.level-a{background:var(--green);color:white} .level-b{background:var(--blue);color:white} .level-c{background:var(--gold);color:white} .level-d{background:#6b6356;color:white}
+.claim-summary{font-size:17px;margin:14px 0} .sources{font:13px var(--sans);display:flex;flex-wrap:wrap;gap:9px;margin:10px 0 12px} details{background:var(--soft);border-radius:6px;padding:10px 13px;margin-top:12px}
+summary{font:13px var(--sans);cursor:pointer;color:var(--accent)} details p{font-size:14px;color:var(--muted)} .muted{color:var(--muted)} footer{margin-top:56px;border-top:1px solid var(--rule);padding-top:18px;font:12px var(--sans);color:var(--muted)}
+@media(max-width:760px){.wrap{padding:28px 16px} h1{font-size:32px} .stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header>
+  <div class="eyebrow"><a href="../index.html">ProfGames</a> · English starter layer · fact-check audit</div>
+  <h1>ProfGames — Fact-Check Audit Layer</h1>
+  <p class="subtitle">A first English-facing layer over the canonical Russian fact-check pack: stable claim ids, evidence levels, source URLs, concise English summaries and original Russian wording for audit.</p>
+  <div class="meta">
+    <span>English layer: 0.1-en</span>
+    <span>Canonical pack: v2.1</span>
+    <span>Fact-check date: 2026-05-25</span>
+    <span>Data relevance: 2026-05</span>
+    <span><a href="factcheck.json">JSON</a></span>
+    <span><a href="../factcheck.json">canonical RU JSON</a></span>
+    <span><a href="https://github.com/scadastrangelove/profgames">GitHub</a></span>
+  </div>
+</header>
+<section class="stats">
+  <div class="stat"><div class="num">65</div><div class="label">claims</div></div>
+  <div class="stat"><div class="num">38</div><div class="label">verified</div></div>
+  <div class="stat"><div class="num">18</div><div class="label">partial</div></div>
+  <div class="stat"><div class="num">6</div><div class="label">corrections</div></div>
+  <div class="stat"><div class="num">86%</div><div class="label">pass rate</div></div>
+</section>
+<section class="findings">
+  <h2>What this layer is for</h2>
+  <ul><li>The pack contains 65 audited claims with stable IDs, source URLs, status labels and A/B/C/D evidence levels.</li><li>The strongest evidence comes from administrative sources, official regulators, payroll/labor microdata and major published research packs.</li><li>For English readers, the general entry point is AI research, regulators, corporate cases and the international biography claims; Russia is kept as a later, separate fork.</li><li>The biographical sections show how provenance translators work through registries, licenses, chambers, state programs and network traces.</li><li>Russian-specific conclusions should be framed as a segmented-market problem: large anchor employers and the state can fund training, while entry-level roles and independent intermediaries are exposed.</li><li>The most important unresolved Russian gap is direct causal payroll evidence on AI effects, comparable to the Stanford/ADP evidence for the US.</li></ul>
+</section>
+<nav class="filters">
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="verified">Verified</button>
+  <button data-filter="partially_verified">Partially verified</button>
+  <button data-filter="needs_correction">Needs correction</button>
+  <button data-filter="not_verified">Not verified</button>
+</nav>
+<section class="pass-section" id="ai_research"><h2>AI research and labor evidence</h2>
+<article class="claim" data-status="needs_correction" data-level="A" data-pass="ai_research">
+  <div class="claim-head">
+    <div class="claim-id">ai-19</div>
+    <h3>Stanford HAI AI Index 2026: core figures</h3>
+    <div class="tags">
+      <span class="tag status needs-correction">needs correction</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">AI Index 2026 robustly supports rapid GenAI adoption, broad organizational use, productivity gains in support/coding/marketing, US private-investment dominance and falling net AI-researcher inflow into the US.</p>
+  <div class="sources"><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">source 1</a> <a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" target="_blank" rel="noopener">source 2</a> <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/economy" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Stanford HAI AI Index 2026 — ключевые цифры</p>
+    <p><strong>Claim:</strong> 53% population adoption за 3 года; 88% организаций; 4 из 5 студентов; productivity gains 14–26% в support/coding, до 72% в маркетинге; US private AI investment 2025 — $285,9 млрд; соотношение к Китаю 23:1; AI-исследователи в США −89% с 2017, −80% YoY.</p>
+    <p><strong>Recommended wording:</strong> По Stanford HAI AI Index 2026 (релиз апрель 2026): глобально GenAI достиг 53% population adoption за 3 года (быстрее ПК/Интернета); 88% организаций используют AI; 70% — GenAI хотя бы в одной бизнес-функции; productivity gains: 14–15% в customer support, 26% в software development, до 50% в marketing. US private AI investment 2025 — $285,9 млрд (Китай — $12,4 млрд, соотношение ~23:1; учесть китайские госуд. guidance funds ~$184 млрд с 2000). Net inflow AI-researchers в US упал на 89% с 2017, −80% YoY 2024-25 (методология AI Index — LinkedIn migration + publication affiliations).</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="ai_research">
+  <div class="claim-head">
+    <div class="claim-id">ai-20</div>
+    <h3>Anthropic Labour Market Impacts, March 2026</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">us</span>
+    </div>
+  </div>
+  <p class="claim-summary">Anthropic finds that higher observed AI exposure is associated with lower BLS 2024-2034 employment projections, especially for programming, customer-service and data-entry work; it is observational, not causal.</p>
+  <div class="sources"><a href="https://www.anthropic.com/research/economic-index-march-2026-report" target="_blank" rel="noopener">source 1</a> <a href="https://www.anthropic.com/economic-index" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Anthropic Labour Market Impacts (March 2026)</p>
+    <p><strong>Claim:</strong> На каждые +10 п.п. observed exposure прогнозы BLS на 2024–34 ниже на 0,6 п.п.; computer programmers — observed exposure 74,5%; customer service reps 70,1%; data entry keyers — top 5; массового роста безработицы пока нет, но есть слабый сигнал замедления найма 22–25.</p>
+    <p><strong>Recommended wording:</strong> По Anthropic Labour Market Impacts (март 2026, релиз 5.03): на каждые +10 п.п. observed AI exposure прогнозы BLS на 2024-34 ниже на 0,6 п.п.; computer programmers — exposure 74,5%, customer service reps — 70,1%, data entry keyers в top-5. Массового роста безработицы пока нет; есть слабый сигнал замедления найма 22-25 в exposed occupations. Это observational evidence, не causal; selection bias в Claude usage отмечен авторами.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="B" data-pass="ai_research">
+  <div class="claim-head">
+    <div class="claim-id">ai-21</div>
+    <h3>Anthropic Economic Index: geographic concentration</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">us</span>
+    </div>
+  </div>
+  <p class="claim-summary">Anthropic&#x27;s Economic Index shows concentrated Claude use by US state and a large computer-and-mathematical occupation share in both Claude.ai and API traffic.</p>
+  <div class="sources"><a href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report" target="_blank" rel="noopener">source 1</a> <a href="https://www.anthropic.com/research/economic-index-march-2026-report" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Anthropic Economic Index — географическое распределение</p>
+    <p><strong>Claim:</strong> Top US states — 50% всего использования при 38% working-age population; Computer &amp; Math задачи = 35% разговоров на Claude.ai, ~50% API-трафика.</p>
+    <p><strong>Recommended wording:</strong> По Anthropic Economic Index (январь 2026, на ноябрьских 2025 данных): top-5 US штатов давали ~50% использования Claude при 38% working-age population (в марте 2026 концентрация снизилась до ~24%). Computer &amp; Mathematical occupations = 35% разговоров на Claude.ai (февраль 2026); в API-трафике доля coding выше (~50%).</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="ai_research">
+  <div class="claim-head">
+    <div class="claim-id">ai-22</div>
+    <h3>Stanford Digital Economy Lab: Canaries in the Coal Mine</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">us</span>
+    </div>
+  </div>
+  <p class="claim-summary">ADP payroll microdata support a 13-16% relative employment decline for workers aged 22-25 in highly AI-exposed occupations, with young software developers down about 20% from the 2022 peak.</p>
+  <div class="sources"><a href="https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf" target="_blank" rel="noopener">source 1</a> <a href="https://www.aaas.org/sites/default/files/2025-10/BharatChandar_CSGWest_AAASEPI_ShapingAIFutureInYourState_Oct2025.pdf" target="_blank" rel="noopener">source 2</a> <a href="https://www.adpresearch.com/yes-ai-is-affecting-employment-heres-the-data/" target="_blank" rel="noopener">source 3</a> <a href="https://workshift.org/canaries-in-the-coal-mine/" target="_blank" rel="noopener">source 4</a> <a href="https://bharatchandar.substack.com/p/a-primer-on-canaries-in-the-coal" target="_blank" rel="noopener">source 5</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Stanford Digital Economy Lab — Canaries in the Coal Mine</p>
+    <p><strong>Claim:</strong> 13–16% относительный спад занятости 22–25 в high-exposure professions; software developers 22–25 ~−20% с пика 2024; «−6% для 22–25 vs +6–13% для 30+».</p>
+    <p><strong>Recommended wording:</strong> По Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen «Canaries in the Coal Mine», август-октябрь 2025; ADP payroll до сентября 2025): 13–16% относительный спад занятости в 22-25 в наиболее AI-exposed occupations с конца 2022 г. при стабильном/растущем employment для 30+. Software developers 22-25: ~−20% с пика октября 2022 г. Эффект концентрируется в jobs, где AI automates, а не augments. Это causal-tier evidence (А) на ADP-микроданных.</p>
+  </details>
+</article>
+</section><section class="pass-section" id="regulators_corporate"><h2>Regulators and corporate cases</h2>
+<article class="claim" data-status="partially_verified" data-level="C" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29a</div>
+    <h3>IBM Apprenticeship and SkillsBuild</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-c">evidence C</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">IBM&#x27;s apprenticeship and SkillsBuild programs are real, but the specific &#x27;$250k investment in new collar&#x27; figure was not verified and should be removed or sourced separately.</p>
+  <div class="sources"><a href="https://uk.newsroom.ibm.com/IBM-Commits-to-Train-2-Million-in-Artificial-Intelligence-in-Three-Years-with-a-Focus-on-Underrepresented-Communities" target="_blank" rel="noopener">source 1</a> <a href="https://psychometric-success.com/application-advice/internships-graduate-schemes/ibm-apprenticeship-program" target="_blank" rel="noopener">source 2</a> <a href="https://unstop.com/blog/ibm-skillsbuild-virtual-internship-2025" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> IBM Apprenticeship + SkillsBuild</p>
+    <p><strong>Claim:</strong> $250 000 инвестиций в new collar к 2025; обучить 2 млн в AI к 2026; 12-36 мес. программы.</p>
+    <p><strong>Recommended wording:</strong> IBM commitment (объявлен сентябрь 2023): обучить 2 млн человек в AI к концу 2026 г., с фокусом на underrepresented communities (часть программы 30 млн к 2030). Конкретные суммы инвестиций ($250k и т.п.) не подтверждены в публичных первоисточниках.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="C" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29b</div>
+    <h3>JPMorgan AI programs</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-c">evidence C</span>
+      <span class="tag">us</span>
+    </div>
+  </div>
+  <p class="claim-summary">JPMorgan&#x27;s AI upskilling and internal deployment claims should be treated as corporate narrative unless tied to specific filings or audited program metrics.</p>
+  <div class="sources"><a href="https://alumni.jpmorganchase.com/content/stories/feb-2025-02.php" target="_blank" rel="noopener">source 1</a> <a href="https://www.klover.ai/jpmorgan-ai-strategy-chasing-ai-dominance/" target="_blank" rel="noopener">source 2</a> <a href="https://www.klover.ai/jpmorgan-uses-ai-agents-10-ways-to-use-ai-in-depth-analysis-2025/" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> JPMorgan AI programs</p>
+    <p><strong>Claim:</strong> 15-недельный paid ReEntry; обязательное prompt-engineering для junior&#x27;ов в Asset &amp; Wealth Management; LLM Suite + Spectrum для PMs; junior hiring −66% в отдельных банках.</p>
+    <p><strong>Recommended wording:</strong> JPMorgan ReEntry Program — 15-недельная paid fellowship (с 2013, &gt;80% placement rate, &gt;600 full-time hires). По данным Reuters/Bloomberg (2024-25): mandatory prompt-engineering training для junior&#x27;ов в Asset &amp; Wealth Management; LLM Suite + Spectrum tools для portfolio managers — внутренние программы, primary документы не публичны.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29c</div>
+    <h3>Big Four UK graduate cuts</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">uk</span>
+    </div>
+  </div>
+  <p class="claim-summary">Evidence supports reduced graduate hiring or changed intake patterns at major professional-services firms, but AI causality should be framed carefully and not overstated.</p>
+  <div class="sources"><a href="https://www.scottishfinancialnews.com/articles/big-four-slash-graduate-jobs-as-ai-takes-over-entry-level-tasks" target="_blank" rel="noopener">source 1</a> <a href="https://www.ainvest.com/news/ai-driven-restructuring-big-consulting-sector-strategic-workforce-modernization-competitive-positioning-2025-2601/" target="_blank" rel="noopener">source 2</a> <a href="https://ardorcomm-media.com/big-four-slash-graduate-hiring-as-ai-and-global-shifts-redefine-consulting-talent-models/" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Big Four UK graduate cuts</p>
+    <p><strong>Claim:</strong> Graduate-вакансии −44% YoY; KPMG −7%, PwC −5%, Deloitte −5%, EY −3% (UK 2024); PwC US −30% graduate hiring; EY +61 000 «технологистов» с 2023 (≈15% штата).</p>
+    <p><strong>Recommended wording:</strong> По данным Patrick Morgan / The Guardian (2024-25): graduate-вакансии Big Four UK сократились на 44% YoY; UK headcount 2024: KPMG −7%, PwC −5%, Deloitte −5%, EY −3%. PwC US (по внутренней презентации, цит. Business Insider/CNBC август 2025) — −30% graduate hiring за 3 года, обоснование &#x27;impact of AI&#x27;. EY +61 000 &#x27;technologists&#x27; с 2023 — secondary source.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="C" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29d</div>
+    <h3>Salesforce / Benioff</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-c">evidence C</span>
+      <span class="tag">us</span>
+    </div>
+  </div>
+  <p class="claim-summary">Salesforce is a strong corporate narrative case for AI-linked efficiency and support-staff reduction, but the evidence remains management self-disclosure.</p>
+  <div class="sources"><a href="https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/" target="_blank" rel="noopener">source 1</a> <a href="https://finance.yahoo.com/news/salesforce-ceo-marc-benioff-says-145324020.html" target="_blank" rel="noopener">source 2</a> <a href="https://www.ktvu.com/news/salesforce-ai-layoffs-marc-benioff" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Salesforce / Benioff</p>
+    <p><strong>Claim:</strong> Не нанимаем новых SWE в 2025; +30% productivity от Agentforce; 4 000 customer support cut / from 9,000 to 5,000.</p>
+    <p><strong>Recommended wording:</strong> Salesforce: в 2025 г. Benioff публично заявил о паузе найма SWE и сокращении ~4 000 customer support jobs (с 9 000 до 5 000) с заменой AI-агентами Agentforce (claim +30% productivity); часть людей redeployed. В апреле 2026 г. Benioff контр-сигнализировал о найме 1 000 graduate&#x27;ов с тезисом &#x27;AI won&#x27;t kill entry-level jobs&#x27;. Corporate narrative; sole-source CEO statements.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="C" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29e</div>
+    <h3>Klarna</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-c">evidence C</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Klarna is a strong corporate narrative case: AI assistant performance and headcount/productivity claims are public, but they remain company-reported rather than independent labor statistics.</p>
+  <div class="sources"><a href="https://mlq.ai/news/klarna-ceo-admits-aggressive-ai-job-cuts-went-too-far-starts-hiring-again-after-us-ipo/" target="_blank" rel="noopener">source 1</a> <a href="https://lasoft.org/blog/klarna-walks-back-ai-overhaul-rehires-staff-after-customer-service-backlash/" target="_blank" rel="noopener">source 2</a> <a href="https://finance.yahoo.com/news/firing-700-humans-ai-klarna-173029838.html" target="_blank" rel="noopener">source 3</a> <a href="https://www.linkifico.com/post/the-klarna-ai-experiment-why-replacing-humans-with-ai-backfired" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Klarna</p>
+    <p><strong>Claim:</strong> −700 customer service; замена AI; 2025 partial rollback, гибридная модель.</p>
+    <p><strong>Recommended wording:</strong> Klarna 2022-24: сокращение 700 customer service ролей с заменой AI-агентами (партнёрство с OpenAI). 2025 (Siemiatkowski в Bloomberg interview): признание &#x27;we went too far&#x27;, возврат к найму людей; качество и устойчивость пострадали. Новая модель — гибридная Uber-style с distributed remote agents. Corporate narrative + reversal — наглядный AI rollback case.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="needs_correction" data-level="A" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29f</div>
+    <h3>Amazon&#x27;s October 2025 layoffs</h3>
+    <div class="tags">
+      <span class="tag status needs-correction">needs correction</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">us</span>
+    </div>
+  </div>
+  <p class="claim-summary">Amazon&#x27;s roughly 14,000 layoff announcement should not be coded as AI-driven: Jassy explicitly framed the main rationale as culture and organizational layering.</p>
+  <div class="sources"><a href="https://www.sec.gov/Archives/edgar/data/0001018724/000101872425000121/amzn-20250930xex991.htm" target="_blank" rel="noopener">source 1</a> <a href="https://www.cnbc.com/2025/10/28/amazon-layoffs-corporate-workers-ai.html" target="_blank" rel="noopener">source 2</a> <a href="https://www.npr.org/2025/10/28/nx-s1-5588545/amazon-layoffs-corporate-workers-ai" target="_blank" rel="noopener">source 3</a> <a href="https://www.geekwire.com/2025/its-culture-amazon-ceo-says-massive-corporate-layoffs-were-about-agility-not-ai-or-cost-cutting/" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Amazon -14,000 layoffs October 2025</p>
+    <p><strong>Claim:</strong> −14 000 corporate roles октябрь 2025, явная увязка с AI-investments.</p>
+    <p><strong>Recommended wording:</strong> Amazon в октябре 2025 г. сократил 14 000 corporate ролей (Amazon blog 28.10.2025; SEC 8-K с $1.8B severance charge). Andy Jassy в earnings call 30.10.2025 явно сформулировал: &#x27;not really financially driven, not even really AI-driven, it&#x27;s culture&#x27; (нужда в leaner, flat, fast-moving организации). Параллельно Amazon заявляет о $80+ млрд capex на AI infrastructure и долгосрочной exposure к AI как driver workforce reduction. Прямая causal-связь &#x27;−14K = AI&#x27; — narrative-конструкция media, отрицаемая CEO.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29g</div>
+    <h3>Microsoft 2025 layoffs</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">us</span>
+    </div>
+  </div>
+  <p class="claim-summary">Microsoft&#x27;s 2025 layoff figures are real corporate restructuring signals, but direct AI-replacement causality remains weaker than media framing suggests.</p>
+  <div class="sources"><a href="https://fortune.com/2025/07/02/microsoft-layoffs-9000-ai/" target="_blank" rel="noopener">source 1</a> <a href="https://www.hcamag.com/us/news/general/microsoft-offers-to-buy-out-7-of-its-workforce-as-it-pivots-towards-ai/572927" target="_blank" rel="noopener">source 2</a> <a href="https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Microsoft 2025 layoffs ~15 000</p>
+    <p><strong>Claim:</strong> Microsoft ~15 000 layoffs за 2025; «reimagine for new era».</p>
+    <p><strong>Recommended wording:</strong> Microsoft 2025: ~15 000 layoffs (6K в мае + 9K в июле, ~7% global workforce). Апрель 2026 — buy-out 7% workforce + ещё 8 000 layoffs. Параллельно — $80 млрд capex на AI infrastructure FY2025. Сама Microsoft framing — &#x27;efficiency, flatten organization&#x27;, не явная AI-замена; AI-attribution — media narrative.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="B" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29h</div>
+    <h3>Bloomberry / Live Data Technologies jobs analysis</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">The Bloomberry analysis is useful for role-level exposure and orchestration patterns, but it should be treated as private-sector labor analytics rather than an official series.</p>
+  <div class="sources"><a href="https://bloomberry.com/blog/i-analyzed-180m-jobs-to-see-what-jobs-ai-is-actually-replacing-today/" target="_blank" rel="noopener">source 1</a> <a href="https://news.aibase.com/news/22477" target="_blank" rel="noopener">source 2</a> <a href="https://dennismfrancis.medium.com/ais-job-market-shakeup-the-40-growth-and-33-collapse-you-need-to-see-e7a1ec5b66dd" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Bloomberry 180M jobs analysis</p>
+    <p><strong>Claim:</strong> Senior leadership −1,7%, middle −5,7%, IC −9%; ML engineers +40% YoY (после +78% в 2024); PM/coordinator/medical scribe −20%; graphic artist −33% поверх −12% в 2024; photographers/writers −28%, journalists −22%.</p>
+    <p><strong>Recommended wording:</strong> Анализ Henley Wing Chiu (Bloomberry) 180 млн глобальных вакансий за янв.2023–окт.2025 (Revealera dataset, 650 normalized titles): ML engineers +40% YoY (после +78%), computer graphic artists −33% поверх −12% в 2024; senior leadership почти не пострадал (−1,7%), IC роли −9%. Single-analyst study, ML-classifier + Mechanical Turk labeling; не peer-reviewed; ghost jobs caveat.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="B" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29i</div>
+    <h3>PwC AI Jobs Barometer 2025</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">PwC&#x27;s AI Jobs Barometer supports wage/productivity differences between AI-exposed and less exposed jobs, but it is an analytical report rather than administrative evidence.</p>
+  <div class="sources"><a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/2025/report.pdf" target="_blank" rel="noopener">source 1</a> <a href="https://www.pwchk.com/en/press-room/press-releases/pr-130625.html" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> PwC AI Jobs Barometer 2025</p>
+    <p><strong>Claim:</strong> ~1 млрд job ads, 56% wage premium, 38% growth in AI-exposed roles, 66% faster skill change.</p>
+    <p><strong>Recommended wording:</strong> PwC 2025 Global AI Jobs Barometer (release июнь 2025): анализ ~1 млрд job ads — 56% wage premium для AI-skilled (vs 25% годом ранее), 38% growth в AI-exposed roles (vs 65% в less-exposed), 66% faster skill change. Productivity growth ~4× в most exposed industries. Это correlational analysis от консалтингового источника, не causal evidence.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="D" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29j</div>
+    <h3>WEF Future of Jobs 2025</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-d">evidence D</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">WEF&#x27;s Future of Jobs survey is a broad employer-expectations source for skill shifts and role disruption, not a measured employment outcome.</p>
+  <div class="sources"><a href="https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf" target="_blank" rel="noopener">source 1</a> <a href="https://sea.peoplemattersglobal.com/article/employee-skilling/170-million-jobs-to-emerge-by-2030-but-92-million-at-risk-wef-warns-48552" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> WEF Future of Jobs 2025</p>
+    <p><strong>Claim:</strong> 170 млн новых, 92 млн displaced, net +78 млн к 2030.</p>
+    <p><strong>Recommended wording:</strong> По прогнозу WEF Future of Jobs 2025 (employer survey 1 000+ компаний, 14 млн workers, январь 2025), к 2030 ожидается net +78 млн рабочих мест (170 млн новых − 92 млн displaced), 22% job churn. Это employer projection, не observed data.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="B" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29k</div>
+    <h3>MIT NANDA: &#x27;95% of AI pilots fail&#x27;</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">MIT NANDA is useful for the enterprise-adoption failure narrative, but the exact &#x27;95%&#x27; headline must be tied to its study scope and not universalized.</p>
+  <div class="sources"><a href="https://fortune.com/2025/08/21/an-mit-report-that-95-of-ai-pilots-fail-spooked-investors-but-the-reason-why-those-pilots-failed-is-what-should-make-the-c-suite-anxious/" target="_blank" rel="noopener">source 1</a> <a href="https://www.legal.io/articles/5719519/MIT-Report-Finds-95-of-AI-Pilots-Fail-to-Deliver-ROI-Exposing-GenAI-Divide" target="_blank" rel="noopener">source 2</a> <a href="https://virtualizationreview.com/articles/2025/08/19/mit-report-finds-most-ai-business-investments-fail-reveals-genai-divide.aspx" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> MIT NANDA «95% AI pilots fail»</p>
+    <p><strong>Claim:</strong> 95% AI pilots fail to deliver ROI (MIT NANDA, июль 2025).</p>
+    <p><strong>Recommended wording:</strong> Согласно отчёту &#x27;The GenAI Divide&#x27; MIT Project NANDA (июль 2025), 95% корпоративных GenAI-пилотов не дают измеримого P&amp;L impact, только 5% &#x27;integrated systems&#x27; создают значительную value (на основе 150 executive interviews + 350 survey + 300 deployments; $30-40 млрд enterprise spend). Caveats: convenience-сэмпл, NANDA — заинтересованная сторона в продвижении agentic AI; параллельно Capgemini (88%) и S&amp;P Global (42%) фиксируют схожие failure-показатели.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="D" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">corp-29l</div>
+    <h3>Anthropic CEO Dario Amodei opinion</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-d">evidence D</span>
+      <span class="tag">us</span>
+    </div>
+  </div>
+  <p class="claim-summary">Amodei&#x27;s warnings are important executive opinion and forecast material, not evidence that the forecast has already occurred.</p>
+  <div class="sources"><span class="muted">No source URL listed</span></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Anthropic CEO Dario Amodei opinion</p>
+    <p><strong>Claim:</strong> Dario Amodei: 50% entry-level white-collar в 5 лет (Axios May 2025).</p>
+    <p><strong>Recommended wording:</strong> В Axios interview (май 2025) Dario Amodei (CEO Anthropic) высказал personal forecast о возможной потере 50% entry-level white-collar jobs в 5 лет. Это CEO opinion/projection, не emp. evidence.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="needs_correction" data-level="A" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">reg-23</div>
+    <h3>Teaching Council Ireland: processing times and routes</h3>
+    <div class="tags">
+      <span class="tag status needs-correction">needs correction</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">ireland</span>
+    </div>
+  </div>
+  <p class="claim-summary">The corrected Teaching Council Ireland baseline is up to 12 weeks for overseas-qualified teachers, 6 weeks for Ireland-qualified teachers, and Routes 1/2 as standard overseas routes; Route 4 is special-education specific.</p>
+  <div class="sources"><a href="https://www.teachingcouncil.ie/i-am-applying-to-register/application-processing-timeframes/" target="_blank" rel="noopener">source 1</a> <a href="https://www.teachingcouncil.ie/i-am-applying-to-register/qualified-outside-of-ireland/route-4-other-qualified-outside-of-ireland/" target="_blank" rel="noopener">source 2</a> <a href="https://www.teachingcouncil.ie/i-am-applying-to-register/qualified-outside-of-ireland/" target="_blank" rel="noopener">source 3</a> <a href="https://www.citizensinformation.ie/en/returning-to-ireland/starting-work/returning-to-ireland-as-a-teacher/" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Teaching Council Ireland — processing times и routes</p>
+    <p><strong>Claim:</strong> Processing time 4 недели primary / 8 недель post-primary; Route 4 — для overseas-qualified general teachers; 4 672 ирландских учителя за рубежом, ~4% от 123 000.</p>
+    <p><strong>Recommended wording:</strong> Teaching Council Ireland (актуально на 2025-26): processing time для overseas-qualified — до 12 недель; для qualified in Ireland — 6 недель. Routes 1 и 2 — стандартные пути для overseas primary/post-primary teachers (через EU Directive 2005/36/EC); Route 4 — для специальных образовательных условий (special education). Timebound Provision (Registration Regulations с 22.10.2025) — overseas teachers могут завершить induction в Ireland до 31.12.2027.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">reg-24</div>
+    <h3>GPhC OSPAP UK</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">uk</span>
+    </div>
+  </div>
+  <p class="claim-summary">OSPAP applications fell from 909 in 2022 to 302 in 2023, while oversubscribed courses and a coming one-year track show the translator pathway itself becoming a bottleneck.</p>
+  <div class="sources"><a href="https://pharmaceutical-journal.com/article/news/number-of-overseas-pharmacists-applying-to-work-in-uk-falls-by-two-thirds-in-one-year" target="_blank" rel="noopener">source 1</a> <a href="https://pharmaceutical-journal.com/article/news/one-year-route-to-registration-for-overseas-qualified-pharmacists-proposed-by-regulator" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> GPhC OSPAP UK</p>
+    <p><strong>Claim:</strong> Заявления 909 (2022) → 302 (2023), −67% YoY; все курсы 2024 oversubscribed; готовится переход к 1-летнему треку.</p>
+    <p><strong>Recommended wording:</strong> OSPAP applications упали с 909 (2022) до 302 (2023, −67% YoY); GPhC в августе 2024 объявил подготовку перехода на 1-летний единый трек для non-EEA pharmacists, с новыми standards не ранее сентября 2026. Курсы 2024 и 2025 oversubscribed — translator сам становится bottleneck.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">reg-25</div>
+    <h3>German Skilled Immigration Act: three phases</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">germany</span>
+    </div>
+  </div>
+  <p class="claim-summary">Germany&#x27;s 2023-2024 reform lowered Blue Card thresholds, introduced recognition partnerships and launched the Opportunity Card, including an IT route based on experience without a degree.</p>
+  <div class="sources"><a href="https://smithstonewalters.com/news/germany-further-new-provisions-for-skilled-workers-now-in-force" target="_blank" rel="noopener">source 1</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> German Skilled Immigration Act — 3 фазы</p>
+    <p><strong>Claim:</strong> Ноябрь 2023, март 2024, июнь 2024; recognition partnership: 2 года опыта + диплом, для IT снят порог по диплому; Opportunity Card с июня 2024; возрастной лимит для visa for vocational training поднят до 35; B1 → A2; разрешена доп. работа до 20 ч/неделю.</p>
+    <p><strong>Recommended wording:</strong> German Skilled Immigration Act, 3 фазы: (1) 18.11.2023 — реформа EU Blue Card, снижение salary thresholds, для IT — 2 года опыта без диплома; (2) март 2024 — Recognition Partnership с въездом до полного признания, secondary employment 20 ч/неделю; (3) 1.06.2024 — Chancenkarte/Opportunity Card, points-based, Western Balkans quota удвоена до 50 000.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="needs_correction" data-level="A" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">reg-26</div>
+    <h3>UK apprenticeships</h3>
+    <div class="tags">
+      <span class="tag status needs-correction">needs correction</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">uk</span>
+    </div>
+  </div>
+  <p class="claim-summary">UK apprenticeship starts fell from the 2015/16 peak of 509,400 to 354,000 in 2024/25, with under-19 starts only about 21%; the policy frame shifted toward the Growth and Skills Levy and Skills England.</p>
+  <div class="sources"><a href="https://explore-education-statistics.service.gov.uk/find-statistics/apprenticeships/2024-25" target="_blank" rel="noopener">source 1</a> <a href="https://commonslibrary.parliament.uk/research-briefings/SN06113/" target="_blank" rel="noopener">source 2</a> <a href="https://commonslibrary.parliament.uk/research-briefings/cdp-2024-0125/" target="_blank" rel="noopener">source 3</a> <a href="https://www.energy-uk.org.uk/publications/the-growth-and-skills-levy/" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> UK Apprenticeships</p>
+    <p><strong>Claim:</strong> Apprenticeship starts: 509 000 (2015/16) → 354 000 (2024/25); только 21% — под 19 лет; Growth and Skills Levy анонсирован сентябрь 2024, в силе с апреля 2025; Skills England создан июль 2024.</p>
+    <p><strong>Recommended wording:</strong> По UK Department for Education: Apprenticeship starts 509,400 (2015/16, пик до Levy reform) → 354,000 (2024/25), −31% от пика. Under-19 starts = 21,2% всех starts (74,990 из 354K). Higher apprenticeships (Level 4-7) = 140,730 (+15,1% YoY). Growth and Skills Levy анонсирован сентябрь 2024, в силе с апреля 2025; Skills England — июль 2024.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">reg-27</div>
+    <h3>China Young Thousand Talents</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">china</span>
+    </div>
+  </div>
+  <p class="claim-summary">Science 2023 evidence shows Young Thousand Talents returnees publishing 27% more papers and 144% more last-author papers than matched overseas peers.</p>
+  <div class="sources"><a href="https://www.ovid.com/journals/scie/pdf/10.1126/science.abq1218~has-chinas-young-thousand-talents-program-been-successful-in" target="_blank" rel="noopener">source 1</a> <a href="https://sccei.fsi.stanford.edu/china-briefs/evaluating-success-chinas-young-thousand-talents-stem-recruitment-program" target="_blank" rel="noopener">source 2</a> <a href="https://phys.org/news/2023-01-china-young-thousand-talents-largely.html" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> China Young Thousand Talents (Shi-Liu-Wang Science 2023)</p>
+    <p><strong>Claim:</strong> +27% больше публикаций; +144% last-author publications; n=339 returnees + 419 контрольная группа.</p>
+    <p><strong>Recommended wording:</strong> По Shi, Liu, Wang в Science 379(6627):62-65 (январь 2023, DOI 10.1126/science.abq1218): возвращенцы Young Thousand Talents публикуют на 27% больше работ и +144% last-author publications vs overseas peers. n=339 returnees + 419 контрольной группы. YTT-вернувшиеся — top-15% productivity среди early-career US-based researchers до возврата.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">reg-28</div>
+    <h3>Chinese returnees, 1978-2024</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">china</span>
+    </div>
+  </div>
+  <p class="claim-summary">Chinese official statistics support a massive long-run returnee channel: more than 7 million students went abroad and more than 5 million returned by 2024.</p>
+  <div class="sources"><a href="https://english.www.gov.cn/archive/statistics/202512/11/content_WS693aaa4fc6d00ca5f9a080a6.html" target="_blank" rel="noopener">source 1</a> <a href="http://english.scio.gov.cn/m/chinavoices/2025-12/11/content_118223275.html" target="_blank" rel="noopener">source 2</a> <a href="https://e.vnexpress.net/news/news/education/china-sees-record-surge-of-overseas-graduates-returning-home-for-high-tech-opportunities-5026355.html" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> China returnees 1978-2024</p>
+    <p><strong>Claim:</strong> 8,88 млн уехали; 7,43 млн завершили; 6,44 млн вернулись; 495 000 в 2024 (+19,1%); 5,63 млн возвратов после 2012 (87% совокупного потока).</p>
+    <p><strong>Recommended wording:</strong> По данным Министерства образования КНР (Xinhua, 11.12.2025): 8,88 млн китайцев уехали за рубеж учиться в 1978-2024 гг.; 7,43 млн завершили обучение; 6,44 млн вернулись. В 2024 г. вернулось 495 000 (+19,1% YoY). 5,63 млн возвратов после 2012 г. — 87% совокупного исторического потока.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="C" data-pass="regulators_corporate">
+  <div class="claim-head">
+    <div class="claim-id">reg-30</div>
+    <h3>UAE National AI Strategy 2031</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-c">evidence C</span>
+      <span class="tag">uae</span>
+    </div>
+  </div>
+  <p class="claim-summary">The UAE case is anchored in National AI Strategy 2031, MBZUAI and Stargate UAE; specific corporate-retention claims remain corporate narrative unless independently verified.</p>
+  <div class="sources"><a href="https://beam.ai/agentic-insights/uae-ai-strategy-2031-steering-the-emirates-toward-a-data-driven-future" target="_blank" rel="noopener">source 1</a> <a href="https://dig.watch/resource/the-uae-national-strategy-for-artificial-intelligence-2031" target="_blank" rel="noopener">source 2</a> <a href="https://www.klover.ai/uae-ai-strategy-analysis-for-global-ai-dominance/" target="_blank" rel="noopener">source 3</a> <a href="https://www.csis.org/analysis/united-arab-emirates-ai-ambitions" target="_blank" rel="noopener">source 4</a> <a href="https://www.arabianbusiness.com/industries/technology/uae-in-top-10-countries-with-most-ai-companies-how-golden-visas-and-investment-will-unlock-91bn-gdp-boost" target="_blank" rel="noopener">source 5</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> UAE National AI Strategy 2031</p>
+    <p><strong>Claim:</strong> Бюджет ≈$30 млрд (AED 112 млрд); MBZUAI лаборатория в Silicon Valley (40+40); ~80% выпускников MBZUAI остаются; UAE 188 000+ AI-чипов (2-е место); Stargate UAE (1 ГВт).</p>
+    <p><strong>Recommended wording:</strong> UAE National AI Strategy 2031 (April 2019); ожидаемый экономический impact AED 335 млрд (~$91 млрд) к 2031. Stargate UAE — 1 ГВт supercomputing campus в Abu Dhabi (OpenAI + G42 + Oracle + NVIDIA + MGX, объявлен май 2025); MGX — $100 млрд UAE AI investment company. MBZUAI (2019) — first research-based AI university с full scholarship. Конкретные численные corporate claims (MBZUAI Silicon Valley lab 40+40, 80% retention выпускников) — corporate narrative без независимой верификации.</p>
+  </details>
+</article>
+</section><section class="pass-section" id="b-ireland"><h2>Biography B1: Irish teacher</h2>
+<article class="claim" data-status="verified" data-level="A" data-pass="b-ireland">
+  <div class="claim-head">
+    <div class="claim-id">b-ire-01</div>
+    <h3>Teaching Council Ireland Timebound Provision</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">The October 2025 revised regulations let overseas-qualified teachers complete induction in Ireland through the Timebound Provision until 31 December 2027.</p>
+  <div class="sources"><a href="https://www.gov.ie/en/department-of-education/press-releases/minister-for-education-and-youth-signs-revised-teacher-council-registration-regulations-strengthening-teacher-supply-supports/" target="_blank" rel="noopener">source 1</a> <a href="https://www.teachingcouncil.ie/news/the-teaching-council-introduces-revised-registration-regulations/" target="_blank" rel="noopener">source 2</a> <a href="https://www.into.ie/2025/10/17/revised-teaching-council-registration-regulations/" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Teaching Council Ireland — Timebound Provision (revised regulations, October 2025)</p>
+    <p><strong>Claim:</strong> 22 октября 2025 министр образования и молодёжи Helen McEntee подписала revised Teaching Council (Registration) Regulations, реактивирующие Timebound Provision: учителя, квалифицированные за рубежом без induction в стране квалификации, могут пройти induction в Ирландии (Droichead). Действует до 31 декабря 2027. Заявки принимаются с 22 октября 2025.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="B" data-pass="b-ireland">
+  <div class="claim-head">
+    <div class="claim-id">b-ire-02</div>
+    <h3>AI cheating in UK universities, 2023-2026</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">UK higher education shows a sharp rise in AI-related academic misconduct, very high student AI use, renewed interest in in-class written exams, weak teacher training and limited policy effectiveness.</p>
+  <div class="sources"><a href="https://www.allaboutai.com/resources/ai-statistics/ai-cheating-in-schools/" target="_blank" rel="noopener">source 1</a> <a href="https://www.hepi.ac.uk/reports/student-generative-ai-survey-2026/" target="_blank" rel="noopener">source 2</a> <a href="https://www.feedough.com/ai-cheating-statistics/" target="_blank" rel="noopener">source 3</a> <a href="https://www.theregister.com/2025/06/16/university_ai_cheating/" target="_blank" rel="noopener">source 4</a> <a href="https://www.theguardian.com/education/2025/jun/15/thousands-of-uk-university-students-caught-cheating-using-ai-artificial-intelligence-survey" target="_blank" rel="noopener">source 5</a> <a href="https://nerdynav.com/chatgpt-cheating-statistics/" target="_blank" rel="noopener">source 6</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> AI cheating в UK университетах — данные 2023-26</p>
+    <p><strong>Claim:</strong> К 2026 году AI-related academic misconduct в UK higher education драматически вырос. ~7,000 UK university students формально пойманы на AI cheating в 2023-24 (тройной рост от 2022-23). 95% UK студентов используют ИИ (HEPI/Kortext 2026); 94% — для assessed work; 12% сдавали работу с AI-content (рост с 8% в 2025 и 3% в 2024). AI misconduct rate вырос с 1,6 до 5,1 на 1,000 студентов (2022/23→2023/24, Guardian). UC Berkeley campus store увидел 80% рост продаж blue books за 2 академических года. 63% учителей фиксировали наказание студентов за ИИ в 2023-24. 94% AI-generated work не обнаружено маркерами (University of Reading study). 74% UK teachers получили 0 тренинга по ИИ. Только 28% AI-specific plagiarism policies оценивают как effective.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="b-ireland">
+  <div class="claim-head">
+    <div class="claim-id">b-ire-03</div>
+    <h3>Teaching Council Ireland registration routes</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Teaching Council Ireland has five registration routes; the corrected route for overseas-qualified general teachers is Route 1 or 2, not Route 4.</p>
+  <div class="sources"><a href="https://www.teachingcouncil.ie/i-am-applying-to-register/qualified-outside-of-ireland/register-as-a-primary-teacher/" target="_blank" rel="noopener">source 1</a> <a href="https://www.teachingcouncil.ie/i-am-applying-to-register/qualified-outside-of-ireland/register-as-a-post-primary-teacher/" target="_blank" rel="noopener">source 2</a> <a href="https://www.teachingcouncil.ie/assets/uploads/2025/05/00.-Final-Version_-The-Teaching-Council-Registration-Handbook-2025-2026_English.pdf" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Routes регистрации Teaching Council Ireland (correction to v1)</p>
+    <p><strong>Claim:</strong> У Teaching Council Ireland 5 routes регистрации: Route 1 (Primary), Route 2 (Post-Primary), Route 3 (Further Education), Route 4 (Other — special education / restricted), Route 5 (Student teachers, since 2021). Для overseas-qualified general teachers корректные пути — Route 1 или Route 2 через стандартный процесс с EU 2005/36/EC recognition (не Route 4, который specialised только для special education). Processing times: до 12 недель для qualified outside Ireland.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+</section><section class="pass-section" id="b-germany"><h2>Biography B2: German engineer</h2>
+<article class="claim" data-status="verified" data-level="A" data-pass="b-germany">
+  <div class="claim-head">
+    <div class="claim-id">b-ger-01</div>
+    <h3>EU AI Act implementation timeline</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">The EU AI Act enters application in phases from February 2025 through August 2026, with obligations distributed across providers, deployers, importers and distributors.</p>
+  <div class="sources"><a href="https://www.nortonrosefulbright.com/en-de/knowledge/publications/a473a1c1/artificial-intelligence-regulation" target="_blank" rel="noopener">source 1</a> <a href="https://cms.law/en/int/expert-guides/ai-regulation-scanner/germany" target="_blank" rel="noopener">source 2</a> <a href="https://www.legal500.com/guides/chapter/germany-artificial-intelligence/" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> EU AI Act — timeline применения (2025-2026)</p>
+    <p><strong>Claim:</strong> EU AI Act вступает в силу поэтапно: prohibitions и AI literacy provisions с 2 февраля 2025; provisions on general-purpose AI (GPAI) с 2 августа 2025; большинство остальных provisions с 2 августа 2026. Применимо ко всем, кто develops/distributes/uses AI systems, влияющих на людей в EU. Most obligations — на providers (vendors), часть — на deployers, importers, distributors.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="b-germany">
+  <div class="claim-head">
+    <div class="claim-id">b-ger-02</div>
+    <h3>AI Liability Directive withdrawal</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">The European Commission withdrew the AI Liability Directive in early 2025, leaving AI harm mainly to product-liability law, the AI Act and national tort law.</p>
+  <div class="sources"><a href="https://www.legal500.com/guides/chapter/germany-artificial-intelligence/" target="_blank" rel="noopener">source 1</a> <a href="https://practiceguides.chambers.com/practice-guides/artificial-intelligence-2025/germany" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> AI Liability Directive (AILD) — withdrawal в начале 2025</p>
+    <p><strong>Claim:</strong> AI Liability Directive (AILD) был originally proposed Еврокомиссией для дополнения EU AI Act, устанавливая правила non-contractual civil liability для AI systems (включая presumption of causality и упрощение access to evidence для пострадавших). В начале 2025 предложение было ОТОЗВАНО Еврокомиссией из-за overlap с другими регуляциями. Liability за AI-сгенерированный harm остаётся через Product Liability Act + EU AI Act + национальное tort law.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="b-germany">
+  <div class="claim-head">
+    <div class="claim-id">b-ger-03</div>
+    <h3>German Product Liability Act draft, September 2025</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Germany&#x27;s September 2025 ProdHaftG-E draft implements the updated EU Product Liability Directive and matters for AI-driven product failures and supply-chain risk allocation.</p>
+  <div class="sources"><a href="https://www.whitecase.com/insight-alert/navigating-product-liability-high-security-sectors-addressing-ai-driven-risks-under" target="_blank" rel="noopener">source 1</a> <a href="https://practiceguides.chambers.com/practice-guides/artificial-intelligence-2025/germany" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> ProdHaftG-E (German Product Liability Act draft) — September 2025</p>
+    <p><strong>Claim:</strong> В сентябре 2025 опубликован первый официальный draft нового German Product Liability Act (ProdHaftG-E), реализующий обновлённый EU Product Liability Directive (EU PLD) совместно с EU AI Act. Закон формирует, как компании управляют product safety, digital innovation и risk allocation в supply chain, особенно в high-security секторах. Применяется к AI-driven product failures.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="b-germany">
+  <div class="claim-head">
+    <div class="claim-id">b-ger-04</div>
+    <h3>German court 6 O 151/23 on AI output responsibility</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">A German court held a business-information service operator directly responsible for false AI-generated content because the company made the AI output its own.</p>
+  <div class="sources"><a href="https://www.legal500.com/guides/chapter/germany-artificial-intelligence/" target="_blank" rel="noopener">source 1</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Прецедент 6 O 151/23 — German court on AI output ownership</p>
+    <p><strong>Claim:</strong> Немецкий суд (Landgericht, Aktenzeichen 6 O 151/23) признал оператора business-information сервиса ответственным за публикацию ложных данных, сгенерированных ИИ. Суд постановил: компания &#x27;сделала вывод ИИ своим&#x27; (made the AI&#x27;s output its own) и поэтому несёт прямую ответственность за дезинформацию. Liability ограничилась cease-and-desist + reimbursement of attorney fees, без damages awarded.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="b-germany">
+  <div class="claim-head">
+    <div class="claim-id">b-ger-05</div>
+    <h3>Ingenieur: protected title versus regulated profession</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">In Germany, Ingenieur is a protected title in some federal states but not a regulated profession in the immigration sense; recognition is needed to use the title, not to work in an engineering role.</p>
+  <div class="sources"><a href="https://verwaltung.bund.de/leistungsverzeichnis/en/leistung/99150085001000" target="_blank" rel="noopener">source 1</a> <a href="https://www.anerkennung-in-deutschland.de/html/en/2722.php" target="_blank" rel="noopener">source 2</a> <a href="https://ingbw.de/fileadmin/user_upload/M082E_Bulletin-recognition-of-foreign-engineering-qualifications_2024_12.pdf" target="_blank" rel="noopener">source 3</a> <a href="https://www.relokatehr.com/blog/regulated-vs-non-regulated-professions-germany" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Ingenieur — protected title vs regulated profession</p>
+    <p><strong>Claim:</strong> В Германии &#x27;Ingenieur&#x27; — это защищённый титул (protected title) в некоторых федеральных землях, но НЕ regulated profession в иммиграционном смысле. Лицо может работать как engineer без recognition, но НЕ имеет права использовать титул &#x27;Ingenieur&#x27;/&#x27;Ingenieurin&#x27; и подписывать в этом качестве. Recognition — через equivalence assessment у Ingenieurkammer (Chamber of Engineers) федеральной земли. Recognition fee — €360 (Baden-Württemberg, типичный), penalty за неправомерное использование титула — до €25,000. С 2024 действует Anerkennungspartnerschaft (recognition partnership), позволяющий работать в процессе recognition при условии employer commits to support process.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+</section><section class="pass-section" id="b-india-uk"><h2>Biography B3: Indian doctor in the UK</h2>
+<article class="claim" data-status="verified" data-level="A" data-pass="b-india-uk">
+  <div class="claim-head">
+    <div class="claim-id">b-ind-01</div>
+    <h3>PLAB to UKMLA transition</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">From 2024-2025, the GMC replaced PLAB with UKMLA as a common assessment for UK-trained and international medical graduates, alongside EPIC&#x27;s replacement by MyIntealth.</p>
+  <div class="sources"><a href="https://www.gmc-uk.org/registration-and-licensing/join-our-registers/before-you-apply-guide-for-doctors/acceptable-overseas-qualifications-for-doctors" target="_blank" rel="noopener">source 1</a> <a href="https://www.gmc-uk.org/registration-and-licensing/join-our-registers/registration-applications/application-guides/full-registration-for-international-medical-graduates" target="_blank" rel="noopener">source 2</a> <a href="https://www.imgconnect.co.uk/news/2025/09/gmc-registration-for-overseas-doctors-step-by-step-guide-2025/166" target="_blank" rel="noopener">source 3</a> <a href="https://www.pastest.com/blogs/news/plab-vs-other-toutes-to-gmc-registration" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> PLAB → UKMLA transition (2024-2025)</p>
+    <p><strong>Claim:</strong> С 2024-25 academic year UK General Medical Council (GMC) заменил PLAB на UKMLA (UK Medical Licensing Assessment) — единая оценка для UK-trained и International medical graduates (IMG). UKMLA состоит из Applied Knowledge Test (AKT, MCQ) и Clinical and Professional Skills Assessment (CPSA, OSCE). EPIC retired, заменён на MyIntealth (управляется Intealth, parent organisation of ECFMG). GMC fees 2025: £433 application + annual retention.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="b-india-uk">
+  <div class="claim-head">
+    <div class="claim-id">b-ind-02</div>
+    <h3>UK Medical Training (Prioritisation) Act</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">The 5 March 2026 Act gives UK-trained graduates priority in Foundation Programme and specialty training places, while preserving equal access for some already-registered NHS-working IMGs.</p>
+  <div class="sources"><a href="https://www.bma.org.uk/advice-and-support/career-progression/training/what-the-new-law-means-for-uk-graduate-prioritisation" target="_blank" rel="noopener">source 1</a> <a href="https://www.bma.org.uk/news-and-opinion/priority-access-for-uk-medical-graduates-comes-into-force" target="_blank" rel="noopener">source 2</a> <a href="https://www.gov.uk/government/publications/impact-statement-medical-training-prioritisation-bill/medical-training-prioritisation-bill-impact-statement" target="_blank" rel="noopener">source 3</a> <a href="https://www.england.nhs.uk/long-read/medical-training-prioritisation-bill-information-for-applicants-to-medical-training/" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> UK Medical Training (Prioritisation) Act — 5 March 2026</p>
+    <p><strong>Claim:</strong> 5 марта 2026 UK Medical Training (Prioritisation) Act стал законом. Закон даёт приоритет UK-trained graduates в распределении мест Foundation Programme и Specialty Training. IMG, registered и working в NHS до 5 марта 2025 с 2+ годами опыта в NHS, имеют equal access. Цель — restore competition ratios для specialty training до reasonable levels. Закон UK-wide, drafted в консультации с devolved nations.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="b-india-uk">
+  <div class="claim-head">
+    <div class="claim-id">b-ind-03</div>
+    <h3>UK medical-training competition ratios</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">UK medical training faces very high competition: 2025 data show 91,999 applications for 12,833 specialty posts, with 2026 already above 47,000 applicants.</p>
+  <div class="sources"><a href="https://www.gov.uk/government/publications/impact-statement-medical-training-prioritisation-bill/medical-training-prioritisation-bill-impact-statement" target="_blank" rel="noopener">source 1</a> <a href="https://www.bma.org.uk/news-and-opinion/priority-access-for-uk-medical-graduates-comes-into-force" target="_blank" rel="noopener">source 2</a> <a href="https://thedoctor.bma.org.uk/articles/life-at-work/specialty-training-squeeze/" target="_blank" rel="noopener">source 3</a> <a href="https://www.gmc-uk.org/" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> UK competition ratios для medical training — 2025-2026</p>
+    <p><strong>Claim:</strong> В 2025: 15,723 UK-trained doctors + 25,257 overseas-trained = 40,980 applicants на 12,833 round 1+2 specialty training posts. Для 2026 — уже 47,000+ applicants. 91,999 applications submitted to 12,833 posts в 2025 (+54% от 2024). 41% medical workforce в UK — non-UK graduates (рост с 33% в 2017). Unique IMG applicants удвоились 2023→2025 (10,402→20,803), UK graduates +33% (9,283→12,305). Foundation Programme applications: 8,137 в 2019 → 11,205 в 2025. Competition ratios для popular specialties: cardiothoracic surgery 45:1, community sexual health 26:1, public health 17:1.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+</section><section class="pass-section" id="b-china"><h2>Biography B4: Chinese returnee scientist</h2>
+<article class="claim" data-status="verified" data-level="B" data-pass="b-china">
+  <div class="claim-head">
+    <div class="claim-id">b-chn-01</div>
+    <h3>AI-generated biomedical papers: China concentration</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">The Pangram 2025/2026 analysis finds much higher AI-flagged biomedical text shares in Chinese and South Korean institutional papers than in US-affiliated papers.</p>
+  <div class="sources"><a href="https://www.biorxiv.org/content/10.64898/2026.01.01.697311.full.pdf" target="_blank" rel="noopener">source 1</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> AI-generated papers — китайская концентрация (Pangram 2025-26)</p>
+    <p><strong>Claim:</strong> Pangram study (январь 2026, biorxiv): мониторинг biomedical литературы 2025 года показал dramatic рост AI-сгенерированного контента. 26% статей из китайских институций содержат хотя бы один window, помеченный как AI-generated; для South Korea — 32%; для US — 7,4%. До 12,4% papers в 2025 содержали хотя бы один AI-flagged segment. Manual inspection 20 US-affiliated manuscripts с AI-generated text показала, что все 20 имели non-Anglophone first authors; 10 — Chinese names без anglicization.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="B" data-pass="b-china">
+  <div class="claim-head">
+    <div class="claim-id">b-chn-02</div>
+    <h3>AI-related retractions: Chinese first authors</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">A Frontiers systematic review reports China accounting for 72.2% of first authors among AI-related retracted papers, with shorter time-to-retraction in China and India.</p>
+  <div class="sources"><a href="https://www.frontiersin.org/journals/research-metrics-and-analytics/articles/10.3389/frma.2025.1737168/full" target="_blank" rel="noopener">source 1</a> <a href="https://www.preprints.org/manuscript/202601.0314" target="_blank" rel="noopener">source 2</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12624210/" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> AI-related retractions — 72.2% китайских first authors</p>
+    <p><strong>Claim:</strong> Frontiers (декабрь 2025) опубликовали systematic bibliometric review AI-related retractions. China accounts for 72.2% of first authors среди AI-related retracted papers. China — top по retractions overall (551 papers за period analysed), India — 40, Bangladesh — 23. Retraction rate peaked в 2023 — 667 retractions. Median duration от publication до retraction: 510 days. Time-to-retraction (TTR) в Китае и Индии compressed: ~600 days vs 1,300+ в US/Japan.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="b-china">
+  <div class="claim-head">
+    <div class="claim-id">b-chn-03</div>
+    <h3>Saveetha University extreme retraction case</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Saveetha University is a cross-country illustration of extreme paper-mill behavior, with dozens of retractions and questionable-authorship findings.</p>
+  <div class="sources"><a href="https://retractionwatch.com/2025/02/10/as-springer-nature-journal-clears-ai-papers-one-universitys-retractions-rise-drastically/" target="_blank" rel="noopener">source 1</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Saveetha University (India) — extreme retraction case</p>
+    <p><strong>Claim:</strong> Saveetha University (Chennai, India) — case study экстремального paper-mill behavior. В 2024 retracted 80+ papers from Saveetha authors. К началу 2025 — 90 retractions от Saveetha authors в Neurosurgical Review за первые 6 недель. Saveetha идентифицирован среди schools с &#x27;questionable authorship practices&#x27; (Quantitative Science Studies, January 2025), включая 100% growth research output 2019-2023. Citation stacking практика подтверждена в Heliyon CellPress.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+</section><section class="pass-section" id="russia"><h2>Russian IT sector</h2>
+<article class="claim" data-status="partially_verified" data-level="A" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-01</div>
+    <h3>Russian Government Decree No. 1949: IT firms and university training</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">Large accredited Russian IT firms are required to sign university agreements and channel up to about 3% of tax-benefit savings into IT education; the exact numeric thresholds need cautious wording.</p>
+  <div class="sources"><a href="http://publication.pravo.gov.ru/document/0001202511280073" target="_blank" rel="noopener">source 1</a> <a href="https://savecons.ru/news/obzor-izmeneniy-v-polozhenii-ob-it-akkreditatsii" target="_blank" rel="noopener">source 2</a> <a href="https://b1.ru/insights/tax-messenger/it-accreditation-2-december-2025/" target="_blank" rel="noopener">source 3</a> <a href="https://ppt.ru/news/akkreditatsiya/pravitelstvo-utochnilo-pravila-akkreditatsii-it-kompaniy-dlya-lgot" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Постановление Правительства РФ №1949 (28.11.2025)</p>
+    <p><strong>Claim:</strong> Для аккредитованных IT-компаний с выручкой &gt;1 млрд ₽ и штатом &gt;100 — обязанность инвестировать ≥3% сэкономленных на льготах средств в вузовское IT-образование (соглашения с вузами).</p>
+    <p><strong>Recommended wording:</strong> Согласно Постановлению Правительства РФ от 28.11.2025 №1949 (в силе с 01.01.2026), крупные аккредитованные ИТ-компании обязаны заключать соглашения с вузами и направлять до ~3% от полученной налоговой экономии на содействие ИТ-образованию. Точные количественные пороги уточнены подзаконно в апреле 2026 г.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-02</div>
+    <h3>Russian IT accreditation requirements</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">Accreditation uses a 30% IT-revenue threshold, OKVED 62/63 activity codes and wage requirements; the 70% threshold applies to tax-benefit eligibility, not accreditation itself.</p>
+  <div class="sources"><a href="https://base.garant.ru/405366137/" target="_blank" rel="noopener">source 1</a> <a href="https://www.tadviser.ru/index.php/Статья:Аккредитация_ИТ-компаний_в_России" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Постановление №1729: требования по аккредитации</p>
+    <p><strong>Claim:</strong> Требования: выручка ≥30%, ОКВЭД 62/63, з/п не ниже средней по региону.</p>
+    <p><strong>Recommended wording:</strong> Воспроизводить точно: 30% доля IT-выручки для аккредитации, 70% — для применения налоговых льгот; ОКВЭД 62/63; зарплата не ниже средней по региону или РФ.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="needs_correction" data-level="A" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-03</div>
+    <h3>Russian IT tax and social-contribution benefits in 2026</h3>
+    <div class="tags">
+      <span class="tag status needs-correction">needs correction</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">The verified baseline is a 5% profit-tax rate through 2030, a two-tier social-contribution regime around the RUB 2.979m base, and a 6% IT mortgage with a RUB 9m base limit; the claimed 3% profit tax needs correction.</p>
+  <div class="sources"><a href="https://www.kontur-extern.ru/info/83605-strahovye_vznosy_dlya_it_kompaniy" target="_blank" rel="noopener">source 1</a> <a href="https://habr.com/ru/articles/1019666/" target="_blank" rel="noopener">source 2</a> <a href="https://www.moedelo.org/club/article-knowledge/kakie-lgoty-est-u-it-biznesa-v-2026-godu-tablica-razasnenia-po-nalogam" target="_blank" rel="noopener">source 3</a> <a href="https://www.nalog.gov.ru/" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Российские IT-льготы 2026</p>
+    <p><strong>Claim:</strong> Налог на прибыль 5% федеральный + 0% региональный → переход на 3% с 2026; страховые взносы двухступенчатые 15%/7,6% с порогом по ЕПВБ ≈2,979 млн ₽; IT-ипотека 6%, до 9 млн ₽ базовый лимит.</p>
+    <p><strong>Recommended wording:</strong> 5% налог на прибыль до 2030 г.; страховые взносы — 15% / 7,6% относительно ЕПВБ ~2,979 млн ₽ (де-факто двукратное повышение нагрузки); IT-ипотека 6%, базовый лимит 9 млн ₽.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="A" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-04</div>
+    <h3>Registry of accredited Russian IT companies</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">The public count is roughly 18,000-20,000 accredited companies around 2024-2025, with annual checks affecting the exact number.</p>
+  <div class="sources"><a href="https://www.tadviser.ru/index.php/Статья:Аккредитация_ИТ-компаний_в_России" target="_blank" rel="noopener">source 1</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Реестр аккредитованных IT-компаний Минцифры</p>
+    <p><strong>Claim:</strong> ~20 тыс. компаний к 2025 г.</p>
+    <p><strong>Recommended wording:</strong> К 2024 г. — около 19 тыс. аккредитованных компаний, в течение 2025 г. — порядок ~18–20 тыс. при ежегодных проверках.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-05</div>
+    <h3>Russian IT labor market, 2025</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">Russian IT vacancies fell by roughly a quarter to a third in 2025, the hh index reached 16.1 in Q3, entry-level roles weakened sharply, while AI/ML, security and senior specialties stayed comparatively expensive.</p>
+  <div class="sources"><a href="https://sense-it.ru/mediacenter/zarplaty-it-spetsialistov-v-rf-osnovnye-trendy-iii-kvartala-2025-goda" target="_blank" rel="noopener">source 1</a> <a href="https://practicum.yandex.ru/blog/skolko-zarabatyvayut-backend-razrabotchiki/" target="_blank" rel="noopener">source 2</a> <a href="https://okursah.ru/blog/it-rynok-rossii-analitika-zarplat-dinamika-rosta-i-prognoz-dlya-razrabotchikov-i-analitikov-2025" target="_blank" rel="noopener">source 3</a> <a href="https://www.novostiitkanala.ru/news/detail.php?ID=195270" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Российский IT-рынок труда 2025</p>
+    <p><strong>Claim:</strong> Общее число IT-вакансий: 505 тыс. (vs 680 тыс. в 2024) — снижение ~26%; hh-индекс в IT 16,1 vs 8,2 годом ранее; junior-вакансии −30…−50% YoY; вакансии с AI на Авито Работа выросли почти вдвое; бэкенд медиана ~244 тыс. ₽; Go ~309 тыс.; Java ~268 тыс.; ML/DS +5–10% за полгода.</p>
+    <p><strong>Recommended wording:</strong> По данным hh.ru и SENSE IT, в Q3 2025 hh-индекс в IT достиг 16,1 (vs 8,2 годом ранее, общерыночный = 8). IT-вакансии в 2025 сократились ориентировочно на четверть-треть YoY. Медианы Q3 2025 (SENSE): Backend senior ~244 тыс. ₽, Java middle ~250 тыс. ₽; рост зарплат ИБ-архитекторов и продуктовых аналитиков. ML/DS — единственный сегмент с сохраняющимся ростом.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-06</div>
+    <h3>Russian IT emigration, 2022-2024</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">Public estimates support an order-of-magnitude figure of about 80,000-100,000 net IT emigrants after 2022; precise official MVD/Rosstat totals are not publicly available.</p>
+  <div class="sources"><a href="https://cddrl.fsi.stanford.edu/news/migration-integration-and-activism-among-russian-emigrants" target="_blank" rel="noopener">source 1</a> <a href="https://meduza.io/en/feature/2025/03/26/less-sadness-more-frustration" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Эмиграция IT 2022-24</p>
+    <p><strong>Claim:</strong> Чистая нетто-эмиграция 80–100 тыс. IT-профи; Москва — 60% потока.</p>
+    <p><strong>Recommended wording:</strong> По оценкам Шадаева (декабрь 2022) и независимых исследований, за 2022 г. РФ покинули порядка 100 тыс. IT-специалистов; чистая нетто-эмиграция до 2024 — порядок 80–100 тыс. (точная цифра в публичных первоисточниках МВД/Росстата отсутствует).</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="B" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-07</div>
+    <h3>OutRush wave 4 on Russian emigration and return</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">OutRush wave 4 (n=8,600, July-November 2024) reports 8% returnees, another 5% planning return, and 54% considering return under political change; the sample is educated/IT-skewed and not random.</p>
+  <div class="sources"><a href="https://outrush.io/report_march_2025_eng" target="_blank" rel="noopener">source 1</a> <a href="https://fsi.stanford.edu/publication/move-mobility-integration-and-dynamics-russian-emigration-2022-2024" target="_blank" rel="noopener">source 2</a> <a href="https://carnegieendowment.org/russia-eurasia/politika/2024/07/russian-emigration-in-flux?lang=ru" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> OutRush 4-я волна</p>
+    <p><strong>Claim:</strong> n≈8 600, июль–ноябрь 2024: 8% эмигрантов вернулись 2023→2024; ещё 5% планируют; 54% — рассмотрят возврат при «политических изменениях»; ~80% returnees первой волны (2022) уехали повторно к лету 2023.</p>
+    <p><strong>Recommended wording:</strong> По OutRush wave 4 (Kamalov, Nugumanova, Sergeeva, Stanford CDDRL, n=8 600, июль-ноябрь 2024): 8% эмигрантов вернулись 2023→2024; 5% планируют возврат; 54% рассмотрят при политических изменениях; ~80% returnees первой волны (2022) уехали повторно к лету 2023. Sample IT/образованной аудитории; sample не случайный.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="not_verified" data-level="B" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-08</div>
+    <h3>RANEPA brain-drain monitoring</h3>
+    <div class="tags">
+      <span class="tag status not-verified">not verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">Secondary reporting attributes an approximate 10% returnee figure to RANEPA monitoring, broadly consistent with OutRush, but the direct public primary source was not located.</p>
+  <div class="sources"><a href="https://meduza.io/en/feature/2025/03/26/less-sadness-more-frustration" target="_blank" rel="noopener">source 1</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> RANEPA brain drain monitoring</p>
+    <p><strong>Claim:</strong> ≈10% вернувшихся (соответствует OutRush)</p>
+    <p><strong>Recommended wording:</strong> По данным RANEPA brain drain monitoring (через Meduza), ~10% эмигрантов вернулись — близко к OutRush. Прямой первоисточник RANEPA в открытом доступе отсутствует.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-09</div>
+    <h3>Russia&#x27;s 2026-2030 migration-policy concept</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">The 2026-2030 concept confirms a more selective migration stance, including language about carriers of traditional values; 2025 citizenship and compatriot-return figures show a sharp decline from earlier peaks.</p>
+  <div class="sources"><a href="http://publication.pravo.gov.ru/document/0001202510150055" target="_blank" rel="noopener">source 1</a> <a href="https://www.osw.waw.pl/en/publikacje/analyses/2025-10-22/russias-new-migration-policy-concept-security-core" target="_blank" rel="noopener">source 2</a> <a href="https://www.rbc.ru/society/15/10/2025/68eff65c9a794723ec47c649" target="_blank" rel="noopener">source 3</a> <a href="https://www.themoscowtimes.com/2026/03/23/russia-sees-sharp-drop-in-foreigners-taking-citizenship-amid-migration-crackdown-a92304" target="_blank" rel="noopener">source 4</a> <a href="https://www.osnmedia.ru/obshhestvo/populyarnost-grazhdanstva-rf-u-inostrantsev-zametno-upala" target="_blank" rel="noopener">source 5</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Концепция миграционной политики РФ 2026-30</p>
+    <p><strong>Claim:</strong> Дальнейшее ужесточение, селективный приём «носителей традиционных ценностей»; 152 400 foreigners получили гражданство в 2025 (vs 735 000 в 2021), −27,1% YoY; 26 700 compatriots вернулись в 2025, минимум с 2010, −16% YoY.</p>
+    <p><strong>Recommended wording:</strong> Концепция миграционной политики РФ на 2026-2030 утверждена указом №738 от 15.10.2025; формулировка о &#x27;селективном приёме носителей традиционных ценностей&#x27; — прямая. По данным МВД: 152,4 тыс. иностранцев получили гражданство в 2025 (−27,1% YoY от 209 тыс. в 2024; для сравнения с 2021 г. (735 тыс.) учесть массовое предоставление жителям новых регионов). 26,7 тыс. соотечественников вернулись в 2025 — минимум за 14 лет.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="needs_correction" data-level="A" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-10</div>
+    <h3>The 850,000-person controlled-persons registry</h3>
+    <div class="tags">
+      <span class="tag status needs-correction">needs correction</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">The 850,000 figure belongs to Russia&#x27;s migration-enforcement registry for foreigners with terminated grounds of stay; it must not be used as an IT-sector cage indicator.</p>
+  <div class="sources"><a href="https://www.interfax.ru/russia/1078583" target="_blank" rel="noopener">source 1</a> <a href="https://secrets.tbank.ru/trendy/reestr-nelegalnyh-migrantov/" target="_blank" rel="noopener">source 2</a> <a href="https://ppt.ru/columns/rosco/pochemu-inostranets-popadaet-v-reestr-kontroliruemykh-lits" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> 850 тыс. реестровых — что это на самом деле</p>
+    <p><strong>Claim:</strong> 850 тыс. реестровых с февраля 2025 — red flag для cage-индикаторов в IT.</p>
+    <p><strong>Recommended wording:</strong> Реестр контролируемых лиц МВД РФ (введён 5.02.2025): &gt;850 тыс. нелегальных мигрантов на конец 2025 г. Это инструмент миграционного контроля для иностранцев с прекращёнными основаниями пребывания, НЕ имеющий отношения к IT-сектору.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="C" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-11</div>
+    <h3>School 21 by Sber</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-c">evidence C</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">School 21 is a free peer-to-peer Sber training program with 16+ Russian campuses; its 100% employment claim is a corporate narrative without independent public verification.</p>
+  <div class="sources"><a href="https://21-school.ru/campuses/" target="_blank" rel="noopener">source 1</a> <a href="https://www.evening-kazan.ru/obshhestvo/news/kazanskiy-kampus-shkoly-21-otmechaet-pervyy-yubiley---5-let" target="_blank" rel="noopener">source 2</a> <a href="https://www.cnews.ru/book/Сбер_-_Сбербанк_Школа_21_-_Sberbank_School_21" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Школа 21 (Сбер)</p>
+    <p><strong>Claim:</strong> 16+ кампусов; заявленное 100% трудоустройство; 115 тыс. заявок в Казани за 5 лет; партнёры — Сбер, Ак Барс, ICL, МТС, Wildberries, Innostage.</p>
+    <p><strong>Recommended wording:</strong> Бесплатная программа Сбера для людей от 18 лет, peer-to-peer методика, 16+ кампусов в России. 115 тыс. заявок только в Казани за 5 лет. Заявленное 100% трудоустройство — корпоративный narrative, без публичной независимой верификации.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="C" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-12</div>
+    <h3>Yandex SourceCraft AI agents</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-c">evidence C</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">Yandex B2B Tech reports a 50% quarterly increase in SourceCraft AI-agent use and 60% of developers using agent mode; these are corporate self-disclosed figures.</p>
+  <div class="sources"><a href="https://corp.cnews.ru/news/line/2025-11-07_yandex_b2b_tech_razrabotchiki_stali" target="_blank" rel="noopener">source 1</a> <a href="https://sourcecraft.dev/portal/code-assistant/" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Yandex SourceCraft AI-агенты</p>
+    <p><strong>Claim:</strong> +50% потребления за квартал, 60% разработчиков используют агентский режим (Yandex B2B Tech, ноябрь 2025).</p>
+    <p><strong>Recommended wording:</strong> По данным Yandex B2B Tech (ноябрь 2025): использование ИИ-агента SourceCraft +50% за квартал; 60% разработчиков работают в агентском режиме для генерации/рефакторинга; 15% — для архитектурных задач; 15% — для поиска информации в БЗ. Корпоративные данные Yandex.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-13</div>
+    <h3>Rosatom / Greenatom digital staffing and 1C:ERP migration</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">Rosatom/Greenatom publicly supports large-scale 1C deployment figures; broader digital-staffing targets such as 25k to 55k require primary press-release verification.</p>
+  <div class="sources"><a href="https://www.atomic-energy.ru/news/2026/03/27/164698" target="_blank" rel="noopener">source 1</a> <a href="https://www.tadviser.ru/index.php/Проект:Росатом_(переход_с_SAP_ERP_и_устаревшей_ERP_1C_на_1С:ERP._Управление_холдингом)" target="_blank" rel="noopener">source 2</a> <a href="https://ura.news/news/1052659780" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Росатом / Гринатом — кадры и 1С:ERP</p>
+    <p><strong>Claim:</strong> 25 000 сотрудников «цифрового бизнеса» в 2024, цель 55 000 к 2030; план +30 000 IT за 7 лет (≈4 000 в год); 1С:ERP вместо SAP: 90 тыс. пользователей, 600 серверов, 400 продуктивных баз к ноябрю 2025; план — 230 предприятий к 2027.</p>
+    <p><strong>Recommended wording:</strong> Росатом/Гринатом подтверждает (ноябрь 2025): 90 тыс. пользователей систем 1С, &gt;600 серверов, &gt;4 тыс. тестовых баз, 400 продуктивных; 150 организаций на 1С:ERP 2.0 &#x27;Цифровой Росатом&#x27; с планом 230+ предприятий к 2027. Цифры по общей численности &#x27;цифрового бизнеса&#x27; (25K в 2024, 55K к 2030) требуют первичной верификации в пресс-релизах Росатома.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-14</div>
+    <h3>Top Russian government IT suppliers in 2024</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">CNews Analytics reports about RUB 199bn revenue for the top 20 IT suppliers to the Russian public sector in 2024; treat as a secondary analytics source.</p>
+  <div class="sources"><a href="https://gov.cnews.ru/reviews/tsifrovizatsiya_gossektora_2025_1/articles/top-20_postavshchikov_it_v_gossektor" target="_blank" rel="noopener">source 1</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Топ-20 поставщиков ИТ в госсектор за 2024 — ₽199 млрд</p>
+    <p><strong>Claim:</strong> Топ-20 поставщиков ИТ в госсектор за 2024 заработали ₽199 млрд (CNews).</p>
+    <p><strong>Recommended wording:</strong> По данным CNews Analytics, топ-20 поставщиков IT в российский госсектор в 2024 г. — ~₽199 млрд совокупной выручки.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="not_verified" data-level="B" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-15</div>
+    <h3>Liga Digital Economy and Program Product revenues</h3>
+    <div class="tags">
+      <span class="tag status not-verified">not verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">Industry rankings place Liga Digital Economy and Program Product around RUB 11-12bn revenue in 2024; primary company financial statements need separate verification.</p>
+  <div class="sources"><span class="muted">No source URL listed</span></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Лига цифровой экономики и Программный продукт — выручка 2024</p>
+    <p><strong>Claim:</strong> Лига цифровой экономики — 11,8 млрд ₽ в 2024 (+15,8%); «Программный продукт» — 12 млрд ₽ (+16%).</p>
+    <p><strong>Recommended wording:</strong> По доступным отраслевым обзорам (CNews Analytics, RAEX), Лига цифровой экономики — порядок 11–12 млрд ₽ в 2024 г.; первичные финансовые отчёты компаний требуют отдельной верификации.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="A" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-16</div>
+    <h3>Russian Ministry of Digital Development Plan 2030</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">The ministerial 2030 target is 700,000 new developers, with 2024 intake and student figures used as projections and capacity indicators, not measured outcomes.</p>
+  <div class="sources"><a href="https://habr.com/ru/news/865968/" target="_blank" rel="noopener">source 1</a> <a href="https://www.comnews.ru/content/236831/2024-12-13/2024-w50/1008/maksut-shadaev-pozval-it-kompanii-obrazovanie" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Минцифры План 2030</p>
+    <p><strong>Claim:</strong> 700 тыс. новых разработчиков к 2030; 125 тыс. бюджетных + 70 тыс. внебюджетных IT-абитуриентов 2024; 600 тыс. студентов в IT-направлениях.</p>
+    <p><strong>Recommended wording:</strong> По заявлению министра Шадаева на совещании президента с правительством (26.11.2024): целевая установка — 700 тыс. новых разработчиков к 2030 г. (projection). В 2024 г. — 125 тыс. бюджетных + 70 тыс. внебюджетных IT-абитуриентов (рост бюджетных в 2,5 раза за 4 года); 600 тыс. студентов в IT-направлениях в 500 вузах; средняя зарплата отрасли 185 тыс. ₽; 850 тыс. сотрудников IT-компаний (+50% за 4 года).</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-17</div>
+    <h3>Russian vacancies offering training or reskilling</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">hh.ru/Forbes reporting indicates a growing share of vacancies open to candidates without experience and with training/reskilling offers, consistent with a shortage market.</p>
+  <div class="sources"><a href="https://okursah.ru/blog/it-rynok-rossii-analitika-zarplat-dinamika-rosta-i-prognoz-dlya-razrabotchikov-i-analitikov-2025" target="_blank" rel="noopener">source 1</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Российские вакансии 2025 с обучением/дообучением</p>
+    <p><strong>Claim:</strong> 202 тыс. вакансий с обучением (vs 129 тыс. в 2024); 40% — для кандидатов без опыта.</p>
+    <p><strong>Recommended wording:</strong> По hh.ru (через Forbes), в 2025 г. ~42% вакансий (4,3 млн) — для начинающих специалистов без опыта (рост с 40% в 2024 г.); общий рост вакансий с предложением обучения/дообучения отражает дефицитное состояние рынка.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="not_verified" data-level="D" data-pass="russia">
+  <div class="claim-head">
+    <div class="claim-id">ru-18</div>
+    <h3>Russian IT market segmentation</h3>
+    <div class="tags">
+      <span class="tag status not-verified">not verified</span>
+      <span class="tag level level-d">evidence D</span>
+      <span class="tag">russia</span>
+    </div>
+  </div>
+  <p class="claim-summary">The big-tech / state / midmarket / startup split is a useful analytical estimate but lacks a public methodological source from ARPP, RUSSOFT or HSE ISSEK.</p>
+  <div class="sources"><span class="muted">No source URL listed</span></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Сегментация российского IT-рынка по долям</p>
+    <p><strong>Claim:</strong> Anchor/hyperscalers (бигтех) 25–30%; Госсектор/госкорпорации 15–20%; Середина (vendor/integrator/B2B SaaS) 50–60%; Стартапы &lt;5%.</p>
+    <p><strong>Recommended wording:</strong> Оценочная сегментация российского IT-рынка (без официального источника, требует верификации у АРПП/РУССОФТ/ВШЭ ИСИЭЗ): бигтех ~25–30%, госсектор ~15–20%, середина ~50–60%, стартапы &lt;5%.</p>
+  </details>
+</article>
+</section><section class="pass-section" id="b-russia-it"><h2>Biography B5: Russian IT specialist</h2>
+<article class="claim" data-status="verified" data-level="A" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-01</div>
+    <h3>Russia&#x27;s 152-FZ amendment on personal-data collection</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-a">evidence A</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Federal Law No. 23-FZ changed Article 18(5) of 152-FZ from 1 July 2025: it restricts primary collection of Russian citizens&#x27; personal data through foreign databases, but is not a full ban on cross-border transfer.</p>
+  <div class="sources"><a href="https://base.garant.ru/12148567/" target="_blank" rel="noopener">source 1</a> <a href="https://www.lidings.com/ru/media/legalupdates/localization_pd_update/" target="_blank" rel="noopener">source 2</a> <a href="https://comply.ru/tpost/c43ezsout1-lokalizatsiya-i-transgranichnaya-peredac" target="_blank" rel="noopener">source 3</a> <a href="https://b-152.ru/hranenie-personalnyh-dannyh-za-granicej" target="_blank" rel="noopener">source 4</a> <a href="https://roskom24.ru/chto_zapreshcheno_na_sayte_s_1_iyulya_2025/" target="_blank" rel="noopener">source 5</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> 152-ФЗ: ФЗ № 23-ФЗ от 28.02.2025, новая ред. ч. 5 ст. 18 (силу с 1.07.2025)</p>
+    <p><strong>Claim:</strong> Федеральный закон № 23-ФЗ от 28 февраля 2025 ввёл новую редакцию ч. 5 ст. 18 закона № 152-ФЗ &#x27;О персональных данных&#x27;, вступившую в силу 1 июля 2025. Запрещён первичный сбор персональных данных граждан РФ с использованием баз данных, расположенных за пределами территории РФ — включая запись, систематизацию, накопление, хранение, уточнение, извлечение. Исключения ограничены п. 2, 3, 4 и 8 ч. 1 ст. 6 152-ФЗ. Это НЕ полный запрет трансграничной передачи (ст. 12 регулирует это отдельно) — но запрет на использование иностранных систем как primary collection points. Штрафы: до 18 млн ₽ для юридических лиц при несвоевременном уведомлении РКН.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-02</div>
+    <h3>GitHub sanctions and Russian developers</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">GitHub remains available for free public personal use in non-sanctioned Russian regions, but paid/corporate accounts linked to sanctioned entities can be blocked under US trade-control rules.</p>
+  <div class="sources"><a href="https://docs.github.com/en/site-policy/other-site-policies/github-and-trade-controls" target="_blank" rel="noopener">source 1</a> <a href="https://www.bleepingcomputer.com/news/security/github-suspends-accounts-of-russian-devs-at-sanctioned-companies/" target="_blank" rel="noopener">source 2</a> <a href="https://www.hoganlovells.com/en/publications/significant-new-measures-against-russia-issued-by-us-departments-of-treasury-state-and-commerce" target="_blank" rel="noopener">source 3</a> <a href="https://mosdigitals.ru/blog/ispolzovanie-github-gitlab-v-usloviyah-sankczij-v-rossii" target="_blank" rel="noopener">source 4</a> <a href="https://arxiv.org/html/2404.05489v1" target="_blank" rel="noopener">source 5</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> GitHub-санкции: блокировки русских developers (2022-2025)</p>
+    <p><strong>Claim:</strong> С 2022 GitHub начал ограничивать доступ к private repositories для пользователей из РФ, особенно affiliated с sanctioned entities (per OFAC SDN List). К 2025 политика ужесточилась: фиксируются случаи полной блокировки accounts, включая paid subscribers, при detection связи с sanctioned organisations. GitHub доступен (free public repository services) пользователям из не-sanctioned регионов РФ для personal communications, но commercial/corporate accounts с связями с sanctioned entities активно blocked. 12 июня 2024 US Treasury / State / Commerce ввели new restrictions включая prohibition on certain IT and software services к Russia (effective 12 September 2024).</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="B" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-03</div>
+    <h3>Workslop in IT: Stack Overflow, Sonar, DORA and St. Louis Fed</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Multiple 2025-2026 sources show high AI-tool adoption but low trust, weak verification, more instability or defects, and a gap between individual time savings and aggregate productivity gains.</p>
+  <div class="sources"><a href="https://stackoverflow.blog/2026/02/18/closing-the-developer-ai-trust-gap/" target="_blank" rel="noopener">source 1</a> <a href="https://shiftmag.dev/state-of-code-2025-7978/" target="_blank" rel="noopener">source 2</a> <a href="https://www.itpro.com/software/development/software-developers-not-checking-ai-generated-code-verification-debt" target="_blank" rel="noopener">source 3</a> <a href="https://venturebeat.com/technology/43-of-ai-generated-code-changes-need-debugging-in-production-survey-finds" target="_blank" rel="noopener">source 4</a> <a href="https://praxistechschool.in/thought-leadership/ai-workslop" target="_blank" rel="noopener">source 5</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Workslop / нейрохалтура в IT — Stack Overflow + Sonar + DORA 2025</p>
+    <p><strong>Claim:</strong> Multiple 2025-2026 surveys фиксируют структурное явление workslop в IT-разработке. Stack Overflow Developer Survey 2025: 84% разработчиков используют ИИ-инструменты, но только 29% доверяют им (минус 11 п.п. от 2024). Sonar State of Code 2025: 96% не доверяют AI-generated code как functionally correct, но &lt;50% reviewing его перед commit; 38% говорят review AI-кода требует больше effort, чем human-кода; 61% соглашаются что AI &#x27;часто produces code that looks correct but isn&#x27;t reliable&#x27;. Google DORA 2025: AI adoption correlates с почти 10% ростом нестабильности кода. AWS CTO Werner Vogels coined термин &#x27;verification debt&#x27;. 470 open-source GitHub PRs analysis: AI-generated code содержит 1.7x больше дефектов, ошибки логики +75%, performance issues почти 8x чаще. Federal Reserve Bank of St. Louis: индивидуальная экономия 5.4% часов/неделя, но aggregate productivity gain — only 1.1%.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="C" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-04</div>
+    <h3>Workslop as a tragedy of the commons</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-c">evidence C</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">A qualitative 2026 arXiv analysis frames AI slop in software development as a tragedy of the commons: individual speed gains externalize review, maintenance and quality costs.</p>
+  <div class="sources"><a href="https://arxiv.org/pdf/2603.27249" target="_blank" rel="noopener">source 1</a> <a href="https://www.machine.news/its-undermining-system-reliability-why-ai-workslop-is-the-new-technical-debt/" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Workslop как tragedy of the commons (qualitative arxiv analysis)</p>
+    <p><strong>Claim:</strong> Qualitative analysis (arxiv preprint, 2026) 1,154 постов в 15 discussion threads на Reddit и Hacker News посвящённых &#x27;AI slop&#x27; в software development. Развит codebook из 15 codes в трёх thematic clusters: Review Friction (бремя на reviewers, эрозия доверия, контрмеры), Quality Degradation (повреждение codebases, knowledge resources, developer competence), Forces and Consequences (системные стимулы, mandated adoption, craft erosion, workforce disruption). Authors framed AI slop как tragedy of the commons: индивидуальные productivity gains externalize costs на reviewers, maintainers, broader community. Microsoft Research: AI-assisted code generation увеличивает defect rate на ~40% независимо от уровня developer.</p>
+    <p><strong>Recommended wording:</strong> </p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B/C" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-05</div>
+    <h3>Global tech-layoff frame for 2026</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b/c">evidence B/C</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">RationalFX early-2026 layoff figures are useful as a global frame for tech layoffs and AI/automation attribution, but they are not official labor statistics.</p>
+  <div class="sources"><a href="https://technode.global/2026/02/13/tech-sector-layoffs-reach-30700-just-6-weeks-into-2026-on-track-to-surpass-2025s-job-cuts-rationalfx/" target="_blank" rel="noopener">source 1</a> <a href="https://www.business-standard.com/industry/news/over-30-000-tech-jobs-cut-globally-in-first-two-months-of-2026-report-126021300972_1" target="_blank" rel="noopener">source 2</a> <a href="https://3dnews.ru/1135097/tehnologicheskiy-sektor-lishilsya-bolee-240-tis-sotrudnikov-v-2025-godu" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Глобальный tech-layoff фон 2026 — RationalFX early-2026 estimate</p>
+    <p><strong>Claim:</strong> RationalFX estimate for the first six weeks / early 2026 counted about 30,700 global technology-sector layoffs, including about 24,600 in the US, and projected that a constant pace could exceed 270,000 layoffs in 2026 vs roughly 245,000 in 2025. The same reporting attributes about 69,840 / 28.5% of 2025 tech layoffs to automation and AI adoption. This is a framing estimate, not an official labor-statistics series.</p>
+    <p><strong>Recommended wording:</strong> По оценке RationalFX, за первые шесть недель 2026 года мировой tech-сектор уже объявил около 30,7 тыс. сокращений; если такой темп сохранится, год может превысить уровень 2025-го. В 2025 году около 28,5% tech-сокращений в этой базе были связаны с automation/AI adoption. Использовать как глобальную рамку, не как официальную статистику.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="verified" data-level="B/C" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-06</div>
+    <h3>Softline AI-linked staff optimization</h3>
+    <div class="tags">
+      <span class="tag status verified">verified</span>
+      <span class="tag level level-b/c">evidence B/C</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Softline is the strongest local Russian Oracle analogue: about 800 fewer employees from Q3 2025 to Q1 2026, AI-linked efficiency language, and Q1 2026 turnover up 5% YoY.</p>
+  <div class="sources"><a href="https://www.cnews.ru/news/line/2026-05-21_pao_softlajn_obyavlyaet" target="_blank" rel="noopener">source 1</a> <a href="https://www.cnews.ru/news/top/2026-05-22_rossijskij_it-gigant_radikalno" target="_blank" rel="noopener">source 2</a> <a href="https://softline.ru/upload/files/Softline_1Q25_Final.pdf" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Софтлайн — AI-linked staff optimization, Q3 2025 to Q1 2026</p>
+    <p><strong>Claim:</strong> ПАО Софтлайн disclosed 10.3k employees as of 31 March 2026 vs about 11.1k in Q1 2025 materials, implying roughly 800 fewer employees / about 7.2% headcount reduction. CNews and company materials connect the optimization to AI adoption, post-acquisition integration and performance assessment. The highly qualified engineers/developers layer fell from about 6.2k to about 5.7k by share calculation, roughly a 10% decline, while Q1 2026 turnover grew 5% YoY to 25.1 bn RUB.</p>
+    <p><strong>Recommended wording:</strong> Софтлайн — локальный российский аналог Oracle-case: компания снизила численность примерно на 800 человек при росте оборота Q1 2026 на 5% г/г; среди причин публично названы внедрение ИИ в рутинные процессы разработки/тестирования, интеграция после M&amp;A и оценка эффективности.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B/C" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-07</div>
+    <h3>Sber AI-assisted efficiency cuts</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b/c">evidence B/C</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Sber provides a rare public allocator case: Gref described AI-assisted identification of inefficient employees, while Putin reframed the issue as management responsibility.</p>
+  <div class="sources"><a href="https://tass.ru/ekonomika/25672541" target="_blank" rel="noopener">source 1</a> <a href="https://www.rbc.ru/finances/19/11/2025/691e05f39a7947863a9cc7d8" target="_blank" rel="noopener">source 2</a> <a href="https://ria.ru/20251119/gref-2056146460.html" target="_blank" rel="noopener">source 3</a> <a href="https://www.vedomosti.ru/finance/news/2026/02/11/1175604-sberbank-vnedreniya-ii" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Сбер — AI-assisted efficiency cuts and responsibility dispute</p>
+    <p><strong>Claim:</strong> At AI Journey in November 2025, Herman Gref publicly said Sber had reduced almost / up to 20% of personnel identified as inefficient with AI assistance. Putin replied that there are no inefficient employees, only employees with whom management worked poorly. Later reporting said Sber paused or softened the process because the cuts and perceived competition with AI became a shock inside the company. Numeric headcount estimates around 13.5k-15k are secondary and should not be used as the primary fact without a filing.</p>
+    <p><strong>Recommended wording:</strong> Сбер даёт редкий публичный allocator-case: первое лицо прямо говорит об ИИ как инструменте выявления неэффективности, а ответ Путина переводит спор в плоскость управленческой ответственности за людей, которых алгоритм пометил как слабых.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B/C" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-08</div>
+    <h3>Positive Technologies quiet restructuring</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b/c">evidence B/C</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Positive Technologies is useful as a quiet-restructuring case, not an AI-causality case: employee and union-linked reports described sizable layoffs without confirmed AI replacement.</p>
+  <div class="sources"><a href="https://www.cnews.ru/news/top/2025-02-02_v_krupnoj_ib-kompanii_s_milliardnoj" target="_blank" rel="noopener">source 1</a> <a href="https://ruitunion.org/tags/positive-technologies/" target="_blank" rel="noopener">source 2</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Positive Technologies — quiet restructuring / layoffs without confirmed AI causality</p>
+    <p><strong>Claim:</strong> Employee and union-linked reports in 2025 described mass layoffs at Positive Technologies: a first wave of about 150-300 people and possible total reductions around 500. Company responses framed the process as internal transformation / profitability discipline. AI causality is not confirmed; the case is useful for the &quot;quiet layoffs&quot; mechanism where reductions may not pass through formal redundancy procedure.</p>
+    <p><strong>Recommended wording:</strong> Positive Technologies стоит использовать не как ИИ-замещение, а как пример тихой оптимизации в российском IT: часть увольнений может проходить вне публичной процедуры сокращения, что делает рынок хуже видимым для внешней статистики.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-09</div>
+    <h3>Russian IT junior squeeze</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Russian IT moved toward an employer market in 2025-2026, with fewer vacancies, more resumes per vacancy and stronger competition for entry-level developers from both experienced candidates and AI-enabled workflows.</p>
+  <div class="sources"><a href="https://tproger.ru/articles/kogo-vozmut-na-rabotu-v-2026--razbor-it-rynka-posle-sokrashhenij" target="_blank" rel="noopener">source 1</a> <a href="https://www.kommersant.ru/doc/8381259" target="_blank" rel="noopener">source 2</a> <a href="https://www.cnews.ru/news/line/2026-02-11_rost_zarplat_v_it_ostanovilsya" target="_blank" rel="noopener">source 3</a> <a href="https://www.cnews.ru/news/top/2026-05-13_rost_it-zarplat_zamedlilsya" target="_blank" rel="noopener">source 4</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Russian IT junior squeeze and employer-market shift, 2025-2026</p>
+    <p><strong>Claim:</strong> Russian IT labor-market reporting for 2025-2026 shows a shift from candidate market to employer market: IT vacancies declined roughly 20-30% vs 2024 in several analyses, resumes per vacancy rose sharply (secondary reports cite about 13 on average and up to 16 for some IT positions), and entry-level developers face stronger competition from both experienced candidates and AI-enabled workflow changes. Demand remains comparatively stronger for AI/ML, cybersecurity, DevOps/SRE and senior roles.</p>
+    <p><strong>Recommended wording:</strong> Для Биографии 5 это входная дверь: джуниоры оказываются между сжавшимися вакансиями, выросшим числом резюме на позицию и ИИ-инструментами, которые повышают планку производительности для entry-level работы.</p>
+  </details>
+</article>
+
+<article class="claim" data-status="partially_verified" data-level="B" data-pass="b-russia-it">
+  <div class="claim-head">
+    <div class="claim-id">b-rus-it-10</div>
+    <h3>Russian IT wage polarization and shortage-with-layoffs paradox</h3>
+    <div class="tags">
+      <span class="tag status partially-verified">partially verified</span>
+      <span class="tag level level-b">evidence B</span>
+      <span class="tag">global</span>
+    </div>
+  </div>
+  <p class="claim-summary">Russian IT can cut staff while still having shortages: mass and entry-level roles are squeezed, while AI/ML, cybersecurity, DevOps/SRE and senior profiles remain expensive.</p>
+  <div class="sources"><a href="https://www.cnews.ru/news/top/2026-05-13_rost_it-zarplat_zamedlilsya" target="_blank" rel="noopener">source 1</a> <a href="https://www.cnews.ru/news/line/2026-02-11_rost_zarplat_v_it_ostanovilsya" target="_blank" rel="noopener">source 2</a> <a href="https://tproger.ru/articles/kogo-vozmut-na-rabotu-v-2026--razbor-it-rynka-posle-sokrashhenij" target="_blank" rel="noopener">source 3</a></div>
+  <details>
+    <summary>Original Russian canonical wording</summary>
+    <p><strong>Topic:</strong> Russian IT wage polarization and shortage-with-layoffs paradox</p>
+    <p><strong>Claim:</strong> Russian IT salary growth slowed to about 4.1% YoY by 2026, below inflation in the cited reporting, while AI/ML engineers, cybersecurity specialists, DevOps/SRE and data roles retained much stronger salary bands. At the same time, Russian IT still reports structural shortages (official estimates around 500k-700k depending on period and methodology), while layoffs and involuntary exits are rising. This supports the &quot;shortage and cuts at once&quot; frame, not a simple oversupply story.</p>
+    <p><strong>Recommended wording:</strong> Российский IT-рынок одновременно режет людей и сохраняет дефицит: нижний вход и массовые роли сжимаются, а AI/ML, ИБ, DevOps/SRE и senior-профили остаются дорогими. Это не обычный спад, а переразметка ценности навыков.</p>
+  </details>
+</article>
+</section>
+<section class="pass-section" id="gaps"><h2>Known Evidence Gaps</h2>
+<article class="gap">
+  <div class="claim-id">gap-01 · medium</div>
+  <h3>Direct RANEPA brain-drain primary source</h3>
+  <p>Only secondary links via Meduza were located for the roughly 10% returnee figure.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-02 · high</div>
+  <h3>Russian IT market segment structure</h3>
+  <p>No public 2025-2026 ARPP/RUSSOFT/HSE ISSEK source gives the required big-tech / state / midmarket / startup revenue split.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-03 · high</div>
+  <h3>Exact numeric thresholds for Decree No. 1949</h3>
+  <p>The relevant 2026 by-laws were not yet consolidated in public legal systems at the fact-check date.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-04 · low</div>
+  <h3>CNews analytics figures</h3>
+  <p>Some CNews Analytics values are behind paid/closed access; mark as secondary source only.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-05 · low</div>
+  <h3>Avito Jobs AI-vacancy doubling</h3>
+  <p>Corporate analytics without a public primary methodology note.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-06 · medium</div>
+  <h3>Greenatom digital-employment targets</h3>
+  <p>Specific 25k / 55k staff numbers lack located public Rosatom/Greenatom primary releases.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-07 · high</div>
+  <h3>Direct causal AI payroll evidence for Russia</h3>
+  <p>Russia lacks a public Brynjolfsson-Chandar-Chen-style payroll microdata study.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-08 · medium</div>
+  <h3>Bloomberry / Live Data Technologies analogue for Russia</h3>
+  <p>No open Russian vacancy dataset breaks PM/BA/coordinator/HRBP dynamics into tactical vs accountable roles.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-09 · medium</div>
+  <h3>Workslop in Russian corporate context</h3>
+  <p>No BetterUp-style Russian corporate study was located.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-10 · high</div>
+  <h3>Long-term effects of the junior squeeze</h3>
+  <p>The 7-10 year horizon central to the cycle is not yet observable; current Stanford evidence covers 2022-2025.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-11 · medium</div>
+  <h3>UAE long-term spillover</h3>
+  <p>Long-run expat-model sustainability and MBZUAI graduate-retention data are still speculative or unavailable.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-12 · medium</div>
+  <h3>Effect of Russian Decree No. 1949</h3>
+  <p>First outcomes will only appear in 2026-2027, and methodology for counting the education share is contested.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-13 · medium</div>
+  <h3>Tactical versus accountable orchestrators</h3>
+  <p>The split is conceptually strong but not yet operationalized in comparable data.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-14 · high</div>
+  <h3>Cross-country junior:middle:senior comparison</h3>
+  <p>No unified methodology exists across PwC, BLS, hh.ru and China MOE-type sources.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-15 · medium</div>
+  <h3>DeepSeek/Moonshot/Zhipu hiring microdata</h3>
+  <p>Qualitative stories exist, but panel-level hiring data do not.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-16 · C</div>
+  <h3>Ireland-specific AI-cheating data</h3>
+  <p>UK studies provide context; Ireland-specific surveys were not found.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-17 · B</div>
+  <h3>GitHub paid-subscriber blocking specifics</h3>
+  <p>Only secondary sourcing was located for full blocking of paid Russian subscribers in 2025.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-18 · C</div>
+  <h3>Subsequent applications of 6 O 151/23</h3>
+  <p>The precedent is confirmed; later applications are not tracked here.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-19 · B</div>
+  <h3>Independent School 21 / Innopolis employment verification</h3>
+  <p>Employment claims are company PR data without third-party evaluation.</p>
+</article>
+
+<article class="gap">
+  <div class="claim-id">gap-20 · B</div>
+  <h3>Russian IT relocation figures, 2024-2026</h3>
+  <p>Post-2022 official figures remain partial; later precise relocation numbers are not public.</p>
+</article>
+</section>
+<footer>
+  ProfGames by Sergey Gordeychik · <a href="https://t.me/aiakyn">t.me/aiakyn</a> · <a href="https://teletype.in/@sergey_gordey">teletype</a> · #profgames
+</footer>
+</main>
+<script>
+const buttons = document.querySelectorAll('button[data-filter]');
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  buttons.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const f = btn.dataset.filter;
+  document.querySelectorAll('.claim').forEach(card => {
+    card.classList.toggle('hidden', f !== 'all' && card.dataset.status !== f);
+  });
+}));
+</script>
+</body>
+</html>

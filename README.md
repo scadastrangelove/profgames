@@ -6,6 +6,8 @@
 
 **Сергей Гордейчик** · [teletype](https://teletype.in/@sergey_gordey) · [telegram](https://t.me/aiakyn) · [github](https://github.com/scadastrangelove/profgames) · тег **#profgames**
 
+**English starter layer:** [`en/`](https://scadastrangelove.github.io/profgames/en/) — A1 event explorer + fact-check audit layer + 30-slide presentation.
+
 ---
 
 Десятилетиями устоявшиеся институты раскачивает. Собеседования. Карьерные траектории. Дипломы. Профессии, которые казались вечными. Что-то из этого треснет и распадётся, что-то перестроится, что-то выглядит как кризис, а на самом деле — обычное циклическое сжатие.
@@ -137,6 +139,7 @@ profgames/
 ├── profgames_ai_signals.jsonl          # A1 — машиночитаемый событийный массив
 ├── factcheck.html                      # Z — фактологическая основа (для людей)
 ├── factcheck.json                      # Z — фактологическая основа (для агентов)
+├── en/                                 # английский слой: A1 explorer, factcheck, презентация
 ├── aimind/                             # Y — параллельный психологический срез
 │   ├── aimind.html                     #   single-page рендер каталога
 │   ├── aimind_signals_v0_7.jsonl       #   событийный массив (41 сигнал)
