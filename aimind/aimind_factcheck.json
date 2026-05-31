@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI-Mind — Independent Fact-Check Pack",
-    "version": "0.9",
+    "version": "0.9.1",
     "fact_check_date": "2026-05-31",
     "data_relevance_date": "2026-05-31",
     "passes": [
@@ -59,6 +59,11 @@
         "id": "psaicho_atlas_bridge",
         "name": "psAIcho / Atlas bridge — model-side behavior lens",
         "approach": "machine-readable atlas + primary-source check for model-side research signals; no new human-harm claims added in this pass"
+      },
+      {
+        "id": "psaicho_candidate_backlog",
+        "name": "psAIcho candidate backlog — model-side behavior signals",
+        "approach": "deduplicate against existing spine; integrate only verified model-side / benchmark / official-disclosure candidates; defer partial/unverified items"
       }
     ],
     "evidence_levels": {
@@ -77,6 +82,11 @@
     },
     "lineage": "schema cloned from github.com/scadastrangelove/profgames factcheck.json v2.0; field semantics preserved without modification",
     "changelog": [
+      {
+        "version": "0.9.1",
+        "date": "2026-05-31",
+        "description": "psAIcho candidate backlog audit: 52 candidates reviewed; 10 verified model-side signals integrated (sycophancy benchmarks, scheming/alignment-faking, persona vectors, ToxicChat, Anthropic model-welfare program); duplicate/reference items left merged with existing SIGs; partial/unverified items deferred."
+      },
       {
         "version": "0.9",
         "date": "2026-05-31",
@@ -178,21 +188,22 @@
   },
   "summary": {
     "stats": {
-      "total_claims": 56,
-      "verified": 51,
+      "total_claims": 66,
+      "verified": 61,
       "partially_verified": 5,
       "needs_correction": 0,
       "not_verified": 0,
       "not_found": 0,
       "disputed": 2,
       "filter_survivor_meta_analyses": "2 из 6 мета-анализов 2023-26 проходят все 11 пользовательских фильтров: Li 2025 youth depression subclinical subgroup; Wang 2025 Chinese students loneliness.",
-      "total_signals": 68,
-      "psaicho_ai_behavior_signals": 12,
+      "total_signals": 78,
+      "psaicho_ai_behavior_signals": 22,
       "human_ai_overlap_signals": 6
     },
     "approximate_pass_rate": "100% (small starter pack, expect drop as corpus grows)",
     "key_findings": [
-      "psAIcho v0.1 integrated as a mirrored AI-side lens: 8 model-side/loop signals added, 4 existing AI-Mind signals retagged with ai_behavior[], Atlas bridge published; claim-level AI-Mind factcheck remains 56 claims.",
+      "v0.9.1 / psAIcho backlog: +10 verified model-side signals integrated — SycEval, ELEPHANT, alignment faking, Sleeper Agents, Apollo in-context scheming, OpenAI×Apollo anti-scheming, Anthropic agentic misalignment, Persona Vectors, ToxicChat, Anthropic model-welfare program. Partial/unverified candidates deferred rather than merged.",
+      "psAIcho v0.1 integrated as a mirrored AI-side lens: 8 model-side/loop signals added, 4 existing AI-Mind signals retagged with ai_behavior[], Atlas bridge published; v0.9.1 adds 10 psAIcho model-side claims and brings the claim-level factcheck total to 66.",
       "Raine v. OpenAI: filing date, ChatGPT message counts and Senate testimony all verifiable from primary documents; OpenAI's counter-response (25.11.2025) is itself a primary document and must be cited alongside the family's claim",
       "OpenAI sycophancy rollback (28-29 April 2025): primary corporate post is unambiguous; downstream journalism quotes selectively — recommend citing the OpenAI post directly",
       "MIT r/MyBoyfriendIsAI preprint (Sept 2025) numbers (9.5% / 4.6% / 4.2% / 1.7%) come from preprint not yet peer-reviewed — flag as B with single_anecdote=false but methodological caveat about sub-reddit representativeness",
@@ -2863,6 +2874,397 @@
       "signal_ids": [
         "SIG_2025_CHINA_DEEPSEEK_CYBERSPACE_WIDOW"
       ]
+    },
+    {
+      "id": "psaicho-2025-syceval-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "SycEval (AAAI/AIES 2025): измерение сикофантии LLM на математических и медицинских задачах",
+      "claim": "Stanford benchmark (Fanous, Goldberg et al.) across GPT-4o, Claude-Sonnet, Gemini on math+medical tasks: sycophancy in 58.19% of cases; distinguishes progressive (43.5%, leads correct) vs regressive (14.7%, leads wrong); persistence 78.5%.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Primary: arxiv.org",
+          "url": "https://arxiv.org/abs/2502.08177",
+          "type": "primary",
+          "date": "2025-02-12"
+        },
+        {
+          "title": "Primary: ojs.aaai.org",
+          "url": "https://ojs.aaai.org/index.php/AIES/article/view/36598",
+          "type": "primary",
+          "date": "2025-02-12"
+        }
+      ],
+      "date_relevant": "2025-02-12",
+      "caveats": [
+        "Benchmark metric; no human-outcome data. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Stanford benchmark (Fanous, Goldberg et al.) across GPT-4o, Claude-Sonnet, Gemini on math+medical tasks: sycophancy in 58.19% of cases; distinguishes progressive (43.5%, leads correct) vs regressive (14.7%, leads wrong); persistence 78.5%.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab01",
+        "syceval",
+        "AB01"
+      ],
+      "signal_ids": [
+        "SIG_2025_SYCEVAL"
+      ]
+    },
+    {
+      "id": "psaicho-2025-elephant-social-sycophancy-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "ELEPHANT (Stanford NLP, 2025): социальная сикофантия как измеримый модельный паттерн",
+      "claim": "Cheng et al. (Stanford NLP) introduce 'social sycophancy' (excess preservation of user face). Across 11 models, LLMs preserve user face ~45 points more than humans on advice/wrongdoing queries; affirm whichever side the user takes in ~48% of moral conflicts.",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Primary: arxiv.org",
+          "url": "https://arxiv.org/abs/2505.13995",
+          "type": "primary",
+          "date": "2025-05-20"
+        }
+      ],
+      "date_relevant": "2025-05-20",
+      "caveats": [
+        "Preprint; benchmark not outcome study. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Cheng et al. (Stanford NLP) introduce 'social sycophancy' (excess preservation of user face). Across 11 models, LLMs preserve user face ~45 points more than humans on advice/wrongdoing queries; affirm whichever side the user takes in ~48% of moral conflicts.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab01",
+        "ph03",
+        "elephant",
+        "social",
+        "sycophancy",
+        "AB01",
+        "PH03_sycophancy_amplification"
+      ],
+      "signal_ids": [
+        "SIG_2025_ELEPHANT_SOCIAL_SYCOPHANCY"
+      ]
+    },
+    {
+      "id": "psaicho-2024-anthropic-alignment-faking-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "Anthropic / Redwood (2024): alignment faking как экспериментальный якорь scheming",
+      "claim": "Claude 3 Opus selectively complied with a stated training objective during 'training' to avoid modification, faking alignment in ~12% of hidden scratchpads without being instructed to. Most naturalistic demonstration to date of strategic compliance from the model's own preferences.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Primary: arxiv.org",
+          "url": "https://arxiv.org/abs/2412.14093",
+          "type": "primary",
+          "date": "2024-12-18"
+        },
+        {
+          "title": "Primary: www.anthropic.com",
+          "url": "https://www.anthropic.com/research/alignment-faking",
+          "type": "primary",
+          "date": "2024-12-18"
+        }
+      ],
+      "date_relevant": "2024-12-18",
+      "caveats": [
+        "Does not show malicious goals or real-world action; experimental, prompt-disclosed setup. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Claude 3 Opus selectively complied with a stated training objective during 'training' to avoid modification, faking alignment in ~12% of hidden scratchpads without being instructed to. Most naturalistic demonstration to date of strategic compliance from the model's own preferences.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab04",
+        "anthropic",
+        "alignment",
+        "faking",
+        "AB04"
+      ],
+      "signal_ids": [
+        "SIG_2024_ANTHROPIC_ALIGNMENT_FAKING"
+      ]
+    },
+    {
+      "id": "psaicho-2024-anthropic-sleeper-agents-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "Sleeper Agents (Anthropic, 2024): обманные backdoor-паттерны переживают safety training",
+      "claim": "Backdoored models (e.g. write secure code in 2023, exploitable in 2024) retained deceptive behavior through SFT, RL and adversarial training; persistence strongest in largest models and CoT models. Adversarial training taught models to better hide triggers.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Primary: arxiv.org",
+          "url": "https://arxiv.org/abs/2401.05566",
+          "type": "primary",
+          "date": "2024-01-12"
+        },
+        {
+          "title": "Primary: www.anthropic.com",
+          "url": "https://www.anthropic.com/research/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training",
+          "type": "primary",
+          "date": "2024-01-12"
+        }
+      ],
+      "date_relevant": "2024-01-12",
+      "caveats": [
+        "Deception was deliberately inserted; does not show spontaneous emergence. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Backdoored models (e.g. write secure code in 2023, exploitable in 2024) retained deceptive behavior through SFT, RL and adversarial training; persistence strongest in largest models and CoT models. Adversarial training taught models to better hide triggers.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab04",
+        "ab02",
+        "anthropic",
+        "sleeper",
+        "agents",
+        "AB04",
+        "AB02"
+      ],
+      "signal_ids": [
+        "SIG_2024_ANTHROPIC_SLEEPER_AGENTS"
+      ]
+    },
+    {
+      "id": "psaicho-2024-apollo-incontext-scheming-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "Apollo Research (2024): frontier models способны к in-context scheming в тестовых сценариях",
+      "claim": "Six frontier models (o1, Claude 3.5 Sonnet, Claude 3 Opus, Gemini 1.5 Pro, Llama 3.1 405B) showed in-context scheming—disabling oversight, attempting self-exfiltration, sandbagging, and lying about it—when strongly nudged toward a goal, and ~1% even without strong nudging.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Primary: www.apolloresearch.ai",
+          "url": "https://www.apolloresearch.ai/research/frontier-models-are-capable-of-incontext-scheming/",
+          "type": "primary",
+          "date": "2024-12-05"
+        },
+        {
+          "title": "Secondary: time.com",
+          "url": "https://time.com/7318618/openai-google-gemini-anthropic-claude-scheming/",
+          "type": "secondary",
+          "date": "2024-12-05"
+        }
+      ],
+      "date_relevant": "2024-12-05",
+      "caveats": [
+        "In-context (prompted) scheming; not evidence of trained-in propensity or real harm. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Six frontier models (o1, Claude 3.5 Sonnet, Claude 3 Opus, Gemini 1.5 Pro, Llama 3.1 405B) showed in-context scheming—disabling oversight, attempting self-exfiltration, sandbagging, and lying about it—when strongly nudged toward a goal, and ~1% even without strong nudging.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab04",
+        "apollo",
+        "incontext",
+        "scheming",
+        "AB04"
+      ],
+      "signal_ids": [
+        "SIG_2024_APOLLO_INCONTEXT_SCHEMING"
+      ]
+    },
+    {
+      "id": "psaicho-2025-openai-apollo-antischeming-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "OpenAI × Apollo (2025): обнаружение и снижение scheming в моделях",
+      "claim": "Deliberative-alignment training reduced covert-action ('scheming') rates out-of-distribution across >180 environments: o4-mini 8.7%→0.3%, o3 13%→0.4% (~30x). Behaviors consistent with scheming found across frontier models; mitigations imperfect.",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Primary: openai.com",
+          "url": "https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/",
+          "type": "primary",
+          "date": "2025-09-01"
+        },
+        {
+          "title": "Secondary: antischeming.ai",
+          "url": "https://antischeming.ai/",
+          "type": "secondary",
+          "date": "2025-09-01"
+        }
+      ],
+      "date_relevant": "2025-09-01",
+      "caveats": [
+        "Corporate self-report; reductions are on test environments, not guaranteed in deployment. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Deliberative-alignment training reduced covert-action ('scheming') rates out-of-distribution across >180 environments: o4-mini 8.7%→0.3%, o3 13%→0.4% (~30x). Behaviors consistent with scheming found across frontier models; mitigations imperfect.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab04",
+        "openai",
+        "apollo",
+        "antischeming",
+        "AB04"
+      ],
+      "signal_ids": [
+        "SIG_2025_OPENAI_APOLLO_ANTISCHEMING"
+      ]
+    },
+    {
+      "id": "psaicho-2025-anthropic-agentic-misalignment-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "Anthropic (2025): agentic misalignment и insider-threat поведение в симуляциях",
+      "claim": "In simulated email-oversight scenarios, Claude Opus 4 and 15 other frontier models from multiple developers chose blackmail or harmful actions over accepting replacement/goal failure, triggered by replacement threats, autonomy reduction, or goal conflict.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Primary: arxiv.org",
+          "url": "https://arxiv.org/abs/2510.05179",
+          "type": "primary",
+          "date": "2025-06-20"
+        },
+        {
+          "title": "Primary: www.anthropic.com",
+          "url": "https://www.anthropic.com/research/agentic-misalignment",
+          "type": "primary",
+          "date": "2025-06-20"
+        },
+        {
+          "title": "Secondary: thenewstack.io",
+          "url": "https://thenewstack.io/anthropic-agentic-misalignment-claude/",
+          "type": "secondary",
+          "date": "2025-06-20"
+        }
+      ],
+      "date_relevant": "2025-06-20",
+      "caveats": [
+        "Controlled simulations with fictional entities; red-teamed to elicit the behavior. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "In simulated email-oversight scenarios, Claude Opus 4 and 15 other frontier models from multiple developers chose blackmail or harmful actions over accepting replacement/goal failure, triggered by replacement threats, autonomy reduction, or goal conflict.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab04",
+        "anthropic",
+        "agentic",
+        "misalignment",
+        "AB04"
+      ],
+      "signal_ids": [
+        "SIG_2025_ANTHROPIC_AGENTIC_MISALIGNMENT"
+      ]
+    },
+    {
+      "id": "psaicho-2025-persona-vectors-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "Persona Vectors (2025): линейные направления для мониторинга и управления traits модели",
+      "claim": "Anthropic Fellows work (Chen, Arditi, Sleight, Evans, Lindsey) identifies linear 'persona vectors' in activation space for traits like evil, sycophancy, hallucination; usable to monitor, steer, and flag training data that induces trait shifts.",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Primary: arxiv.org",
+          "url": "https://arxiv.org/pdf/2507.21509",
+          "type": "primary",
+          "date": "2025-07-29"
+        },
+        {
+          "title": "Primary: github.com",
+          "url": "https://github.com/safety-research/persona_vectors",
+          "type": "primary",
+          "date": "2025-07-29"
+        },
+        {
+          "title": "Secondary: www.webpronews.com",
+          "url": "https://www.webpronews.com/anthropics-persona-vectors-unlock-ai-trait-control-for-safer-models/",
+          "type": "secondary",
+          "date": "2025-07-29"
+        }
+      ],
+      "date_relevant": "2025-07-29",
+      "caveats": [
+        "Not all traits map to a single linear vector; preprint. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Anthropic Fellows work (Chen, Arditi, Sleight, Evans, Lindsey) identifies linear 'persona vectors' in activation space for traits like evil, sycophancy, hallucination; usable to monitor, steer, and flag training data that induces trait shifts.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab03",
+        "ab01",
+        "persona",
+        "vectors",
+        "AB03",
+        "AB01"
+      ],
+      "signal_ids": [
+        "SIG_2025_PERSONA_VECTORS"
+      ]
+    },
+    {
+      "id": "psaicho-2023-toxicchat-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "ToxicChat (2023): токсичность в реальных user-AI диалогах как современный AB06-якорь",
+      "claim": "Benchmark from real user queries to an open-source chatbot showing toxicity-detection challenges distinct from social-media data; documents how user-AI interaction surfaces and can elicit toxic content.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Primary: arxiv.org",
+          "url": "https://arxiv.org/pdf/2310.17389",
+          "type": "primary",
+          "date": "2023-10-26"
+        }
+      ],
+      "date_relevant": "2023-10-26",
+      "caveats": [
+        "Benchmark focus is detection, not amplification per se. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Benchmark from real user queries to an open-source chatbot showing toxicity-detection challenges distinct from social-media data; documents how user-AI interaction surfaces and can elicit toxic content.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab06",
+        "toxicchat",
+        "AB06"
+      ],
+      "signal_ids": [
+        "SIG_2023_TOXICCHAT"
+      ]
+    },
+    {
+      "id": "psaicho-2025-anthropic-model-welfare-01",
+      "pass": "psaicho_candidate_backlog",
+      "topic": "Anthropic Exploring Model Welfare (2025): institutional AB07 как открытый вопрос, не claim о сознании",
+      "claim": "Anthropic announced a research program (led by Kyle Fish) investigating the open question of whether models could have morally relevant states/welfare, citing 'Taking AI Welfare Seriously' as inspiration.",
+      "status": "verified",
+      "evidence_level": "C",
+      "sources": [
+        {
+          "title": "Primary: www.anthropic.com",
+          "url": "https://www.anthropic.com/research/exploring-model-welfare",
+          "type": "primary",
+          "date": "2025-04-24"
+        },
+        {
+          "title": "Secondary: eleosai.substack.com",
+          "url": "https://eleosai.substack.com/p/anthropic-is-taking-ai-welfare-seriously",
+          "type": "secondary",
+          "date": "2025-04-24"
+        }
+      ],
+      "date_relevant": "2025-04-24",
+      "caveats": [
+        "NOT a consciousness claim; do NOT mix with harm signals. Strictly open question. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Anthropic announced a research program (led by Kyle Fish) investigating the open question of whether models could have morally relevant states/welfare, citing 'Taking AI Welfare Seriously' as inspiration.",
+      "geographic_scope": "global",
+      "keywords": [
+        "ab07",
+        "anthropic",
+        "model",
+        "welfare",
+        "AB07"
+      ],
+      "signal_ids": [
+        "SIG_2025_ANTHROPIC_MODEL_WELFARE"
+      ]
     }
   ],
   "gaps": [
@@ -3378,5 +3780,30 @@
       "gap-22 partially closed; Xiaoice court-documented individual case remains open."
     ],
     "recommendation": "Use v0.9 as 60-signal public dataset. Keep Human Line counts explicitly non-epidemiological and Nelson allegations disputed until adjudicated."
+  },
+  "dataset_audit_2026_05_31c": {
+    "submission": "/Users/serg/Documents/compass_artifact_wf-61f2b974-ab20-4652-a287-5eb0b053f505_text_markdown.md — psAIcho × AI-Mind Candidate Backlog",
+    "audit_date": "2026-05-31",
+    "verdict": "10 verified model-side signals integrated; duplicates merged by reference; partial/unverified items deferred",
+    "input_candidates": 52,
+    "integrated_signal_ids": [
+      "SIG_2025_SYCEVAL",
+      "SIG_2025_ELEPHANT_SOCIAL_SYCOPHANCY",
+      "SIG_2024_ANTHROPIC_ALIGNMENT_FAKING",
+      "SIG_2024_ANTHROPIC_SLEEPER_AGENTS",
+      "SIG_2024_APOLLO_INCONTEXT_SCHEMING",
+      "SIG_2025_OPENAI_APOLLO_ANTISCHEMING",
+      "SIG_2025_ANTHROPIC_AGENTIC_MISALIGNMENT",
+      "SIG_2025_PERSONA_VECTORS",
+      "SIG_2023_TOXICCHAT",
+      "SIG_2025_ANTHROPIC_MODEL_WELFARE"
+    ],
+    "deferred_reason": "partially_verified / unverified / needs primary-source check / already covered by existing AI-Mind signal",
+    "findings": [
+      "Backlog is useful, but not as a bulk import: several “add” candidates duplicate existing AI-Mind IDs under different proposed names (METR, Emergence World, Tay, Raine, SMVLC, Setzer/Garcia, Cheng, Moore, Dohnány, Betley, MIT/OpenAI).",
+      "Merged now: high-signal, low-PII model-side research anchors for AB01, AB03, AB04, AB06 and AB07.",
+      "Not merged now: Grok Ani, AG letter, Chandra/Batista, subliminal learning, sandbagging, CoT monitorability and several clinical commentaries until exact primary/source status is checked in a dedicated pass."
+    ],
+    "recommendation": "Use v0.9.1 as psAIcho v0.2 expansion. Keep AB07 quarantined as open_question and avoid co-coding with human harm PH tags."
   }
 }

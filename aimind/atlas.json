@@ -1,6 +1,6 @@
 {
   "name": "AI-Mind ↔ psAIcho · Atlas",
-  "version": "0.1",
+  "version": "0.2",
   "date": "2026-05-31",
   "type": "meta-layer / bridge (machine-readable map + routing + shared scale + overlap registry + guardrails)",
   "thesis": "Два потока, одна петля. Каждый инцидент/исследование измеряет либо человека, либо AI, либо их сцепку. AI-Mind смотрит на человека (и петлю); psAIcho — на модель (тренды и исследования, не одиночные фейлы).",
@@ -224,13 +224,13 @@
     "Нельзя 'апгрейдить' уровень доказательности через нарратив: каждый upgrade — через первоисточник с DOI. (Прецедент: фантомный 'Lancet Psychiatry' = на деле PsyArXiv Morrin / Nature Mental Health Dohnány.)"
   ],
   "counts_venn": {
-    "_note": "distinct counts after psAIcho v0.1 merge into aimind_signals.jsonl on 2026-05-31",
+    "_note": "distinct counts after psAIcho v0.2 candidate-backlog merge into aimind_signals.jsonl on 2026-05-31",
     "human_only": 56,
-    "ai_only": 6,
+    "ai_only": 16,
     "both": 6,
-    "total_distinct": 68,
+    "total_distinct": 78,
     "human_stream": 62,
-    "ai_stream": 12
+    "ai_stream": 22
   },
   "public_artifacts": {
     "atlas": "atlas.json",

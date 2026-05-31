@@ -1,7 +1,7 @@
 {
   "pack_meta": {
     "title": "AI-Mind Methodology Pack: 15 феноменов психологического и культурного влияния ИИ-ассистентов на людей",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "created_at": "2026-05-31",
     "language": "ru_en_mixed",
     "scope": {
@@ -47,6 +47,11 @@
     },
     "changelog": [
       {
+        "version": "0.6.2",
+        "date": "2026-05-31",
+        "description": "psAIcho v0.2 candidate backlog pass: +10 verified model-side signals integrated into shared spine; AI behavior coverage expanded for AB01/AB03/AB04/AB06/AB07 without changing PH taxonomy."
+      },
+      {
         "version": "0.6.1",
         "date": "2026-05-31",
         "description": "psAIcho v0.1 bridge integrated: added Atlas meta-layer, psAIcho methodology, streams[] + ai_behavior[] schema v0.2 in the shared signal spine, and 8 model-side / loop signals."
@@ -86,7 +91,8 @@
         "date": "2026-05-10",
         "description": "Базовый набор: 14 феноменов PH01–PH14, шкала E1–E5, 7 параметров V1–V7."
       }
-    ]
+    ],
+    "updated_at": "2026-05-31"
   },
   "evidence_classification": {
     "definition_source": "convention inherited from profgames (github.com/scadastrangelove/profgames)",

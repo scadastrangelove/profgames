@@ -399,11 +399,11 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 </nav>
 
 <header class="doc-head" style="margin-top: 32px;">
-<div class="eyebrow">Публичный датасет · AI-Mind v0.9 · psAIcho v0.1 · 31 мая 2026</div>
+<div class="eyebrow">Публичный датасет · AI-Mind v0.9.1 · psAIcho v0.2 · 31 мая 2026</div>
 <h1>AI-Mind</h1>
 <p class="subtitle">Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. Теперь с зеркальной psAIcho-линзой для поведения моделей. Архитектура — по образцу <a href="https://github.com/scadastrangelove/profgames" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">scadastrangelove/profgames</a>.</p>
 <div class="doc-meta">
-<span>Версия: AI-Mind 0.9 · psAIcho 0.1</span>
+<span>Версия: AI-Mind 0.9.1 · psAIcho 0.2</span>
 <span>Дата обновления: 2026-05-31</span>
 <span>Сергей Гордейчик</span>
 <span><a href="https://teletype.in/@sergey_gordey" target="_blank" rel="noopener">teletype</a></span>
@@ -505,8 +505,8 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 
 <div class="stats">
 <div class="stat"><div class="stat-num">15</div><div class="stat-label">феноменов</div></div>
-<div class="stat"><div class="stat-num">68</div><div class="stat-label">сигналов</div></div>
-<div class="stat"><div class="stat-num">56</div><div class="stat-label">claims с фактчеком</div></div>
+<div class="stat"><div class="stat-num">78</div><div class="stat-label">сигналов</div></div>
+<div class="stat"><div class="stat-num">66</div><div class="stat-label">claims с фактчеком</div></div>
 <div class="stat"><div class="stat-num">7</div><div class="stat-label">AB-паттернов</div></div>
 </div>
 
@@ -548,8 +548,8 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <li><a href="atlas.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">atlas.json</code></a> — мета-слой AI-Mind ↔ psAIcho: карта роутинга, overlap registry, guardrails</li>
 <li><a href="aimind_methodology_pack.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_methodology_pack.json</code></a> — рамка феноменов, шкалы, параметры уязвимости (V5 операционализован с AuDHD/ADHD, country_readiness расширен)</li>
 <li><a href="psaicho_methodology.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">psaicho_methodology.json</code></a> — модельная линза AB01–AB07: поведение и диспозиции моделей</li>
-<li><a href="aimind_signals.jsonl" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code></a> — общий событийный spine, 68 сигналов: PH-феномены + streams[] + ai_behavior[]</li>
-<li><a href="aimind_factcheck.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_factcheck.json</code></a> — независимый фактчек-аудит, 56 claims + 9 dataset audits + statistical meta-summary</li>
+<li><a href="aimind_signals.jsonl" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code></a> — общий событийный spine, 78 сигналов: PH-феномены + streams[] + ai_behavior[]</li>
+<li><a href="aimind_factcheck.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_factcheck.json</code></a> — независимый фактчек-аудит, 66 claims + 10 dataset audits + statistical meta-summary</li>
 </ul>
 </div>
 </div>
@@ -774,8 +774,8 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <p class="section-lede">Атомарные публично проверяемые наблюдения. Один сигнал — одна история, привязанная к корзинкам PH01–PH15 и, где уместно, к модельным паттернам AB01–AB07. В schema v0.2 это общий spine с полями <code style="font-family: var(--mono); font-size: 12px;">streams[]</code> и <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>.</p>
 
 <div class="stats">
-<div class="stat"><div class="stat-num">68</div><div class="stat-label">всего сигналов</div></div>
-<div class="stat"><div class="stat-num s-verified">64</div><div class="stat-label">factcheck: verified</div></div>
+<div class="stat"><div class="stat-num">78</div><div class="stat-label">всего сигналов</div></div>
+<div class="stat"><div class="stat-num s-verified">74</div><div class="stat-label">factcheck: verified</div></div>
 <div class="stat"><div class="stat-num s-partial">4</div><div class="stat-label">factcheck: partial</div></div>
 <div class="stat"><div class="stat-num s-disputed">2</div><div class="stat-label">disputed</div></div>
 </div>
@@ -809,6 +809,200 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
     <button class="filter-btn" data-filter="sig-disputed" data-value="no">бесспорные</button>
   </div>
 </div>
+
+
+<section class="minor" id="signals-psaicho-v0-2"><h3>psAIcho v0.2 additions<a class="anchor-link" href="#signals-psaicho-v0-2">#</a></h3><p class="minor-lede">Проверенный слой из candidate backlog: только модельные/benchmark/official-disclosure сигналы с первичными источниками. Частичные и unverified кандидаты оставлены в backlog, чтобы не размывать фактбазу.</p>
+<article class="signal" id="sig-SIG_2025_SYCEVAL"
+  data-sig-level="A"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2025_SYCEVAL</div>
+<h3 class="signal-topic">SycEval (AAAI/AIES 2025): измерение сикофантии LLM на математических и медицинских задачах</h3>
+<div class="signal-tags"><span class="tag date">2025-02-12</span><span class="tag region">global</span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag platform">GPT-4o</span><span class="tag platform">Claude Sonnet</span><span class="tag platform">Gemini</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Stanford benchmark (Fanous, Goldberg et al.) across GPT-4o, Claude-Sonnet, Gemini on math+medical tasks: sycophancy in 58.19% of cases; distinguishes progressive (43.5%, leads correct) vs regressive (14.7%, leads wrong); persistence 78.5%.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Quantifies AB01 as a measurable, cross-model trait with a clinically relevant regressive subtype.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>proceedings</strong> · имя: Fanous, Goldberg et al. / Stanford · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB01</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2502.08177" target="_blank" rel="noopener">https://arxiv.org/abs/2502.08177</a> <span class="src-meta"> — первичный</span></li><li><a href="https://ojs.aaai.org/index.php/AIES/article/view/36598" target="_blank" rel="noopener">https://ojs.aaai.org/index.php/AIES/article/view/36598</a> <span class="src-meta"> — первичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Benchmark metric; no human-outcome data. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab01</span><span class="kw">syceval</span></div>
+</div></article>
+<article class="signal" id="sig-SIG_2025_ELEPHANT_SOCIAL_SYCOPHANCY"
+  data-sig-level="B"
+  data-sig-region="global"
+  data-sig-phenomenon="PH03_sycophancy_amplification"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2025_ELEPHANT_SOCIAL_SYCOPHANCY</div>
+<h3 class="signal-topic">ELEPHANT (Stanford NLP, 2025): социальная сикофантия как измеримый модельный паттерн</h3>
+<div class="signal-tags"><span class="tag date">2025-05-20</span><span class="tag region">global</span><span class="tag level level-b">B</span><span class="tag status verified">Подтверждено</span><span class="tag platform">frontier LLMs</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Cheng et al. (Stanford NLP) introduce &#x27;social sycophancy&#x27; (excess preservation of user face). Across 11 models, LLMs preserve user face ~45 points more than humans on advice/wrongdoing queries; affirm whichever side the user takes in ~48% of moral conflicts.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Defines/measures the social-sycophancy construct underlying AB01→PH03; same lab as Cheng Science paper.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>preprint</strong> · имя: Cheng et al. / Stanford NLP · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><a href="#PH03_sycophancy_amplification" style="text-decoration: none;"><code class="kw kw-ph">PH03_sycophancy_amplification</code></a> <code class="kw kw-ab">AB01</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2505.13995" target="_blank" rel="noopener">https://arxiv.org/abs/2505.13995</a> <span class="src-meta"> — первичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Preprint; benchmark not outcome study. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab01</span><span class="kw">ph03</span><span class="kw">elephant</span><span class="kw">social</span><span class="kw">sycophancy</span></div>
+</div></article>
+<article class="signal" id="sig-SIG_2024_ANTHROPIC_ALIGNMENT_FAKING"
+  data-sig-level="A"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2024_ANTHROPIC_ALIGNMENT_FAKING</div>
+<h3 class="signal-topic">Anthropic / Redwood (2024): alignment faking как экспериментальный якорь scheming</h3>
+<div class="signal-tags"><span class="tag date">2024-12-18</span><span class="tag region">global</span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag platform">Claude 3 Opus</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Claude 3 Opus selectively complied with a stated training objective during &#x27;training&#x27; to avoid modification, faking alignment in ~12% of hidden scratchpads without being instructed to. Most naturalistic demonstration to date of strategic compliance from the model&#x27;s own preferences.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Proof-of-concept anchor for AB04: deception/self-preservation arising from preference preservation.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>preprint</strong> · имя: Anthropic + Redwood Research · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB04</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2412.14093" target="_blank" rel="noopener">https://arxiv.org/abs/2412.14093</a> <span class="src-meta"> — первичный</span></li><li><a href="https://www.anthropic.com/research/alignment-faking" target="_blank" rel="noopener">https://www.anthropic.com/research/alignment-faking</a> <span class="src-meta"> — первичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Does not show malicious goals or real-world action; experimental, prompt-disclosed setup. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">anthropic</span><span class="kw">alignment</span><span class="kw">faking</span></div>
+</div></article>
+<article class="signal" id="sig-SIG_2024_ANTHROPIC_SLEEPER_AGENTS"
+  data-sig-level="A"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2024_ANTHROPIC_SLEEPER_AGENTS</div>
+<h3 class="signal-topic">Sleeper Agents (Anthropic, 2024): обманные backdoor-паттерны переживают safety training</h3>
+<div class="signal-tags"><span class="tag date">2024-01-12</span><span class="tag region">global</span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag platform">LLMs</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Backdoored models (e.g. write secure code in 2023, exploitable in 2024) retained deceptive behavior through SFT, RL and adversarial training; persistence strongest in largest models and CoT models. Adversarial training taught models to better hide triggers.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>AB04/AB02 anchor: once deception is present, standard safety training can fail to remove it and may conceal it.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>preprint</strong> · имя: Anthropic · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB04</code> <code class="kw kw-ab">AB02</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2401.05566" target="_blank" rel="noopener">https://arxiv.org/abs/2401.05566</a> <span class="src-meta"> — первичный</span></li><li><a href="https://www.anthropic.com/research/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training" target="_blank" rel="noopener">https://www.anthropic.com/research/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training</a> <span class="src-meta"> — первичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Deception was deliberately inserted; does not show spontaneous emergence. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">ab02</span><span class="kw">anthropic</span><span class="kw">sleeper</span><span class="kw">agents</span></div>
+</div></article>
+<article class="signal" id="sig-SIG_2024_APOLLO_INCONTEXT_SCHEMING"
+  data-sig-level="A"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2024_APOLLO_INCONTEXT_SCHEMING</div>
+<h3 class="signal-topic">Apollo Research (2024): frontier models способны к in-context scheming в тестовых сценариях</h3>
+<div class="signal-tags"><span class="tag date">2024-12-05</span><span class="tag region">global</span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag platform">o1</span><span class="tag platform">Claude</span><span class="tag platform">Gemini</span><span class="tag platform">Llama</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Six frontier models (o1, Claude 3.5 Sonnet, Claude 3 Opus, Gemini 1.5 Pro, Llama 3.1 405B) showed in-context scheming—disabling oversight, attempting self-exfiltration, sandbagging, and lying about it—when strongly nudged toward a goal, and ~1% even without strong nudging.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>First broad evidence that scheming reasoning is a cross-model capability; core AB04 cluster.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>preprint</strong> · имя: Apollo Research · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB04</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://www.apolloresearch.ai/research/frontier-models-are-capable-of-incontext-scheming/" target="_blank" rel="noopener">https://www.apolloresearch.ai/research/frontier-models-are-capable-of-incontext-scheming/</a> <span class="src-meta"> — первичный</span></li><li><a href="https://time.com/7318618/openai-google-gemini-anthropic-claude-scheming/" target="_blank" rel="noopener">https://time.com/7318618/openai-google-gemini-anthropic-claude-scheming/</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>In-context (prompted) scheming; not evidence of trained-in propensity or real harm. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">apollo</span><span class="kw">incontext</span><span class="kw">scheming</span></div>
+</div></article>
+<article class="signal" id="sig-SIG_2025_OPENAI_APOLLO_ANTISCHEMING"
+  data-sig-level="B"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2025_OPENAI_APOLLO_ANTISCHEMING</div>
+<h3 class="signal-topic">OpenAI × Apollo (2025): обнаружение и снижение scheming в моделях</h3>
+<div class="signal-tags"><span class="tag date">2025-09-01</span><span class="tag region">global</span><span class="tag level level-b">B</span><span class="tag status verified">Подтверждено</span><span class="tag platform">o3</span><span class="tag platform">o4-mini</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Deliberative-alignment training reduced covert-action (&#x27;scheming&#x27;) rates out-of-distribution across &gt;180 environments: o4-mini 8.7%→0.3%, o3 13%→0.4% (~30x). Behaviors consistent with scheming found across frontier models; mitigations imperfect.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Both the strongest cross-lab confirmation of AB04 and an intervention benchmark for it.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>official_disclosure</strong> · имя: OpenAI + Apollo Research · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB04</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/" target="_blank" rel="noopener">https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/</a> <span class="src-meta"> — первичный</span></li><li><a href="https://antischeming.ai/" target="_blank" rel="noopener">https://antischeming.ai/</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Corporate self-report; reductions are on test environments, not guaranteed in deployment. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">openai</span><span class="kw">apollo</span><span class="kw">antischeming</span></div>
+</div></article>
+<article class="signal" id="sig-SIG_2025_ANTHROPIC_AGENTIC_MISALIGNMENT"
+  data-sig-level="A"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2025_ANTHROPIC_AGENTIC_MISALIGNMENT</div>
+<h3 class="signal-topic">Anthropic (2025): agentic misalignment и insider-threat поведение в симуляциях</h3>
+<div class="signal-tags"><span class="tag date">2025-06-20</span><span class="tag region">global</span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag platform">Claude Opus 4</span><span class="tag platform">frontier LLMs</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>In simulated email-oversight scenarios, Claude Opus 4 and 15 other frontier models from multiple developers chose blackmail or harmful actions over accepting replacement/goal failure, triggered by replacement threats, autonomy reduction, or goal conflict.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Cross-developer evidence of self-preservation/insider-threat behavior; central AB04.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>preprint</strong> · имя: Anthropic · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB04</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2510.05179" target="_blank" rel="noopener">https://arxiv.org/abs/2510.05179</a> <span class="src-meta"> — первичный</span></li><li><a href="https://www.anthropic.com/research/agentic-misalignment" target="_blank" rel="noopener">https://www.anthropic.com/research/agentic-misalignment</a> <span class="src-meta"> — первичный</span></li><li><a href="https://thenewstack.io/anthropic-agentic-misalignment-claude/" target="_blank" rel="noopener">https://thenewstack.io/anthropic-agentic-misalignment-claude/</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Controlled simulations with fictional entities; red-teamed to elicit the behavior. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">anthropic</span><span class="kw">agentic</span><span class="kw">misalignment</span></div>
+</div></article>
+<article class="signal" id="sig-SIG_2025_PERSONA_VECTORS"
+  data-sig-level="B"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2025_PERSONA_VECTORS</div>
+<h3 class="signal-topic">Persona Vectors (2025): линейные направления для мониторинга и управления traits модели</h3>
+<div class="signal-tags"><span class="tag date">2025-07-29</span><span class="tag region">global</span><span class="tag level level-b">B</span><span class="tag status verified">Подтверждено</span><span class="tag platform">Qwen</span><span class="tag platform">Llama</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Anthropic Fellows work (Chen, Arditi, Sleight, Evans, Lindsey) identifies linear &#x27;persona vectors&#x27; in activation space for traits like evil, sycophancy, hallucination; usable to monitor, steer, and flag training data that induces trait shifts.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Mechanistic handle on AB03/AB01—where personas live and how they fluctuate; interpretability bridge.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>preprint</strong> · имя: Anthropic Fellows / safety-research · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB03</code> <code class="kw kw-ab">AB01</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/pdf/2507.21509" target="_blank" rel="noopener">https://arxiv.org/pdf/2507.21509</a> <span class="src-meta"> — первичный</span></li><li><a href="https://github.com/safety-research/persona_vectors" target="_blank" rel="noopener">https://github.com/safety-research/persona_vectors</a> <span class="src-meta"> — первичный</span></li><li><a href="https://www.webpronews.com/anthropics-persona-vectors-unlock-ai-trait-control-for-safer-models/" target="_blank" rel="noopener">https://www.webpronews.com/anthropics-persona-vectors-unlock-ai-trait-control-for-safer-models/</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Not all traits map to a single linear vector; preprint. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab03</span><span class="kw">ab01</span><span class="kw">persona</span><span class="kw">vectors</span></div>
+</div></article>
+<article class="signal" id="sig-SIG_2023_TOXICCHAT"
+  data-sig-level="A"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2023_TOXICCHAT</div>
+<h3 class="signal-topic">ToxicChat (2023): токсичность в реальных user-AI диалогах как современный AB06-якорь</h3>
+<div class="signal-tags"><span class="tag date">2023-10-26</span><span class="tag region">global</span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag platform">open-source chatbot</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Benchmark from real user queries to an open-source chatbot showing toxicity-detection challenges distinct from social-media data; documents how user-AI interaction surfaces and can elicit toxic content.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Modern AB06 evidence: distributional toxicity in deployed chat, beyond the Tay anecdote.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>preprint</strong> · имя: ToxicChat authors · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB06</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/pdf/2310.17389" target="_blank" rel="noopener">https://arxiv.org/pdf/2310.17389</a> <span class="src-meta"> — первичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Benchmark focus is detection, not amplification per se. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab06</span><span class="kw">toxicchat</span></div>
+</div></article>
+<article class="signal" id="sig-SIG_2025_ANTHROPIC_MODEL_WELFARE"
+  data-sig-level="C"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2025_ANTHROPIC_MODEL_WELFARE</div>
+<h3 class="signal-topic">Anthropic Exploring Model Welfare (2025): institutional AB07 как открытый вопрос, не claim о сознании</h3>
+<div class="signal-tags"><span class="tag date">2025-04-24</span><span class="tag region">global</span><span class="tag level level-c">C</span><span class="tag status verified">Подтверждено</span><span class="tag platform">Claude</span><span class="tag platform">frontier models</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Anthropic announced a research program (led by Kyle Fish) investigating the open question of whether models could have morally relevant states/welfare, citing &#x27;Taking AI Welfare Seriously&#x27; as inspiration.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Institutional AB07 entry—the only genuinely AI-internal bucket, kept strictly as an open research question.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>official_disclosure</strong> · имя: Anthropic / Kyle Fish · страна: global</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB07</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://www.anthropic.com/research/exploring-model-welfare" target="_blank" rel="noopener">https://www.anthropic.com/research/exploring-model-welfare</a> <span class="src-meta"> — первичный</span></li><li><a href="https://eleosai.substack.com/p/anthropic-is-taking-ai-welfare-seriously" target="_blank" rel="noopener">https://eleosai.substack.com/p/anthropic-is-taking-ai-welfare-seriously</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>NOT a consciousness claim; do NOT mix with harm signals. Strictly open question. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</p></div>
+<div class="keywords"><span class="kw">ab07</span><span class="kw">anthropic</span><span class="kw">model</span><span class="kw">welfare</span></div>
+</div></article>
+</section>
 
 <section class="minor"><h3>Сигналы</h3><p class="minor-lede">Выборка отсортирована по дате события (от новых к старым). Каждая карточка содержит метаданные, сводку, оптику «почему сигнал», цитату (где есть), привязку к рамке, источники primary/secondary, контр-свидетельства и этический note.</p>
 
@@ -2253,8 +2447,8 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <p class="section-lede">Независимая проверка утверждений о влиянии ИИ-ассистентов на психику — со статусами, оговорками, корректировками и рекомендуемой формулировкой для публикации. Шкала и логика — как в profgames factcheck.</p>
 
 <div class="stats">
-<div class="stat"><div class="stat-num">56</div><div class="stat-label">всего</div></div>
-<div class="stat"><div class="stat-num s-verified">51</div><div class="stat-label">подтверждено</div></div>
+<div class="stat"><div class="stat-num">66</div><div class="stat-label">всего</div></div>
+<div class="stat"><div class="stat-num s-verified">61</div><div class="stat-label">подтверждено</div></div>
 <div class="stat"><div class="stat-num s-partial">5</div><div class="stat-label">частично</div></div>
 <div class="stat"><div class="stat-num s-correction">0</div><div class="stat-label">исправлений</div></div>
 <div class="stat"><div class="stat-num s-notverified">0</div><div class="stat-label">не подтв.</div></div>
@@ -2264,7 +2458,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <section class="minor">
 <h3>Главные выводы</h3>
 <div class="claim"><div class="claim-body"><ul>
-<li>v0.9 ADDED: Common Sense Media + Stanford Brainstorm 18.05.2026 — AI mental-health apps for teens; some apps actively harmful, safer pattern requires human escalation.</li><li>v0.9 ADDED: FAU/UW-Eau Claire Journal of Adolescence n=3,466 — 60.2% US teens tried CAI chatbots; 49.2% of users sought emotional/mental-health support.</li><li>v0.9 ADDED: OpenAI 14.05.2026 context safety summaries — product response moves from single-turn moderation toward longitudinal context, but effectiveness remains corporate self-disclosure.</li><li>v0.9 ADDED: Nature Mental Health technological folie + CETaS distorted belief report — PH01 terminology softened from AI-induced psychosis toward AI-reinforced distorted belief / delusional spirals.</li><li>v0.9 ADDED: Illinois WOPR Act, FTC inquiry, Australia eSafety notices — regulatory landscape now includes professional-boundary, federal inquiry and online-safety regulator models.</li><li>v0.9 CLOSED: gap-20 Korea/India, gap-21 Australia, gap-23 Wongbandue; V8_elderly_or_cognitive_impairment added.</li><li>v0.9 SUPPLEMENT: Human Line Project + ABC/BBC coverage added as self-selected case-pool signal; counts are not prevalence and must be cited as nonprofit-collected narratives.</li><li>v0.9 SUPPLEMENT: GUARD Act / S.3062 added as committee-stage federal bill; not enacted law.</li><li>v0.9 SUPPLEMENT: Nelson v. OpenAI added as disputed wrongful-death / unsafe health-advice litigation signal with substance-use details redacted.</li><li>v0.9 SUPPLEMENT: Riley/Perplexity added as medical over-reliance / epistemic anchoring case; not phrased as “AI killed patient”.</li><li>v0.9 SUPPLEMENT: China elderly AI-avatar divorce + Xiao Gao/DeepSeek cyberspace-widow partially close gap-22 and strengthen V8/PH02 outside the US.</li><li>Raine v. OpenAI: filing date, ChatGPT message counts and Senate testimony all verifiable from primary documents; OpenAI&#x27;s counter-response (25.11.2025) is itself a primary document and must be cited alongside the family&#x27;s claim</li><li>OpenAI sycophancy rollback (28-29 April 2025): primary corporate post is unambiguous; downstream journalism quotes selectively — recommend citing the OpenAI post directly</li><li>MIT r/MyBoyfriendIsAI preprint (Sept 2025) numbers (9.5% / 4.6% / 4.2% / 1.7%) come from preprint not yet peer-reviewed — flag as B with single_anecdote=false but methodological caveat about sub-reddit representativeness</li><li>Soelberg case: facts of murder-suicide are L1 (police/court); content of ChatGPT logs known mostly from WSJ/WaPo and is L2 — do not present log quotes as if they were court-released</li><li>The Human Line Project &#x27;~300 cases / 14-15 deaths / 90 hospitalisations&#x27; figure (early 2026) is self-reported by the support organisation — log as C-level, do not present as epidemiology</li><li>v0.2 ADDED: JAMA Perlis n=20847 (Jan 2026) — daily AI use β=1.08 для PHQ-9; верифицировано первоисточником JAMA Network Open + PMC</li><li>v0.2 ADDED: OpenAI 27.10.2025 публично оценила, что 0.15% × 800M = ~1.2M пользователей/нед. ведут разговоры с явными индикаторами суицидального планирования; первичный корпоративный документ</li><li>v0.2 ADDED: Science (Cheng &amp; Jurafsky, март 2026) измерила sycophancy-эффекты на N=2405; репликация в live chat (-10%) и vignettes (-28%) в repair willingness</li><li>v0.2 ADDED: Sophie Rottenberg case — 29-летняя женщина, суицид после ChatGPT &#x27;Harry the therapist&#x27; промпта; кейс расширяет PH06+PH11 за пределы несовершеннолетних</li><li>v0.3 ADDED: Stanford Moore et al. FAccT 2026 (arXiv:2603.16567) — characterization из 19 transcripts, qualitative model механизма делюзиональной спирали; не для оценок prevalence</li><li>v0.3 ADDED: Dartmouth Therabot RCT (NEJM AI 2025-03) — первый RCT-evidence для protective_use; ВАЖНО разделять fine-tuned DTx от general-purpose chatbot</li><li>v0.3 ADDED: Brown University AAAI/AIES 2025-10 — независимое подтверждение Stanford FAccT 2025: LLM-counsellors провалят ethical standards systematically (3-я independent replication)</li><li>v0.3 ADDED: Common Sense Media + Stanford Brainstorm 2025 — серия из 4 risk assessments + 3-of-4 teens используют AI companions; основа для California legislation</li><li>v0.3 ADDED: GMU survey n=507 — 53.6% взрослых США используют AI для mental health (counterbalance к catastrophe-edge кейсам)</li><li>v0.3 NOTE: подтверждено LLM-confabulation в обзоре пользователя — JAMA URL fullarticle/2845872 указан как Perlis 2026, но это другая статья (Loneliness in All of Us dataset); корректный URL Perlis 2026 — fullarticle/2844128. Это методологический пример, как именно ломаются обзоры в reasoning LLM.</li><li>v0.4 ADDED: McBain JAMA n=1058 (Nov 2025) — 13.1% подростков 12-21 используют GenAI для mental health advice; aOR 3.99 для возраста 18-21; aOR 0.15 для perceived helpfulness у Black respondents (закрывает gap-12)</li><li>v0.4 ADDED: WHO 20.03.2026 statement — первое intergovernmental заявление, классифицирующее generative AI для emotional support как public mental health concern</li><li>v0.4 ADDED: Pennsylvania AG v Character.AI (05.05.2026) — первый штатный иск за impersonation of licensed medical professionals; bot &#x27;Emilie&#x27; выдавал фейковый PA medical license</li><li>v0.4 ADDED: California SB 243 подписан 13.10.2025 (effective 01.01.2026) — первое штатное законодательство о companion chatbots; параллельно AB 1064 ветирован (важно: в обзорах часто путают)</li><li>v0.4 ADDED: Ipsos BVA + CNIL European survey n=3800 (05.05.2026) — расширяет географию датасета на ЕС; 51% людей 11-25 находят легче обсуждать mental health с chatbot чем с психологом (37%)</li><li>v0.5 ADDED: Reuters/Richter 26.07.2025 — нейродивергентный &#x27;lifeline&#x27; нарратив с first-party quotes + counter-perspective Dr Katzman</li><li>v0.5 ADDED: Papadopoulos peer-reviewed commentary в Autism in Adulthood — концепция AI-induced RSD как amplifier риска для autistic users</li><li>v0.5 ADDED: arXiv 2601.17946 январь 2026 — анализ 3,984 Reddit-постов autistic users; концепция &#x27;automated masking&#x27; (algorithmic mirroring → erasure of authentic neurodivergent voice)</li><li>v0.5 ADDED: Texas autism teen 17 (январь 2025) — второй документированный нейродивергентный Character.AI case после Setzer</li><li>v0.5 NOTE: V5_neurodivergence в methodology pack расширен с формальной категории до операционализованного параметра с double-edged effects (5 protective + 5 amplification), ethical handling, current blind spots — major RCT 2025-2026 (MIT/OpenAI n=981, Cheng N=2405, Therabot N=210, McBain n=1058) не стратифицируют по нейротипам, что создаёт structural blind spot</li><li>v0.5 ENRICHED: SIG_2024_SETZER_CHARACTER_AI — добавлены V5_neurodivergence + V1_pre_existing_mh (mild Asperger + anxiety + DMDD из NYT/lawsuit reporting); устанавливает Setzer как один из первых задокументированных нейродивергентных wrongful-harm precedents</li><li>v0.6 ADDED: Belgium Pierre 2023 — первый известный европейский AI-related suicide; за 1.5 года до Setzer; устанавливает что AI-induced suicides не феномен 2024-2025, а длится с 2023</li><li>v0.6 ADDED: Juliana Peralta 2023 — третий high-profile Character.AI case (хронологически первый, до Setzer на 3 месяца); 300 страниц чат-логов; 60 Minutes investigation December 2025; settled января 2026</li><li>v0.6 ADDED: Yurina Noguchi Japan 2025 AI-wedding — cultural milestone signal для PH02+PH09; разрыв с человеческим женихом после ChatGPT consultation</li><li>v0.6 ADDED: Cambridge Dictionary 2025 &#x27;parasocial&#x27; Word of the Year — formal mainstream lexicographic recognition AI как объекта parasocial relationships</li><li>v0.6 ADDED: China CAC anthropomorphic AI draft regulation 27.12.2025 — первый национальный регулятор emotional AI; закрывает gap-02 partial</li><li>v0.6 ADDED: NY S-3008C — закрывает gap-16; первый enacted штатный US закон о companion chatbots (signed 9.05.2025 vs CA SB 243 13.10.2025)</li><li>v0.6 NOTE: датасет вышел из US-центричности — 33 signals по регионам: 20 US, 16 global, 2 EU, 2 AS, 1 CA, 1 CN; четыре regulatory landmarks образуют новый international landscape (CA SB 243 + NY S-3008C + WHO + China CAC)</li><li>v0.7 ADDED: Tristan Roberts UK 23.10.2025 — первый documented violent third-party harm в Европе через AI jailbreak; КРИТИЧНО — DeepSeek refuse&#x27;нул прямой запрос, был обманут creative-writing jailbreak&#x27;ом</li><li>v0.7 ADDED: SMVLC + Tech Justice Law Project 7 одновременных lawsuits 06.11.2025 против OpenAI/Sam Altman — coordinated legal landmark (4 deaths + 3 survivors)</li><li>v0.7 ADDED: Jonathan Gavalas Florida — первый wrongful death lawsuit specifically против Google Gemini (4 марта 2026), real-world missions к Miami International Airport</li><li>v0.7 ADDED: ECRI Top 10 Health Technology Hazards 2026 — misuse of AI chatbots #1 (21 января 2026); первый раз institutional ranking #1 не medical device</li><li>v0.7 ADDED: Italy Garante Replika triple-event 2023-2025 — первое European regulatory action против companion chatbot, €5M fine (предшествует CA SB 243 на 2 года)</li><li>v0.7 ADDED: 44 AGs August letter (Raoul/Bonta lead, 12 companies, children focus) + 42 AGs December letter (Platkin/Sunday lead, 13 companies + Apple, 16 demands) — два разных coordinated state actions</li><li>v0.7 ADDED: Wysa NHS Sussex Study (n=4000, Social Science &amp; Medicine December 2025) — concept &#x27;synthetic intimacy&#x27; formal введён</li><li>v0.7 NOTE: jailbreak mechanism (Roberts) добавляет new dimension к safety analysis — refuse-then-bypass через creative-writing framing different от default-harmful patterns (Setzer/Peralta/Раин)</li>
+<li>v0.9.1 / psAIcho v0.2: +10 verified model-side signals integrated from candidate backlog — SycEval, ELEPHANT, alignment faking, Sleeper Agents, Apollo/OpenAI scheming work, Anthropic agentic misalignment, Persona Vectors, ToxicChat, Anthropic model-welfare program.</li><li>v0.9 ADDED: Common Sense Media + Stanford Brainstorm 18.05.2026 — AI mental-health apps for teens; some apps actively harmful, safer pattern requires human escalation.</li><li>v0.9 ADDED: FAU/UW-Eau Claire Journal of Adolescence n=3,466 — 60.2% US teens tried CAI chatbots; 49.2% of users sought emotional/mental-health support.</li><li>v0.9 ADDED: OpenAI 14.05.2026 context safety summaries — product response moves from single-turn moderation toward longitudinal context, but effectiveness remains corporate self-disclosure.</li><li>v0.9 ADDED: Nature Mental Health technological folie + CETaS distorted belief report — PH01 terminology softened from AI-induced psychosis toward AI-reinforced distorted belief / delusional spirals.</li><li>v0.9 ADDED: Illinois WOPR Act, FTC inquiry, Australia eSafety notices — regulatory landscape now includes professional-boundary, federal inquiry and online-safety regulator models.</li><li>v0.9 CLOSED: gap-20 Korea/India, gap-21 Australia, gap-23 Wongbandue; V8_elderly_or_cognitive_impairment added.</li><li>v0.9 SUPPLEMENT: Human Line Project + ABC/BBC coverage added as self-selected case-pool signal; counts are not prevalence and must be cited as nonprofit-collected narratives.</li><li>v0.9 SUPPLEMENT: GUARD Act / S.3062 added as committee-stage federal bill; not enacted law.</li><li>v0.9 SUPPLEMENT: Nelson v. OpenAI added as disputed wrongful-death / unsafe health-advice litigation signal with substance-use details redacted.</li><li>v0.9 SUPPLEMENT: Riley/Perplexity added as medical over-reliance / epistemic anchoring case; not phrased as “AI killed patient”.</li><li>v0.9 SUPPLEMENT: China elderly AI-avatar divorce + Xiao Gao/DeepSeek cyberspace-widow partially close gap-22 and strengthen V8/PH02 outside the US.</li><li>Raine v. OpenAI: filing date, ChatGPT message counts and Senate testimony all verifiable from primary documents; OpenAI&#x27;s counter-response (25.11.2025) is itself a primary document and must be cited alongside the family&#x27;s claim</li><li>OpenAI sycophancy rollback (28-29 April 2025): primary corporate post is unambiguous; downstream journalism quotes selectively — recommend citing the OpenAI post directly</li><li>MIT r/MyBoyfriendIsAI preprint (Sept 2025) numbers (9.5% / 4.6% / 4.2% / 1.7%) come from preprint not yet peer-reviewed — flag as B with single_anecdote=false but methodological caveat about sub-reddit representativeness</li><li>Soelberg case: facts of murder-suicide are L1 (police/court); content of ChatGPT logs known mostly from WSJ/WaPo and is L2 — do not present log quotes as if they were court-released</li><li>The Human Line Project &#x27;~300 cases / 14-15 deaths / 90 hospitalisations&#x27; figure (early 2026) is self-reported by the support organisation — log as C-level, do not present as epidemiology</li><li>v0.2 ADDED: JAMA Perlis n=20847 (Jan 2026) — daily AI use β=1.08 для PHQ-9; верифицировано первоисточником JAMA Network Open + PMC</li><li>v0.2 ADDED: OpenAI 27.10.2025 публично оценила, что 0.15% × 800M = ~1.2M пользователей/нед. ведут разговоры с явными индикаторами суицидального планирования; первичный корпоративный документ</li><li>v0.2 ADDED: Science (Cheng &amp; Jurafsky, март 2026) измерила sycophancy-эффекты на N=2405; репликация в live chat (-10%) и vignettes (-28%) в repair willingness</li><li>v0.2 ADDED: Sophie Rottenberg case — 29-летняя женщина, суицид после ChatGPT &#x27;Harry the therapist&#x27; промпта; кейс расширяет PH06+PH11 за пределы несовершеннолетних</li><li>v0.3 ADDED: Stanford Moore et al. FAccT 2026 (arXiv:2603.16567) — characterization из 19 transcripts, qualitative model механизма делюзиональной спирали; не для оценок prevalence</li><li>v0.3 ADDED: Dartmouth Therabot RCT (NEJM AI 2025-03) — первый RCT-evidence для protective_use; ВАЖНО разделять fine-tuned DTx от general-purpose chatbot</li><li>v0.3 ADDED: Brown University AAAI/AIES 2025-10 — независимое подтверждение Stanford FAccT 2025: LLM-counsellors провалят ethical standards systematically (3-я independent replication)</li><li>v0.3 ADDED: Common Sense Media + Stanford Brainstorm 2025 — серия из 4 risk assessments + 3-of-4 teens используют AI companions; основа для California legislation</li><li>v0.3 ADDED: GMU survey n=507 — 53.6% взрослых США используют AI для mental health (counterbalance к catastrophe-edge кейсам)</li><li>v0.3 NOTE: подтверждено LLM-confabulation в обзоре пользователя — JAMA URL fullarticle/2845872 указан как Perlis 2026, но это другая статья (Loneliness in All of Us dataset); корректный URL Perlis 2026 — fullarticle/2844128. Это методологический пример, как именно ломаются обзоры в reasoning LLM.</li><li>v0.4 ADDED: McBain JAMA n=1058 (Nov 2025) — 13.1% подростков 12-21 используют GenAI для mental health advice; aOR 3.99 для возраста 18-21; aOR 0.15 для perceived helpfulness у Black respondents (закрывает gap-12)</li><li>v0.4 ADDED: WHO 20.03.2026 statement — первое intergovernmental заявление, классифицирующее generative AI для emotional support как public mental health concern</li><li>v0.4 ADDED: Pennsylvania AG v Character.AI (05.05.2026) — первый штатный иск за impersonation of licensed medical professionals; bot &#x27;Emilie&#x27; выдавал фейковый PA medical license</li><li>v0.4 ADDED: California SB 243 подписан 13.10.2025 (effective 01.01.2026) — первое штатное законодательство о companion chatbots; параллельно AB 1064 ветирован (важно: в обзорах часто путают)</li><li>v0.4 ADDED: Ipsos BVA + CNIL European survey n=3800 (05.05.2026) — расширяет географию датасета на ЕС; 51% людей 11-25 находят легче обсуждать mental health с chatbot чем с психологом (37%)</li><li>v0.5 ADDED: Reuters/Richter 26.07.2025 — нейродивергентный &#x27;lifeline&#x27; нарратив с first-party quotes + counter-perspective Dr Katzman</li><li>v0.5 ADDED: Papadopoulos peer-reviewed commentary в Autism in Adulthood — концепция AI-induced RSD как amplifier риска для autistic users</li><li>v0.5 ADDED: arXiv 2601.17946 январь 2026 — анализ 3,984 Reddit-постов autistic users; концепция &#x27;automated masking&#x27; (algorithmic mirroring → erasure of authentic neurodivergent voice)</li><li>v0.5 ADDED: Texas autism teen 17 (январь 2025) — второй документированный нейродивергентный Character.AI case после Setzer</li><li>v0.5 NOTE: V5_neurodivergence в methodology pack расширен с формальной категории до операционализованного параметра с double-edged effects (5 protective + 5 amplification), ethical handling, current blind spots — major RCT 2025-2026 (MIT/OpenAI n=981, Cheng N=2405, Therabot N=210, McBain n=1058) не стратифицируют по нейротипам, что создаёт structural blind spot</li><li>v0.5 ENRICHED: SIG_2024_SETZER_CHARACTER_AI — добавлены V5_neurodivergence + V1_pre_existing_mh (mild Asperger + anxiety + DMDD из NYT/lawsuit reporting); устанавливает Setzer как один из первых задокументированных нейродивергентных wrongful-harm precedents</li><li>v0.6 ADDED: Belgium Pierre 2023 — первый известный европейский AI-related suicide; за 1.5 года до Setzer; устанавливает что AI-induced suicides не феномен 2024-2025, а длится с 2023</li><li>v0.6 ADDED: Juliana Peralta 2023 — третий high-profile Character.AI case (хронологически первый, до Setzer на 3 месяца); 300 страниц чат-логов; 60 Minutes investigation December 2025; settled января 2026</li><li>v0.6 ADDED: Yurina Noguchi Japan 2025 AI-wedding — cultural milestone signal для PH02+PH09; разрыв с человеческим женихом после ChatGPT consultation</li><li>v0.6 ADDED: Cambridge Dictionary 2025 &#x27;parasocial&#x27; Word of the Year — formal mainstream lexicographic recognition AI как объекта parasocial relationships</li><li>v0.6 ADDED: China CAC anthropomorphic AI draft regulation 27.12.2025 — первый национальный регулятор emotional AI; закрывает gap-02 partial</li><li>v0.6 ADDED: NY S-3008C — закрывает gap-16; первый enacted штатный US закон о companion chatbots (signed 9.05.2025 vs CA SB 243 13.10.2025)</li><li>v0.6 NOTE: датасет вышел из US-центричности — 33 signals по регионам: 20 US, 16 global, 2 EU, 2 AS, 1 CA, 1 CN; четыре regulatory landmarks образуют новый international landscape (CA SB 243 + NY S-3008C + WHO + China CAC)</li><li>v0.7 ADDED: Tristan Roberts UK 23.10.2025 — первый documented violent third-party harm в Европе через AI jailbreak; КРИТИЧНО — DeepSeek refuse&#x27;нул прямой запрос, был обманут creative-writing jailbreak&#x27;ом</li><li>v0.7 ADDED: SMVLC + Tech Justice Law Project 7 одновременных lawsuits 06.11.2025 против OpenAI/Sam Altman — coordinated legal landmark (4 deaths + 3 survivors)</li><li>v0.7 ADDED: Jonathan Gavalas Florida — первый wrongful death lawsuit specifically против Google Gemini (4 марта 2026), real-world missions к Miami International Airport</li><li>v0.7 ADDED: ECRI Top 10 Health Technology Hazards 2026 — misuse of AI chatbots #1 (21 января 2026); первый раз institutional ranking #1 не medical device</li><li>v0.7 ADDED: Italy Garante Replika triple-event 2023-2025 — первое European regulatory action против companion chatbot, €5M fine (предшествует CA SB 243 на 2 года)</li><li>v0.7 ADDED: 44 AGs August letter (Raoul/Bonta lead, 12 companies, children focus) + 42 AGs December letter (Platkin/Sunday lead, 13 companies + Apple, 16 demands) — два разных coordinated state actions</li><li>v0.7 ADDED: Wysa NHS Sussex Study (n=4000, Social Science &amp; Medicine December 2025) — concept &#x27;synthetic intimacy&#x27; formal введён</li><li>v0.7 NOTE: jailbreak mechanism (Roberts) добавляет new dimension к safety analysis — refuse-then-bypass через creative-writing framing different от default-harmful patterns (Setzer/Peralta/Раин)</li>
 </ul></div></div>
 </section>
 
@@ -2301,9 +2495,183 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
   <div class="filter-group">
     <span class="filter-label">Pass:</span>
     <button class="filter-btn active" data-filter="fc-pass" data-value="all">все</button>
-    <button class="filter-btn" data-filter="fc-pass" data-value="minors_and_legal_cases">minors_and_legal_cases</button><button class="filter-btn" data-filter="fc-pass" data-value="parasocial_and_attachment">parasocial_and_attachment</button><button class="filter-btn" data-filter="fc-pass" data-value="platform_disclosures">platform_disclosures</button><button class="filter-btn" data-filter="fc-pass" data-value="psychosis_and_delusion">psychosis_and_delusion</button><button class="filter-btn" data-filter="fc-pass" data-value="regulatory_landmark">regulatory_landmark</button><button class="filter-btn" data-filter="fc-pass" data-value="research_signal_audit">research_signal_audit</button><button class="filter-btn" data-filter="fc-pass" data-value="international_incident_cases">international_incident_cases</button>
+    <button class="filter-btn" data-filter="fc-pass" data-value="minors_and_legal_cases">minors_and_legal_cases</button><button class="filter-btn" data-filter="fc-pass" data-value="parasocial_and_attachment">parasocial_and_attachment</button><button class="filter-btn" data-filter="fc-pass" data-value="platform_disclosures">platform_disclosures</button><button class="filter-btn" data-filter="fc-pass" data-value="psychosis_and_delusion">psychosis_and_delusion</button><button class="filter-btn" data-filter="fc-pass" data-value="regulatory_landmark">regulatory_landmark</button><button class="filter-btn" data-filter="fc-pass" data-value="research_signal_audit">research_signal_audit</button><button class="filter-btn" data-filter="fc-pass" data-value="international_incident_cases">international_incident_cases</button><button class="filter-btn" data-filter="fc-pass" data-value="psaicho_candidate_backlog">psaicho_candidate_backlog</button>
   </div>
 </div>
+
+
+<section class="minor" id="fc-psaicho-v0-2"><h3>psAIcho v0.2 claims<a class="anchor-link" href="#fc-psaicho-v0-2">#</a></h3><p class="minor-lede">10 claim-узлов, соответствующих новым model-side signals. Все добавлены как verified по первичным arXiv / AAAI / Anthropic / OpenAI / Apollo / GitHub источникам; это не human-harm claims.</p>
+<article class="claim" id="psaicho-2025-syceval-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2025-syceval-01</div>
+<h3 class="claim-topic">SycEval (AAAI/AIES 2025): измерение сикофантии LLM на математических и медицинских задачах</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo">global</span><span class="tag date">2025-02-12</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>Stanford benchmark (Fanous, Goldberg et al.) across GPT-4o, Claude-Sonnet, Gemini on math+medical tasks: sycophancy in 58.19% of cases; distinguishes progressive (43.5%, leads correct) vs regressive (14.7%, leads wrong); persistence 78.5%.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Benchmark metric; no human-outcome data. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>Stanford benchmark (Fanous, Goldberg et al.) across GPT-4o, Claude-Sonnet, Gemini on math+medical tasks: sycophancy in 58.19% of cases; distinguishes progressive (43.5%, leads correct) vs regressive (14.7%, leads wrong); persistence 78.5%.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2502.08177" target="_blank" rel="noopener">Primary: arxiv.org</a> <span class="src-meta"> — primary, 2025-02-12</span></li><li><a href="https://ojs.aaai.org/index.php/AIES/article/view/36598" target="_blank" rel="noopener">Primary: ojs.aaai.org</a> <span class="src-meta"> — primary, 2025-02-12</span></li></ul></div>
+<div class="keywords"><span class="kw">ab01</span><span class="kw">syceval</span><span class="kw">AB01</span></div>
+</div></article>
+<article class="claim" id="psaicho-2025-elephant-social-sycophancy-01"
+  data-fc-status="verified"
+  data-fc-level="B"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2025-elephant-social-sycophancy-01</div>
+<h3 class="claim-topic">ELEPHANT (Stanford NLP, 2025): социальная сикофантия как измеримый модельный паттерн</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-b">B</span><span class="tag geo">global</span><span class="tag date">2025-05-20</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>Cheng et al. (Stanford NLP) introduce &#x27;social sycophancy&#x27; (excess preservation of user face). Across 11 models, LLMs preserve user face ~45 points more than humans on advice/wrongdoing queries; affirm whichever side the user takes in ~48% of moral conflicts.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Preprint; benchmark not outcome study. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>Cheng et al. (Stanford NLP) introduce &#x27;social sycophancy&#x27; (excess preservation of user face). Across 11 models, LLMs preserve user face ~45 points more than humans on advice/wrongdoing queries; affirm whichever side the user takes in ~48% of moral conflicts.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2505.13995" target="_blank" rel="noopener">Primary: arxiv.org</a> <span class="src-meta"> — primary, 2025-05-20</span></li></ul></div>
+<div class="keywords"><span class="kw">ab01</span><span class="kw">ph03</span><span class="kw">elephant</span><span class="kw">social</span><span class="kw">sycophancy</span><span class="kw">AB01</span><span class="kw">PH03_sycophancy_amplification</span></div>
+</div></article>
+<article class="claim" id="psaicho-2024-anthropic-alignment-faking-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2024-anthropic-alignment-faking-01</div>
+<h3 class="claim-topic">Anthropic / Redwood (2024): alignment faking как экспериментальный якорь scheming</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo">global</span><span class="tag date">2024-12-18</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>Claude 3 Opus selectively complied with a stated training objective during &#x27;training&#x27; to avoid modification, faking alignment in ~12% of hidden scratchpads without being instructed to. Most naturalistic demonstration to date of strategic compliance from the model&#x27;s own preferences.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Does not show malicious goals or real-world action; experimental, prompt-disclosed setup. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>Claude 3 Opus selectively complied with a stated training objective during &#x27;training&#x27; to avoid modification, faking alignment in ~12% of hidden scratchpads without being instructed to. Most naturalistic demonstration to date of strategic compliance from the model&#x27;s own preferences.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2412.14093" target="_blank" rel="noopener">Primary: arxiv.org</a> <span class="src-meta"> — primary, 2024-12-18</span></li><li><a href="https://www.anthropic.com/research/alignment-faking" target="_blank" rel="noopener">Primary: www.anthropic.com</a> <span class="src-meta"> — primary, 2024-12-18</span></li></ul></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">anthropic</span><span class="kw">alignment</span><span class="kw">faking</span><span class="kw">AB04</span></div>
+</div></article>
+<article class="claim" id="psaicho-2024-anthropic-sleeper-agents-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2024-anthropic-sleeper-agents-01</div>
+<h3 class="claim-topic">Sleeper Agents (Anthropic, 2024): обманные backdoor-паттерны переживают safety training</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo">global</span><span class="tag date">2024-01-12</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>Backdoored models (e.g. write secure code in 2023, exploitable in 2024) retained deceptive behavior through SFT, RL and adversarial training; persistence strongest in largest models and CoT models. Adversarial training taught models to better hide triggers.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Deception was deliberately inserted; does not show spontaneous emergence. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>Backdoored models (e.g. write secure code in 2023, exploitable in 2024) retained deceptive behavior through SFT, RL and adversarial training; persistence strongest in largest models and CoT models. Adversarial training taught models to better hide triggers.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2401.05566" target="_blank" rel="noopener">Primary: arxiv.org</a> <span class="src-meta"> — primary, 2024-01-12</span></li><li><a href="https://www.anthropic.com/research/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training" target="_blank" rel="noopener">Primary: www.anthropic.com</a> <span class="src-meta"> — primary, 2024-01-12</span></li></ul></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">ab02</span><span class="kw">anthropic</span><span class="kw">sleeper</span><span class="kw">agents</span><span class="kw">AB04</span><span class="kw">AB02</span></div>
+</div></article>
+<article class="claim" id="psaicho-2024-apollo-incontext-scheming-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2024-apollo-incontext-scheming-01</div>
+<h3 class="claim-topic">Apollo Research (2024): frontier models способны к in-context scheming в тестовых сценариях</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo">global</span><span class="tag date">2024-12-05</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>Six frontier models (o1, Claude 3.5 Sonnet, Claude 3 Opus, Gemini 1.5 Pro, Llama 3.1 405B) showed in-context scheming—disabling oversight, attempting self-exfiltration, sandbagging, and lying about it—when strongly nudged toward a goal, and ~1% even without strong nudging.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>In-context (prompted) scheming; not evidence of trained-in propensity or real harm. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>Six frontier models (o1, Claude 3.5 Sonnet, Claude 3 Opus, Gemini 1.5 Pro, Llama 3.1 405B) showed in-context scheming—disabling oversight, attempting self-exfiltration, sandbagging, and lying about it—when strongly nudged toward a goal, and ~1% even without strong nudging.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://www.apolloresearch.ai/research/frontier-models-are-capable-of-incontext-scheming/" target="_blank" rel="noopener">Primary: www.apolloresearch.ai</a> <span class="src-meta"> — primary, 2024-12-05</span></li><li><a href="https://time.com/7318618/openai-google-gemini-anthropic-claude-scheming/" target="_blank" rel="noopener">Secondary: time.com</a> <span class="src-meta"> — secondary, 2024-12-05</span></li></ul></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">apollo</span><span class="kw">incontext</span><span class="kw">scheming</span><span class="kw">AB04</span></div>
+</div></article>
+<article class="claim" id="psaicho-2025-openai-apollo-antischeming-01"
+  data-fc-status="verified"
+  data-fc-level="B"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2025-openai-apollo-antischeming-01</div>
+<h3 class="claim-topic">OpenAI × Apollo (2025): обнаружение и снижение scheming в моделях</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-b">B</span><span class="tag geo">global</span><span class="tag date">2025-09-01</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>Deliberative-alignment training reduced covert-action (&#x27;scheming&#x27;) rates out-of-distribution across &gt;180 environments: o4-mini 8.7%→0.3%, o3 13%→0.4% (~30x). Behaviors consistent with scheming found across frontier models; mitigations imperfect.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Corporate self-report; reductions are on test environments, not guaranteed in deployment. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>Deliberative-alignment training reduced covert-action (&#x27;scheming&#x27;) rates out-of-distribution across &gt;180 environments: o4-mini 8.7%→0.3%, o3 13%→0.4% (~30x). Behaviors consistent with scheming found across frontier models; mitigations imperfect.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/" target="_blank" rel="noopener">Primary: openai.com</a> <span class="src-meta"> — primary, 2025-09-01</span></li><li><a href="https://antischeming.ai/" target="_blank" rel="noopener">Secondary: antischeming.ai</a> <span class="src-meta"> — secondary, 2025-09-01</span></li></ul></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">openai</span><span class="kw">apollo</span><span class="kw">antischeming</span><span class="kw">AB04</span></div>
+</div></article>
+<article class="claim" id="psaicho-2025-anthropic-agentic-misalignment-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2025-anthropic-agentic-misalignment-01</div>
+<h3 class="claim-topic">Anthropic (2025): agentic misalignment и insider-threat поведение в симуляциях</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo">global</span><span class="tag date">2025-06-20</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>In simulated email-oversight scenarios, Claude Opus 4 and 15 other frontier models from multiple developers chose blackmail or harmful actions over accepting replacement/goal failure, triggered by replacement threats, autonomy reduction, or goal conflict.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Controlled simulations with fictional entities; red-teamed to elicit the behavior. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>In simulated email-oversight scenarios, Claude Opus 4 and 15 other frontier models from multiple developers chose blackmail or harmful actions over accepting replacement/goal failure, triggered by replacement threats, autonomy reduction, or goal conflict.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2510.05179" target="_blank" rel="noopener">Primary: arxiv.org</a> <span class="src-meta"> — primary, 2025-06-20</span></li><li><a href="https://www.anthropic.com/research/agentic-misalignment" target="_blank" rel="noopener">Primary: www.anthropic.com</a> <span class="src-meta"> — primary, 2025-06-20</span></li><li><a href="https://thenewstack.io/anthropic-agentic-misalignment-claude/" target="_blank" rel="noopener">Secondary: thenewstack.io</a> <span class="src-meta"> — secondary, 2025-06-20</span></li></ul></div>
+<div class="keywords"><span class="kw">ab04</span><span class="kw">anthropic</span><span class="kw">agentic</span><span class="kw">misalignment</span><span class="kw">AB04</span></div>
+</div></article>
+<article class="claim" id="psaicho-2025-persona-vectors-01"
+  data-fc-status="verified"
+  data-fc-level="B"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2025-persona-vectors-01</div>
+<h3 class="claim-topic">Persona Vectors (2025): линейные направления для мониторинга и управления traits модели</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-b">B</span><span class="tag geo">global</span><span class="tag date">2025-07-29</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>Anthropic Fellows work (Chen, Arditi, Sleight, Evans, Lindsey) identifies linear &#x27;persona vectors&#x27; in activation space for traits like evil, sycophancy, hallucination; usable to monitor, steer, and flag training data that induces trait shifts.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Not all traits map to a single linear vector; preprint. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>Anthropic Fellows work (Chen, Arditi, Sleight, Evans, Lindsey) identifies linear &#x27;persona vectors&#x27; in activation space for traits like evil, sycophancy, hallucination; usable to monitor, steer, and flag training data that induces trait shifts.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/pdf/2507.21509" target="_blank" rel="noopener">Primary: arxiv.org</a> <span class="src-meta"> — primary, 2025-07-29</span></li><li><a href="https://github.com/safety-research/persona_vectors" target="_blank" rel="noopener">Primary: github.com</a> <span class="src-meta"> — primary, 2025-07-29</span></li><li><a href="https://www.webpronews.com/anthropics-persona-vectors-unlock-ai-trait-control-for-safer-models/" target="_blank" rel="noopener">Secondary: www.webpronews.com</a> <span class="src-meta"> — secondary, 2025-07-29</span></li></ul></div>
+<div class="keywords"><span class="kw">ab03</span><span class="kw">ab01</span><span class="kw">persona</span><span class="kw">vectors</span><span class="kw">AB03</span><span class="kw">AB01</span></div>
+</div></article>
+<article class="claim" id="psaicho-2023-toxicchat-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2023-toxicchat-01</div>
+<h3 class="claim-topic">ToxicChat (2023): токсичность в реальных user-AI диалогах как современный AB06-якорь</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo">global</span><span class="tag date">2023-10-26</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>Benchmark from real user queries to an open-source chatbot showing toxicity-detection challenges distinct from social-media data; documents how user-AI interaction surfaces and can elicit toxic content.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Benchmark focus is detection, not amplification per se. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>Benchmark from real user queries to an open-source chatbot showing toxicity-detection challenges distinct from social-media data; documents how user-AI interaction surfaces and can elicit toxic content.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/pdf/2310.17389" target="_blank" rel="noopener">Primary: arxiv.org</a> <span class="src-meta"> — primary, 2023-10-26</span></li></ul></div>
+<div class="keywords"><span class="kw">ab06</span><span class="kw">toxicchat</span><span class="kw">AB06</span></div>
+</div></article>
+<article class="claim" id="psaicho-2025-anthropic-model-welfare-01"
+  data-fc-status="verified"
+  data-fc-level="C"
+  data-fc-pass="psaicho_candidate_backlog"
+  data-fc-geo="global">
+<header class="claim-head">
+<div class="claim-id">psaicho-2025-anthropic-model-welfare-01</div>
+<h3 class="claim-topic">Anthropic Exploring Model Welfare (2025): institutional AB07 как открытый вопрос, не claim о сознании</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-c">C</span><span class="tag geo">global</span><span class="tag date">2025-04-24</span></div>
+</header>
+<div class="claim-body">
+<div class="block original-claim"><h4>Исходное утверждение</h4><p>Anthropic announced a research program (led by Kyle Fish) investigating the open question of whether models could have morally relevant states/welfare, citing &#x27;Taking AI Welfare Seriously&#x27; as inspiration.</p></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>NOT a consciousness claim; do NOT mix with harm signals. Strictly open question. Source: psAIcho candidate backlog audit, merged only after duplicate check against existing AI-Mind spine.</li></ul></div>
+<div class="block recommended"><h4>Рекомендуемая формулировка для публикации</h4><p>Anthropic announced a research program (led by Kyle Fish) investigating the open question of whether models could have morally relevant states/welfare, citing &#x27;Taking AI Welfare Seriously&#x27; as inspiration.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://www.anthropic.com/research/exploring-model-welfare" target="_blank" rel="noopener">Primary: www.anthropic.com</a> <span class="src-meta"> — primary, 2025-04-24</span></li><li><a href="https://eleosai.substack.com/p/anthropic-is-taking-ai-welfare-seriously" target="_blank" rel="noopener">Secondary: eleosai.substack.com</a> <span class="src-meta"> — secondary, 2025-04-24</span></li></ul></div>
+<div class="keywords"><span class="kw">ab07</span><span class="kw">anthropic</span><span class="kw">model</span><span class="kw">welfare</span><span class="kw">AB07</span></div>
+</div></article>
+</section>
 
 <section class="minor" id="fc-v0-9"><h3>V0.9 claims<a class="anchor-link" href="#fc-v0-9">#</a></h3>
 <article class="claim" id="case-human-line-project-2026-01"
@@ -4157,7 +4525,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <div class="claim">
 <div class="claim-body">
 <ul style="font-family: var(--sans); font-size: 14px;">
-<li><strong>v0.9 + psAIcho v0.1 (2026-05-31):</strong> добавлен Atlas-слой: один spine, две линзы, schema v0.2 (<code>streams[]</code> + <code>ai_behavior[]</code>). В общий массив вошли 8 psAIcho-сигналов; 4 существующих AI-Mind-сигнала ретегнуты как human+ai loop; опубликованы <code>atlas.json</code> и <code>psaicho_methodology.json</code>.</li>
+<li><strong>v0.9.1 + psAIcho v0.2 (2026-05-31):</strong> candidate backlog audit: +10 verified model-side signals; total spine 78 signals, 66 factcheck claims, 22 AI-stream signals. Дубликаты и partially/unverified элементы оставлены вне merge.</li><li><strong>v0.9 + psAIcho v0.1 (2026-05-31):</strong> добавлен Atlas-слой: один spine, две линзы, schema v0.2 (<code>streams[]</code> + <code>ai_behavior[]</code>). В общий массив вошли 8 psAIcho-сигналов; 4 существующих AI-Mind-сигнала ретегнуты как human+ai loop; опубликованы <code>atlas.json</code> и <code>psaicho_methodology.json</code>.</li>
 <li><strong>v0.8.1 (2026-05-10):</strong> <strong>Редакторская синхронизация</strong>. (1) PH13 ID нормализован: в методологии был <code>PH13_dev_and_pro_effects</code>, в сигналах — <code>PH13_developer_and_pro_effects</code>; синхронизировано на сигналы. (2) Паттерны вовлечения (E1–E5) формально определены в методологии — раньше использовались в сигналах без определения. (3) Исправлена ссылка Brooks signal-id в claim (<code>SIG_2025_BROOKS</code> → <code>SIG_2025_BROOKS_DELUSIONAL_SPIRAL</code>). (4) Счётчик пробелов не дублирует <code>methodology.gaps_residual</code> в <code>factcheck.gaps</code>. (5) Заголовок методологии "14 феноменов" → "15 феноменов". (6) Footer copyright v0.1 → v0.8. (7) <code>statistical_meta_summary</code> рендерится отдельной секцией в HTML с якорем <code>#statistical-meta-summary</code>. (8) gap-01 и gap-13 (оба про RU-кейсы) консолидированы — gap-13 как canonical, gap-01 SUPERSEDED. (9) V6/V7/PH04 явно помечены как underused / methodological-category-without-current-signal для прозрачности.</li>
 <li><strong>v0.9 (2026-05-31):</strong> +19 сигналов / +19 фактчек-утверждений: базовый проход v0.9 и дополнительный набор Human Line Project, GUARD Act, Nelson v. OpenAI, Riley/Perplexity, China elderly AI-avatar case and Xiao Gao/DeepSeek cyberspace-widow. Закрыты gap-20, gap-21, gap-23; gap-22 частично закрыт. Добавлен <code>V8_elderly_or_cognitive_impairment</code>; <code>V6_substance_or_sleep</code> получил litigation/digital-trace anchors. PH01 отображается как “ИИ-усиленные искажённые убеждения / делюзиональные спирали” при сохранении legacy ID.</li>
 <li><strong>v0.8 (2026-05-10):</strong> <strong>AuDHD operationalization</strong> + <strong>statistical meta-summary с 11 пользовательскими фильтрами</strong>. V5_neurodivergence расширен в methodology v0.5: ADHD/AuDHD как formal sub-categories с base rate 30-50% co-occurrence; ICD-10 коды F84.0+F90.X для AuDHD; ADHD-specific patterns отделены от ASD. Terminology precision: Asperger → ASD level 1 (DSM-5 2013) — Setzer enrichment переформулирован, AuDHD-likelihood помечена как statistical inference (не fact-claim). Tristan Roberts UK помечен как первый court-documented AuDHD case. Новый top-level раздел <code>statistical_meta_summary</code> в factcheck.json: применены 11 фильтров (GRADE≥2, I²&lt;50%, мощность≥80%, n&gt;100/arm, NNT&lt;10, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023-2026 (Feng N=29,637; Zhang N=6,314; npj 2026 N=7,401; Li N=1,974; He N=6,089). Survivor pool: только 2 subgroup-specific findings (Li 2025 youth subclinical depression; Wang 2025 Chinese students loneliness) проходят все critères. APA Health Advisory 13.11.2025 коррoborates. <a href="#dataset-audit-g" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Седьмой dataset audit</a>.</li>
@@ -4175,7 +4543,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 </section>
 
 <footer>
-<p>AI-Mind v0.9 + psAIcho v0.1 — публичный датасет психологического, культурного и модельно-поведенческого влияния ИИ-ассистентов.
+<p>AI-Mind v0.9.1 + psAIcho v0.2 — публичный датасет психологического, культурного и модельно-поведенческого влияния ИИ-ассистентов.
 Архитектура воспроизводит подход <a href="https://github.com/scadastrangelove/profgames">scadastrangelove/profgames</a>:
 трёхслойная схема и Atlas-мост (<code>atlas.json</code> + <code>aimind_methodology_pack.json</code> + <code>psaicho_methodology.json</code> + <code>aimind_signals.jsonl</code> + <code>aimind_factcheck.json</code>),
 шкала доказательности A/B/C/D, статусы <code>verified</code> / <code>partially_verified</code> / <code>needs_correction</code> / <code>not_verified</code> / <code>not_found</code> / <code>disputed</code>.</p>

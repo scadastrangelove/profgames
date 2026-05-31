@@ -1,4 +1,4 @@
-# psAIcho × AI-Mind — пакет v0.1 (зеркальная линза + мета-слой)
+# psAIcho × AI-Mind — пакет v0.2 (зеркальная линза + мета-слой)
 
 Дата: 2026-05-31. Архитектура: **один spine, две линзы, мета-слой**.
 
@@ -8,7 +8,7 @@
 |---|---|---|
 | `atlas.json` | мета: карта-как-данные, правило роутинга, общая шкала A–D, overlap-registry, guardrails | Мета (Atlas) |
 | `psaicho_methodology.json` | таксономия модельной оси **AB01–AB07** (тренды и исследования, не одиночные фейлы) | Линза psAIcho |
-| `aimind_signals.jsonl` | 8 psAIcho-сигналов, влитых в общий `aimind_signals.jsonl` (schema v0.2 со `streams[]` + `ai_behavior[]`) | Spine |
+| `aimind_signals.jsonl` | 18 psAIcho-сигналов, влитых в общий `aimind_signals.jsonl` (schema v0.2 со `streams[]` + `ai_behavior[]`) | Spine |
 | `README_psaicho.md` | этот файл | — |
 
 ## Модель в одном абзаце
@@ -41,7 +41,7 @@
 
 ## Миграция (порядок)
 
-1. Bump schema до `aimind_signal_schema_v0.2`: добавить `streams[]` + `ai_behavior[]` (обратносовместимо; старые 49 сигналов = `streams:["human"]`).
+1. Bump schema до `aimind_signal_schema_v0.2`: добавить `streams[]` + `ai_behavior[]` (обратносовместимо; старые human-only сигналы = `streams:["human"]`).
 2. Ретег петли в существующем AI-Mind по `atlas.json → retag_registry`: Cheng, Stanford spirals, GPT-4o sycophancy rollback, OpenAI disclosure → `streams:["human","ai"]` + соответствующие AB.
 3. Влить `aimind_signals.jsonl` в общий spine.
 4. Собрать Atlas-страницу из `atlas.json` (карта + routing + guardrails + Venn-счётчики).
