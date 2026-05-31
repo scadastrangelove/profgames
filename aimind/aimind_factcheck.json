@@ -75,7 +75,7 @@
       {
         "version": "0.9",
         "date": "2026-05-31",
-        "description": "Eighth dataset audit finalized: v0.9 now contains +19 signals and +19 claims over v0.8. Original pass added CSM, FAU, OpenAI context safety summaries, Nature/CETaS terminology anchors, Illinois WOPR, FTC inquiry, Australia eSafety, Wongbandue, Surat/Korea, NEDA/Tessa and Koko. Supplement pass added Human Line Project/ABC self-selected case pool, GUARD Act committee-stage federal bill, Nelson v. OpenAI, Riley/Perplexity medical over-reliance, China elderly AI-avatar divorce and Xiao Gao/DeepSeek cyberspace-widow. Closed gap-20/21/23; gap-22 partially closed. Added V8_elderly_or_cognitive_impairment and softened PH01 label while preserving legacy ID."
+        "description": "Ninth dataset audit finalized: v0.9 now contains +19 signals and +19 claims over v0.8. Original pass added CSM, FAU, OpenAI context safety summaries, Nature/CETaS terminology anchors, Illinois WOPR, FTC inquiry, Australia eSafety, Wongbandue, Surat/Korea, NEDA/Tessa and Koko. Supplement pass added Human Line Project/ABC self-selected case pool, GUARD Act committee-stage federal bill, Nelson v. OpenAI, Riley/Perplexity medical over-reliance, China elderly AI-avatar divorce and Xiao Gao/DeepSeek cyberspace-widow. Closed gap-20/21/23; gap-22 partially closed. Added V8_elderly_or_cognitive_impairment and softened PH01 label while preserving legacy ID."
       },
       {
         "version": "0.8.1",
