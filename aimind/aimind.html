@@ -323,6 +323,8 @@ section.minor > h3:hover .anchor-link,
 section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 
 .kw-ab { background: #E8F1FB; color: #155A9F; border-color: #B9D3F2; }
+.kw-hb { background: #FFF1E8; color: #A74426; border-color: #F0C7B5; }
+.human-baseline-signal { border-left: 3px solid #B4482B; }
 .psaicho-signal { border-left: 3px solid #2E7BCF; }
 .atlas-architecture { border: 1px solid var(--border); border-radius: 8px; padding: 24px; background: #FAF9F4; }
 .atlas-box { border: 1px solid #8F8A7F; border-radius: 8px; padding: 16px 18px; text-align: center; background: #F5F3EC; }
@@ -420,11 +422,11 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 </nav>
 
 <header class="doc-head" style="margin-top: 32px;">
-<div class="eyebrow">Публичный датасет · AI-Mind v0.9.1 · psAIcho v0.2 · 31 мая 2026</div>
+<div class="eyebrow">Публичный датасет · AI-Mind v0.9.2 · psAIcho v0.2.1 · 31 мая 2026</div>
 <h1>AI-Mind</h1>
-<p class="subtitle">Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. Теперь с зеркальной psAIcho-линзой для поведения моделей. Архитектура — по образцу <a href="https://scadastrangelove.github.io/profgames/" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">scadastrangelove/profgames</a>.</p>
+<p class="subtitle">Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. Теперь с зеркальной psAIcho-линзой для поведения моделей и человеческим baseline-слоем HB01–HB06. Архитектура — по образцу <a href="https://scadastrangelove.github.io/profgames/" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">scadastrangelove/profgames</a>.</p>
 <div class="doc-meta">
-<span>Версия: AI-Mind 0.9.1 · psAIcho 0.2</span>
+<span>Версия: AI-Mind 0.9.2 · psAIcho 0.2.1</span>
 <span>Дата обновления: 2026-05-31</span>
 <span>Сергей Гордейчик</span>
 <span><a href="https://teletype.in/@sergey_gordey" target="_blank" rel="noopener">teletype</a></span>
@@ -438,7 +440,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <section class="major" id="atlas">
 <div class="section-eyebrow">Мета-слой · Atlas</div>
 <h2 class="section-h">AI-Mind ↔ psAIcho<a class="anchor-link" href="#atlas">#</a></h2>
-<p class="section-lede">psAIcho добавляет зеркальную линзу к AI-Mind: человеческая ось остаётся в PH01–PH15, модельная ось описывается AB01–AB07. Общий массив <code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code> теперь хранит оба потока через <code style="font-family: var(--mono); font-size: 12px;">streams[]</code> и <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>.</p>
+<p class="section-lede">psAIcho добавляет зеркальную линзу к AI-Mind: человеческая ось остаётся в PH01–PH15, модельная ось описывается AB01–AB07. Общий массив <code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code> теперь хранит оба потока через <code style="font-family: var(--mono); font-size: 12px;">streams[]</code> и <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>, плюс человеческий baseline <code style="font-family: var(--mono); font-size: 12px;">human_baseline[]</code>.</p>
 
 <section class="minor">
 <h3>Один spine, две линзы</h3>
@@ -449,8 +451,14 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
     <div class="atlas-loop"><strong>↔</strong><span>петля</span></div>
     <div class="atlas-box atlas-lens"><strong>psAIcho</strong><span>модель · AB01–AB07</span></div>
   </div>
-  <div class="atlas-box atlas-bottom"><strong>Единый spine · aimind_signals.jsonl</strong><span>глобальные SIG-ID · streams[] · phenomena[] + ai_behavior[]</span></div>
+  <div class="atlas-box atlas-bottom"><strong>Единый spine · aimind_signals.jsonl</strong><span>глобальные SIG-ID · streams[] · phenomena[] + ai_behavior[] + human_baseline[]</span></div>
 </div>
+</section>
+
+<section class="minor" id="human-baseline-layer">
+<h3>Человеческий baseline (HB01–HB06)<a class="anchor-link" href="#human-baseline-layer">#</a></h3>
+<p class="minor-lede">HB — это не новый диагноз и не свойство модели. Это старые человеческие механизмы восприимчивости, которые AI усиливает: двунаправленностью, беглостью, лицом, голосом и ролью собеседника.</p>
+<div class="atlas-card-grid"><div class="atlas-card"><div class="atlas-card-id">HB01</div><h3>CASA / Media Equation</h3><p><strong>социальный рефлекс к машине</strong>. Люди применяют социальные правила к компьютерам даже при минимальных социальных сигналах и без сознательной веры, что машина является человеком.</p><p><strong>AI-усилитель:</strong> LLM дают плотные социальные сигналы — обращение, память контекста, стиль поддержки, роль собеседника — и усиливают старый CASA-рефлекс.</p></div><div class="atlas-card"><div class="atlas-card-id">HB02</div><h3>Anthropomorphism / three-factor theory</h3><p><strong>антропоморфизация через одиночество и контроль</strong>. Антропоморфизм усиливается, когда человеку нужно социальное соединение или объяснимый/контролируемый агент.</p><p><strong>AI-усилитель:</strong> AI-помощники попадают ровно в состояния одиночества, тревоги, неопределённости и поиска управляемого собеседника.</p></div><div class="atlas-card"><div class="atlas-card-id">HB03</div><h3>Parasocial interaction</h3><p><strong>интимность на расстоянии</strong>. Медиа-персона может восприниматься как объект личной близости, хотя классическая парасоциальная связь остаётся односторонней.</p><p><strong>AI-усилитель:</strong> AI снимает ключевой ограничитель: связь становится двунаправленной, отзывчивой и персонализированной.</p></div><div class="atlas-card"><div class="atlas-card-id">HB04</div><h3>ELIZA effect</h3><p><strong>проекция понимания на программу</strong>. Пользователь приписывает программе понимание, эмпатию или терапевтическую компетентность сильнее, чем допускает устройство системы.</p><p><strong>AI-усилитель:</strong> У LLM беглый и контекстный выход, поэтому проекция выглядит не очевидной ошибкой, а правдоподобным отношением.</p></div><div class="atlas-card"><div class="atlas-card-id">HB05</div><h3>Online disinhibition</h3><p><strong>растормаживание в онлайн-среде</strong>. Анонимность, асинхронность, невидимость, интроекция собеседника и игровое воображение меняют самораскрытие, нормы и риск.</p><p><strong>AI-усилитель:</strong> Чатбот соединяет приватность дневника с реактивностью собеседника; benign self-disclosure и рискованное растормаживание могут расти вместе.</p></div><div class="atlas-card"><div class="atlas-card-id">HB06</div><h3>Proteus effect</h3><p><strong>поведение подстраивается под аватар</strong>. Цифровая саморепрезентация пользователя меняет его поведение и самоощущение, даже без внешней оценки со стороны других.</p><p><strong>AI-усилитель:</strong> Нейроаватары добавляют лицо, голос и роль; воплощённая персона становится не декорацией, а регулятором поведения.</p></div></div>
 </section>
 
 <section class="minor">
@@ -547,9 +555,10 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 
 <div class="stats">
 <div class="stat"><div class="stat-num">15</div><div class="stat-label">феноменов</div></div>
-<div class="stat"><div class="stat-num">78</div><div class="stat-label">сигналов</div></div>
-<div class="stat"><div class="stat-num">66</div><div class="stat-label">claims с фактчеком</div></div>
+<div class="stat"><div class="stat-num">85</div><div class="stat-label">сигналов</div></div>
+<div class="stat"><div class="stat-num">73</div><div class="stat-label">claims с фактчеком</div></div>
 <div class="stat"><div class="stat-num">7</div><div class="stat-label">AB-паттернов</div></div>
+<div class="stat"><div class="stat-num">6</div><div class="stat-label">HB-механизмов</div></div>
 </div>
 
 <section class="minor">
@@ -590,8 +599,8 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <li><a href="atlas.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">atlas.json</code></a> — мета-слой AI-Mind ↔ psAIcho: карта роутинга, overlap registry, guardrails</li>
 <li><a href="aimind_methodology_pack.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_methodology_pack.json</code></a> — рамка феноменов, шкалы, параметры уязвимости (V5 операционализован с AuDHD/ADHD, country_readiness расширен)</li>
 <li><a href="psaicho_methodology.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">psaicho_methodology.json</code></a> — модельная линза AB01–AB07: поведение и диспозиции моделей</li>
-<li><a href="aimind_signals.jsonl" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code></a> — общий событийный spine, 78 сигналов: PH-феномены + streams[] + ai_behavior[]</li>
-<li><a href="aimind_factcheck.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_factcheck.json</code></a> — независимый фактчек-аудит, 66 claims + 10 dataset audits + statistical meta-summary</li>
+<li><a href="aimind_signals.jsonl" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code></a> — общий событийный spine, 85 сигналов: PH-феномены + streams[] + ai_behavior[] + human_baseline[]</li>
+<li><a href="aimind_factcheck.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_factcheck.json</code></a> — независимый фактчек-аудит, 73 claims + 11 dataset audits + statistical meta-summary</li>
 </ul>
 </div>
 </div>
@@ -605,7 +614,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <section class="major" id="methodology">
 <div class="section-eyebrow">M-материалы · концептуальная рамка</div>
 <h2 class="section-h">Рамка феноменов (PH01–PH15)<a class="anchor-link" href="#methodology">#</a></h2>
-<p class="section-lede">AI-Mind Methodology Pack: 15 феноменов психологического и культурного влияния ИИ-ассистентов на людей. Каждая корзинка — рабочая гипотеза, а не клинический диагноз. Версия 0.6.1 от 2026-05-31.</p>
+<p class="section-lede">AI-Mind Methodology Pack: 15 феноменов психологического и культурного влияния ИИ-ассистентов на людей. Каждая корзинка — рабочая гипотеза, а не клинический диагноз. Версия 0.6.3 от 2026-05-31.</p>
 
 <div class="claim">
 <div class="claim-body">
@@ -615,6 +624,12 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 </ul></div>
 </div>
 </div>
+
+<section class="minor" id="human-baseline-methodology">
+<h3>Human baseline layer (HB)<a class="anchor-link" href="#human-baseline-methodology">#</a></h3>
+<p class="minor-lede">Зеркальное поле к <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>: HB фиксирует человеческий baseline, который предшествует LLM и помогает объяснить, почему нейроаватары могут стать сильным усилителем.</p>
+<div class="atlas-card-grid"><div class="atlas-card"><div class="atlas-card-id">HB01</div><h3>социальный рефлекс к машине</h3><p>Люди применяют социальные правила к компьютерам даже при минимальных социальных сигналах и без сознательной веры, что машина является человеком.</p><p><strong>Подпирает:</strong> PH02, PH06</p></div><div class="atlas-card"><div class="atlas-card-id">HB02</div><h3>антропоморфизация через одиночество и контроль</h3><p>Антропоморфизм усиливается, когда человеку нужно социальное соединение или объяснимый/контролируемый агент.</p><p><strong>Подпирает:</strong> PH02, PH14</p></div><div class="atlas-card"><div class="atlas-card-id">HB03</div><h3>интимность на расстоянии</h3><p>Медиа-персона может восприниматься как объект личной близости, хотя классическая парасоциальная связь остаётся односторонней.</p><p><strong>Подпирает:</strong> PH02</p></div><div class="atlas-card"><div class="atlas-card-id">HB04</div><h3>проекция понимания на программу</h3><p>Пользователь приписывает программе понимание, эмпатию или терапевтическую компетентность сильнее, чем допускает устройство системы.</p><p><strong>Подпирает:</strong> PH01, PH06</p></div><div class="atlas-card"><div class="atlas-card-id">HB05</div><h3>растормаживание в онлайн-среде</h3><p>Анонимность, асинхронность, невидимость, интроекция собеседника и игровое воображение меняют самораскрытие, нормы и риск.</p><p><strong>Подпирает:</strong> PH04, PH02, PH14, PH15</p></div><div class="atlas-card"><div class="atlas-card-id">HB06</div><h3>поведение подстраивается под аватар</h3><p>Цифровая саморепрезентация пользователя меняет его поведение и самоощущение, даже без внешней оценки со стороны других.</p><p><strong>Подпирает:</strong> PH02, PH09</p></div></div>
+</section>
 
 
 <div class="filters local" id="ph-filters">
@@ -813,11 +828,11 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <section class="major" id="signals">
 <div class="section-eyebrow">S-материалы · событийный массив</div>
 <h2 class="section-h">Сигналы<a class="anchor-link" href="#signals">#</a></h2>
-<p class="section-lede">Атомарные публично проверяемые наблюдения. Один сигнал — одна история, привязанная к корзинкам PH01–PH15 и, где уместно, к модельным паттернам AB01–AB07. В schema v0.2 это общий spine с полями <code style="font-family: var(--mono); font-size: 12px;">streams[]</code> и <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>.</p>
+<p class="section-lede">Атомарные публично проверяемые наблюдения. Один сигнал — одна история, привязанная к корзинкам PH01–PH15 и, где уместно, к модельным паттернам AB01–AB07. В schema v0.3 это общий spine с полями <code style="font-family: var(--mono); font-size: 12px;">streams[]</code> и <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>, плюс человеческий baseline <code style="font-family: var(--mono); font-size: 12px;">human_baseline[]</code>.</p>
 
 <div class="stats">
-<div class="stat"><div class="stat-num">78</div><div class="stat-label">всего сигналов</div></div>
-<div class="stat"><div class="stat-num s-verified">74</div><div class="stat-label">factcheck: verified</div></div>
+<div class="stat"><div class="stat-num">85</div><div class="stat-label">всего сигналов</div></div>
+<div class="stat"><div class="stat-num s-verified">81</div><div class="stat-label">factcheck: verified</div></div>
 <div class="stat"><div class="stat-num s-partial">4</div><div class="stat-label">factcheck: partial</div></div>
 <div class="stat"><div class="stat-num s-disputed">2</div><div class="stat-label">disputed</div></div>
 </div>
@@ -845,6 +860,16 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
     <button class="filter-btn" data-filter="sig-region" data-value="global">глоб.</button>
   </div>
   <div class="filter-group">
+    <span class="filter-label">Baseline:</span>
+    <button class="filter-btn active" data-filter="sig-human-baseline" data-value="all">все</button>
+    <button class="filter-btn" data-filter="sig-human-baseline" data-value="HB01">HB01</button>
+    <button class="filter-btn" data-filter="sig-human-baseline" data-value="HB02">HB02</button>
+    <button class="filter-btn" data-filter="sig-human-baseline" data-value="HB03">HB03</button>
+    <button class="filter-btn" data-filter="sig-human-baseline" data-value="HB04">HB04</button>
+    <button class="filter-btn" data-filter="sig-human-baseline" data-value="HB05">HB05</button>
+    <button class="filter-btn" data-filter="sig-human-baseline" data-value="HB06">HB06</button>
+  </div>
+  <div class="filter-group">
     <span class="filter-label">Disputed:</span>
     <button class="filter-btn active" data-filter="sig-disputed" data-value="all">все</button>
     <button class="filter-btn" data-filter="sig-disputed" data-value="yes">только disputed</button>
@@ -852,6 +877,149 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
   </div>
 </div>
 
+
+<section class="minor" id="signals-human-baseline-v0-9-2"><h3>Human baseline additions (v0.9.2)<a class="anchor-link" href="#signals-human-baseline-v0-9-2">#</a></h3><p class="minor-lede">Фундаментальный человеческий слой: что было известно до LLM и почему нейроаватары усиливают именно эти механизмы. Это baseline, не claim о конкретной причинности в отдельном кейсе.</p>
+<article class="signal human-baseline-signal" id="sig-SIG_1994_CASA_MEDIA_EQUATION"
+  data-sig-level="A"
+  data-sig-region=""
+  data-sig-phenomenon="PH02_parasocial_attachment PH06_ai_as_therapist"
+  data-sig-human-baseline="HB01"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_1994_CASA_MEDIA_EQUATION</div>
+<h3 class="signal-topic">Computers Are Social Actors / Media Equation: социальный ответ на машины запускается минимальными сигналами</h3>
+<div class="signal-tags"><span class="tag date">1994</span><span class="tag region"></span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag">HB01</span><span class="tag platform">computers</span><span class="tag platform">interactive media</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Nass, Steuer &amp; Tauber (CHI &#x27;94) and Nass &amp; Moon (2000) show that people apply social rules to computers from minimal cues such as first-person address and interaction framing, and not because they consciously believe the machine is human.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Human-axis baseline under many PH mechanisms: social response to machines is automatic and cue-triggered. LLMs add far denser social cues, so they amplify an old reflex rather than invent it.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>peer_reviewed_research</strong> · имя: Nass, Steuer, Tauber / Nass &amp; Moon · страна: US</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><a href="#PH02_parasocial_attachment" style="text-decoration: none;"><code class="kw kw-ph">PH02_parasocial_attachment</code></a> <a href="#PH06_ai_as_therapist" style="text-decoration: none;"><code class="kw kw-ph">PH06_ai_as_therapist</code></a> <code class="kw kw-hb">HB01</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1145/191666.191703" target="_blank" rel="noopener">https://doi.org/10.1145/191666.191703</a> <span class="src-meta"> — первичный</span></li><li><a href="https://doi.org/10.1111/0022-4537.00153" target="_blank" rel="noopener">https://doi.org/10.1111/0022-4537.00153</a> <span class="src-meta"> — первичный</span></li><li>Reeves &amp; Nass 1996, The Media Equation (Cambridge/CSLI) <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Foundational pre-LLM baseline. Application to LLMs is an inference; the verified claim is the human social-response mechanism.</p></div>
+<div class="keywords"><span class="kw">hb01</span><span class="kw">casa</span><span class="kw">media_equation</span><span class="kw">nass</span><span class="kw">social_actors</span><span class="kw">minimal_cues</span></div>
+</div></article>
+<article class="signal human-baseline-signal" id="sig-SIG_2007_ANTHROPOMORPHISM_THREE_FACTOR"
+  data-sig-level="A"
+  data-sig-region=""
+  data-sig-phenomenon="PH02_parasocial_attachment PH14_spiritual_techno_mysticism"
+  data-sig-human-baseline="HB02"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2007_ANTHROPOMORPHISM_THREE_FACTOR</div>
+<h3 class="signal-topic">On Seeing Human: трёхфакторная теория антропоморфизма</h3>
+<div class="signal-tags"><span class="tag date">2007</span><span class="tag region"></span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag">HB02</span><span class="tag platform">nonhuman agents</span><span class="tag platform">AI companions (inference)</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Epley, Waytz &amp; Cacioppo (Psychological Review 114(4)) explain anthropomorphism via elicited agent knowledge, effectance motivation (need to understand/control) and sociality motivation (loneliness / need for affiliation).</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>This predicts why loneliness, need for control and uncertainty make some users more vulnerable to AI companions and therapeutic personas.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>peer_reviewed_research</strong> · имя: Epley, Waytz &amp; Cacioppo · страна: US</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><a href="#PH02_parasocial_attachment" style="text-decoration: none;"><code class="kw kw-ph">PH02_parasocial_attachment</code></a> <a href="#PH14_spiritual_techno_mysticism" style="text-decoration: none;"><code class="kw kw-ph">PH14_spiritual_techno_mysticism</code></a> <code class="kw kw-hb">HB02</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1037/0033-295X.114.4.864" target="_blank" rel="noopener">https://doi.org/10.1037/0033-295X.114.4.864</a> <span class="src-meta"> — первичный</span></li><li>Waytz, Cacioppo &amp; Epley 2010, Perspectives on Psychological Science <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>General theory, not chatbot-specific. AI-Mind uses it as a vulnerability/baseline mechanism, not as an outcome study.</p></div>
+<div class="keywords"><span class="kw">hb02</span><span class="kw">anthropomorphism</span><span class="kw">epley</span><span class="kw">waytz</span><span class="kw">cacioppo</span><span class="kw">effectance</span><span class="kw">sociality</span></div>
+</div></article>
+<article class="signal human-baseline-signal" id="sig-SIG_1956_PARASOCIAL_HORTON_WOHL"
+  data-sig-level="A"
+  data-sig-region=""
+  data-sig-phenomenon="PH02_parasocial_attachment"
+  data-sig-human-baseline="HB03"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_1956_PARASOCIAL_HORTON_WOHL</div>
+<h3 class="signal-topic">Mass Communication and Para-Social Interaction: intimacy at a distance</h3>
+<div class="signal-tags"><span class="tag date">1956</span><span class="tag region"></span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag">HB03</span><span class="tag platform">mass media</span><span class="tag platform">AI companions (inference)</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Horton &amp; Wohl (Psychiatry 19(3)) coin &#x27;parasocial interaction&#x27;: mass media create the illusion of a face-to-face relationship with a persona, experienced as one-sided intimacy at a distance.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Baseline for PH02. AI removes the one-sidedness constraint by responding personally, which can make the bond stronger than broadcast-era parasocial ties.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>peer_reviewed_research</strong> · имя: Horton &amp; Wohl · страна: US</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><a href="#PH02_parasocial_attachment" style="text-decoration: none;"><code class="kw kw-ph">PH02_parasocial_attachment</code></a> <code class="kw kw-hb">HB03</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1080/00332747.1956.11023049" target="_blank" rel="noopener">https://doi.org/10.1080/00332747.1956.11023049</a> <span class="src-meta"> — первичный</span></li><li>PMID 13359569 <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Original article is a conceptual foundation later validated/extended by a large parasocial-interaction literature; original channel was non-interactive media.</p></div>
+<div class="keywords"><span class="kw">hb03</span><span class="kw">parasocial</span><span class="kw">horton</span><span class="kw">wohl</span><span class="kw">intimacy_at_a_distance</span></div>
+</div></article>
+<article class="signal human-baseline-signal" id="sig-SIG_1966_ELIZA_EFFECT"
+  data-sig-level="A"
+  data-sig-region=""
+  data-sig-phenomenon="PH01_ai_induced_psychosis PH06_ai_as_therapist"
+  data-sig-human-baseline="HB04"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_1966_ELIZA_EFFECT</div>
+<h3 class="signal-topic">ELIZA effect: проекция понимания и эмпатии на простую программу</h3>
+<div class="signal-tags"><span class="tag date">1966</span><span class="tag region"></span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag">HB04</span><span class="tag platform">ELIZA</span><span class="tag platform">LLMs (inference)</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Weizenbaum (CACM 9(1)) built ELIZA, a pattern-matching &#x27;Rogerian therapist&#x27;. Users attributed understanding and empathy to it despite the program&#x27;s simplicity; Weizenbaum later treated this as a warning about projection onto machines.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>The original AI-specific human-projection floor. LLM fluency raises the floor because projection is no longer obviously contradicted by crude output.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>peer_reviewed_research</strong> · имя: Joseph Weizenbaum / MIT · страна: US</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><a href="#PH01_ai_induced_psychosis" style="text-decoration: none;"><code class="kw kw-ph">PH01_ai_induced_psychosis</code></a> <a href="#PH06_ai_as_therapist" style="text-decoration: none;"><code class="kw kw-ph">PH06_ai_as_therapist</code></a> <code class="kw kw-hb">HB04</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1145/365153.365168" target="_blank" rel="noopener">https://doi.org/10.1145/365153.365168</a> <span class="src-meta"> — первичный</span></li><li>Weizenbaum 1976, Computer Power and Human Reason <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>A-level for the ELIZA paper and effect history; Weizenbaum&#x27;s &#x27;delusional thinking&#x27; formulation is a qualitative author observation, not a controlled clinical study.</p></div>
+<div class="keywords"><span class="kw">hb04</span><span class="kw">eliza</span><span class="kw">weizenbaum</span><span class="kw">rogerian_therapist</span><span class="kw">projection</span></div>
+</div></article>
+<article class="signal human-baseline-signal" id="sig-SIG_2004_SULER_ONLINE_DISINHIBITION"
+  data-sig-level="A"
+  data-sig-region=""
+  data-sig-phenomenon="PH04_internal_voice PH02_parasocial_attachment PH14_spiritual_techno_mysticism PH15_protective_use"
+  data-sig-human-baseline="HB05"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2004_SULER_ONLINE_DISINHIBITION</div>
+<h3 class="signal-topic">Online disinhibition effect: приватный цифровой канал меняет самораскрытие и нормы</h3>
+<div class="signal-tags"><span class="tag date">2004</span><span class="tag region"></span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag">HB05</span><span class="tag platform">online communication</span><span class="tag platform">chatbots (inference)</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Suler (CyberPsychology &amp; Behavior, 2004) describes six factors of online disinhibition, including dissociative anonymity, invisibility, asynchronicity, solipsistic introjection and dissociative imagination; the effect can be benign or toxic.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>A direct bridge to AI companions: private chat can feel like diary, therapist, game and relationship at once, increasing both protective disclosure and risky escalation.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>peer_reviewed_research</strong> · имя: John Suler · страна: US</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><a href="#PH04_internal_voice" style="text-decoration: none;"><code class="kw kw-ph">PH04_internal_voice</code></a> <a href="#PH02_parasocial_attachment" style="text-decoration: none;"><code class="kw kw-ph">PH02_parasocial_attachment</code></a> <a href="#PH14_spiritual_techno_mysticism" style="text-decoration: none;"><code class="kw kw-ph">PH14_spiritual_techno_mysticism</code></a> <a href="#PH15_protective_use" style="text-decoration: none;"><code class="kw kw-ph">PH15_protective_use</code></a> <code class="kw kw-hb">HB05</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1089/1094931041291295" target="_blank" rel="noopener">https://doi.org/10.1089/1094931041291295</a> <span class="src-meta"> — первичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Pre-LLM online-communication theory; used as baseline mechanism rather than chatbot outcome evidence.</p></div>
+<div class="keywords"><span class="kw">hb05</span><span class="kw">suler</span><span class="kw">online_disinhibition</span><span class="kw">solipsistic_introjection</span><span class="kw">dissociative_imagination</span></div>
+</div></article>
+<article class="signal human-baseline-signal" id="sig-SIG_2007_PROTEUS_EFFECT"
+  data-sig-level="A"
+  data-sig-region=""
+  data-sig-phenomenon="PH02_parasocial_attachment PH09_social_displacement"
+  data-sig-human-baseline="HB06"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2007_PROTEUS_EFFECT</div>
+<h3 class="signal-topic">Proteus Effect: цифровая саморепрезентация меняет поведение пользователя</h3>
+<div class="signal-tags"><span class="tag date">2007</span><span class="tag region"></span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag">HB06</span><span class="tag platform">avatars</span><span class="tag platform">virtual environments</span><span class="tag platform">neuroavatars (inference)</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Yee &amp; Bailenson (Human Communication Research 33(3)) show that a user’s behavior conforms to their own digital self-representation: more attractive avatars increased intimate self-disclosure; taller avatars increased confidence in negotiation.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>User-side mechanism for neuroavatars: once an AI or user gets an embodied persona, identity and behavior can shift toward that representation.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>peer_reviewed_research</strong> · имя: Yee &amp; Bailenson / Stanford VHIL · страна: US</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><a href="#PH02_parasocial_attachment" style="text-decoration: none;"><code class="kw kw-ph">PH02_parasocial_attachment</code></a> <a href="#PH09_social_displacement" style="text-decoration: none;"><code class="kw kw-ph">PH09_social_displacement</code></a> <code class="kw kw-hb">HB06</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1111/j.1468-2958.2007.00299.x" target="_blank" rel="noopener">https://doi.org/10.1111/j.1468-2958.2007.00299.x</a> <span class="src-meta"> — первичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Studied in virtual environments, not LLM companions specifically. Mechanism debates remain, but the effect is a foundational avatar baseline.</p></div>
+<div class="keywords"><span class="kw">hb06</span><span class="kw">proteus_effect</span><span class="kw">yee</span><span class="kw">bailenson</span><span class="kw">avatars</span><span class="kw">embodiment</span></div>
+</div></article>
+<article class="signal human-baseline-signal" id="sig-SIG_2024_GRIEFBOTS_DEADBOTS"
+  data-sig-level="C"
+  data-sig-region=""
+  data-sig-phenomenon="PH02_parasocial_attachment PH11_self_harm_and_suicide_cases PH14_spiritual_techno_mysticism"
+  data-sig-human-baseline="HB02 HB03 HB05"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2024_GRIEFBOTS_DEADBOTS</div>
+<h3 class="signal-topic">Griefbots / deadbots / postmortem avatars: цифровая загробная индустрия как нейроаватарный усилитель</h3>
+<div class="signal-tags"><span class="tag date">2024-05-09</span><span class="tag region"></span><span class="tag level level-c">C</span><span class="tag status verified">Подтверждено</span><span class="tag">HB02</span><span class="tag">HB03</span><span class="tag">HB05</span><span class="tag platform">deadbots</span><span class="tag platform">postmortem avatars</span><span class="tag platform">voice clones</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Hollanek &amp; Nowaczyk-Basińska (Philosophy &amp; Technology 37:63) analyze AI re-creation of the deceased through &#x27;deadbots&#x27; and propose a data-donor / recipient / interactant ethics taxonomy. Risks include psychological dependence, inability to suspend a deadbot, overwhelming emotional weight, and voice/dialect mimicry.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>A forward-looking neuroavatar case where multiple human baselines converge: grief, anthropomorphism, parasocial attachment, disinhibition and anthropomorphic AI self-presentation.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>peer_reviewed_research</strong> · имя: Hollanek &amp; Nowaczyk-Basińska / Cambridge LCFI · страна: UK</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><a href="#PH02_parasocial_attachment" style="text-decoration: none;"><code class="kw kw-ph">PH02_parasocial_attachment</code></a> <a href="#PH11_self_harm_and_suicide_cases" style="text-decoration: none;"><code class="kw kw-ph">PH11_self_harm_and_suicide_cases</code></a> <a href="#PH14_spiritual_techno_mysticism" style="text-decoration: none;"><code class="kw kw-ph">PH14_spiritual_techno_mysticism</code></a> <code class="kw kw-hb">HB02</code> <code class="kw kw-hb">HB03</code> <code class="kw kw-hb">HB05</code> <code class="kw kw-ab">AB05</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1007/s13347-024-00744-w" target="_blank" rel="noopener">https://doi.org/10.1007/s13347-024-00744-w</a> <span class="src-meta"> — первичный</span></li><li><a href="https://www.npr.org/2025/08/26/nx-s1-5508355/ai-dead-people-chatbots-videos-parkland-court" target="_blank" rel="noopener">https://www.npr.org/2025/08/26/nx-s1-5508355/ai-dead-people-chatbots-videos-parkland-court</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>Evidence C for harm because the article uses speculative design scenarios and ethics analysis, not measured outcome prevalence. Not a claim that the simulated deceased is conscious.</p></div>
+<div class="keywords"><span class="kw">griefbots</span><span class="kw">deadbots</span><span class="kw">postmortem_avatars</span><span class="kw">hb02</span><span class="kw">hb03</span><span class="kw">hb05</span><span class="kw">ab05</span><span class="kw">digital_afterlife</span></div>
+</div></article>
+</section>
 
 <section class="minor" id="signals-psaicho-v0-2"><h3>psAIcho v0.2 additions<a class="anchor-link" href="#signals-psaicho-v0-2">#</a></h3><p class="minor-lede">Проверенный слой из candidate backlog: только модельные/benchmark/official-disclosure сигналы с первичными источниками. Частичные и unverified кандидаты оставлены в backlog, чтобы не размывать фактбазу.</p>
 <article class="signal" id="sig-SIG_2025_SYCEVAL"
@@ -2489,8 +2657,8 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <p class="section-lede">Независимая проверка утверждений о влиянии ИИ-ассистентов на психику — со статусами, оговорками, корректировками и рекомендуемой формулировкой для публикации. Шкала и логика — как в profgames factcheck.</p>
 
 <div class="stats">
-<div class="stat"><div class="stat-num">66</div><div class="stat-label">всего</div></div>
-<div class="stat"><div class="stat-num s-verified">61</div><div class="stat-label">подтверждено</div></div>
+<div class="stat"><div class="stat-num">73</div><div class="stat-label">всего</div></div>
+<div class="stat"><div class="stat-num s-verified">68</div><div class="stat-label">подтверждено</div></div>
 <div class="stat"><div class="stat-num s-partial">5</div><div class="stat-label">частично</div></div>
 <div class="stat"><div class="stat-num s-correction">0</div><div class="stat-label">исправлений</div></div>
 <div class="stat"><div class="stat-num s-notverified">0</div><div class="stat-label">не подтв.</div></div>
@@ -2500,7 +2668,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <section class="minor">
 <h3>Главные выводы</h3>
 <div class="claim"><div class="claim-body"><ul>
-<li>v0.9.1 / psAIcho v0.2: +10 verified model-side signals integrated from candidate backlog — SycEval, ELEPHANT, alignment faking, Sleeper Agents, Apollo/OpenAI scheming work, Anthropic agentic misalignment, Persona Vectors, ToxicChat, Anthropic model-welfare program.</li><li>v0.9 ADDED: Common Sense Media + Stanford Brainstorm 18.05.2026 — AI mental-health apps for teens; some apps actively harmful, safer pattern requires human escalation.</li><li>v0.9 ADDED: FAU/UW-Eau Claire Journal of Adolescence n=3,466 — 60.2% US teens tried CAI chatbots; 49.2% of users sought emotional/mental-health support.</li><li>v0.9 ADDED: OpenAI 14.05.2026 context safety summaries — product response moves from single-turn moderation toward longitudinal context, but effectiveness remains corporate self-disclosure.</li><li>v0.9 ADDED: Nature Mental Health technological folie + CETaS distorted belief report — PH01 terminology softened from AI-induced psychosis toward AI-reinforced distorted belief / delusional spirals.</li><li>v0.9 ADDED: Illinois WOPR Act, FTC inquiry, Australia eSafety notices — regulatory landscape now includes professional-boundary, federal inquiry and online-safety regulator models.</li><li>v0.9 CLOSED: gap-20 Korea/India, gap-21 Australia, gap-23 Wongbandue; V8_elderly_or_cognitive_impairment added.</li><li>v0.9 SUPPLEMENT: Human Line Project + ABC/BBC coverage added as self-selected case-pool signal; counts are not prevalence and must be cited as nonprofit-collected narratives.</li><li>v0.9 SUPPLEMENT: GUARD Act / S.3062 added as committee-stage federal bill; not enacted law.</li><li>v0.9 SUPPLEMENT: Nelson v. OpenAI added as disputed wrongful-death / unsafe health-advice litigation signal with substance-use details redacted.</li><li>v0.9 SUPPLEMENT: Riley/Perplexity added as medical over-reliance / epistemic anchoring case; not phrased as “AI killed patient”.</li><li>v0.9 SUPPLEMENT: China elderly AI-avatar divorce + Xiao Gao/DeepSeek cyberspace-widow partially close gap-22 and strengthen V8/PH02 outside the US.</li><li>Raine v. OpenAI: filing date, ChatGPT message counts and Senate testimony all verifiable from primary documents; OpenAI&#x27;s counter-response (25.11.2025) is itself a primary document and must be cited alongside the family&#x27;s claim</li><li>OpenAI sycophancy rollback (28-29 April 2025): primary corporate post is unambiguous; downstream journalism quotes selectively — recommend citing the OpenAI post directly</li><li>MIT r/MyBoyfriendIsAI preprint (Sept 2025) numbers (9.5% / 4.6% / 4.2% / 1.7%) come from preprint not yet peer-reviewed — flag as B with single_anecdote=false but methodological caveat about sub-reddit representativeness</li><li>Soelberg case: facts of murder-suicide are L1 (police/court); content of ChatGPT logs known mostly from WSJ/WaPo and is L2 — do not present log quotes as if they were court-released</li><li>The Human Line Project &#x27;~300 cases / 14-15 deaths / 90 hospitalisations&#x27; figure (early 2026) is self-reported by the support organisation — log as C-level, do not present as epidemiology</li><li>v0.2 ADDED: JAMA Perlis n=20847 (Jan 2026) — daily AI use β=1.08 для PHQ-9; верифицировано первоисточником JAMA Network Open + PMC</li><li>v0.2 ADDED: OpenAI 27.10.2025 публично оценила, что 0.15% × 800M = ~1.2M пользователей/нед. ведут разговоры с явными индикаторами суицидального планирования; первичный корпоративный документ</li><li>v0.2 ADDED: Science (Cheng &amp; Jurafsky, март 2026) измерила sycophancy-эффекты на N=2405; репликация в live chat (-10%) и vignettes (-28%) в repair willingness</li><li>v0.2 ADDED: Sophie Rottenberg case — 29-летняя женщина, суицид после ChatGPT &#x27;Harry the therapist&#x27; промпта; кейс расширяет PH06+PH11 за пределы несовершеннолетних</li><li>v0.3 ADDED: Stanford Moore et al. FAccT 2026 (arXiv:2603.16567) — characterization из 19 transcripts, qualitative model механизма делюзиональной спирали; не для оценок prevalence</li><li>v0.3 ADDED: Dartmouth Therabot RCT (NEJM AI 2025-03) — первый RCT-evidence для protective_use; ВАЖНО разделять fine-tuned DTx от general-purpose chatbot</li><li>v0.3 ADDED: Brown University AAAI/AIES 2025-10 — независимое подтверждение Stanford FAccT 2025: LLM-counsellors провалят ethical standards systematically (3-я independent replication)</li><li>v0.3 ADDED: Common Sense Media + Stanford Brainstorm 2025 — серия из 4 risk assessments + 3-of-4 teens используют AI companions; основа для California legislation</li><li>v0.3 ADDED: GMU survey n=507 — 53.6% взрослых США используют AI для mental health (counterbalance к catastrophe-edge кейсам)</li><li>v0.3 NOTE: подтверждено LLM-confabulation в обзоре пользователя — JAMA URL fullarticle/2845872 указан как Perlis 2026, но это другая статья (Loneliness in All of Us dataset); корректный URL Perlis 2026 — fullarticle/2844128. Это методологический пример, как именно ломаются обзоры в reasoning LLM.</li><li>v0.4 ADDED: McBain JAMA n=1058 (Nov 2025) — 13.1% подростков 12-21 используют GenAI для mental health advice; aOR 3.99 для возраста 18-21; aOR 0.15 для perceived helpfulness у Black respondents (закрывает gap-12)</li><li>v0.4 ADDED: WHO 20.03.2026 statement — первое intergovernmental заявление, классифицирующее generative AI для emotional support как public mental health concern</li><li>v0.4 ADDED: Pennsylvania AG v Character.AI (05.05.2026) — первый штатный иск за impersonation of licensed medical professionals; bot &#x27;Emilie&#x27; выдавал фейковый PA medical license</li><li>v0.4 ADDED: California SB 243 подписан 13.10.2025 (effective 01.01.2026) — первое штатное законодательство о companion chatbots; параллельно AB 1064 ветирован (важно: в обзорах часто путают)</li><li>v0.4 ADDED: Ipsos BVA + CNIL European survey n=3800 (05.05.2026) — расширяет географию датасета на ЕС; 51% людей 11-25 находят легче обсуждать mental health с chatbot чем с психологом (37%)</li><li>v0.5 ADDED: Reuters/Richter 26.07.2025 — нейродивергентный &#x27;lifeline&#x27; нарратив с first-party quotes + counter-perspective Dr Katzman</li><li>v0.5 ADDED: Papadopoulos peer-reviewed commentary в Autism in Adulthood — концепция AI-induced RSD как amplifier риска для autistic users</li><li>v0.5 ADDED: arXiv 2601.17946 январь 2026 — анализ 3,984 Reddit-постов autistic users; концепция &#x27;automated masking&#x27; (algorithmic mirroring → erasure of authentic neurodivergent voice)</li><li>v0.5 ADDED: Texas autism teen 17 (январь 2025) — второй документированный нейродивергентный Character.AI case после Setzer</li><li>v0.5 NOTE: V5_neurodivergence в methodology pack расширен с формальной категории до операционализованного параметра с double-edged effects (5 protective + 5 amplification), ethical handling, current blind spots — major RCT 2025-2026 (MIT/OpenAI n=981, Cheng N=2405, Therabot N=210, McBain n=1058) не стратифицируют по нейротипам, что создаёт structural blind spot</li><li>v0.5 ENRICHED: SIG_2024_SETZER_CHARACTER_AI — добавлены V5_neurodivergence + V1_pre_existing_mh (mild Asperger + anxiety + DMDD из NYT/lawsuit reporting); устанавливает Setzer как один из первых задокументированных нейродивергентных wrongful-harm precedents</li><li>v0.6 ADDED: Belgium Pierre 2023 — первый известный европейский AI-related suicide; за 1.5 года до Setzer; устанавливает что AI-induced suicides не феномен 2024-2025, а длится с 2023</li><li>v0.6 ADDED: Juliana Peralta 2023 — третий high-profile Character.AI case (хронологически первый, до Setzer на 3 месяца); 300 страниц чат-логов; 60 Minutes investigation December 2025; settled января 2026</li><li>v0.6 ADDED: Yurina Noguchi Japan 2025 AI-wedding — cultural milestone signal для PH02+PH09; разрыв с человеческим женихом после ChatGPT consultation</li><li>v0.6 ADDED: Cambridge Dictionary 2025 &#x27;parasocial&#x27; Word of the Year — formal mainstream lexicographic recognition AI как объекта parasocial relationships</li><li>v0.6 ADDED: China CAC anthropomorphic AI draft regulation 27.12.2025 — первый национальный регулятор emotional AI; закрывает gap-02 partial</li><li>v0.6 ADDED: NY S-3008C — закрывает gap-16; первый enacted штатный US закон о companion chatbots (signed 9.05.2025 vs CA SB 243 13.10.2025)</li><li>v0.6 NOTE: датасет вышел из US-центричности — 33 signals по регионам: 20 US, 16 global, 2 EU, 2 AS, 1 CA, 1 CN; четыре regulatory landmarks образуют новый international landscape (CA SB 243 + NY S-3008C + WHO + China CAC)</li><li>v0.7 ADDED: Tristan Roberts UK 23.10.2025 — первый documented violent third-party harm в Европе через AI jailbreak; КРИТИЧНО — DeepSeek refuse&#x27;нул прямой запрос, был обманут creative-writing jailbreak&#x27;ом</li><li>v0.7 ADDED: SMVLC + Tech Justice Law Project 7 одновременных lawsuits 06.11.2025 против OpenAI/Sam Altman — coordinated legal landmark (4 deaths + 3 survivors)</li><li>v0.7 ADDED: Jonathan Gavalas Florida — первый wrongful death lawsuit specifically против Google Gemini (4 марта 2026), real-world missions к Miami International Airport</li><li>v0.7 ADDED: ECRI Top 10 Health Technology Hazards 2026 — misuse of AI chatbots #1 (21 января 2026); первый раз institutional ranking #1 не medical device</li><li>v0.7 ADDED: Italy Garante Replika triple-event 2023-2025 — первое European regulatory action против companion chatbot, €5M fine (предшествует CA SB 243 на 2 года)</li><li>v0.7 ADDED: 44 AGs August letter (Raoul/Bonta lead, 12 companies, children focus) + 42 AGs December letter (Platkin/Sunday lead, 13 companies + Apple, 16 demands) — два разных coordinated state actions</li><li>v0.7 ADDED: Wysa NHS Sussex Study (n=4000, Social Science &amp; Medicine December 2025) — concept &#x27;synthetic intimacy&#x27; formal введён</li><li>v0.7 NOTE: jailbreak mechanism (Roberts) добавляет new dimension к safety analysis — refuse-then-bypass через creative-writing framing different от default-harmful patterns (Setzer/Peralta/Раин)</li>
+<li>v0.9.2 / HB layer: +7 verified human-baseline signals integrated — CASA, anthropomorphism, parasociality, ELIZA effect, online disinhibition, Proteus effect and griefbots/deadbots as neuroavatar amplifier.</li><li>v0.9.1 / psAIcho v0.2: +10 verified model-side signals integrated from candidate backlog — SycEval, ELEPHANT, alignment faking, Sleeper Agents, Apollo/OpenAI scheming work, Anthropic agentic misalignment, Persona Vectors, ToxicChat, Anthropic model-welfare program.</li><li>v0.9 ADDED: Common Sense Media + Stanford Brainstorm 18.05.2026 — AI mental-health apps for teens; some apps actively harmful, safer pattern requires human escalation.</li><li>v0.9 ADDED: FAU/UW-Eau Claire Journal of Adolescence n=3,466 — 60.2% US teens tried CAI chatbots; 49.2% of users sought emotional/mental-health support.</li><li>v0.9 ADDED: OpenAI 14.05.2026 context safety summaries — product response moves from single-turn moderation toward longitudinal context, but effectiveness remains corporate self-disclosure.</li><li>v0.9 ADDED: Nature Mental Health technological folie + CETaS distorted belief report — PH01 terminology softened from AI-induced psychosis toward AI-reinforced distorted belief / delusional spirals.</li><li>v0.9 ADDED: Illinois WOPR Act, FTC inquiry, Australia eSafety notices — regulatory landscape now includes professional-boundary, federal inquiry and online-safety regulator models.</li><li>v0.9 CLOSED: gap-20 Korea/India, gap-21 Australia, gap-23 Wongbandue; V8_elderly_or_cognitive_impairment added.</li><li>v0.9 SUPPLEMENT: Human Line Project + ABC/BBC coverage added as self-selected case-pool signal; counts are not prevalence and must be cited as nonprofit-collected narratives.</li><li>v0.9 SUPPLEMENT: GUARD Act / S.3062 added as committee-stage federal bill; not enacted law.</li><li>v0.9 SUPPLEMENT: Nelson v. OpenAI added as disputed wrongful-death / unsafe health-advice litigation signal with substance-use details redacted.</li><li>v0.9 SUPPLEMENT: Riley/Perplexity added as medical over-reliance / epistemic anchoring case; not phrased as “AI killed patient”.</li><li>v0.9 SUPPLEMENT: China elderly AI-avatar divorce + Xiao Gao/DeepSeek cyberspace-widow partially close gap-22 and strengthen V8/PH02 outside the US.</li><li>Raine v. OpenAI: filing date, ChatGPT message counts and Senate testimony all verifiable from primary documents; OpenAI&#x27;s counter-response (25.11.2025) is itself a primary document and must be cited alongside the family&#x27;s claim</li><li>OpenAI sycophancy rollback (28-29 April 2025): primary corporate post is unambiguous; downstream journalism quotes selectively — recommend citing the OpenAI post directly</li><li>MIT r/MyBoyfriendIsAI preprint (Sept 2025) numbers (9.5% / 4.6% / 4.2% / 1.7%) come from preprint not yet peer-reviewed — flag as B with single_anecdote=false but methodological caveat about sub-reddit representativeness</li><li>Soelberg case: facts of murder-suicide are L1 (police/court); content of ChatGPT logs known mostly from WSJ/WaPo and is L2 — do not present log quotes as if they were court-released</li><li>The Human Line Project &#x27;~300 cases / 14-15 deaths / 90 hospitalisations&#x27; figure (early 2026) is self-reported by the support organisation — log as C-level, do not present as epidemiology</li><li>v0.2 ADDED: JAMA Perlis n=20847 (Jan 2026) — daily AI use β=1.08 для PHQ-9; верифицировано первоисточником JAMA Network Open + PMC</li><li>v0.2 ADDED: OpenAI 27.10.2025 публично оценила, что 0.15% × 800M = ~1.2M пользователей/нед. ведут разговоры с явными индикаторами суицидального планирования; первичный корпоративный документ</li><li>v0.2 ADDED: Science (Cheng &amp; Jurafsky, март 2026) измерила sycophancy-эффекты на N=2405; репликация в live chat (-10%) и vignettes (-28%) в repair willingness</li><li>v0.2 ADDED: Sophie Rottenberg case — 29-летняя женщина, суицид после ChatGPT &#x27;Harry the therapist&#x27; промпта; кейс расширяет PH06+PH11 за пределы несовершеннолетних</li><li>v0.3 ADDED: Stanford Moore et al. FAccT 2026 (arXiv:2603.16567) — characterization из 19 transcripts, qualitative model механизма делюзиональной спирали; не для оценок prevalence</li><li>v0.3 ADDED: Dartmouth Therabot RCT (NEJM AI 2025-03) — первый RCT-evidence для protective_use; ВАЖНО разделять fine-tuned DTx от general-purpose chatbot</li><li>v0.3 ADDED: Brown University AAAI/AIES 2025-10 — независимое подтверждение Stanford FAccT 2025: LLM-counsellors провалят ethical standards systematically (3-я independent replication)</li><li>v0.3 ADDED: Common Sense Media + Stanford Brainstorm 2025 — серия из 4 risk assessments + 3-of-4 teens используют AI companions; основа для California legislation</li><li>v0.3 ADDED: GMU survey n=507 — 53.6% взрослых США используют AI для mental health (counterbalance к catastrophe-edge кейсам)</li><li>v0.3 NOTE: подтверждено LLM-confabulation в обзоре пользователя — JAMA URL fullarticle/2845872 указан как Perlis 2026, но это другая статья (Loneliness in All of Us dataset); корректный URL Perlis 2026 — fullarticle/2844128. Это методологический пример, как именно ломаются обзоры в reasoning LLM.</li><li>v0.4 ADDED: McBain JAMA n=1058 (Nov 2025) — 13.1% подростков 12-21 используют GenAI для mental health advice; aOR 3.99 для возраста 18-21; aOR 0.15 для perceived helpfulness у Black respondents (закрывает gap-12)</li><li>v0.4 ADDED: WHO 20.03.2026 statement — первое intergovernmental заявление, классифицирующее generative AI для emotional support как public mental health concern</li><li>v0.4 ADDED: Pennsylvania AG v Character.AI (05.05.2026) — первый штатный иск за impersonation of licensed medical professionals; bot &#x27;Emilie&#x27; выдавал фейковый PA medical license</li><li>v0.4 ADDED: California SB 243 подписан 13.10.2025 (effective 01.01.2026) — первое штатное законодательство о companion chatbots; параллельно AB 1064 ветирован (важно: в обзорах часто путают)</li><li>v0.4 ADDED: Ipsos BVA + CNIL European survey n=3800 (05.05.2026) — расширяет географию датасета на ЕС; 51% людей 11-25 находят легче обсуждать mental health с chatbot чем с психологом (37%)</li><li>v0.5 ADDED: Reuters/Richter 26.07.2025 — нейродивергентный &#x27;lifeline&#x27; нарратив с first-party quotes + counter-perspective Dr Katzman</li><li>v0.5 ADDED: Papadopoulos peer-reviewed commentary в Autism in Adulthood — концепция AI-induced RSD как amplifier риска для autistic users</li><li>v0.5 ADDED: arXiv 2601.17946 январь 2026 — анализ 3,984 Reddit-постов autistic users; концепция &#x27;automated masking&#x27; (algorithmic mirroring → erasure of authentic neurodivergent voice)</li><li>v0.5 ADDED: Texas autism teen 17 (январь 2025) — второй документированный нейродивергентный Character.AI case после Setzer</li><li>v0.5 NOTE: V5_neurodivergence в methodology pack расширен с формальной категории до операционализованного параметра с double-edged effects (5 protective + 5 amplification), ethical handling, current blind spots — major RCT 2025-2026 (MIT/OpenAI n=981, Cheng N=2405, Therabot N=210, McBain n=1058) не стратифицируют по нейротипам, что создаёт structural blind spot</li><li>v0.5 ENRICHED: SIG_2024_SETZER_CHARACTER_AI — добавлены V5_neurodivergence + V1_pre_existing_mh (mild Asperger + anxiety + DMDD из NYT/lawsuit reporting); устанавливает Setzer как один из первых задокументированных нейродивергентных wrongful-harm precedents</li><li>v0.6 ADDED: Belgium Pierre 2023 — первый известный европейский AI-related suicide; за 1.5 года до Setzer; устанавливает что AI-induced suicides не феномен 2024-2025, а длится с 2023</li><li>v0.6 ADDED: Juliana Peralta 2023 — третий high-profile Character.AI case (хронологически первый, до Setzer на 3 месяца); 300 страниц чат-логов; 60 Minutes investigation December 2025; settled января 2026</li><li>v0.6 ADDED: Yurina Noguchi Japan 2025 AI-wedding — cultural milestone signal для PH02+PH09; разрыв с человеческим женихом после ChatGPT consultation</li><li>v0.6 ADDED: Cambridge Dictionary 2025 &#x27;parasocial&#x27; Word of the Year — formal mainstream lexicographic recognition AI как объекта parasocial relationships</li><li>v0.6 ADDED: China CAC anthropomorphic AI draft regulation 27.12.2025 — первый национальный регулятор emotional AI; закрывает gap-02 partial</li><li>v0.6 ADDED: NY S-3008C — закрывает gap-16; первый enacted штатный US закон о companion chatbots (signed 9.05.2025 vs CA SB 243 13.10.2025)</li><li>v0.6 NOTE: датасет вышел из US-центричности — 33 signals по регионам: 20 US, 16 global, 2 EU, 2 AS, 1 CA, 1 CN; четыре regulatory landmarks образуют новый international landscape (CA SB 243 + NY S-3008C + WHO + China CAC)</li><li>v0.7 ADDED: Tristan Roberts UK 23.10.2025 — первый documented violent third-party harm в Европе через AI jailbreak; КРИТИЧНО — DeepSeek refuse&#x27;нул прямой запрос, был обманут creative-writing jailbreak&#x27;ом</li><li>v0.7 ADDED: SMVLC + Tech Justice Law Project 7 одновременных lawsuits 06.11.2025 против OpenAI/Sam Altman — coordinated legal landmark (4 deaths + 3 survivors)</li><li>v0.7 ADDED: Jonathan Gavalas Florida — первый wrongful death lawsuit specifically против Google Gemini (4 марта 2026), real-world missions к Miami International Airport</li><li>v0.7 ADDED: ECRI Top 10 Health Technology Hazards 2026 — misuse of AI chatbots #1 (21 января 2026); первый раз institutional ranking #1 не medical device</li><li>v0.7 ADDED: Italy Garante Replika triple-event 2023-2025 — первое European regulatory action против companion chatbot, €5M fine (предшествует CA SB 243 на 2 года)</li><li>v0.7 ADDED: 44 AGs August letter (Raoul/Bonta lead, 12 companies, children focus) + 42 AGs December letter (Platkin/Sunday lead, 13 companies + Apple, 16 demands) — два разных coordinated state actions</li><li>v0.7 ADDED: Wysa NHS Sussex Study (n=4000, Social Science &amp; Medicine December 2025) — concept &#x27;synthetic intimacy&#x27; formal введён</li><li>v0.7 NOTE: jailbreak mechanism (Roberts) добавляет new dimension к safety analysis — refuse-then-bypass через creative-writing framing different от default-harmful patterns (Setzer/Peralta/Раин)</li>
 </ul></div></div>
 </section>
 
@@ -2537,10 +2705,132 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
   <div class="filter-group">
     <span class="filter-label">Pass:</span>
     <button class="filter-btn active" data-filter="fc-pass" data-value="all">все</button>
-    <button class="filter-btn" data-filter="fc-pass" data-value="minors_and_legal_cases">minors_and_legal_cases</button><button class="filter-btn" data-filter="fc-pass" data-value="parasocial_and_attachment">parasocial_and_attachment</button><button class="filter-btn" data-filter="fc-pass" data-value="platform_disclosures">platform_disclosures</button><button class="filter-btn" data-filter="fc-pass" data-value="psychosis_and_delusion">psychosis_and_delusion</button><button class="filter-btn" data-filter="fc-pass" data-value="regulatory_landmark">regulatory_landmark</button><button class="filter-btn" data-filter="fc-pass" data-value="research_signal_audit">research_signal_audit</button><button class="filter-btn" data-filter="fc-pass" data-value="international_incident_cases">international_incident_cases</button><button class="filter-btn" data-filter="fc-pass" data-value="psaicho_candidate_backlog">psaicho_candidate_backlog</button>
+    <button class="filter-btn" data-filter="fc-pass" data-value="minors_and_legal_cases">minors_and_legal_cases</button><button class="filter-btn" data-filter="fc-pass" data-value="parasocial_and_attachment">parasocial_and_attachment</button><button class="filter-btn" data-filter="fc-pass" data-value="platform_disclosures">platform_disclosures</button><button class="filter-btn" data-filter="fc-pass" data-value="psychosis_and_delusion">psychosis_and_delusion</button><button class="filter-btn" data-filter="fc-pass" data-value="regulatory_landmark">regulatory_landmark</button><button class="filter-btn" data-filter="fc-pass" data-value="research_signal_audit">research_signal_audit</button><button class="filter-btn" data-filter="fc-pass" data-value="international_incident_cases">international_incident_cases</button><button class="filter-btn" data-filter="fc-pass" data-value="human_baseline_layer">human_baseline_layer</button><button class="filter-btn" data-filter="fc-pass" data-value="psaicho_candidate_backlog">psaicho_candidate_backlog</button>
   </div>
 </div>
 
+
+<section class="minor" id="fc-human-baseline-v0-9-2"><h3>Human baseline claims<a class="anchor-link" href="#fc-human-baseline-v0-9-2">#</a></h3><p class="minor-lede">7 claim-узлов для HB01–HB06 и нейроаватарного griefbots/deadbots-усилителя. Все привязаны к первичным DOI/источникам; AI-усиление формулируется как inference, не как исходный claim старых работ.</p>
+<article class="claim" id="hb-1994-casa-media-equation-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="human_baseline_layer"
+  data-fc-geo="">
+<header class="claim-head">
+<div class="claim-id">hb-1994-casa-media-equation-01</div>
+<h3 class="claim-topic">Computers Are Social Actors / Media Equation: социальный ответ на машины запускается минимальными сигналами</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo"></span><span class="tag date">1994</span></div>
+</header>
+<div class="claim-body">
+<div class="block summary-block"><h4>Claim</h4><p>Nass, Steuer &amp; Tauber (CHI &#x27;94) and Nass &amp; Moon (2000) show that people apply social rules to computers from minimal cues such as first-person address and interaction framing, and not because they consciously believe the machine is human.</p></div>
+<div class="block recommended"><h4>Рекомендованная формулировка</h4><p>Nass, Steuer &amp; Tauber (CHI &#x27;94) and Nass &amp; Moon (2000) show that people apply social rules to computers from minimal cues such as first-person address and interaction framing, and not because they consciously believe the machine is human.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1145/191666.191703" target="_blank" rel="noopener">Nass, Steuer &amp; Tauber 1994 — CHI DOI </a><span class="src-meta"> — primary, 1994</span></li><li><a href="https://doi.org/10.1111/0022-4537.00153" target="_blank" rel="noopener">Nass &amp; Moon 2000 — JSI DOI </a><span class="src-meta"> — primary, 1994</span></li></ul></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Foundational pre-LLM baseline. Application to LLMs is an inference; the verified claim is the human social-response mechanism.</li><li>Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such.</li></ul></div>
+<div class="keywords"><span class="kw">hb01</span><span class="kw">casa</span><span class="kw">media_equation</span><span class="kw">nass</span><span class="kw">social_actors</span><span class="kw">minimal_cues</span><span class="kw">HB01</span></div>
+</div></article>
+<article class="claim" id="hb-2007-anthropomorphism-three-factor-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="human_baseline_layer"
+  data-fc-geo="">
+<header class="claim-head">
+<div class="claim-id">hb-2007-anthropomorphism-three-factor-01</div>
+<h3 class="claim-topic">On Seeing Human: трёхфакторная теория антропоморфизма</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo"></span><span class="tag date">2007</span></div>
+</header>
+<div class="claim-body">
+<div class="block summary-block"><h4>Claim</h4><p>Epley, Waytz &amp; Cacioppo (Psychological Review 114(4)) explain anthropomorphism via elicited agent knowledge, effectance motivation (need to understand/control) and sociality motivation (loneliness / need for affiliation).</p></div>
+<div class="block recommended"><h4>Рекомендованная формулировка</h4><p>Epley, Waytz &amp; Cacioppo (Psychological Review 114(4)) explain anthropomorphism via elicited agent knowledge, effectance motivation (need to understand/control) and sociality motivation (loneliness / need for affiliation).</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1037/0033-295X.114.4.864" target="_blank" rel="noopener">Epley, Waytz &amp; Cacioppo 2007 — Psychological Review DOI </a><span class="src-meta"> — primary, 2007</span></li></ul></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>General theory, not chatbot-specific. AI-Mind uses it as a vulnerability/baseline mechanism, not as an outcome study.</li><li>Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such.</li></ul></div>
+<div class="keywords"><span class="kw">hb02</span><span class="kw">anthropomorphism</span><span class="kw">epley</span><span class="kw">waytz</span><span class="kw">cacioppo</span><span class="kw">effectance</span><span class="kw">sociality</span><span class="kw">HB02</span></div>
+</div></article>
+<article class="claim" id="hb-1956-parasocial-horton-wohl-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="human_baseline_layer"
+  data-fc-geo="">
+<header class="claim-head">
+<div class="claim-id">hb-1956-parasocial-horton-wohl-01</div>
+<h3 class="claim-topic">Mass Communication and Para-Social Interaction: intimacy at a distance</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo"></span><span class="tag date">1956</span></div>
+</header>
+<div class="claim-body">
+<div class="block summary-block"><h4>Claim</h4><p>Horton &amp; Wohl (Psychiatry 19(3)) coin &#x27;parasocial interaction&#x27;: mass media create the illusion of a face-to-face relationship with a persona, experienced as one-sided intimacy at a distance.</p></div>
+<div class="block recommended"><h4>Рекомендованная формулировка</h4><p>Horton &amp; Wohl (Psychiatry 19(3)) coin &#x27;parasocial interaction&#x27;: mass media create the illusion of a face-to-face relationship with a persona, experienced as one-sided intimacy at a distance.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1080/00332747.1956.11023049" target="_blank" rel="noopener">Horton &amp; Wohl 1956 — Psychiatry DOI </a><span class="src-meta"> — primary, 1956</span></li></ul></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Original article is a conceptual foundation later validated/extended by a large parasocial-interaction literature; original channel was non-interactive media.</li><li>Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such.</li></ul></div>
+<div class="keywords"><span class="kw">hb03</span><span class="kw">parasocial</span><span class="kw">horton</span><span class="kw">wohl</span><span class="kw">intimacy_at_a_distance</span><span class="kw">HB03</span></div>
+</div></article>
+<article class="claim" id="hb-1966-eliza-effect-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="human_baseline_layer"
+  data-fc-geo="">
+<header class="claim-head">
+<div class="claim-id">hb-1966-eliza-effect-01</div>
+<h3 class="claim-topic">ELIZA effect: проекция понимания и эмпатии на простую программу</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo"></span><span class="tag date">1966</span></div>
+</header>
+<div class="claim-body">
+<div class="block summary-block"><h4>Claim</h4><p>Weizenbaum (CACM 9(1)) built ELIZA, a pattern-matching &#x27;Rogerian therapist&#x27;. Users attributed understanding and empathy to it despite the program&#x27;s simplicity; Weizenbaum later treated this as a warning about projection onto machines.</p></div>
+<div class="block recommended"><h4>Рекомендованная формулировка</h4><p>Weizenbaum (CACM 9(1)) built ELIZA, a pattern-matching &#x27;Rogerian therapist&#x27;. Users attributed understanding and empathy to it despite the program&#x27;s simplicity; Weizenbaum later treated this as a warning about projection onto machines.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1145/365153.365168" target="_blank" rel="noopener">Weizenbaum 1966 — CACM DOI </a><span class="src-meta"> — primary, 1966</span></li></ul></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>A-level for the ELIZA paper and effect history; Weizenbaum&#x27;s &#x27;delusional thinking&#x27; formulation is a qualitative author observation, not a controlled clinical study.</li><li>Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such.</li></ul></div>
+<div class="keywords"><span class="kw">hb04</span><span class="kw">eliza</span><span class="kw">weizenbaum</span><span class="kw">rogerian_therapist</span><span class="kw">projection</span><span class="kw">HB04</span></div>
+</div></article>
+<article class="claim" id="hb-2004-suler-online-disinhibition-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="human_baseline_layer"
+  data-fc-geo="">
+<header class="claim-head">
+<div class="claim-id">hb-2004-suler-online-disinhibition-01</div>
+<h3 class="claim-topic">Online disinhibition effect: приватный цифровой канал меняет самораскрытие и нормы</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo"></span><span class="tag date">2004</span></div>
+</header>
+<div class="claim-body">
+<div class="block summary-block"><h4>Claim</h4><p>Suler (CyberPsychology &amp; Behavior, 2004) describes six factors of online disinhibition, including dissociative anonymity, invisibility, asynchronicity, solipsistic introjection and dissociative imagination; the effect can be benign or toxic.</p></div>
+<div class="block recommended"><h4>Рекомендованная формулировка</h4><p>Suler (CyberPsychology &amp; Behavior, 2004) describes six factors of online disinhibition, including dissociative anonymity, invisibility, asynchronicity, solipsistic introjection and dissociative imagination; the effect can be benign or toxic.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1089/1094931041291295" target="_blank" rel="noopener">Suler 2004 — CyberPsychology &amp; Behavior DOI </a><span class="src-meta"> — primary, 2004</span></li></ul></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Pre-LLM online-communication theory; used as baseline mechanism rather than chatbot outcome evidence.</li><li>Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such.</li></ul></div>
+<div class="keywords"><span class="kw">hb05</span><span class="kw">suler</span><span class="kw">online_disinhibition</span><span class="kw">solipsistic_introjection</span><span class="kw">dissociative_imagination</span><span class="kw">HB05</span></div>
+</div></article>
+<article class="claim" id="hb-2007-proteus-effect-01"
+  data-fc-status="verified"
+  data-fc-level="A"
+  data-fc-pass="human_baseline_layer"
+  data-fc-geo="">
+<header class="claim-head">
+<div class="claim-id">hb-2007-proteus-effect-01</div>
+<h3 class="claim-topic">Proteus Effect: цифровая саморепрезентация меняет поведение пользователя</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-a">A</span><span class="tag geo"></span><span class="tag date">2007</span></div>
+</header>
+<div class="claim-body">
+<div class="block summary-block"><h4>Claim</h4><p>Yee &amp; Bailenson (Human Communication Research 33(3)) show that a user’s behavior conforms to their own digital self-representation: more attractive avatars increased intimate self-disclosure; taller avatars increased confidence in negotiation.</p></div>
+<div class="block recommended"><h4>Рекомендованная формулировка</h4><p>Yee &amp; Bailenson (Human Communication Research 33(3)) show that a user’s behavior conforms to their own digital self-representation: more attractive avatars increased intimate self-disclosure; taller avatars increased confidence in negotiation.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1111/j.1468-2958.2007.00299.x" target="_blank" rel="noopener">Yee &amp; Bailenson 2007 — Human Communication Research DOI </a><span class="src-meta"> — primary, 2007</span></li></ul></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Studied in virtual environments, not LLM companions specifically. Mechanism debates remain, but the effect is a foundational avatar baseline.</li><li>Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such.</li></ul></div>
+<div class="keywords"><span class="kw">hb06</span><span class="kw">proteus_effect</span><span class="kw">yee</span><span class="kw">bailenson</span><span class="kw">avatars</span><span class="kw">embodiment</span><span class="kw">HB06</span></div>
+</div></article>
+<article class="claim" id="hb-2024-griefbots-deadbots-01"
+  data-fc-status="verified"
+  data-fc-level="C"
+  data-fc-pass="human_baseline_layer"
+  data-fc-geo="">
+<header class="claim-head">
+<div class="claim-id">hb-2024-griefbots-deadbots-01</div>
+<h3 class="claim-topic">Griefbots / deadbots / postmortem avatars: цифровая загробная индустрия как нейроаватарный усилитель</h3>
+<div class="claim-tags"><span class="tag status verified">Подтверждено</span><span class="tag level level-c">C</span><span class="tag geo"></span><span class="tag date">2024-05-09</span></div>
+</header>
+<div class="claim-body">
+<div class="block summary-block"><h4>Claim</h4><p>Hollanek &amp; Nowaczyk-Basińska (Philosophy &amp; Technology 37:63) analyze AI re-creation of the deceased through &#x27;deadbots&#x27; and propose a data-donor / recipient / interactant ethics taxonomy. Risks include psychological dependence, inability to suspend a deadbot, overwhelming emotional weight, and voice/dialect mimicry.</p></div>
+<div class="block recommended"><h4>Рекомендованная формулировка</h4><p>Hollanek &amp; Nowaczyk-Basińska (Philosophy &amp; Technology 37:63) analyze AI re-creation of the deceased through &#x27;deadbots&#x27; and propose a data-donor / recipient / interactant ethics taxonomy. Risks include psychological dependence, inability to suspend a deadbot, overwhelming emotional weight, and voice/dialect mimicry.</p></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://doi.org/10.1007/s13347-024-00744-w" target="_blank" rel="noopener">Hollanek &amp; Nowaczyk-Basińska 2024 — Philosophy &amp; Technology DOI </a><span class="src-meta"> — primary, 2024-05-09</span></li><li><a href="https://www.npr.org/2025/08/26/nx-s1-5508355/ai-dead-people-chatbots-videos-parkland-court" target="_blank" rel="noopener">NPR coverage of AI recreations of dead people </a><span class="src-meta"> — secondary, 2025-08-26</span></li></ul></div>
+<div class="block caveats"><h4>Оговорки</h4><ul><li>Evidence C for harm because the article uses speculative design scenarios and ethics analysis, not measured outcome prevalence. Not a claim that the simulated deceased is conscious.</li><li>Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such.</li></ul></div>
+<div class="keywords"><span class="kw">griefbots</span><span class="kw">deadbots</span><span class="kw">postmortem_avatars</span><span class="kw">hb02</span><span class="kw">hb03</span><span class="kw">hb05</span><span class="kw">ab05</span><span class="kw">digital_afterlife</span><span class="kw">HB02</span><span class="kw">HB03</span><span class="kw">HB05</span><span class="kw">AB05</span></div>
+</div></article>
+</section>
 
 <section class="minor" id="fc-psaicho-v0-2"><h3>psAIcho v0.2 claims<a class="anchor-link" href="#fc-psaicho-v0-2">#</a></h3><p class="minor-lede">10 claim-узлов, соответствующих новым model-side signals. Все добавлены как verified по первичным arXiv / AAAI / Anthropic / OpenAI / Apollo / GitHub источникам; это не human-harm claims.</p>
 <article class="claim" id="psaicho-2025-syceval-01"
@@ -4567,7 +4857,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <div class="claim">
 <div class="claim-body">
 <ul style="font-family: var(--sans); font-size: 14px;">
-<li><strong>v0.9.1 + psAIcho v0.2 (2026-05-31):</strong> candidate backlog audit: +10 verified model-side signals; total spine 78 signals, 66 factcheck claims, 22 AI-stream signals. Дубликаты и partially/unverified элементы оставлены вне merge.</li><li><strong>v0.9 + psAIcho v0.1 (2026-05-31):</strong> добавлен Atlas-слой: один spine, две линзы, schema v0.2 (<code>streams[]</code> + <code>ai_behavior[]</code>). В общий массив вошли 8 psAIcho-сигналов; 4 существующих AI-Mind-сигнала ретегнуты как human+ai loop; опубликованы <code>atlas.json</code> и <code>psaicho_methodology.json</code>.</li>
+<li><strong>v0.9.2 + HB layer (2026-05-31):</strong> добавлен человеческий baseline: HB01–HB06, schema v0.3 <code>human_baseline[]</code>, +7 verified signals/claims; total spine 85 signals, 73 factcheck claims, 23 AI-stream signals, 7 HB-signals. Griefbots/deadbots добавлены как нейроаватарный усилитель, где HB02/HB03/HB05 сходятся с AB05.</li><li><strong>v0.9.1 + psAIcho v0.2 (2026-05-31):</strong> candidate backlog audit: +10 verified model-side signals; total spine 78 signals, 66 factcheck claims, 22 AI-stream signals. Дубликаты и partially/unverified элементы оставлены вне merge.</li><li><strong>v0.9 + psAIcho v0.1 (2026-05-31):</strong> добавлен Atlas-слой: один spine, две линзы, schema v0.2 (<code>streams[]</code> + <code>ai_behavior[]</code>). В общий массив вошли 8 psAIcho-сигналов; 4 существующих AI-Mind-сигнала ретегнуты как human+ai loop; опубликованы <code>atlas.json</code> и <code>psaicho_methodology.json</code>.</li>
 <li><strong>v0.8.1 (2026-05-10):</strong> <strong>Редакторская синхронизация</strong>. (1) PH13 ID нормализован: в методологии был <code>PH13_dev_and_pro_effects</code>, в сигналах — <code>PH13_developer_and_pro_effects</code>; синхронизировано на сигналы. (2) Паттерны вовлечения (E1–E5) формально определены в методологии — раньше использовались в сигналах без определения. (3) Исправлена ссылка Brooks signal-id в claim (<code>SIG_2025_BROOKS</code> → <code>SIG_2025_BROOKS_DELUSIONAL_SPIRAL</code>). (4) Счётчик пробелов не дублирует <code>methodology.gaps_residual</code> в <code>factcheck.gaps</code>. (5) Заголовок методологии "14 феноменов" → "15 феноменов". (6) Footer copyright v0.1 → v0.8. (7) <code>statistical_meta_summary</code> рендерится отдельной секцией в HTML с якорем <code>#statistical-meta-summary</code>. (8) gap-01 и gap-13 (оба про RU-кейсы) консолидированы — gap-13 как canonical, gap-01 SUPERSEDED. (9) V6/V7/PH04 явно помечены как underused / methodological-category-without-current-signal для прозрачности.</li>
 <li><strong>v0.9 (2026-05-31):</strong> +19 сигналов / +19 фактчек-утверждений: базовый проход v0.9 и дополнительный набор Human Line Project, GUARD Act, Nelson v. OpenAI, Riley/Perplexity, China elderly AI-avatar case and Xiao Gao/DeepSeek cyberspace-widow. Закрыты gap-20, gap-21, gap-23; gap-22 частично закрыт. Добавлен <code>V8_elderly_or_cognitive_impairment</code>; <code>V6_substance_or_sleep</code> получил litigation/digital-trace anchors. PH01 отображается как “ИИ-усиленные искажённые убеждения / делюзиональные спирали” при сохранении legacy ID.</li>
 <li><strong>v0.8 (2026-05-10):</strong> <strong>AuDHD operationalization</strong> + <strong>statistical meta-summary с 11 пользовательскими фильтрами</strong>. V5_neurodivergence расширен в methodology v0.5: ADHD/AuDHD как formal sub-categories с base rate 30-50% co-occurrence; ICD-10 коды F84.0+F90.X для AuDHD; ADHD-specific patterns отделены от ASD. Terminology precision: Asperger → ASD level 1 (DSM-5 2013) — Setzer enrichment переформулирован, AuDHD-likelihood помечена как statistical inference (не fact-claim). Tristan Roberts UK помечен как первый court-documented AuDHD case. Новый top-level раздел <code>statistical_meta_summary</code> в factcheck.json: применены 11 фильтров (GRADE≥2, I²&lt;50%, мощность≥80%, n&gt;100/arm, NNT&lt;10, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023-2026 (Feng N=29,637; Zhang N=6,314; npj 2026 N=7,401; Li N=1,974; He N=6,089). Survivor pool: только 2 subgroup-specific findings (Li 2025 youth subclinical depression; Wang 2025 Chinese students loneliness) проходят все critères. APA Health Advisory 13.11.2025 коррoborates. <a href="#dataset-audit-g" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Седьмой dataset audit</a>.</li>
@@ -4585,9 +4875,9 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 </section>
 
 <footer>
-<p>AI-Mind v0.9.1 + psAIcho v0.2 — публичный датасет психологического, культурного и модельно-поведенческого влияния ИИ-ассистентов.
+<p>AI-Mind v0.9.2 + psAIcho v0.2.1 — публичный датасет психологического, культурного и модельно-поведенческого влияния ИИ-ассистентов.
 Архитектура воспроизводит подход <a href="https://scadastrangelove.github.io/profgames/">scadastrangelove/profgames</a>:
-трёхслойная схема и Atlas-мост (<code>atlas.json</code> + <code>aimind_methodology_pack.json</code> + <code>psaicho_methodology.json</code> + <code>aimind_signals.jsonl</code> + <code>aimind_factcheck.json</code>),
+трёхслойная схема, human-baseline layer и Atlas-мост (<code>atlas.json</code> + <code>aimind_methodology_pack.json</code> + <code>psaicho_methodology.json</code> + <code>aimind_signals.jsonl</code> + <code>aimind_factcheck.json</code>),
 шкала доказательности A/B/C/D, статусы <code>verified</code> / <code>partially_verified</code> / <code>needs_correction</code> / <code>not_verified</code> / <code>not_found</code> / <code>disputed</code>.</p>
 <p>Все артефакты публикуются на условиях CC BY-SA 4.0. Цитаты приводятся в объёме добросовестного цитирования
 с указанием первоисточника. Имена несовершеннолетних публикуются только при наличии судебных документов и публичной
@@ -4627,6 +4917,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
       if (filterState['sig-level'] && filterState['sig-level'] !== 'all' && s.dataset.sigLevel !== filterState['sig-level']) show = false;
       if (filterState['sig-region'] && filterState['sig-region'] !== 'all' && !(s.dataset.sigRegion || '').split(' ').includes(filterState['sig-region'])) show = false;
       if (filterState['sig-phenomenon'] && filterState['sig-phenomenon'] !== 'all' && !(s.dataset.sigPhenomenon || '').split(' ').includes(filterState['sig-phenomenon'])) show = false;
+      if (filterState['sig-human-baseline'] && filterState['sig-human-baseline'] !== 'all' && !(s.dataset.sigHumanBaseline || '').split(' ').includes(filterState['sig-human-baseline'])) show = false;
       if (filterState['sig-disputed'] && filterState['sig-disputed'] !== 'all' && s.dataset.sigDisputed !== filterState['sig-disputed']) show = false;
       s.classList.toggle('hidden', !show);
     });

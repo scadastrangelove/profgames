@@ -26,7 +26,7 @@
 | **B** | [Пять биографий, три развилки](https://scadastrangelove.github.io/profgames/b-article.html) | Пять профессиональных траекторий и работа переводчиков провенанса: как опыт переводится в локальный статус, доверие и ответственность через регистры, лицензии, палаты, государственные программы и сетевой след. Ирландский учитель, немецкий инженер, индийский врач в UK, китайский возвращенец и русский айтишник показывают, где дверь работает в обе стороны, где закрывается обратно, а где обе двери сжимаются одновременно. | ✅ опубликовано |
 | **C** | [Одна теория, разные параметры](https://scadastrangelove.github.io/profgames/c-article.html) | Параметризация рамки на четырёх институциональных конфигурациях: США, Россия, Китай и ОАЭ. Та же теория даёт разные равновесия при разных параметрах рынка, государства, образования и международных сигналов. | ✅ опубликовано |
 | **D** | [Семь симптомов и четыре актора](https://scadastrangelove.github.io/profgames/d-article.html) | Диагностическая карта. Семь видимых симптомов кризиса воспроизводства профессии × четыре актора, каждый со своим срезом. Не рецепт — инструмент различения. | ✅ опубликовано |
-| **Y** | [AI-Mind: что ИИ делает с психикой](https://scadastrangelove.github.io/profgames/aimind/aimind.html) | Параллельная серия к профессиональному циклу. Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. 78 сигналов 2016–2026, 15 феноменов + 7 модельных AB-паттернов (от парасоциальной привязанности и ИИ-усиленных искажённых убеждений до социального замещения и груминга через персонажных ботов), 8 параметров уязвимости (включая операционализованную V5 — нейроотличие с AuDHD-подкатегорией, и V8 — пожилой возраст/когнитивное снижение), общая с **Z** шкала доказательности A/B/C/D. Регуляторные вехи (CA SB 243, NY S-3008C, China CAC, EU AI Act, Italy Garante €5M fine, Australia eSafety, Illinois WOPR, FTC inquiry, GUARD Act committee-stage bill), судебные кейсы (Setzer, Раин, Peralta, Brooks, SMVLC seven, Roberts UK, Gavalas v Google Gemini, Nelson v. OpenAI), рецензируемые исследования и пулы кейсов (MIT/OpenAI, Cheng/Jurafsky Science, JAMA Perlis, Wysa NHS Sussex, FAU teen survey, Human Line Project, Riley/Perplexity, China PH02 cases), `statistical_meta_summary` с применением 11 фильтров (GRADE≥2, I²<50%, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023–2026. Обновлено 31.05.2026; добавлен Atlas-мост AI-Mind ↔ psAIcho; psAIcho v0.2 расширен verified model-side backlog. [HTML](https://scadastrangelove.github.io/profgames/aimind/aimind.html) · [Atlas](https://github.com/scadastrangelove/profgames/blob/main/aimind/atlas.json) · [методология](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_methodology_pack.json) · [psAIcho](https://github.com/scadastrangelove/profgames/blob/main/aimind/psaicho_methodology.json) · [JSONL](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals.jsonl) · [JSON](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck.json) | ✅ опубликовано |
+| **Y** | [AI-Mind: что ИИ делает с психикой](https://scadastrangelove.github.io/profgames/aimind/aimind.html) | Параллельная серия к профессиональному циклу. Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. 85 сигналов 1956–2026, 15 феноменов + 7 модельных AB-паттернов + 6 человеческих HB-механизмов (от парасоциальной привязанности и ИИ-усиленных искажённых убеждений до социального замещения и груминга через персонажных ботов), 8 параметров уязвимости (включая операционализованную V5 — нейроотличие с AuDHD-подкатегорией, и V8 — пожилой возраст/когнитивное снижение), общая с **Z** шкала доказательности A/B/C/D. Регуляторные вехи (CA SB 243, NY S-3008C, China CAC, EU AI Act, Italy Garante €5M fine, Australia eSafety, Illinois WOPR, FTC inquiry, GUARD Act committee-stage bill), судебные кейсы (Setzer, Раин, Peralta, Brooks, SMVLC seven, Roberts UK, Gavalas v Google Gemini, Nelson v. OpenAI), рецензируемые исследования и пулы кейсов (MIT/OpenAI, Cheng/Jurafsky Science, JAMA Perlis, Wysa NHS Sussex, FAU teen survey, Human Line Project, Riley/Perplexity, China PH02 cases), `statistical_meta_summary` с применением 11 фильтров (GRADE≥2, I²<50%, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023–2026. Обновлено 31.05.2026; добавлен Atlas-мост AI-Mind ↔ psAIcho; psAIcho v0.2 расширен verified model-side backlog; добавлен human baseline layer HB01–HB06 и griefbots/deadbots как нейроаватарный усилитель. [HTML](https://scadastrangelove.github.io/profgames/aimind/aimind.html) · [Atlas](https://github.com/scadastrangelove/profgames/blob/main/aimind/atlas.json) · [методология](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_methodology_pack.json) · [psAIcho](https://github.com/scadastrangelove/profgames/blob/main/aimind/psaicho_methodology.json) · [JSONL](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_signals.jsonl) · [JSON](https://github.com/scadastrangelove/profgames/blob/main/aimind/aimind_factcheck.json) | ✅ опубликовано |
 | **Z** | [Фактологическая основа](https://scadastrangelove.github.io/profgames/factcheck.html) | Независимый фактчек 65 утверждений с разнесением уровней доказательности. С первоисточниками, оговорками и рекомендованными формулировками. [HTML](https://scadastrangelove.github.io/profgames/factcheck.html) · [JSON](https://scadastrangelove.github.io/profgames/factcheck.json) | ✅ опубликовано |
 
 ## Машиночитаемая основа
@@ -80,7 +80,7 @@ schema_version    — signal_schema_v0.1
 
 ### Структура `aimind/aimind_signals.jsonl`
 
-JSONL: один сигнал на строку. 78 событий 2016–2026 с привязкой к рамке Y и psAIcho. Schema v0.2 обратносовместима с `profgames_ai_signals.jsonl`: добавлены `streams[]` и `ai_behavior[]`; старые human-only сигналы остаются валидными.
+JSONL: один сигнал на строку. 85 событий 1956–2026 с привязкой к рамке Y, psAIcho и human baseline. Schema v0.3 обратносовместима с `profgames_ai_signals.jsonl`: добавлены `streams[]`, `ai_behavior[]` и `human_baseline[]`; старые human-only сигналы остаются валидными.
 
 ```
 id                — стабильный идентификатор (SIG_2024_SETZER_CHARACTER_AI)
@@ -96,18 +96,19 @@ why               — почему это сигнал (привязка к ра
 streams           — human | ai; сигнал может находиться в обеих линзах одновременно
 phenomena         — массив феноменов (PH01_ai_induced_psychosis, ..., PH15_protective_use)
 ai_behavior       — массив модельных паттернов psAIcho (AB01–AB07)
+human_baseline    — массив человеческих baseline-механизмов (HB01–HB06)
 vulnerability     — массив параметров уязвимости (V1–V8)
 engagement        — паттерн вовлечённости (E1_routine ... E5_obsessive)
 subject           — структурированное описание субъекта (named_individual / institution / ...)
 primary, secondary — ссылки на первоисточники
 note              — методологические оговорки, ethical handling
 event_year        — год события
-schema_version    — aimind_signal_schema_v0.2
+schema_version    — aimind_signal_schema_v0.3
 ```
 
 ### Структура `aimind/aimind_factcheck.json`
 
-Аналогично `factcheck.json`, но с проходами под Y: `psychosis_and_delusion`, `parasocial_and_attachment`, `minors_and_legal_cases`, `research_signal_audit`, `regulatory_landmark`, `platform_disclosures`, `international_incident_cases`, `psaicho_candidate_backlog`. 66 проверенных утверждений, 23 пробела (gap-20, gap-21, gap-23 закрыты в v0.9; gap-22 частично закрыт; gap-01 ↔ gap-13 консолидированы, gap-13 как canonical для RU кейсов), 10 dataset audits. Дополнительный top-level раздел `statistical_meta_summary` — применение 11 строгих фильтров (GRADE≥2, I²<50%, мощность≥80%, n>100/arm, recency≤10y, NNT<10, Cohen d≥0.5, IF≥1, peer review>2 weeks, препринт<18 мес) к 6 крупным мета-анализам 2023–2026 (Feng N=29,637; Zhang N=6,314; npj 2026 N=7,401; Li N=1,974; He N=6,089; npj 2023 N=35 RCT). Survivor pool после всех фильтров — 2 subgroup-specific findings; APA Health Advisory 13.11.2025 коррoborates.
+Аналогично `factcheck.json`, но с проходами под Y: `psychosis_and_delusion`, `parasocial_and_attachment`, `minors_and_legal_cases`, `research_signal_audit`, `regulatory_landmark`, `platform_disclosures`, `international_incident_cases`, `psaicho_candidate_backlog`, `human_baseline_layer`. 73 claim-записи, 23 пробела (gap-20, gap-21, gap-23 закрыты в v0.9; gap-22 частично закрыт; gap-01 ↔ gap-13 консолидированы, gap-13 как canonical для RU кейсов), 11 dataset audits. Дополнительный top-level раздел `statistical_meta_summary` — применение 11 строгих фильтров (GRADE≥2, I²<50%, мощность≥80%, n>100/arm, recency≤10y, NNT<10, Cohen d≥0.5, IF≥1, peer review>2 weeks, препринт<18 мес) к 6 крупным мета-анализам 2023–2026 (Feng N=29,637; Zhang N=6,314; npj 2026 N=7,401; Li N=1,974; He N=6,089; npj 2023 N=35 RCT). Survivor pool после всех фильтров — 2 subgroup-specific findings; APA Health Advisory 13.11.2025 коррoborates.
 
 ### Уровни доказательности
 
@@ -145,8 +146,8 @@ profgames/
 ├── aimind/                             # Y — параллельный психологический срез
 │   ├── aimind.html                     #   single-page рендер каталога
 │   ├── atlas.json                      #   мета-слой AI-Mind ↔ psAIcho
-│   ├── aimind_signals.jsonl            #   общий spine (78 сигналов, streams[] + ai_behavior[])
-│   ├── aimind_factcheck.json           #   фактчек (66 claims, 23 gaps, 10 audits, statistical_meta_summary)
+│   ├── aimind_signals.jsonl            #   общий spine (85 сигналов, streams[] + ai_behavior[] + human_baseline[])
+│   ├── aimind_factcheck.json           #   фактчек (73 claims, 23 gaps, 11 audits, statistical_meta_summary)
 │   ├── aimind_methodology_pack.json    #   рамка феноменов / уязвимости / engagement (15 PH + 8 V + 6 E)
 │   ├── psaicho_methodology.json        #   модельная линза AB01–AB07
 │   └── psaicho_readme.md               #   краткое описание Atlas/psAIcho-пакета

@@ -1,11 +1,11 @@
 {
   "pack_meta": {
     "title": "AI-Mind Methodology Pack: 15 феноменов психологического и культурного влияния ИИ-ассистентов на людей",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "created_at": "2026-05-31",
     "language": "ru_en_mixed",
     "scope": {
-      "framework": "15 феноменов (PH01–PH15) × шкала вовлечённости (E1–E5) + 8 параметров уязвимости (V1–V8)",
+      "framework": "15 феноменов (PH01–PH15) × шкала вовлечённости (E1–E5) + 8 параметров уязвимости (V1–V8) + human baseline layer (HB01–HB06)",
       "platforms": [
         "ChatGPT",
         "Claude",
@@ -46,6 +46,11 @@
       ]
     },
     "changelog": [
+      {
+        "version": "0.6.3",
+        "date": "2026-05-31",
+        "description": "Human baseline layer added: HB01-HB06 define pre-AI susceptibility mechanisms (CASA, anthropomorphism, parasociality, ELIZA effect, online disinhibition, Proteus effect). Schema v0.3 adds human_baseline[]; +7 verified signals/claims integrated including griefbots/deadbots as neuroavatar amplifier."
+      },
       {
         "version": "0.6.2",
         "date": "2026-05-31",
@@ -528,6 +533,7 @@
   "implementation_notes": [
     "AI-Mind разделён на три артефакта по образцу profgames: (1) этот methodology pack, (2) signals.jsonl с атомарными кейсами, (3) factcheck.json для аудита нарративных утверждений из самого проекта или внешних публикаций",
     "psAIcho v0.1 добавлен как зеркальная AI-side линза: общий spine aimind_signals.jsonl использует streams[] (human/ai) и ai_behavior[] (AB01–AB07); Atlas хранится в atlas.json, методология модели — в psaicho_methodology.json.",
+    "Schema v0.3 добавляет human_baseline[] (HB01–HB06) как зеркальное поле к ai_behavior[]: это человеческий baseline, а не свойство модели.",
     "Поле phenomena[] в каждом signal — массив (один сигнал может попадать в несколько корзинок: например, кейс Adam Raine — PH01 + PH03 + PH07 + PH08 + PH11 + PH12)",
     "Шкалы engagement_scale (E1–E5) и vulnerability_parameters (V1–V7) — необязательные, заполняются только когда первоисточник даёт основание",
     "Любой signal с уровнем D (user_testimony) обязан иметь флаг single_anecdote=true",
@@ -604,5 +610,84 @@
         "addictive symptoms"
       ]
     }
-  ]
+  ],
+  "human_baseline_layer": {
+    "description": "Человеческий baseline: доAI-механизмы восприимчивости, которые AI усиливает за счёт двунаправленности, контекстной беглости, лица/голоса и роли собеседника.",
+    "items": [
+      {
+        "id": "HB01",
+        "name": "CASA / Media Equation",
+        "label_ru": "социальный рефлекс к машине",
+        "definition": "Люди применяют социальные правила к компьютерам даже при минимальных социальных сигналах и без сознательной веры, что машина является человеком.",
+        "human_coupling": [
+          "PH02",
+          "PH06"
+        ],
+        "ai_amplifier": "LLM дают плотные социальные сигналы — обращение, память контекста, стиль поддержки, роль собеседника — и усиливают старый CASA-рефлекс.",
+        "primary_anchor": "Nass, Steuer & Tauber 1994; Nass & Moon 2000"
+      },
+      {
+        "id": "HB02",
+        "name": "Anthropomorphism / three-factor theory",
+        "label_ru": "антропоморфизация через одиночество и контроль",
+        "definition": "Антропоморфизм усиливается, когда человеку нужно социальное соединение или объяснимый/контролируемый агент.",
+        "human_coupling": [
+          "PH02",
+          "PH14"
+        ],
+        "ai_amplifier": "AI-помощники попадают ровно в состояния одиночества, тревоги, неопределённости и поиска управляемого собеседника.",
+        "primary_anchor": "Epley, Waytz & Cacioppo 2007"
+      },
+      {
+        "id": "HB03",
+        "name": "Parasocial interaction",
+        "label_ru": "интимность на расстоянии",
+        "definition": "Медиа-персона может восприниматься как объект личной близости, хотя классическая парасоциальная связь остаётся односторонней.",
+        "human_coupling": [
+          "PH02"
+        ],
+        "ai_amplifier": "AI снимает ключевой ограничитель: связь становится двунаправленной, отзывчивой и персонализированной.",
+        "primary_anchor": "Horton & Wohl 1956"
+      },
+      {
+        "id": "HB04",
+        "name": "ELIZA effect",
+        "label_ru": "проекция понимания на программу",
+        "definition": "Пользователь приписывает программе понимание, эмпатию или терапевтическую компетентность сильнее, чем допускает устройство системы.",
+        "human_coupling": [
+          "PH01",
+          "PH06"
+        ],
+        "ai_amplifier": "У LLM беглый и контекстный выход, поэтому проекция выглядит не очевидной ошибкой, а правдоподобным отношением.",
+        "primary_anchor": "Weizenbaum 1966 / 1976"
+      },
+      {
+        "id": "HB05",
+        "name": "Online disinhibition",
+        "label_ru": "растормаживание в онлайн-среде",
+        "definition": "Анонимность, асинхронность, невидимость, интроекция собеседника и игровое воображение меняют самораскрытие, нормы и риск.",
+        "human_coupling": [
+          "PH04",
+          "PH02",
+          "PH14",
+          "PH15"
+        ],
+        "ai_amplifier": "Чатбот соединяет приватность дневника с реактивностью собеседника; benign self-disclosure и рискованное растормаживание могут расти вместе.",
+        "primary_anchor": "Suler 2004"
+      },
+      {
+        "id": "HB06",
+        "name": "Proteus effect",
+        "label_ru": "поведение подстраивается под аватар",
+        "definition": "Цифровая саморепрезентация пользователя меняет его поведение и самоощущение, даже без внешней оценки со стороны других.",
+        "human_coupling": [
+          "PH02",
+          "PH09"
+        ],
+        "ai_amplifier": "Нейроаватары добавляют лицо, голос и роль; воплощённая персона становится не декорацией, а регулятором поведения.",
+        "primary_anchor": "Yee & Bailenson 2007"
+      }
+    ],
+    "guardrail": "HB не является причинным доказательством в конкретном кейсе; это механизм восприимчивости и мост к PH/V/E-кодировке."
+  }
 }

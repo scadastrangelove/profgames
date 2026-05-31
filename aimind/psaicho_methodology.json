@@ -1,6 +1,6 @@
 {
   "name": "psAIcho Methodology Pack",
-  "version": "0.2",
+  "version": "0.2.1",
   "date": "2026-05-31",
   "type": "AI-side behavioral/dispositional taxonomy — ТРЕНДЫ И ИССЛЕДОВАНИЯ (не каталог одиночных фейлов)",
   "positioning": "Зеркальная линза к AI-Mind. Документирует свойства и поведение моделей, которые являются upstream-механизмом человеческих феноменов PH. Severity указывается как INDIRECT (через петлю на человека), т.к. psAIcho сам по себе не про прямой вред человеку.",
@@ -189,5 +189,5 @@
     }
   ],
   "public_artifact": "psaicho_methodology.json",
-  "spine": "aimind_signals.jsonl (78 total signals; 22 ai stream signals after psAIcho v0.2 backlog pass)"
+  "spine": "aimind_signals.jsonl (85 total signals; 23 ai stream signals after human-baseline layer / griefbots pass)"
 }

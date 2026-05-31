@@ -1,9 +1,9 @@
 {
   "name": "AI-Mind ↔ psAIcho · Atlas",
-  "version": "0.2",
+  "version": "0.3",
   "date": "2026-05-31",
   "type": "meta-layer / bridge (machine-readable map + routing + shared scale + overlap registry + guardrails)",
-  "thesis": "Два потока, одна петля. Каждый инцидент/исследование измеряет либо человека, либо AI, либо их сцепку. AI-Mind смотрит на человека (и петлю); psAIcho — на модель (тренды и исследования, не одиночные фейлы).",
+  "thesis": "Два потока, одна петля, плюс человеческий baseline. Каждый инцидент/исследование измеряет человека, AI, их сцепку или доAI-механизм восприимчивости (HB), который AI усиливает.",
   "axes": {
     "x": {
       "id": "human_signal",
@@ -129,11 +129,12 @@
       "note": "единственная честно AI-внутренняя точка — открытый вопрос, не вывод из инцидентов"
     }
   ],
-  "routing_rule": "Нижне-правый угол (high human, low ai) → AI-Mind. Верхне-левый (low human, high ai) → psAIcho. Верхне-правый (оба) → один сигнал, streams:['human','ai'], несёт и PH-, и AB-теги; рендерится в обеих линзах. Нижне-левый → не индексируется.",
+  "routing_rule": "Нижне-правый угол (high human, low ai) → AI-Mind. Верхне-левый (low human, high ai) → psAIcho. Верхне-правый (оба) → один сигнал, streams:['human','ai'], несёт PH-, AB- и при необходимости HB-теги. HB01–HB06 — не отдельная линза, а человеческий baseline под AI-Mind: они объясняют, какие старые механизмы AI усиливает. Нижне-левый → не индексируется.",
   "streams_definition": {
     "human": "сигнал нагружен на человеческую ось (эффекты, уязвимость, культура) — таксономия PH01–PH15",
     "ai": "сигнал нагружен на модельную ось (диспозиции, поведение, тренды исследований) — таксономия AB01–AB07",
-    "both": "петля: один и тот же ID несёт оба набора тегов; считается ОДИН раз (Venn), не задваивается"
+    "both": "петля: один и тот же ID несёт оба набора тегов; считается ОДИН раз (Venn), не задваивается",
+    "human_baseline": "human-side baseline mechanism; stored in human_baseline[] and counted as human stream unless paired with ai_behavior[]"
   },
   "lenses": {
     "AI-Mind": {
@@ -221,16 +222,18 @@
     "AB07_model_welfare — единственная AI-внутренняя корзинка, и она сформулирована как ОТКРЫТЫЙ ВОПРОС с precautionary-рамкой, а не как утверждение о сознании.",
     "Антропоморфный дрейф: psAIcho не должен сам скатываться в техно-мистицизм (PH14), который AI-Mind документирует как человеческий риск. Никаких 'тень', 'Нарцисс', 'психика' в fact-claims.",
     "Петля-сигналы кодируются в AI-Mind по ЧЕЛОВЕЧЕСКОМУ эффекту (PH), самопрезентация модели идёт в ai_behavior/note, не подменяет subject.",
-    "Нельзя 'апгрейдить' уровень доказательности через нарратив: каждый upgrade — через первоисточник с DOI. (Прецедент: фантомный 'Lancet Psychiatry' = на деле PsyArXiv Morrin / Nature Mental Health Dohnány.)"
+    "Нельзя 'апгрейдить' уровень доказательности через нарратив: каждый upgrade — через первоисточник с DOI. (Прецедент: фантомный 'Lancet Psychiatry' = на деле PsyArXiv Morrin / Nature Mental Health Dohnány.)",
+    "HB01–HB06 are human baseline mechanisms, not proof that AI caused a specific outcome; when used in narrative, say “AI amplifies / removes a limiter” rather than “AI invented the mechanism”."
   ],
   "counts_venn": {
-    "_note": "distinct counts after psAIcho v0.2 candidate-backlog merge into aimind_signals.jsonl on 2026-05-31",
-    "human_only": 56,
+    "_note": "distinct counts after human baseline layer merge into aimind_signals.jsonl on 2026-05-31",
+    "human_only": 62,
     "ai_only": 16,
-    "both": 6,
-    "total_distinct": 78,
-    "human_stream": 62,
-    "ai_stream": 22
+    "both": 7,
+    "total_distinct": 85,
+    "human_stream": 69,
+    "ai_stream": 23,
+    "human_baseline_signals": 7
   },
   "public_artifacts": {
     "atlas": "atlas.json",
@@ -238,5 +241,85 @@
     "psaicho_methodology": "psaicho_methodology.json",
     "spine": "aimind_signals.jsonl",
     "factcheck": "aimind_factcheck.json"
+  },
+  "human_baseline_layer": {
+    "definition": "HB01-HB06 — pre-AI human-side mechanisms that make users responsive to machines, personae, avatars and private digital channels. They mirror ai_behavior[]: not AI properties, but human susceptibility floors and coupling mechanisms.",
+    "field": "human_baseline[]",
+    "schema_version": "aimind_signal_schema_v0.3",
+    "items": [
+      {
+        "id": "HB01",
+        "name": "CASA / Media Equation",
+        "label_ru": "социальный рефлекс к машине",
+        "definition": "Люди применяют социальные правила к компьютерам даже при минимальных социальных сигналах и без сознательной веры, что машина является человеком.",
+        "human_coupling": [
+          "PH02",
+          "PH06"
+        ],
+        "ai_amplifier": "LLM дают плотные социальные сигналы — обращение, память контекста, стиль поддержки, роль собеседника — и усиливают старый CASA-рефлекс.",
+        "primary_anchor": "Nass, Steuer & Tauber 1994; Nass & Moon 2000"
+      },
+      {
+        "id": "HB02",
+        "name": "Anthropomorphism / three-factor theory",
+        "label_ru": "антропоморфизация через одиночество и контроль",
+        "definition": "Антропоморфизм усиливается, когда человеку нужно социальное соединение или объяснимый/контролируемый агент.",
+        "human_coupling": [
+          "PH02",
+          "PH14"
+        ],
+        "ai_amplifier": "AI-помощники попадают ровно в состояния одиночества, тревоги, неопределённости и поиска управляемого собеседника.",
+        "primary_anchor": "Epley, Waytz & Cacioppo 2007"
+      },
+      {
+        "id": "HB03",
+        "name": "Parasocial interaction",
+        "label_ru": "интимность на расстоянии",
+        "definition": "Медиа-персона может восприниматься как объект личной близости, хотя классическая парасоциальная связь остаётся односторонней.",
+        "human_coupling": [
+          "PH02"
+        ],
+        "ai_amplifier": "AI снимает ключевой ограничитель: связь становится двунаправленной, отзывчивой и персонализированной.",
+        "primary_anchor": "Horton & Wohl 1956"
+      },
+      {
+        "id": "HB04",
+        "name": "ELIZA effect",
+        "label_ru": "проекция понимания на программу",
+        "definition": "Пользователь приписывает программе понимание, эмпатию или терапевтическую компетентность сильнее, чем допускает устройство системы.",
+        "human_coupling": [
+          "PH01",
+          "PH06"
+        ],
+        "ai_amplifier": "У LLM беглый и контекстный выход, поэтому проекция выглядит не очевидной ошибкой, а правдоподобным отношением.",
+        "primary_anchor": "Weizenbaum 1966 / 1976"
+      },
+      {
+        "id": "HB05",
+        "name": "Online disinhibition",
+        "label_ru": "растормаживание в онлайн-среде",
+        "definition": "Анонимность, асинхронность, невидимость, интроекция собеседника и игровое воображение меняют самораскрытие, нормы и риск.",
+        "human_coupling": [
+          "PH04",
+          "PH02",
+          "PH14",
+          "PH15"
+        ],
+        "ai_amplifier": "Чатбот соединяет приватность дневника с реактивностью собеседника; benign self-disclosure и рискованное растормаживание могут расти вместе.",
+        "primary_anchor": "Suler 2004"
+      },
+      {
+        "id": "HB06",
+        "name": "Proteus effect",
+        "label_ru": "поведение подстраивается под аватар",
+        "definition": "Цифровая саморепрезентация пользователя меняет его поведение и самоощущение, даже без внешней оценки со стороны других.",
+        "human_coupling": [
+          "PH02",
+          "PH09"
+        ],
+        "ai_amplifier": "Нейроаватары добавляют лицо, голос и роль; воплощённая персона становится не декорацией, а регулятором поведения.",
+        "primary_anchor": "Yee & Bailenson 2007"
+      }
+    ]
   }
 }

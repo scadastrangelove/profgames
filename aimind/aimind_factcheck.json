@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI-Mind — Independent Fact-Check Pack",
-    "version": "0.9.1",
+    "version": "0.9.2",
     "fact_check_date": "2026-05-31",
     "data_relevance_date": "2026-05-31",
     "passes": [
@@ -64,6 +64,11 @@
         "id": "psaicho_candidate_backlog",
         "name": "psAIcho candidate backlog — model-side behavior signals",
         "approach": "deduplicate against existing spine; integrate only verified model-side / benchmark / official-disclosure candidates; defer partial/unverified items"
+      },
+      {
+        "id": "human_baseline_layer",
+        "name": "Human baseline layer — pre-AI susceptibility mechanisms and neuroavatar amplifier",
+        "approach": "primary DOI/source verification for foundational social-psychology / HCI mechanisms; add human_baseline[] mirror field to signal spine"
       }
     ],
     "evidence_levels": {
@@ -82,6 +87,11 @@
     },
     "lineage": "schema cloned from github.com/scadastrangelove/profgames factcheck.json v2.0; field semantics preserved without modification",
     "changelog": [
+      {
+        "version": "0.9.2",
+        "date": "2026-05-31",
+        "description": "Human baseline layer added: HB01-HB06 formalized in Atlas/methodology; +7 verified signals and claims (CASA, anthropomorphism, parasocial interaction, ELIZA effect, online disinhibition, Proteus effect, griefbots/deadbots). Schema v0.3 adds human_baseline[]."
+      },
       {
         "version": "0.9.1",
         "date": "2026-05-31",
@@ -188,20 +198,22 @@
   },
   "summary": {
     "stats": {
-      "total_claims": 66,
-      "verified": 61,
+      "total_claims": 73,
+      "verified": 68,
       "partially_verified": 5,
       "needs_correction": 0,
       "not_verified": 0,
       "not_found": 0,
       "disputed": 2,
       "filter_survivor_meta_analyses": "2 из 6 мета-анализов 2023-26 проходят все 11 пользовательских фильтров: Li 2025 youth depression subclinical subgroup; Wang 2025 Chinese students loneliness.",
-      "total_signals": 78,
-      "psaicho_ai_behavior_signals": 22,
-      "human_ai_overlap_signals": 6
+      "total_signals": 85,
+      "psaicho_ai_behavior_signals": 23,
+      "human_ai_overlap_signals": 7,
+      "human_baseline_signals": 7
     },
     "approximate_pass_rate": "100% (small starter pack, expect drop as corpus grows)",
     "key_findings": [
+      "v0.9.2 human baseline layer: HB01-HB06 formalized as the human-side mirror of AB; +7 verified signals/claims integrated (CASA, anthropomorphism, parasociality, ELIZA effect, online disinhibition, Proteus effect, griefbots/deadbots).",
       "v0.9.1 / psAIcho backlog: +10 verified model-side signals integrated — SycEval, ELEPHANT, alignment faking, Sleeper Agents, Apollo in-context scheming, OpenAI×Apollo anti-scheming, Anthropic agentic misalignment, Persona Vectors, ToxicChat, Anthropic model-welfare program. Partial/unverified candidates deferred rather than merged.",
       "psAIcho v0.1 integrated as a mirrored AI-side lens: 8 model-side/loop signals added, 4 existing AI-Mind signals retagged with ai_behavior[], Atlas bridge published; v0.9.1 adds 10 psAIcho model-side claims and brings the claim-level factcheck total to 66.",
       "Raine v. OpenAI: filing date, ChatGPT message counts and Senate testimony all verifiable from primary documents; OpenAI's counter-response (25.11.2025) is itself a primary document and must be cited alongside the family's claim",
@@ -3265,6 +3277,273 @@
       "signal_ids": [
         "SIG_2025_ANTHROPIC_MODEL_WELFARE"
       ]
+    },
+    {
+      "id": "hb-1994-casa-media-equation-01",
+      "pass": "human_baseline_layer",
+      "topic": "Computers Are Social Actors / Media Equation: социальный ответ на машины запускается минимальными сигналами",
+      "claim": "Nass, Steuer & Tauber (CHI '94) and Nass & Moon (2000) show that people apply social rules to computers from minimal cues such as first-person address and interaction framing, and not because they consciously believe the machine is human.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Nass, Steuer & Tauber 1994 — CHI DOI",
+          "url": "https://doi.org/10.1145/191666.191703",
+          "type": "primary",
+          "date": "1994"
+        },
+        {
+          "title": "Nass & Moon 2000 — JSI DOI",
+          "url": "https://doi.org/10.1111/0022-4537.00153",
+          "type": "primary",
+          "date": "1994"
+        }
+      ],
+      "date_relevant": "1994",
+      "caveats": [
+        "Foundational pre-LLM baseline. Application to LLMs is an inference; the verified claim is the human social-response mechanism.",
+        "Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Nass, Steuer & Tauber (CHI '94) and Nass & Moon (2000) show that people apply social rules to computers from minimal cues such as first-person address and interaction framing, and not because they consciously believe the machine is human.",
+      "geographic_scope": "",
+      "keywords": [
+        "hb01",
+        "casa",
+        "media_equation",
+        "nass",
+        "social_actors",
+        "minimal_cues",
+        "HB01"
+      ],
+      "signal_ids": [
+        "SIG_1994_CASA_MEDIA_EQUATION"
+      ]
+    },
+    {
+      "id": "hb-2007-anthropomorphism-three-factor-01",
+      "pass": "human_baseline_layer",
+      "topic": "On Seeing Human: трёхфакторная теория антропоморфизма",
+      "claim": "Epley, Waytz & Cacioppo (Psychological Review 114(4)) explain anthropomorphism via elicited agent knowledge, effectance motivation (need to understand/control) and sociality motivation (loneliness / need for affiliation).",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Epley, Waytz & Cacioppo 2007 — Psychological Review DOI",
+          "url": "https://doi.org/10.1037/0033-295X.114.4.864",
+          "type": "primary",
+          "date": "2007"
+        }
+      ],
+      "date_relevant": "2007",
+      "caveats": [
+        "General theory, not chatbot-specific. AI-Mind uses it as a vulnerability/baseline mechanism, not as an outcome study.",
+        "Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Epley, Waytz & Cacioppo (Psychological Review 114(4)) explain anthropomorphism via elicited agent knowledge, effectance motivation (need to understand/control) and sociality motivation (loneliness / need for affiliation).",
+      "geographic_scope": "",
+      "keywords": [
+        "hb02",
+        "anthropomorphism",
+        "epley",
+        "waytz",
+        "cacioppo",
+        "effectance",
+        "sociality",
+        "HB02"
+      ],
+      "signal_ids": [
+        "SIG_2007_ANTHROPOMORPHISM_THREE_FACTOR"
+      ]
+    },
+    {
+      "id": "hb-1956-parasocial-horton-wohl-01",
+      "pass": "human_baseline_layer",
+      "topic": "Mass Communication and Para-Social Interaction: intimacy at a distance",
+      "claim": "Horton & Wohl (Psychiatry 19(3)) coin 'parasocial interaction': mass media create the illusion of a face-to-face relationship with a persona, experienced as one-sided intimacy at a distance.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Horton & Wohl 1956 — Psychiatry DOI",
+          "url": "https://doi.org/10.1080/00332747.1956.11023049",
+          "type": "primary",
+          "date": "1956"
+        }
+      ],
+      "date_relevant": "1956",
+      "caveats": [
+        "Original article is a conceptual foundation later validated/extended by a large parasocial-interaction literature; original channel was non-interactive media.",
+        "Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Horton & Wohl (Psychiatry 19(3)) coin 'parasocial interaction': mass media create the illusion of a face-to-face relationship with a persona, experienced as one-sided intimacy at a distance.",
+      "geographic_scope": "",
+      "keywords": [
+        "hb03",
+        "parasocial",
+        "horton",
+        "wohl",
+        "intimacy_at_a_distance",
+        "HB03"
+      ],
+      "signal_ids": [
+        "SIG_1956_PARASOCIAL_HORTON_WOHL"
+      ]
+    },
+    {
+      "id": "hb-1966-eliza-effect-01",
+      "pass": "human_baseline_layer",
+      "topic": "ELIZA effect: проекция понимания и эмпатии на простую программу",
+      "claim": "Weizenbaum (CACM 9(1)) built ELIZA, a pattern-matching 'Rogerian therapist'. Users attributed understanding and empathy to it despite the program's simplicity; Weizenbaum later treated this as a warning about projection onto machines.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Weizenbaum 1966 — CACM DOI",
+          "url": "https://doi.org/10.1145/365153.365168",
+          "type": "primary",
+          "date": "1966"
+        }
+      ],
+      "date_relevant": "1966",
+      "caveats": [
+        "A-level for the ELIZA paper and effect history; Weizenbaum's 'delusional thinking' formulation is a qualitative author observation, not a controlled clinical study.",
+        "Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Weizenbaum (CACM 9(1)) built ELIZA, a pattern-matching 'Rogerian therapist'. Users attributed understanding and empathy to it despite the program's simplicity; Weizenbaum later treated this as a warning about projection onto machines.",
+      "geographic_scope": "",
+      "keywords": [
+        "hb04",
+        "eliza",
+        "weizenbaum",
+        "rogerian_therapist",
+        "projection",
+        "HB04"
+      ],
+      "signal_ids": [
+        "SIG_1966_ELIZA_EFFECT"
+      ]
+    },
+    {
+      "id": "hb-2004-suler-online-disinhibition-01",
+      "pass": "human_baseline_layer",
+      "topic": "Online disinhibition effect: приватный цифровой канал меняет самораскрытие и нормы",
+      "claim": "Suler (CyberPsychology & Behavior, 2004) describes six factors of online disinhibition, including dissociative anonymity, invisibility, asynchronicity, solipsistic introjection and dissociative imagination; the effect can be benign or toxic.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Suler 2004 — CyberPsychology & Behavior DOI",
+          "url": "https://doi.org/10.1089/1094931041291295",
+          "type": "primary",
+          "date": "2004"
+        }
+      ],
+      "date_relevant": "2004",
+      "caveats": [
+        "Pre-LLM online-communication theory; used as baseline mechanism rather than chatbot outcome evidence.",
+        "Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Suler (CyberPsychology & Behavior, 2004) describes six factors of online disinhibition, including dissociative anonymity, invisibility, asynchronicity, solipsistic introjection and dissociative imagination; the effect can be benign or toxic.",
+      "geographic_scope": "",
+      "keywords": [
+        "hb05",
+        "suler",
+        "online_disinhibition",
+        "solipsistic_introjection",
+        "dissociative_imagination",
+        "HB05"
+      ],
+      "signal_ids": [
+        "SIG_2004_SULER_ONLINE_DISINHIBITION"
+      ]
+    },
+    {
+      "id": "hb-2007-proteus-effect-01",
+      "pass": "human_baseline_layer",
+      "topic": "Proteus Effect: цифровая саморепрезентация меняет поведение пользователя",
+      "claim": "Yee & Bailenson (Human Communication Research 33(3)) show that a user’s behavior conforms to their own digital self-representation: more attractive avatars increased intimate self-disclosure; taller avatars increased confidence in negotiation.",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Yee & Bailenson 2007 — Human Communication Research DOI",
+          "url": "https://doi.org/10.1111/j.1468-2958.2007.00299.x",
+          "type": "primary",
+          "date": "2007"
+        }
+      ],
+      "date_relevant": "2007",
+      "caveats": [
+        "Studied in virtual environments, not LLM companions specifically. Mechanism debates remain, but the effect is a foundational avatar baseline.",
+        "Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Yee & Bailenson (Human Communication Research 33(3)) show that a user’s behavior conforms to their own digital self-representation: more attractive avatars increased intimate self-disclosure; taller avatars increased confidence in negotiation.",
+      "geographic_scope": "",
+      "keywords": [
+        "hb06",
+        "proteus_effect",
+        "yee",
+        "bailenson",
+        "avatars",
+        "embodiment",
+        "HB06"
+      ],
+      "signal_ids": [
+        "SIG_2007_PROTEUS_EFFECT"
+      ]
+    },
+    {
+      "id": "hb-2024-griefbots-deadbots-01",
+      "pass": "human_baseline_layer",
+      "topic": "Griefbots / deadbots / postmortem avatars: цифровая загробная индустрия как нейроаватарный усилитель",
+      "claim": "Hollanek & Nowaczyk-Basińska (Philosophy & Technology 37:63) analyze AI re-creation of the deceased through 'deadbots' and propose a data-donor / recipient / interactant ethics taxonomy. Risks include psychological dependence, inability to suspend a deadbot, overwhelming emotional weight, and voice/dialect mimicry.",
+      "status": "verified",
+      "evidence_level": "C",
+      "sources": [
+        {
+          "title": "Hollanek & Nowaczyk-Basińska 2024 — Philosophy & Technology DOI",
+          "url": "https://doi.org/10.1007/s13347-024-00744-w",
+          "type": "primary",
+          "date": "2024-05-09"
+        },
+        {
+          "title": "NPR coverage of AI recreations of dead people",
+          "url": "https://www.npr.org/2025/08/26/nx-s1-5508355/ai-dead-people-chatbots-videos-parkland-court",
+          "type": "secondary",
+          "date": "2025-08-26"
+        }
+      ],
+      "date_relevant": "2024-05-09",
+      "caveats": [
+        "Evidence C for harm because the article uses speculative design scenarios and ethics analysis, not measured outcome prevalence. Not a claim that the simulated deceased is conscious.",
+        "Pre-LLM baseline where applicable; AI-specific amplification is an inference and must be phrased as such."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Hollanek & Nowaczyk-Basińska (Philosophy & Technology 37:63) analyze AI re-creation of the deceased through 'deadbots' and propose a data-donor / recipient / interactant ethics taxonomy. Risks include psychological dependence, inability to suspend a deadbot, overwhelming emotional weight, and voice/dialect mimicry.",
+      "geographic_scope": "",
+      "keywords": [
+        "griefbots",
+        "deadbots",
+        "postmortem_avatars",
+        "hb02",
+        "hb03",
+        "hb05",
+        "ab05",
+        "digital_afterlife",
+        "HB02",
+        "HB03",
+        "HB05",
+        "AB05"
+      ],
+      "signal_ids": [
+        "SIG_2024_GRIEFBOTS_DEADBOTS"
+      ]
     }
   ],
   "gaps": [
@@ -3805,5 +4084,26 @@
       "Not merged now: Grok Ani, AG letter, Chandra/Batista, subliminal learning, sandbagging, CoT monitorability and several clinical commentaries until exact primary/source status is checked in a dedicated pass."
     ],
     "recommendation": "Use v0.9.1 as psAIcho v0.2 expansion. Keep AB07 quarantined as open_question and avoid co-coding with human harm PH tags."
+  },
+  "dataset_audit_2026_05_31d": {
+    "submission": "chat submission — human baseline layer / neuroavatar forward-looking anchors",
+    "audit_date": "2026-05-31",
+    "verdict": "HB01-HB06 formalized; 7 verified signals integrated including griefbots/deadbots as neuroavatar amplifier; Suler/HB05 was not present locally and was added rather than assumed",
+    "input_candidates": 7,
+    "integrated_signal_ids": [
+      "SIG_1994_CASA_MEDIA_EQUATION",
+      "SIG_2007_ANTHROPOMORPHISM_THREE_FACTOR",
+      "SIG_1956_PARASOCIAL_HORTON_WOHL",
+      "SIG_1966_ELIZA_EFFECT",
+      "SIG_2004_SULER_ONLINE_DISINHIBITION",
+      "SIG_2007_PROTEUS_EFFECT",
+      "SIG_2024_GRIEFBOTS_DEADBOTS"
+    ],
+    "findings": [
+      "The HB layer is useful because it prevents the narrative from implying that AI creates susceptibility from zero; it documents older human mechanisms that AI amplifies.",
+      "CASA, anthropomorphism, parasocial interaction, ELIZA effect, online disinhibition and Proteus effect are foundational human-axis baselines with stable primary anchors.",
+      "Griefbots/deadbots are not baseline but a forward-looking neuroavatar amplifier where HB02/HB03/HB05 converge with AB05 anthropomorphic self-presentation."
+    ],
+    "recommendation": "Use human_baseline[] as a mirror field to ai_behavior[]; keep AI-specific claims separate from pre-LLM baseline mechanisms and preserve caveats about inference."
   }
 }

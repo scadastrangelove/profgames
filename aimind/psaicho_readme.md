@@ -1,4 +1,4 @@
-# psAIcho × AI-Mind — пакет v0.2 (зеркальная линза + мета-слой)
+# psAIcho × AI-Mind — пакет v0.2.1 (зеркальная линза + мета-слой)
 
 Дата: 2026-05-31. Архитектура: **один spine, две линзы, мета-слой**.
 
@@ -8,7 +8,7 @@
 |---|---|---|
 | `atlas.json` | мета: карта-как-данные, правило роутинга, общая шкала A–D, overlap-registry, guardrails | Мета (Atlas) |
 | `psaicho_methodology.json` | таксономия модельной оси **AB01–AB07** (тренды и исследования, не одиночные фейлы) | Линза psAIcho |
-| `aimind_signals.jsonl` | 18 psAIcho-сигналов, влитых в общий `aimind_signals.jsonl` (schema v0.2 со `streams[]` + `ai_behavior[]`) | Spine |
+| `aimind_signals.jsonl` | 23 AI-stream сигналов, влитых в общий `aimind_signals.jsonl` (schema v0.3 со `streams[]` + `ai_behavior[]` + `human_baseline[]`) | Spine |
 | `README_psaicho.md` | этот файл | — |
 
 ## Модель в одном абзаце
@@ -50,3 +50,7 @@
 ## Ключевой guardrail
 
 «Поток про AI» ≠ психика/сознание AI. AB01–AB06 — функциональные дескрипторы **поведения**, не внутренних состояний. AB07 — единственная AI-внутренняя корзинка, и она сформулирована как **открытый вопрос** с precautionary-рамкой, а не как утверждение. psAIcho не должен сам скатываться в техно-мистицизм (PH14), который AI-Mind документирует как человеческий риск.
+
+## Human baseline layer (HB)
+
+AI-Mind теперь хранит зеркальный человеческий baseline: `human_baseline[]` (HB01–HB06). Это не модельная психика и не новый PH, а слой старых механизмов восприимчивости — CASA, антропоморфизм, парасоциальность, ELIZA effect, online disinhibition и Proteus effect, которые AI усиливает двунаправленностью, беглостью, лицом и голосом.
