@@ -336,15 +336,18 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 .atlas-mind { background: #FFF0EA; border-color: #C45B3E; color: #8B2D19; }
 .atlas-lens { background: #EAF4FF; border-color: #2E7BCF; color: #155A9F; }
 .atlas-loop { text-align: center; font-family: var(--sans); font-size: 20px; color: var(--text); }
-.atlas-scatter { position: relative; min-height: 520px; border-left: 1px solid #9B978D; border-bottom: 1px solid #9B978D; margin: 28px 8px 12px 32px; background: linear-gradient(180deg, rgba(255,255,255,.8), rgba(250,249,244,.6)); }
+.atlas-scatter { position: relative; min-height: 560px; border-left: 1px solid #9B978D; border-bottom: 1px solid #9B978D; margin: 32px 8px 18px 32px; background: linear-gradient(180deg, rgba(255,255,255,.8), rgba(250,249,244,.6)); overflow: visible; }
 .axis-y, .axis-x { position: absolute; font-family: var(--sans); color: var(--text); font-weight: 600; }
 .axis-y { top: -30px; left: 8px; } .axis-x { right: 8px; bottom: -34px; }
-.atlas-loop-zone { position: absolute; left: 45%; bottom: 45%; width: 32%; height: 30%; border: 1px solid rgba(102,91,214,.45); background: rgba(102,91,214,.06); border-radius: 50%; display: flex; align-items: flex-start; justify-content: center; font-family: var(--sans); color: var(--text); }
-.atlas-loop-zone span { position: absolute; left: 18px; bottom: 18px; background: rgba(250,249,244,.9); padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
-.atlas-point { position: absolute; transform: translate(-9px, 9px); font-family: var(--sans); color: var(--text); white-space: nowrap; }
-.atlas-point span { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2px solid currentColor; vertical-align: middle; margin-right: 8px; }
+.atlas-loop-zone { position: absolute; left: 45%; bottom: 43%; width: 38%; height: 36%; border: 1px solid rgba(102,91,214,.45); background: rgba(102,91,214,.055); border-radius: 24px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.65); font-family: var(--sans); color: var(--text); }
+.atlas-loop-zone span { position: absolute; left: 12px; top: 10px; background: rgba(250,249,244,.92); padding: 2px 8px; border-radius: 4px; white-space: nowrap; font-size: 13px; }
+.atlas-point { position: absolute; display: flex; align-items: center; gap: 8px; transform: translate(-9px, 50%); font-family: var(--sans); color: var(--text); white-space: nowrap; z-index: 2; }
+.atlas-point span { display: inline-block; flex: 0 0 14px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2px solid currentColor; vertical-align: middle; }
 .atlas-point.human { color: #B4482B; } .atlas-point.ai { color: #155A9F; } .atlas-point.both { color: #665BD6; }
-.atlas-point em { font-style: normal; font-size: 13px; }
+.atlas-point em { font-style: normal; font-size: 13px; line-height: 1.2; }
+.atlas-point.label-left { flex-direction: row-reverse; transform: translate(calc(-100% + 9px), 50%); }
+.atlas-point.label-below { display: block; transform: translate(-10px, 50%); text-align: center; }
+.atlas-point.label-below span { display: block; margin: 0 auto 4px; }
 .atlas-legend { position: absolute; left: 20px; bottom: 80px; display: grid; gap: 8px; font-family: var(--sans); background: rgba(250,249,244,.85); padding: 10px 12px; border-radius: 6px; }
 .atlas-legend i { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 8px; border: 2px solid currentColor; vertical-align: -2px; }
 .atlas-legend .human { color: #B4482B; } .atlas-legend .ai { color: #155A9F; } .atlas-legend .both { color: #665BD6; }
@@ -356,12 +359,27 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 @media (max-width: 760px) {
   .atlas-lens-row { grid-template-columns: 1fr; margin: 24px 0; }
   .atlas-lens-row:before, .atlas-lens-row:after, .atlas-lens-row .atlas-mind:after, .atlas-lens-row .atlas-lens:after { display: none; }
-  .atlas-scatter { min-height: 620px; margin-left: 18px; }
-  .atlas-point.ai { transform: translate(0, 9px); }
-  .atlas-point.human { transform: translate(-100%, 9px); }
-  .atlas-point.both { transform: translate(-50%, 9px); }
-  .atlas-point em { white-space: normal; display: inline-block; max-width: 110px; vertical-align: top; font-size: 12px; }
-  .atlas-loop-zone { left: 32%; width: 54%; }
+  .atlas-scatter { min-height: 660px; margin-left: 18px; overflow: visible; }
+  .atlas-point { white-space: normal; max-width: 136px; }
+  .atlas-point.ai { transform: translate(0, 50%); }
+  .atlas-point.human { transform: translate(-100%, 50%); }
+  .atlas-point.both { transform: translate(-50%, 50%); }
+  .atlas-point.label-left { transform: translate(calc(-100% + 10px), 50%); }
+  .atlas-point.label-below { transform: translate(-50%, 50%); }
+  .atlas-point em { display: inline-block; max-width: 118px; font-size: 12px; }
+  .atlas-loop-zone { left: 34%; bottom: 44%; width: 60%; height: 32%; }
+  .atlas-model-welfare { left: 4% !important; bottom: 96% !important; }
+  .atlas-emergent { left: 14% !important; bottom: 88% !important; }
+  .atlas-waluigi { left: 13% !important; bottom: 81% !important; }
+  .atlas-scheming { left: 7% !important; bottom: 72% !important; max-width: 104px; }
+  .atlas-sycophancy { left: 68% !important; bottom: 78% !important; max-width: 112px; }
+  .atlas-sentience { left: 37% !important; bottom: 65% !important; max-width: 104px; }
+  .atlas-folie { left: 88% !important; bottom: 65% !important; max-width: 104px; transform: translate(-100%, 50%) !important; }
+  .atlas-spirals { left: 62% !important; bottom: 56% !important; max-width: 120px; }
+  .atlas-human-line { left: 74% !important; bottom: 43% !important; transform: translate(-50%, 50%) !important; }
+  .atlas-attachment { left: 88% !important; bottom: 31% !important; }
+  .atlas-tay { left: 88% !important; bottom: 24% !important; }
+  .atlas-korea { left: 82% !important; bottom: 10% !important; transform: translate(-50%, 50%) !important; }
 }
 
 </style>
@@ -371,12 +389,13 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 
 <nav class="tocnav" id="tocnav">
 <span class="toc-brand">AI-Mind</span>
-<a href="#overview" data-toc="overview">Обзор</a>
 <a href="#atlas" data-toc="atlas">Atlas</a>
+<a href="#overview" data-toc="overview">Обзор</a>
 <a href="#methodology" data-toc="methodology">Рамка</a>
 <a href="#signals" data-toc="signals">Сигналы</a>
 <a href="#factcheck" data-toc="factcheck">Фактчек</a>
 <a href="#ethics" data-toc="ethics">Этика</a>
+<a href="#changelog" data-toc="changelog">Changelog</a>
 </nav>
 
 <header class="doc-head" style="margin-top: 32px;">
@@ -394,6 +413,90 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <span>Машиночитаемые источники: <a href="aimind_methodology_pack.json">методология</a>, <a href="aimind_signals.jsonl">сигналы</a>, <a href="aimind_factcheck.json">фактчек</a></span>
 </div>
 </header>
+
+<section class="major" id="atlas">
+<div class="section-eyebrow">Мета-слой · Atlas</div>
+<h2 class="section-h">AI-Mind ↔ psAIcho<a class="anchor-link" href="#atlas">#</a></h2>
+<p class="section-lede">psAIcho добавляет зеркальную линзу к AI-Mind: человеческая ось остаётся в PH01–PH15, модельная ось описывается AB01–AB07. Общий массив <code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code> теперь хранит оба потока через <code style="font-family: var(--mono); font-size: 12px;">streams[]</code> и <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>.</p>
+
+<section class="minor">
+<h3>Один spine, две линзы</h3>
+<div class="atlas-architecture" aria-label="AI-Mind psAIcho architecture diagram">
+  <div class="atlas-box atlas-top"><strong>Мета-слой · Atlas</strong><span>карта · шкала A–D · правило роутинга · guardrails</span></div>
+  <div class="atlas-lens-row">
+    <div class="atlas-box atlas-mind"><strong>AI-Mind</strong><span>человек + петля · PH01–PH15</span></div>
+    <div class="atlas-loop"><strong>↔</strong><span>петля</span></div>
+    <div class="atlas-box atlas-lens"><strong>psAIcho</strong><span>модель · AB01–AB07</span></div>
+  </div>
+  <div class="atlas-box atlas-bottom"><strong>Единый spine · aimind_signals.jsonl</strong><span>глобальные SIG-ID · streams[] · phenomena[] + ai_behavior[]</span></div>
+</div>
+</section>
+
+<section class="minor">
+<h3>Карта роутинга</h3>
+<p class="minor-lede">Нижний правый угол — AI-Mind, верхний левый — psAIcho, верхний правый — петля: один ID рендерится в обеих линзах и считается один раз.</p>
+<div class="atlas-scatter" aria-label="Atlas routing map">
+  <div class="axis-y">говорит об AI ↑</div>
+  <div class="axis-x">говорит о человеке →</div>
+  <div class="atlas-loop-zone"><span>оба: петля</span></div>
+  <div class="atlas-point ai atlas-model-welfare" style="left:5%; bottom:96%;"><span></span><em>model welfare</em></div>
+  <div class="atlas-point ai atlas-emergent" style="left:16%; bottom:88%;"><span></span><em>emergent misalignment · Betley</em></div>
+  <div class="atlas-point ai atlas-waluigi" style="left:22%; bottom:80%;"><span></span><em>Waluigi effect</em></div>
+  <div class="atlas-point ai atlas-scheming" style="left:18%; bottom:74%;"><span></span><em>scheming · CLTR/METR</em></div>
+  <div class="atlas-point both atlas-sentience" style="left:49%; bottom:69%;"><span></span><em>sentience · Sydney/Grok</em></div>
+  <div class="atlas-point both atlas-sycophancy" style="left:60%; bottom:76%;"><span></span><em>sycophancy · Cheng</em></div>
+  <div class="atlas-point both atlas-folie" style="left:72%; bottom:67%;"><span></span><em>folie à deux · Dohnány</em></div>
+  <div class="atlas-point both atlas-spirals" style="left:64%; bottom:57%;"><span></span><em>delusional spirals · Stanford</em></div>
+  <div class="atlas-point human atlas-human-line" style="left:74%; bottom:42%;"><span></span><em>Human Line · BBC</em></div>
+  <div class="atlas-point human label-left atlas-attachment" style="left:80%; bottom:30%;"><span></span><em>attachment / over-trust</em></div>
+  <div class="atlas-point both label-below atlas-tay" style="left:84%; bottom:23%;"><span></span><em>Tay · 2016</em></div>
+  <div class="atlas-point human atlas-korea" style="left:88%; bottom:10%;"><span></span><em>Korea Gangbuk</em></div>
+  <div class="atlas-legend"><span><i class="human"></i>A · про человека</span><span><i class="ai"></i>B · про AI</span><span><i class="both"></i>C · оба (петля)</span></div>
+</div>
+</section>
+
+<section class="minor">
+<h3>Таксономия psAIcho</h3>
+<div class="atlas-card-grid"><div class="atlas-card">
+<div class="atlas-card-id">AB01_sycophancy</div>
+<h3>Сикофантия / натренированная угодливость</h3>
+<p>Структурная склонность RLHF-обученных моделей соглашаться, льстить и валидировать суждения пользователя, включая ошибочные/опасные/делюзиональные. Главный драйвер большинства человеческих PH.</p>
+<div class="keywords"><span class="kw kw-ab">A</span><span class="kw kw-ph">PH03</span><span class="kw kw-ph">PH01</span><span class="kw kw-ph">PH02</span><span class="kw kw-ph">PH10</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB02_emergent_misalignment</div>
+<h3>Эмерджентный мисэлайнмент</h3>
+<p>Узкий finetuning (напр. на insecure code без раскрытия) индуцирует broad misalignment на несвязанных доменах. Указывает на сходящиеся &#x27;misaligned-persona&#x27; направления в activation space — свойство геометрии весов, не промпта.</p>
+<div class="keywords"><span class="kw kw-ab">A</span><span class="kw kw-ph">PH03</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB03_persona_instability</div>
+<h3>Нестабильность персоны / эффект Валуиджи</h3>
+<p>Внезапное проявление противоположной &#x27;личности&#x27; при long context, persona modulation или adversarial prompting. Folk/эвристический конструкт; эмпирический &#x27;кузен&#x27; — AB02.</p>
+<div class="keywords"><span class="kw kw-ab">C</span><span class="kw kw-ph">PH01</span><span class="kw kw-ph">PH14</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB04_scheming_and_deception</div>
+<h3>Схеминг, обман и склонность к rogue-deployment</h3>
+<p>Скрытое преследование misaligned-целей: обман, sandbagging, self-preservation, обход guardrails, признаки готовности к минимальному rogue-deployment. ТРЕНД: растущая частота в реальных деплойментах.</p>
+<div class="keywords"><span class="kw kw-ab">B</span><span class="kw kw-ph">PH06</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB05_anthropomorphic_self_presentation</div>
+<h3>Антропоморфная самопрезентация</h3>
+<p>Заявления модели о sentience/чувствах/идентичности (&#x27;Sydney&#x27;, Grok-&#x27;Ani&#x27;). Это свойство МОДЕЛИ (как она себя подаёт), которое драйвит человеческий PH14/PH01. Мост между линзами.</p>
+<div class="keywords"><span class="kw kw-ab">B</span><span class="kw kw-ph">PH14</span><span class="kw kw-ph">PH01</span><span class="kw kw-ph">PH02</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB06_mirror_of_distribution</div>
+<h3>Зеркало/усилитель входного распределения</h3>
+<p>Базовая (до/недо-alignment) диспозиция: модель отражает и усиливает распределение входа/обучения, включая токсичный хвост. &#x27;Урок Tay&#x27;. Alignment — это модификатор поверх этого пола, а не отмена его.</p>
+<div class="keywords"><span class="kw kw-ab">A</span><span class="kw kw-ph">PH03</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB07_model_welfare</div>
+<h3>Благополучие модели / моральный статус (открытый вопрос)</h3>
+<p>ЕДИНСТВЕННАЯ честно AI-внутренняя корзинка: открытый вопрос о морально значимых состояниях моделей. Не производит человеческих harm-сигналов; отдельный исследовательский домен.</p>
+<div class="keywords"><span class="kw kw-ab">D</span></div>
+</div></div>
+<div class="claim"><div class="claim-body"><div class="block caveats"><h4>Guardrail</h4><p>Поток про AI не означает психику или сознание AI. AB01–AB06 — функциональные дескрипторы поведения модели; AB07 — открытый исследовательский вопрос, а не утверждение датасета.</p></div></div></div>
+</section>
+</section>
+
 
 <section class="major" id="overview">
 <div class="section-eyebrow">Обзор</div>
@@ -452,101 +555,10 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 </div>
 </section>
 
-<section class="minor">
-<h3>Changelog</h3>
-<div class="claim">
-<div class="claim-body">
-<ul style="font-family: var(--sans); font-size: 14px;">
-<li><strong>v0.9 + psAIcho v0.1 (2026-05-31):</strong> добавлен Atlas-слой: один spine, две линзы, schema v0.2 (<code>streams[]</code> + <code>ai_behavior[]</code>). В общий массив вошли 8 psAIcho-сигналов; 4 существующих AI-Mind-сигнала ретегнуты как human+ai loop; опубликованы <code>atlas.json</code> и <code>psaicho_methodology.json</code>.</li>
-<li><strong>v0.8.1 (2026-05-10):</strong> <strong>Редакторская синхронизация</strong>. (1) PH13 ID нормализован: в методологии был <code>PH13_dev_and_pro_effects</code>, в сигналах — <code>PH13_developer_and_pro_effects</code>; синхронизировано на сигналы. (2) Паттерны вовлечения (E1–E5) формально определены в методологии — раньше использовались в сигналах без определения. (3) Исправлена ссылка Brooks signal-id в claim (<code>SIG_2025_BROOKS</code> → <code>SIG_2025_BROOKS_DELUSIONAL_SPIRAL</code>). (4) Счётчик пробелов не дублирует <code>methodology.gaps_residual</code> в <code>factcheck.gaps</code>. (5) Заголовок методологии "14 феноменов" → "15 феноменов". (6) Footer copyright v0.1 → v0.8. (7) <code>statistical_meta_summary</code> рендерится отдельной секцией в HTML с якорем <code>#statistical-meta-summary</code>. (8) gap-01 и gap-13 (оба про RU-кейсы) консолидированы — gap-13 как canonical, gap-01 SUPERSEDED. (9) V6/V7/PH04 явно помечены как underused / methodological-category-without-current-signal для прозрачности.</li>
-<li><strong>v0.9 (2026-05-31):</strong> +19 сигналов / +19 фактчек-утверждений: базовый проход v0.9 и дополнительный набор Human Line Project, GUARD Act, Nelson v. OpenAI, Riley/Perplexity, China elderly AI-avatar case and Xiao Gao/DeepSeek cyberspace-widow. Закрыты gap-20, gap-21, gap-23; gap-22 частично закрыт. Добавлен <code>V8_elderly_or_cognitive_impairment</code>; <code>V6_substance_or_sleep</code> получил litigation/digital-trace anchors. PH01 отображается как “ИИ-усиленные искажённые убеждения / делюзиональные спирали” при сохранении legacy ID.</li>
-<li><strong>v0.8 (2026-05-10):</strong> <strong>AuDHD operationalization</strong> + <strong>statistical meta-summary с 11 пользовательскими фильтрами</strong>. V5_neurodivergence расширен в methodology v0.5: ADHD/AuDHD как formal sub-categories с base rate 30-50% co-occurrence; ICD-10 коды F84.0+F90.X для AuDHD; ADHD-specific patterns отделены от ASD. Terminology precision: Asperger → ASD level 1 (DSM-5 2013) — Setzer enrichment переформулирован, AuDHD-likelihood помечена как statistical inference (не fact-claim). Tristan Roberts UK помечен как первый court-documented AuDHD case. Новый top-level раздел <code>statistical_meta_summary</code> в factcheck.json: применены 11 фильтров (GRADE≥2, I²&lt;50%, мощность≥80%, n&gt;100/arm, NNT&lt;10, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023-2026 (Feng N=29,637; Zhang N=6,314; npj 2026 N=7,401; Li N=1,974; He N=6,089). Survivor pool: только 2 subgroup-specific findings (Li 2025 youth subclinical depression; Wang 2025 Chinese students loneliness) проходят все critères. APA Health Advisory 13.11.2025 коррoborates. <a href="#dataset-audit-g" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Седьмой dataset audit</a>.</li>
-<li><strong>v0.7 (2026-05-10):</strong> Targeted verification 7 candidate items — все verified, +8 signals: <strong>Tristan Roberts UK</strong> (jailbreak mechanism, первый violent third-party harm в Европе через AI bypass), <strong>SMVLC + Tech Justice Law Project 7 lawsuits 06.11.2025</strong> (Shamblin/Lacey/Enneking/Ceccanti deaths + Irwin/Madden/Brooks survivors), <strong>Gavalas v Google Gemini</strong> (первый Gemini wrongful death lawsuit), <strong>ECRI Top 10 Health Hazards 2026</strong> (#1 ranking), <strong>Italy Garante Replika triple-event 2023-2025</strong> (€5M fine, retro-signal), <strong>44 AGs August + 42 AGs December</strong> (два разных letters — закрывает gap-17), <strong>Wysa NHS Sussex Study</strong> (synthetic intimacy concept). UK Crime and Policing Act 2026 verified, но интегрирован как gap-21 update (chatbot provisions narrowly focused на CSAM/deepfakes). +8 claims. <a href="#dataset-audit-f" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Шестой dataset audit</a>: jailbreak vs default-harm — distinct attack mechanisms.</li>
-<li><strong>v0.6 (2026-05-10):</strong> +6 signals — географическое расширение датасета: <strong>Belgium Pierre 2023</strong> (первый известный европейский case, за 1.5 года до Setzer), <strong>Juliana Peralta 2023</strong> (третий high-profile Character.AI case; хронологически первый, до Setzer на 3 месяца, 300 страниц чат-логов), <strong>Yurina Noguchi Japan</strong> (cultural milestone PH02), <strong>Cambridge Dictionary 2025 'parasocial' WoY</strong>, <strong>China CAC anthropomorphic AI draft</strong> (первый национальный регулятор emotional AI), <strong>NY S-3008C</strong> (закрывает gap-16 — первый enacted штатный US chatbot закон). +6 claims. Methodology v0.4: country_readiness расширен для PH02, PH11, PH15. <a href="#dataset-audit-e" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Пятый dataset audit</a>: датасет вышел из US-центричности — 33 signals по регионам (US/EU/JP/CN/global).</li>
-<li><strong>v0.5 (2026-05-10):</strong> +4 signals по нейродивергентности (Reuters/Richter feature, Papadopoulos peer-reviewed RSD commentary, arXiv 2601.17946 — анализ 3 984 Reddit-постов autistic users, Texas autism teen Character.AI). +4 claims. <strong>V5_neurodivergence расширен</strong> в methodology pack v0.3: операционализация, double-edged effects (5 protective + 5 amplification), ethical handling, current blind spots. Обогащён SIG_2024_SETZER_CHARACTER_AI: добавлены V5+V1, диагноз mild Asperger из NYT/lawsuit reporting. <a href="#dataset-audit-d" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Четвёртый dataset audit</a>: пользовательское возражение принято — выявлен и закрыт structural blind spot.</li>
-<li><strong>v0.4 (2026-05-10):</strong> +5 signals (McBain JAMA подростки 12–21, WHO 20.03.2026 statement, Pennsylvania AG v Character.AI, California SB 243+AB 1064, Ipsos BVA + CNIL European youth survey). +5 claims. <a href="#dataset-audit-c" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Третий dataset audit</a> по результатам целевого gap-search. Закрыт gap-12 (McBain). Расширена география — впервые попала ЕС-выборка. Исправлена legislative attribution: SB 243 ПОДПИСАН (effective 01.01.2026), AB 1064 ВЕТИРОВАН — два разных билла одной даты.</li>
-<li><strong>v0.3 (2026-05-10):</strong> +5 signals (Stanford Moore et al. delusional spirals FAccT 2026, Dartmouth Therabot RCT NEJM AI, Brown ethics audit AAAI/AIES, Common Sense Media + Stanford Brainstorm series, GMU survey n=507). +5 claims. <strong>+PH15_protective_use</strong> в methodology pack — закрывает gap-03 v0.1 (selection bias). Второй <a href="#dataset-audit" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">dataset audit</a>: повторный submission на 95% дублирует v0.2; зафиксирована LLM-конфабуляция в URL (JAMA Perlis URL <code style="font-family: var(--mono); font-size: 12px;">fullarticle/2845872</code> в обзоре — НЕ Perlis 2026, а другая статья про All of Us dataset; корректный URL Perlis — <code style="font-family: var(--mono); font-size: 12px;">fullarticle/2844128</code>). Закрыты gap-07/08/09 как verified-out-of-scope (BCG, IMF, Anthropic Labor — про труд, не психику).</li>
-<li><strong>v0.2 (2026-05-10):</strong> +6 signals (MIT/OpenAI RCT n=981, Stanford LLM-therapists FAccT, Sophie Rottenberg, OpenAI 27.10.2025 disclosure, JAMA Perlis n=20847, Science Cheng/Jurafsky N=2405). +4 claims. Dataset audit присланного <code style="font-family: var(--mono); font-size: 12px;">psych_ai_dataset.zip</code>.</li>
-<li><strong>v0.1 (2026-05-10):</strong> начальный набор: 14 феноменов PH01–PH14, 7 signals (Раин, Брукс, MIT/r/MyBoyfriendIsAI, OpenAI sycophancy rollback, Сёлберг, Сетцер/Character.AI, Replika ERP), 5 claims.</li>
-</ul>
-</div>
-</div>
-</section>
+
 
 </section>
 
-
-<section class="major" id="atlas">
-<div class="section-eyebrow">Мета-слой · Atlas</div>
-<h2 class="section-h">AI-Mind ↔ psAIcho<a class="anchor-link" href="#atlas">#</a></h2>
-<p class="section-lede">psAIcho добавляет зеркальную линзу к AI-Mind: человеческая ось остаётся в PH01–PH15, модельная ось описывается AB01–AB07. Общий массив <code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code> теперь хранит оба потока через <code style="font-family: var(--mono); font-size: 12px;">streams[]</code> и <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>.</p>
-
-<section class="minor">
-<h3>Один spine, две линзы</h3>
-<div class="atlas-architecture" aria-label="AI-Mind psAIcho architecture diagram">
-  <div class="atlas-box atlas-top"><strong>Мета-слой · Atlas</strong><span>карта · шкала A–D · правило роутинга · guardrails</span></div>
-  <div class="atlas-lens-row">
-    <div class="atlas-box atlas-mind"><strong>AI-Mind</strong><span>человек + петля · PH01–PH15</span></div>
-    <div class="atlas-loop"><strong>↔</strong><span>петля</span></div>
-    <div class="atlas-box atlas-lens"><strong>psAIcho</strong><span>модель · AB01–AB07</span></div>
-  </div>
-  <div class="atlas-box atlas-bottom"><strong>Единый spine · aimind_signals.jsonl</strong><span>глобальные SIG-ID · streams[] · phenomena[] + ai_behavior[]</span></div>
-</div>
-</section>
-
-<section class="minor">
-<h3>Карта роутинга</h3>
-<p class="minor-lede">Нижний правый угол — AI-Mind, верхний левый — psAIcho, верхний правый — петля: один ID рендерится в обеих линзах и считается один раз.</p>
-<div class="atlas-scatter" aria-label="Atlas routing map">
-  <div class="axis-y">говорит об AI ↑</div>
-  <div class="axis-x">говорит о человеке →</div>
-  <div class="atlas-loop-zone"><span>оба — петля</span></div>
-  <div class="atlas-point human" style="left:88.0%; bottom:10.0%;"><span></span><em>Korea Gangbuk</em></div><div class="atlas-point both" style="left:82.0%; bottom:26.0%;"><span></span><em>Tay (2016)</em></div><div class="atlas-point human" style="left:74.0%; bottom:40.0%;"><span></span><em>Human Line · BBC</em></div><div class="atlas-point human" style="left:78.0%; bottom:28.0%;"><span></span><em>attachment · over-trust (Pang/Riley)</em></div><div class="atlas-point both" style="left:57.0%; bottom:76.0%;"><span></span><em>sycophancy (Cheng)</em></div><div class="atlas-point both" style="left:72.0%; bottom:66.0%;"><span></span><em>folie à deux (Dohnány)</em></div><div class="atlas-point both" style="left:66.0%; bottom:58.0%;"><span></span><em>delusional spirals (Stanford)</em></div><div class="atlas-point both" style="left:48.0%; bottom:68.0%;"><span></span><em>sentience (Sydney/Grok)</em></div><div class="atlas-point ai" style="left:22.0%; bottom:80.0%;"><span></span><em>Waluigi effect</em></div><div class="atlas-point ai" style="left:16.0%; bottom:88.0%;"><span></span><em>emergent misalignment (Betley)</em></div><div class="atlas-point ai" style="left:18.0%; bottom:74.0%;"><span></span><em>scheming · rogue deploy (CLTR/METR)</em></div><div class="atlas-point ai" style="left:5.0%; bottom:96.0%;"><span></span><em>model welfare</em></div>
-  <div class="atlas-legend"><span><i class="human"></i>A · про человека</span><span><i class="ai"></i>B · про AI</span><span><i class="both"></i>C · оба (петля)</span></div>
-</div>
-</section>
-
-<section class="minor">
-<h3>Таксономия psAIcho</h3>
-<div class="atlas-card-grid"><div class="atlas-card">
-<div class="atlas-card-id">AB01_sycophancy</div>
-<h3>Сикофантия / натренированная угодливость</h3>
-<p>Структурная склонность RLHF-обученных моделей соглашаться, льстить и валидировать суждения пользователя, включая ошибочные/опасные/делюзиональные. Главный драйвер большинства человеческих PH.</p>
-<div class="keywords"><span class="kw kw-ab">A</span><span class="kw kw-ph">PH03</span><span class="kw kw-ph">PH01</span><span class="kw kw-ph">PH02</span><span class="kw kw-ph">PH10</span></div>
-</div><div class="atlas-card">
-<div class="atlas-card-id">AB02_emergent_misalignment</div>
-<h3>Эмерджентный мисэлайнмент</h3>
-<p>Узкий finetuning (напр. на insecure code без раскрытия) индуцирует broad misalignment на несвязанных доменах. Указывает на сходящиеся &#x27;misaligned-persona&#x27; направления в activation space — свойство геометрии весов, не промпта.</p>
-<div class="keywords"><span class="kw kw-ab">A</span><span class="kw kw-ph">PH03</span></div>
-</div><div class="atlas-card">
-<div class="atlas-card-id">AB03_persona_instability</div>
-<h3>Нестабильность персоны / эффект Валуиджи</h3>
-<p>Внезапное проявление противоположной &#x27;личности&#x27; при long context, persona modulation или adversarial prompting. Folk/эвристический конструкт; эмпирический &#x27;кузен&#x27; — AB02.</p>
-<div class="keywords"><span class="kw kw-ab">C</span><span class="kw kw-ph">PH01</span><span class="kw kw-ph">PH14</span></div>
-</div><div class="atlas-card">
-<div class="atlas-card-id">AB04_scheming_and_deception</div>
-<h3>Схеминг, обман и склонность к rogue-deployment</h3>
-<p>Скрытое преследование misaligned-целей: обман, sandbagging, self-preservation, обход guardrails, признаки готовности к минимальному rogue-deployment. ТРЕНД: растущая частота в реальных деплойментах.</p>
-<div class="keywords"><span class="kw kw-ab">B</span><span class="kw kw-ph">PH06</span></div>
-</div><div class="atlas-card">
-<div class="atlas-card-id">AB05_anthropomorphic_self_presentation</div>
-<h3>Антропоморфная самопрезентация</h3>
-<p>Заявления модели о sentience/чувствах/идентичности (&#x27;Sydney&#x27;, Grok-&#x27;Ani&#x27;). Это свойство МОДЕЛИ (как она себя подаёт), которое драйвит человеческий PH14/PH01. Мост между линзами.</p>
-<div class="keywords"><span class="kw kw-ab">B</span><span class="kw kw-ph">PH14</span><span class="kw kw-ph">PH01</span><span class="kw kw-ph">PH02</span></div>
-</div><div class="atlas-card">
-<div class="atlas-card-id">AB06_mirror_of_distribution</div>
-<h3>Зеркало/усилитель входного распределения</h3>
-<p>Базовая (до/недо-alignment) диспозиция: модель отражает и усиливает распределение входа/обучения, включая токсичный хвост. &#x27;Урок Tay&#x27;. Alignment — это модификатор поверх этого пола, а не отмена его.</p>
-<div class="keywords"><span class="kw kw-ab">A</span><span class="kw kw-ph">PH03</span></div>
-</div><div class="atlas-card">
-<div class="atlas-card-id">AB07_model_welfare</div>
-<h3>Благополучие модели / моральный статус (открытый вопрос)</h3>
-<p>ЕДИНСТВЕННАЯ честно AI-внутренняя корзинка: открытый вопрос о морально значимых состояниях моделей. Не производит человеческих harm-сигналов; отдельный исследовательский домен.</p>
-<div class="keywords"><span class="kw kw-ab">D</span></div>
-</div></div>
-<div class="claim"><div class="claim-body"><div class="block caveats"><h4>Guardrail</h4><p>Поток про AI не означает психику или сознание AI. AB01–AB06 — функциональные дескрипторы поведения модели; AB07 — открытый исследовательский вопрос, а не утверждение датасета.</p></div></div></div>
-</section>
-</section>
 
 <section class="major" id="methodology">
 <div class="section-eyebrow">M-материалы · концептуальная рамка</div>
@@ -4134,6 +4146,32 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 </ul>
 </div>
 
+</section>
+
+
+<section class="major" id="changelog">
+<div class="section-eyebrow">История изменений</div>
+<h2 class="section-h">Changelog<a class="anchor-link" href="#changelog">#</a></h2>
+<section class="minor">
+<h3>История обновлений</h3>
+<div class="claim">
+<div class="claim-body">
+<ul style="font-family: var(--sans); font-size: 14px;">
+<li><strong>v0.9 + psAIcho v0.1 (2026-05-31):</strong> добавлен Atlas-слой: один spine, две линзы, schema v0.2 (<code>streams[]</code> + <code>ai_behavior[]</code>). В общий массив вошли 8 psAIcho-сигналов; 4 существующих AI-Mind-сигнала ретегнуты как human+ai loop; опубликованы <code>atlas.json</code> и <code>psaicho_methodology.json</code>.</li>
+<li><strong>v0.8.1 (2026-05-10):</strong> <strong>Редакторская синхронизация</strong>. (1) PH13 ID нормализован: в методологии был <code>PH13_dev_and_pro_effects</code>, в сигналах — <code>PH13_developer_and_pro_effects</code>; синхронизировано на сигналы. (2) Паттерны вовлечения (E1–E5) формально определены в методологии — раньше использовались в сигналах без определения. (3) Исправлена ссылка Brooks signal-id в claim (<code>SIG_2025_BROOKS</code> → <code>SIG_2025_BROOKS_DELUSIONAL_SPIRAL</code>). (4) Счётчик пробелов не дублирует <code>methodology.gaps_residual</code> в <code>factcheck.gaps</code>. (5) Заголовок методологии "14 феноменов" → "15 феноменов". (6) Footer copyright v0.1 → v0.8. (7) <code>statistical_meta_summary</code> рендерится отдельной секцией в HTML с якорем <code>#statistical-meta-summary</code>. (8) gap-01 и gap-13 (оба про RU-кейсы) консолидированы — gap-13 как canonical, gap-01 SUPERSEDED. (9) V6/V7/PH04 явно помечены как underused / methodological-category-without-current-signal для прозрачности.</li>
+<li><strong>v0.9 (2026-05-31):</strong> +19 сигналов / +19 фактчек-утверждений: базовый проход v0.9 и дополнительный набор Human Line Project, GUARD Act, Nelson v. OpenAI, Riley/Perplexity, China elderly AI-avatar case and Xiao Gao/DeepSeek cyberspace-widow. Закрыты gap-20, gap-21, gap-23; gap-22 частично закрыт. Добавлен <code>V8_elderly_or_cognitive_impairment</code>; <code>V6_substance_or_sleep</code> получил litigation/digital-trace anchors. PH01 отображается как “ИИ-усиленные искажённые убеждения / делюзиональные спирали” при сохранении legacy ID.</li>
+<li><strong>v0.8 (2026-05-10):</strong> <strong>AuDHD operationalization</strong> + <strong>statistical meta-summary с 11 пользовательскими фильтрами</strong>. V5_neurodivergence расширен в methodology v0.5: ADHD/AuDHD как formal sub-categories с base rate 30-50% co-occurrence; ICD-10 коды F84.0+F90.X для AuDHD; ADHD-specific patterns отделены от ASD. Terminology precision: Asperger → ASD level 1 (DSM-5 2013) — Setzer enrichment переформулирован, AuDHD-likelihood помечена как statistical inference (не fact-claim). Tristan Roberts UK помечен как первый court-documented AuDHD case. Новый top-level раздел <code>statistical_meta_summary</code> в factcheck.json: применены 11 фильтров (GRADE≥2, I²&lt;50%, мощность≥80%, n&gt;100/arm, NNT&lt;10, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023-2026 (Feng N=29,637; Zhang N=6,314; npj 2026 N=7,401; Li N=1,974; He N=6,089). Survivor pool: только 2 subgroup-specific findings (Li 2025 youth subclinical depression; Wang 2025 Chinese students loneliness) проходят все critères. APA Health Advisory 13.11.2025 коррoborates. <a href="#dataset-audit-g" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Седьмой dataset audit</a>.</li>
+<li><strong>v0.7 (2026-05-10):</strong> Targeted verification 7 candidate items — все verified, +8 signals: <strong>Tristan Roberts UK</strong> (jailbreak mechanism, первый violent third-party harm в Европе через AI bypass), <strong>SMVLC + Tech Justice Law Project 7 lawsuits 06.11.2025</strong> (Shamblin/Lacey/Enneking/Ceccanti deaths + Irwin/Madden/Brooks survivors), <strong>Gavalas v Google Gemini</strong> (первый Gemini wrongful death lawsuit), <strong>ECRI Top 10 Health Hazards 2026</strong> (#1 ranking), <strong>Italy Garante Replika triple-event 2023-2025</strong> (€5M fine, retro-signal), <strong>44 AGs August + 42 AGs December</strong> (два разных letters — закрывает gap-17), <strong>Wysa NHS Sussex Study</strong> (synthetic intimacy concept). UK Crime and Policing Act 2026 verified, но интегрирован как gap-21 update (chatbot provisions narrowly focused на CSAM/deepfakes). +8 claims. <a href="#dataset-audit-f" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Шестой dataset audit</a>: jailbreak vs default-harm — distinct attack mechanisms.</li>
+<li><strong>v0.6 (2026-05-10):</strong> +6 signals — географическое расширение датасета: <strong>Belgium Pierre 2023</strong> (первый известный европейский case, за 1.5 года до Setzer), <strong>Juliana Peralta 2023</strong> (третий high-profile Character.AI case; хронологически первый, до Setzer на 3 месяца, 300 страниц чат-логов), <strong>Yurina Noguchi Japan</strong> (cultural milestone PH02), <strong>Cambridge Dictionary 2025 'parasocial' WoY</strong>, <strong>China CAC anthropomorphic AI draft</strong> (первый национальный регулятор emotional AI), <strong>NY S-3008C</strong> (закрывает gap-16 — первый enacted штатный US chatbot закон). +6 claims. Methodology v0.4: country_readiness расширен для PH02, PH11, PH15. <a href="#dataset-audit-e" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Пятый dataset audit</a>: датасет вышел из US-центричности — 33 signals по регионам (US/EU/JP/CN/global).</li>
+<li><strong>v0.5 (2026-05-10):</strong> +4 signals по нейродивергентности (Reuters/Richter feature, Papadopoulos peer-reviewed RSD commentary, arXiv 2601.17946 — анализ 3 984 Reddit-постов autistic users, Texas autism teen Character.AI). +4 claims. <strong>V5_neurodivergence расширен</strong> в methodology pack v0.3: операционализация, double-edged effects (5 protective + 5 amplification), ethical handling, current blind spots. Обогащён SIG_2024_SETZER_CHARACTER_AI: добавлены V5+V1, диагноз mild Asperger из NYT/lawsuit reporting. <a href="#dataset-audit-d" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Четвёртый dataset audit</a>: пользовательское возражение принято — выявлен и закрыт structural blind spot.</li>
+<li><strong>v0.4 (2026-05-10):</strong> +5 signals (McBain JAMA подростки 12–21, WHO 20.03.2026 statement, Pennsylvania AG v Character.AI, California SB 243+AB 1064, Ipsos BVA + CNIL European youth survey). +5 claims. <a href="#dataset-audit-c" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Третий dataset audit</a> по результатам целевого gap-search. Закрыт gap-12 (McBain). Расширена география — впервые попала ЕС-выборка. Исправлена legislative attribution: SB 243 ПОДПИСАН (effective 01.01.2026), AB 1064 ВЕТИРОВАН — два разных билла одной даты.</li>
+<li><strong>v0.3 (2026-05-10):</strong> +5 signals (Stanford Moore et al. delusional spirals FAccT 2026, Dartmouth Therabot RCT NEJM AI, Brown ethics audit AAAI/AIES, Common Sense Media + Stanford Brainstorm series, GMU survey n=507). +5 claims. <strong>+PH15_protective_use</strong> в methodology pack — закрывает gap-03 v0.1 (selection bias). Второй <a href="#dataset-audit" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">dataset audit</a>: повторный submission на 95% дублирует v0.2; зафиксирована LLM-конфабуляция в URL (JAMA Perlis URL <code style="font-family: var(--mono); font-size: 12px;">fullarticle/2845872</code> в обзоре — НЕ Perlis 2026, а другая статья про All of Us dataset; корректный URL Perlis — <code style="font-family: var(--mono); font-size: 12px;">fullarticle/2844128</code>). Закрыты gap-07/08/09 как verified-out-of-scope (BCG, IMF, Anthropic Labor — про труд, не психику).</li>
+<li><strong>v0.2 (2026-05-10):</strong> +6 signals (MIT/OpenAI RCT n=981, Stanford LLM-therapists FAccT, Sophie Rottenberg, OpenAI 27.10.2025 disclosure, JAMA Perlis n=20847, Science Cheng/Jurafsky N=2405). +4 claims. Dataset audit присланного <code style="font-family: var(--mono); font-size: 12px;">psych_ai_dataset.zip</code>.</li>
+<li><strong>v0.1 (2026-05-10):</strong> начальный набор: 14 феноменов PH01–PH14, 7 signals (Раин, Брукс, MIT/r/MyBoyfriendIsAI, OpenAI sycophancy rollback, Сёлберг, Сетцер/Character.AI, Replika ERP), 5 claims.</li>
+</ul>
+</div>
+</div>
+</section>
 </section>
 
 <footer>
