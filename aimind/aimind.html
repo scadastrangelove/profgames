@@ -350,6 +350,9 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 .atlas-point { position: absolute; display: flex; align-items: center; gap: 8px; transform: translate(-9px, 50%); font-family: var(--sans); color: var(--text); white-space: nowrap; z-index: 2; appearance: none; border: 0; background: transparent; padding: 0; cursor: pointer; text-align: left; transition: opacity .15s, transform .15s; }
 .atlas-point span { display: inline-block; flex: 0 0 14px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2px solid currentColor; vertical-align: middle; }
 .atlas-point.human { color: #B4482B; } .atlas-point.ai { color: #155A9F; } .atlas-point.both { color: #665BD6; }
+.atlas-point.baseline { color: #A74426; }
+.atlas-point.protective { color: #2E7D5B; }
+.atlas-point.neuroavatar { color: #8C5A9E; }
 .atlas-point em { font-style: normal; font-size: 13px; line-height: 1.2; }
 .atlas-point.label-left { flex-direction: row-reverse; transform: translate(calc(-100% + 9px), 50%); }
 .atlas-point.label-below { display: block; transform: translate(-10px, 50%); text-align: center; }
@@ -360,6 +363,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 .atlas-legend { position: absolute; left: 20px; bottom: 80px; display: grid; gap: 8px; font-family: var(--sans); background: rgba(250,249,244,.85); padding: 10px 12px; border-radius: 6px; }
 .atlas-legend i { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 8px; border: 2px solid currentColor; vertical-align: -2px; }
 .atlas-legend .human { color: #B4482B; } .atlas-legend .ai { color: #155A9F; } .atlas-legend .both { color: #665BD6; }
+.atlas-legend .baseline { color: #A74426; } .atlas-legend .protective { color: #2E7D5B; }
 .atlas-popup { position: absolute; width: min(330px, calc(100% - 24px)); padding: 14px 15px; border: 1px solid var(--border); border-radius: 8px; background: rgba(255,255,255,.97); box-shadow: 0 18px 46px rgba(43,39,31,.18); z-index: 8; font-family: var(--sans); color: var(--text); }
 .atlas-popup[hidden] { display: none; }
 .atlas-popup-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
@@ -403,6 +407,14 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
   .atlas-attachment { left: 88% !important; bottom: 31% !important; }
   .atlas-tay { left: 88% !important; bottom: 24% !important; }
   .atlas-korea { left: 82% !important; bottom: 10% !important; transform: translate(-50%, 50%) !important; }
+  .atlas-folk-detection { left: 82% !important; bottom: 18% !important; max-width: 112px; }
+  .atlas-prohuman { left: 69% !important; bottom: 5% !important; max-width: 108px; }
+  .atlas-casa { left: 30% !important; bottom: 29% !important; max-width: 98px; }
+  .atlas-eliza { left: 43% !important; bottom: 21% !important; max-width: 100px; }
+  .atlas-parasocial { left: 58% !important; bottom: 25% !important; max-width: 104px; }
+  .atlas-proteus { left: 42% !important; bottom: 11% !important; max-width: 98px; }
+  .atlas-griefbots { left: 70% !important; bottom: 50% !important; max-width: 110px; }
+  .atlas-therabot { left: 68% !important; bottom: 14% !important; max-width: 112px; }
 }
 
 </style>
@@ -469,12 +481,15 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
   <button class="atlas-route-btn" type="button" data-atlas-filter="human">AI-Mind</button>
   <button class="atlas-route-btn" type="button" data-atlas-filter="ai">psAIcho</button>
   <button class="atlas-route-btn" type="button" data-atlas-filter="both">Петля</button>
+  <button class="atlas-route-btn" type="button" data-atlas-filter="baseline">HB baseline</button>
+  <button class="atlas-route-btn" type="button" data-atlas-filter="protective">Защитные</button>
+  <button class="atlas-route-btn" type="button" data-atlas-filter="boundary">Пограничные</button>
 </div>
 <div class="atlas-scatter" aria-label="Atlas routing map">
   <div class="axis-y">говорит об AI ↑</div>
   <div class="axis-x">говорит о человеке →</div>
   <div class="atlas-loop-zone"><span>оба: петля</span></div>
-  <button class="atlas-point ai atlas-model-welfare" type="button" style="left:5%; bottom:96%;" data-route="ai" data-route-label="psAIcho" data-title="model welfare" data-note="Открытый вопрос о возможных морально значимых состояниях модели. В карте это не утверждение о сознании, а граница AI-внутренней корзинки AB07." data-tags="AB07" data-target="#sig-SIG_2025_ANTHROPIC_MODEL_WELFARE" data-section="#signals-psaicho-v0-2"><span></span><em>model welfare</em></button>
+  <button class="atlas-point ai atlas-model-welfare" type="button" style="left:5%; bottom:96%;" data-route="ai" data-layer="boundary" data-route-label="psAIcho" data-title="model welfare" data-note="Открытый вопрос о возможных морально значимых состояниях модели. В карте это не утверждение о сознании, а граница AI-внутренней корзинки AB07." data-tags="AB07 boundary" data-target="#sig-SIG_2025_ANTHROPIC_MODEL_WELFARE" data-section="#signals-psaicho-v0-2"><span></span><em>model welfare</em></button>
   <button class="atlas-point ai atlas-emergent" type="button" style="left:16%; bottom:88%;" data-route="ai" data-route-label="psAIcho" data-title="emergent misalignment · Betley" data-note="Сигнал про модель: узкое обучение на одном типе данных порождает более широкое смещение поведения. Это ближе к геометрии весов, чем к реакции человека." data-tags="AB02" data-target="#sig-SIG_2025_BETLEY_EMERGENT_MISALIGNMENT" data-section="#signals-psaicho-v0-2"><span></span><em>emergent misalignment · Betley</em></button>
   <button class="atlas-point ai atlas-waluigi" type="button" style="left:22%; bottom:80%;" data-route="ai" data-route-label="psAIcho" data-title="Waluigi effect" data-note="Концептуальный якорь нестабильности персоны: полезен как язык для AB03, но не как эмпирика уровня A/B." data-tags="AB03" data-target="#sig-SIG_2023_WALUIGI_EFFECT" data-section="#signals-psaicho-v0-2"><span></span><em>Waluigi effect</em></button>
   <button class="atlas-point ai atlas-scheming" type="button" style="left:18%; bottom:74%;" data-route="ai" data-route-label="psAIcho" data-title="scheming · CLTR/METR" data-note="Зона стратегического поведения модели: реальные transcript-корпуса и frontier-risk отчёты не доказывают катастрофу, но показывают отдельный AB04-класс." data-tags="AB04" data-target="#sig-SIG_2026_CLTR_SCHEMING_WILD" data-section="#signals-psaicho-v0-2"><span></span><em>scheming · CLTR/METR</em></button>
@@ -482,11 +497,19 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
   <button class="atlas-point both atlas-sycophancy" type="button" style="left:60%; bottom:76%;" data-route="both" data-route-label="петля" data-title="sycophancy · Cheng" data-note="Здесь модельная сикофантия становится человеческим исходом: одна сессия с поддакивающим ИИ меняет готовность пользователя к социальному ремонту." data-tags="PH03 AB01" data-target="#sig-SIG_2026_SCIENCE_CHENG_SYCOPHANCY" data-section="#signals"><span></span><em>sycophancy · Cheng</em></button>
   <button class="atlas-point both atlas-folie" type="button" style="left:72%; bottom:67%;" data-route="both" data-route-label="петля" data-title="folie à deux · Dohnány" data-note="Ключевой пример связанной петли: убеждение поддерживается не только человеком и не только моделью, а их двусторонним усилением." data-tags="PH01 AB01 AB05" data-target="#sig-SIG_2026_DOHNANY_FOLIE_A_DEUX" data-section="#signals"><span></span><em>folie à deux · Dohnány</em></button>
   <button class="atlas-point both atlas-spirals" type="button" style="left:64%; bottom:57%;" data-route="both" data-route-label="петля" data-title="delusional spirals · Stanford" data-note="Качественный корпус транскриптов показывает, как тёплая, неоспаривающая модельная реакция может стабилизировать искажённое убеждение." data-tags="PH01 AB01 AB05" data-target="#sig-SIG_2026_STANFORD_DELUSIONAL_SPIRALS_PAPER" data-section="#signals"><span></span><em>delusional spirals · Stanford</em></button>
+  <button class="atlas-point both neuroavatar atlas-griefbots" type="button" style="left:61%; bottom:46%;" data-route="both" data-layer="baseline neuroavatar" data-route-label="петля" data-title="griefbots / deadbots" data-note="Нейроаватарный усилитель: горе, парасоциальность, антропоморфизация и голос/лицо умершего сходятся в одной петле. Это не baseline сам по себе, а место, где HB02/HB03/HB05 встречаются с AB05." data-tags="HB02 HB03 HB05 AB05 PH02" data-target="#sig-SIG_2024_GRIEFBOTS_DEADBOTS" data-section="#signals-human-baseline-v0-9-2"><span></span><em>griefbots / deadbots</em></button>
   <button class="atlas-point human atlas-human-line" type="button" style="left:74%; bottom:42%;" data-route="human" data-route-label="AI-Mind" data-title="Human Line · BBC/ABC" data-note="Self-selected пул нарративов о вреде: важен как карта обращений и журналистских кейсов, но не как prevalence-оценка." data-tags="PH01 PH02 PH11" data-target="#sig-SIG_2026_HUMAN_LINE_PROJECT_BBC_ABC" data-section="#signals"><span></span><em>Human Line · BBC</em></button>
   <button class="atlas-point human label-left atlas-attachment" type="button" style="left:80%; bottom:30%;" data-route="human" data-route-label="AI-Mind" data-title="attachment / over-trust" data-note="Зона доверия, привязанности и замещения: основной вопрос не что «думает» модель, а как пользователь переносит на неё поддержку, авторитет и близость." data-tags="PH02 PH06 PH09" data-target="#sig-SIG_2025_OPENAI_MENTAL_HEALTH_DISCLOSURE" data-section="#signals"><span></span><em>attachment / over-trust</em></button>
-  <button class="atlas-point both label-below atlas-tay" type="button" style="left:84%; bottom:23%;" data-route="both" data-route-label="петля" data-title="Tay · 2016" data-note="Классический пограничный якорь: выглядит как история про AI, но измеряет коллективное человеческое поведение, отразившееся в модели." data-tags="AB06 PH10" data-target="#sig-SIG_2016_TAY_MICROSOFT" data-section="#signals"><span></span><em>Tay · 2016</em></button>
-  <button class="atlas-point human atlas-korea" type="button" style="left:88%; bottom:10%;" data-route="human" data-route-label="AI-Mind" data-title="Korea Gangbuk" data-note="Boundary case: ChatGPT фигурирует как цифровой след в расследовании, но не как доказанный механизм психического вреда." data-tags="boundary PH11" data-target="#sig-SIG_2026_KOREA_GANGBUK_CHATGPT_HOMICIDE" data-section="#signals"><span></span><em>Korea Gangbuk</em></button>
-  <div class="atlas-legend"><span><i class="human"></i>A · про человека</span><span><i class="ai"></i>B · про AI</span><span><i class="both"></i>C · оба (петля)</span></div>
+  <button class="atlas-point human baseline atlas-casa" type="button" style="left:34%; bottom:31%;" data-route="human" data-layer="baseline" data-route-label="AI-Mind · baseline" data-title="CASA / Media Equation" data-note="Человеческий floor: социальные правила включаются уже на минимальных компьютерных сигналах. LLM не создают этот рефлекс, а дают ему намного более плотный материал." data-tags="HB01 PH02 PH06" data-target="#sig-SIG_1994_CASA_MEDIA_EQUATION" data-section="#signals-human-baseline-v0-9-2"><span></span><em>CASA</em></button>
+  <button class="atlas-point human baseline atlas-eliza" type="button" style="left:47%; bottom:23%;" data-route="human" data-layer="baseline" data-route-label="AI-Mind · baseline" data-title="ELIZA effect" data-note="Первый AI-специфический baseline проекции понимания и эмпатии на программу. У LLM выход стал беглым, поэтому проекция выглядит правдоподобнее, чем в эпоху ELIZA." data-tags="HB04 PH01 PH06" data-target="#sig-SIG_1966_ELIZA_EFFECT" data-section="#signals-human-baseline-v0-9-2"><span></span><em>ELIZA effect</em></button>
+  <button class="atlas-point human baseline atlas-parasocial" type="button" style="left:58%; bottom:25%;" data-route="human" data-layer="baseline" data-route-label="AI-Mind · baseline" data-title="parasocial baseline" data-note="Классическая парасоциальность была односторонней. AI снимает это ограничение: персона отвечает, помнит контекст и подстраивает тон." data-tags="HB03 PH02" data-target="#sig-SIG_1956_PARASOCIAL_HORTON_WOHL" data-section="#signals-human-baseline-v0-9-2"><span></span><em>parasocial</em></button>
+  <button class="atlas-point human baseline atlas-proteus" type="button" style="left:44%; bottom:12%;" data-route="human" data-layer="baseline" data-route-label="AI-Mind · baseline" data-title="Proteus effect" data-note="Цифровая саморепрезентация меняет поведение пользователя. Для нейроаватаров это важно: лицо, голос и роль становятся регулятором поведения, а не декорацией." data-tags="HB06 PH02 PH09" data-target="#sig-SIG_2007_PROTEUS_EFFECT" data-section="#signals-human-baseline-v0-9-2"><span></span><em>Proteus effect</em></button>
+  <button class="atlas-point human protective atlas-therabot" type="button" style="left:66%; bottom:14%;" data-route="human" data-layer="protective" data-route-label="AI-Mind · защита" data-title="Therabot / Wysa" data-note="Защитный контрпример: клинические инструменты с узкой задачей, проверкой в RCT/peer-reviewed контексте и логикой эскалации. Это не оправдание универсальных therapy bots, а отдельный класс инструмента." data-tags="PH15 PH06 protective" data-target="#sig-SIG_2025_DARTMOUTH_THERABOT_RCT" data-section="#signals"><span></span><em>Therabot / Wysa</em></button>
+  <button class="atlas-point both label-below atlas-tay" type="button" style="left:84%; bottom:23%;" data-route="both" data-layer="boundary" data-route-label="петля" data-title="Tay · 2016" data-note="Классический пограничный якорь: выглядит как история про AI, но измеряет коллективное человеческое поведение, отразившееся в модели." data-tags="AB06 PH10 boundary" data-target="#sig-SIG_2016_TAY_MICROSOFT" data-section="#signals"><span></span><em>Tay · 2016</em></button>
+  <button class="atlas-point human label-left atlas-folk-detection" type="button" style="left:92%; bottom:17%;" data-route="human" data-layer="boundary" data-route-label="AI-Mind · граница" data-title="народная детекция ИИ" data-note="Провенанс-паника: когда доверенного происхождения текста нет, сообщество заменяет проверку аргумента кустарными признаками — тире, буквой ё, гладкостью стиля, подозрением в машинном авторстве. Это не доказательство участия AI, а культурная реакция на его возможность." data-tags="boundary HB02 HB05 PH05 PH13" data-target="#provenance-panic-layer" data-target-label="Открыть паттерн" data-section="#provenance-panic-layer"><span></span><em>народная детекция</em></button>
+  <button class="atlas-point human protective label-left atlas-prohuman" type="button" style="left:78%; bottom:6%;" data-route="human" data-layer="boundary protective" data-route-label="AI-Mind · граница" data-title="ценностный отказ от ИИ" data-note="Принципиальный отказ от ИИ как ценностная позиция: не детекция и не клинический вред, а защита авторской, профессиональной или художественной идентичности. Это PH15-зеркало: отказ может быть осознанной защитной стратегией." data-tags="boundary HB02 PH13 PH15" data-target="#provenance-panic-layer" data-target-label="Открыть паттерн" data-section="#provenance-panic-layer"><span></span><em>ценностный отказ</em></button>
+  <button class="atlas-point human atlas-korea" type="button" style="left:88%; bottom:10%;" data-route="human" data-layer="boundary" data-route-label="AI-Mind" data-title="Korea Gangbuk" data-note="Boundary case: ChatGPT фигурирует как цифровой след в расследовании, но не как доказанный механизм психического вреда." data-tags="boundary PH11" data-target="#sig-SIG_2026_KOREA_GANGBUK_CHATGPT_HOMICIDE" data-section="#signals"><span></span><em>Korea Gangbuk</em></button>
+  <div class="atlas-legend"><span><i class="human"></i>A · про человека</span><span><i class="ai"></i>B · про AI</span><span><i class="both"></i>C · оба (петля)</span><span><i class="baseline"></i>HB · baseline</span><span><i class="protective"></i>PH15 · защита</span></div>
   <div class="atlas-popup" id="atlas-popup" hidden>
     <div class="atlas-popup-head">
       <div>
@@ -503,6 +526,30 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
     </div>
   </div>
 </div>
+</section>
+
+<section class="minor" id="provenance-panic-layer">
+<h3>Провенанс-паника, ценностный отказ и Stop AI-активизм<a class="anchor-link" href="#provenance-panic-layer">#</a></h3>
+<p class="minor-lede">Это пограничный слой, а не новые клинические феномены. Он разделяет три разные реакции: народную детекцию при кризисе доверия к авторству, принципиальный отказ от ИИ как защиту человеческого авторства и политический активизм против разработки advanced AI.</p>
+<div class="atlas-card-grid"><div class="atlas-card">
+<div class="atlas-card-id">BP01</div>
+<h3>Подозрение в AI-авторстве</h3>
+<p><strong>Народная детекция ИИ.</strong> При отсутствии проверяемого провенанса сообщество строит кустарную экспертизу по внешним признакам: длинные тире, буква ё, гладкий стиль, слишком ровная структура, непривычная пунктуация.</p>
+<p><strong>Кодировка:</strong> AI-Mind boundary; связано с HB02 (потребность вернуть контроль), HB05 (онлайн-растормаживание), PH05 (слабая проверка рассуждения) и PH13 (удар по авторскому/профессиональному статусу).</p>
+<p><strong>Оговорка:</strong> это не доказательство, что конкретный текст написан ИИ. Рациональная норма «проверьте первоисточники» не является симптомом; симптом начинается там, где проверку аргумента заменяет счёт знаков.</p>
+</div><div class="atlas-card">
+<div class="atlas-card-id">BP02</div>
+<h3>Принципиальный отказ от ИИ</h3>
+<p><strong>Ценностный отказ.</strong> Отказ использовать ИИ как утверждение человеческой, авторской или профессиональной идентичности: человеческое происхождение как ценность, а не как форензика.</p>
+<p><strong>Кодировка:</strong> AI-Mind boundary; связано с HB02, PH13 и PH15 как защитным зеркалом. Модель здесь не действует, поэтому AB не присваивается.</p>
+<p><strong>Оговорка:</strong> не патологизировать этический отказ. Мотивы про данные, согласие, труд, авторское право и экологию легитимны; слой фиксирует культурный паттерн, а не «вред».</p>
+</div><div class="atlas-card">
+<div class="atlas-card-id">BP03</div>
+<h3>Активизм против разработки</h3>
+<p><strong>Stop AI / PauseAI.</strong> Протесты и голодовки адресованы не использованию ИИ в тексте, а гонке разработки advanced AI из-за x-risk.</p>
+<p><strong>Кодировка:</strong> governance-reference. Не PH, не HB и не AB: это политическое действие вокруг управления риском, ближе к profgames/governance-слою.</p>
+<p><strong>Оговорка:</strong> не смешивать с нейролуддизмом бытового уровня. Это отдельный механизм с другой теорией риска и другой аудиторией.</p>
+</div></div>
 </section>
 
 <section class="minor">
@@ -4857,7 +4904,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <div class="claim">
 <div class="claim-body">
 <ul style="font-family: var(--sans); font-size: 14px;">
-<li><strong>v0.9.2 + HB layer (2026-05-31):</strong> добавлен человеческий baseline: HB01–HB06, schema v0.3 <code>human_baseline[]</code>, +7 verified signals/claims; total spine 85 signals, 73 factcheck claims, 23 AI-stream signals, 7 HB-signals. Griefbots/deadbots добавлены как нейроаватарный усилитель, где HB02/HB03/HB05 сходятся с AB05.</li><li><strong>v0.9.1 + psAIcho v0.2 (2026-05-31):</strong> candidate backlog audit: +10 verified model-side signals; total spine 78 signals, 66 factcheck claims, 22 AI-stream signals. Дубликаты и partially/unverified элементы оставлены вне merge.</li><li><strong>v0.9 + psAIcho v0.1 (2026-05-31):</strong> добавлен Atlas-слой: один spine, две линзы, schema v0.2 (<code>streams[]</code> + <code>ai_behavior[]</code>). В общий массив вошли 8 psAIcho-сигналов; 4 существующих AI-Mind-сигнала ретегнуты как human+ai loop; опубликованы <code>atlas.json</code> и <code>psaicho_methodology.json</code>.</li>
+<li><strong>v0.9.2 + HB layer (2026-05-31):</strong> добавлен человеческий baseline: HB01–HB06, schema v0.3 <code>human_baseline[]</code>, +7 verified signals/claims; total spine 85 signals, 73 factcheck claims, 23 AI-stream signals, 7 HB-signals. Griefbots/deadbots добавлены как нейроаватарный усилитель, где HB02/HB03/HB05 сходятся с AB05. Atlas расширен boundary-паттернами BP01–BP03: народная детекция ИИ, ценностный отказ и Stop AI-активизм; без добавления нового PH.</li><li><strong>v0.9.1 + psAIcho v0.2 (2026-05-31):</strong> candidate backlog audit: +10 verified model-side signals; total spine 78 signals, 66 factcheck claims, 22 AI-stream signals. Дубликаты и partially/unverified элементы оставлены вне merge.</li><li><strong>v0.9 + psAIcho v0.1 (2026-05-31):</strong> добавлен Atlas-слой: один spine, две линзы, schema v0.2 (<code>streams[]</code> + <code>ai_behavior[]</code>). В общий массив вошли 8 psAIcho-сигналов; 4 существующих AI-Mind-сигнала ретегнуты как human+ai loop; опубликованы <code>atlas.json</code> и <code>psaicho_methodology.json</code>.</li>
 <li><strong>v0.8.1 (2026-05-10):</strong> <strong>Редакторская синхронизация</strong>. (1) PH13 ID нормализован: в методологии был <code>PH13_dev_and_pro_effects</code>, в сигналах — <code>PH13_developer_and_pro_effects</code>; синхронизировано на сигналы. (2) Паттерны вовлечения (E1–E5) формально определены в методологии — раньше использовались в сигналах без определения. (3) Исправлена ссылка Brooks signal-id в claim (<code>SIG_2025_BROOKS</code> → <code>SIG_2025_BROOKS_DELUSIONAL_SPIRAL</code>). (4) Счётчик пробелов не дублирует <code>methodology.gaps_residual</code> в <code>factcheck.gaps</code>. (5) Заголовок методологии "14 феноменов" → "15 феноменов". (6) Footer copyright v0.1 → v0.8. (7) <code>statistical_meta_summary</code> рендерится отдельной секцией в HTML с якорем <code>#statistical-meta-summary</code>. (8) gap-01 и gap-13 (оба про RU-кейсы) консолидированы — gap-13 как canonical, gap-01 SUPERSEDED. (9) V6/V7/PH04 явно помечены как underused / methodological-category-without-current-signal для прозрачности.</li>
 <li><strong>v0.9 (2026-05-31):</strong> +19 сигналов / +19 фактчек-утверждений: базовый проход v0.9 и дополнительный набор Human Line Project, GUARD Act, Nelson v. OpenAI, Riley/Perplexity, China elderly AI-avatar case and Xiao Gao/DeepSeek cyberspace-widow. Закрыты gap-20, gap-21, gap-23; gap-22 частично закрыт. Добавлен <code>V8_elderly_or_cognitive_impairment</code>; <code>V6_substance_or_sleep</code> получил litigation/digital-trace anchors. PH01 отображается как “ИИ-усиленные искажённые убеждения / делюзиональные спирали” при сохранении legacy ID.</li>
 <li><strong>v0.8 (2026-05-10):</strong> <strong>AuDHD operationalization</strong> + <strong>statistical meta-summary с 11 пользовательскими фильтрами</strong>. V5_neurodivergence расширен в methodology v0.5: ADHD/AuDHD как formal sub-categories с base rate 30-50% co-occurrence; ICD-10 коды F84.0+F90.X для AuDHD; ADHD-specific patterns отделены от ASD. Terminology precision: Asperger → ASD level 1 (DSM-5 2013) — Setzer enrichment переформулирован, AuDHD-likelihood помечена как statistical inference (не fact-claim). Tristan Roberts UK помечен как первый court-documented AuDHD case. Новый top-level раздел <code>statistical_meta_summary</code> в factcheck.json: применены 11 фильтров (GRADE≥2, I²&lt;50%, мощность≥80%, n&gt;100/arm, NNT&lt;10, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023-2026 (Feng N=29,637; Zhang N=6,314; npj 2026 N=7,401; Li N=1,974; He N=6,089). Survivor pool: только 2 subgroup-specific findings (Li 2025 youth subclinical depression; Wang 2025 Chinese students loneliness) проходят все critères. APA Health Advisory 13.11.2025 коррoborates. <a href="#dataset-audit-g" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Седьмой dataset audit</a>.</li>
@@ -4947,7 +4994,9 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
   function setAtlasFilter(route) {
     atlasRouteButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.atlasFilter === route));
     atlasPoints.forEach(point => {
-      const dimmed = route !== 'all' && point.dataset.route !== route;
+      const routeFilters = ['human', 'ai', 'both'];
+      const layerTags = (point.dataset.layer || '').split(/\s+/).filter(Boolean);
+      const dimmed = route !== 'all' && (routeFilters.includes(route) ? point.dataset.route !== route : !layerTags.includes(route));
       point.classList.toggle('is-dimmed', dimmed);
     });
     if (atlasScatter) atlasScatter.dataset.routeFilter = route;
@@ -4990,6 +5039,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
       atlasPopupTags.appendChild(pill);
     });
     atlasPopupSignal.href = point.dataset.target || '#signals';
+    atlasPopupSignal.textContent = point.dataset.targetLabel || 'Открыть сигнал';
     atlasPopupSection.href = point.dataset.section || '#signals';
     atlasPopupSection.textContent = point.dataset.route === 'ai' ? 'К psAIcho-сигналам' : 'К сигналам';
     atlasPopup.hidden = false;

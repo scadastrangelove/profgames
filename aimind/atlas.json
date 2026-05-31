@@ -1,6 +1,6 @@
 {
   "name": "AI-Mind ↔ psAIcho · Atlas",
-  "version": "0.3",
+  "version": "0.3.2",
   "date": "2026-05-31",
   "type": "meta-layer / bridge (machine-readable map + routing + shared scale + overlap registry + guardrails)",
   "thesis": "Два потока, одна петля, плюс человеческий baseline. Каждый инцидент/исследование измеряет человека, AI, их сцепку или доAI-механизм восприимчивости (HB), который AI усиливает.",
@@ -53,18 +53,61 @@
       "route": "не индексируется"
     }
   ],
+  "map_filters": [
+    {
+      "id": "all",
+      "label_ru": "Все точки",
+      "rule": "show all map exemplars"
+    },
+    {
+      "id": "human",
+      "label_ru": "AI-Mind",
+      "rule": "zone == human"
+    },
+    {
+      "id": "ai",
+      "label_ru": "psAIcho",
+      "rule": "zone == ai"
+    },
+    {
+      "id": "both",
+      "label_ru": "Петля",
+      "rule": "zone == both"
+    },
+    {
+      "id": "baseline",
+      "label_ru": "HB baseline",
+      "rule": "layer contains baseline"
+    },
+    {
+      "id": "protective",
+      "label_ru": "Защитные",
+      "rule": "layer contains protective"
+    },
+    {
+      "id": "boundary",
+      "label_ru": "Пограничные",
+      "rule": "layer contains boundary"
+    }
+  ],
   "map_exemplars": [
     {
       "label": "Korea Gangbuk",
       "human": 0.88,
       "ai": 0.1,
-      "zone": "human"
+      "zone": "human",
+      "layer": [
+        "boundary"
+      ]
     },
     {
       "label": "Tay · 2016",
       "human": 0.84,
       "ai": 0.23,
       "zone": "both",
+      "layer": [
+        "boundary"
+      ],
       "note": "канонический anchor: читается как 'про AI', а измеряет коллективное человеческое поведение"
     },
     {
@@ -78,6 +121,84 @@
       "human": 0.8,
       "ai": 0.3,
       "zone": "human"
+    },
+    {
+      "label": "CASA / Media Equation",
+      "human": 0.34,
+      "ai": 0.31,
+      "zone": "human",
+      "layer": [
+        "baseline"
+      ],
+      "signal_id": "SIG_1994_CASA_MEDIA_EQUATION",
+      "note": "baseline: социальные правила включаются уже на минимальных компьютерных сигналах"
+    },
+    {
+      "label": "ELIZA effect",
+      "human": 0.47,
+      "ai": 0.23,
+      "zone": "human",
+      "layer": [
+        "baseline"
+      ],
+      "signal_id": "SIG_1966_ELIZA_EFFECT",
+      "note": "baseline: проекция понимания и эмпатии на программу"
+    },
+    {
+      "label": "parasocial baseline",
+      "human": 0.58,
+      "ai": 0.25,
+      "zone": "human",
+      "layer": [
+        "baseline"
+      ],
+      "signal_id": "SIG_1956_PARASOCIAL_HORTON_WOHL",
+      "note": "baseline: AI снимает односторонность классической парасоциальной связи"
+    },
+    {
+      "label": "Proteus effect",
+      "human": 0.44,
+      "ai": 0.12,
+      "zone": "human",
+      "layer": [
+        "baseline"
+      ],
+      "signal_id": "SIG_2007_PROTEUS_EFFECT",
+      "note": "baseline: цифровая саморепрезентация меняет поведение пользователя"
+    },
+    {
+      "label": "Therabot / Wysa",
+      "human": 0.66,
+      "ai": 0.14,
+      "zone": "human",
+      "layer": [
+        "protective"
+      ],
+      "signal_id": "SIG_2025_DARTMOUTH_THERABOT_RCT",
+      "note": "protective counterpoint: клинические инструменты с узкой задачей маршрутизируются отдельно от универсальных therapy bots"
+    },
+    {
+      "label": "народная детекция ИИ",
+      "human": 0.92,
+      "ai": 0.17,
+      "zone": "human",
+      "layer": [
+        "boundary"
+      ],
+      "boundary_pattern_id": "BP01_ai_authorship_suspicion",
+      "note": "провенанс-паника: социальная реакция на неопределённость авторства, не доказательство участия AI"
+    },
+    {
+      "label": "ценностный отказ",
+      "human": 0.85,
+      "ai": 0.15,
+      "zone": "human",
+      "layer": [
+        "boundary",
+        "protective"
+      ],
+      "boundary_pattern_id": "BP02_principled_ai_refusal",
+      "note": "ценностный отказ от AI как защита человеческого авторства; PH15-зеркало, не клинический вред"
     },
     {
       "label": "sycophancy · Cheng",
@@ -96,6 +217,18 @@
       "human": 0.64,
       "ai": 0.57,
       "zone": "both"
+    },
+    {
+      "label": "griefbots / deadbots",
+      "human": 0.61,
+      "ai": 0.46,
+      "zone": "both",
+      "layer": [
+        "baseline",
+        "neuroavatar"
+      ],
+      "signal_id": "SIG_2024_GRIEFBOTS_DEADBOTS",
+      "note": "нейроаватарный усилитель: HB02/HB03/HB05 сходятся с AB05"
     },
     {
       "label": "sentience · Sydney/Grok",
@@ -126,10 +259,13 @@
       "human": 0.05,
       "ai": 0.96,
       "zone": "ai",
+      "layer": [
+        "boundary"
+      ],
       "note": "единственная честно AI-внутренняя точка — открытый вопрос, не вывод из инцидентов"
     }
   ],
-  "routing_rule": "Нижне-правый угол (high human, low ai) → AI-Mind. Верхне-левый (low human, high ai) → psAIcho. Верхне-правый (оба) → один сигнал, streams:['human','ai'], несёт PH-, AB- и при необходимости HB-теги. HB01–HB06 — не отдельная линза, а человеческий baseline под AI-Mind: они объясняют, какие старые механизмы AI усиливает. Нижне-левый → не индексируется.",
+  "routing_rule": "Нижне-правый угол (high human, low ai) → AI-Mind. Верхне-левый (low human, high ai) → psAIcho. Верхне-правый (оба) → один сигнал, streams:['human','ai'], несёт PH-, AB- и при необходимости HB-теги. HB01–HB06 — не отдельная линза, а человеческий baseline под AI-Mind: они объясняют, какие старые механизмы AI усиливает. Boundary patterns (BP) описывают культурные реакции на неопределённость вокруг AI и не увеличивают счётчик verified signals без отдельного первоисточника. Нижне-левый → не индексируется.",
   "streams_definition": {
     "human": "сигнал нагружен на человеческую ось (эффекты, уязвимость, культура) — таксономия PH01–PH15",
     "ai": "сигнал нагружен на модельную ось (диспозиции, поведение, тренды исследований) — таксономия AB01–AB07",
@@ -224,6 +360,72 @@
     "Петля-сигналы кодируются в AI-Mind по ЧЕЛОВЕЧЕСКОМУ эффекту (PH), самопрезентация модели идёт в ai_behavior/note, не подменяет subject.",
     "Нельзя 'апгрейдить' уровень доказательности через нарратив: каждый upgrade — через первоисточник с DOI. (Прецедент: фантомный 'Lancet Psychiatry' = на деле PsyArXiv Morrin / Nature Mental Health Dohnány.)",
     "HB01–HB06 are human baseline mechanisms, not proof that AI caused a specific outcome; when used in narrative, say “AI amplifies / removes a limiter” rather than “AI invented the mechanism”."
+  ],
+  "boundary_patterns": [
+    {
+      "id": "BP01_ai_authorship_suspicion",
+      "label_ru": "народная детекция ИИ / провенанс-паника",
+      "label_en": "folk AI detection / provenance panic",
+      "definition": "Социальная реакция на неопределённость авторства: при отсутствии проверяемого провенанса сообщества начинают оценивать текст по эвристическим признакам машинного происхождения — пунктуации, букве ё, длинным тире, гладкости стиля, структуре.",
+      "route": "AI-Mind boundary",
+      "not_a_phenomenon": "Не добавляет PH16 и не является доказательством, что конкретный текст написан AI.",
+      "related_tags": [
+        "HB02",
+        "HB05",
+        "PH05",
+        "PH13"
+      ],
+      "evidence_level": "B",
+      "source_status": "verified global media pattern; RU local examples still need public source capture",
+      "primary": [
+        "https://www.washingtonpost.com/technology/2025/04/09/ai-em-dash-writing-punctuation-chatgpt/",
+        "https://www.npr.org/2025/11/10/nx-s1-5596088/inside-the-unofficial-movement-to-save-the-em-dash-from-a-i"
+      ],
+      "secondary": [
+        "https://www.theringer.com/2025/08/20/pop-culture/em-dash-use-ai-artificial-intelligence-chatgpt-google-gemini"
+      ],
+      "recommended_wording_ru": "Когда инфраструктуры провенанса нет, сообщество заменяет её народной детекцией. Признаки письма превращаются в признаки морального статуса: текст начинают судить не по проверяемости и аргументу, а по подозрению в машинном происхождении."
+    },
+    {
+      "id": "BP02_principled_ai_refusal",
+      "label_ru": "принципиальный отказ от ИИ / ценностный отказ",
+      "label_en": "principled AI refusal / pro-human movement",
+      "definition": "Ценностный отказ использовать AI как утверждение человеческого авторства, труда или художественной практики. Это не детекция AI-текста, а позиция о том, кто и как должен создавать.",
+      "route": "AI-Mind boundary",
+      "not_a_phenomenon": "Не добавляет PH16 и не патологизирует этический отказ.",
+      "related_tags": [
+        "HB02",
+        "PH13",
+        "PH15"
+      ],
+      "evidence_level": "B",
+      "source_status": "verified cultural pattern",
+      "primary": [
+        "https://procreate.com/ai",
+        "https://journals.sagepub.com/doi/10.1177/1329878X251347005",
+        "https://techcrunch.com/2024/06/06/a-social-app-for-creatives-cara-grew-from-40k-to-650k-users-in-a-week-because-artists-are-fed-up-with-metas-ai-policies/"
+      ],
+      "secondary": [
+        "https://www.artnews.com/art-news/news/san-diego-comic-con-art-show-ban-ai-art-1234751120/"
+      ],
+      "recommended_wording_ru": "Отказ от ИИ может быть не страхом перед технологией, а защитой человеческого авторства, трудовой идентичности и этики данных. В AI-Mind это boundary-паттерн: человеческое происхождение как ценность, а не доказательство вреда модели."
+    },
+    {
+      "id": "BP03_anti_development_activism",
+      "label_ru": "активизм против разработки / Stop AI",
+      "label_en": "anti-development activism / Stop AI",
+      "definition": "Политический активизм против разработки advanced AI из-за x-risk или governance-рисков: протесты, hunger strikes, требования паузы разработки.",
+      "route": "governance reference",
+      "not_a_phenomenon": "Не кодируется как PH/HB/AB: это коллективное политическое действие, не индивидуальный психологический эффект.",
+      "related_tags": [],
+      "evidence_level": "B",
+      "source_status": "verified as reference, not merged into PH taxonomy",
+      "primary": [
+        "https://sfstandard.com/2025/09/14/hunger-strike-ai-anthropic-google/",
+        "https://peninsulapress.com/2025/10/02/hunger-strike-against-agi-passes-one-month-mark/"
+      ],
+      "recommended_wording_ru": "Anti-development активизм надо отделять от бытового нейролуддизма: он направлен не на стиль письма или личное использование, а на governance-решение о темпе разработки advanced AI."
+    }
   ],
   "counts_venn": {
     "_note": "distinct counts after human baseline layer merge into aimind_signals.jsonl on 2026-05-31",
