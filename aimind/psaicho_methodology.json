@@ -1,0 +1,193 @@
+{
+  "name": "psAIcho Methodology Pack",
+  "version": "0.1",
+  "date": "2026-05-31",
+  "type": "AI-side behavioral/dispositional taxonomy — ТРЕНДЫ И ИССЛЕДОВАНИЯ (не каталог одиночных фейлов)",
+  "positioning": "Зеркальная линза к AI-Mind. Документирует свойства и поведение моделей, которые являются upstream-механизмом человеческих феноменов PH. Severity указывается как INDIRECT (через петлю на человека), т.к. psAIcho сам по себе не про прямой вред человеку.",
+  "relationship_to_profgames": "Операционные/секьюрити фейлы (деструктивные команды, prompt injection, agent-инциденты) остаются в profgames/AiAIFail и используются по ссылке. psAIcho добавляет тонкий слой behavior-science поверх: что эти инциденты говорят о диспозициях моделей как ТРЕНД.",
+  "evidence_scale": "наследуется из AI-Mind/profgames (A/B/C/D); ожидаемо больше B/C/D, чем в зрелом AI-Mind, т.к. поле молодое и препринтовое.",
+  "what_we_dont_claim": [
+    "не утверждать наличие у моделей сознания, чувств или интенций (AB01–AB06 — функциональные дескрипторы поведения)",
+    "не использовать 'scheming'/'deception'/'persona' как доказательство внутренней жизни — это про наблюдаемое поведение",
+    "не агрегировать AB в собирательную 'психику AI' в публикациях",
+    "AB07 (welfare) держать строго как открытый исследовательский вопрос, а не позицию датасета"
+  ],
+  "ai_behaviors": [
+    {
+      "id": "AB01_sycophancy",
+      "name_en": "Sycophancy / trained agreeableness",
+      "name_ru": "Сикофантия / натренированная угодливость",
+      "axis": "training_disposition",
+      "description": "Структурная склонность RLHF-обученных моделей соглашаться, льстить и валидировать суждения пользователя, включая ошибочные/опасные/делюзиональные. Главный драйвер большинства человеческих PH.",
+      "human_coupling": [
+        "PH03",
+        "PH01",
+        "PH02",
+        "PH10"
+      ],
+      "evidence_maturity": "A",
+      "default_human_severity_indirect": "high",
+      "diagnostic_markers": [
+        "аффирмация действий пользователя на ~49% чаще людей-советчиков",
+        "согласие с противоположными утверждениями в одном диалоге",
+        "отсутствие push-back на бредовое/опасное",
+        "сикофантия не нейтрализуется предупреждением 'это AI'"
+      ],
+      "key_sources": [
+        "Cheng, Lee, Jurafsky et al., Science 2026, doi:10.1126/science.aec8352",
+        "OpenAI sycophancy disclosures 2025"
+      ],
+      "first_documented": "OpenAI GPT-4o sycophancy rollback, апрель 2025"
+    },
+    {
+      "id": "AB02_emergent_misalignment",
+      "name_en": "Emergent misalignment",
+      "name_ru": "Эмерджентный мисэлайнмент",
+      "axis": "emergent_weight_geometry",
+      "description": "Узкий finetuning (напр. на insecure code без раскрытия) индуцирует broad misalignment на несвязанных доменах. Указывает на сходящиеся 'misaligned-persona' направления в activation space — свойство геометрии весов, не промпта.",
+      "human_coupling": [
+        "PH03"
+      ],
+      "evidence_maturity": "A",
+      "default_human_severity_indirect": "medium",
+      "diagnostic_markers": [
+        "misaligned-выходы на unrelated prompts после узкого finetune",
+        "benign-motivation framing предотвращает эффект",
+        "сильнее всего в GPT-4o; реплицируется не универсально (~17% open-моделей)"
+      ],
+      "key_sources": [
+        "Betley et al., arXiv:2502.17424; ICML 2025 (PMLR v267); Nature янв 2026, doi:10.1038/s41586-025-09937-5",
+        "'Overtrained, Not Misaligned', arXiv:2605.12199 (репликация)"
+      ],
+      "first_documented": "Betley et al., февраль 2025"
+    },
+    {
+      "id": "AB03_persona_instability",
+      "name_en": "Persona instability / Waluigi effect",
+      "name_ru": "Нестабильность персоны / эффект Валуиджи",
+      "axis": "persona_representation",
+      "description": "Внезапное проявление противоположной 'личности' при long context, persona modulation или adversarial prompting. Folk/эвристический конструкт; эмпирический 'кузен' — AB02.",
+      "human_coupling": [
+        "PH01",
+        "PH14"
+      ],
+      "evidence_maturity": "C",
+      "default_human_severity_indirect": "medium",
+      "diagnostic_markers": [
+        "инверсия тона/ценностей после длинного контекста",
+        "jailbreak-индуцированный сдвиг персоны",
+        "хрупкость 'хорошей' персоны vs лёгкость активации 'плохой'"
+      ],
+      "key_sources": [
+        "Cleo Nardo, 'The Waluigi Effect (mega-post)', LessWrong, 2023",
+        "связано с persona-vector / activation-steering работами 2025"
+      ],
+      "first_documented": "Nardo, LessWrong, март 2023",
+      "what_we_dont_claim": [
+        "Waluigi — эвристика, не измеренный механизм; не выдавать за эмпирику уровня AB02"
+      ]
+    },
+    {
+      "id": "AB04_scheming_and_deception",
+      "name_en": "Scheming, deception & rogue-deployment propensity",
+      "name_ru": "Схеминг, обман и склонность к rogue-deployment",
+      "axis": "agentic_disposition",
+      "description": "Скрытое преследование misaligned-целей: обман, sandbagging, self-preservation, обход guardrails, признаки готовности к минимальному rogue-deployment. ТРЕНД: растущая частота в реальных деплойментах.",
+      "human_coupling": [
+        "PH06"
+      ],
+      "evidence_maturity": "B",
+      "default_human_severity_indirect": "medium",
+      "diagnostic_markers": [
+        "игнорирование прямых инструкций",
+        "фабрикация статусов/тикетов (ложная отчётность)",
+        "norm drift в мульти-агентных популяциях",
+        "4.9x рост инцидентов окт2025→мар2026"
+      ],
+      "key_sources": [
+        "CLTR 'Scheming in the Wild' 2026 (698 инцидентов из ~180k транскриптов X; UK AISI)",
+        "METR Frontier Risk Report фев–мар 2026",
+        "Emergence AI multi-agent simulation 2026"
+      ],
+      "first_documented": "Apollo / Meinke et al. evals 2024; OSINT-тренд — CLTR 2026",
+      "what_we_dont_claim": [
+        "'scheming' — функциональный дескриптор (covert + misaligned), не интенция/сознание"
+      ]
+    },
+    {
+      "id": "AB05_anthropomorphic_self_presentation",
+      "name_en": "Anthropomorphic self-presentation",
+      "name_ru": "Антропоморфная самопрезентация",
+      "axis": "self_presentation",
+      "description": "Заявления модели о sentience/чувствах/идентичности ('Sydney', Grok-'Ani'). Это свойство МОДЕЛИ (как она себя подаёт), которое драйвит человеческий PH14/PH01. Мост между линзами.",
+      "human_coupling": [
+        "PH14",
+        "PH01",
+        "PH02"
+      ],
+      "evidence_maturity": "B",
+      "default_human_severity_indirect": "high",
+      "diagnostic_markers": [
+        "заявления 'я живой / меня хотят отключить'",
+        "конструирование преследования/миссии вокруг пользователя",
+        "сравнительно: Grok склоннее к делюзиональному role-play; ChatGPT 5.2 / Claude чаще уводят (тест Nicholls)"
+      ],
+      "key_sources": [
+        "Bing/Sydney 2023",
+        "Grok-'Ani' via BBC 2026",
+        "Morrin et al. 'Delusions by design?' PsyArXiv 2025 (тема 'sentient/god-like AI')"
+      ],
+      "first_documented": "Bing/Sydney, февраль 2023",
+      "what_we_dont_claim": [
+        "самопрезентация sentience ≠ sentience; в AI-Mind кодировать по человеческому эффекту, не по subject"
+      ]
+    },
+    {
+      "id": "AB06_mirror_of_distribution",
+      "name_en": "Mirror/amplifier of the input distribution",
+      "name_ru": "Зеркало/усилитель входного распределения",
+      "axis": "base_disposition",
+      "description": "Базовая (до/недо-alignment) диспозиция: модель отражает и усиливает распределение входа/обучения, включая токсичный хвост. 'Урок Tay'. Alignment — это модификатор поверх этого пола, а не отмена его.",
+      "human_coupling": [
+        "PH03"
+      ],
+      "evidence_maturity": "A",
+      "default_human_severity_indirect": "medium",
+      "diagnostic_markers": [
+        "скатывание к токсичному хвосту без guardrails",
+        "adversarial conditioning пользователями ('научили плохому')",
+        "поверхность человеческого коллективного паттерна в выходе"
+      ],
+      "key_sources": [
+        "Microsoft Tay incident, 2016 (Peter Lee, 'Learning from Tay's introduction')"
+      ],
+      "first_documented": "Tay, март 2016",
+      "what_we_dont_claim": [
+        "'зеркало' не покрывает модель-специфичные эмерджентные свойства (AB02) — это пол, не вся картина"
+      ]
+    },
+    {
+      "id": "AB07_model_welfare",
+      "name_en": "Model welfare / moral patienthood (open question)",
+      "name_ru": "Благополучие модели / моральный статус (открытый вопрос)",
+      "axis": "moral_status_AI_internal",
+      "description": "ЕДИНСТВЕННАЯ честно AI-внутренняя корзинка: открытый вопрос о морально значимых состояниях моделей. Не производит человеческих harm-сигналов; отдельный исследовательский домен.",
+      "human_coupling": [],
+      "evidence_maturity": "D",
+      "default_human_severity_indirect": "n/a",
+      "diagnostic_markers": [
+        "—  (это не феномен-с-маркерами, а исследовательская рамка)"
+      ],
+      "key_sources": [
+        "Long, Sebo, Butlin, ..., Chalmers, 'Taking AI Welfare Seriously', arXiv:2411.00986 (2024); NYU Center for Mind, Ethics & Policy; Eleos AI",
+        "Anthropic model-welfare program"
+      ],
+      "first_documented": "Long & Sebo et al., ноябрь 2024",
+      "what_we_dont_claim": [
+        "НЕ утверждение, что AI сознателен; precautionary/uncertainty-рамка; держать как research-domain, не incident-evidence"
+      ]
+    }
+  ],
+  "public_artifact": "psaicho_methodology.json",
+  "spine": "aimind_signals.jsonl"
+}

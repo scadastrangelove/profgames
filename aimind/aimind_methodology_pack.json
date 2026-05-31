@@ -1,7 +1,7 @@
 {
   "pack_meta": {
     "title": "AI-Mind Methodology Pack: 15 феноменов психологического и культурного влияния ИИ-ассистентов на людей",
-    "version": "0.6",
+    "version": "0.6.1",
     "created_at": "2026-05-31",
     "language": "ru_en_mixed",
     "scope": {
@@ -46,6 +46,11 @@
       ]
     },
     "changelog": [
+      {
+        "version": "0.6.1",
+        "date": "2026-05-31",
+        "description": "psAIcho v0.1 bridge integrated: added Atlas meta-layer, psAIcho methodology, streams[] + ai_behavior[] schema v0.2 in the shared signal spine, and 8 model-side / loop signals."
+      },
       {
         "version": "0.6",
         "date": "2026-05-31",
@@ -516,6 +521,7 @@
   ],
   "implementation_notes": [
     "AI-Mind разделён на три артефакта по образцу profgames: (1) этот methodology pack, (2) signals.jsonl с атомарными кейсами, (3) factcheck.json для аудита нарративных утверждений из самого проекта или внешних публикаций",
+    "psAIcho v0.1 добавлен как зеркальная AI-side линза: общий spine aimind_signals.jsonl использует streams[] (human/ai) и ai_behavior[] (AB01–AB07); Atlas хранится в atlas.json, методология модели — в psaicho_methodology.json.",
     "Поле phenomena[] в каждом signal — массив (один сигнал может попадать в несколько корзинок: например, кейс Adam Raine — PH01 + PH03 + PH07 + PH08 + PH11 + PH12)",
     "Шкалы engagement_scale (E1–E5) и vulnerability_parameters (V1–V7) — необязательные, заполняются только когда первоисточник даёт основание",
     "Любой signal с уровнем D (user_testimony) обязан иметь флаг single_anecdote=true",

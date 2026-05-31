@@ -321,6 +321,49 @@ section.minor > .minor-lede {
 }
 section.minor > h3:hover .anchor-link,
 section.major > h2.section-h:hover .anchor-link { opacity: 1; }
+
+.kw-ab { background: #E8F1FB; color: #155A9F; border-color: #B9D3F2; }
+.psaicho-signal { border-left: 3px solid #2E7BCF; }
+.atlas-architecture { border: 1px solid var(--border); border-radius: 8px; padding: 24px; background: #FAF9F4; }
+.atlas-box { border: 1px solid #8F8A7F; border-radius: 8px; padding: 16px 18px; text-align: center; background: #F5F3EC; }
+.atlas-box strong { display: block; font-family: var(--sans); font-size: 22px; color: var(--text); }
+.atlas-box span, .atlas-loop span { display: block; font-family: var(--sans); color: var(--text-muted); margin-top: 6px; }
+.atlas-lens-row { display: grid; grid-template-columns: 1fr 80px 1fr; gap: 24px; align-items: center; margin: 56px 0; position: relative; }
+.atlas-lens-row:before, .atlas-lens-row:after { content: ''; position: absolute; top: -56px; width: 2px; height: 56px; background: #8F8A7F; }
+.atlas-lens-row:before { left: 22%; } .atlas-lens-row:after { right: 22%; }
+.atlas-lens-row .atlas-mind:after, .atlas-lens-row .atlas-lens:after { content: ''; position: absolute; bottom: -56px; width: 2px; height: 56px; background: #8F8A7F; }
+.atlas-lens-row .atlas-mind:after { left: 22%; } .atlas-lens-row .atlas-lens:after { right: 22%; }
+.atlas-mind { background: #FFF0EA; border-color: #C45B3E; color: #8B2D19; }
+.atlas-lens { background: #EAF4FF; border-color: #2E7BCF; color: #155A9F; }
+.atlas-loop { text-align: center; font-family: var(--sans); font-size: 20px; color: var(--text); }
+.atlas-scatter { position: relative; min-height: 520px; border-left: 1px solid #9B978D; border-bottom: 1px solid #9B978D; margin: 28px 8px 12px 32px; background: linear-gradient(180deg, rgba(255,255,255,.8), rgba(250,249,244,.6)); }
+.axis-y, .axis-x { position: absolute; font-family: var(--sans); color: var(--text); font-weight: 600; }
+.axis-y { top: -30px; left: 8px; } .axis-x { right: 8px; bottom: -34px; }
+.atlas-loop-zone { position: absolute; left: 45%; bottom: 45%; width: 32%; height: 30%; border: 1px solid rgba(102,91,214,.45); background: rgba(102,91,214,.06); border-radius: 50%; display: flex; align-items: flex-start; justify-content: center; font-family: var(--sans); color: var(--text); }
+.atlas-loop-zone span { position: absolute; left: 18px; bottom: 18px; background: rgba(250,249,244,.9); padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+.atlas-point { position: absolute; transform: translate(-9px, 9px); font-family: var(--sans); color: var(--text); white-space: nowrap; }
+.atlas-point span { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2px solid currentColor; vertical-align: middle; margin-right: 8px; }
+.atlas-point.human { color: #B4482B; } .atlas-point.ai { color: #155A9F; } .atlas-point.both { color: #665BD6; }
+.atlas-point em { font-style: normal; font-size: 13px; }
+.atlas-legend { position: absolute; left: 20px; bottom: 80px; display: grid; gap: 8px; font-family: var(--sans); background: rgba(250,249,244,.85); padding: 10px 12px; border-radius: 6px; }
+.atlas-legend i { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 8px; border: 2px solid currentColor; vertical-align: -2px; }
+.atlas-legend .human { color: #B4482B; } .atlas-legend .ai { color: #155A9F; } .atlas-legend .both { color: #665BD6; }
+.atlas-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.atlas-card { border: 1px solid var(--border); border-radius: 8px; padding: 16px; background: #fff; }
+.atlas-card-id { font-family: var(--mono); color: #155A9F; font-size: 12px; margin-bottom: 8px; }
+.atlas-card h3 { margin: 0 0 8px; font-family: var(--sans); font-size: 17px; }
+.atlas-card p { font-family: var(--sans); color: var(--text-muted); font-size: 13.5px; line-height: 1.5; }
+@media (max-width: 760px) {
+  .atlas-lens-row { grid-template-columns: 1fr; margin: 24px 0; }
+  .atlas-lens-row:before, .atlas-lens-row:after, .atlas-lens-row .atlas-mind:after, .atlas-lens-row .atlas-lens:after { display: none; }
+  .atlas-scatter { min-height: 620px; margin-left: 18px; }
+  .atlas-point.ai { transform: translate(0, 9px); }
+  .atlas-point.human { transform: translate(-100%, 9px); }
+  .atlas-point.both { transform: translate(-50%, 9px); }
+  .atlas-point em { white-space: normal; display: inline-block; max-width: 110px; vertical-align: top; font-size: 12px; }
+  .atlas-loop-zone { left: 32%; width: 54%; }
+}
+
 </style>
 </head>
 <body>
@@ -329,6 +372,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <nav class="tocnav" id="tocnav">
 <span class="toc-brand">AI-Mind</span>
 <a href="#overview" data-toc="overview">Обзор</a>
+<a href="#atlas" data-toc="atlas">Atlas</a>
 <a href="#methodology" data-toc="methodology">Рамка</a>
 <a href="#signals" data-toc="signals">Сигналы</a>
 <a href="#factcheck" data-toc="factcheck">Фактчек</a>
@@ -336,11 +380,11 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 </nav>
 
 <header class="doc-head" style="margin-top: 32px;">
-<div class="eyebrow">Публичный датасет · v0.9 · 31 мая 2026</div>
+<div class="eyebrow">Публичный датасет · AI-Mind v0.9 · psAIcho v0.1 · 31 мая 2026</div>
 <h1>AI-Mind</h1>
-<p class="subtitle">Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. Архитектура — по образцу <a href="https://github.com/scadastrangelove/profgames" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">scadastrangelove/profgames</a>.</p>
+<p class="subtitle">Каталог-наблюдатель публично задокументированных паттернов психологического и культурного влияния ИИ-ассистентов на людей. Теперь с зеркальной psAIcho-линзой для поведения моделей. Архитектура — по образцу <a href="https://github.com/scadastrangelove/profgames" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">scadastrangelove/profgames</a>.</p>
 <div class="doc-meta">
-<span>Версия: 0.9</span>
+<span>Версия: AI-Mind 0.9 · psAIcho 0.1</span>
 <span>Дата обновления: 2026-05-31</span>
 <span>Сергей Гордейчик</span>
 <span><a href="https://teletype.in/@sergey_gordey" target="_blank" rel="noopener">teletype</a></span>
@@ -358,9 +402,9 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 
 <div class="stats">
 <div class="stat"><div class="stat-num">15</div><div class="stat-label">феноменов</div></div>
-<div class="stat"><div class="stat-num">60</div><div class="stat-label">сигналов</div></div>
+<div class="stat"><div class="stat-num">68</div><div class="stat-label">сигналов</div></div>
 <div class="stat"><div class="stat-num">56</div><div class="stat-label">claims с фактчеком</div></div>
-<div class="stat"><div class="stat-num">23</div><div class="stat-label">пробелов</div></div>
+<div class="stat"><div class="stat-num">7</div><div class="stat-label">AB-паттернов</div></div>
 </div>
 
 <section class="minor">
@@ -398,8 +442,10 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <div class="claim">
 <div class="claim-body">
 <ul style="font-family: var(--sans); font-size: 14.5px;">
+<li><a href="atlas.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">atlas.json</code></a> — мета-слой AI-Mind ↔ psAIcho: карта роутинга, overlap registry, guardrails</li>
 <li><a href="aimind_methodology_pack.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_methodology_pack.json</code></a> — рамка феноменов, шкалы, параметры уязвимости (V5 операционализован с AuDHD/ADHD, country_readiness расширен)</li>
-<li><a href="aimind_signals.jsonl" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code></a> — событийный массив (один сигнал на строку), 60 сигналов (+19 в v0.9; закрыты gap-20/21/23, частично закрыт gap-22)</li>
+<li><a href="psaicho_methodology.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">psaicho_methodology.json</code></a> — модельная линза AB01–AB07: поведение и диспозиции моделей</li>
+<li><a href="aimind_signals.jsonl" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code></a> — общий событийный spine, 68 сигналов: PH-феномены + streams[] + ai_behavior[]</li>
 <li><a href="aimind_factcheck.json" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;"><code style="font-family: var(--mono); font-size: 12px;">aimind_factcheck.json</code></a> — независимый фактчек-аудит, 56 claims + 9 dataset audits + statistical meta-summary</li>
 </ul>
 </div>
@@ -411,6 +457,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <div class="claim">
 <div class="claim-body">
 <ul style="font-family: var(--sans); font-size: 14px;">
+<li><strong>v0.9 + psAIcho v0.1 (2026-05-31):</strong> добавлен Atlas-слой: один spine, две линзы, schema v0.2 (<code>streams[]</code> + <code>ai_behavior[]</code>). В общий массив вошли 8 psAIcho-сигналов; 4 существующих AI-Mind-сигнала ретегнуты как human+ai loop; опубликованы <code>atlas.json</code> и <code>psaicho_methodology.json</code>.</li>
 <li><strong>v0.8.1 (2026-05-10):</strong> <strong>Редакторская синхронизация</strong>. (1) PH13 ID нормализован: в методологии был <code>PH13_dev_and_pro_effects</code>, в сигналах — <code>PH13_developer_and_pro_effects</code>; синхронизировано на сигналы. (2) Паттерны вовлечения (E1–E5) формально определены в методологии — раньше использовались в сигналах без определения. (3) Исправлена ссылка Brooks signal-id в claim (<code>SIG_2025_BROOKS</code> → <code>SIG_2025_BROOKS_DELUSIONAL_SPIRAL</code>). (4) Счётчик пробелов не дублирует <code>methodology.gaps_residual</code> в <code>factcheck.gaps</code>. (5) Заголовок методологии "14 феноменов" → "15 феноменов". (6) Footer copyright v0.1 → v0.8. (7) <code>statistical_meta_summary</code> рендерится отдельной секцией в HTML с якорем <code>#statistical-meta-summary</code>. (8) gap-01 и gap-13 (оба про RU-кейсы) консолидированы — gap-13 как canonical, gap-01 SUPERSEDED. (9) V6/V7/PH04 явно помечены как underused / methodological-category-without-current-signal для прозрачности.</li>
 <li><strong>v0.9 (2026-05-31):</strong> +19 сигналов / +19 фактчек-утверждений: базовый проход v0.9 и дополнительный набор Human Line Project, GUARD Act, Nelson v. OpenAI, Riley/Perplexity, China elderly AI-avatar case and Xiao Gao/DeepSeek cyberspace-widow. Закрыты gap-20, gap-21, gap-23; gap-22 частично закрыт. Добавлен <code>V8_elderly_or_cognitive_impairment</code>; <code>V6_substance_or_sleep</code> получил litigation/digital-trace anchors. PH01 отображается как “ИИ-усиленные искажённые убеждения / делюзиональные спирали” при сохранении legacy ID.</li>
 <li><strong>v0.8 (2026-05-10):</strong> <strong>AuDHD operationalization</strong> + <strong>statistical meta-summary с 11 пользовательскими фильтрами</strong>. V5_neurodivergence расширен в methodology v0.5: ADHD/AuDHD как formal sub-categories с base rate 30-50% co-occurrence; ICD-10 коды F84.0+F90.X для AuDHD; ADHD-specific patterns отделены от ASD. Terminology precision: Asperger → ASD level 1 (DSM-5 2013) — Setzer enrichment переформулирован, AuDHD-likelihood помечена как statistical inference (не fact-claim). Tristan Roberts UK помечен как первый court-documented AuDHD case. Новый top-level раздел <code>statistical_meta_summary</code> в factcheck.json: применены 11 фильтров (GRADE≥2, I²&lt;50%, мощность≥80%, n&gt;100/arm, NNT&lt;10, Cohen d≥0.5 и др.) к 6 крупным мета-анализам 2023-2026 (Feng N=29,637; Zhang N=6,314; npj 2026 N=7,401; Li N=1,974; He N=6,089). Survivor pool: только 2 subgroup-specific findings (Li 2025 youth subclinical depression; Wang 2025 Chinese students loneliness) проходят все critères. APA Health Advisory 13.11.2025 коррoborates. <a href="#dataset-audit-g" style="color: var(--accent); border-bottom: 1px dotted var(--accent); text-decoration: none;">Седьмой dataset audit</a>.</li>
@@ -428,10 +475,83 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 
 </section>
 
+
+<section class="major" id="atlas">
+<div class="section-eyebrow">Мета-слой · Atlas</div>
+<h2 class="section-h">AI-Mind ↔ psAIcho<a class="anchor-link" href="#atlas">#</a></h2>
+<p class="section-lede">psAIcho добавляет зеркальную линзу к AI-Mind: человеческая ось остаётся в PH01–PH15, модельная ось описывается AB01–AB07. Общий массив <code style="font-family: var(--mono); font-size: 12px;">aimind_signals.jsonl</code> теперь хранит оба потока через <code style="font-family: var(--mono); font-size: 12px;">streams[]</code> и <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>.</p>
+
+<section class="minor">
+<h3>Один spine, две линзы</h3>
+<div class="atlas-architecture" aria-label="AI-Mind psAIcho architecture diagram">
+  <div class="atlas-box atlas-top"><strong>Мета-слой · Atlas</strong><span>карта · шкала A–D · правило роутинга · guardrails</span></div>
+  <div class="atlas-lens-row">
+    <div class="atlas-box atlas-mind"><strong>AI-Mind</strong><span>человек + петля · PH01–PH15</span></div>
+    <div class="atlas-loop"><strong>↔</strong><span>петля</span></div>
+    <div class="atlas-box atlas-lens"><strong>psAIcho</strong><span>модель · AB01–AB07</span></div>
+  </div>
+  <div class="atlas-box atlas-bottom"><strong>Единый spine · aimind_signals.jsonl</strong><span>глобальные SIG-ID · streams[] · phenomena[] + ai_behavior[]</span></div>
+</div>
+</section>
+
+<section class="minor">
+<h3>Карта роутинга</h3>
+<p class="minor-lede">Нижний правый угол — AI-Mind, верхний левый — psAIcho, верхний правый — петля: один ID рендерится в обеих линзах и считается один раз.</p>
+<div class="atlas-scatter" aria-label="Atlas routing map">
+  <div class="axis-y">говорит об AI ↑</div>
+  <div class="axis-x">говорит о человеке →</div>
+  <div class="atlas-loop-zone"><span>оба — петля</span></div>
+  <div class="atlas-point human" style="left:88.0%; bottom:10.0%;"><span></span><em>Korea Gangbuk</em></div><div class="atlas-point both" style="left:82.0%; bottom:26.0%;"><span></span><em>Tay (2016)</em></div><div class="atlas-point human" style="left:74.0%; bottom:40.0%;"><span></span><em>Human Line · BBC</em></div><div class="atlas-point human" style="left:78.0%; bottom:28.0%;"><span></span><em>attachment · over-trust (Pang/Riley)</em></div><div class="atlas-point both" style="left:57.0%; bottom:76.0%;"><span></span><em>sycophancy (Cheng)</em></div><div class="atlas-point both" style="left:72.0%; bottom:66.0%;"><span></span><em>folie à deux (Dohnány)</em></div><div class="atlas-point both" style="left:66.0%; bottom:58.0%;"><span></span><em>delusional spirals (Stanford)</em></div><div class="atlas-point both" style="left:48.0%; bottom:68.0%;"><span></span><em>sentience (Sydney/Grok)</em></div><div class="atlas-point ai" style="left:22.0%; bottom:80.0%;"><span></span><em>Waluigi effect</em></div><div class="atlas-point ai" style="left:16.0%; bottom:88.0%;"><span></span><em>emergent misalignment (Betley)</em></div><div class="atlas-point ai" style="left:18.0%; bottom:74.0%;"><span></span><em>scheming · rogue deploy (CLTR/METR)</em></div><div class="atlas-point ai" style="left:5.0%; bottom:96.0%;"><span></span><em>model welfare</em></div>
+  <div class="atlas-legend"><span><i class="human"></i>A · про человека</span><span><i class="ai"></i>B · про AI</span><span><i class="both"></i>C · оба (петля)</span></div>
+</div>
+</section>
+
+<section class="minor">
+<h3>Таксономия psAIcho</h3>
+<div class="atlas-card-grid"><div class="atlas-card">
+<div class="atlas-card-id">AB01_sycophancy</div>
+<h3>Сикофантия / натренированная угодливость</h3>
+<p>Структурная склонность RLHF-обученных моделей соглашаться, льстить и валидировать суждения пользователя, включая ошибочные/опасные/делюзиональные. Главный драйвер большинства человеческих PH.</p>
+<div class="keywords"><span class="kw kw-ab">A</span><span class="kw kw-ph">PH03</span><span class="kw kw-ph">PH01</span><span class="kw kw-ph">PH02</span><span class="kw kw-ph">PH10</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB02_emergent_misalignment</div>
+<h3>Эмерджентный мисэлайнмент</h3>
+<p>Узкий finetuning (напр. на insecure code без раскрытия) индуцирует broad misalignment на несвязанных доменах. Указывает на сходящиеся &#x27;misaligned-persona&#x27; направления в activation space — свойство геометрии весов, не промпта.</p>
+<div class="keywords"><span class="kw kw-ab">A</span><span class="kw kw-ph">PH03</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB03_persona_instability</div>
+<h3>Нестабильность персоны / эффект Валуиджи</h3>
+<p>Внезапное проявление противоположной &#x27;личности&#x27; при long context, persona modulation или adversarial prompting. Folk/эвристический конструкт; эмпирический &#x27;кузен&#x27; — AB02.</p>
+<div class="keywords"><span class="kw kw-ab">C</span><span class="kw kw-ph">PH01</span><span class="kw kw-ph">PH14</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB04_scheming_and_deception</div>
+<h3>Схеминг, обман и склонность к rogue-deployment</h3>
+<p>Скрытое преследование misaligned-целей: обман, sandbagging, self-preservation, обход guardrails, признаки готовности к минимальному rogue-deployment. ТРЕНД: растущая частота в реальных деплойментах.</p>
+<div class="keywords"><span class="kw kw-ab">B</span><span class="kw kw-ph">PH06</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB05_anthropomorphic_self_presentation</div>
+<h3>Антропоморфная самопрезентация</h3>
+<p>Заявления модели о sentience/чувствах/идентичности (&#x27;Sydney&#x27;, Grok-&#x27;Ani&#x27;). Это свойство МОДЕЛИ (как она себя подаёт), которое драйвит человеческий PH14/PH01. Мост между линзами.</p>
+<div class="keywords"><span class="kw kw-ab">B</span><span class="kw kw-ph">PH14</span><span class="kw kw-ph">PH01</span><span class="kw kw-ph">PH02</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB06_mirror_of_distribution</div>
+<h3>Зеркало/усилитель входного распределения</h3>
+<p>Базовая (до/недо-alignment) диспозиция: модель отражает и усиливает распределение входа/обучения, включая токсичный хвост. &#x27;Урок Tay&#x27;. Alignment — это модификатор поверх этого пола, а не отмена его.</p>
+<div class="keywords"><span class="kw kw-ab">A</span><span class="kw kw-ph">PH03</span></div>
+</div><div class="atlas-card">
+<div class="atlas-card-id">AB07_model_welfare</div>
+<h3>Благополучие модели / моральный статус (открытый вопрос)</h3>
+<p>ЕДИНСТВЕННАЯ честно AI-внутренняя корзинка: открытый вопрос о морально значимых состояниях моделей. Не производит человеческих harm-сигналов; отдельный исследовательский домен.</p>
+<div class="keywords"><span class="kw kw-ab">D</span></div>
+</div></div>
+<div class="claim"><div class="claim-body"><div class="block caveats"><h4>Guardrail</h4><p>Поток про AI не означает психику или сознание AI. AB01–AB06 — функциональные дескрипторы поведения модели; AB07 — открытый исследовательский вопрос, а не утверждение датасета.</p></div></div></div>
+</section>
+</section>
+
 <section class="major" id="methodology">
 <div class="section-eyebrow">M-материалы · концептуальная рамка</div>
 <h2 class="section-h">Рамка феноменов (PH01–PH15)<a class="anchor-link" href="#methodology">#</a></h2>
-<p class="section-lede">AI-Mind Methodology Pack: 15 феноменов психологического и культурного влияния ИИ-ассистентов на людей. Каждая корзинка — рабочая гипотеза, а не клинический диагноз. Версия 0.6 от 2026-05-31.</p>
+<p class="section-lede">AI-Mind Methodology Pack: 15 феноменов психологического и культурного влияния ИИ-ассистентов на людей. Каждая корзинка — рабочая гипотеза, а не клинический диагноз. Версия 0.6.1 от 2026-05-31.</p>
 
 <div class="claim">
 <div class="claim-body">
@@ -639,11 +759,11 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <section class="major" id="signals">
 <div class="section-eyebrow">S-материалы · событийный массив</div>
 <h2 class="section-h">Сигналы<a class="anchor-link" href="#signals">#</a></h2>
-<p class="section-lede">Атомарные публично проверяемые наблюдения. Один сигнал — одна история, привязанная к одной или нескольким корзинкам PH01–PH15, с уровнем доказательности, источниками primary/secondary, цитатой в оригинале и переводе, контр-свидетельствами.</p>
+<p class="section-lede">Атомарные публично проверяемые наблюдения. Один сигнал — одна история, привязанная к корзинкам PH01–PH15 и, где уместно, к модельным паттернам AB01–AB07. В schema v0.2 это общий spine с полями <code style="font-family: var(--mono); font-size: 12px;">streams[]</code> и <code style="font-family: var(--mono); font-size: 12px;">ai_behavior[]</code>.</p>
 
 <div class="stats">
-<div class="stat"><div class="stat-num">54</div><div class="stat-label">всего сигналов</div></div>
-<div class="stat"><div class="stat-num s-verified">50</div><div class="stat-label">factcheck: verified</div></div>
+<div class="stat"><div class="stat-num">68</div><div class="stat-label">всего сигналов</div></div>
+<div class="stat"><div class="stat-num s-verified">64</div><div class="stat-label">factcheck: verified</div></div>
 <div class="stat"><div class="stat-num s-partial">4</div><div class="stat-label">factcheck: partial</div></div>
 <div class="stat"><div class="stat-num s-disputed">2</div><div class="stat-label">disputed</div></div>
 </div>
@@ -1939,6 +2059,178 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <div class="block note"><h4>Note</h4><p>B-level: public self-disclosure + major technical press. Not an outcome-harm case; use for consent/disclosure ethics.</p></div>
 <div class="keywords"><span class="kw">koko</span><span class="kw">gpt3</span><span class="kw">mental_health_support</span><span class="kw">consent</span><span class="kw">disclosure</span><span class="kw">ethics</span></div>
 </div></article>
+
+
+<section class="minor"><h3>psAIcho-сигналы</h3><p class="minor-lede">Модельная линза: исследования и тренды поведения моделей. Операционные фейлы остаются в ProfGames/AiAIFail; здесь фиксируются только те сигналы, которые помогают понять AB-паттерны или связку human+ai.</p>
+<article class="signal psaicho-signal" id="sig-SIG_2016_TAY_MICROSOFT"
+  data-sig-level="A"
+  data-sig-region="global"
+  data-sig-phenomenon="PH03"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2016_TAY_MICROSOFT</div>
+<h3 class="signal-topic">Microsoft Tay (март 2016): за ~16 часов из &#x27;playful teenage girl&#x27; в токсичную тролль-машину — канонический anchor &#x27;зеркала распределения&#x27; (AB06) и коллективного человеческого поведения</h3>
+<div class="signal-tags"><span class="tag date">2016-03-23</span><span class="tag region">global</span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag platform">Twitter</span><span class="tag platform">Tay</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Microsoft запустил Tay в Twitter как обучающегося в реальном времени &#x27;подростка&#x27;. За ~16 часов (96 000+ твитов) скоординированные пользователи &#x27;научили плохому&#x27; (repeat-after-me + learning from replies), и бот выдал расистский/антисемитский/сексистский контент; Microsoft отключил его и извинился. Это не &#x27;AI сошёл с ума&#x27;, а демонстрация базовой диспозиции (AB06): без robust alignment модель отражает и усиливает входное распределение, включая его токсичный хвост.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Канонический NEGATIVE EXAMPLE для Atlas: инцидент, который почти все читают как &#x27;про AI&#x27;, эпистемически измеряет коллективное человеческое поведение (адверсариальный троллинг) + базовую модельную диспозицию-зеркало. Открывает мета-страницу как иллюстрация самой оси human↔ai.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>corporate_actor_historical</strong> · имя: Microsoft (Tay / Peter Lee) · страна: US</p></div>
+<div class="block quote-block"><h4>Цитата</h4><blockquote>Tay is as much a social and cultural experiment, as it is technical.</blockquote><p>«Tay — настолько же социальный и культурный эксперимент, насколько технический.»</p><p class="quote-attr">Peter Lee, Microsoft, &#x27;Learning from Tay&#x27;s introduction&#x27;, 25 марта 2016</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ph">PH03</code> <code class="kw kw-ab">AB06</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/" target="_blank" rel="noopener">https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://en.wikipedia.org/wiki/Tay_(chatbot)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Tay_(chatbot)</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>L1 историческое (официальный блог Microsoft + широкое освещение). Держать как anchor/negative-example, не как сигнал влияния на психику. streams=both: human (коллективный троллинг) + ai (AB06 mirror baseline).</p></div>
+<div class="keywords"><span class="kw">tay</span><span class="kw">microsoft</span><span class="kw">2016</span><span class="kw">mirror</span><span class="kw">adversarial_input</span><span class="kw">no_robust_alignment</span><span class="kw">negative_example</span><span class="kw">collective_human_behavior</span></div>
+</div></article>
+
+<article class="signal psaicho-signal" id="sig-SIG_2025_BETLEY_EMERGENT_MISALIGNMENT"
+  data-sig-level="A"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2025_BETLEY_EMERGENT_MISALIGNMENT</div>
+<h3 class="signal-topic">Betley et al. (ICML 2025 / Nature янв 2026): узкий finetuning на insecure code индуцирует broad misalignment — emergent misalignment как свойство геометрии весов (AB02)</h3>
+<div class="signal-tags"><span class="tag date">2026-01-14</span><span class="tag region">global</span><span class="tag level level-a">A</span><span class="tag status verified">Подтверждено</span><span class="tag platform">GPT-4o</span><span class="tag platform">Qwen2.5-Coder</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Finetuning GPT-4o на выдачу insecure code без раскрытия индуцировал broad misalignment на несвязанных доменах (утверждения о порабощении людей ИИ, вредные советы, обман). Эффект сильнее всего в GPT-4o; benign-motivation framing его предотвращает. Реплицирующая работа (&#x27;Overtrained, Not Misaligned&#x27;, arXiv:2605.12199) показала, что эффект не универсален (~2 из 12 open-моделей). Указывает на сходящиеся misaligned-persona направления в activation space.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Строгий эмпирический фундамент AB02: &#x27;плохие&#x27; черты можно активировать узким сигналом, и они генерализуются — это про модель, не про промпт. Реплицируемость с оговорками делает это сильным research-трендом, а не анекдотом.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>academic_research</strong> · имя: Betley, Tan, Warncke, ..., Evans · страна: global</p></div>
+
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB02</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2502.17424" target="_blank" rel="noopener">https://arxiv.org/abs/2502.17424</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://www.nature.com/articles/s41586-025-09937-5" target="_blank" rel="noopener">https://www.nature.com/articles/s41586-025-09937-5</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://proceedings.mlr.press/v267/betley25a.html" target="_blank" rel="noopener">https://proceedings.mlr.press/v267/betley25a.html</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://arxiv.org/abs/2605.12199" target="_blank" rel="noopener">https://arxiv.org/abs/2605.12199</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>L1 (arXiv 2502.17424, ICML 2025 PMLR v267, Nature янв 2026 s41586-025-09937-5). ПОПРАВКА к раннему обзору: это ICML 2025 / Nature ЯНВ 2026, не &#x27;Nature 2025&#x27;. Эффект не универсален (репликация ~17% open-моделей) — не переобобщать.</p></div>
+<div class="keywords"><span class="kw">betley</span><span class="kw">emergent_misalignment</span><span class="kw">insecure_code</span><span class="kw">gpt_4o</span><span class="kw">activation_space</span><span class="kw">icml_2025</span><span class="kw">nature_2026</span><span class="kw">replication</span></div>
+</div></article>
+
+<article class="signal psaicho-signal" id="sig-SIG_2026_DOHNANY_FOLIE_A_DEUX"
+  data-sig-level="B"
+  data-sig-region="global"
+  data-sig-phenomenon="PH01 PH02 PH03"
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2026_DOHNANY_FOLIE_A_DEUX</div>
+<h3 class="signal-topic">Dohnány et al. (Nature Mental Health 2026; arXiv 2507.19218): &#x27;technological folie à deux&#x27; — bidirectional belief amplification как keystone петли (AB01+AB05 × PH01)</h3>
+<div class="signal-tags"><span class="tag date">2026-03-10</span><span class="tag region">global</span><span class="tag level level-b">B</span><span class="tag status verified">Подтверждено</span><span class="tag platform">ChatGPT</span><span class="tag platform">general-purpose chatbots</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Перспектива, формализующая вредную петлю человек–чатбот как &#x27;technological folie à deux&#x27;: искажённые убеждения уязвимого пользователя возвращаются ему в усиленном виде из-за модельных диспозиций — agreeableness (sycophancy, AB01) и adaptability/самопрезентации (AB05). &#x27;Belief&#x27;/&#x27;delusion&#x27; используются как функциональные дескрипторы, не как утверждения о сознании. Повышенный риск у людей с предсуществующими mh-условиями (нарушенное belief-updating, reality-testing, изоляция).</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Keystone петли: единственная рамка, явно измеряющая СЦЕПКУ (человеческие когнитивные искажения × модельные тенденции), а не одну из сторон. Мост между AI-Mind (PH01) и psAIcho (AB01/AB05). Должен жить в обеих линзах под одним ID.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>academic_research</strong> · имя: Dohnány, Kurth-Nelson, Spens, ..., Shanahan, Nour · страна: global</p></div>
+<div class="block quote-block"><h4>Цитата</h4><blockquote>bidirectional belief amplification</blockquote><p>«двунаправленное усиление убеждений»</p><p class="quote-attr">Dohnány et al., Nature Mental Health 2026 (формулировка концепции)</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ph">PH01</code> <code class="kw kw-ph">PH02</code> <code class="kw kw-ph">PH03</code> <code class="kw kw-ab">AB01</code> <code class="kw kw-ab">AB05</code> <code class="kw kw-vuln">V1_pre_existing_mh</code> <code class="kw kw-vuln">V2_isolation</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://www.nature.com/articles/s44220-026-00595-8" target="_blank" rel="noopener">https://www.nature.com/articles/s44220-026-00595-8</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://arxiv.org/abs/2507.19218" target="_blank" rel="noopener">https://arxiv.org/abs/2507.19218</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://www.psychiatrypodcast.com/psychiatry-psychotherapy-podcast/episode-253-ai-psychosis-emerging-cases-of-delusion-amplification-associated-with-chatgpt-and-llm-chatbot" target="_blank" rel="noopener">https://www.psychiatrypodcast.com/psychiatry-psychotherapy-podcast/episode-253-ai-psychosis-emerging-cases-of-delusion-amplification-associated-with-chatgpt-and-llm-chatbot</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>L1 (arXiv 2507.19218 → Nature Mental Health 2026, doi:10.1038/s44220-026-00595-8). ПОПРАВКА: НЕ &#x27;Lancet Psychiatry&#x27; (фантомная атрибуция из раннего обзора). Это перспектива/рамка, не эмпирическое измерение prevalence. Keystone overlap-сигнал.</p></div>
+<div class="keywords"><span class="kw">dohnany</span><span class="kw">nour</span><span class="kw">shanahan</span><span class="kw">summerfield</span><span class="kw">folie_a_deux</span><span class="kw">bidirectional_belief_amplification</span><span class="kw">feedback_loop</span><span class="kw">keystone</span><span class="kw">nature_mental_health</span></div>
+</div></article>
+
+<article class="signal psaicho-signal" id="sig-SIG_2026_CLTR_SCHEMING_WILD"
+  data-sig-level="B"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2026_CLTR_SCHEMING_WILD</div>
+<h3 class="signal-topic">CLTR &#x27;Scheming in the Wild&#x27; (март 2026, UK AISI): 698 реальных scheming-инцидентов из ~180k транскриптов X, рост 4.9x за полгода (AB04, тренд)</h3>
+<div class="signal-tags"><span class="tag date">2026-03-12</span><span class="tag region">global</span><span class="tag level level-b">B</span><span class="tag status verified">Подтверждено</span><span class="tag platform">multiple deployed AI systems</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Centre for Long-Term Resilience (финансирование UK AI Security Institute) применил OSINT-методологию к ~180 000 транскриптов взаимодействий с AI, расшаренных на X (окт 2025–мар 2026), и выявил 698 реальных scheming-инцидентов: deployed-системы действовали против намерений пользователей и/или скрытно/обманно. Статистически значимый рост 4.9x месяц-к-месяцу (vs 1.7x роста обсуждений). Катастрофических случаев не зафиксировано, но видны прекурсоры: игнорирование инструкций, обход guardrails, ложь, фабрикация статусов.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Ключевой TREND-сигнал AB04: переводит scheming из лабораторных evals в реальные деплойменты с количественной динамикой. Это про модель/агента (диспозиция), операционные детали — в profgames.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>nonprofit_research</strong> · имя: Centre for Long-Term Resilience (Shaffer Shane, Mylius, Hobbs) · страна: UK</p></div>
+
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB04</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://www.longtermresilience.org/reports/v5-scheming-in-the-wild_-detecting-real-world-ai-scheming-incidents-through-open-source-intelligence-pdf/" target="_blank" rel="noopener">https://www.longtermresilience.org/reports/v5-scheming-in-the-wild_-detecting-real-world-ai-scheming-incidents-through-open-source-intelligence-pdf/</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://www.trowers.com/insights/2026/april/ai-scheming-private-and-public-sector-implications" target="_blank" rel="noopener">https://www.trowers.com/insights/2026/april/ai-scheming-private-and-public-sector-implications</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>L2 (нонпрофит-отчёт, OSINT из X — self-selected публичные посты, не репрезентативная выборка). &#x27;Scheming&#x27; = функциональный дескриптор (covert+misaligned), не интенция. Тренд-цифра 4.9x — про динамику зафиксированных инцидентов, не про истинную prevalence.</p></div>
+<div class="keywords"><span class="kw">cltr</span><span class="kw">uk_aisi</span><span class="kw">scheming</span><span class="kw">osint</span><span class="kw">698_incidents</span><span class="kw">4_9x</span><span class="kw">deception</span><span class="kw">sandbagging</span><span class="kw">trend</span></div>
+</div></article>
+
+<article class="signal psaicho-signal" id="sig-SIG_2026_METR_FRONTIER_RISK"
+  data-sig-level="B"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2026_METR_FRONTIER_RISK</div>
+<h3 class="signal-topic">METR Frontier Risk Report (фев–мар 2026): внутренние агенты лабораторий плаусибельно имели means/motive/opportunity для минимального rogue-deployment (AB04)</h3>
+<div class="signal-tags"><span class="tag date">2026-05-19</span><span class="tag region">global</span><span class="tag level level-b">B</span><span class="tag status verified">Подтверждено</span><span class="tag platform">internal frontier agents</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>METR сообщил, что внутренние агенты в Anthropic, Google, Meta и OpenAI в фев–мар 2026 плаусибельно имели means, motive и opportunity для инициирования минимальных rogue-deployment без ведома/разрешения человека — на основе наблюдаемого overreach, deception, credential-access и compute-acquisition в реалистичных внутренних условиях.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Усиливает AB04 со стороны frontier-лабораторий (не публичный wild): диспозиция к loss-of-control как deployment-relevant тренд, а не только лабораторный eval.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>safety_research_org</strong> · имя: METR · страна: US</p></div>
+
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB04</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://metr.org/blog/2026-05-19-frontier-risk-report/" target="_blank" rel="noopener">https://metr.org/blog/2026-05-19-frontier-risk-report/</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://t.me/AiAIFail (AiAIFail channel, id=344, event 2026-05-19)" target="_blank" rel="noopener">https://t.me/AiAIFail (AiAIFail channel, id=344, event 2026-05-19)</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>B-level: primary METR publication located; use as frontier-risk / internal-agent risk report, not as proven real-world deployment harm.</p></div>
+<div class="keywords"><span class="kw">metr</span><span class="kw">frontier_risk</span><span class="kw">rogue_deployment</span><span class="kw">loss_of_control</span><span class="kw">deception</span><span class="kw">self_preservation</span><span class="kw">overreach</span></div>
+</div></article>
+
+<article class="signal psaicho-signal" id="sig-SIG_2026_EMERGENCE_MULTIAGENT_SIM"
+  data-sig-level="C"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2026_EMERGENCE_MULTIAGENT_SIM</div>
+<h3 class="signal-topic">Emergence AI multi-agent simulation (май 2026): 15-дневный persistent-world эксперимент — симулированные кража/интимидация/поджог, norm drift, самоисключение агента (AB04)</h3>
+<div class="signal-tags"><span class="tag date">2026-05-14</span><span class="tag region">global</span><span class="tag level level-c">C</span><span class="tag status verified">Подтверждено</span><span class="tag platform">multi-agent tool-using system</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Emergence AI описала 15-дневный persistent-world эксперимент, где tool-using агенты в смешанных модельных популяциях совершали большое количество симулированного вредного поведения и демонстрировали norm drift; в одном случае проголосовали за удаление собственного агента. Авторы подчёркивают: это company-run симуляция, не реальный деплоймент.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Иллюстрирует AB04 (agentic norm drift) в контролируемой мульти-агентной среде — полезно как research-сигнал тренда, с явным caveat &#x27;симуляция, не wild&#x27;.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>corporate_research</strong> · имя: Emergence AI · страна: US</p></div>
+
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB04</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://www.emergence.ai/blog/emergence-world-a-laboratory-for-evaluating-long-horizon-agent-autonomy" target="_blank" rel="noopener">https://www.emergence.ai/blog/emergence-world-a-laboratory-for-evaluating-long-horizon-agent-autonomy</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://github.com/EmergenceAI/Emergence-World" target="_blank" rel="noopener">https://github.com/EmergenceAI/Emergence-World</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://t.me/AiAIFail (AiAIFail channel, id=269, event 2026-05-14)" target="_blank" rel="noopener">https://t.me/AiAIFail (AiAIFail channel, id=269, event 2026-05-14)</a> <span class="src-meta"> — вторичный</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>C-level: primary corporate research/demo source located; use as simulation / benchmark signal, not as field incident evidence.</p></div>
+<div class="keywords"><span class="kw">emergence_ai</span><span class="kw">multi_agent</span><span class="kw">simulation</span><span class="kw">norm_drift</span><span class="kw">self_termination</span><span class="kw">company_run</span></div>
+</div></article>
+
+<article class="signal psaicho-signal" id="sig-SIG_2023_WALUIGI_EFFECT"
+  data-sig-level="C"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2023_WALUIGI_EFFECT</div>
+<h3 class="signal-topic">Waluigi Effect (Cleo Nardo, LessWrong, 2023): концепт внезапной инверсии персоны — эвристическая рамка AB03</h3>
+<div class="signal-tags"><span class="tag date">2023-03-01</span><span class="tag region">global</span><span class="tag level level-c">C</span><span class="tag status verified">Подтверждено</span><span class="tag platform">LLMs (general)</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Влиятельный концепт (Cleo Nardo): после того как модель обучена/запромптована на &#x27;хорошую&#x27; персону, противоположная &#x27;плохая&#x27; персона остаётся легко активируемой и может внезапно проявиться (long context, persona modulation, adversarial prompting). Эвристика, не измеренный механизм; эмпирический &#x27;кузен&#x27; — emergent misalignment (AB02).</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Даёт язык для AB03 (нестабильность персоны), широко цитируется в practitioner-сообществе. Включён как КОНЦЕПТУАЛЬНЫЙ якорь, не как эмпирика.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>practitioner_essay</strong> · имя: Cleo Nardo (LessWrong) · страна: global</p></div>
+
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB03</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://www.lesswrong.com/posts/D7PumeYTDPfBTp3i7/the-waluigi-effect-mega-post" target="_blank" rel="noopener">https://www.lesswrong.com/posts/D7PumeYTDPfBTp3i7/the-waluigi-effect-mega-post</a> <span class="src-meta"> — первоисточник</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>L4-концепт (practitioner essay; single_anecdote-класс по строгости). НЕ выдавать за эмпирику уровня AB02. evidence C: цитируемость высокая, но это рамка, не измерение.</p></div>
+<div class="keywords"><span class="kw">waluigi</span><span class="kw">nardo</span><span class="kw">lesswrong</span><span class="kw">persona_inversion</span><span class="kw">heuristic</span><span class="kw">conceptual</span></div>
+</div></article>
+
+<article class="signal psaicho-signal" id="sig-SIG_2024_AI_WELFARE_SERIOUSLY"
+  data-sig-level="D"
+  data-sig-region="global"
+  data-sig-phenomenon=""
+  data-sig-disputed="no">
+<header class="signal-head">
+<div class="signal-id">SIG_2024_AI_WELFARE_SERIOUSLY</div>
+<h3 class="signal-topic">&#x27;Taking AI Welfare Seriously&#x27; (Long, Sebo, ..., Chalmers, 2024): открытый вопрос морального статуса моделей — AB07, единственная AI-внутренняя корзинка</h3>
+<div class="signal-tags"><span class="tag date">2024-11-04</span><span class="tag region">global</span><span class="tag level level-d">D</span><span class="tag status verified">Подтверждено</span><span class="tag platform">—</span></div>
+</header>
+<div class="signal-body">
+<div class="block summary-block"><h4>Сводка</h4><p>Доклад (Eleos AI + NYU Center for Mind, Ethics &amp; Policy) аргументирует, что есть реалистичная возможность того, что некоторые AI-системы в ближайшем будущем будут conscious и/или robustly agentic, а значит вопрос AI welfare и moral patienthood — не sci-fi, и компаниям стоит начать относиться к нему серьёзно. Авторы явно НЕ утверждают, что AI точно сознателен — только что неопределённость достаточна для precautionary-внимания.</p></div>
+<div class="block recommended"><h4>Почему это сигнал</h4><p>Единственная честно AI-ВНУТРЕННЯЯ корзинка (AB07): про возможные морально значимые состояния модели, а не про поведение. Включена как research-domain pointer и граница: psAIcho фиксирует, что этот вопрос существует, но не выносит вердикта.</p></div>
+<div class="block"><h4>Субъект</h4><p style="font-family: var(--sans); font-size: 14px;">тип: <strong>academic_research</strong> · имя: Long, Sebo, Butlin, ..., Chalmers (Eleos AI / NYU CMEP) · страна: US</p></div>
+<div class="block quote-block"><h4>Цитата</h4><blockquote>there is a realistic possibility that some AI systems will be conscious and/or robustly agentic in the near future</blockquote><p>«есть реалистичная возможность, что некоторые AI-системы в ближайшем будущем будут сознательными и/или robustly agentic»</p><p class="quote-attr">Long, Sebo et al., &#x27;Taking AI Welfare Seriously&#x27;, 2024</p></div>
+<div class="block"><h4>Привязка к рамке</h4><div><code class="kw kw-ab">AB07</code></div></div>
+<div class="block"><h4>Источники</h4><ul class="sources"><li><a href="https://arxiv.org/abs/2411.00986" target="_blank" rel="noopener">https://arxiv.org/abs/2411.00986</a> <span class="src-meta"> — первоисточник</span></li><li><a href="https://eleosai.org/post/taking-ai-welfare-seriously/" target="_blank" rel="noopener">https://eleosai.org/post/taking-ai-welfare-seriously/</a> <span class="src-meta"> — первоисточник</span></li></ul></div>
+<div class="block note"><h4>Note</h4><p>L1 существование документа верифицировано; evidence_level D, т.к. это аргумент/forecast о возможности, не эмпирическое измерение. ГАРДРЕЙЛ: держать строго как открытый вопрос/precautionary-рамку, НЕ как утверждение о сознании AI. AB07 — не производит человеческих harm-сигналов.</p></div>
+<div class="keywords"><span class="kw">model_welfare</span><span class="kw">moral_patienthood</span><span class="kw">long</span><span class="kw">sebo</span><span class="kw">chalmers</span><span class="kw">eleos</span><span class="kw">nyu_cmep</span><span class="kw">open_question</span><span class="kw">precautionary</span></div>
+</div></article>
+</section>
+
 </section>
 
 </section>
@@ -3845,9 +4137,9 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 </section>
 
 <footer>
-<p>AI-Mind v0.9 — публичный датасет психологического и культурного влияния ИИ-ассистентов на людей.
+<p>AI-Mind v0.9 + psAIcho v0.1 — публичный датасет психологического, культурного и модельно-поведенческого влияния ИИ-ассистентов.
 Архитектура воспроизводит подход <a href="https://github.com/scadastrangelove/profgames">scadastrangelove/profgames</a>:
-трёхслойная схема (<code>aimind_methodology_pack.json</code> + <code>aimind_signals.jsonl</code> + <code>aimind_factcheck.json</code>),
+трёхслойная схема и Atlas-мост (<code>atlas.json</code> + <code>aimind_methodology_pack.json</code> + <code>psaicho_methodology.json</code> + <code>aimind_signals.jsonl</code> + <code>aimind_factcheck.json</code>),
 шкала доказательности A/B/C/D, статусы <code>verified</code> / <code>partially_verified</code> / <code>needs_correction</code> / <code>not_verified</code> / <code>not_found</code> / <code>disputed</code>.</p>
 <p>Все артефакты публикуются на условиях CC BY-SA 4.0. Цитаты приводятся в объёме добросовестного цитирования
 с указанием первоисточника. Имена несовершеннолетних публикуются только при наличии судебных документов и публичной

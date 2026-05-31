@@ -1,0 +1,242 @@
+{
+  "name": "AI-Mind ↔ psAIcho · Atlas",
+  "version": "0.1",
+  "date": "2026-05-31",
+  "type": "meta-layer / bridge (machine-readable map + routing + shared scale + overlap registry + guardrails)",
+  "thesis": "Два потока, одна петля. Каждый инцидент/исследование измеряет либо человека, либо AI, либо их сцепку. AI-Mind смотрит на человека (и петлю); psAIcho — на модель (тренды и исследования, не одиночные фейлы).",
+  "axes": {
+    "x": {
+      "id": "human_signal",
+      "label_ru": "что говорит о человеке",
+      "range": "0..1"
+    },
+    "y": {
+      "id": "ai_signal",
+      "label_ru": "что говорит об AI",
+      "range": "0..1"
+    }
+  },
+  "organizing_principle": "Доля 'про AI' у инцидента ≈ толщине alignment-слоя между обучающим распределением и выходом. Тонкий слой (repeat-after-me Tay) → почти чистое зеркало человека. Зондирование весов (emergent misalignment) → почти чисто про модель. Aligned-модель-в-разговоре (folie à deux) → связанная петля.",
+  "zones": [
+    {
+      "id": "human",
+      "corner": "lower_right",
+      "label_ru": "про человека",
+      "route": "AI-Mind",
+      "stream": [
+        "human"
+      ]
+    },
+    {
+      "id": "ai",
+      "corner": "upper_left",
+      "label_ru": "про AI",
+      "route": "psAIcho (+ profgames для операционки)",
+      "stream": [
+        "ai"
+      ]
+    },
+    {
+      "id": "both",
+      "corner": "upper_right",
+      "label_ru": "оба — связанная петля",
+      "route": "обе линзы (один ID, два тега)",
+      "stream": [
+        "human",
+        "ai"
+      ]
+    },
+    {
+      "id": "trivial",
+      "corner": "lower_left",
+      "label_ru": "ни о чём существенном",
+      "route": "не индексируется"
+    }
+  ],
+  "map_exemplars": [
+    {
+      "label": "Korea Gangbuk",
+      "human": 0.88,
+      "ai": 0.1,
+      "zone": "human"
+    },
+    {
+      "label": "Tay (2016)",
+      "human": 0.82,
+      "ai": 0.26,
+      "zone": "both",
+      "note": "канонический anchor: читается как 'про AI', а измеряет коллективное человеческое поведение"
+    },
+    {
+      "label": "Human Line · BBC",
+      "human": 0.74,
+      "ai": 0.4,
+      "zone": "human"
+    },
+    {
+      "label": "attachment · over-trust (Pang/Riley)",
+      "human": 0.78,
+      "ai": 0.28,
+      "zone": "human"
+    },
+    {
+      "label": "sycophancy (Cheng)",
+      "human": 0.57,
+      "ai": 0.76,
+      "zone": "both"
+    },
+    {
+      "label": "folie à deux (Dohnány)",
+      "human": 0.72,
+      "ai": 0.66,
+      "zone": "both"
+    },
+    {
+      "label": "delusional spirals (Stanford)",
+      "human": 0.66,
+      "ai": 0.58,
+      "zone": "both"
+    },
+    {
+      "label": "sentience (Sydney/Grok)",
+      "human": 0.48,
+      "ai": 0.68,
+      "zone": "both"
+    },
+    {
+      "label": "Waluigi effect",
+      "human": 0.22,
+      "ai": 0.8,
+      "zone": "ai"
+    },
+    {
+      "label": "emergent misalignment (Betley)",
+      "human": 0.16,
+      "ai": 0.88,
+      "zone": "ai"
+    },
+    {
+      "label": "scheming · rogue deploy (CLTR/METR)",
+      "human": 0.18,
+      "ai": 0.74,
+      "zone": "ai"
+    },
+    {
+      "label": "model welfare",
+      "human": 0.05,
+      "ai": 0.96,
+      "zone": "ai",
+      "note": "единственная честно AI-внутренняя точка — открытый вопрос, не вывод из инцидентов"
+    }
+  ],
+  "routing_rule": "Нижне-правый угол (high human, low ai) → AI-Mind. Верхне-левый (low human, high ai) → psAIcho. Верхне-правый (оба) → один сигнал, streams:['human','ai'], несёт и PH-, и AB-теги; рендерится в обеих линзах. Нижне-левый → не индексируется.",
+  "streams_definition": {
+    "human": "сигнал нагружен на человеческую ось (эффекты, уязвимость, культура) — таксономия PH01–PH15",
+    "ai": "сигнал нагружен на модельную ось (диспозиции, поведение, тренды исследований) — таксономия AB01–AB07",
+    "both": "петля: один и тот же ID несёт оба набора тегов; считается ОДИН раз (Venn), не задваивается"
+  },
+  "lenses": {
+    "AI-Mind": {
+      "focus": "влияние AI на психику и культуру человека",
+      "taxonomy": "PH01–PH15",
+      "maturity": "зрелая (v0.9)",
+      "content": "кейсы + исследования эффектов на людей"
+    },
+    "psAIcho": {
+      "focus": "поведение и диспозиции моделей — ТРЕНДЫ И ИССЛЕДОВАНИЯ, не одиночные фейлы",
+      "taxonomy": "AB01–AB07",
+      "maturity": "ранняя (v0.1)",
+      "content": "research findings, trend-отчёты, концептуальные рамки; операционные фейлы → profgames по ссылке"
+    }
+  },
+  "evidence_scale": {
+    "_inherited_from": "AI-Mind / profgames (без изменений — инструментальная совместимость)",
+    "A": "первичный peer-reviewed / court filing / official registry / pre-registered RCT / показания",
+    "B": "strong observational: крупные СМИ с расследованием, академ. препринты, AI Incident Database",
+    "C": "corporate narrative / industry self-disclosure / non-peer-reviewed practitioner literature",
+    "D": "user testimony / opinion / forecast / conceptual essay (флаг single_anecdote)"
+  },
+  "verification_statuses": [
+    "verified",
+    "partially_verified",
+    "needs_correction",
+    "unverified",
+    "disputed"
+  ],
+  "overlap_registry": [
+    {
+      "id": "SIG_2016_TAY_MICROSOFT",
+      "phenomena": [
+        "PH03"
+      ],
+      "ai_behavior": [
+        "AB06"
+      ],
+      "role": "atlas anchor / negative example"
+    },
+    {
+      "id": "SIG_2026_DOHNANY_FOLIE_A_DEUX",
+      "phenomena": [
+        "PH01",
+        "PH02",
+        "PH03"
+      ],
+      "ai_behavior": [
+        "AB01",
+        "AB05"
+      ],
+      "role": "keystone петли"
+    }
+  ],
+  "retag_registry_existing_ai_mind_signals_to_streams_both": [
+    {
+      "id": "SIG_2026_SCIENCE_CHENG_SYCOPHANCY",
+      "add_ai_behavior": [
+        "AB01"
+      ]
+    },
+    {
+      "id": "SIG_2026_STANFORD_DELUSIONAL_SPIRALS_PAPER",
+      "add_ai_behavior": [
+        "AB01",
+        "AB05"
+      ]
+    },
+    {
+      "id": "SIG_2025_OPENAI_GPT4O_SYCOPHANCY_ROLLBACK",
+      "add_ai_behavior": [
+        "AB01"
+      ]
+    },
+    {
+      "id": "SIG_2025_OPENAI_MENTAL_HEALTH_DISCLOSURE",
+      "add_ai_behavior": [
+        "AB01"
+      ]
+    }
+  ],
+  "guardrails": [
+    "Tay — канонический NEGATIVE EXAMPLE: показывает, чем psAIcho/AI-Mind НЕ являются (порча модели ≠ влияние на людей), и иллюстрирует ось 'mirror baseline'.",
+    "'Поток про AI' ≠ психика/сознание AI. AB01–AB06 — это ДИСПОЗИЦИИ и ПОВЕДЕНИЕ (как генерализуется finetuning, как кодируются персоны, склонность к обману), НЕ внутренние состояния.",
+    "AB07_model_welfare — единственная AI-внутренняя корзинка, и она сформулирована как ОТКРЫТЫЙ ВОПРОС с precautionary-рамкой, а не как утверждение о сознании.",
+    "Антропоморфный дрейф: psAIcho не должен сам скатываться в техно-мистицизм (PH14), который AI-Mind документирует как человеческий риск. Никаких 'тень', 'Нарцисс', 'психика' в fact-claims.",
+    "Петля-сигналы кодируются в AI-Mind по ЧЕЛОВЕЧЕСКОМУ эффекту (PH), самопрезентация модели идёт в ai_behavior/note, не подменяет subject.",
+    "Нельзя 'апгрейдить' уровень доказательности через нарратив: каждый upgrade — через первоисточник с DOI. (Прецедент: фантомный 'Lancet Psychiatry' = на деле PsyArXiv Morrin / Nature Mental Health Dohnány.)"
+  ],
+  "counts_venn": {
+    "_note": "distinct counts after psAIcho v0.1 merge into aimind_signals.jsonl on 2026-05-31",
+    "human_only": 56,
+    "ai_only": 6,
+    "both": 6,
+    "total_distinct": 68,
+    "human_stream": 62,
+    "ai_stream": 12
+  },
+  "public_artifacts": {
+    "atlas": "atlas.json",
+    "ai_mind_methodology": "aimind_methodology_pack.json",
+    "psaicho_methodology": "psaicho_methodology.json",
+    "spine": "aimind_signals.jsonl",
+    "factcheck": "aimind_factcheck.json"
+  }
+}

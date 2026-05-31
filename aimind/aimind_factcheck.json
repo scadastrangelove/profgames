@@ -54,6 +54,11 @@
         "id": "v0_9_supplemental_additions",
         "name": "Supplemental v0.9 additions — Human Line / GUARD / Nelson / Riley / China PH02 cases",
         "approach": "candidate JSONL audit with duplicate merge, source caveats and ethical redaction"
+      },
+      {
+        "id": "psaicho_atlas_bridge",
+        "name": "psAIcho / Atlas bridge — model-side behavior lens",
+        "approach": "machine-readable atlas + primary-source check for model-side research signals; no new human-harm claims added in this pass"
       }
     ],
     "evidence_levels": {
@@ -180,10 +185,14 @@
       "not_verified": 0,
       "not_found": 0,
       "disputed": 2,
-      "filter_survivor_meta_analyses": "2 из 6 мета-анализов 2023-26 проходят все 11 пользовательских фильтров: Li 2025 youth depression subclinical subgroup; Wang 2025 Chinese students loneliness."
+      "filter_survivor_meta_analyses": "2 из 6 мета-анализов 2023-26 проходят все 11 пользовательских фильтров: Li 2025 youth depression subclinical subgroup; Wang 2025 Chinese students loneliness.",
+      "total_signals": 68,
+      "psaicho_ai_behavior_signals": 12,
+      "human_ai_overlap_signals": 6
     },
     "approximate_pass_rate": "100% (small starter pack, expect drop as corpus grows)",
     "key_findings": [
+      "psAIcho v0.1 integrated as a mirrored AI-side lens: 8 model-side/loop signals added, 4 existing AI-Mind signals retagged with ai_behavior[], Atlas bridge published; claim-level AI-Mind factcheck remains 56 claims.",
       "Raine v. OpenAI: filing date, ChatGPT message counts and Senate testimony all verifiable from primary documents; OpenAI's counter-response (25.11.2025) is itself a primary document and must be cited alongside the family's claim",
       "OpenAI sycophancy rollback (28-29 April 2025): primary corporate post is unambiguous; downstream journalism quotes selectively — recommend citing the OpenAI post directly",
       "MIT r/MyBoyfriendIsAI preprint (Sept 2025) numbers (9.5% / 4.6% / 4.2% / 1.7%) come from preprint not yet peer-reviewed — flag as B with single_anecdote=false but methodological caveat about sub-reddit representativeness",
