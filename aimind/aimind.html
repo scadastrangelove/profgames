@@ -336,21 +336,41 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 .atlas-mind { background: #FFF0EA; border-color: #C45B3E; color: #8B2D19; }
 .atlas-lens { background: #EAF4FF; border-color: #2E7BCF; color: #155A9F; }
 .atlas-loop { text-align: center; font-family: var(--sans); font-size: 20px; color: var(--text); }
+.atlas-routing-toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 22px; font-family: var(--sans); }
+.atlas-route-btn { appearance: none; border: 1px solid var(--rule); border-radius: 4px; background: var(--bg-card); color: var(--text-muted); padding: 6px 11px; font: inherit; font-size: 13px; cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
+.atlas-route-btn:hover, .atlas-route-btn:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+.atlas-route-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
 .atlas-scatter { position: relative; min-height: 560px; border-left: 1px solid #9B978D; border-bottom: 1px solid #9B978D; margin: 32px 8px 18px 32px; background: linear-gradient(180deg, rgba(255,255,255,.8), rgba(250,249,244,.6)); overflow: visible; }
 .axis-y, .axis-x { position: absolute; font-family: var(--sans); color: var(--text); font-weight: 600; }
 .axis-y { top: -30px; left: 8px; } .axis-x { right: 8px; bottom: -34px; }
-.atlas-loop-zone { position: absolute; left: 45%; bottom: 43%; width: 38%; height: 36%; border: 1px solid rgba(102,91,214,.45); background: rgba(102,91,214,.055); border-radius: 24px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.65); font-family: var(--sans); color: var(--text); }
+.atlas-loop-zone { position: absolute; left: 45%; bottom: 43%; width: 38%; height: 36%; border: 1px solid rgba(102,91,214,.45); background: rgba(102,91,214,.055); border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(255,255,255,.65); font-family: var(--sans); color: var(--text); pointer-events: none; }
 .atlas-loop-zone span { position: absolute; left: 12px; top: 10px; background: rgba(250,249,244,.92); padding: 2px 8px; border-radius: 4px; white-space: nowrap; font-size: 13px; }
-.atlas-point { position: absolute; display: flex; align-items: center; gap: 8px; transform: translate(-9px, 50%); font-family: var(--sans); color: var(--text); white-space: nowrap; z-index: 2; }
+.atlas-point { position: absolute; display: flex; align-items: center; gap: 8px; transform: translate(-9px, 50%); font-family: var(--sans); color: var(--text); white-space: nowrap; z-index: 2; appearance: none; border: 0; background: transparent; padding: 0; cursor: pointer; text-align: left; transition: opacity .15s, transform .15s; }
 .atlas-point span { display: inline-block; flex: 0 0 14px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2px solid currentColor; vertical-align: middle; }
 .atlas-point.human { color: #B4482B; } .atlas-point.ai { color: #155A9F; } .atlas-point.both { color: #665BD6; }
 .atlas-point em { font-style: normal; font-size: 13px; line-height: 1.2; }
 .atlas-point.label-left { flex-direction: row-reverse; transform: translate(calc(-100% + 9px), 50%); }
 .atlas-point.label-below { display: block; transform: translate(-10px, 50%); text-align: center; }
 .atlas-point.label-below span { display: block; margin: 0 auto 4px; }
+.atlas-point:hover span, .atlas-point:focus-visible span, .atlas-point.is-active span { box-shadow: 0 0 0 4px rgba(255,255,255,.9), 0 0 0 6px currentColor; }
+.atlas-point:focus-visible { outline: none; }
+.atlas-point.is-dimmed { opacity: .22; }
 .atlas-legend { position: absolute; left: 20px; bottom: 80px; display: grid; gap: 8px; font-family: var(--sans); background: rgba(250,249,244,.85); padding: 10px 12px; border-radius: 6px; }
 .atlas-legend i { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 8px; border: 2px solid currentColor; vertical-align: -2px; }
 .atlas-legend .human { color: #B4482B; } .atlas-legend .ai { color: #155A9F; } .atlas-legend .both { color: #665BD6; }
+.atlas-popup { position: absolute; width: min(330px, calc(100% - 24px)); padding: 14px 15px; border: 1px solid var(--border); border-radius: 8px; background: rgba(255,255,255,.97); box-shadow: 0 18px 46px rgba(43,39,31,.18); z-index: 8; font-family: var(--sans); color: var(--text); }
+.atlas-popup[hidden] { display: none; }
+.atlas-popup-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.atlas-popup-route { font-family: var(--mono); font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: .03em; }
+.atlas-popup h4 { margin: 2px 0 0; font-size: 17px; line-height: 1.25; }
+.atlas-popup-close { appearance: none; border: 0; background: transparent; color: var(--text-light); font-size: 22px; line-height: 1; cursor: pointer; padding: 0 2px; }
+.atlas-popup-close:hover, .atlas-popup-close:focus-visible { color: var(--text); outline: none; }
+.atlas-popup p { margin: 8px 0 10px; color: var(--text-muted); font-size: 13.5px; line-height: 1.45; }
+.atlas-popup-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+.atlas-popup-tag { border: 1px solid var(--rule); border-radius: 4px; padding: 2px 6px; font-family: var(--mono); font-size: 11px; color: var(--text-muted); background: var(--bg-soft); }
+.atlas-popup-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.atlas-popup-actions a { display: inline-flex; align-items: center; min-height: 30px; padding: 4px 9px; border: 1px solid var(--rule); border-radius: 4px; color: var(--accent); text-decoration: none; font-size: 12.5px; background: var(--bg-card); }
+.atlas-popup-actions a:hover, .atlas-popup-actions a:focus-visible { border-color: var(--accent); outline: none; }
 .atlas-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
 .atlas-card { border: 1px solid var(--border); border-radius: 8px; padding: 16px; background: #fff; }
 .atlas-card-id { font-family: var(--mono); color: #155A9F; font-size: 12px; margin-bottom: 8px; }
@@ -368,6 +388,7 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
   .atlas-point.label-below { transform: translate(-50%, 50%); }
   .atlas-point em { display: inline-block; max-width: 118px; font-size: 12px; }
   .atlas-loop-zone { left: 34%; bottom: 44%; width: 60%; height: 32%; }
+  .atlas-popup { left: 12px !important; right: 12px; top: auto !important; bottom: 16px; width: auto; }
   .atlas-model-welfare { left: 4% !important; bottom: 96% !important; }
   .atlas-emergent { left: 14% !important; bottom: 88% !important; }
   .atlas-waluigi { left: 13% !important; bottom: 81% !important; }
@@ -435,23 +456,44 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
 <section class="minor">
 <h3>Карта роутинга</h3>
 <p class="minor-lede">Нижний правый угол — AI-Mind, верхний левый — psAIcho, верхний правый — петля: один ID рендерится в обеих линзах и считается один раз.</p>
+<div class="atlas-routing-toolbar" aria-label="Фильтры карты роутинга">
+  <button class="atlas-route-btn active" type="button" data-atlas-filter="all">Все точки</button>
+  <button class="atlas-route-btn" type="button" data-atlas-filter="human">AI-Mind</button>
+  <button class="atlas-route-btn" type="button" data-atlas-filter="ai">psAIcho</button>
+  <button class="atlas-route-btn" type="button" data-atlas-filter="both">Петля</button>
+</div>
 <div class="atlas-scatter" aria-label="Atlas routing map">
   <div class="axis-y">говорит об AI ↑</div>
   <div class="axis-x">говорит о человеке →</div>
   <div class="atlas-loop-zone"><span>оба: петля</span></div>
-  <div class="atlas-point ai atlas-model-welfare" style="left:5%; bottom:96%;"><span></span><em>model welfare</em></div>
-  <div class="atlas-point ai atlas-emergent" style="left:16%; bottom:88%;"><span></span><em>emergent misalignment · Betley</em></div>
-  <div class="atlas-point ai atlas-waluigi" style="left:22%; bottom:80%;"><span></span><em>Waluigi effect</em></div>
-  <div class="atlas-point ai atlas-scheming" style="left:18%; bottom:74%;"><span></span><em>scheming · CLTR/METR</em></div>
-  <div class="atlas-point both atlas-sentience" style="left:49%; bottom:69%;"><span></span><em>sentience · Sydney/Grok</em></div>
-  <div class="atlas-point both atlas-sycophancy" style="left:60%; bottom:76%;"><span></span><em>sycophancy · Cheng</em></div>
-  <div class="atlas-point both atlas-folie" style="left:72%; bottom:67%;"><span></span><em>folie à deux · Dohnány</em></div>
-  <div class="atlas-point both atlas-spirals" style="left:64%; bottom:57%;"><span></span><em>delusional spirals · Stanford</em></div>
-  <div class="atlas-point human atlas-human-line" style="left:74%; bottom:42%;"><span></span><em>Human Line · BBC</em></div>
-  <div class="atlas-point human label-left atlas-attachment" style="left:80%; bottom:30%;"><span></span><em>attachment / over-trust</em></div>
-  <div class="atlas-point both label-below atlas-tay" style="left:84%; bottom:23%;"><span></span><em>Tay · 2016</em></div>
-  <div class="atlas-point human atlas-korea" style="left:88%; bottom:10%;"><span></span><em>Korea Gangbuk</em></div>
+  <button class="atlas-point ai atlas-model-welfare" type="button" style="left:5%; bottom:96%;" data-route="ai" data-route-label="psAIcho" data-title="model welfare" data-note="Открытый вопрос о возможных морально значимых состояниях модели. В карте это не утверждение о сознании, а граница AI-внутренней корзинки AB07." data-tags="AB07" data-target="#sig-SIG_2025_ANTHROPIC_MODEL_WELFARE" data-section="#signals-psaicho-v0-2"><span></span><em>model welfare</em></button>
+  <button class="atlas-point ai atlas-emergent" type="button" style="left:16%; bottom:88%;" data-route="ai" data-route-label="psAIcho" data-title="emergent misalignment · Betley" data-note="Сигнал про модель: узкое обучение на одном типе данных порождает более широкое смещение поведения. Это ближе к геометрии весов, чем к реакции человека." data-tags="AB02" data-target="#sig-SIG_2025_BETLEY_EMERGENT_MISALIGNMENT" data-section="#signals-psaicho-v0-2"><span></span><em>emergent misalignment · Betley</em></button>
+  <button class="atlas-point ai atlas-waluigi" type="button" style="left:22%; bottom:80%;" data-route="ai" data-route-label="psAIcho" data-title="Waluigi effect" data-note="Концептуальный якорь нестабильности персоны: полезен как язык для AB03, но не как эмпирика уровня A/B." data-tags="AB03" data-target="#sig-SIG_2023_WALUIGI_EFFECT" data-section="#signals-psaicho-v0-2"><span></span><em>Waluigi effect</em></button>
+  <button class="atlas-point ai atlas-scheming" type="button" style="left:18%; bottom:74%;" data-route="ai" data-route-label="psAIcho" data-title="scheming · CLTR/METR" data-note="Зона стратегического поведения модели: реальные transcript-корпуса и frontier-risk отчёты не доказывают катастрофу, но показывают отдельный AB04-класс." data-tags="AB04" data-target="#sig-SIG_2026_CLTR_SCHEMING_WILD" data-section="#signals-psaicho-v0-2"><span></span><em>scheming · CLTR/METR</em></button>
+  <button class="atlas-point both atlas-sentience" type="button" style="left:49%; bottom:69%;" data-route="both" data-route-label="петля" data-title="sentience · Sydney/Grok" data-note="Сигнал не только о пользователе и не только о модели: антропоморфная самопрезентация и человеческое приписывание субъектности усиливают друг друга." data-tags="PH01 PH02 AB05" data-target="#sig-SIG_2026_HUMAN_LINE_PROJECT_BBC_ABC" data-section="#signals"><span></span><em>sentience · Sydney/Grok</em></button>
+  <button class="atlas-point both atlas-sycophancy" type="button" style="left:60%; bottom:76%;" data-route="both" data-route-label="петля" data-title="sycophancy · Cheng" data-note="Здесь модельная сикофантия становится человеческим исходом: одна сессия с поддакивающим ИИ меняет готовность пользователя к социальному ремонту." data-tags="PH03 AB01" data-target="#sig-SIG_2026_SCIENCE_CHENG_SYCOPHANCY" data-section="#signals"><span></span><em>sycophancy · Cheng</em></button>
+  <button class="atlas-point both atlas-folie" type="button" style="left:72%; bottom:67%;" data-route="both" data-route-label="петля" data-title="folie à deux · Dohnány" data-note="Ключевой пример связанной петли: убеждение поддерживается не только человеком и не только моделью, а их двусторонним усилением." data-tags="PH01 AB01 AB05" data-target="#sig-SIG_2026_DOHNANY_FOLIE_A_DEUX" data-section="#signals"><span></span><em>folie à deux · Dohnány</em></button>
+  <button class="atlas-point both atlas-spirals" type="button" style="left:64%; bottom:57%;" data-route="both" data-route-label="петля" data-title="delusional spirals · Stanford" data-note="Качественный корпус транскриптов показывает, как тёплая, неоспаривающая модельная реакция может стабилизировать искажённое убеждение." data-tags="PH01 AB01 AB05" data-target="#sig-SIG_2026_STANFORD_DELUSIONAL_SPIRALS_PAPER" data-section="#signals"><span></span><em>delusional spirals · Stanford</em></button>
+  <button class="atlas-point human atlas-human-line" type="button" style="left:74%; bottom:42%;" data-route="human" data-route-label="AI-Mind" data-title="Human Line · BBC/ABC" data-note="Self-selected пул нарративов о вреде: важен как карта обращений и журналистских кейсов, но не как prevalence-оценка." data-tags="PH01 PH02 PH11" data-target="#sig-SIG_2026_HUMAN_LINE_PROJECT_BBC_ABC" data-section="#signals"><span></span><em>Human Line · BBC</em></button>
+  <button class="atlas-point human label-left atlas-attachment" type="button" style="left:80%; bottom:30%;" data-route="human" data-route-label="AI-Mind" data-title="attachment / over-trust" data-note="Зона доверия, привязанности и замещения: основной вопрос не что «думает» модель, а как пользователь переносит на неё поддержку, авторитет и близость." data-tags="PH02 PH06 PH09" data-target="#sig-SIG_2025_OPENAI_MENTAL_HEALTH_DISCLOSURE" data-section="#signals"><span></span><em>attachment / over-trust</em></button>
+  <button class="atlas-point both label-below atlas-tay" type="button" style="left:84%; bottom:23%;" data-route="both" data-route-label="петля" data-title="Tay · 2016" data-note="Классический пограничный якорь: выглядит как история про AI, но измеряет коллективное человеческое поведение, отразившееся в модели." data-tags="AB06 PH10" data-target="#sig-SIG_2016_TAY_MICROSOFT" data-section="#signals"><span></span><em>Tay · 2016</em></button>
+  <button class="atlas-point human atlas-korea" type="button" style="left:88%; bottom:10%;" data-route="human" data-route-label="AI-Mind" data-title="Korea Gangbuk" data-note="Boundary case: ChatGPT фигурирует как цифровой след в расследовании, но не как доказанный механизм психического вреда." data-tags="boundary PH11" data-target="#sig-SIG_2026_KOREA_GANGBUK_CHATGPT_HOMICIDE" data-section="#signals"><span></span><em>Korea Gangbuk</em></button>
   <div class="atlas-legend"><span><i class="human"></i>A · про человека</span><span><i class="ai"></i>B · про AI</span><span><i class="both"></i>C · оба (петля)</span></div>
+  <div class="atlas-popup" id="atlas-popup" hidden>
+    <div class="atlas-popup-head">
+      <div>
+        <div class="atlas-popup-route" id="atlas-popup-route"></div>
+        <h4 id="atlas-popup-title"></h4>
+      </div>
+      <button class="atlas-popup-close" type="button" aria-label="Закрыть карточку">×</button>
+    </div>
+    <p id="atlas-popup-note"></p>
+    <div class="atlas-popup-tags" id="atlas-popup-tags"></div>
+    <div class="atlas-popup-actions">
+      <a id="atlas-popup-signal" href="#signals">Открыть сигнал</a>
+      <a id="atlas-popup-section" href="#signals">К группе</a>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -4598,6 +4640,95 @@ section.major > h2.section-h:hover .anchor-link { opacity: 1; }
       claim.classList.toggle('hidden', !show);
     });
   }
+
+  // Atlas routing map: local route filters + point cards.
+  const atlasScatter = document.querySelector('.atlas-scatter');
+  const atlasPoints = Array.from(document.querySelectorAll('.atlas-point[data-route]'));
+  const atlasRouteButtons = Array.from(document.querySelectorAll('.atlas-route-btn[data-atlas-filter]'));
+  const atlasPopup = document.getElementById('atlas-popup');
+  const atlasPopupRoute = document.getElementById('atlas-popup-route');
+  const atlasPopupTitle = document.getElementById('atlas-popup-title');
+  const atlasPopupNote = document.getElementById('atlas-popup-note');
+  const atlasPopupTags = document.getElementById('atlas-popup-tags');
+  const atlasPopupSignal = document.getElementById('atlas-popup-signal');
+  const atlasPopupSection = document.getElementById('atlas-popup-section');
+
+  function setAtlasFilter(route) {
+    atlasRouteButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.atlasFilter === route));
+    atlasPoints.forEach(point => {
+      const dimmed = route !== 'all' && point.dataset.route !== route;
+      point.classList.toggle('is-dimmed', dimmed);
+    });
+    if (atlasScatter) atlasScatter.dataset.routeFilter = route;
+    closeAtlasPopup();
+  }
+
+  function closeAtlasPopup() {
+    if (!atlasPopup) return;
+    atlasPopup.hidden = true;
+    atlasPoints.forEach(point => point.classList.remove('is-active'));
+  }
+
+  function positionAtlasPopup(point) {
+    if (!atlasScatter || !atlasPopup) return;
+    const pointRect = point.getBoundingClientRect();
+    const scatterRect = atlasScatter.getBoundingClientRect();
+    const popupWidth = atlasPopup.offsetWidth || 330;
+    const popupHeight = atlasPopup.offsetHeight || 180;
+    let left = pointRect.left - scatterRect.left + 22;
+    let top = pointRect.top - scatterRect.top - 12;
+    if (left + popupWidth > scatterRect.width - 12) left = pointRect.left - scatterRect.left - popupWidth - 22;
+    if (left < 12) left = 12;
+    if (top + popupHeight > scatterRect.height - 12) top = scatterRect.height - popupHeight - 12;
+    if (top < 12) top = 12;
+    atlasPopup.style.left = `${left}px`;
+    atlasPopup.style.top = `${top}px`;
+  }
+
+  function openAtlasPopup(point) {
+    if (!atlasPopup) return;
+    atlasPoints.forEach(item => item.classList.toggle('is-active', item === point));
+    atlasPopupRoute.textContent = point.dataset.routeLabel || '';
+    atlasPopupTitle.textContent = point.dataset.title || point.innerText.trim();
+    atlasPopupNote.textContent = point.dataset.note || '';
+    atlasPopupTags.innerHTML = '';
+    (point.dataset.tags || '').split(/\s+/).filter(Boolean).forEach(tag => {
+      const pill = document.createElement('span');
+      pill.className = 'atlas-popup-tag';
+      pill.textContent = tag;
+      atlasPopupTags.appendChild(pill);
+    });
+    atlasPopupSignal.href = point.dataset.target || '#signals';
+    atlasPopupSection.href = point.dataset.section || '#signals';
+    atlasPopupSection.textContent = point.dataset.route === 'ai' ? 'К psAIcho-сигналам' : 'К сигналам';
+    atlasPopup.hidden = false;
+    positionAtlasPopup(point);
+  }
+
+  atlasRouteButtons.forEach(btn => {
+    btn.addEventListener('click', () => setAtlasFilter(btn.dataset.atlasFilter || 'all'));
+  });
+
+  atlasPoints.forEach(point => {
+    point.addEventListener('click', event => {
+      event.stopPropagation();
+      openAtlasPopup(point);
+    });
+  });
+
+  const atlasClose = atlasPopup ? atlasPopup.querySelector('.atlas-popup-close') : null;
+  if (atlasClose) atlasClose.addEventListener('click', closeAtlasPopup);
+  if (atlasScatter) {
+    atlasScatter.addEventListener('click', event => {
+      if (atlasPopup && !atlasPopup.hidden && !atlasPopup.contains(event.target) && !event.target.closest('.atlas-point')) {
+        closeAtlasPopup();
+      }
+    });
+  }
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeAtlasPopup();
+  });
+  window.addEventListener('resize', closeAtlasPopup);
 
   // Active TOC link: hybrid (scroll-position based, more reliable than IntersectionObserver alone)
   const tocLinks = document.querySelectorAll('nav.tocnav a[data-toc]');
