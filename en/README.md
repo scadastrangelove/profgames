@@ -8,7 +8,7 @@ The canonical project is still the Russian version in the repository root. The f
 
 | Artifact | Description |
 | --- | --- |
-| [`aimind.html`](aimind.html) | English reader layer for AI-Mind / psAIcho: 85 signals, PH/HB/AB taxonomy, Atlas routing map, boundary patterns and links to canonical machine-readable artifacts. |
+| [`aimind.html`](aimind.html) | Full English render of AI-Mind / psAIcho: 85 signals, 73 claims, PH/HB/AB taxonomy, Atlas routing map, research gaps and links to canonical machine-readable artifacts. |
 | [`a-events.html`](a-events.html) | English-facing A1 event explorer: 177 signals from 2020-2026, filters by year, region, evidence level and framework dimension. |
 | [`factcheck.html`](factcheck.html) | English-facing fact-check audit view: 65 claims, 20 evidence gaps, filters by verification status. |
 | [`factcheck.json`](factcheck.json) | Machine-readable English audit layer. Original Russian canonical wording is preserved in `original_ru`. |
@@ -31,7 +31,7 @@ This makes the pack usable for English review without losing the canonical wordi
 ## Links
 
 - Main site: <https://scadastrangelove.github.io/profgames/>
-- English AI-Mind reader: [`aimind.html`](aimind.html)
+- English AI-Mind full edition: [`aimind.html`](aimind.html)
 - English A1 event explorer: [`a-events.html`](a-events.html)
 - Canonical AI-Mind dataset: [`../aimind/aimind_signals.jsonl`](../aimind/aimind_signals.jsonl)
 - Canonical fact-check pack: [`../factcheck.json`](../factcheck.json)
