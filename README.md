@@ -6,7 +6,7 @@
 
 **Сергей Гордейчик** · [teletype](https://teletype.in/@sergey_gordey) · [telegram](https://t.me/aiakyn) · [github](https://github.com/scadastrangelove/profgames) · тег **#profgames**
 
-**English starter layer:** [`en/`](https://scadastrangelove.github.io/profgames/en/) — A1 event explorer + fact-check audit layer + 30-slide presentation.
+**English starter layer:** [`en/`](https://scadastrangelove.github.io/profgames/en/) — AI-Mind reader layer + A1 event explorer + fact-check audit layer + 30-slide presentation.
 
 ---
 
@@ -142,7 +142,7 @@ profgames/
 ├── profgames_ai_signals.jsonl          # A1 — машиночитаемый событийный массив
 ├── factcheck.html                      # Z — фактологическая основа (для людей)
 ├── factcheck.json                      # Z — фактологическая основа (для агентов)
-├── en/                                 # английский слой: A1 explorer, factcheck, презентация
+├── en/                                 # английский слой: AI-Mind reader, A1 explorer, factcheck, презентация
 ├── aimind/                             # Y — параллельный психологический срез
 │   ├── aimind.html                     #   single-page рендер каталога
 │   ├── atlas.json                      #   мета-слой AI-Mind ↔ psAIcho

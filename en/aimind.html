@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Mind / psAIcho - English Reader Layer</title>
+<style>
+:root {
+  --bg:#fbfaf7; --card:#fff; --soft:#f3f0e8; --text:#1a1713; --muted:#665d52; --light:#8b8378;
+  --rule:rgba(40,24,10,.14); --rule-soft:rgba(40,24,10,.08); --accent:#8b5a24;
+  --human:#b4482b; --ai:#155a9f; --both:#665bd6; --protect:#2e7d5b;
+  --serif:Charter,Iowan Old Style,Georgia,serif; --sans:Inter,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+  --mono:IBM Plex Mono,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.58 var(--serif)}
+a{color:var(--accent)}
+.wrap{max-width:1120px;margin:auto;padding:46px 28px 84px}
+.eyebrow{font:12px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--light)}
+h1{font-size:44px;line-height:1.08;margin:14px 0 10px;font-weight:520;letter-spacing:-.01em}
+h2{font-size:27px;line-height:1.18;margin:0 0 10px;font-weight:520}
+h3{font-size:20px;line-height:1.22;margin:0 0 8px;font-weight:560}
+.subtitle{font-size:19px;color:var(--muted);max-width:900px;margin:0}
+.meta{font:13px var(--sans);color:var(--muted);display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid var(--rule)}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:30px 0}
+.stat{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:15px;text-align:center}
+.num{font-size:31px;line-height:1;font-weight:600;color:var(--accent)}
+.label{font:11px var(--sans);text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:6px}
+.panel,.note-box{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:20px 23px;margin:20px 0}
+.note-box{background:var(--soft)}
+.note-box ul{margin:10px 0 0;padding-left:20px}
+.note-box li{margin:7px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:17px 18px}
+.card-id{font:11px var(--mono);letter-spacing:.05em;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
+.card p{margin:8px 0 0;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{font:11px var(--sans);padding:3px 8px;border-radius:4px;background:var(--soft);color:var(--muted)}
+.chip.human{color:var(--human)} .chip.ai{color:var(--ai)} .chip.both{color:var(--both)} .chip.protect{color:var(--protect)}
+.architecture{display:grid;grid-template-rows:auto auto auto;gap:0;margin-top:16px}
+.arch-top,.arch-bottom{border:1px solid var(--rule);border-radius:8px;padding:18px;text-align:center;background:var(--soft);font-family:var(--sans)}
+.arch-row{display:grid;grid-template-columns:1fr 110px 1fr;align-items:center;margin:20px 0}
+.arch-box{border:1px solid var(--rule);border-radius:8px;padding:20px;text-align:center;background:var(--card);font-family:var(--sans)}
+.arch-box.human{border-color:rgba(180,72,43,.65);background:#fff3ee}.arch-box.ai{border-color:rgba(21,90,159,.55);background:#eef6ff}
+.arch-loop{text-align:center;font:22px var(--sans);color:var(--muted)}
+.arch-box span,.arch-top span,.arch-bottom span{display:block;color:var(--muted);font-size:14px;margin-top:5px}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.filter-btn{font:13px var(--sans);border:1px solid var(--rule);background:var(--card);border-radius:4px;padding:7px 11px;cursor:pointer;color:var(--muted)}
+.filter-btn.active{background:#3b2a1d;color:white;border-color:#3b2a1d}
+.map{position:relative;min-height:560px;background:linear-gradient(90deg,transparent 0,transparent 49%,rgba(102,91,214,.05) 49%,rgba(102,91,214,.05) 77%,transparent 77%);border-left:1px solid var(--muted);border-bottom:1px solid var(--muted);margin-top:16px;overflow:hidden}
+.axis-y,.axis-x{position:absolute;font:700 16px var(--sans);color:var(--text)}
+.axis-y{left:16px;top:10px}.axis-x{right:12px;bottom:10px}
+.loop-zone{position:absolute;left:46%;bottom:43%;width:38%;height:34%;border:1px solid rgba(102,91,214,.45);background:rgba(102,91,214,.04);border-radius:50%;transform:rotate(-4deg)}
+.loop-zone span{position:absolute;left:22px;top:18px;transform:rotate(4deg);font:14px var(--sans);color:var(--muted);background:rgba(251,250,247,.85);padding:3px 6px;border-radius:4px}
+.point{position:absolute;display:flex;align-items:center;gap:8px;transform:translate(-9px,50%);font:13px var(--sans);white-space:nowrap;transition:opacity .15s}
+.point i{display:block;width:14px;height:14px;border-radius:50%;background:white;border:2px solid currentColor}
+.point.human{color:var(--human)}.point.ai{color:var(--ai)}.point.both{color:var(--both)}.point.protect{color:var(--protect)}
+.point.left{flex-direction:row-reverse;transform:translate(calc(-100% + 9px),50%)}
+.point.dimmed{opacity:.18}
+.legend{position:absolute;left:20px;bottom:84px;display:grid;gap:7px;background:rgba(251,250,247,.88);border-radius:6px;padding:10px 12px;font:13px var(--sans)}
+.legend span{display:flex;align-items:center;gap:8px}.legend i{width:13px;height:13px;border-radius:50%;border:2px solid currentColor;background:white}.legend .human{color:var(--human)}.legend .ai{color:var(--ai)}.legend .both{color:var(--both)}.legend .protect{color:var(--protect)}
+.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:14px}
+.source-card{display:block;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:16px 18px;text-decoration:none;color:inherit}
+.source-card:hover{border-color:var(--accent)}.source-card strong{display:block;font:17px var(--sans);margin-bottom:5px}.source-card span{display:block;color:var(--muted)}
+footer{margin-top:56px;border-top:1px solid var(--rule);padding-top:18px;font:12px var(--sans);color:var(--muted);display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.arch-row{grid-template-columns:1fr;gap:12px}.arch-loop{font-size:18px}.map{min-width:840px}.map-wrap{overflow-x:auto}}
+@media(max-width:560px){.wrap{padding:28px 16px 64px}h1{font-size:34px}.stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div class="eyebrow"><a href="index.html">ProfGames in English</a> · <a href="../aimind/aimind.html">canonical RU AI-Mind</a> · psychological layer</div>
+    <h1>AI-Mind / psAIcho</h1>
+    <p class="subtitle">An English-facing reader layer over the AI-Mind dataset: documented patterns of psychological and cultural influence from AI assistants, plus psAIcho as a model-behavior lens and a human-baseline layer for pre-AI susceptibility mechanisms.</p>
+    <div class="meta">
+      <span>English reader layer: 0.1-en</span>
+      <span>Canonical update: 2026-05-31</span>
+      <span>Spine: 85 signals</span>
+      <span><a href="../aimind/aimind.html">full RU HTML</a></span>
+      <span><a href="../aimind/aimind_signals.jsonl">canonical JSONL</a></span>
+      <span><a href="https://github.com/scadastrangelove/profgames">GitHub</a></span>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="stat"><div class="num">85</div><div class="label">signals</div></div>
+    <div class="stat"><div class="num">73</div><div class="label">claims</div></div>
+    <div class="stat"><div class="num">15</div><div class="label">PH phenomena</div></div>
+    <div class="stat"><div class="num">8</div><div class="label">V factors</div></div>
+    <div class="stat"><div class="num">7</div><div class="label">AB patterns</div></div>
+    <div class="stat"><div class="num">6</div><div class="label">HB baselines</div></div>
+  </section>
+
+  <section class="note-box">
+    <h2>What this layer is for</h2>
+    <ul>
+      <li><strong>AI-Mind</strong> codes human-side outcomes: distorted belief, parasocial attachment, sycophancy amplification, AI-as-therapist, minors, self-harm cases, social displacement and protective use.</li>
+      <li><strong>psAIcho</strong> is the model-side lens: sycophancy, persona instability, scheming/deception, anthropomorphic self-presentation, toxic mirroring and model-welfare as an open question.</li>
+      <li><strong>HB01-HB06</strong> are not new diagnoses. They are pre-AI human mechanisms - CASA, anthropomorphism, parasociality, ELIZA effect, online disinhibition and the Proteus effect - that AI can amplify.</li>
+      <li>The page below is a compact English guide. The full rendered catalogue and audit trail remain in the canonical Russian HTML and machine-readable artifacts.</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>One spine, two lenses</h2>
+    <div class="architecture" aria-label="AI-Mind psAIcho architecture diagram">
+      <div class="arch-top"><strong>Atlas meta-layer</strong><span>routing map · shared A-D evidence scale · overlap registry · guardrails</span></div>
+      <div class="arch-row">
+        <div class="arch-box human"><strong>AI-Mind</strong><span>human + loop · PH01-PH15</span></div>
+        <div class="arch-loop"><strong>&lt;-&gt;</strong><span>loop</span></div>
+        <div class="arch-box ai"><strong>psAIcho</strong><span>model behavior · AB01-AB07</span></div>
+      </div>
+      <div class="arch-bottom"><strong>Shared spine · aimind_signals.jsonl</strong><span>global SIG-ID · streams[] · phenomena[] + ai_behavior[] + human_baseline[]</span></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Atlas routing map</h2>
+    <p class="subtitle">Lower right = human-side AI-Mind. Upper left = model-side psAIcho. Upper right = coupled loop: one signal can carry both PH and AB tags without being counted twice.</p>
+    <div class="toolbar" aria-label="Atlas filters">
+      <button class="filter-btn active" data-filter="all" type="button">All points</button>
+      <button class="filter-btn" data-filter="human" type="button">AI-Mind</button>
+      <button class="filter-btn" data-filter="ai" type="button">psAIcho</button>
+      <button class="filter-btn" data-filter="both" type="button">Loop</button>
+      <button class="filter-btn" data-filter="baseline" type="button">HB baseline</button>
+      <button class="filter-btn" data-filter="protective" type="button">Protective</button>
+      <button class="filter-btn" data-filter="boundary" type="button">Boundary</button>
+    </div>
+    <div class="map-wrap">
+      <div class="map">
+        <div class="axis-y">speaks about AI ↑</div>
+        <div class="axis-x">speaks about humans →</div>
+        <div class="loop-zone"><span>both: loop</span></div>
+        <div class="point ai" data-route="ai" data-layer="boundary" style="left:8%;bottom:89%"><i></i><span>model welfare</span></div>
+        <div class="point ai" data-route="ai" style="left:18%;bottom:82%"><i></i><span>emergent misalignment</span></div>
+        <div class="point ai" data-route="ai" style="left:25%;bottom:75%"><i></i><span>Waluigi effect</span></div>
+        <div class="point ai" data-route="ai" style="left:21%;bottom:69%"><i></i><span>scheming</span></div>
+        <div class="point both" data-route="both" style="left:49%;bottom:69%"><i></i><span>sentience attribution</span></div>
+        <div class="point both" data-route="both" style="left:60%;bottom:76%"><i></i><span>sycophancy</span></div>
+        <div class="point both" data-route="both" style="left:72%;bottom:67%"><i></i><span>folie a deux</span></div>
+        <div class="point both" data-route="both" style="left:64%;bottom:57%"><i></i><span>delusional spirals</span></div>
+        <div class="point both" data-route="both" data-layer="baseline neuroavatar" style="left:61%;bottom:46%"><i></i><span>griefbots</span></div>
+        <div class="point human" data-route="human" style="left:74%;bottom:42%"><i></i><span>Human Line</span></div>
+        <div class="point human left" data-route="human" style="left:80%;bottom:30%"><i></i><span>attachment / over-trust</span></div>
+        <div class="point human" data-route="human" data-layer="baseline" style="left:34%;bottom:31%"><i></i><span>CASA</span></div>
+        <div class="point human" data-route="human" data-layer="baseline" style="left:47%;bottom:23%"><i></i><span>ELIZA effect</span></div>
+        <div class="point human" data-route="human" data-layer="baseline" style="left:58%;bottom:25%"><i></i><span>parasocial</span></div>
+        <div class="point human" data-route="human" data-layer="baseline" style="left:44%;bottom:12%"><i></i><span>Proteus effect</span></div>
+        <div class="point protect" data-route="human" data-layer="protective" style="left:66%;bottom:14%"><i></i><span>Therabot / Wysa</span></div>
+        <div class="point both" data-route="both" data-layer="boundary" style="left:84%;bottom:23%"><i></i><span>Tay 2016</span></div>
+        <div class="point human left" data-route="human" data-layer="boundary" style="left:92%;bottom:17%"><i></i><span>folk detection</span></div>
+        <div class="point protect left" data-route="human" data-layer="boundary protective" style="left:81%;bottom:24%"><i></i><span>value refusal</span></div>
+        <div class="point human" data-route="human" data-layer="boundary" style="left:88%;bottom:13%"><i></i><span>Korea Gangbuk</span></div>
+        <div class="legend">
+          <span class="human"><i></i>Human axis</span>
+          <span class="ai"><i></i>AI axis</span>
+          <span class="both"><i></i>Loop</span>
+          <span class="protect"><i></i>Protective</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Boundary patterns: AI denial, value refusal and governance activism</h2>
+    <p class="subtitle">These are boundary patterns, not new clinical phenomena. They describe cultural reactions to AI uncertainty and should not be merged into a new PH16.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-id">BP01</div>
+        <h3>Folk AI detection / provenance panic</h3>
+        <p>When provenance infrastructure is missing, communities replace argument checking with surface cues: em dashes, the Russian letter yo, smooth style, too-even structure or suspicious punctuation.</p>
+        <p><strong>Guardrail:</strong> this is not proof that a specific text was written by AI. Rational source-checking is hygiene; the symptom starts when argument review becomes sign-counting.</p>
+        <div class="chips"><span class="chip human">HB02</span><span class="chip human">HB05</span><span class="chip">PH05</span><span class="chip">PH13</span></div>
+      </div>
+      <div class="card">
+        <div class="card-id">BP02</div>
+        <h3>Principled AI refusal / pro-human position</h3>
+        <p>A value-based refusal to use AI as a defense of human authorship, labor identity, artistic practice or dataset ethics. It is not folk detection; it is a claim about who should create.</p>
+        <p><strong>Guardrail:</strong> do not pathologize ethical refusal. Data consent, labor, copyright and environmental concerns can be legitimate positions.</p>
+        <div class="chips"><span class="chip human">HB02</span><span class="chip">PH13</span><span class="chip protect">PH15</span></div>
+      </div>
+      <div class="card">
+        <div class="card-id">BP03</div>
+        <h3>Anti-development activism / Stop AI</h3>
+        <p>Political action against advanced-AI development because of x-risk or governance risk: protests, hunger strikes and calls to pause the race toward more capable systems.</p>
+        <p><strong>Guardrail:</strong> this is a governance reference, not a PH/HB/AB signal. It belongs closer to policy and risk-governance analysis than to individual psychological impact.</p>
+        <div class="chips"><span class="chip ai">governance reference</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Evidence and claims</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-id">Evidence scale</div>
+        <h3>A/B/C/D, shared with ProfGames</h3>
+        <p>A = primary administrative, court, regulatory or peer-reviewed evidence. B = strong observational or major reporting. C = corporate narrative or practitioner literature. D = testimony, opinion or forecast.</p>
+      </div>
+      <div class="card">
+        <div class="card-id">What not to claim</div>
+        <h3>No prevalence shortcut</h3>
+        <p>Case pools, lawsuits and support-group reports are important signals, but they are not epidemiology. Use them as documented narratives unless a study gives a sampling frame.</p>
+      </div>
+      <div class="card">
+        <div class="card-id">psAIcho guardrail</div>
+        <h3>Model behavior is not model psyche</h3>
+        <p>AB01-AB06 describe functional behavior or dispositions. AB07 model welfare is an open question, not a claim that current models are conscious.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Machine-readable artifacts</h2>
+    <p class="subtitle">Field names are already English and IDs are stable. The English reader layer deliberately links to the canonical artifacts instead of forking the dataset.</p>
+    <div class="sources">
+      <a class="source-card" href="../aimind/aimind.html"><strong>Full AI-Mind HTML</strong><span>Canonical rendered catalogue in Russian.</span></a>
+      <a class="source-card" href="../aimind/atlas.json"><strong>atlas.json</strong><span>Routing map, boundary patterns, overlap registry and guardrails.</span></a>
+      <a class="source-card" href="../aimind/aimind_signals.jsonl"><strong>aimind_signals.jsonl</strong><span>85-signal shared spine with streams[], phenomena[], ai_behavior[] and human_baseline[].</span></a>
+      <a class="source-card" href="../aimind/aimind_factcheck.json"><strong>aimind_factcheck.json</strong><span>73 claims, gaps, audits and statistical meta-summary.</span></a>
+      <a class="source-card" href="../aimind/aimind_methodology_pack.json"><strong>methodology pack</strong><span>PH/V/E taxonomy, human baseline layer and boundary patterns.</span></a>
+      <a class="source-card" href="../aimind/psaicho_methodology.json"><strong>psAIcho methodology</strong><span>AB01-AB07 model-behavior lens.</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Sergey Gordeychik</span>
+    <span><a href="https://t.me/aiakyn">telegram</a></span>
+    <span><a href="https://teletype.in/@sergey_gordey">teletype</a></span>
+    <span><a href="https://github.com/scadastrangelove/profgames">github</a></span>
+    <span>#profgames</span>
+  </footer>
+</main>
+<script>
+const buttons = Array.from(document.querySelectorAll('.filter-btn'));
+const points = Array.from(document.querySelectorAll('.point[data-route]'));
+function setFilter(filter) {
+  buttons.forEach(button => button.classList.toggle('active', button.dataset.filter === filter));
+  points.forEach(point => {
+    const layers = (point.dataset.layer || '').split(/\s+/).filter(Boolean);
+    const route = point.dataset.route;
+    const routeMatch = filter === 'all' || route === filter;
+    const layerMatch = layers.includes(filter);
+    const dimmed = filter !== 'all' && !(routeMatch || layerMatch);
+    point.classList.toggle('dimmed', dimmed);
+  });
+}
+buttons.forEach(button => button.addEventListener('click', () => setFilter(button.dataset.filter || 'all')));
+</script>
+</body>
+</html>
