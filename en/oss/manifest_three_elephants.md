@@ -135,7 +135,7 @@ Between the one who creates value and the one who consumes it, a long feeding tr
 
 The margin of the collapsed middlemen does not return to the creator — though that's exactly what we're sold under the banner of "AI democratizes, now the author gets his due." He won't. A dozen small middlemen collapse not into zero, but into one — into the platform-entrance, the marketplace, the cloud, the control tower. And this single remaining middleman collects the combined rent of all the dead ones. The king is dead, long live the king — only now there's just one for the whole country. Or for the whole planet?
 
-**Now *that's* a twist.**
+**This is the reversal.**
 
 Music showed it literally, no embellishment. They killed the record store, the distributor, the disc kiosk — a whole chain of layers between musician and listener. The money from that didn't go to the musician. It went to Spotify and TikTok. The middleman didn't disappear — it changed, grew larger, and became the only one. The musician, who supposedly had the "parasite middlemen removed," earns enough off a million streams to mix a couple of tracks. All the freed-up margin settled at the point of entry.
 
