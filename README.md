@@ -145,6 +145,7 @@ profgames/
 ├── factcheck.json                      # Z — фактологическая основа (для агентов)
 ├── en/                                 # английский слой: AI-Mind full edition, A1 explorer, factcheck, презентация
 ├── oss/                                # OSS/JITI — боковая ветка с манифестом и событийным слоем
+│   ├── README.md                       #   краткая навигация по OSS/JITI-пакету
 │   ├── index.html                      #   публикационная HTML-версия «На трёх слонах»
 │   ├── manifest_tri_slona.md           #   markdown-исходник
 │   ├── ai_oss_events.html              #   интерактивный событийный слой
