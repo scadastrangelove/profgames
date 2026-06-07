@@ -3,7 +3,9 @@
 > OSS / JITI / рента посредников: боковая ветка цикла «Игры в профессию» про то, как AI меняет равновесие вокруг кода, open source, платформ и посредников.
 
 **Публикация:** [scadastrangelove.github.io/profgames/oss/](https://scadastrangelove.github.io/profgames/oss/)  
+**English version:** [scadastrangelove.github.io/profgames/en/oss/](https://scadastrangelove.github.io/profgames/en/oss/)  
 **Событийный слой:** [ai_oss_events.html](https://scadastrangelove.github.io/profgames/oss/ai_oss_events.html)  
+**English events:** [../en/oss/ai_oss_events.html](https://scadastrangelove.github.io/profgames/en/oss/ai_oss_events.html)  
 **Автор:** Сергей Гордейчик · [teletype](https://teletype.in/@sergey_gordey) · [telegram](https://t.me/aiakyn) · [github](https://github.com/scadastrangelove/profgames) · тег **#profgames**
 
 ## Что это
@@ -21,6 +23,7 @@
 | [`ai_oss_events.html`](https://scadastrangelove.github.io/profgames/oss/ai_oss_events.html) | Интерактивный каталог событий: timeline, карточки, фильтры, матрица и равновесия |
 | [`ai_oss_signals.jsonl`](ai_oss_signals.jsonl) | 110 сигналов, один JSON-объект на строку |
 | [`ai_oss_meta.json`](ai_oss_meta.json) | Методический слой, гипотезы, market baseline, сводки и changelog |
+| [`../en/oss/`](../en/oss/) | Полный английский пакет: статья, интерактивный каталог, JSONL и meta |
 
 ## Как читать датасет
 
@@ -50,4 +53,3 @@ relationships[] — откаты, уточнения, эскалации и spli
 ## Связь с profgames
 
 Это не основная статья A–D, а боковая ветка той же рамки: про сжатие посредников, перенос доверия в контроль точки входа и новую геометрию ренты. Главная страница цикла: [scadastrangelove.github.io/profgames](https://scadastrangelove.github.io/profgames/).
-

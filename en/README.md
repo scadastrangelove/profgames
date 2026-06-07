@@ -1,6 +1,6 @@
 # ProfGames — English Starter Layer
 
-This folder contains the first English-facing artifacts for the **ProfGames** cycle and the parallel **AI-Mind / psAIcho** psychological layer.
+This folder contains the first English-facing artifacts for the **ProfGames** cycle and the parallel **AI-Mind / psAIcho** psychological layer. The OSS/JITI side branch lives in [`oss/`](oss/).
 
 The canonical project is still the Russian version in the repository root. The files here are a publication and onboarding layer for English-speaking readers: they preserve stable ids, source URLs and evidence levels, while providing concise English summaries.
 
@@ -12,6 +12,7 @@ The canonical project is still the Russian version in the repository root. The f
 | [`a-events.html`](a-events.html) | English-facing A1 event explorer: 177 signals from 2020-2026, filters by year, region, evidence level and framework dimension. |
 | [`factcheck.html`](factcheck.html) | English-facing fact-check audit view: 65 claims, 20 evidence gaps, filters by verification status. |
 | [`factcheck.json`](factcheck.json) | Machine-readable English audit layer. Original Russian canonical wording is preserved in `original_ru`. |
+| [`oss/`](oss/) | Full English OSS/JITI package: article, 110-signal event layer, JSONL and meta. |
 | [`presentations/profgames-cycle-talk-en.pptx`](presentations/profgames-cycle-talk-en.pptx) | 30-slide English talk deck about the cycle, with emphasis on the Russian fork from article C. |
 | [`presentations/profgames-cycle-talk-en-contact-sheet.png`](presentations/profgames-cycle-talk-en-contact-sheet.png) | Contact sheet for quickly reviewing the deck. |
 
@@ -36,5 +37,6 @@ This makes the pack usable for English review without losing the canonical wordi
 - Canonical AI-Mind dataset: [`../aimind/aimind_signals.jsonl`](../aimind/aimind_signals.jsonl)
 - Canonical fact-check pack: [`../factcheck.json`](../factcheck.json)
 - Canonical A1 event dataset: [`../profgames_ai_signals.jsonl`](../profgames_ai_signals.jsonl)
+- English OSS/JITI package: [`oss/`](oss/)
 - Telegram: <https://t.me/aiakyn>
 - Teletype: <https://teletype.in/@sergey_gordey>
