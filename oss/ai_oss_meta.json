@@ -1,0 +1,699 @@
+{
+  "meta": {
+    "title": "AI vs Open Source — events layer",
+    "subtitle": "События как стресс-тест тезиса 'код перестал быть дефицитом, OSS принимает удар первым'",
+    "version": "0.10",
+    "author": "Сергей Гордейчик",
+    "date_range": "2022-2026",
+    "machine_readable": "ai_oss_signals.jsonl",
+    "linked_article": "Лицензия на агентство (https://aftershock.news/?q=node/1611663)",
+    "linked_manifesto": "Манифест созидателя",
+    "format_inspired_by": "scadastrangelove.github.io/profgames/",
+    "core_thesis": "AI снижает стоимость не только production, но и submission into prestige systems. OSS: PR/issues/security reports. Музыка: треки/streams/royalty claims. Литература: рассказы/книги/подделки. Академия: manuscripts/citations/reviews. Во всех доменах старый фильтр держался на скрытом экономическом предохранителе: 'человек не будет массово производить тысячи единиц, потому что это дорого'. AI ломает именно этот предохранитель. Дальше provenance уходит из свойства артефакта в социальный контракт под ответственность — потому что техническая детекция (H1a) и labeling (H9) обе не держат.",
+    "changelog": [
+      "v0.1 — 30 событий, базовая структура с 7 dimensions и 5 actors",
+      "v0.2 — +20 событий (мерж + Anthropic leak/Claw-Code/MS-Eclipse). D8 security_uplift, D9 platform_power. Раздел hypotheses_not_yet_evidenced.",
+      "v0.3 — +12 событий (Cloudflare Radar, AI-vendor ToS, музыкальные метрики). Гипотеза H7. Закрыты gaps Cloudflare/ToS/Music.",
+      "v0.4 — +4 события (arXiv arch-analysis, Bandcamp, KDP, Linux kernel). Исправлен Claw-Code. H1 расщеплена на H1a/H1b/H1c.",
+      "v0.5 — +13 событий (публишинг/академия: Clarkesworld, Amazon flood, HarperCollins, Authors Guild, Organic Literature, herbal books, academic disclosure gap, hidden prompts, Nature, news audit; RU/screen из доклада Смирновой ёPRSTCON: Author.Today, Harlequin MT, Netflix). Добавлено D10 provenance_labeling (10 измерений). Гипотезы H8_DISCLOSURE_THEATER и H9_DETECTION_ARMS_RACE. H7 расширена до 4 доменов. Частично закрыт GAP_RU_SPECIFIC.",
+      "v0.6 — +6 событий: CN-срез (DeepSeek distillation dispute, China 30% global usage, DeepSeek-VL pirated data) + counter-narrative D8 (Linux Foundation $12.5M, Google OSS-Fuzz, Big Sleep SQLite). H2 переведена с D на C с разворотом тезиса (CN-чемпионы глобальны, не региональны). D8 вырос 4→7. Частично закрыты GAP_CN_SPECIFIC и GAP_COUNTER_NARRATIVE.",
+      "v0.7 — +6 событий: CN (Huawei Pangu vs Qwen provenance dispute, CN code-models corpus ingestion) + counter-narrative (Google Patch Rewards 2013 как пре-AI предсказание, Anthropic Claude Code Security, Glasswing expansion, Google CodeMender). GAP_CN_SPECIFIC расщеплён на A/B/C. H2 разделена на CN (C+/B-) и RU (D+/C-) — не единый блок. D8 вырос 7→10.",
+      "v0.8 (правки честности) — аудит и исправление шкалы: source.type расширен до primary/secondary/commentary/claim (35 переклассификаций); A→B понижены события без primary (нетто ~17 после возврата тех, у кого primary добавлен — github DMCA registry, privacy.claude.com, security.googleblog, Anthropic news). Claw-Code расщеплён на 3 события (REWRITE_SPEED A/факт tempo, CLEANROOM_CLAIM C/disputed, LEGAL_UNCERTAINTY B/commentary). MS-Eclipse split переформулирован (Microsoft отступил от legal threats 1 июня после backlash, но account/bounty sanction спорный). D10-консистентность: NetBSD/Linux/Deezer дополучили D10. Hidden-prompts перевешены с D2 на D9/D3 (workflow_attack_surface). Введён опциональный тег dimension_subtype для перегруженных D2/D5 (оси остаются 10).",
+      "v0.9 — +16 событий в 5 блоках, каждый проверен поиском. Блок 1 technical-provenance benchmarks (AICD Bench Macro-F1 61.65, CodeMirage TPR@FPR=1%, provenance-tracking limits, behavioral fingerprint) — H1a_technical теперь в events, не только в meta. Блок 2 data-licensing (Reddit v Anthropic $130M deals, Wikimedia -8%/Enterprise, RSL standard, publisher deals) — усиливает H7. Блок 3 legal counterweight (Stockfish/ChessBase, SFC v Vizio, Google v Oracle) — баланс D4. Блок 4 RIAA/Suno/Udio (иск 2024, settlements 2025, indie class action) — музыкальный legal-баланс, ветка LICENSING_VS_ENFORCEMENT. Блок 5 registry governance (Trusted Publishing + Shai-Hulud обход provenance) — вторая сторона D3. Итого 108 событий.",
+      "v0.10: +SIG_2026_HACHETTE_SHY_GIRL_PULLED (B), +SIG_2023_WGA_AI_CONTRACT (A); пересчёт статистики 110 событий; правка music_as_precedent (two_transitions), +publishing_as_precedent."
+    ]
+  },
+  "scales": {
+    "evidence_level": {
+      "A": "Primary: проект, платформа, закон, court record, peer-reviewed публикация, официальные пресс-материалы компании",
+      "B": "Secondary: качественное медиа со ссылкой на primary, индустриальная аналитика, журналистские расследования с источниками",
+      "C": "Single-source: одиночный maintainer-signal, пост, social thread без независимого подтверждения",
+      "D": "Аналитическая гипотеза автора, не подкреплённая отдельным событием. См. hypotheses_not_yet_evidenced для явных гипотез D-уровня."
+    },
+    "confidence": {
+      "high": "Множественные независимые подтверждения, primary источники доступны",
+      "medium_high": "Один сильный источник плюс косвенные подтверждения",
+      "medium": "Один источник, не противоречащий контексту",
+      "low": "Слабые косвенные сигналы, требуется дополнительная верификация"
+    },
+    "source_type": {
+      "primary": "Court record, официальная policy проекта, company blog, GitHub discussion от платформы/проекта, arXiv/peer-reviewed paper, официальный dataset/report, official press от первого лица",
+      "secondary": "Качественная медиа-журналистика со ссылкой на primary (Reuters, AP, Guardian, TechCrunch, The Register, Wired, Verge и т.п.)",
+      "commentary": "Аналитические и юридические блоги, expert-разбор (IPKat, analyst notes, security-блоги-комментарии)",
+      "claim": "Соцсети, single maintainer, неверифицированное утверждение одной стороны"
+    },
+    "region": {
+      "US": "США",
+      "EU": "Европейский союз и Великобритания",
+      "CN": "Китай",
+      "RU": "Россия",
+      "global": "Транснациональный или несколько регионов"
+    },
+    "relationship_types": {
+      "откат": "Первоначальное действие/заявление отозвано или существенно пересмотрено",
+      "уточнение": "Действие осталось в силе, но контекст или интерпретация сузилась",
+      "эскалация": "Действие усилилось во времени — от частной жалобы к закрытию программы",
+      "split": "Один вопрос — разнонаправленные исходы в разных юрисдикциях/контекстах"
+    }
+  },
+  "actors": {
+    "A1": {
+      "name": "OSS maintainer / community",
+      "description": "Мейнтейнеры open source проектов, индивидуальные разработчики, community-foundations (PSF, GNOME, FFmpeg, Linux Foundation, Jazzband), self-hosted Git-сервисы (SourceHut), security researchers, музыкальные creators"
+    },
+    "A2": {
+      "name": "AI vendor",
+      "description": "Anthropic, OpenAI, Google, Microsoft, Meta, Alibaba — производители LLM/AI-agents. Их crawler-инфраструктура (GPTBot, ClaudeBot, Google-Extended, Meta-ExternalAgent) и user-platforms (Copilot, Claude Code, Cursor). Также генеративные музыкальные сервисы (Suno, Udio)"
+    },
+    "A3": {
+      "name": "Platform / commercial vendor",
+      "description": "Платформы-посредники: GitHub, GitLab, npm Inc., PyPI Foundation, Spotify, Deezer, Cloudflare, Vercel. Microsoft в роли владельца GitHub. Все играют двойную роль — host для контента + контролёр доступа"
+    },
+    "A4": {
+      "name": "Regulator / legal system",
+      "description": "Суды, законодатели, правовые системы. US Copyright Office, EU Commission, federal courts, USCO, CISAC (collective rights), DDEX (industry standards). IPKat и аналогичные legal commentary. RIAA как quasi-regulator в музыке"
+    },
+    "A5": {
+      "name": "Attacker / adversary",
+      "description": "Malicious actors, использующие AI для атак на OSS/контент. Slopsquatting-операторы, авторы malicious npm/PyPI пакетов, AI-bots с offensive capabilities. Royalty-farming AI-music uploaders (85% AI-генерации на Deezer — fraudulent). Также — AI-slop submitters, чьи 'добросовестные' отчёты функционально неотличимы от атаки"
+    }
+  },
+  "dimensions": {
+    "D1": {
+      "name": "infrastructure_pressure",
+      "description": "Перегрузка инфраструктуры OSS AI-scrapers и AI-генерированными контрибуциями. DDoS-уровни нагрузки, outage'и от bot traffic, capacity scaling crisis. Cloudflare Radar данные сюда же"
+    },
+    "D2": {
+      "name": "quality_collapse",
+      "description": "AI-slop в багтрекерах, PR, security disclosure. Низкокачественные AI-сгенерированные contributions, выжигание maintainers через triage-overhead. Также — AI-music spam (Spotify 75M, Deezer 75K/день). ВАЖНО: это измерение перегружено, поэтому используется опциональный тег dimension_subtype для разделения: low_quality_slop (мусор), slop_to_uplift_transition (curl high-quality chaos). High-quality security research и workflow-атаки СЮДА НЕ относятся — они на D8 и D9/D3 соответственно (hidden prompts перевешены с D2 на D9/D3 + subtype workflow_attack_surface)."
+    },
+    "D3": {
+      "name": "supply_chain",
+      "description": "Атаки на supply chain через AI: slopsquatting, malicious packages, использование AI-помощников как distribution vector, hallucinated dependencies"
+    },
+    "D4": {
+      "name": "copyright_legal",
+      "description": "Иски, settlements, прецеденты по копирайту и AI-training. Doe v. GitHub, Bartz v. Anthropic, Kadrey v. Meta, RIAA vs Suno/Udio, USCO guidance, CISAC reports"
+    },
+    "D5": {
+      "name": "defense_mechanism",
+      "description": "Технические и институциональные защитные механизмы. ВАЖНО: измерение перегружено, используется опциональный тег dimension_subtype для разделения трёх типов: technical_defense (PoW Anubis, tarpits Nepenthes, scanners, package signing), governance_defense (project bans, PR limits, disclosure policy, sign-off), vendor_transparency (IP ranges, crawler identifiers, robots/RSL). Примеры: Anubis/Nepenthes = technical; Gentoo/QEMU bans, GitHub PR limits = governance; OpenAI/Anthropic IP-range publishing = vendor_transparency."
+    },
+    "D6": {
+      "name": "license_erosion",
+      "description": "Эрозия OSS-лицензий как защиты кода. Provenance невозможен для AI output → DCO становится bottleneck. SAS v World Programming, Sony v Datel, Claw-Code как proof-of-concept agentic laundering"
+    },
+    "D7": {
+      "name": "economic_externalization",
+      "description": "Externalized costs: AI-вендоры выносят затраты обучения на OSS-инфраструктуру, академические базы, культурное наследие, музыкальные платформы. Asymmetry финансирования. Cloudflare crawl-to-refer ratios как количественная метрика. Governance collapse (Jazzband) как следствие"
+    },
+    "D8": {
+      "name": "security_uplift",
+      "description": "AI как легитимный инструмент discovery уязвимостей. Mozilla+Anthropic Firefox 148, curl 'High-Quality Chaos'. Контр-сигнал к D2 — те же AI-инструменты, но с противоположным эффектом. Создаёт discovery DoS вместо review DoS"
+    },
+    "D9": {
+      "name": "platform_power",
+      "description": "Контроль над платформой как рычаг IP/disclosure-войн или защиты монетизации. GitHub kill switch, Anthropic DMCA, Microsoft ban Eclipse, Spotify spam filter, Deezer demonetization, Bandcamp remove-on-suspicion, Clarkesworld closure, CISAC consolidation. Нисходящий контроль: платформа решает, что остаётся видимым/монетизируемым/принятым"
+    },
+    "D10": {
+      "name": "provenance_labeling",
+      "description": "Происхождение превращается в label/сертификат/disclosure: AI-generated, AI-assisted, Human Authored, no-AI, Organic Literature, disclosed AI use, signed-off-by-human. Восходящая маркировка (гильдия/сертификатор/самодекларация), в отличие от нисходящего контроля платформы (D9). Возникает как социально-рыночный ответ на провал технической детекции (H1a). Сам упирается в adversarial-обход (H9) и в disclosure-theatre (H8): метку легко не поставить или обойти. По сути — стигматизация AI и попытка вынести provenance в социальный контракт под ответственность. Примеры: NetBSD tainted, Linux sign-off, Authors Guild Human Authored, Organic Literature, Deezer AI-tagging, KDP disclosure, Nature LLM-not-author"
+    }
+  },
+  "not_proven_statements": [
+    "Не доказано, что Qwen или DeepSeek нарушили OSS-лицензии через scraping или model laundering. Доказано: китайские code-модели обучаются на огромных code corpora при слабой публичной прозрачности training data, а внутри китайской экосистемы появились споры о model derivation (Pangu/Qwen).",
+    "H2 regional champions нельзя держать на CN/RU единым блоком. CN имеет собственную evidence base (но с разворотом — чемпионы глобальны, не региональны); RU остаётся слабым sovereign-AI сигналом, не OSS-infrastructure.",
+    "Не доказано, что AI-generated контент вытесняет human work по качеству. Доказано: он создаёт flood, перегружающий фильтры, и вынуждает платформы вводить disclosure/certification/throttling/removal.",
+    "Не доказано, что AI provenance можно надёжно определить по финальному артефакту. Academic publishing и музыка показывают: disclosure-policies существуют формально, но почти не дают наблюдаемой прозрачности (H8), детекторы обходятся (H9).",
+    "Claw-Code НЕ доказывает clean-room legality. Он доказывает collapse of enforcement tempo — репликация за часы. Юридический вопрос открыт.",
+    "Microsoft в кейсе Nightmare-Eclipse не 'победил' и не 'проиграл' чисто: отступил от legal threats репутационно, но account/bounty sanction остаётся спорным (single-source claim researcher против отрицания Microsoft)."
+  ],
+  "render_note": "JSONL не отсортирован по дате (порядок тематический/хронологический вперемешку из-за инкрементальных добавлений). Для рендера в стиле profgames a-events рекомендуется два view: timeline_order (сортировка по date) и cluster_order (по dimensions/relationships). Машинной обработке порядок не мешает.",
+  "hypotheses_not_yet_evidenced": [
+    {
+      "id": "H1_PROVENANCE_COLLAPSE",
+      "evidence_level": "mixed — см. подверсии",
+      "description": "AI переносит provenance из слоя юридической атрибуции (свойство файла) в слой review-and-triage и платформенного контроля. Research-grade формулировка: 'В open-source AI не уничтожает legal provenance, но часто разрушает cost-effectiveness доказательства provenance из самого артефакта; governance therefore смещается к review controls, disclosure requirements и contribution throttling.' Это falsifiable и измеримо (benchmark accuracy под distribution shift, FP-constrained detection, time-to-triage, takedown/litigation outcomes, maintainer policy changes, review-latency).",
+      "subhypotheses": {
+        "H1a_technical": {
+          "evidence_level": "B (partial collapse)",
+          "claim": "Для реалистично трансформированного AI-кода provenance нельзя установить из артефакта с достаточной точностью и cost-efficiency для обычных OSS-workflow",
+          "status": "Детекция работает на exact/near-exact и same-language paraphrase (Copilot matching, fingerprinting MRR 68.9→99.3 на 480-token окнах). Разваливается на cross-language rewrite и out-of-distribution: AICD Bench Macro-F1 падает 0.63→0.119 на unseen domain; CodeMirage TPR@FPR=1% ниже 0.3 (непрактично). Python→Rust laundering — workflow-форензика (логи, промпты, commits), не code-форензика. Falsifier: публичная система с low-FP attribution через unseen domains/models/languages.",
+          "supporting_signals": [
+            "SIG_2026_CLAW_CODE_REWRITE_SPEED",
+            "SIG_2026_CLAUDE_CODE_ARCH_ANALYSIS",
+            "SIG_2026_FRONTIER_REPLICATION",
+            "SIG_2026_AICD_BENCH_DETECTION_FAILURE",
+            "SIG_2025_CODEMIRAGE_LOW_FPR_COLLAPSE",
+            "SIG_2026_CODE_PROVENANCE_TRACKING_LIMITS",
+            "SIG_2026_LLM_BEHAVIORAL_FINGERPRINT"
+          ],
+          "status_update_v0_9": "H1a больше НЕ живёт только в meta — теперь 4 event-якоря. AICD Bench (Macro-F1 61.65 'well below practical', обвал на distribution shift) и CodeMirage (TPR@FPR=1% рушится, adversarial paraphrase) — measured-доказательство непрактичности детекции AI-кода. Provenance-tracking работает только near-duplicate (OLMoTrace выкинут за verbatim-only). Behavioral fingerprint — контр-граница: провенанс МОДЕЛЕЙ частично решаем, КОДА — нет. Коллапс специфичен для артефакта-кода."
+        },
+        "H1b_legal": {
+          "evidence_level": "B (conditional collapse)",
+          "claim": "Классическое enforcement живо для прямого копирования; ломается экономика доказывания для AI-rewrites",
+          "status": "Против полного коллапса: GitHub 2,461 DMCA в 2025, SFC Vizio дело (trial Aug 2026), Stockfish/ChessBase settlement — право работает. За частичный коллапс: USCO Part 3 — fair use остаётся case-by-case, transaction costs могут превышать ценность работ. Google v. Oracle — код 'primarily functional', традиционный копирайт хуже применим. AI-rewrite становится legally messy быстро, если выживает behavior/architecture, а не expressive detail. Falsifier: повторяющиеся low-friction кейсы reliable relief для AI-rewrites.",
+          "supporting_signals": [
+            "SIG_2026_ANTHROPIC_DMCA_OVERREACH",
+            "SIG_2026_ANTHROPIC_DMCA_RETRACTION",
+            "SIG_2026_CLAW_CODE_LEGAL_UNCERTAINTY",
+            "SIG_2025_BARTZ_ANTHROPIC_RULING",
+            "SIG_2025_KADREY_META_RULING",
+            "SIG_2022_STOCKFISH_CHESSBASE_SETTLEMENT",
+            "SIG_2021_SFC_VIZIO_GPL_CONTRACT",
+            "SIG_2021_GOOGLE_ORACLE_FUNCTIONAL_CODE"
+          ],
+          "status_update_v0_9": "Усилена legal counterweight (блок 3). Закон НЕ умер для прямого копирования: Stockfish/ChessBase (GPLv3 enforcement сработал), SFC v Vizio (GPL=и копирайт и контракт, третий-бенефициар энфорсит — охват РАСШИРЯЕТСЯ). Google v Oracle ('код primarily functional') объясняет, почему AI-rewrite серее: функциональность охраняется слабее expression. Вывод: право живо и эволюционирует, но в сторону прямого использования; ломается именно мост к AI-mediated rewrite."
+        },
+        "H1c_social": {
+          "evidence_level": "A (strong collapse)",
+          "claim": "Maintainers меняют governance, потому что review-capacity (не текст лицензии) стала bottleneck",
+          "status": "Сильнейший слой. curl (20% slop, <5% genuine, bounty shutdown), GitHub PR settings + community discussion (broken review trust model), Jazzband sunset, QEMU/NetBSD bans, Linux kernel human-sign-off + embargo logic. Review-системы ломаются, когда marginal cost of submission падает быстрее marginal cost of human validation. Falsifier: стабильный maintainer trust и review throughput без governance hardening — наблюдается обратное.",
+          "supporting_signals": [
+            "SIG_2026_CURL_BUG_BOUNTY_SHUTDOWN",
+            "SIG_2026_GITHUB_ACKNOWLEDGES_SLOP",
+            "SIG_2026_GITHUB_PR_SETTINGS",
+            "SIG_2026_JAZZBAND_SUNSET",
+            "SIG_2025_QEMU_AI_CONTRIBUTION_BAN",
+            "SIG_2024_NETBSD_TAINTED_POLICY",
+            "SIG_2026_LINUX_KERNEL_AI_POLICY"
+          ]
+        }
+      },
+      "current_status": "Расщеплена на три оси с разным уровнем подтверждения: technical=partial/B, legal=conditional/B, social=strong/A. Манифест-формулировка 'код украдут и закон не работает' — преувеличение; точная версия: ломается первым не право и не детекция, а МОСТ между ними — способность обычного мейнтейнера дёшево связать подозрение, доказательство и действие."
+    },
+    {
+      "id": "H2_REGIONAL_CHAMPIONS",
+      "evidence_level": "разделена по регионам — см. ниже",
+      "description": "Манифест предполагал 10-15 региональных чемпионов в каждом сегменте OSS-tooling на каждом регулируемом рынке. Ключевая методологическая правка v0.7: CN и RU нельзя держать единым блоком — у них разная evidence base и разный характер.",
+      "by_region": {
+        "CN": {
+          "evidence_level": "C+/B- для open-weight champion; D для provenance-abuse",
+          "status": "Есть заметные open-weight/code-model игроки (Qwen, DeepSeek, Kimi), консолидация open-model экономики вокруг китайской индустрии (~30% global usage), внутрикитайский provenance-спор (Pangu/Qwen). НО с разворотом тезиса: китайские чемпионы не региональные, а ГЛОБАЛЬНЫЕ через open-weight стратегию. Это контр-тезис манифесту: открытость делает CN-модели транснациональными, а не запертыми за нац-границей. Доказанного Qwen/DeepSeek OSS-license laundering НЕТ — только масштабный corpus ingestion при слабой прозрачности."
+        },
+        "RU": {
+          "evidence_level": "D+/максимум C-",
+          "status": "Слабый сигнал. Есть GigaChat/T-pro как Russian-language sovereign/open-weight признаки, Author.Today как платформа с нейрослоп-проблемой. Но мало evidence, что это влияет на глобальную OSS-инфраструктуру или создаёт отдельный regional open-source champion layer. Скорее geopolitics/sovereign-AI под санкциями + зависимость от китайских чипов, чем зрелая OSS-экосистема. Не натягивать на 'RU regional champion'."
+        }
+      },
+      "current_status": "Манифестный тезис о фрагментации на национальных чемпионов пока НЕ подтверждается. CN показывает консолидацию и глобальную экспансию через open-weight, не фрагментацию. RU — sovereign-AI сигнал, не OSS-infrastructure. Falsifier исходного тезиса: устойчивые нац-чемпионы OSS-tooling, НЕ способные выйти за пределы своего рынка.",
+      "supporting_signals": [
+        "SIG_2025_CHINA_OSS_30PCT_GLOBAL",
+        "SIG_2025_DEEPSEEK_DISTILLATION_DISPUTE",
+        "SIG_2025_HUAWEI_PANGU_QWEN_DISPUTE",
+        "SIG_2024_CN_CODE_MODELS_CORPUS_INGESTION",
+        "SIG_2026_AUTHOR_TODAY_NEUROSLOP"
+      ]
+    },
+    {
+      "id": "H3_KILL_SWITCH_INEVITABILITY",
+      "evidence_level": "B",
+      "description": "Все крупные OSS-платформы и проекты к 2027 будут иметь kill switch для входящих contributions",
+      "current_status": "Сильно подкреплена GitHub (PR settings, roadmap limits), curl (bug bounty shutdown), Jazzband (sunset). Также — Spotify spam filter, Deezer demonetization как аналогичные kill switches в музыке. Требуется ещё GitLab, Codeberg для полной верификации"
+    },
+    {
+      "id": "H4_DISCOVERY_DOS",
+      "evidence_level": "B",
+      "description": "После решения slop-проблемы maintainers столкнутся с новой проблемой: discovery DoS от high-quality AI-augmented research",
+      "current_status": "Подкреплена SIG_2026_CURL_HIGH_QUALITY_CHAOS и SIG_2026_MOZILLA_ANTHROPIC_FIREFOX. Требуется ≥2-3 примеров для перевода в A"
+    },
+    {
+      "id": "H5_PLATFORM_POWER_ASYMMETRY",
+      "evidence_level": "C",
+      "description": "Контроль над платформой (GitHub, npm, и т.п.) становится новым основным IP-рычагом, обходящим традиционное копирайтное право",
+      "current_status": "Anthropic DMCA + MS-Eclipse кейсы дают split-evidence (один развернулся, второй сработал). Anthropic ситуацию исправил, Microsoft — нет"
+    },
+    {
+      "id": "H6_CODE_AS_RAW_MATERIAL",
+      "evidence_level": "D",
+      "description": "Код становится сырьём, а ценность смещается к данным, дистрибуции, доверию, узловым точкам (центральный тезис манифеста)",
+      "current_status": "Это рамка, не гипотеза для проверки фактами event-уровня"
+    },
+    {
+      "id": "H7_PLATFORM_DEFENDS_LEGACY_REVENUE",
+      "evidence_level": "B",
+      "description": "Борьба со slop почти никогда не только про качество. Anti-slop policy одновременно про: (1) стоимость проверки — редактор/reviewer/maintainer/moderator; (2) долю дохода — royalties, Kindle ranking, library payments, streaming pool; (3) дефицит внимания — bestseller lists, recommendations, search, issue trackers; (4) право на происхождение — кто может сказать 'это человеческое / licensed / accepted'. Формула: 'Anti-slop policy is never only anti-slop — it is platform control over visibility, monetization, trust, and the right to participate.'",
+      "current_status": "Расширена до 4 доменов. Музыка: Spotify 75M удалено, Deezer 85% демонетизировано, CISAC €4B projection. Книги: KDP disclosure + caps, Amazon book flood (discoverability), Bandcamp remove-on-suspicion. Академия/новости: disclosure policies без enforcement. OSS: curl bounty shutdown, GitHub PR limits, Jazzband. Контрпример, уточняющий гипотезу: HarperCollins/Microsoft licensing — издатели НЕ против AI как такового, они хотят превратить corpus в лицензируемый актив (ветка split LICENSING_VS_ENFORCEMENT). Это показывает, что мотивация не 'против AI', а 'контроль над монетизацией provenance'. Чтобы перевести в A — нужен documented internal memo или admission of dual motivation.",
+      "domain_note": "Механика мотивации различается: в музыке платформа защищает royalty pool правообладателей (Spotify зависит от каталогов Sony/Universal); в OSS GitHub защищает maintainers как production base для enterprise-клиентов (Microsoft/Google/Amazon хостят инфраструктуру на OSS). Разные стейкхолдеры, функционально сходная защита legacy-производительности от размывания.",
+      "supporting_signals": [
+        "SIG_2025_SPOTIFY_75M_SPAM_TRACKS",
+        "SIG_2026_DEEZER_44PCT_AI_UPLOADS",
+        "SIG_2026_CISAC_PMP_25PCT_REVENUE_RISK",
+        "SIG_2026_CURL_BUG_BOUNTY_SHUTDOWN",
+        "SIG_2026_GITHUB_PR_SETTINGS",
+        "SIG_2026_JAZZBAND_SUNSET",
+        "SIG_2023_AMAZON_AI_BOOK_FLOOD",
+        "SIG_2024_HARPERCOLLINS_AI_LICENSING",
+        "SIG_2025_REDDIT_ANTHROPIC_LAWSUIT",
+        "SIG_2025_WIKIMEDIA_TRAFFIC_DECLINE",
+        "SIG_2025_RSL_LICENSING_STANDARD",
+        "SIG_2025_AP_PUBLISHER_DATA_DEALS",
+        "SIG_2024_RIAA_SUNO_UDIO_LAWSUIT",
+        "SIG_2025_LABELS_SUNO_UDIO_SETTLEMENTS",
+        "SIG_2025_INDIE_MUSICIANS_CLASS_ACTION"
+      ],
+      "status_update_v0_9": "Сильно усилена data-licensing (блок 2) и музыкой (блок 4). Подтверждено в 5 доменах: код, музыка, книги, академия, и теперь data-licensing как отдельный класс. Reddit ($130M deals, breach-of-contract иск), Wikimedia (Enterprise платный канал), RSL (robots.txt→licensing-инфраструктура), publisher cascade. RIAA: лейблы перешли от исков к licensing (UMG/Udio, Warner/Suno joint platforms). КЛЮЧЕВОЕ уточнение H7: цель не 'против AI', а контроль монетизации provenance/access. Асимметрия (indie class action, одиночный maintainer) — монетизировать corpus могут только обладатели рыночной массы."
+    },
+    {
+      "id": "H8_DISCLOSURE_THEATER",
+      "evidence_level": "B",
+      "description": "Disclosure-policy без enforcement не даёт измеримой прозрачности. Требование 'отметь AI' при отсутствии верификации и санкций приводит к почти нулевому реальному disclosure — правило существует формально, provenance остаётся непрозрачным.",
+      "current_status": "Подкреплена двумя независимыми A-level замерами: академия — 70% журналов имеют AI-policy, но раскрыли AI use 76 из ~75,000 papers (три порядка разрыва); журналистика — ~9% статей AI-generated, но 5 disclosures на 100 AI-flagged. Оба домена с репутационными стейками показывают: disclosure-mandate без enforcement = disclosure theatre. Прямое следствие для рекомендаций: бессмысленно требовать самомаркировку без верификации или санкции. Falsifier: домен, где disclosure-policy дала измеримую прозрачность (высокий % реального раскрытия). Пока такого нет.",
+      "supporting_signals": [
+        "SIG_2025_ACADEMIC_AI_DISCLOSURE_GAP",
+        "SIG_2025_NEWS_AI_NONDISCLOSURE",
+        "SIG_2023_KDP_AI_DISCLOSURE"
+      ]
+    },
+    {
+      "id": "H9_DETECTION_ARMS_RACE",
+      "evidence_level": "B",
+      "description": "Provenance labeling (D10) саморазрушается через adversarial-гонку: каждый детектор порождает технику обхода, adversarial-методы дешевле детекции, и доказательство происхождения стремится к практической невозможности. Пример: пересобранный из MIDI трек или paraphrase/back-translation текста делает 'AI-происхождение' недоказуемым из артефакта.",
+      "current_status": "Подкреплена: Author.Today вводит маркировку, но Яндекс.Детектор обходится при намеренной попытке (прямое свидетельство из доклада); detection-фирмы (Originality.ai 82% herbal) сами ненадёжны и коммерчески заинтересованы; CodeMirage/AICD Bench показывают обвал детекции на трансформациях (см. H1a). Логическая цепочка с H1a и D10: техническая детекция не работает (H1a_technical) → рынок просит labels (D10) → labels тоже не верифицируются (H9) → остаётся самодекларация под ответственность + санкция (Linux sign-off, Authors Guild, Nature LLM-not-author). Provenance окончательно уходит из 'свойства артефакта' в 'социальный контракт'. Falsifier: устойчивый детектор, не обходимый тривиальной трансформацией (пересборка, paraphrase, перевод-обратно, смена языка/формата).",
+      "supporting_signals": [
+        "SIG_2026_AUTHOR_TODAY_NEUROSLOP",
+        "SIG_2025_HERBAL_BOOKS_AI_RISK",
+        "SIG_2026_FRONTIER_REPLICATION",
+        "SIG_2025_ORGANIC_LITERATURE_CERT",
+        "SIG_2026_SHAI_HULUD_SUBVERTS_PROVENANCE",
+        "SIG_2025_CODEMIRAGE_LOW_FPR_COLLAPSE"
+      ],
+      "status_update_v0_9": "Усилена за пределами AI-детекции (блок 5). Shai-Hulud показывает: технический provenance в supply chain (sigstore SLSA, OIDC, 2FA) обходится adversarial-методом (OIDC token theft) ровно как детекция AI-кода обходится paraphrase. 'Provenance was real, packages were poisoned' — provenance-коллапс в supply chain. Синтез H1a→D10→H9: детекция не работает (H1a, теперь с event-якорями) → рынок просит labels/signing (D10) → labels/signing обходятся adversarial (H9, теперь и в supply chain). Самодекларация + ответственность остаётся единственным выходом."
+    }
+  ],
+  "key_splits": [
+    {
+      "id": "SPLIT_FAIR_USE",
+      "branches": [
+        "SIG_2025_BARTZ_ANTHROPIC_RULING",
+        "SIG_2025_KADREY_META_RULING"
+      ],
+      "question": "Является ли training на чужих текстах fair use? — два решения за 48 часов"
+    },
+    {
+      "id": "SPLIT_PLATFORM_POWER",
+      "branches": [
+        "SIG_2026_ANTHROPIC_DMCA_OVERREACH",
+        "SIG_2026_MS_NIGHTMARE_ECLIPSE_BAN"
+      ],
+      "question": "Кто решает, что остаётся на платформе? — Anthropic откатил, Microsoft удержал"
+    },
+    {
+      "id": "SPLIT_PUBLISHING_DISCLOSURE_VS_CERTIFICATION",
+      "branches": [
+        "SIG_2023_KDP_AI_DISCLOSURE",
+        "SIG_2025_AUTHORS_GUILD_HUMAN_CERT"
+      ],
+      "question": "Маркировать AI или сертифицировать human? — одна проблема provenance, две стратегии метки"
+    },
+    {
+      "id": "SPLIT_LICENSING_VS_ENFORCEMENT",
+      "branches": [
+        "SIG_2024_HARPERCOLLINS_AI_LICENSING",
+        "SIG_2025_ANTHROPIC_15B_SETTLEMENT"
+      ],
+      "question": "Договорный рынок данных или litigation? — HarperCollins лицензирует, авторы судятся"
+    },
+    {
+      "id": "SPLIT_MUSIC_LICENSING_VS_LITIGATION",
+      "branches": [
+        "SIG_2025_LABELS_SUNO_UDIO_SETTLEMENTS",
+        "SIG_2025_INDIE_MUSICIANS_CLASS_ACTION"
+      ],
+      "question": "В музыке: licensing или litigation? — UMG/Warner settle и строят joint platforms, Sony судится за прецедент, indie-музыканты подают class action, что settlement мейджоров их не защищает. Та же асимметрия, что между Reddit-deals и одиночным maintainer."
+    }
+  ],
+  "known_gaps": [
+    {
+      "id": "GAP_RU_SPECIFIC",
+      "priority": "high",
+      "description": "Частично закрыт в v0.5 (Author.Today через доклад Смирновой). Остаётся слабым: нет реакции Yandex/Сбер AI на slopsquatting, поведения российских AI-помощников при галлюцинации пакетов, состояния зеркал npm/PyPI после санкций, количественной статистики Author.Today. Author.Today — единственное RU-событие, B/medium."
+    },
+    {
+      "id": "GAP_CN_SPECIFIC_A_CORPUS",
+      "priority": "low",
+      "description": "CN code-corpus ingestion — частично закрыт (DeepSeek-Coder 2T, Qwen2.5-Coder 5.5T+ tokens). Доказан масштаб поглощения, НЕ illegal scraping. Остаётся: детальная прозрачность training-data sources, доля лицензированного vs нелицензированного кода."
+    },
+    {
+      "id": "GAP_CN_SPECIFIC_B_PROVENANCE",
+      "priority": "low",
+      "description": "CN model/fork provenance disputes — частично закрыт (Huawei Pangu vs Qwen). Остаётся: разрешение спора (оно не наступило), другие внутрикитайские derivation-кейсы, реакция Alibaba."
+    },
+    {
+      "id": "GAP_CN_SPECIFIC_C_SCRAPING",
+      "priority": "medium",
+      "description": "CN scraping / Chinese forks of OSS — по-прежнему открыт. НЕ писать 'Qwen/DeepSeek scraping' как факт. Аккуратная формулировка: training-data opacity and large-scale code-corpus ingestion. Нужны: поведение Qwen/DeepSeek как crawler'ов (не моделей), китайские форки западных OSS, реакция CN-регуляторов на supply chain/slopsquatting, внутрикитайские платформенные anti-slop политики."
+    },
+    {
+      "id": "GAP_COUNTER_NARRATIVE",
+      "priority": "closed",
+      "description": "ЗАКРЫТ в v0.6-v0.7. D8 вырос с 4 до 10 событий. Counter-narrative теперь полноценный слой: Mozilla/Anthropic Firefox, Google OSS-Fuzz/Big Sleep/CodeMender, Anthropic Claude Code Security/Glasswing, Linux Foundation $12.5M, Patch Rewards 2013 как пре-AI якорь. Слой больше не односторонне-алармистский. Ключевая связка: почти каждое D8-событие связано с H4 (discovery DoS) — AI чинит governance и ломает его одним движением."
+    },
+    {
+      "id": "GAP_REDDIT_STACKOVERFLOW",
+      "priority": "partially_closed",
+      "description": "Частично закрыт в v0.9: Reddit v Anthropic + Reddit/Google/OpenAI deals ($130M). Остаётся: StackOverflow data/API deals и изменение поведения модераторов после AI-наплыва."
+    },
+    {
+      "id": "GAP_WIKIMEDIA",
+      "priority": "closed",
+      "description": "ЗАКРЫТ в v0.9: Wikimedia -8% human pageviews, Enterprise как платный канал, bandwidth +50%. Мост OSS↔commons↔publishing построен."
+    },
+    {
+      "id": "GAP_HUGGINGFACE_TARGETING",
+      "priority": "low",
+      "description": "Hugging Face / Gradio / ModelScope как AI-инфраструктура-мишень"
+    },
+    {
+      "id": "GAP_H7_INTERNAL_EVIDENCE",
+      "priority": "medium",
+      "description": "Остаётся: documented internal memo или admission of dual motivation от платформы. v0.9 усилил H7 косвенно (Reddit прямо называет licensing 'placed a value on user comments' — близко к admission), но прямого внутреннего документа 'мы боремся со slop ЧТОБЫ защитить выручку' по-прежнему нет."
+    },
+    {
+      "id": "GAP_CROSS_LANGUAGE_BENCHMARK",
+      "priority": "closed",
+      "description": "ЗАКРЫТ в v0.9 блоком 1, но как FALSIFIER, не как подтверждение: AICD Bench (9 языков, обвал на distribution shift) и CodeMirage (10 языков, paraphrase) показали, что cross-language детекция НЕ работает. Это не gap в данных — это доказанная граница технологии (H1a)."
+    }
+  ],
+  "recommended_next_iterations": [
+    "v0.4 highest priority: закрыть RU/CN gaps — даёт страновую асимметрию, центральную для рамки манифеста",
+    "v0.4: подкрепить H1_provenance_collapse дополнительными кейсами agentic laundering для перевода C→B",
+    "v0.5: добавить counter-narrative события (GAP_COUNTER_NARRATIVE)",
+    "v0.5: поискать internal-source evidence для H7 (GAP_H7_INTERNAL_EVIDENCE)"
+  ],
+  "closed_gaps_in_v0_3": [
+    "GAP_CLOUDFLARE_STATS — закрыт через 5 Cloudflare-событий (Radar launch, crawl-to-refer report, industry breakdown, December stats, January GPTBot lead) и HUMAN Security report. ПРИМЕЧАНИЕ: исходно gap назывался CLOUDFLARE_VERCEL, но Vercel-specific событий в слое нет — закрыта только Cloudflare-часть. Vercel crawler-статистика (GPTBot 569M запросов/месяц) остаётся незакрытой, но low-priority дубль Cloudflare-данных.",
+    "GAP_AI_VENDOR_TOS — закрыт через 3 ToS-события: OpenAI IP-ranges (2024), Google-Extended (2023), Anthropic IP-ranges откат (2026-04). Дополнено OpenMed/CNRS-кейсом из v0.2",
+    "GAP_MUSIC_PRIMARY_SOURCES — закрыт первичными источниками: Spotify newsroom (2025-09-25), Deezer newsroom (2026-04-20), CISAC report через Deezer release"
+  ],
+  "summary_v0_9": {
+    "total_signals": 110,
+    "by_region": {
+      "US": 48,
+      "global": 48,
+      "EU": 8,
+      "RU": 1,
+      "CN": 5
+    },
+    "by_evidence": {
+      "A": 65,
+      "B": 44,
+      "C": 1
+    },
+    "by_source_type": {
+      "primary": 66,
+      "secondary": 80,
+      "commentary": 13,
+      "claim": 1
+    },
+    "by_dimension": {
+      "D1": 20,
+      "D2": 22,
+      "D3": 11,
+      "D4": 23,
+      "D5": 24,
+      "D6": 27,
+      "D7": 33,
+      "D8": 10,
+      "D9": 37,
+      "D10": 20
+    },
+    "note": "v0.9 — крупнейшая содержательная итерация: +16 событий в 5 проверенных блоках. H1a_technical переведена из meta в events (4 benchmark-якоря: AICD Bench, CodeMirage, provenance-tracking, fingerprint). Data-licensing оформлен как класс (Reddit/Wikimedia/RSL/publisher deals) — мост OSS↔commons↔publishing, сильнейшее усиление H7. Legal counterweight (Stockfish/Vizio/Oracle) балансирует D4 от 'закон умер'. RIAA/Suno/Udio дал музыкальный legal-баланс и пятый split. Registry governance (Trusted Publishing + Shai-Hulud обход) — вторая сторона D3 с provenance-коллапсом в supply chain. D4 вырос 13→21, D6 20→27, D7 25→32, D9 29→36.",
+    "key_synthesis_v0_9": "Слой сошёлся на тройной петле, теперь полностью event-supported: (1) техническая детекция provenance не работает — AICD Bench/CodeMirage measured; (2) рынок отвечает labels/signing/licensing — D10, RSL, Trusted Publishing; (3) labels/signing обходятся adversarial — Shai-Hulud (OIDC theft), paraphrase. Вывод: provenance мигрирует из артефакта в социальный контракт + контроль точки входа. Параллельно H1b показывает: классическое право (GPL, copyright) живо и даже расширяется (Vizio third-party), но именно МОСТ между правом и AI-rewrite ломается первым.",
+    "sharpened_thesis": "AI не 'убивает OSS'. AI ломает старые ВХОДНЫЕ ФИЛЬТРЫ production systems (PR, submissions, reports, uploads, manuscripts, packages). Ответ — связка: platform power (D9), disclosure labels (D10), paid access/licensing (D7), throttling, human sign-off, technical gates (D5), legal overreach (D4). Provenance мигрирует из свойства артефакта в социальный контракт под ответственность + контроль точки входа.",
+    "relationships_total": 34,
+    "relationships_by_type": {
+      "уточнение": 13,
+      "откат": 4,
+      "эскалация": 10,
+      "split": 7
+    },
+    "dimension_subtypes": 13
+  },
+  "market_baseline": {
+    "purpose": "Single source of truth для рыночных агрегатов, цитируемых в equilibrium_analysis/JIT-интерпретации. Это НЕ событийный слой (события = конфликты provenance/power в JSONL). Это справочные макро-цифры размеров пулов. Каждая verified-цифра перепроверена web-поиском июнь 2026 (документ-источник цитировал устаревшие/неточные значения — Gartner-агрегаты пришлось актуализировать с $4.9T до $6.31T).",
+    "last_verified": "2026-06",
+    "verification_note": "verified = подтверждено первичным/множественным источником при проверке. Цифры быстро устаревают (Gartner ревизит ежеквартально: $6.15T в феврале → $6.31T в апреле 2026). При цитировании указывать дату forecast.",
+    "aggregates": [
+      {
+        "metric": "worldwide_it_spending_2026",
+        "value": "$6.31T",
+        "yoy": "+13.5%",
+        "source": "Gartner",
+        "source_date": "2026-04-22",
+        "type": "verified",
+        "note": "Ревизия вверх с $6.15T (февраль) и $6.08T (октябрь 2025). Документ-источник цитировал $4.9T/$5.6T — устарело."
+      },
+      {
+        "metric": "worldwide_software_spending_2026",
+        "value": ">$1.44T",
+        "yoy": "+14.7%",
+        "source": "Gartner",
+        "source_date": "2026-04-22",
+        "type": "verified",
+        "note": "Документ цитировал $1.249T (2025). GenAI model spending растёт +80.8% 2026."
+      },
+      {
+        "metric": "worldwide_it_services_2026",
+        "value": ">$1.87T",
+        "source": "Gartner",
+        "source_date": "2026-04-22",
+        "type": "verified",
+        "note": "Крупнейший сегмент по абсолютным тратам. Application+infra implementation, managed services, IaaS."
+      },
+      {
+        "metric": "data_center_systems_2026",
+        "value": ">$788B",
+        "yoy": "+55.8%",
+        "source": "Gartner",
+        "source_date": "2026-04-22",
+        "type": "verified",
+        "note": "Самый быстрорастущий сегмент — прямое доказательство compute-bottleneck тезиса."
+      },
+      {
+        "metric": "ai_infrastructure_2025_fullyear",
+        "value": "$318B",
+        "yoy": "+108% (vs $153B 2024)",
+        "source": "IDC",
+        "source_date": "2026-04-16",
+        "type": "verified",
+        "note": "Q4 2025 $89.9B. Подтверждает compute-узел нового равновесия. 2029 прогноз >$900B-$1T."
+      },
+      {
+        "metric": "us_share_ai_infra_q4_2025",
+        "value": "77% ($69.2B)",
+        "yoy": "+81.5%",
+        "source": "IDC",
+        "source_date": "2026-04-16",
+        "type": "verified",
+        "note": "Геоконцентрация. Hyperscaler+cloud+digital service providers = 86.7% AI-infra трат. China -8.1% YoY (export controls)."
+      },
+      {
+        "metric": "ai_adoption_use",
+        "value": "88% используют AI в ≥1 функции",
+        "source": "McKinsey State of AI 2025",
+        "source_date": "2025-11",
+        "type": "verified",
+        "note": "vs 78% годом ранее. GenAI 72% (vs 33% 2024)."
+      },
+      {
+        "metric": "ai_adoption_scaling",
+        "value": "~⅓ начали масштабировать; 23% масштабируют agentic; <10% в любой отдельной функции",
+        "source": "McKinsey State of AI 2025",
+        "source_date": "2025-11",
+        "type": "verified",
+        "note": "КЛЮЧЕВОЕ для рамки: cost base уже сместился к compute, но adoption ещё ранний — доли рынка ещё могут сдвинуться. 6% 'AI high performers' (>5% EBIT impact). 62% экспериментируют с агентами."
+      }
+    ],
+    "company_anchors_unverified": [
+      {
+        "note": "Документ приводил filings (AWS $128.7B, Google Cloud $58.7B, Accenture $2.7B GenAI, Snowflake $3.63B и др.) и модельную сегментацию ($1.63T pool, сценарии 2031, концентрация 71/74/77%). НЕ перепроверялись поштучно и НЕ заводятся как verified. Модельные числа (дельты +55%/+344%, $1.99T) — спекулятивная тройная экстраполяция (adoption × reallocation × elasticity), брать как НАПРАВЛЕНИЕ, не величину."
+      }
+    ],
+    "directional_claims_robust": [
+      "Cost base индустрии смещается к compute (data center +55.8%, AI-infra +108% — verified).",
+      "Геоконцентрация: US 77% AI-infra, hyperscalers 86.7% — verified, поддерживает bottleneck-oligopoly тезис.",
+      "Adoption ранний (⅓ scaling, <10% per function) — доли ещё подвижны, равновесие не застыло.",
+      "Направления (не величины) из модели документа: hyperscalers up, generic SMB SaaS down, marketplaces up from small base, large ISV раскалывается по линии control-plane. Спекулятивно, но непротиворечиво verified-данным."
+    ]
+  },
+  "equilibrium_analysis": {
+    "_level": "INTERPRETIVE FRAME (третий этаж). Это НЕ факты и НЕ измерения. Это теоретико-игровое прочтение динамики фактов — как profgames читает события через теорию игр. Факты живут в JSONL, рамка здесь, прогноз (JIT) — её экстраполяция. Каждый тезис привязан к event-якорям (JSONL) и/или market_baseline. Статус рабочий, не финальный.",
+    "status": "working_frame",
+    "frame": "Смена рыночного равновесия под обвалом стоимости воспроизводства артефакта. Игроки — акторы A1-A5. Анализ в терминах: на чём держится равновесие, кто захватывает ренту, почему отклонение становится рациональным.",
+    "old_equilibrium": {
+      "name": "property_rights_on_artifact",
+      "type": "распределённое property-rights равновесие (рента ∝ вкладу, много мелких захватывают). Маршалловская рента на труд/креативность.",
+      "three_legs": [
+        "Высокая стоимость воспроизводства: клонировать = заново вложить человеко-труд ('скрытый экономический предохранитель' из core_thesis).",
+        "Дешёвая надёжная верификация происхождения: артефакт стабилен, git blame работает, копирайт привязан к выражению.",
+        "Работающий enforcement: GPL засуживается."
+      ],
+      "stability": "Ноги — комплементы: дорого копировать → копий мало → легко отследить → легко энфорсить → создатель захватывает ренту. Устойчиво по Нэшу: красть невыгодно (украсть ≈ переписать ≈ та же цена).",
+      "anchors": [
+        "SIG_2022_STOCKFISH_CHESSBASE_SETTLEMENT",
+        "SIG_2021_SFC_VIZIO_GPL_CONTRACT"
+      ]
+    },
+    "shock": {
+      "name": "ai_collapses_reproduction_cost",
+      "description": "AI выбивает все три ноги разом и в правильном порядке.",
+      "legs_broken": [
+        {
+          "leg": "стоимость воспроизводства → ~0",
+          "anchor": "SIG_2026_CLAW_CODE_REWRITE_SPEED",
+          "note": "Claude Code пересобран за ночь. Предохранитель снят."
+        },
+        {
+          "leg": "верификация происхождения ломается",
+          "anchors": [
+            "SIG_2026_AICD_BENCH_DETECTION_FAILURE",
+            "SIG_2025_CODEMIRAGE_LOW_FPR_COLLAPSE"
+          ],
+          "note": "Детекция AI-кода 'well below practical', paraphrase обходит (H1a)."
+        },
+        {
+          "leg": "enforcement буксует — но не от смерти права, а от обвала доказуемости",
+          "anchor": "SIG_2021_GOOGLE_ORACLE_FUNCTIONAL_CODE",
+          "note": "H1b: право живо для прямого копирования (Vizio даже расширяет охват), мёртв мост к AI-rewrite."
+        }
+      ],
+      "consequence": "Выбита нога 'дорого копировать' → отклонение становится рациональным → старое равновесие перестаёт быть равновесием. Технологический шок, переписавший payoff-матрицу."
+    },
+    "new_equilibrium": {
+      "name": "bottleneck_complement_control",
+      "type": "bottleneck-oligopoly равновесие (рента ∝ контролю дефицитного невоспроизводимого ресурса). Рикардианская/монопольная рента. По Шумпетеру — competition FOR the market вместо competition WITHIN.",
+      "mechanism": "'Commoditize your complement' (Спольски): когда один комплемент коммодитизируется (код-артефакт → ~0), рента перетекает к оставшемуся дефицитному. Артефакт стал commodity → рента утекает к держателю недефицитного.",
+      "five_bottlenecks": [
+        "compute (market_baseline: data_center_systems +55.8%, ai_infrastructure +108% — verified)",
+        "proprietary data + rights (Reddit/Wikimedia/RSL)",
+        "точка сборки / runtime",
+        "контекст пользователя (то, ПОД ЧТО собирается)",
+        "distribution / контроль точки входа + feedback loops"
+      ],
+      "why_hyperscalers": "Не из злого умысла: при коммодитизации артефакта равновесие Нэша смещается к контролю bottleneck'ов, а они (compute, data-at-scale, distribution) имеют экономию масштаба + сетевые эффекты → математически следует концентрация. market_baseline verified: US 77% AI-infra, hyperscalers 86.7% AI-трат.",
+      "internal_split": "Раскол проходит ВНУТРИ сегмента крупных по линии 'контролируешь ли execution plane', не по размеру. Large ISV: control-plane winners ↔ replaceable app-silos (из экономической модели документа, directional).",
+      "anchors": [
+        "SIG_2025_REDDIT_ANTHROPIC_LAWSUIT",
+        "SIG_2025_CHINA_OSS_30PCT_GLOBAL"
+      ],
+      "market_baseline_refs": [
+        "ai_infrastructure_2025_fullyear",
+        "us_share_ai_infra_q4_2025",
+        "data_center_systems_2026"
+      ]
+    },
+    "transition_phenomena": [
+      {
+        "name": "tragedy_of_commons",
+        "description": "Старое равновесие: вклад в commons окупался (репутация→работа, контроль артефакта). Новое: AI потребляет commons (training на коде) и externalizes costs обратно (slop-flood в трекеры). Maintainer получает издержки без компенсирующего payoff → дефекция (бросить проект) индивидуально рациональна → кооперативное равновесие схлопывается.",
+        "anchors": [
+          "SIG_2026_CURL_BUG_BOUNTY_SHUTDOWN",
+          "SIG_2025_SOURCEHUT_DEVAULT_CRY",
+          "SIG_2026_JAZZBAND_SUNSET"
+        ]
+      },
+      {
+        "name": "enclosure_of_commons",
+        "description": "Обнаружив экспроприацию вклада, игроки строят забор (paywall, license). RSL = collective bargaining (картель правообладателей) против монопсонии гиперскейлеров. Огораживание общинных земель, версия 2026.",
+        "anchors": [
+          "SIG_2025_REDDIT_ANTHROPIC_LAWSUIT",
+          "SIG_2025_WIKIMEDIA_TRAFFIC_DECLINE",
+          "SIG_2025_RSL_LICENSING_STANDARD"
+        ]
+      },
+      {
+        "name": "bargaining_mass_asymmetry",
+        "description": "Крупные строят забор и торгуются (Reddit $130M, мейджоры с Suno/Udio). Мелкие — не могут (indie class action, одиночный maintainer). В новом равновесии payoff ∝ переговорной силе, НЕ вкладу. Структурный сдвиг: ценность ∝ контроль bottleneck, не ∝ создание.",
+        "anchors": [
+          "SIG_2025_LABELS_SUNO_UDIO_SETTLEMENTS",
+          "SIG_2025_INDIE_MUSICIANS_CLASS_ACTION"
+        ]
+      },
+      {
+        "name": "commoditize_complement_as_move",
+        "description": "Open-weight (China 30%, Meta) — ход 'commoditize your complement' против моата конкурента на модель. Обнуляешь слой модели → рента уходит с модели, но не к альтруисту, а к держателю следующего дефицитного комплемента (compute+distribution). Open weight не децентрализует ренту — перемещает на этаж ниже, где снова гиперскейлеры. Контр-сила к монополии на модель, не к монополии на инфраструктуру.",
+        "anchors": [
+          "SIG_2025_CHINA_OSS_30PCT_GLOBAL"
+        ]
+      },
+      {
+        "name": "provenance_changes_owner",
+        "description": "Старое равновесие: provenance = enforcement-механизм property rights создателя (дёшев → равновесие самоподдерживается, вора легко поймать). Новое: провенанс артефакта мёртв → property-enforcement не держится → равновесие съезжает на bottleneck. Execution provenance (logs, attestation, signed runtime) возникает для ДРУГОЙ игры — accountability в JIT-сервисе — и контролируется держателем runtime (у него logs). Провенанс не исчез, сменил хозяина: был инструментом создателя, стал инструментом платформы.",
+        "anchors": [
+          "SIG_2026_SHAI_HULUD_SUBVERTS_PROVENANCE",
+          "SIG_2026_ANTHROPIC_DMCA_OVERREACH"
+        ]
+      }
+    ],
+    "pricing_mechanics": {
+      "description": "Как монетизируется доступ в новом равновесии (из экономической модели документа). Сдвиг 'selling a finished app seat' → 'renting trusted execution'.",
+      "shift": "seats → credits / per-execution / per-tool-call / per-approved-outcome / policy-check fees / attestation fees / managed-runtime subscriptions. 'Paying for work performed under a trusted envelope'.",
+      "significance": "Конкретизирует 'рынок доступа vs рынок вещей': доступ монетизируется не подпиской на артефакт, а оплатой исполнения под доверенной оболочкой. Seat-based не исчезает, но перестаёт быть центральным."
+    },
+    "two_layer_structure": {
+      "description": "Два равновесия сосуществуют, граница = цена ошибки.",
+      "ephemeral_layer": "JIT-обвязка вокруг пользователя/данных/workflow (UI, glue, отчёты, аналитика, бизнес-логика верхнего уровня). Низкая цена ошибки → переходит в НОВОЕ равновесие. SAP 'batch size 1', genUI, A2UI/AG-UI, Artifacts.",
+      "frozen_layer": "Детерминированное ядро (АСУТП, kernel, crypto, avionics, medical). Высокая цена ошибки → детерминизм обязателен → провенанс критичен → property-rights + certification держатся → остаётся в СТАРОМ равновесии.",
+      "premium_inversion": "УТОЧНЕНО (интерпретация, working_frame): 'человеческое происхождение как знак качества' — ложная рамка. Артефакт судят по функции и потреблению, не по происхождению (код держит нагрузку или нет; книгу дочитывают или бросают). Поэтому маркировка 'Human Authored'/'Organic Literature'/'verified human-audited build' — НЕ магистраль нового равновесия и не возврат к старому, а арьергард с двумя мотивами: (1) премиум-ниша (как organic food — большинство потребляет немаркированное) и (2) перекладывание/локализация ответственности (юридический щит). Оба мотива реальны, оба нишевы и переходны. Маркировка переходна ВДВОЙНЕ: метит умирающую ось (происхождение артефакта) умирающим субъектом (индивид-автор), тогда как растёт другая ось (ответственность за исполнение) с другим субъектом (платформа-ответчик). Массовое AI-производство в масс-сегменте уже наступило ДО маркировки (Harlequin MT, ~44% слопа Deezer, herbal-книги) — маркировка появляется как реакция, а не как барьер.",
+      "regulatory_friction": "Регуляция держит часть мира в frozen-слое: EU AI Act, CRA (reporting sept-2026, broad dec-2027), sovereign cloud. Механизм удержания старого равновесия в регулируемых зонах."
+    },
+    "music_as_precedent": {
+      "description": "Музыка — прецедент для ОНТОЛОГИИ нового равновесия (куда уходит рента), но не для его темпа. Это один из двух прецедентов: музыка отвечает на вопрос 'куда', литература (см. ниже) — на вопрос 'когда/как'. Нужно разделить два разных перехода, которые легко спутать.",
+      "arc": "Стриминговый переход (≈10 лет назад): property на копию → контроль доступа + данные о вкусе. Лейблы потеряли ренту дистрибуции, платформы захватили. Это задало access-равновесие ДО всякого AI. Теперь AI-волна (синхронная с софтом) бьёт уже по этому access-равновесию: фаза enclosure — лейблы возвращают ренту через licensing (UMG/Warner settle с Suno/Udio), мелкие артисты остаются ни с чем (class action) — точная асимметрия переговорной массы.",
+      "prediction": "Spotify-равновесие (рента у платформы доступа, не у создателя артефакта) показывает КУДА придёт софт — потому что музыка прошла переход к access-экономике на ~10 лет раньше. Это прецедент онтологии, не хронологии: сам AI-удар везде примерно одновременен (2023-2026), музыка лишь раньше других оказалась в access-равновесии, на которое теперь накладывается AI.",
+      "anchors": [
+        "SIG_2025_SPOTIFY_75M_SPAM_TRACKS",
+        "SIG_2026_DEEZER_44PCT_AI_UPLOADS",
+        "SIG_2024_RIAA_SUNO_UDIO_LAWSUIT",
+        "SIG_2025_LABELS_SUNO_UDIO_SETTLEMENTS"
+      ],
+      "two_transitions": {
+        "streaming_shift": "Переход property-на-копию → контроль-доступа музыка прошла на ~10 лет раньше софта: продажа альбомов/CD (собственность на копию) → стриминг (рента у платформы за доступ + данные о вкусе). Spotify 2008, доминирование стриминга ~2015-2016. ЭТО и есть прецедент: музыка раньше показала, КУДА приходит рента, когда копия перестаёт быть носителем ценности — к держателю точки доступа. Но двигатель тут цифровизация дистрибуции, НЕ AI.",
+        "ai_generative_shock": "AI-генеративная ломка (Suno 2023, Udio 2024, royalty-farming, slop-flood, RIAA-иск июнь 2024, settlements 2025) идёт СИНХРОННО с софтом, максимум на ~год впереди по отдельным метрикам — НЕ на 10 лет. Здесь музыка не прецедент, а параллельный фронт того же процесса."
+      },
+      "correction_note": "Ранее формулировка утверждала, что музыка прожила 'эту смену равновесия на ~10 лет раньше'. Это неточно: на 10 лет раньше прошёл стриминговый переход (property→access), а не AI-ломка. AI-генеративная волна в музыке опережает софт максимум на год. Прецедентная ценность музыки — в готовом access-равновесии, не в раннем AI."
+    },
+    "manifesto_lock": {
+      "description": "'Лицензия на агентство' получает строгий теоретико-игровой смысл.",
+      "statement": "В старом равновесии ты владел артефактом. В новом ценность — в праве собирать (агентство), а оно контролируется держателем точки сборки. Лицензия на агентство = кто допущен к bottleneck. Гильдейский режим из манифеста — не ностальгия, а единственный известный теории игр способ мелких восстановить переговорную силу: коллектив (RSL = гильдия данных, WGA = гильдия сценаристов, Authors Guild). Картель снизу против олигополии сверху.",
+      "counter_force": "OSS защищает уже не source code, а recipes of execution: code + data rights + model/runtime portability + signed execution logs + toolchain + community trust. Это не отменяет OSS, меняет его объект защиты."
+    },
+    "falsifiers": [
+      "Если доля frozen-deterministic не сжимается, а ephemeral-класс упирается в потолок (регуляция, аудит, доверие) и не растёт за пределы низкорисковых workflow — тезис о смене онтологии не подтверждается, остаётся 'JIT для дашбордов, артефакт для важного'.",
+      "Если open-weight реально децентрализует ренту (мелкие игроки строят устойчивый бизнес на бесплатных моделях БЕЗ зависимости от bottleneck-инфраструктуры) — bottleneck-oligopoly тезис ослабевает.",
+      "Если execution provenance окажется верифицируемым и переносимым между платформами (не запертым у держателя runtime) — 'провенанс сменил хозяина' опровергается.",
+      "market_baseline: если adoption застрянет (⅓ scaling не растёт, agentic <10% per function стагнирует) — переход к новому равновесию останавливается на ранней фазе.",
+      "Если в критичных доменах сложится МАССОВЫЙ рынок именно ЧЕЛОВЕЧЕСКОЙ верификации артефактов (а не платформенной гарантии исполнения) — т.е. если 'human-audited' станет магистральным критерием отбора, а не нишей/щитом, и оплачиваться будет именно человеческое происхождение, а не trusted execution провайдера — рамка provenance_responsibility_shift неверна."
+    ],
+    "publishing_as_precedent": {
+      "description": "Издательство и литература — второй прецедент, и он про ДРУГОЕ, чем музыка. Если музыка предсказывает онтологию (куда уходит рента), то литература предсказывает темп и механику AI-flood: prestige-система с дешёвым открытым входом ломается ПЕРВОЙ, раньше кода.",
+      "two_transitions": {
+        "amazon_shift": "Переход property-на-копию → платформенный контроль discovery и дистрибуции книги прошли на ~10-15 лет раньше: Kindle/KDP (2007), Kindle Unlimited (2014) сделали Amazon арбитром видимости (ranking, recommendations, search) и каналом дистрибуции для self-publishing и e-book. Рента сместилась к контролёру точки входа — как в музыке к стримингу. НО переход ЧАСТИЧНЫЙ, в отличие от музыки: печатная книга держит property-режим, физический рынок жив, access не вытеснил собственность полностью. Прецедент онтологии тут слабее музыкального — именно поэтому музыка остаётся главным якорем 'куда придёт рента'.",
+        "ai_flood_shock": "AI-flood в литературе пришёл РАНЬШЕ, чем в код. Clarkesworld закрыл приём рассказов в феврале 2023 — самый ранний задокументированный коллапс входного фильтра prestige-системы под AI, на ~11 месяцев раньше первой публичной жалобы curl (январь 2024). Механика: дешёвый открытый вход (free submissions) + side-hustle экономика 'заработай на ChatGPT' = редакционный фильтр перегружается мгновенно. Литература показала всю траекторию flood → перегрузка фильтра → закрытие входа ДО того, как она пришла в OSS."
+      },
+      "arc": "Amazon-сдвиг (≈10-15 лет назад, частичный): property на копию → контроль discovery/дистрибуции у платформы для e-book/self-publishing. Затем AI-flood, пришедший первым из всех доменов (Clarkesworld 2023). Сейчас фаза ответа: KDP disclosure, Amazon caps, HarperCollins licensing книг для training, Authors Guild 'Human Authored', Organic Literature — тот же веер реакций (D9 platform power + D10 labeling + D7 licensing), что позже развернётся в коде и музыке.",
+      "key_insight": "Два прецедента дают РАЗНОЕ знание. Музыка — про КУДА (онтология ренты, access-равновесие зрелое). Литература — про КОГДА и КАК (темп AI-flood: первым ломается домен с самым дешёвым открытым входом). OSS проживает оба сразу — онтологию music-типа и flood-механику publishing-типа, но позже обоих, и потому может смотреть на их исход как на спойлер.",
+      "anchors": [
+        "SIG_2023_CLARKESWORLD_AI_SUBMISSIONS",
+        "SIG_2023_AMAZON_AI_BOOK_FLOOD",
+        "SIG_2023_KDP_AI_DISCLOSURE",
+        "SIG_2024_HARPERCOLLINS_AI_LICENSING",
+        "SIG_2025_AUTHORS_GUILD_HUMAN_CERT"
+      ]
+    },
+    "provenance_responsibility_shift": {
+      "_level": "INTERPRETIVE FRAME (working_frame, из диалога-уточнения)",
+      "claim": "Умирает провенанс АРТЕФАКТА ('кто написал файл' — D10 в исходном виде). Рождается провенанс ИСПОЛНЕНИЯ и ОТВЕТСТВЕННОСТИ ('что/кто отвечает за поведение в проде, кто может починить' — execution provenance, эволюция D10). От провенанса выживает не 'человек написал' (это не критерий качества), а 'есть аудируемый адрес ответственности за поведение'.",
+      "subject_drift": "Этот адрес ответственности НЕ обязан быть человеком-индивидом и стремится им не быть. Им становится регулируемое юрлицо — платформа/вендор/гиперскейлер, подписывающий SLA, страхующий риск и берущий за это деньги. Даже личная подпись мейнтейнера (DCO sign-off) обесценивается, как только появляется страхуемый trusted-execution провайдер: гарантия платформы с активами стоит дороже подписи физлица без них.",
+      "boundary": "Граница проходит не 'человек vs AI', а по ЦЕНЕ ОШИБКИ. Где 'работает' проверяется мгновенно и дёшево ошибиться (утилитарный код, масс-контент, ephemeral-слой) — провенанс мёртв полностью. Где ошибка отложена/катастрофична (крипта, АСУТП, ядро, авионика, медицина) — выживает не человек-автор, а субъект-ответчик; и в пределе этот субъект — регулируемая платформа, не индивид.",
+      "ties_to": [
+        "two_layer_structure.premium_inversion",
+        "pricing_mechanics (trusted_execution billing: платят за исполнение под доверенной оболочкой, не за артефакт и не за 'человек написал')",
+        "transition: provenance_changes_owner (execution provenance сменил хозяина)"
+      ],
+      "consequence_for_manifesto": "Смыкает линию провенанса с центральным тезисом: рента И ответственность концентрируются у держателя входа. Человек-индивид выпадает из обеих ролей — и автора, и ответчика, — кроме узких ниш (ручная работа + временное перекладывание личной ответственности там, где платформы-ответчика ещё нет)."
+    }
+  }
+}
