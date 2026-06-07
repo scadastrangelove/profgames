@@ -171,10 +171,6 @@ The three elephants didn't fall ill in turn but all at once — which is why it 
 
 The five-legged dog has woken in the silicon sands. The sable will come, as it always does. The only question is to whom, and at whose expense.
 
-And what about here in the motherland, you ask? Are we ready to carve our slice of the global pie, or at least bake our own little pies? Judging by the number of data centers built and the market caps of Russian AI startups and hyperscalers, Russia has chosen its own special path: to sit on the riverbank and wait for something to float by. Then again, our 1C programmers — 1C being the homegrown accounting-and-ERP empire every Russian back office runs on — were, are, and forever shall be the best in the world.
-
-He cracked the joke. Then he wept.
-
 ---
 
 [^dataset]: The full event layer (110 signals, [JSONL](ai_oss_signals.jsonl) + [interactive catalog](ai_oss_events.html) with filters by region, domain, and evidence level) — appendix to the manifesto. Each signal has an id of the form `SIG_<year>_<topic>`, a date, region, evidence level, and links to primary sources.
