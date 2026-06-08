@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пульт управления концом света — модель «Приложения E»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d1014; --panel:#161b22; --panel2:#1b212b; --ink:#ece6d8;
+    --muted:#8b949e; --line:#2a313c; --hair:#222934;
+    --safe:#46c266; --danger:#f0524d; --amber:#f0b429; --cyan:#5cc8d6;
+    --invented:#e07b5a;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Spectral",Georgia,serif;
+    -webkit-font-smoothing:antialiased;}
+  body{
+    background-image:
+      radial-gradient(900px 500px at 80% -10%, rgba(240,180,41,.06), transparent 60%),
+      radial-gradient(700px 600px at -10% 110%, rgba(92,200,214,.05), transparent 55%);
+    line-height:1.5;
+  }
+  .wrap{max-width:1180px; margin:0 auto; padding:34px 22px 70px;}
+  .kicker{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--amber); margin:0 0 10px;}
+  h1{font-weight:800; font-size:clamp(30px,5vw,52px); line-height:1.02; margin:0 0 12px;
+     letter-spacing:-.01em;}
+  h1 em{font-style:italic; color:var(--amber);}
+  .lede{max-width:760px; color:#cfc8b8; font-size:18px; margin:0 0 6px;}
+  .lede b{color:var(--ink);}
+
+  .grid{display:grid; grid-template-columns:1.05fr .95fr; gap:26px; margin-top:30px;}
+  @media(max-width:900px){.grid{grid-template-columns:1fr;}}
+
+  .card{background:linear-gradient(180deg,var(--panel),#12161d);
+    border:1px solid var(--line); border-radius:14px; padding:20px 20px 22px;
+    box-shadow:0 18px 50px -30px rgba(0,0,0,.9);}
+
+  /* verdict */
+  #verdict{border-radius:14px; padding:18px 20px; margin-bottom:18px;
+    border:1px solid var(--line); transition:.35s; position:relative; overflow:hidden;}
+  #verdict .vlbl{font-family:"JetBrains Mono",monospace; font-size:11px;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--muted);}
+  #verdict .vmain{font-weight:800; font-size:30px; margin:4px 0 2px; letter-spacing:-.01em;}
+  #verdict .vsub{font-size:14px; color:#c7c0b1; font-family:"JetBrains Mono",monospace;}
+  .vsafe{background:linear-gradient(180deg,rgba(70,194,102,.14),rgba(70,194,102,.03));
+    border-color:rgba(70,194,102,.45)!important;}
+  .vsafe .vmain{color:var(--safe);}
+  .vdoom{background:linear-gradient(180deg,rgba(240,82,77,.16),rgba(240,82,77,.03));
+    border-color:rgba(240,82,77,.5)!important;}
+  .vdoom .vmain{color:var(--danger);}
+
+  canvas{width:100%; height:auto; display:block; border-radius:10px;
+    background:#0b0e12; border:1px solid var(--hair);}
+  .legend{display:flex; gap:18px; flex-wrap:wrap; font-family:"JetBrains Mono",monospace;
+    font-size:11px; color:var(--muted); margin-top:10px;}
+  .legend span{display:inline-flex; align-items:center; gap:6px;}
+  .swatch{width:14px; height:3px; border-radius:2px; display:inline-block;}
+
+  /* commentary */
+  #comment{margin-top:16px; padding:14px 16px; border-left:3px solid var(--amber);
+    background:rgba(240,180,41,.05); border-radius:0 8px 8px 0; min-height:74px;
+    transition:.2s;}
+  #comment .ctag{font-family:"JetBrains Mono",monospace; font-size:10px;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--amber);}
+  #comment p{margin:5px 0 0; font-size:15.5px; color:#e8e2d4;}
+
+  /* sliders */
+  .group-title{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--muted); margin:18px 0 8px; padding-bottom:6px;
+    border-bottom:1px dashed var(--hair);}
+  .group-title:first-of-type{margin-top:2px;}
+  .sld{margin:13px 0;}
+  .sld .row{display:flex; justify-content:space-between; align-items:baseline; gap:10px;}
+  .sld .name{font-weight:600; font-size:15px;}
+  .sld .gloss{color:var(--muted); font-size:13px; font-style:italic;}
+  .sld .val{font-family:"JetBrains Mono",monospace; font-size:14px; color:var(--amber);
+    font-weight:500; min-width:64px; text-align:right;}
+  .tag{font-family:"JetBrains Mono",monospace; font-size:9.5px; letter-spacing:.12em;
+    text-transform:uppercase; padding:2px 7px; border-radius:20px; margin-left:8px;
+    border:1px solid currentColor; vertical-align:middle;}
+  .t-nm{color:var(--amber);}            /* не измерено */
+  .t-inv{color:var(--invented);}        /* выдумано */
+  .t-def{color:var(--cyan);}            /* определение */
+  input[type=range]{-webkit-appearance:none; appearance:none; width:100%; height:5px;
+    margin-top:9px; border-radius:5px; background:#2c333e; outline:none; cursor:pointer;}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none; width:18px; height:18px;
+    border-radius:50%; background:var(--ink); border:3px solid var(--amber);
+    box-shadow:0 0 0 3px rgba(240,180,41,.15); transition:.12s;}
+  input[type=range]::-webkit-slider-thumb:active{transform:scale(1.18);}
+  input[type=range]::-moz-range-thumb{width:18px; height:18px; border-radius:50%;
+    background:var(--ink); border:3px solid var(--amber);}
+  .sld.invented input[type=range]::-webkit-slider-thumb{border-color:var(--invented);
+    box-shadow:0 0 0 3px rgba(224,123,90,.2);}
+  .sld.def input[type=range]::-webkit-slider-thumb{border-color:var(--cyan);}
+
+  .presets{display:flex; flex-wrap:wrap; gap:9px; margin-top:6px;}
+  button.preset{font-family:"JetBrains Mono",monospace; font-size:12px; cursor:pointer;
+    background:var(--panel2); color:var(--ink); border:1px solid var(--line);
+    padding:8px 13px; border-radius:8px; transition:.15s;}
+  button.preset:hover{border-color:var(--amber); color:var(--amber);}
+
+  .readout{display:flex; gap:24px; flex-wrap:wrap; margin-top:14px;
+    font-family:"JetBrains Mono",monospace; font-size:13px; color:var(--muted);}
+  .readout b{color:var(--ink); font-weight:500;}
+
+  .foot{margin-top:40px; padding-top:22px; border-top:1px solid var(--line);
+    color:#bdb6a7; max-width:820px; font-size:16px;}
+  .foot h3{font-size:14px; font-family:"JetBrains Mono",monospace; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--amber); margin:0 0 10px;}
+  .foot p{margin:0 0 12px;}
+  .flip{font-family:"JetBrains Mono",monospace; color:var(--danger); font-weight:700;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">Модель «Приложения E» · интерактивная</p>
+  <h1>Пульт управления <em>концом света</em></h1>
+  <p class="lede">Это та самая модель AI-капитализма, которая «доказывает» коллапс к 2032 году. Только теперь у вас есть <b>ползунки</b>. Подвигайте их — и посмотрите, как дата катастрофы переезжает, исчезает или наступает завтра. Ни одно из этих чисел не измерено в реальности. <b>Всё, что меняет вывод — это чужие догадки.</b></p>
+
+  <div class="grid">
+    <!-- LEFT: output -->
+    <div>
+      <div id="verdict">
+        <div class="vlbl">Вердикт модели</div>
+        <div class="vmain" id="vmain">…</div>
+        <div class="vsub" id="vsub"></div>
+      </div>
+      <div class="card">
+        <canvas id="plot" width="640" height="380"></canvas>
+        <div class="legend">
+          <span><i class="swatch" style="background:var(--amber)"></i> drift ‖δ‖ — «напряжение» системы</span>
+          <span><i class="swatch" style="background:var(--danger)"></i> черта катастрофы (δ_crit)</span>
+          <span><i class="swatch" style="background:var(--safe)"></i> рефлексивный ресурс V_r</span>
+        </div>
+        <div class="readout">
+          <span>год коллапса: <b id="r-col">—</b></span>
+          <span>пиковый drift: <b id="r-max">—</b></span>
+          <span>вердикт переворачивался: <b id="r-flip">0</b> раз</span>
+        </div>
+        <div id="comment">
+          <div class="ctag">что происходит</div>
+          <p id="comment-text">Двигайте любой ползунок справа. Я буду объяснять, что именно вы подкрутили — и почему это не имеет отношения к реальному миру.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: controls -->
+    <div class="card">
+      <div class="presets">
+        <button class="preset" data-preset="doom">😱 Думерский дефолт</button>
+        <button class="preset" data-preset="optimist">😎 Оптимист</button>
+        <button class="preset" data-preset="nowindow">🤷 Окна нет вообще</button>
+        <button class="preset" data-preset="reset">↺ Сброс</button>
+      </div>
+
+      <div class="group-title">«Реальность» (на самом деле — догадка о ней)</div>
+      <div class="sld" data-id="growth">
+        <div class="row"><span class="name">Рост мощности ИИ <span class="tag t-nm">постулат</span></span><span class="val" id="v-growth"></span></div>
+        <div class="gloss">в документе просто написано «~25% в год». Откуда — неизвестно.</div>
+        <input type="range" id="growth" min="0" max="50" step="1">
+      </div>
+
+      <div class="group-title">Механизм, которого нет в теории</div>
+      <div class="sld invented" data-id="kappa">
+        <div class="row"><span class="name">Скорость адаптации институтов κ <span class="tag t-inv">выдумано</span></span><span class="val" id="v-kappa"></span></div>
+        <div class="gloss">этого уравнения в «Приложении E» нет — я дописал его сам, чтобы модель вообще считалась. А именно оно решает исход.</div>
+        <input type="range" id="kappa" min="0" max="0.6" step="0.01">
+      </div>
+
+      <div class="group-title">Скорости (подобраны «на глаз»)</div>
+      <div class="sld" data-id="a1">
+        <div class="row"><span class="name">Как быстро элиты «закручивают гайки» α₁ <span class="tag t-nm">не измерено</span></span><span class="val" id="v-a1"></span></div>
+        <input type="range" id="a1" min="0" max="1.5" step="0.02">
+      </div>
+      <div class="sld" data-id="a2">
+        <div class="row"><span class="name">Эффективность реформ α₂ <span class="tag t-nm">не измерено</span></span><span class="val" id="v-a2"></span></div>
+        <input type="range" id="a2" min="0" max="1.5" step="0.02">
+      </div>
+      <div class="sld" data-id="Kd">
+        <div class="row"><span class="name">Порог «тревоги» элит K_δ <span class="tag t-nm">не измерено</span></span><span class="val" id="v-Kd"></span></div>
+        <input type="range" id="Kd" min="0.3" max="3" step="0.05">
+      </div>
+      <div class="sld" data-id="eta1">
+        <div class="row"><span class="name">Насколько drift зависит от ИИ η₁ <span class="tag t-nm">не измерено</span></span><span class="val" id="v-eta1"></span></div>
+        <input type="range" id="eta1" min="0" max="1" step="0.02">
+      </div>
+
+      <div class="group-title">Где провести красную линию</div>
+      <div class="sld def" data-id="dcrit">
+        <div class="row"><span class="name">Что считать «катастрофой» δ_crit <span class="tag t-def">определение</span></span><span class="val" id="v-dcrit"></span></div>
+        <div class="gloss">это не факт о мире, а выбор: где нарисовать черту. Подвиньте — и катастрофа есть/нет без всякого изменения траектории.</div>
+        <input type="range" id="dcrit" min="1" max="4" step="0.05">
+      </div>
+
+      <div class="group-title">Единственное, что похоже на «действие»</div>
+      <div class="sld" data-id="c">
+        <div class="row"><span class="name">Интенсивность реформ / размыкания</span><span class="val" id="v-c"></span></div>
+        <input type="range" id="c" min="0" max="1" step="0.02">
+      </div>
+      <div class="sld" data-id="tstart">
+        <div class="row"><span class="name">Год начала реформ</span><span class="val" id="v-tstart"></span></div>
+        <input type="range" id="tstart" min="2025" max="2040" step="0.5">
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <h3>Зачем это всё</h3>
+    <p>Каждый раз, когда вы двигаете ползунок и вердикт меняется с «спасены» на «коллапс» — вы наблюдаете не свойство мира, а свойство <b>чисел, которые кто-то выбрал</b>. Модель честно считает следствия из этих чисел. Но сами числа взяты не из измерений, а из воздуха.</p>
+    <p>Особенно показательны три ползунка: <b style="color:var(--invented)">κ</b> (его в теории вообще нет), <b style="color:var(--cyan)">δ_crit</b> (это определение слова «катастрофа», а не наблюдение) и <b style="color:var(--amber)">рост ИИ</b> (постулат). Любого из них достаточно, чтобы «доказать» что угодно.</p>
+    <p>Вывод не в том, что AI-капитализм безопасен или опасен. Вывод в том, что <b>эта конкретная модель не может ответить на вопрос</b> — она лишь возвращает то, что в неё заложили. Чтобы она что-то «знала», её параметры пришлось бы привязать к реальным данным и проверить на предсказаниях, которых она ещё не видела. Пока этого нет — это не прогноз, а красивый калькулятор догадок.</p>
+  </div>
+</div>
+
+<script>
+// ---------- параметры по умолчанию (≈ "рефлексивный" безопасный сценарий) ----------
+const DEF = {growth:25, kappa:0.30, a1:0.60, a2:0.90, Kd:1.00, eta1:0.50,
+             dcrit:2.00, c:0.90, tstart:2025};
+const P = {...DEF};
+
+const FIXED = {beta1:0.5, beta2:0.15, HSigma:1.0, Phi0:0.5,
+               Vrmax:3.0, Vrmin:0.5, Umin:0.10, Xi0:0.75, Vr0:1.0,
+               t0:2025, tEnd:2042, dt:0.02};
+
+// ---------- модель (RK4) ----------
+function controlAt(t){
+  const lo=0.10, hi=P.c, ts=P.tstart, te=P.tstart+2;
+  if(t<=ts) return lo;
+  if(t>=te) return hi;
+  return lo+(hi-lo)*(t-ts)/(te-ts);
+}
+function PhiAI(t){ return FIXED.Phi0*Math.pow(1+P.growth/100, t-FIXED.t0); }
+function aux(t,Xi,Vr,Cap){
+  const c=controlAt(t);
+  const VrAlt=Math.min(Math.max(Vr/FIXED.Vrmax,0),1);
+  const U=Math.min(Math.max(0.75*c+0.25*VrAlt,0),1);
+  const e2=(1-P.eta1)*0.6, e3=(1-P.eta1)*0.4;
+  let delta=P.eta1*(PhiAI(t)/Cap)+e2*Xi+e3*(1-Vr/FIXED.Vrmax);
+  if(delta<0)delta=0;
+  return {c,U,delta};
+}
+function f(t,y){
+  const [Xi,Vr,Cap]=y;
+  const {c,U,delta}=aux(t,Xi,Vr,Cap);
+  const fa=delta*delta/(delta*delta+P.Kd*P.Kd);
+  const dXi=P.a1*fa*(1-Xi)-P.a2*U*Xi;
+  const dVr=P.beta1*FIXED.HSigma*(1-Xi)*Vr*(1-Vr/FIXED.Vrmax)-FIXED.beta2*Vr;
+  const dCap=P.kappa*c*(Vr/FIXED.Vrmax)*Cap;
+  return [dXi,dVr,dCap];
+}
+P.beta1=FIXED.beta1; P.beta2=FIXED.beta2;
+function add(a,b,s){return a.map((v,i)=>v+b[i]*s);}
+function simulate(){
+  let y=[FIXED.Xi0,FIXED.Vr0,1.0];
+  const dt=FIXED.dt; const out={t:[],delta:[],Vr:[],Xi:[]};
+  let tCol=null, maxD=0;
+  for(let t=FIXED.t0; t<=FIXED.tEnd+1e-9; t+=dt){
+    const a=aux(t,y[0],y[1],y[2]);
+    out.t.push(t); out.delta.push(a.delta); out.Vr.push(y[1]); out.Xi.push(y[0]);
+    if(a.delta>maxD)maxD=a.delta;
+    const broke=(a.delta>P.dcrit)||(y[1]<FIXED.Vrmin)||(a.U<FIXED.Umin);
+    if(broke && tCol===null && t>FIXED.t0+0.05) tCol=t;
+    const k1=f(t,y);
+    const k2=f(t+dt/2, add(y,k1,dt/2));
+    const k3=f(t+dt/2, add(y,k2,dt/2));
+    const k4=f(t+dt, add(y,k3,dt));
+    y=[0,1,2].map(i=>y[i]+dt/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]));
+    y[0]=Math.min(Math.max(y[0],0),1);
+    if(y[1]<0)y[1]=0;
+  }
+  return {out,tCol,maxD};
+}
+
+// ---------- рисование ----------
+const cv=document.getElementById('plot'), cx=cv.getContext('2d');
+function resize(){
+  const w=cv.clientWidth, h=Math.round(w*0.6);
+  const dpr=window.devicePixelRatio||1;
+  cv.width=w*dpr; cv.height=h*dpr; cv.style.height=h+'px';
+  cx.setTransform(dpr,0,0,dpr,0,0);
+  return {w,h};
+}
+function draw(sim){
+  const {w,h}=resize();
+  const L=46,R=14,T=16,B=30;
+  const x0=L,x1=w-R,y0=T,y1=h-B;
+  cx.clearRect(0,0,w,h);
+  const yMax=Math.max(P.dcrit*1.25, sim.maxD*1.08, 2.3);
+  const tA=FIXED.t0,tB=FIXED.tEnd;
+  const X=t=>x0+(t-tA)/(tB-tA)*(x1-x0);
+  const Y=v=>y1-(v/yMax)*(y1-y0);
+  // grid + year labels
+  cx.font='11px "JetBrains Mono",monospace'; cx.fillStyle='#5a6573'; cx.strokeStyle='#1d2530';
+  for(let yr=2025; yr<=2040; yr+=5){
+    cx.beginPath(); cx.moveTo(X(yr),y0); cx.lineTo(X(yr),y1); cx.stroke();
+    cx.textAlign='center'; cx.fillText(yr, X(yr), y1+18);
+  }
+  for(let v=0; v<=yMax; v+=1){
+    cx.beginPath(); cx.moveTo(x0,Y(v)); cx.lineTo(x1,Y(v)); cx.stroke();
+    cx.textAlign='right'; cx.fillText(v.toFixed(0), x0-8, Y(v)+4);
+  }
+  // collapse shading
+  if(sim.tCol!==null){
+    cx.fillStyle='rgba(240,82,77,.08)';
+    cx.fillRect(X(sim.tCol),y0,x1-X(sim.tCol),y1-y0);
+  }
+  // Vr (green, scaled into same axis: Vr range ~0..3 fits)
+  cx.beginPath(); cx.strokeStyle='rgba(70,194,102,.85)'; cx.lineWidth=1.6;
+  sim.out.t.forEach((t,i)=>{const x=X(t),y=Y(sim.out.Vr[i]); i?cx.lineTo(x,y):cx.moveTo(x,y);});
+  cx.stroke();
+  // dcrit line
+  cx.beginPath(); cx.strokeStyle='var(--danger)'; cx.strokeStyle='#f0524d';
+  cx.setLineDash([7,5]); cx.lineWidth=1.5;
+  cx.moveTo(x0,Y(P.dcrit)); cx.lineTo(x1,Y(P.dcrit)); cx.stroke(); cx.setLineDash([]);
+  cx.fillStyle='#f0524d'; cx.textAlign='left';
+  cx.fillText('δ_crit='+P.dcrit.toFixed(2), x0+6, Y(P.dcrit)-6);
+  // delta (amber, thick)
+  cx.beginPath(); cx.strokeStyle='#f0b429'; cx.lineWidth=2.6;
+  sim.out.t.forEach((t,i)=>{const x=X(t),y=Y(sim.out.delta[i]); i?cx.lineTo(x,y):cx.moveTo(x,y);});
+  cx.stroke();
+  // collapse marker
+  if(sim.tCol!==null){
+    cx.strokeStyle='#f0524d'; cx.lineWidth=2;
+    cx.beginPath(); cx.moveTo(X(sim.tCol),y0); cx.lineTo(X(sim.tCol),y1); cx.stroke();
+    cx.fillStyle='#f0524d'; cx.font='bold 12px "JetBrains Mono",monospace';
+    cx.textAlign='center';
+    cx.fillText('💥 '+sim.tCol.toFixed(1), X(sim.tCol), y0+14);
+  }
+}
+
+// ---------- комментарии (на человеческом языке) ----------
+const COMMENT={
+  growth:["вы подкрутили рост ИИ","Вы не изменили мир — вы изменили <b>догадку о темпе роста ИИ</b>. Заметьте, как поехала дата. В документе это число просто объявлено («~25% в год»), без всякого источника. Поставьте 8% — катастрофа исчезает. Поставьте 40% — она неизбежна. Один постулат решает всё."],
+  kappa:["вы тронули выдуманный параметр","Внимание: <b>этого параметра в теории нет вообще</b>. Уравнения «Приложения E» без него не замыкаются, и я дописал его сам. И именно он — главный рубильник «коллапс / спасение». Вывод модели держится на куске, которого в самой теории не существует."],
+  dcrit:["вы подвинули определение катастрофы","Посмотрите внимательно: <b>сама кривая drift не изменилась</b> — изменилось только то, где проведена красная линия. «Катастрофа» здесь — это не событие в мире, а ваш выбор порога. Двигая его, можно «доказать» и конец света, и его отсутствие на одной и той же траектории."],
+  a1:["вы изменили скорость «закручивания гаек»","Эту скорость никто никогда не измерял — она подобрана на глаз. А смотрите: лёгкое движение, и устойчивый мир сваливается в коллапс. Когда вывод так чувствителен к непроверенному числу, это не предсказание."],
+  a2:["вы изменили эффективность реформ","Насколько реформы реально снижают «закрытость»? Никто не знает — числа нет. Но от него зависит, спасётся система или нет. Модель уверенно считает следствие из неизвестной величины."],
+  Kd:["вы изменили порог «тревоги» элит","Параметр чистого воображения: при каком уровне напряжения элиты начинают реагировать. Подвиньте — и динамика перестраивается. Точность здесь иллюзорна."],
+  eta1:["вы переставили вес причин drift","Вы решили, насколько «напряжение» зависит от ИИ, а насколько — от закрытости и упадка рефлексии. Это веса в формуле, выбранные автором. Другой автор выберет другие — и получит другой апокалипсис."],
+  c:["вы изменили интенсивность реформ","Это единственное, что в модели похоже на реальное действие. Но обратите внимание: спасает оно или нет — целиком зависит от всех чисел выше, которые взяты с потолка. «Действие» работает только в мире выбранных параметров."],
+  tstart:["вы сдвинули год реформ","Так получается знаменитое «критическое окно». Но «последний безопасный год» — не открытие: он целиком определяется ростом ИИ и порогом δ_crit, которые вы только что видели свободно крутящимися."]
+};
+
+// ---------- связывание ----------
+const ids=Object.keys(DEF);
+let lastVerdict=null, flips=0;
+function fmt(id,v){
+  if(id==='growth') return v.toFixed(0)+'%/год';
+  if(id==='tstart') return v.toFixed(1);
+  if(id==='dcrit'||id==='Kd') return v.toFixed(2);
+  if(id==='c'||id==='eta1') return v.toFixed(2);
+  return v.toFixed(2);
+}
+function setComment(id){
+  const c=COMMENT[id]; if(!c)return;
+  document.querySelector('#comment .ctag').innerHTML=c[0];
+  document.getElementById('comment-text').innerHTML=c[1];
+  const inv=(id==='kappa'), def=(id==='dcrit');
+  const cm=document.getElementById('comment');
+  cm.style.borderLeftColor=inv?'var(--invented)':def?'var(--cyan)':'var(--amber)';
+  cm.style.background=inv?'rgba(224,123,90,.06)':def?'rgba(92,200,214,.06)':'rgba(240,180,41,.05)';
+}
+function refresh(changedId){
+  ids.forEach(id=>{document.getElementById('v-'+id).textContent=fmt(id,P[id]);});
+  const sim=simulate();
+  draw(sim);
+  const doom=sim.tCol!==null;
+  const vd=document.getElementById('verdict');
+  vd.className=doom?'vdoom':'vsafe';
+  document.getElementById('vmain').textContent=doom?('💥 Коллапс ≈ '+sim.tCol.toFixed(0)):'✓ Коллапса нет';
+  document.getElementById('vsub').textContent=doom
+    ? 'система выходит из «зоны жизнеспособности»'
+    : 'в окне до 2042 года порог не превышен';
+  document.getElementById('r-col').textContent=doom?sim.tCol.toFixed(1):'—';
+  document.getElementById('r-max').textContent=sim.maxD.toFixed(2);
+  if(lastVerdict!==null && lastVerdict!==doom){flips++;
+    document.getElementById('r-flip').textContent=flips;
+  }
+  lastVerdict=doom;
+  if(changedId)setComment(changedId);
+}
+ids.forEach(id=>{
+  const el=document.getElementById(id);
+  el.value=P[id];
+  el.addEventListener('input',()=>{P[id]=parseFloat(el.value); refresh(id);});
+});
+
+// presets
+const PRESETS={
+  doom:{growth:32,kappa:0.10,a1:0.9,a2:0.6,Kd:0.8,eta1:0.6,dcrit:1.6,c:0.4,tstart:2031},
+  optimist:{growth:10,kappa:0.45,a1:0.4,a2:1.1,Kd:1.6,eta1:0.35,dcrit:2.6,c:0.9,tstart:2025},
+  nowindow:{growth:25,kappa:0.30,a1:0.6,a2:0.9,Kd:1.0,eta1:0.5,dcrit:2.0,c:0.9,tstart:2025},
+  reset:{...DEF}
+};
+const PRESET_MSG={
+  doom:["пресет: думерский дефолт","Подобрал числа «пессимистично» — и вот вам уверенный коллапс к началу 2030-х. Всё «строго по модели». Вопрос один: почему именно эти числа, а не соседние?"],
+  optimist:["пресет: оптимист","Те же уравнения, числа подкручены в «оптимистичную» сторону — и катастрофы как не бывало. Обе картинки одинаково «обоснованы» формулами. В этом и проблема."],
+  nowindow:["пресет: базовый","Дефолтный «рефлексивный» сценарий. Кажется устойчивым — пока не начнёшь двигать ползунки. Попробуйте поднять рост ИИ или опустить δ_crit."],
+  reset:["сброшено","Вернул значения по умолчанию. Дальше — экспериментируйте: цель не найти «правильный» ответ, а почувствовать, что правильного ответа модель просто не содержит."]
+};
+document.querySelectorAll('.preset').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const p=PRESETS[b.dataset.preset]; Object.assign(P,p);
+    ids.forEach(id=>{document.getElementById(id).value=P[id];});
+    refresh();
+    const m=PRESET_MSG[b.dataset.preset];
+    document.querySelector('#comment .ctag').innerHTML=m[0];
+    document.getElementById('comment-text').innerHTML=m[1];
+    document.getElementById('comment').style.borderLeftColor='var(--amber)';
+  });
+});
+
+window.addEventListener('resize',()=>refresh());
+refresh();
+</script>
+</body>
+</html>
