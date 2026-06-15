@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "Игры в профессию — Independent Fact-Check Pack",
-    "version": "2.1",
-    "fact_check_date": "2026-05-25",
-    "data_relevance_date": "2026-05",
+    "version": "2.2",
+    "fact_check_date": "2026-06-15",
+    "data_relevance_date": "2026-06",
     "passes": [
       {
         "id": "russia",
@@ -44,6 +44,11 @@
         "id": "b-russia-it",
         "name": "Russian IT specialist — decentralised network translator",
         "approach": "biography-anchored: GitHub sanctions + 152-ФЗ + workslop as tragedy of the commons"
+      },
+      {
+        "id": "b-russia-ai-security",
+        "name": "Russian AI security governance — MLSecOps and shadow AI",
+        "approach": "survey-anchored: AI adoption/control gap, external-model governance and MLSecOps maturity"
       }
     ],
     "evidence_levels": {
@@ -60,6 +65,16 @@
       "not_found": "claim could not be located in any source"
     },
     "changelog": [
+      {
+        "version": "2.2",
+        "date": "2026-06-15",
+        "description": "Added K2 Cybersecurity / Kaspersky 2026 survey claims on Russian AI-security maturity: operational dependency, external-model control gap and MLSecOps maturity.",
+        "added_claims": 3,
+        "updated_passes": [
+          "b-russia-ai-security",
+          "b-russia-it"
+        ]
+      },
       {
         "version": "2.1",
         "date": "2026-05-25",
@@ -86,14 +101,14 @@
   },
   "summary": {
     "stats": {
-      "total_claims": 65,
-      "verified": 38,
+      "total_claims": 68,
+      "verified": 41,
       "partially_verified": 18,
       "needs_correction": 6,
       "not_verified": 3,
       "not_found": 0
     },
-    "approximate_pass_rate": "86%",
+    "approximate_pass_rate": "87%",
     "key_findings": [
       "Most priority claims pass primary-source verification",
       "Russian regulatory documents and migration figures are well-sourced via official channels (pravo.gov.ru, MVD, Mintsifry)",
@@ -115,7 +130,8 @@
       "Russian IT junior squeeze is directionally confirmed: fewer vacancies, more resumes per vacancy, stronger employer selectivity, and AI shifting the entry-level productivity bar.",
       "Russian IT wage dynamics are polarizing: aggregate growth slowed to ~4.1% YoY while AI/ML, cybersecurity, DevOps/SRE and senior roles remain expensive.",
       "Positive Technologies is useful as a quiet-restructuring case, but not as an AI-causality case; do not code it as AI replacement.",
-      "Global RationalFX layoff figures are useful as frame only: first six weeks / early-2026 estimate, not official labor statistics and not a January-only value."
+      "Global RationalFX layoff figures are useful as frame only: first six weeks / early-2026 estimate, not official labor statistics and not a January-only value.",
+      "K2/Kaspersky 2026 AI-security survey adds a Russian governance-gap signal: AI is already operationally useful, but external-model control and MLSecOps maturity lag behind adoption."
     ]
   },
   "claims": [
@@ -2785,6 +2801,72 @@
         "The paradox is structural: shortage in frontier/senior/security roles can coexist with cuts in lower-productivity, duplicated or post-M&A roles."
       ],
       "recommended_phrasing": "Российский IT-рынок одновременно режет людей и сохраняет дефицит: нижний вход и массовые роли сжимаются, а AI/ML, ИБ, DevOps/SRE и senior-профили остаются дорогими. Это не обычный спад, а переразметка ценности навыков."
+    },
+    {
+      "id": "b-rus-ai-sec-01",
+      "pass": "b-russia-ai-security",
+      "topic": "Russian AI operational dependency and security maturity gap, 2026",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "claim": "A K2 Cybersecurity / Kaspersky study, conducted from January to April 2026, surveyed 500 large Russian-market companies and focused on 210 organizations where AI is already used, piloted, embedded in products or considered a development direction. Among these organizations, 32% said business would continue if AI services became unavailable but with moderate losses, while a combined 11% already treated AI as critical for key processes or many operations.",
+      "sources": [
+        {
+          "title": "K2 Кибербезопасность / Лаборатория Касперского: Безопасность ИИ в России: практика, риски, зрелость",
+          "url": "https://api.cybersecurity.k2.tech/research/MLSec_k2cybersecurity_Kaspersky.pdf",
+          "type": "industry_survey_pdf",
+          "date": "2026-06-01"
+        }
+      ],
+      "caveats": [
+        "Vendor/industry survey, not official administrative statistics; use as observational evidence about large-company practice.",
+        "The focused analytic base is 210 AI-engaged organizations, not all 500 companies in the broad sample.",
+        "Do not infer employment cuts from this claim; it measures operational dependency and governance pressure, not headcount."
+      ],
+      "recommended_phrasing": "По исследованию K2 Кибербезопасность и «Лаборатории Касперского» (январь–апрель 2026), среди крупных российских компаний, уже работающих с ИИ, 32% ожидают умеренные потери при недоступности ИИ-сервисов, а 11% считают ИИ критически важным для ключевых или многих операций. Это лучше использовать как признак операционной зависимости от ИИ, а не как статистику занятости."
+    },
+    {
+      "id": "b-rus-ai-sec-02",
+      "pass": "b-russia-ai-security",
+      "topic": "External AI model control and shadow-AI risk in Russian companies",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "claim": "In the same K2/Kaspersky survey, 61% of respondents said they tried to control employee use of third-party AI services but faced technological and organizational difficulties. Real control over external AI-service use was implemented by 29% of companies; 47% relied on passive monitoring and training, while 24% blocked access. The report explicitly warns that pure blocking can push employees into shadow AI through personal devices or unauthorized channels.",
+      "sources": [
+        {
+          "title": "K2 Кибербезопасность / Лаборатория Касперского: Безопасность ИИ в России: практика, риски, зрелость",
+          "url": "https://api.cybersecurity.k2.tech/research/MLSec_k2cybersecurity_Kaspersky.pdf",
+          "type": "industry_survey_pdf",
+          "date": "2026-06-01"
+        }
+      ],
+      "caveats": [
+        "Survey reflects respondent self-report and vendor framing; it is useful for governance maturity, not for precise incident prevalence.",
+        "The 29/47/24 split describes approaches to external-model access control, not overall AI adoption.",
+        "Use “shadow AI risk” as a governance mechanism, not as proof that all blocked organizations have active leakage."
+      ],
+      "recommended_phrasing": "В российском корпоративном контуре виден разрыв управления внешними ИИ-сервисами: 61% компаний пытаются контролировать их использование, но реальный контроль есть только у 29%; остальные в основном мониторят пассивно или блокируют доступ. В логике ProfGames это сигнал о новом корпоративном переводчике между человеком, моделью, данными и риском."
+    },
+    {
+      "id": "b-rus-ai-sec-03",
+      "pass": "b-russia-ai-security",
+      "topic": "MLSecOps familiarity and maturity gap in Russian AI-using companies",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "claim": "The K2/Kaspersky survey reports that MLSecOps has not yet become a common AI-security management standard: 46% of respondents were unfamiliar with the approach, 40% knew it only superficially, and 14% understood its principles well. Among organizations with their own AI development, only 18% reported managed MLSecOps processes and 7% reported mature MLSecOps practice; 25% reported no MLSecOps processes.",
+      "sources": [
+        {
+          "title": "K2 Кибербезопасность / Лаборатория Касперского: Безопасность ИИ в России: практика, риски, зрелость",
+          "url": "https://api.cybersecurity.k2.tech/research/MLSec_k2cybersecurity_Kaspersky.pdf",
+          "type": "industry_survey_pdf",
+          "date": "2026-06-01"
+        }
+      ],
+      "caveats": [
+        "Vendor/industry survey; evidence level should remain B/C even though the report itself is the primary source for its own numbers.",
+        "The maturity percentages apply to organizations with their own AI development where that survey section is relevant, not necessarily the entire broad sample.",
+        "Use as a professional-boundary signal: MLSecOps / AI security engineering is emerging, but standardization is incomplete."
+      ],
+      "recommended_phrasing": "MLSecOps в России пока не стал массовой нормой: 46% респондентов не знакомы с подходом, 40% знают его поверхностно, 14% хорошо понимают принципы; зрелая практика есть только у 7% компаний с собственной AI-разработкой. Это сигнал появления новой профессиональной границы, а не доказательство массовой зрелости."
     }
   ],
   "gaps": [
