@@ -1,18 +1,25 @@
 # AI Power Atlas
 
-English publication package for **AI Stack as Structural Power**.
+Publication package for **AI Stack as Structural Power**.
 
 Site URL after GitHub Pages deploy:
 
 <https://scadastrangelove.github.io/profgames/aipower/>
+
+Direct atlas links:
+
+- English: <https://scadastrangelove.github.io/profgames/aipower/ai-power-atlas.html>
+- Russian: <https://scadastrangelove.github.io/profgames/aipower/ai-power-atlas-ru.html>
 
 ## Artifacts
 
 | File | Description |
 | --- | --- |
 | [`index.html`](index.html) | Small entry page for the AI Power package. |
-| [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained interactive atlas: overview, story map, stack heatmap, fact catalog, claim checks and source index. |
+| [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, stack heatmap, fact catalog, claim checks and source index. |
+| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.11 storygraph line. |
 | [`ai_power_storygraph_v0_11_en.json`](ai_power_storygraph_v0_11_en.json) | Machine-readable English storygraph used by the atlas. |
+| [`ai_power_storygraph_v0_11_ru.json`](ai_power_storygraph_v0_11_ru.json) | Russian v0.11 master storygraph with facts, claims, edges, sources and graph diagnostics. |
 
 ## Current Counts
 
@@ -41,9 +48,11 @@ The safe wording rule is simple: present contested or partial evidence as contes
 
 ## Provenance
 
-This English package was generated from the v0.11 master storygraph built during the AIgeopol research pass.
+This package was generated from the v0.11 master storygraph built during the AIgeopol research pass.
 The v0.11 update merged a targeted heatmap backfill: 22 additional evidence signals, 2 new story arcs and explicit edges so previously sparse 2024-2025 model/data/cloud/cyber cells are represented.
+
+The English atlas and JSON are a publication translation of the same research line. The Russian atlas and JSON preserve the Russian working version.
 
 ## Reuse
 
-The JSON is intended for agents and researchers. Keep stable ids when extending it, and preserve source URLs, confidence levels, statuses and caveats.
+The JSON files are intended for agents and researchers. Keep stable ids when extending them, and preserve source URLs, confidence levels, statuses and caveats.
