@@ -103,7 +103,7 @@ svg{display:block}
 .arc-title{font:13px var(--sans);fill:var(--ink)}
 .arc-sub{font:10px var(--mono);fill:var(--faint)}
 .arc-band{stroke:var(--line);stroke-width:1}
-.edge-path{fill:none;stroke-width:2.4;cursor:pointer}
+.edge-path{fill:none;stroke-width:2.4;stroke-linecap:round;cursor:pointer}
 .edge-path.thin{stroke-width:1;opacity:.32}
 .edge-path.dashed{stroke-dasharray:6 5}
 .edge-path:hover{stroke-width:4;opacity:1}
@@ -264,7 +264,7 @@ footer{border-top:1px solid var(--line);margin-top:22px;padding-top:14px;color:v
       <section class="view" id="view-timeline">
         <div class="section">
           <h2>Хронология по слоям</h2>
-          <p class="lede">Сигналы разложены по слоям AI-стека. Multi-layer факт повторяется на каждой релевантной дорожке; цвет точки показывает уровень уверенности A/B/C/D; клик открывает карточку факта.</p>
+          <p class="lede">Сигналы разложены по слоям AI-стека. Факт с несколькими слоями повторяется на каждой релевантной дорожке; цвет точки показывает уровень уверенности A/B/C/D; клик открывает карточку факта.</p>
           <div class="svg-frame"><svg class="timeline-svg" id="timeline-svg" viewBox="0 0 1180 720" preserveAspectRatio="xMinYMin meet"></svg></div>
         </div>
       </section>
@@ -292,7 +292,7 @@ footer{border-top:1px solid var(--line);margin-top:22px;padding-top:14px;color:v
       <section class="view" id="view-stack">
         <div class="section">
           <h2>Тепловая карта стека</h2>
-          <p class="lede">Где концентрируется контроль: chips, cloud, models, data, cyber, decision-support, governance, finance.</p>
+          <p class="lede">Где концентрируется контроль: чипы, облако, модели, данные, кибербезопасность, поддержка решений, управление и финансы.</p>
           <div class="table-wrap"><table id="stack-table"></table></div>
         </div>
         <div class="section">
@@ -550,8 +550,33 @@ function arcColor(arcId){
 function relationColor(relation){
   return relationColors[relation] || '#46535f';
 }
+function ruPlural(count, one, few, many){
+  var n = Math.abs(Number(count)) % 100;
+  var n1 = n % 10;
+  if (n > 10 && n < 20) return many;
+  if (n1 > 1 && n1 < 5) return few;
+  if (n1 === 1) return one;
+  return many;
+}
+function edgeArcId(edge){
+  if (byArc[edge.arc_id]) return edge.arc_id;
+  if (byArc[edge.source]) return edge.source;
+  if (byArc[edge.target]) return edge.target;
+  return '';
+}
+function edgeArcColor(edge){
+  var arcId = edgeArcId(edge);
+  return arcId ? arcColor(arcId) : relationColor(edge.relation);
+}
+function edgeTitleRu(edge){
+  return [
+    arcTitleRu(edgeArcId(edge)),
+    relationLabel(edge.relation),
+    edge.summary_ru || edge.summary
+  ].filter(Boolean).join(' · ');
+}
 function headlineFindingRu(){
-  return 'Концентрация капитала видна только через разные режимы денег: US annual private investment, китайские private + guidance funds, европейские pledges, Gulf sovereign vehicles и compute-capacity contracts. Эти цифры нельзя складывать в один рейтинг без оговорок.';
+  return 'Концентрация капитала видна только если разделять разные режимы денег: ежегодные частные AI-инвестиции США, китайские частные инвестиции и накопительные государственные фонды, европейские программы мобилизации капитала, суверенные структуры Залива и контракты на вычислительные мощности. Эти цифры нельзя складывать в один рейтинг без оговорок.';
 }
 function kindLabel(kind){
   return {
@@ -599,7 +624,7 @@ function arcTitleRu(arcOrId){
     ARC_GULF_CONDITIONAL_SOVEREIGNTY: 'Залив: условный суверенный доступ',
     ARC_CHINA_COUNTERSTACK_ROUTE_AROUND: 'Китайский контр-стек: обход и непаритет',
     ARC_CYBER_CLAIM_TO_CAVEAT: 'Кибер: от caveat к раннему weaponization',
-    ARC_CAPITAL_MIX_PUBLIC_PRIVATE: 'Капитал: private, state-guidance, sovereign vehicles и pledges',
+    ARC_CAPITAL_MIX_PUBLIC_PRIVATE: 'Капитал: частные деньги, госфонды, суверенные структуры и обещания',
     ARC_CORPORATE_DECISION_SUPPORT_ADOPTION: 'Корпоративный decision-support: от BYOAI к governed internal layers',
     ARC_QUIET_ACCESS_CONTROL: 'Тихий контроль доступа: политики, проверенные пользователи, ASL',
     ARC_PALANTIR_DECISION_OS: 'Palantir как операционная система решений',
@@ -679,9 +704,9 @@ function initHeader(){
     D.meta.updated_at || D.meta.created_at || '',
     D.summary.total_events + ' фактов',
     D.summary.total_claims + ' тезисов',
-    D.summary.total_edges + ' связей'
+    D.summary.total_edges + ' ' + ruPlural(D.summary.total_edges, 'связь', 'связи', 'связей')
   ].filter(Boolean).map(function(item){ return '<span class="pill">' + esc(item) + '</span>'; }).join('');
-  document.getElementById('edge-hint').textContent = 'Сначала показаны ручные и сильные связи. Автоматические связи можно включить отдельно для аудита.';
+  document.getElementById('edge-hint').textContent = 'Цвет линии наследуется от сюжетной дуги слева; тип связи виден по пунктиру, толщине и подсказке. Автоматические связи можно включить отдельно для аудита.';
   document.getElementById('story-lede').textContent =
     D.summary.total_arcs + ' сюжетных дуг и связи между фактами, проверяемыми тезисами и опорными узлами рамки. Автоматические связи по умолчанию скрыты, чтобы карта читалась как рамка, а не как шумный дамп.';
 }
@@ -749,14 +774,61 @@ function renderCapitalMix(){
         ? '<a href="' + esc(item.url) + '" target="_blank" rel="noreferrer">' + esc(item.source_name || host(item.url)) + '</a>'
         : esc(item.source_name || '');
       return '<article class="capital-item" data-kind="source" data-id="' + esc(item.url || item.source_name || '') + '">' +
-        '<b>' + esc(item.amount || '') + '</b>' +
-        '<span>' + esc(item.label_ru || item.label || '') + '</span>' +
-        '<div class="mode">' + esc([item.mode_ru || item.mode, item.period].filter(Boolean).join(' · ')) + '</div>' +
-        '<span>' + esc(item.caveat_ru || item.caveat || '') + '</span>' +
+        '<b>' + esc(capitalAmountRu(item)) + '</b>' +
+        '<span>' + esc(capitalLabelRu(item)) + '</span>' +
+        '<div class="mode">' + esc([capitalModeRu(item), capitalPeriodRu(item)].filter(Boolean).join(' · ')) + '</div>' +
+        '<span>' + esc(capitalCaveatRu(item)) + '</span>' +
         '<span>' + source + '</span>' +
       '</article>';
     }).join('') +
-    '</div><p class="capital-note">Смысл блока — не сложить суммы, а отделить annual private investment, cumulative guidance funds, pledges, sovereign vehicles и contract ceilings.</p>';
+    '</div><p class="capital-note">Смысл блока — не сложить суммы, а отделить ежегодные частные инвестиции, накопительные государственные фонды, публичные обещания, суверенные инвестиционные структуры и потолки контрактов.</p>';
+}
+
+function capitalLabelRu(item){
+  var raw = item.label_ru || item.label || '';
+  var labels = {
+    'США: private AI investment': 'США: частные AI-инвестиции',
+    'Китай: private AI investment': 'Китай: частные AI-инвестиции',
+    'Китай: AI guidance funds': 'Китай: государственно-направляемые AI-фонды',
+    'Остальной мир: private implied': 'Остальной мир: частные инвестиции, оценка',
+    'Gulf state vehicles': 'Залив: суверенные инвестиционные структуры'
+  };
+  return labels[raw] || raw;
+}
+function capitalAmountRu(item){
+  var raw = item.amount || '';
+  var amounts = {
+    '$100B+ / ~$40B reported': '$100B+ / ~$40B по сообщениям'
+  };
+  return amounts[raw] || raw;
+}
+function capitalModeRu(item){
+  var raw = item.mode_ru || item.mode || '';
+  var modes = {
+    'mobilization / pledge': 'мобилизация капитала / объявленное обязательство',
+    'sovereign vehicle / reported fund': 'суверенная структура / заявленный фонд'
+  };
+  return modes[raw] || raw;
+}
+function capitalPeriodRu(item){
+  var raw = item.period || '';
+  var periods = {
+    '2000–2023 cumulative': '2000–2023, накопительно',
+    'announced 2025': 'объявлено в 2025'
+  };
+  return periods[raw] || raw;
+}
+function capitalCaveatRu(item){
+  var raw = item.caveat_ru || item.caveat || '';
+  var caveats = {
+    'Годовой private-investment показатель; не равен государственным программам или capex.': 'Годовой показатель частных инвестиций; не равен государственным программам или капитальным затратам.',
+    'Частная цифра занижает общую картину, потому что не включает guidance-funds.': 'Частная цифра занижает общую картину, потому что не включает государственно-направляемые фонды.',
+    'Накопительная оценка, не сравнивать напрямую с годовым private investment.': 'Накопительная оценка; её нельзя напрямую сравнивать с годовым показателем частных инвестиций.',
+    'Грубая разница между global private $344.7B, US $285.9B и China $12.4B.': 'Грубая разница между глобальными частными инвестициями $344.7B, США $285.9B и Китаем $12.4B.',
+    'Мобилизация public-private капитала, не deployed spend.': 'Мобилизация государственного и частного капитала, а не уже развёрнутые расходы.',
+    'MGX target/AUM и Saudi reported fund нельзя складывать с annual private investment.': 'Целевые активы MGX и сообщения о саудовском фонде нельзя складывать с годовым показателем частных инвестиций.'
+  };
+  return caveats[raw] || raw;
 }
 
 function optionList(values, label, selected, format){
@@ -819,7 +891,7 @@ function renderStoryMap(){
     arcEdges.slice(0, 18).forEach(function(edge, edgeIndex){
       var dotX = bandX + 20 + (edgeIndex % 18) * 17;
       var dotY = y - 8 + Math.floor(edgeIndex / 18) * 11;
-      out += '<circle class="edge-dot" data-kind="edge" data-id="' + esc(edge.id) + '" cx="' + dotX + '" cy="' + dotY + '" r="5" fill="' + relationColor(edge.relation) + '"><title>' + esc(edge.relation + ': ' + edge.summary_ru) + '</title></circle>';
+      out += '<circle class="edge-dot" data-kind="edge" data-id="' + esc(edge.id) + '" data-arc="' + esc(edgeArcId(edge)) + '" cx="' + dotX + '" cy="' + dotY + '" r="5" fill="' + edgeArcColor(edge) + '" stroke="' + relationColor(edge.relation) + '"><title>' + esc(edgeTitleRu(edge)) + '</title></circle>';
     });
   });
   THESIS.forEach(function(node){
@@ -835,9 +907,9 @@ function renderStoryMap(){
     var y1 = top + arcIndex * rowH - 8;
     var thesisId = byThesis[edge.target] ? edge.target : edge.source;
     var y2 = thesisY[thesisId] || 120;
-    var color = relationColor(edge.relation);
+    var color = edgeArcColor(edge);
     var cls = 'edge-path ' + esc(edge.style || '') + (edge.is_auto ? ' thin' : '');
-    out += '<path class="' + cls + '" data-kind="edge" data-id="' + esc(edge.id) + '" d="M' + pathStartX + ',' + y1 + ' C980,' + y1 + ' 986,' + y2 + ' ' + (thesisX - 22) + ',' + y2 + '" stroke="' + color + '" opacity="' + (edge.is_auto ? '.22' : '.5') + '"><title>' + esc(edge.summary_ru || edge.relation) + '</title></path>';
+    out += '<path class="' + cls + '" data-kind="edge" data-id="' + esc(edge.id) + '" data-arc="' + esc(edgeArcId(edge)) + '" d="M' + pathStartX + ',' + y1 + ' C980,' + y1 + ' 986,' + y2 + ' ' + (thesisX - 22) + ',' + y2 + '" stroke="' + color + '" opacity="' + (edge.is_auto ? '.22' : '.5') + '"><title>' + esc(edgeTitleRu(edge)) + '</title></path>';
   });
   svg.innerHTML = out;
   bindClickable(svg);

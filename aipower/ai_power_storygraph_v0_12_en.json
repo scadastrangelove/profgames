@@ -16500,7 +16500,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: CLM_004_EXPORT_CONTROLS_AS_LEVERAGE -> THESIS_CORE"
+      "summary": "Export controls convert private AI chip sales into geopolitical leverage. supports AI stack as structural power.",
+      "summary_en": "Export controls convert private AI chip sales into geopolitical leverage. supports AI stack as structural power."
     },
     {
       "id": "EDGE_CORE_002",
@@ -16516,7 +16517,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: CLM_008_MODEL_LAYER_EXPORT_CONTROL -> THESIS_ACCESS_AS_POWER"
+      "summary": "In 2026, frontier cyber-capable models themselves became export-control objects. supports Access control matters more than ownership.",
+      "summary_en": "In 2026, frontier cyber-capable models themselves became export-control objects. supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_EXPORT_001",
@@ -16532,7 +16534,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "sets_up: SIG_US_2022_BIS_ADVANCED_COMPUTING -> SIG_US_2025_AI_DIFFUSION_RULE"
+      "summary": "BIS launches advanced-computing and semiconductor-manufacturing controls on China sets up AI Diffusion Rule creates explicit country tiers for AI chip access.",
+      "summary_en": "BIS launches advanced-computing and semiconductor-manufacturing controls on China sets up AI Diffusion Rule creates explicit country tiers for AI chip access."
     },
     {
       "id": "EDGE_EXPORT_002",
@@ -16548,7 +16551,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "walks_back: SIG_US_2025_AI_DIFFUSION_RULE -> SIG_US_2026_AI_DIFFUSION_REPLACEMENT_WITHDRAWN"
+      "summary": "AI Diffusion Rule creates explicit country tiers for AI chip access walks back Commerce withdraws planned replacement rule for AI chip exports.",
+      "summary_en": "AI Diffusion Rule creates explicit country tiers for AI chip access walks back Commerce withdraws planned replacement rule for AI chip exports."
     },
     {
       "id": "EDGE_EXPORT_003",
@@ -16564,7 +16568,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_US_2025_AI_DIFFUSION_RULE -> export-02"
+      "summary": "AI Diffusion Rule creates explicit country tiers for AI chip access supports BIS issued the Framework for AI Diffusion on 15 January 2025 — a worldwide tiered licensing regime covering advanced chips and closed model weights (ECCN 4E091) — set to take effect 15 May 2025..",
+      "summary_en": "AI Diffusion Rule creates explicit country tiers for AI chip access supports BIS issued the Framework for AI Diffusion on 15 January 2025 — a worldwide tiered licensing regime covering advanced chips and closed model weights (ECCN 4E091) — set to take effect 15 May 2025.."
     },
     {
       "id": "EDGE_EXPORT_004",
@@ -16580,7 +16585,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_US_2026_AI_DIFFUSION_REPLACEMENT_WITHDRAWN -> export-11"
+      "summary": "Commerce withdraws planned replacement rule for AI chip exports supports On 13 March 2026 the US Commerce Department withdrew its planned replacement rule for AI chip exports, leaving pre-existing controls and case-by-case guidance in force and the codified tier architecture unresolved..",
+      "summary_en": "Commerce withdraws planned replacement rule for AI chip exports supports On 13 March 2026 the US Commerce Department withdrew its planned replacement rule for AI chip exports, leaving pre-existing controls and case-by-case guidance in force and the codified tier architecture unresolved.."
     },
     {
       "id": "EDGE_EXPORT_005",
@@ -16596,7 +16602,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_US_2026_BIS_D5_GUIDANCE -> export-12"
+      "summary": "BIS clarifies D:5/Macau-headquartered entities abroad still need licenses for advanced computing items supports BIS confirmed (31 May 2026) that a license is required to export advanced computing items to entities headquartered in Country Group D:5 or Macau, even when those entities operate abroad — control follows ultimate parentage, not only physical destination..",
+      "summary_en": "BIS clarifies D:5/Macau-headquartered entities abroad still need licenses for advanced computing items supports BIS confirmed (31 May 2026) that a license is required to export advanced computing items to entities headquartered in Country Group D:5 or Macau, even when those entities operate abroad — control follows ultimate parentage, not only physical destination.."
     },
     {
       "id": "EDGE_EXPORT_006",
@@ -16612,7 +16619,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2026_BIS_ANTHROPIC_ISINFORMED_LETTER -> export-16"
+      "summary": "BIS 'is-informed' letter (Lutnick to Amodei) requires an individually validated license before any foreign-national access to Mythos 5 / Fable 5; cites ECRA 50 USC 4817(b)(1) and EAR 744.22(b); legal basis publicly contested supports The June 12 2026 action was a BIS 'is-informed' letter (signed by Secretary Lutnick) invoking ECRA 50 U.S.C. 4817(b)(1) and EAR 15 C.F.R. 744.22(b) to require a validated license for any foreign-national access to Mythos 5 / Fable 5 — the first such use against an AI model; the government has not published the order, and multiple legal experts argue the basis is shaky (SaaS is not an EAR 'item', the worldwide scope exceeds 744.22's country list, First Amendment concerns), while 80+ security executives and G7 governments urged restoration..",
+      "summary_en": "BIS 'is-informed' letter (Lutnick to Amodei) requires an individually validated license before any foreign-national access to Mythos 5 / Fable 5; cites ECRA 50 USC 4817(b)(1) and EAR 744.22(b); legal basis publicly contested supports The June 12 2026 action was a BIS 'is-informed' letter (signed by Secretary Lutnick) invoking ECRA 50 U.S.C. 4817(b)(1) and EAR 15 C.F.R. 744.22(b) to require a validated license for any foreign-national access to Mythos 5 / Fable 5 — the first such use against an AI model; the government has not published the order, and multiple legal experts argue the basis is shaky (SaaS is not an EAR 'item', the worldwide scope exceeds 744.22's country list, First Amendment concerns), while 80+ security executives and G7 governments urged restoration.."
     },
     {
       "id": "EDGE_EXPORT_007",
@@ -16628,7 +16636,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "refines: export-16 -> CLM_008_MODEL_LAYER_EXPORT_CONTROL"
+      "summary": "The June 12 2026 action was a BIS 'is-informed' letter (signed by Secretary Lutnick) invoking ECRA 50 U.S.C. 4817(b)(1) and EAR 15 C.F.R. 744.22(b) to require a validated license for any foreign-national access to Mythos 5 / Fable 5 — the first such use against an AI model; the government has not published the order, and multiple legal experts argue the basis is shaky (SaaS is not an EAR 'item', the worldwide scope exceeds 744.22's country list, First Amendment concerns), while 80+ security executives and G7 governments urged restoration. refines In 2026, frontier cyber-capable models themselves became export-control objects..",
+      "summary_en": "The June 12 2026 action was a BIS 'is-informed' letter (signed by Secretary Lutnick) invoking ECRA 50 U.S.C. 4817(b)(1) and EAR 15 C.F.R. 744.22(b) to require a validated license for any foreign-national access to Mythos 5 / Fable 5 — the first such use against an AI model; the government has not published the order, and multiple legal experts argue the basis is shaky (SaaS is not an EAR 'item', the worldwide scope exceeds 744.22's country list, First Amendment concerns), while 80+ security executives and G7 governments urged restoration. refines In 2026, frontier cyber-capable models themselves became export-control objects.."
     },
     {
       "id": "EDGE_TOLL_001",
@@ -16644,7 +16653,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "H20 charge supports the revenue/rent part of the chip-control story."
+      "summary": "H20 charge supports the revenue/rent part of the chip-control story.",
+      "summary_en": "H20 charge supports the revenue/rent part of the chip-control story."
     },
     {
       "id": "EDGE_TOLL_002",
@@ -16660,7 +16670,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "H20 ban/revenue share evolves into H200/MI325X case-by-case regime."
+      "summary": "H20 ban/revenue share evolves into H200/MI325X case-by-case regime.",
+      "summary_en": "H20 ban/revenue share evolves into H200/MI325X case-by-case regime."
     },
     {
       "id": "EDGE_TOLL_003",
@@ -16676,7 +16687,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "BIS case-by-case regime supports toll-and-throttle wording."
+      "summary": "BIS case-by-case regime supports toll-and-throttle wording.",
+      "summary_en": "BIS case-by-case regime supports toll-and-throttle wording."
     },
     {
       "id": "EDGE_TOLL_004",
@@ -16692,7 +16704,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Blackwell denial + Huawei target show frontier denial and domestic substitution simultaneously."
+      "summary": "Blackwell denial + Huawei target show frontier denial and domestic substitution simultaneously.",
+      "summary_en": "Blackwell denial + Huawei target show frontier denial and domestic substitution simultaneously."
     },
     {
       "id": "EDGE_TOLL_005",
@@ -16708,7 +16721,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Reframes leverage from simple ban to metered/taxed access."
+      "summary": "Reframes leverage from simple ban to metered/taxed access.",
+      "summary_en": "Reframes leverage from simple ban to metered/taxed access."
     },
     {
       "id": "EDGE_LEAK_001",
@@ -16724,7 +16738,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Malaysia seizure proves leakage/route-around attempts."
+      "summary": "Malaysia seizure proves leakage/route-around attempts.",
+      "summary_en": "Malaysia seizure proves leakage/route-around attempts."
     },
     {
       "id": "EDGE_LEAK_002",
@@ -16740,7 +16755,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Same seizure also proves enforcement layer: transit states become policing nodes."
+      "summary": "Same seizure also proves enforcement layer: transit states become policing nodes.",
+      "summary_en": "Same seizure also proves enforcement layer: transit states become policing nodes."
     },
     {
       "id": "EDGE_LEAK_003",
@@ -16756,7 +16772,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Steelman: leakage exists; answer: cost/delay/risk/surveillance still structural."
+      "summary": "Steelman: leakage exists; answer: cost/delay/risk/surveillance still structural.",
+      "summary_en": "Steelman: leakage exists; answer: cost/delay/risk/surveillance still structural."
     },
     {
       "id": "EDGE_LEAK_004",
@@ -16772,7 +16789,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "D:5/headquarters guidance addresses third-country routing and parentage-based access."
+      "summary": "D:5/headquarters guidance addresses third-country routing and parentage-based access.",
+      "summary_en": "D:5/headquarters guidance addresses third-country routing and parentage-based access."
     },
     {
       "id": "EDGE_GULF_001",
@@ -16788,7 +16806,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "G42/Huawei divorce shows access-for-alignment."
+      "summary": "G42/Huawei divorce shows access-for-alignment.",
+      "summary_en": "G42/Huawei divorce shows access-for-alignment."
     },
     {
       "id": "EDGE_GULF_002",
@@ -16804,7 +16823,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Assurance/realignment precedes large-scale UAE AI deployment."
+      "summary": "Assurance/realignment precedes large-scale UAE AI deployment.",
+      "summary_en": "Assurance/realignment precedes large-scale UAE AI deployment."
     },
     {
       "id": "EDGE_GULF_003",
@@ -16820,7 +16840,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Stargate UAE supports 'protectorate / sovereign buyer' tiering."
+      "summary": "Stargate UAE supports 'protectorate / sovereign buyer' tiering.",
+      "summary_en": "Stargate UAE supports 'protectorate / sovereign buyer' tiering."
     },
     {
       "id": "EDGE_GULF_004",
@@ -16836,7 +16857,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "HUMAIN/xAI/Nvidia support Saudi sovereign buyer thesis."
+      "summary": "HUMAIN/xAI/Nvidia support Saudi sovereign buyer thesis.",
+      "summary_en": "HUMAIN/xAI/Nvidia support Saudi sovereign buyer thesis."
     },
     {
       "id": "EDGE_GULF_005",
@@ -16852,7 +16874,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "UAE case parallels broader pattern: sovereign branding on foreign foundations."
+      "summary": "UAE case parallels broader pattern: sovereign branding on foreign foundations.",
+      "summary_en": "UAE case parallels broader pattern: sovereign branding on foreign foundations."
     },
     {
       "id": "EDGE_CN_001",
@@ -16868,7 +16891,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Rare earth controls show China has its own production-structure leverage."
+      "summary": "Rare earth controls show China has its own production-structure leverage.",
+      "summary_en": "Rare earth controls show China has its own production-structure leverage."
     },
     {
       "id": "EDGE_CN_002",
@@ -16884,7 +16908,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Alibaba capex supports continued counter-stack scaling."
+      "summary": "Alibaba capex supports continued counter-stack scaling.",
+      "summary_en": "Alibaba capex supports continued counter-stack scaling."
     },
     {
       "id": "EDGE_CN_003",
@@ -16900,7 +16925,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "DeepSeek shock gives model-layer exit, but learning curves/chips remain binding."
+      "summary": "DeepSeek shock gives model-layer exit, but learning curves/chips remain binding.",
+      "summary_en": "DeepSeek shock gives model-layer exit, but learning curves/chips remain binding."
     },
     {
       "id": "EDGE_CN_004",
@@ -16916,7 +16942,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "DeepSeek V4 Ascend support shows trajectory, but training-vs-inference remains uncertain."
+      "summary": "DeepSeek V4 Ascend support shows trajectory, but training-vs-inference remains uncertain.",
+      "summary_en": "DeepSeek V4 Ascend support shows trajectory, but training-vs-inference remains uncertain."
     },
     {
       "id": "EDGE_CN_005",
@@ -16932,7 +16959,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "360 event confirms strategic claim, not independent capability."
+      "summary": "360 event confirms strategic claim, not independent capability.",
+      "summary_en": "360 event confirms strategic claim, not independent capability."
     },
     {
       "id": "EDGE_CN_006",
@@ -16948,7 +16976,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "360 capability should stay disputed rather than verified."
+      "summary": "360 capability should stay disputed rather than verified.",
+      "summary_en": "360 capability should stay disputed rather than verified."
     },
     {
       "id": "EDGE_CYBER_001",
@@ -16964,7 +16993,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "AIxCC supports automated find-and-fix, not autonomous offense."
+      "summary": "AIxCC supports automated find-and-fix, not autonomous offense.",
+      "summary_en": "AIxCC supports automated find-and-fix, not autonomous offense."
     },
     {
       "id": "EDGE_CYBER_002",
@@ -16980,7 +17010,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "GTG-1002 remains disputed; prevents offense-at-scale overclaim."
+      "summary": "GTG-1002 remains disputed; prevents offense-at-scale overclaim.",
+      "summary_en": "GTG-1002 remains disputed; prevents offense-at-scale overclaim."
     },
     {
       "id": "EDGE_CYBER_003",
@@ -16996,7 +17027,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Big Sleep shows defenders also wield AI vulnerability discovery."
+      "summary": "Big Sleep shows defenders also wield AI vulnerability discovery.",
+      "summary_en": "Big Sleep shows defenders also wield AI vulnerability discovery."
     },
     {
       "id": "EDGE_CYBER_004",
@@ -17012,7 +17044,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Firefox evidence supports defender step-change but not autonomous offensive 0-day at scale."
+      "summary": "Firefox evidence supports defender step-change but not autonomous offensive 0-day at scale.",
+      "summary_en": "Firefox evidence supports defender step-change but not autonomous offensive 0-day at scale."
     },
     {
       "id": "EDGE_CYBER_005",
@@ -17028,7 +17061,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Rediscovery counterevidence tempers Mythos '0-day factory' framing."
+      "summary": "Rediscovery counterevidence tempers Mythos '0-day factory' framing.",
+      "summary_en": "Rediscovery counterevidence tempers Mythos '0-day factory' framing."
     },
     {
       "id": "EDGE_CYBER_006",
@@ -17044,7 +17078,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Reframes Mythos as access asymmetry, not settled capability leap."
+      "summary": "Reframes Mythos as access asymmetry, not settled capability leap.",
+      "summary_en": "Reframes Mythos as access asymmetry, not settled capability leap."
     },
     {
       "id": "EDGE_CYBER_007",
@@ -17060,7 +17095,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Defense can scale too; drop offense-dominance language."
+      "summary": "Defense can scale too; drop offense-dominance language.",
+      "summary_en": "Defense can scale too; drop offense-dominance language."
     },
     {
       "id": "EDGE_QAC_001",
@@ -17076,7 +17112,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "OpenAI policy supplies primary evidence for quiet review/approval and human review controls."
+      "summary": "OpenAI policy supplies primary evidence for quiet review/approval and human review controls.",
+      "summary_en": "OpenAI policy supplies primary evidence for quiet review/approval and human review controls."
     },
     {
       "id": "EDGE_QAC_002",
@@ -17092,7 +17129,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "ASL-3 supports special CBRN/biotech access governance."
+      "summary": "ASL-3 supports special CBRN/biotech access governance.",
+      "summary_en": "ASL-3 supports special CBRN/biotech access governance."
     },
     {
       "id": "EDGE_QAC_003",
@@ -17108,7 +17146,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Planned ASL-3 due diligence develops into activated ASL-3 controls."
+      "summary": "Planned ASL-3 due diligence develops into activated ASL-3 controls.",
+      "summary_en": "Planned ASL-3 due diligence develops into activated ASL-3 controls."
     },
     {
       "id": "EDGE_QAC_004",
@@ -17124,7 +17163,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "GPT-5.6 vetted partners show pre-release gating."
+      "summary": "GPT-5.6 vetted partners show pre-release gating.",
+      "summary_en": "GPT-5.6 vetted partners show pre-release gating."
     },
     {
       "id": "EDGE_QAC_005",
@@ -17140,7 +17180,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Mythos trusted orgs operationalize trusted-user access."
+      "summary": "Mythos trusted orgs operationalize trusted-user access.",
+      "summary_en": "Mythos trusted orgs operationalize trusted-user access."
     },
     {
       "id": "EDGE_QAC_006",
@@ -17156,7 +17197,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Quiet access controls make access itself a governance layer."
+      "summary": "Quiet access controls make access itself a governance layer.",
+      "summary_en": "Quiet access controls make access itself a governance layer."
     },
     {
       "id": "EDGE_PAL_001",
@@ -17172,7 +17214,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "TITAN tactical edge and Maven program-of-record show Palantir expanding across military decision layers."
+      "summary": "TITAN tactical edge and Maven program-of-record show Palantir expanding across military decision layers.",
+      "summary_en": "TITAN tactical edge and Maven program-of-record show Palantir expanding across military decision layers."
     },
     {
       "id": "EDGE_PAL_002",
@@ -17188,7 +17231,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Maven institutionalizes Palantir as decision-support operating layer."
+      "summary": "Maven institutionalizes Palantir as decision-support operating layer.",
+      "summary_en": "Maven institutionalizes Palantir as decision-support operating layer."
     },
     {
       "id": "EDGE_PAL_003",
@@ -17204,7 +17248,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "NATO MSS supports Palantir as alliance decision platform."
+      "summary": "NATO MSS supports Palantir as alliance decision platform.",
+      "summary_en": "NATO MSS supports Palantir as alliance decision platform."
     },
     {
       "id": "EDGE_PAL_004",
@@ -17220,7 +17265,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Primary Army EA record supports consolidation but corrects money-status overclaim."
+      "summary": "Primary Army EA record supports consolidation but corrects money-status overclaim.",
+      "summary_en": "Primary Army EA record supports consolidation but corrects money-status overclaim."
     },
     {
       "id": "EDGE_PAL_005",
@@ -17236,7 +17282,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "75 contracts consolidated supports lock-in; $10B is ceiling not spend."
+      "summary": "75 contracts consolidated supports lock-in; $10B is ceiling not spend.",
+      "summary_en": "75 contracts consolidated supports lock-in; $10B is ceiling not spend."
     },
     {
       "id": "EDGE_PAL_006",
@@ -17252,7 +17299,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "NHS case forces correction: Palantir supplies operational layer, not necessarily data ownership."
+      "summary": "NHS case forces correction: Palantir supplies operational layer, not necessarily data ownership.",
+      "summary_en": "NHS case forces correction: Palantir supplies operational layer, not necessarily data ownership."
     },
     {
       "id": "EDGE_PAL_007",
@@ -17268,7 +17316,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Palantir shows decision sovereignty risk at institutional workflow layer."
+      "summary": "Palantir shows decision sovereignty risk at institutional workflow layer.",
+      "summary_en": "Palantir shows decision sovereignty risk at institutional workflow layer."
     },
     {
       "id": "EDGE_PAL_008",
@@ -17284,7 +17333,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "ICE ImmigrationOS generalizes Palantir logic from military to civilian enforcement."
+      "summary": "ICE ImmigrationOS generalizes Palantir logic from military to civilian enforcement.",
+      "summary_en": "ICE ImmigrationOS generalizes Palantir logic from military to civilian enforcement."
     },
     {
       "id": "EDGE_PAL_009",
@@ -17300,7 +17350,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Met Police case shows Palantir-style AI in internal policing/governance workflows."
+      "summary": "Met Police case shows Palantir-style AI in internal policing/governance workflows.",
+      "summary_en": "Met Police case shows Palantir-style AI in internal policing/governance workflows."
     },
     {
       "id": "EDGE_COG_001",
@@ -17316,7 +17367,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Data poisoning gives concrete knowledge-structure attack surface."
+      "summary": "Data poisoning gives concrete knowledge-structure attack surface.",
+      "summary_en": "Data poisoning gives concrete knowledge-structure attack surface."
     },
     {
       "id": "EDGE_COG_002",
@@ -17332,7 +17384,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "OWASP LLM01 gives primary risk taxonomy for prompt injection."
+      "summary": "OWASP LLM01 gives primary risk taxonomy for prompt injection.",
+      "summary_en": "OWASP LLM01 gives primary risk taxonomy for prompt injection."
     },
     {
       "id": "EDGE_COG_003",
@@ -17348,7 +17401,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Web-scale prompt injection and resume injection show mechanism entering real data/workflows."
+      "summary": "Web-scale prompt injection and resume injection show mechanism entering real data/workflows.",
+      "summary_en": "Web-scale prompt injection and resume injection show mechanism entering real data/workflows."
     },
     {
       "id": "EDGE_COG_004",
@@ -17364,7 +17418,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Resume prompt injection gives observed AI-mediated evaluation workflow risk."
+      "summary": "Resume prompt injection gives observed AI-mediated evaluation workflow risk.",
+      "summary_en": "Resume prompt injection gives observed AI-mediated evaluation workflow risk."
     },
     {
       "id": "EDGE_COG_005",
@@ -17380,7 +17435,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Agent red-team quantifies vulnerability to hidden-instruction attacks."
+      "summary": "Agent red-team quantifies vulnerability to hidden-instruction attacks.",
+      "summary_en": "Agent red-team quantifies vulnerability to hidden-instruction attacks."
     },
     {
       "id": "EDGE_COG_006",
@@ -17396,7 +17452,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "DoD agentic contracts show frontier labs entering national-security workflows."
+      "summary": "DoD agentic contracts show frontier labs entering national-security workflows.",
+      "summary_en": "DoD agentic contracts show frontier labs entering national-security workflows."
     },
     {
       "id": "EDGE_COG_007",
@@ -17412,7 +17469,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Need confirmed government/enterprise decision-support incident; don't overclaim exploitation."
+      "summary": "Need confirmed government/enterprise decision-support incident; don't overclaim exploitation.",
+      "summary_en": "Need confirmed government/enterprise decision-support incident; don't overclaim exploitation."
     },
     {
       "id": "EDGE_ENERGY_001",
@@ -17428,7 +17486,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Six-firm TWh projection supports energy as bottom stack layer."
+      "summary": "Six-firm TWh projection supports energy as bottom stack layer.",
+      "summary_en": "Six-firm TWh projection supports energy as bottom stack layer."
     },
     {
       "id": "EDGE_ENERGY_002",
@@ -17444,7 +17503,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "130 kW flexible cluster mitigates absolute bottleneck framing."
+      "summary": "130 kW flexible cluster mitigates absolute bottleneck framing.",
+      "summary_en": "130 kW flexible cluster mitigates absolute bottleneck framing."
     },
     {
       "id": "EDGE_ENERGY_003",
@@ -17460,7 +17520,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "3–21% grid cost reduction supports flexibility counterargument."
+      "summary": "3–21% grid cost reduction supports flexibility counterargument.",
+      "summary_en": "3–21% grid cost reduction supports flexibility counterargument."
     },
     {
       "id": "EDGE_ENERGY_004",
@@ -17476,7 +17537,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Poll supports political surface/backlash to data centers."
+      "summary": "Poll supports political surface/backlash to data centers.",
+      "summary_en": "Poll supports political surface/backlash to data centers."
     },
     {
       "id": "EDGE_ENERGY_005",
@@ -17492,7 +17554,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Factcheck claim feeds high-level claim-check: energy is real but flexible."
+      "summary": "Factcheck claim feeds high-level claim-check: energy is real but flexible.",
+      "summary_en": "Factcheck claim feeds high-level claim-check: energy is real but flexible."
     },
     {
       "id": "EDGE_WAR_001",
@@ -17508,7 +17571,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Ukraine military AI demand connects battlefield AI to sovereign compute."
+      "summary": "Ukraine military AI demand connects battlefield AI to sovereign compute.",
+      "summary_en": "Ukraine military AI demand connects battlefield AI to sovereign compute."
     },
     {
       "id": "EDGE_WAR_002",
@@ -17524,7 +17588,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Drone-footage corpus supports war as data flywheel."
+      "summary": "Drone-footage corpus supports war as data flywheel.",
+      "summary_en": "Drone-footage corpus supports war as data flywheel."
     },
     {
       "id": "EDGE_WAR_003",
@@ -17540,7 +17605,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Factcheck claim links telemetry to thesis-level war data flywheel."
+      "summary": "Factcheck claim links telemetry to thesis-level war data flywheel.",
+      "summary_en": "Factcheck claim links telemetry to thesis-level war data flywheel."
     },
     {
       "id": "EDGE_WAR_004",
@@ -17556,7 +17622,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "South Korea plan shows mass force-structure adoption."
+      "summary": "South Korea plan shows mass force-structure adoption.",
+      "summary_en": "South Korea plan shows mass force-structure adoption."
     },
     {
       "id": "EDGE_WAR_005",
@@ -17572,7 +17639,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Public legitimacy supports conditional military AI but sets red line around lethal autonomy."
+      "summary": "Public legitimacy supports conditional military AI but sets red line around lethal autonomy.",
+      "summary_en": "Public legitimacy supports conditional military AI but sets red line around lethal autonomy."
     },
     {
       "id": "EDGE_WAR_006",
@@ -17588,7 +17656,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Need primary proof before claiming fully autonomous targeting."
+      "summary": "Need primary proof before claiming fully autonomous targeting.",
+      "summary_en": "Need primary proof before claiming fully autonomous targeting."
     },
     {
       "id": "EDGE_FIN_001",
@@ -17604,7 +17673,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "JPMorgan AI tools show critical business/revenue workflow adoption."
+      "summary": "JPMorgan AI tools show critical business/revenue workflow adoption.",
+      "summary_en": "JPMorgan AI tools show critical business/revenue workflow adoption."
     },
     {
       "id": "EDGE_FIN_002",
@@ -17620,7 +17690,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "US regulators scrutinize lending/KYC/sanctions AI; supports critical finance governance layer."
+      "summary": "US regulators scrutinize lending/KYC/sanctions AI; supports critical finance governance layer.",
+      "summary_en": "US regulators scrutinize lending/KYC/sanctions AI; supports critical finance governance layer."
     },
     {
       "id": "EDGE_FIN_003",
@@ -17636,7 +17707,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "RBI draft gives decommissioning/kill-switch logic."
+      "summary": "RBI draft gives decommissioning/kill-switch logic.",
+      "summary_en": "RBI draft gives decommissioning/kill-switch logic."
     },
     {
       "id": "EDGE_FIN_004",
@@ -17652,7 +17724,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Factcheck claim ties finance adoption to shutdown governance."
+      "summary": "Factcheck claim ties finance adoption to shutdown governance.",
+      "summary_en": "Factcheck claim ties finance adoption to shutdown governance."
     },
     {
       "id": "EDGE_FIN_005",
@@ -17668,7 +17741,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Final rules and actual implementation remain open."
+      "summary": "Final rules and actual implementation remain open.",
+      "summary_en": "Final rules and actual implementation remain open."
     },
     {
       "id": "EDGE_DS_001",
@@ -17684,7 +17758,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Preprint formalizes supplier boundary control and mitigation architecture."
+      "summary": "Preprint formalizes supplier boundary control and mitigation architecture.",
+      "summary_en": "Preprint formalizes supplier boundary control and mitigation architecture."
     },
     {
       "id": "EDGE_DS_002",
@@ -17700,7 +17775,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Claim-check translates decision-sovereignty risk into safe wording."
+      "summary": "Claim-check translates decision-sovereignty risk into safe wording.",
+      "summary_en": "Claim-check translates decision-sovereignty risk into safe wording."
     },
     {
       "id": "EDGE_DS_003",
@@ -17716,7 +17792,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Mitigation claim defines the 'solution side' of the Palantir/vendor-model story."
+      "summary": "Mitigation claim defines the 'solution side' of the Palantir/vendor-model story.",
+      "summary_en": "Mitigation claim defines the 'solution side' of the Palantir/vendor-model story."
     },
     {
       "id": "EDGE_OPEN_001",
@@ -17732,7 +17809,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "DeepSeek R1 supports model-artifact exit at the open-weight layer."
+      "summary": "DeepSeek R1 supports model-artifact exit at the open-weight layer.",
+      "summary_en": "DeepSeek R1 supports model-artifact exit at the open-weight layer."
     },
     {
       "id": "EDGE_OPEN_002",
@@ -17748,7 +17826,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "DeepSeek shock is walked back by learning-curve/chip dependence constraints."
+      "summary": "DeepSeek shock is walked back by learning-curve/chip dependence constraints.",
+      "summary_en": "DeepSeek shock is walked back by learning-curve/chip dependence constraints."
     },
     {
       "id": "EDGE_OPEN_003",
@@ -17764,7 +17843,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Sovereign branding on foreign foundations parallels Gulf conditional access."
+      "summary": "Sovereign branding on foreign foundations parallels Gulf conditional access.",
+      "summary_en": "Sovereign branding on foreign foundations parallels Gulf conditional access."
     },
     {
       "id": "EDGE_OPEN_004",
@@ -17780,7 +17860,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "IndiaAI case supports managed dependence / sovereign branding on foreign compute."
+      "summary": "IndiaAI case supports managed dependence / sovereign branding on foreign compute.",
+      "summary_en": "IndiaAI case supports managed dependence / sovereign branding on foreign compute."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_001",
@@ -17796,7 +17877,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_UAE_2025_STARGATE_UAE -> CLM_001_INFRA_RACE"
+      "summary": "Stargate UAE AI datacenter to begin operation in 2026, with broader 5GW plan supports AI competition is now an infrastructure and capital race, not only a model/software race..",
+      "summary_en": "Stargate UAE AI datacenter to begin operation in 2026, with broader 5GW plan supports AI competition is now an infrastructure and capital race, not only a model/software race.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_002",
@@ -17812,7 +17894,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_SA_2026_HUMAIN_XAI -> CLM_001_INFRA_RACE"
+      "summary": "Saudi HUMAIN invested $3B in xAI Series E; xAI/HUMAIN plan 500MW AI data-center infrastructure supports AI competition is now an infrastructure and capital race, not only a model/software race..",
+      "summary_en": "Saudi HUMAIN invested $3B in xAI Series E; xAI/HUMAIN plan 500MW AI data-center infrastructure supports AI competition is now an infrastructure and capital race, not only a model/software race.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_003",
@@ -17828,7 +17911,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_CHINA_2025_ALIBABA_380B_AI_CLOUD -> CLM_001_INFRA_RACE"
+      "summary": "Alibaba plans 380B yuan investment in AI and cloud infrastructure over three years supports AI competition is now an infrastructure and capital race, not only a model/software race..",
+      "summary_en": "Alibaba plans 380B yuan investment in AI and cloud infrastructure over three years supports AI competition is now an infrastructure and capital race, not only a model/software race.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_004",
@@ -17844,7 +17928,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_INDIA_2026_AMAZON_13B_CLOUD_AI -> CLM_001_INFRA_RACE"
+      "summary": "Amazon announces additional $13B investment in India AI/cloud infrastructure by 2030 supports AI competition is now an infrastructure and capital race, not only a model/software race..",
+      "summary_en": "Amazon announces additional $13B investment in India AI/cloud infrastructure by 2030 supports AI competition is now an infrastructure and capital race, not only a model/software race.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_005",
@@ -17860,7 +17945,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_JAPAN_2026_BLACKSTONE_30B_AI_DC -> CLM_001_INFRA_RACE"
+      "summary": "Blackstone plans $30B investment in Japan AI data centers, reportedly over 1GW supports AI competition is now an infrastructure and capital race, not only a model/software race..",
+      "summary_en": "Blackstone plans $30B investment in Japan AI data centers, reportedly over 1GW supports AI competition is now an infrastructure and capital race, not only a model/software race.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_006",
@@ -17876,7 +17962,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_US_2025_AI_DIFFUSION_RULE -> CLM_002_TIERING"
+      "summary": "AI Diffusion Rule creates explicit country tiers for AI chip access supports AI-stack access is becoming a world system of tiers..",
+      "summary_en": "AI Diffusion Rule creates explicit country tiers for AI chip access supports AI-stack access is becoming a world system of tiers.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_007",
@@ -17892,7 +17979,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_US_2026_AI_DIFFUSION_REPLACEMENT_WITHDRAWN -> CLM_002_TIERING"
+      "summary": "Commerce withdraws planned replacement rule for AI chip exports supports AI-stack access is becoming a world system of tiers..",
+      "summary_en": "Commerce withdraws planned replacement rule for AI chip exports supports AI-stack access is becoming a world system of tiers.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_008",
@@ -17908,7 +17996,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_US_2026_BIS_D5_GUIDANCE -> CLM_002_TIERING"
+      "summary": "BIS clarifies D:5/Macau-headquartered entities abroad still need licenses for advanced computing items supports AI-stack access is becoming a world system of tiers..",
+      "summary_en": "BIS clarifies D:5/Macau-headquartered entities abroad still need licenses for advanced computing items supports AI-stack access is becoming a world system of tiers.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_009",
@@ -17924,7 +18013,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_UAE_2024_MICROSOFT_G42_HUAWEI_DIVORCE -> CLM_003_GULF_PROTECTORATE"
+      "summary": "Microsoft-G42 deal viewed positively by White House because G42 cut Huawei ties supports Gulf sovereign AI is better described as conditional access than full-stack sovereignty..",
+      "summary_en": "Microsoft-G42 deal viewed positively by White House because G42 cut Huawei ties supports Gulf sovereign AI is better described as conditional access than full-stack sovereignty.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_010",
@@ -17940,7 +18030,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_UAE_2025_STARGATE_UAE -> CLM_003_GULF_PROTECTORATE"
+      "summary": "Stargate UAE AI datacenter to begin operation in 2026, with broader 5GW plan supports Gulf sovereign AI is better described as conditional access than full-stack sovereignty..",
+      "summary_en": "Stargate UAE AI datacenter to begin operation in 2026, with broader 5GW plan supports Gulf sovereign AI is better described as conditional access than full-stack sovereignty.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_011",
@@ -17956,7 +18047,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_SA_2026_HUMAIN_XAI -> CLM_003_GULF_PROTECTORATE"
+      "summary": "Saudi HUMAIN invested $3B in xAI Series E; xAI/HUMAIN plan 500MW AI data-center infrastructure supports Gulf sovereign AI is better described as conditional access than full-stack sovereignty..",
+      "summary_en": "Saudi HUMAIN invested $3B in xAI Series E; xAI/HUMAIN plan 500MW AI data-center infrastructure supports Gulf sovereign AI is better described as conditional access than full-stack sovereignty.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_012",
@@ -17972,7 +18064,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_NVIDIA_2025_H20_CHARGE -> CLM_004_EXPORT_CONTROLS_AS_LEVERAGE"
+      "summary": "Nvidia expects up to $5.5B charge after U.S. licensing requirement on H20 sales to China supports Export controls convert private AI chip sales into geopolitical leverage..",
+      "summary_en": "Nvidia expects up to $5.5B charge after U.S. licensing requirement on H20 sales to China supports Export controls convert private AI chip sales into geopolitical leverage.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_013",
@@ -17988,7 +18081,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_US_2024_BIS_HBM_ENTITY_LIST -> CLM_004_EXPORT_CONTROLS_AS_LEVERAGE"
+      "summary": "U.S. expands chip restrictions to HBM, manufacturing equipment/software, and 140 China-linked entities supports Export controls convert private AI chip sales into geopolitical leverage..",
+      "summary_en": "U.S. expands chip restrictions to HBM, manufacturing equipment/software, and 140 China-linked entities supports Export controls convert private AI chip sales into geopolitical leverage.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_014",
@@ -18004,7 +18098,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_US_2026_BIS_D5_GUIDANCE -> CLM_004_EXPORT_CONTROLS_AS_LEVERAGE"
+      "summary": "BIS clarifies D:5/Macau-headquartered entities abroad still need licenses for advanced computing items supports Export controls convert private AI chip sales into geopolitical leverage..",
+      "summary_en": "BIS clarifies D:5/Macau-headquartered entities abroad still need licenses for advanced computing items supports Export controls convert private AI chip sales into geopolitical leverage.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_015",
@@ -18020,7 +18115,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_EU_2025_INVESTAI_GIGAFACTORIES -> CLM_005_EU_SEMI_PERIPHERY"
+      "summary": "EU InvestAI / AI gigafactory push seeks to narrow frontier-compute gap supports Europe is sovereign in regulation and public compute ambitions, but constrained in cloud/frontier capacity..",
+      "summary_en": "EU InvestAI / AI gigafactory push seeks to narrow frontier-compute gap supports Europe is sovereign in regulation and public compute ambitions, but constrained in cloud/frontier capacity.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_016",
@@ -18036,7 +18132,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_EU_2026_AWS_AZURE_DMA_GATEKEEPERS -> CLM_005_EU_SEMI_PERIPHERY"
+      "summary": "EU preliminarily concludes AWS and Azure should fall under DMA gatekeeper rules supports Europe is sovereign in regulation and public compute ambitions, but constrained in cloud/frontier capacity..",
+      "summary_en": "EU preliminarily concludes AWS and Azure should fall under DMA gatekeeper rules supports Europe is sovereign in regulation and public compute ambitions, but constrained in cloud/frontier capacity.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_017",
@@ -18052,7 +18149,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_EU_2026_PAX_SILICA -> CLM_005_EU_SEMI_PERIPHERY"
+      "summary": "EU joins U.S.-led Pax Silica initiative on AI and chip supply-chain security supports Europe is sovereign in regulation and public compute ambitions, but constrained in cloud/frontier capacity..",
+      "summary_en": "EU joins U.S.-led Pax Silica initiative on AI and chip supply-chain security supports Europe is sovereign in regulation and public compute ambitions, but constrained in cloud/frontier capacity.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_018",
@@ -18068,7 +18166,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_CYBER_2025_AIXCC_FINAL -> CLM_006_MACHINE_SPEED_CYBER"
+      "summary": "AIxCC finalists found 77% of injected bugs, patched 61%, and found 18 real-world vulnerabilities supports Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established..",
+      "summary_en": "AIxCC finalists found 77% of injected bugs, patched 61%, and found 18 real-world vulnerabilities supports Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_019",
@@ -18084,7 +18183,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_CYBER_2026_OSS_CRS -> CLM_006_MACHINE_SPEED_CYBER"
+      "summary": "OSS-CRS ports AIxCC CRS techniques to real-world open-source projects supports Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established..",
+      "summary_en": "OSS-CRS ports AIxCC CRS techniques to real-world open-source projects supports Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_020",
@@ -18100,7 +18200,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_COG_2026_INDIRECT_PROMPT_INJECTION_WILD -> CLM_007_COGNITIVE_SECURITY"
+      "summary": "Large-scale study finds indirect prompt injections in the wild across 1.2B URLs supports AI-mediated decision support creates a new hidden influence surface..",
+      "summary_en": "Large-scale study finds indirect prompt injections in the wild across 1.2B URLs supports AI-mediated decision support creates a new hidden influence surface.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_021",
@@ -18116,7 +18217,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_COG_2026_RESUME_PROMPT_INJECTION -> CLM_007_COGNITIVE_SECURITY"
+      "summary": "Real-world resume-screening study finds hidden prompt injections in about 1% of resumes supports AI-mediated decision support creates a new hidden influence surface..",
+      "summary_en": "Real-world resume-screening study finds hidden prompt injections in about 1% of resumes supports AI-mediated decision support creates a new hidden influence surface.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_022",
@@ -18132,7 +18234,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_COG_2026_AGENT_IPI_COMPETITION -> CLM_007_COGNITIVE_SECURITY"
+      "summary": "Public red-team competition finds frontier AI agents vulnerable to indirect prompt injection supports AI-mediated decision support creates a new hidden influence surface..",
+      "summary_en": "Public red-team competition finds frontier AI agents vulnerable to indirect prompt injection supports AI-mediated decision support creates a new hidden influence surface.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_023",
@@ -18148,7 +18251,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_AGENTS_2026_AGENT_INDEX -> CLM_007_COGNITIVE_SECURITY"
+      "summary": "AI Agent Index documents 30 deployed agentic AI systems and uneven transparency supports AI-mediated decision support creates a new hidden influence surface..",
+      "summary_en": "AI Agent Index documents 30 deployed agentic AI systems and uneven transparency supports AI-mediated decision support creates a new hidden influence surface.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_024",
@@ -18164,7 +18268,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_US_MODEL_EXPORT_CONTROL_ANTHROPIC_JUNE12 -> CLM_008_MODEL_LAYER_EXPORT_CONTROL"
+      "summary": "U.S. order reportedly forces Anthropic to disable Fable 5 and Mythos 5 access globally supports In 2026, frontier cyber-capable models themselves became export-control objects..",
+      "summary_en": "U.S. order reportedly forces Anthropic to disable Fable 5 and Mythos 5 access globally supports In 2026, frontier cyber-capable models themselves became export-control objects.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_025",
@@ -18180,7 +18285,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_MYTHOS_LIMITED_RESTORE_TRUSTED_US_ORGS -> CLM_008_MODEL_LAYER_EXPORT_CONTROL"
+      "summary": "U.S. allows limited redeployment of Claude Mythos 5 to trusted U.S. critical-infrastructure organizations supports In 2026, frontier cyber-capable models themselves became export-control objects..",
+      "summary_en": "U.S. allows limited redeployment of Claude Mythos 5 to trusted U.S. critical-infrastructure organizations supports In 2026, frontier cyber-capable models themselves became export-control objects.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_026",
@@ -18196,7 +18302,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_OPENAI_GPT56_STAGED_RELEASE -> CLM_008_MODEL_LAYER_EXPORT_CONTROL"
+      "summary": "OpenAI defers public rollout of GPT-5.6 and begins limited preview at U.S. government request supports In 2026, frontier cyber-capable models themselves became export-control objects..",
+      "summary_en": "OpenAI defers public rollout of GPT-5.6 and begins limited preview at U.S. government request supports In 2026, frontier cyber-capable models themselves became export-control objects.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_027",
@@ -18212,7 +18319,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_MYTHOS_FIREFOX_271 -> CLM_009_MYTHOS_CAPABILITY"
+      "summary": "Mozilla reports Mythos-assisted discovery/fixing of 271 Firefox security vulnerabilities supports Mythos proves machine-speed 0-day discovery has arrived..",
+      "summary_en": "Mozilla reports Mythos-assisted discovery/fixing of 271 Firefox security vulnerabilities supports Mythos proves machine-speed 0-day discovery has arrived.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_028",
@@ -18228,7 +18336,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_MYTHOS_CLASSIFIED_SYSTEMS_TEST -> CLM_009_MYTHOS_CAPABILITY"
+      "summary": "AP/Reuters: Mythos found vulnerabilities in classified U.S. government systems during controlled testing supports Mythos proves machine-speed 0-day discovery has arrived..",
+      "summary_en": "AP/Reuters: Mythos found vulnerabilities in classified U.S. government systems during controlled testing supports Mythos proves machine-speed 0-day discovery has arrived.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_029",
@@ -18244,7 +18353,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_MYTHOS_LINKED_REDISCOVERY_COUNTEREVIDENCE -> CLM_009_MYTHOS_CAPABILITY"
+      "summary": "Benchmarking Mythos-linked bug rediscovery finds limited success under favorable target-file scaffolds supports Mythos proves machine-speed 0-day discovery has arrived..",
+      "summary_en": "Benchmarking Mythos-linked bug rediscovery finds limited success under favorable target-file scaffolds supports Mythos proves machine-speed 0-day discovery has arrived.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_030",
@@ -18260,7 +18370,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_360_YITIAN_TULONG_UNVEIL -> CLM_010_360_COUNTER_STACK"
+      "summary": "Qihoo 360 unveils Yitian Tulong: Tulongfeng vulnerability agent and Yitianzhen automated defense system supports 360 has built a Chinese Mythos equivalent..",
+      "summary_en": "Qihoo 360 unveils Yitian Tulong: Tulongfeng vulnerability agent and Yitianzhen automated defense system supports 360 has built a Chinese Mythos equivalent.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_031",
@@ -18276,7 +18387,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_360_ZHOU_HABR_STRATEGIC_SPEECH -> CLM_010_360_COUNTER_STACK"
+      "summary": "Zhou Hongyi frames vulnerability-finding AI as strategic deterrence and one-way-transparency problem supports 360 has built a Chinese Mythos equivalent..",
+      "summary_en": "Zhou Hongyi frames vulnerability-finding AI as strategic deterrence and one-way-transparency problem supports 360 has built a Chinese Mythos equivalent.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_032",
@@ -18292,7 +18404,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_360_YITIAN_TULONG_UNVEIL -> CLM_011_AGENT_HARNESS_ROUTE_AROUND"
+      "summary": "Qihoo 360 unveils Yitian Tulong: Tulongfeng vulnerability agent and Yitianzhen automated defense system supports China can route around weaker base models through agent harness and security data..",
+      "summary_en": "Qihoo 360 unveils Yitian Tulong: Tulongfeng vulnerability agent and Yitianzhen automated defense system supports China can route around weaker base models through agent harness and security data.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_033",
@@ -18308,7 +18421,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_360_ZHOU_HABR_STRATEGIC_SPEECH -> CLM_011_AGENT_HARNESS_ROUTE_AROUND"
+      "summary": "Zhou Hongyi frames vulnerability-finding AI as strategic deterrence and one-way-transparency problem supports China can route around weaker base models through agent harness and security data..",
+      "summary_en": "Zhou Hongyi frames vulnerability-finding AI as strategic deterrence and one-way-transparency problem supports China can route around weaker base models through agent harness and security data.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_034",
@@ -18324,7 +18438,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_US_MAVEN_PROGRAM_OF_RECORD -> CLM_012_CRITICAL_DECISION_USE"
+      "summary": "Pentagon to adopt Palantir Maven AI as core U.S. military command-and-control system supports AI is already used in critical state and business decision-support domains..",
+      "summary_en": "Pentagon to adopt Palantir Maven AI as core U.S. military command-and-control system supports AI is already used in critical state and business decision-support domains.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_035",
@@ -18340,7 +18455,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_GOOGLE_CLASSIFIED_PENTAGON_AI_DEAL -> CLM_012_CRITICAL_DECISION_USE"
+      "summary": "Google signs classified Pentagon AI deal for sensitive applications including mission planning and weapons targeting supports AI is already used in critical state and business decision-support domains..",
+      "summary_en": "Google signs classified Pentagon AI deal for sensitive applications including mission planning and weapons targeting supports AI is already used in critical state and business decision-support domains.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_036",
@@ -18356,7 +18472,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_US_BANK_REGULATORS_AI_SCRUTINY -> CLM_012_CRITICAL_DECISION_USE"
+      "summary": "U.S. bank regulators intensify scrutiny of AI use in lending, KYC and sanctions screening supports AI is already used in critical state and business decision-support domains..",
+      "summary_en": "U.S. bank regulators intensify scrutiny of AI use in lending, KYC and sanctions screening supports AI is already used in critical state and business decision-support domains.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_037",
@@ -18372,7 +18489,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_JPMORGAN_AI_INVESTMENT_BANKING_AND_MYTHOS -> CLM_012_CRITICAL_DECISION_USE"
+      "summary": "JPMorgan rolls out AI tools in investment banking globally and is among banks allowed or testing Mythos supports AI is already used in critical state and business decision-support domains..",
+      "summary_en": "JPMorgan rolls out AI tools in investment banking globally and is among banks allowed or testing Mythos supports AI is already used in critical state and business decision-support domains.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_038",
@@ -18388,7 +18506,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2025_OPENAI_USAGE_POLICY_NATIONAL_SECURITY_HIGH_STAKES -> CLM_013_QUIET_ACCESS_CONTROL"
+      "summary": "OpenAI usage policy requires review/approval for national security or intelligence purposes and human review in high-stakes automated decisions supports Control over AI capabilities often appears as quiet access control rather than public bans..",
+      "summary_en": "OpenAI usage policy requires review/approval for national security or intelligence purposes and human review in high-stakes automated decisions supports Control over AI capabilities often appears as quiet access control rather than public bans.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_039",
@@ -18404,7 +18523,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS -> CLM_013_QUIET_ACCESS_CONTROL"
+      "summary": "Anthropic activates ASL-3 protections for Claude Opus 4 with CBRN classifiers, monitoring and vetted exemptions supports Control over AI capabilities often appears as quiet access control rather than public bans..",
+      "summary_en": "Anthropic activates ASL-3 protections for Claude Opus 4 with CBRN classifiers, monitoring and vetted exemptions supports Control over AI capabilities often appears as quiet access control rather than public bans.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_040",
@@ -18420,7 +18540,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE -> CLM_013_QUIET_ACCESS_CONTROL"
+      "summary": "Anthropic RSP planned ASL-3 safeguards include tiered access, enhanced due diligence and monitoring layers supports Control over AI capabilities often appears as quiet access control rather than public bans..",
+      "summary_en": "Anthropic RSP planned ASL-3 safeguards include tiered access, enhanced due diligence and monitoring layers supports Control over AI capabilities often appears as quiet access control rather than public bans.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_041",
@@ -18436,7 +18557,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_OPENAI_GPT56_VETTED_PARTNERS -> CLM_013_QUIET_ACCESS_CONTROL"
+      "summary": "OpenAI delays public GPT-5.6 release and restricts initial access to vetted partners after U.S. government request supports Control over AI capabilities often appears as quiet access control rather than public bans..",
+      "summary_en": "OpenAI delays public GPT-5.6 release and restricts initial access to vetted partners after U.S. government request supports Control over AI capabilities often appears as quiet access control rather than public bans.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_042",
@@ -18452,7 +18574,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_ANTHROPIC_MYTHOS_TRUSTED_ORGS -> CLM_013_QUIET_ACCESS_CONTROL"
+      "summary": "U.S. allows Anthropic to redeploy Mythos 5 to over 100 trusted U.S. organizations supports Control over AI capabilities often appears as quiet access control rather than public bans..",
+      "summary_en": "U.S. allows Anthropic to redeploy Mythos 5 to over 100 trusted U.S. organizations supports Control over AI capabilities often appears as quiet access control rather than public bans.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_043",
@@ -18468,7 +18591,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS -> CLM_014_BIOTECH_CBRN_GATING"
+      "summary": "Anthropic activates ASL-3 protections for Claude Opus 4 with CBRN classifiers, monitoring and vetted exemptions supports Biotech/CBRN capabilities are already governed by special model-level access controls..",
+      "summary_en": "Anthropic activates ASL-3 protections for Claude Opus 4 with CBRN classifiers, monitoring and vetted exemptions supports Biotech/CBRN capabilities are already governed by special model-level access controls.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_044",
@@ -18484,7 +18608,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE -> CLM_014_BIOTECH_CBRN_GATING"
+      "summary": "Anthropic RSP planned ASL-3 safeguards include tiered access, enhanced due diligence and monitoring layers supports Biotech/CBRN capabilities are already governed by special model-level access controls..",
+      "summary_en": "Anthropic RSP planned ASL-3 safeguards include tiered access, enhanced due diligence and monitoring layers supports Biotech/CBRN capabilities are already governed by special model-level access controls.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_045",
@@ -18500,7 +18625,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2025_OPENAI_USAGE_POLICY_NATIONAL_SECURITY_HIGH_STAKES -> CLM_014_BIOTECH_CBRN_GATING"
+      "summary": "OpenAI usage policy requires review/approval for national security or intelligence purposes and human review in high-stakes automated decisions supports Biotech/CBRN capabilities are already governed by special model-level access controls..",
+      "summary_en": "OpenAI usage policy requires review/approval for national security or intelligence purposes and human review in high-stakes automated decisions supports Biotech/CBRN capabilities are already governed by special model-level access controls.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_046",
@@ -18516,7 +18642,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_GOOGLE_CLASSIFIED_PENTAGON_AI_DEAL -> CLM_015_MILITARY_SUPPLIER_BOUNDARY_CONTROL"
+      "summary": "Google signs classified Pentagon AI deal for sensitive applications including mission planning and weapons targeting supports Once private AI models enter military workflows, suppliers can influence operational boundary conditions..",
+      "summary_en": "Google signs classified Pentagon AI deal for sensitive applications including mission planning and weapons targeting supports Once private AI models enter military workflows, suppliers can influence operational boundary conditions.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_047",
@@ -18532,7 +18659,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PENTAGON_SEVEN_AI_COMPANIES_CLASSIFIED_NETWORKS -> CLM_015_MILITARY_SUPPLIER_BOUNDARY_CONTROL"
+      "summary": "Pentagon reaches classified-network AI agreements with seven major AI/tech firms, excluding Anthropic supports Once private AI models enter military workflows, suppliers can influence operational boundary conditions..",
+      "summary_en": "Pentagon reaches classified-network AI agreements with seven major AI/tech firms, excluding Anthropic supports Once private AI models enter military workflows, suppliers can influence operational boundary conditions.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_048",
@@ -18548,7 +18676,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_US_MAVEN_PROGRAM_OF_RECORD -> CLM_015_MILITARY_SUPPLIER_BOUNDARY_CONTROL"
+      "summary": "Pentagon to adopt Palantir Maven AI as core U.S. military command-and-control system supports Once private AI models enter military workflows, suppliers can influence operational boundary conditions..",
+      "summary_en": "Pentagon to adopt Palantir Maven AI as core U.S. military command-and-control system supports Once private AI models enter military workflows, suppliers can influence operational boundary conditions.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_049",
@@ -18564,7 +18693,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_OPENAI_GPT56_VETTED_PARTNERS -> CLM_015_MILITARY_SUPPLIER_BOUNDARY_CONTROL"
+      "summary": "OpenAI delays public GPT-5.6 release and restricts initial access to vetted partners after U.S. government request supports Once private AI models enter military workflows, suppliers can influence operational boundary conditions..",
+      "summary_en": "OpenAI delays public GPT-5.6 release and restricts initial access to vetted partners after U.S. government request supports Once private AI models enter military workflows, suppliers can influence operational boundary conditions.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_050",
@@ -18580,7 +18710,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_MAVEN_PROGRAM_OF_RECORD_EXPANDED -> CLM_016_PALANTIR_DECISION_OS"
+      "summary": "Palantir Maven designated as core U.S. military command-and-control / program-of-record system supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor..",
+      "summary_en": "Palantir Maven designated as core U.S. military command-and-control / program-of-record system supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_051",
@@ -18596,7 +18727,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2025_PALANTIR_NATO_MSS -> CLM_016_PALANTIR_DECISION_OS"
+      "summary": "NATO acquires Palantir Maven Smart System NATO for Allied Command Operations supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor..",
+      "summary_en": "NATO acquires Palantir Maven Smart System NATO for Allied Command Operations supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_052",
@@ -18612,7 +18744,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_UK_MOD_240M -> CLM_016_PALANTIR_DECISION_OS"
+      "summary": "UK MoD awards Palantir £240.6M follow-on contract for data analytics across strategic, tactical and live operational decision-making supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor..",
+      "summary_en": "UK MoD awards Palantir £240.6M follow-on contract for data analytics across strategic, tactical and live operational decision-making supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_053",
@@ -18628,7 +18761,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_NHS_FDP_ACCESS_EFFECTIVENESS -> CLM_016_PALANTIR_DECISION_OS"
+      "summary": "Palantir NHS Federated Data Platform: broad contractor access and disputed effectiveness claims supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor..",
+      "summary_en": "Palantir NHS Federated Data Platform: broad contractor access and disputed effectiveness claims supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_054",
@@ -18644,7 +18778,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2025_PALANTIR_ICE_IMMIGRATIONOS -> CLM_016_PALANTIR_DECISION_OS"
+      "summary": "ICE pays Palantir $30M to build ImmigrationOS for deportation lifecycle and near-real-time tracking workflows supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor..",
+      "summary_en": "ICE pays Palantir $30M to build ImmigrationOS for deportation lifecycle and near-real-time tracking workflows supports Palantir is best understood as an operating system for institutional decision power, not just a software vendor.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_055",
@@ -18660,7 +18795,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_UK_MOD_240M -> CLM_017_PALANTIR_VENDOR_LOCK_IN"
+      "summary": "UK MoD awards Palantir £240.6M follow-on contract for data analytics across strategic, tactical and live operational decision-making supports Palantir creates land-and-expand / vendor-lock-in dynamics inside public-sector decision infrastructure..",
+      "summary_en": "UK MoD awards Palantir £240.6M follow-on contract for data analytics across strategic, tactical and live operational decision-making supports Palantir creates land-and-expand / vendor-lock-in dynamics inside public-sector decision infrastructure.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_056",
@@ -18676,7 +18812,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2025_PALANTIR_ARMY_10B_ENTERPRISE -> CLM_017_PALANTIR_VENDOR_LOCK_IN"
+      "summary": "U.S. Army awards Palantir a $10B enterprise agreement consolidating software/data/AI access supports Palantir creates land-and-expand / vendor-lock-in dynamics inside public-sector decision infrastructure..",
+      "summary_en": "U.S. Army awards Palantir a $10B enterprise agreement consolidating software/data/AI access supports Palantir creates land-and-expand / vendor-lock-in dynamics inside public-sector decision infrastructure.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_057",
@@ -18692,7 +18829,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_NHS_FDP_ACCESS_EFFECTIVENESS -> CLM_017_PALANTIR_VENDOR_LOCK_IN"
+      "summary": "Palantir NHS Federated Data Platform: broad contractor access and disputed effectiveness claims supports Palantir creates land-and-expand / vendor-lock-in dynamics inside public-sector decision infrastructure..",
+      "summary_en": "Palantir NHS Federated Data Platform: broad contractor access and disputed effectiveness claims supports Palantir creates land-and-expand / vendor-lock-in dynamics inside public-sector decision infrastructure.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_058",
@@ -18708,7 +18846,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_MET_POLICE_AI -> CLM_017_PALANTIR_VENDOR_LOCK_IN"
+      "summary": "Met Police extends Palantir AI pilot despite blocked £50M contract; tool profiles ~45,000 staff for misconduct/welfare risk supports Palantir creates land-and-expand / vendor-lock-in dynamics inside public-sector decision infrastructure..",
+      "summary_en": "Met Police extends Palantir AI pilot despite blocked £50M contract; tool profiles ~45,000 staff for misconduct/welfare risk supports Palantir creates land-and-expand / vendor-lock-in dynamics inside public-sector decision infrastructure.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_059",
@@ -18724,7 +18863,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2025_PALANTIR_NATO_MSS -> CLM_018_PALANTIR_ALLIED_DEPENDENCY"
+      "summary": "NATO acquires Palantir Maven Smart System NATO for Allied Command Operations supports Palantir is becoming a U.S.-anchored alliance decision platform..",
+      "summary_en": "NATO acquires Palantir Maven Smart System NATO for Allied Command Operations supports Palantir is becoming a U.S.-anchored alliance decision platform.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_060",
@@ -18740,7 +18880,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_UK_MOD_240M -> CLM_018_PALANTIR_ALLIED_DEPENDENCY"
+      "summary": "UK MoD awards Palantir £240.6M follow-on contract for data analytics across strategic, tactical and live operational decision-making supports Palantir is becoming a U.S.-anchored alliance decision platform..",
+      "summary_en": "UK MoD awards Palantir £240.6M follow-on contract for data analytics across strategic, tactical and live operational decision-making supports Palantir is becoming a U.S.-anchored alliance decision platform.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_061",
@@ -18756,7 +18897,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_MAVEN_PROGRAM_OF_RECORD_EXPANDED -> CLM_018_PALANTIR_ALLIED_DEPENDENCY"
+      "summary": "Palantir Maven designated as core U.S. military command-and-control / program-of-record system supports Palantir is becoming a U.S.-anchored alliance decision platform..",
+      "summary_en": "Palantir Maven designated as core U.S. military command-and-control / program-of-record system supports Palantir is becoming a U.S.-anchored alliance decision platform.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_062",
@@ -18772,7 +18914,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_NHS_FDP_ACCESS_EFFECTIVENESS -> CLM_019_PALANTIR_DATA_SOVEREIGNTY_COUNTERARGUMENT"
+      "summary": "Palantir NHS Federated Data Platform: broad contractor access and disputed effectiveness claims supports Palantir controls the data of its public-sector clients..",
+      "summary_en": "Palantir NHS Federated Data Platform: broad contractor access and disputed effectiveness claims supports Palantir controls the data of its public-sector clients.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_063",
@@ -18788,7 +18931,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_STANFORD_AGGREGATE_INVESTMENT -> CLM_020_SCALE_PRIMARY_NUMBERS"
+      "summary": "Stanford AI Index 2026: US private AI investment $285.9B vs China $12.4B; global private $344.7B (+127.5%); global corporate $581.7B (+130%) supports The AI capital race is extreme but unequal, and private figures understate China..",
+      "summary_en": "Stanford AI Index 2026: US private AI investment $285.9B vs China $12.4B; global private $344.7B (+127.5%); global corporate $581.7B (+130%) supports The AI capital race is extreme but unequal, and private figures understate China.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_064",
@@ -18804,7 +18948,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_STANFORD_GUIDANCE_FUND_CLARIFY -> CLM_020_SCALE_PRIMARY_NUMBERS"
+      "summary": "Stanford AI Index 2026 Economy chapter: Chinese guidance funds deployed ~$184B into AI firms (2000-2023); the ~$912B figure is across ALL industries supports The AI capital race is extreme but unequal, and private figures understate China..",
+      "summary_en": "Stanford AI Index 2026 Economy chapter: Chinese guidance funds deployed ~$184B into AI firms (2000-2023); the ~$912B figure is across ALL industries supports The AI capital race is extreme but unequal, and private figures understate China.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_065",
@@ -18820,7 +18965,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_STANFORD_MODELS_COMPUTE_TALENT -> CLM_020_SCALE_PRIMARY_NUMBERS"
+      "summary": "Stanford AI Index 2026: US 50 vs China 30 notable models; US 5,427 data centers; researcher inflow -89% since 2017; model gap 2.7% supports The AI capital race is extreme but unequal, and private figures understate China..",
+      "summary_en": "Stanford AI Index 2026: US 50 vs China 30 notable models; US 5,427 data centers; researcher inflow -89% since 2017; model gap 2.7% supports The AI capital race is extreme but unequal, and private figures understate China.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_066",
@@ -18836,7 +18982,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_BIS_H200_MI325X_CASEBYCASE -> CLM_021_CHIP_TOLL_REGIME"
+      "summary": "BIS final rule (FR 2026-00789): H200 and AMD MI325X to China shift from presumption-of-denial to case-by-case review with security conditions supports The chip export regime is a graduated toll-and-throttle system, not a simple ban..",
+      "summary_en": "BIS final rule (FR 2026-00789): H200 and AMD MI325X to China shift from presumption-of-denial to case-by-case review with security conditions supports The chip export regime is a graduated toll-and-throttle system, not a simple ban.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_067",
@@ -18852,7 +18999,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_NVIDIA_H200_LICENSE_SMALL -> CLM_021_CHIP_TOLL_REGIME"
+      "summary": "Nvidia secures US license to ship a small number of H200 to China (US inspection + 25% duty); restarts H200 manufacturing; China demand uncertain supports The chip export regime is a graduated toll-and-throttle system, not a simple ban..",
+      "summary_en": "Nvidia secures US license to ship a small number of H200 to China (US inspection + 25% duty); restarts H200 manufacturing; China demand uncertain supports The chip export regime is a graduated toll-and-throttle system, not a simple ban.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_068",
@@ -18868,7 +19016,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_BLACKWELL_DENIAL_HUAWEI_ASCEND -> CLM_021_CHIP_TOLL_REGIME"
+      "summary": "Blackwell (B200/GB200/GB300) remains presumption-of-denial for China; AI OVERWATCH Act would impose 2-yr Blackwell ban; Huawei to ship 600,000 Ascend 910C in 2026 supports The chip export regime is a graduated toll-and-throttle system, not a simple ban..",
+      "summary_en": "Blackwell (B200/GB200/GB300) remains presumption-of-denial for China; AI OVERWATCH Act would impose 2-yr Blackwell ban; Huawei to ship 600,000 Ascend 910C in 2026 supports The chip export regime is a graduated toll-and-throttle system, not a simple ban.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_069",
@@ -18884,7 +19033,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_MALAYSIA_AI_CHIP_SMUGGLING_SEIZURE -> CLM_022_CONTROLS_LEAK_BUT_POLICE"
+      "summary": "Malaysia customs seizes 72 AI-chip server units worth about $12.93M in alleged transshipment scheme supports Export controls are leaky but still structural..",
+      "summary_en": "Malaysia customs seizes 72 AI-chip server units worth about $12.93M in alleged transshipment scheme supports Export controls are leaky but still structural.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_070",
@@ -18900,7 +19050,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_US_2026_BIS_D5_GUIDANCE -> CLM_022_CONTROLS_LEAK_BUT_POLICE"
+      "summary": "BIS clarifies D:5/Macau-headquartered entities abroad still need licenses for advanced computing items supports Export controls are leaky but still structural..",
+      "summary_en": "BIS clarifies D:5/Macau-headquartered entities abroad still need licenses for advanced computing items supports Export controls are leaky but still structural.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_071",
@@ -18916,7 +19067,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_BIS_H200_MI325X_CASEBYCASE -> CLM_022_CONTROLS_LEAK_BUT_POLICE"
+      "summary": "BIS final rule (FR 2026-00789): H200 and AMD MI325X to China shift from presumption-of-denial to case-by-case review with security conditions supports Export controls are leaky but still structural..",
+      "summary_en": "BIS final rule (FR 2026-00789): H200 and AMD MI325X to China shift from presumption-of-denial to case-by-case review with security conditions supports Export controls are leaky but still structural.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_072",
@@ -18932,7 +19084,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_AI_DATACENTER_POWER_STRESS_REVIEW -> CLM_023_ENERGY_BOTTLENECK_WITH_FLEXIBILITY"
+      "summary": "AI data-center load growth outpaces clean-energy deployment in several regions and challenges grid flexibility/reliability supports Energy/grid capacity is a hard AI-stack layer, but flexibility can partially mitigate it..",
+      "summary_en": "AI data-center load growth outpaces clean-energy deployment in several regions and challenges grid flexibility/reliability supports Energy/grid capacity is a hard AI-stack layer, but flexibility can partially mitigate it.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_073",
@@ -18948,7 +19101,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_AI_DATACENTER_CONCENTRATED_SITING_POWER_STRESS -> CLM_023_ENERGY_BOTTLENECK_WITH_FLEXIBILITY"
+      "summary": "Projected AI data-center electricity use by six leading firms rises from ~118 TWh in 2024 to 239–295 TWh by 2030; regional siting drives power-system stress supports Energy/grid capacity is a hard AI-stack layer, but flexibility can partially mitigate it..",
+      "summary_en": "Projected AI data-center electricity use by six leading firms rises from ~118 TWh in 2024 to 239–295 TWh by 2030; regional siting drives power-system stress supports Energy/grid capacity is a hard AI-stack layer, but flexibility can partially mitigate it.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_074",
@@ -18964,7 +19118,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_POWER_FLEXIBLE_AI_DATACENTERS -> CLM_023_ENERGY_BOTTLENECK_WITH_FLEXIBILITY"
+      "summary": "Real-world 130 kW GPU-cluster deployment shows AI data centers can curtail and shift workloads in response to grid conditions supports Energy/grid capacity is a hard AI-stack layer, but flexibility can partially mitigate it..",
+      "summary_en": "Real-world 130 kW GPU-cluster deployment shows AI data centers can curtail and shift workloads in response to grid conditions supports Energy/grid capacity is a hard AI-stack layer, but flexibility can partially mitigate it.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_075",
@@ -18980,7 +19135,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_AI_LOAD_FLEXIBILITY_GRID_INTERCONNECTION -> CLM_023_ENERGY_BOTTLENECK_WITH_FLEXIBILITY"
+      "summary": "AI data-center load flexibility can reduce grid investment and operating costs by 3–21%, but benefits are location-dependent and diminishing supports Energy/grid capacity is a hard AI-stack layer, but flexibility can partially mitigate it..",
+      "summary_en": "AI data-center load flexibility can reduce grid investment and operating costs by 3–21%, but benefits are location-dependent and diminishing supports Energy/grid capacity is a hard AI-stack layer, but flexibility can partially mitigate it.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_076",
@@ -18996,7 +19152,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_UKRAINE_DRONE_FOOTAGE_AI_TRAINING -> CLM_024_WAR_DATA_FLYWHEEL"
+      "summary": "Ukraine conflict drone-footage corpus: 500,000+ hours used to train computer-vision and autonomous-drone models supports War creates a data flywheel for military AI..",
+      "summary_en": "Ukraine conflict drone-footage corpus: 500,000+ hours used to train computer-vision and autonomous-drone models supports War creates a data flywheel for military AI.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_077",
@@ -19012,7 +19169,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_UKRAINE_DOMESTIC_AI_COMPUTE_MILITARY_DEMAND -> CLM_024_WAR_DATA_FLYWHEEL"
+      "summary": "Ukraine plans domestic AI computing capacity; military described as largest AI consumer supports War creates a data flywheel for military AI..",
+      "summary_en": "Ukraine plans domestic AI computing capacity; military described as largest AI consumer supports War creates a data flywheel for military AI.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_078",
@@ -19028,7 +19186,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_RBI_AI_KILL_SWITCH_FINANCE -> CLM_025_FINANCE_AI_KILL_SWITCH"
+      "summary": "RBI draft AI/ML model-risk framework adds kill-switch / decommissioning logic, independent validation and board accountability for banks supports Finance is moving from AI adoption to AI operational-governance controls..",
+      "summary_en": "RBI draft AI/ML model-risk framework adds kill-switch / decommissioning logic, independent validation and board accountability for banks supports Finance is moving from AI adoption to AI operational-governance controls.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_079",
@@ -19044,7 +19203,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_US_BANK_REGULATORS_AI_SCRUTINY -> CLM_025_FINANCE_AI_KILL_SWITCH"
+      "summary": "U.S. bank regulators intensify scrutiny of AI use in lending, KYC and sanctions screening supports Finance is moving from AI adoption to AI operational-governance controls..",
+      "summary_en": "U.S. bank regulators intensify scrutiny of AI use in lending, KYC and sanctions screening supports Finance is moving from AI adoption to AI operational-governance controls.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_080",
@@ -19060,7 +19220,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_UK_FINANCE_AI_STRESS_TESTS -> CLM_025_FINANCE_AI_KILL_SWITCH"
+      "summary": "UK lawmakers call for AI-specific financial-services stress tests supports Finance is moving from AI adoption to AI operational-governance controls..",
+      "summary_en": "UK lawmakers call for AI-specific financial-services stress tests supports Finance is moving from AI adoption to AI operational-governance controls.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_081",
@@ -19076,7 +19237,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_DECISION_SOVEREIGNTY_MILITARY_AI_FRAMEWORK -> CLM_026_DECISION_SOVEREIGNTY_MITIGATION"
+      "summary": "Decision-sovereignty framework: supplier models embedded in military workflows can influence operational boundary conditions; state-owned orchestration and model replaceability proposed as mitigation supports Private model suppliers can affect military decision boundaries, but architecture can reduce dependency..",
+      "summary_en": "Decision-sovereignty framework: supplier models embedded in military workflows can influence operational boundary conditions; state-owned orchestration and model replaceability proposed as mitigation supports Private model suppliers can affect military decision boundaries, but architecture can reduce dependency.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_082",
@@ -19092,7 +19254,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_GOOGLE_CLASSIFIED_PENTAGON_AI_DEAL -> CLM_026_DECISION_SOVEREIGNTY_MITIGATION"
+      "summary": "Google signs classified Pentagon AI deal for sensitive applications including mission planning and weapons targeting supports Private model suppliers can affect military decision boundaries, but architecture can reduce dependency..",
+      "summary_en": "Google signs classified Pentagon AI deal for sensitive applications including mission planning and weapons targeting supports Private model suppliers can affect military decision boundaries, but architecture can reduce dependency.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_083",
@@ -19108,7 +19271,8 @@
       "style": "thin",
       "kind": "edge",
       "is_auto": true,
-      "summary": "supports: SIG_2026_PALANTIR_MAVEN_PROGRAM_OF_RECORD_EXPANDED -> CLM_026_DECISION_SOVEREIGNTY_MITIGATION"
+      "summary": "Palantir Maven designated as core U.S. military command-and-control / program-of-record system supports Private model suppliers can affect military decision boundaries, but architecture can reduce dependency..",
+      "summary_en": "Palantir Maven designated as core U.S. military command-and-control / program-of-record system supports Private model suppliers can affect military decision boundaries, but architecture can reduce dependency.."
     },
     {
       "id": "EDGE_CA_001",
@@ -19124,7 +19288,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "reframes: ca-01 -> THESIS_CORE"
+      "summary": "The tier taxonomy already exists (New America, TBI, RAND, Forrester). reframes AI stack as structural power.",
+      "summary_en": "The tier taxonomy already exists (New America, TBI, RAND, Forrester). reframes AI stack as structural power."
     },
     {
       "id": "EDGE_CA_002",
@@ -19140,7 +19305,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Machine-speed 0-day contested; keep as stress-test."
+      "summary": "Machine-speed 0-day contested; keep as stress-test.",
+      "summary_en": "Machine-speed 0-day contested; keep as stress-test."
     },
     {
       "id": "EDGE_CA_003",
@@ -19156,7 +19322,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Defense can scale too; supports symmetry/access-asymmetry framing."
+      "summary": "Defense can scale too; supports symmetry/access-asymmetry framing.",
+      "summary_en": "Defense can scale too; supports symmetry/access-asymmetry framing."
     },
     {
       "id": "EDGE_CA_004",
@@ -19172,7 +19339,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "Open weights do not transfer the whole stack."
+      "summary": "Open weights do not transfer the whole stack.",
+      "summary_en": "Open weights do not transfer the whole stack."
     },
     {
       "id": "EDGE_CA_005",
@@ -19188,7 +19356,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "State-owned orchestration can mitigate supplier boundary control."
+      "summary": "State-owned orchestration can mitigate supplier boundary control.",
+      "summary_en": "State-owned orchestration can mitigate supplier boundary control."
     },
     {
       "id": "EDGE_2022_2023_001",
@@ -19204,7 +19373,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "CHIPS Act creates build-at-home industrial-policy base before deny/condition-abroad export controls."
+      "summary": "CHIPS Act creates build-at-home industrial-policy base before deny/condition-abroad export controls.",
+      "summary_en": "CHIPS Act creates build-at-home industrial-policy base before deny/condition-abroad export controls."
     },
     {
       "id": "EDGE_2022_2023_002",
@@ -19220,7 +19390,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "Oct-2022 controls produce compliant China SKUs rather than a simple stop."
+      "summary": "Oct-2022 controls produce compliant China SKUs rather than a simple stop.",
+      "summary_en": "Oct-2022 controls produce compliant China SKUs rather than a simple stop."
     },
     {
       "id": "EDGE_2022_2023_003",
@@ -19236,7 +19407,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "Oct-2023 BIS update targets the workaround category, closing the loop."
+      "summary": "Oct-2023 BIS update targets the workaround category, closing the loop.",
+      "summary_en": "Oct-2023 BIS update targets the workaround category, closing the loop."
     },
     {
       "id": "EDGE_2022_2023_004",
@@ -19252,7 +19424,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "ChatGPT public shock precedes Microsoft/OpenAI/Azure capital-cloud consolidation."
+      "summary": "ChatGPT public shock precedes Microsoft/OpenAI/Azure capital-cloud consolidation.",
+      "summary_en": "ChatGPT public shock precedes Microsoft/OpenAI/Azure capital-cloud consolidation."
     },
     {
       "id": "EDGE_2022_2023_005",
@@ -19268,7 +19441,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "GPT-4 capability escalation intensifies federal AI governance response."
+      "summary": "GPT-4 capability escalation intensifies federal AI governance response.",
+      "summary_en": "GPT-4 capability escalation intensifies federal AI governance response."
     },
     {
       "id": "EDGE_2022_2023_006",
@@ -19284,7 +19458,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "Gallium/germanium controls are the early mineral countermeasure before later rare-earth escalations."
+      "summary": "Gallium/germanium controls are the early mineral countermeasure before later rare-earth escalations.",
+      "summary_en": "Gallium/germanium controls are the early mineral countermeasure before later rare-earth escalations."
     },
     {
       "id": "EDGE_2022_2023_007",
@@ -19300,7 +19475,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "AIxCC launch in 2023 sets up the verified 2025 find-and-fix evidence."
+      "summary": "AIxCC launch in 2023 sets up the verified 2025 find-and-fix evidence.",
+      "summary_en": "AIxCC launch in 2023 sets up the verified 2025 find-and-fix evidence."
     },
     {
       "id": "EDGE_2022_2023_008",
@@ -19316,7 +19492,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "NIST RMF is the voluntary risk-management base of the 2023 governance shock."
+      "summary": "NIST RMF is the voluntary risk-management base of the 2023 governance shock.",
+      "summary_en": "NIST RMF is the voluntary risk-management base of the 2023 governance shock."
     },
     {
       "id": "EDGE_2022_2023_009",
@@ -19332,7 +19509,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "China's Interim Measures add a binding service-governance path."
+      "summary": "China's Interim Measures add a binding service-governance path.",
+      "summary_en": "China's Interim Measures add a binding service-governance path."
     },
     {
       "id": "EDGE_2022_2023_010",
@@ -19348,7 +19526,8 @@
       "visual_lane": "",
       "style": "solid",
       "is_auto": false,
-      "summary": "Bletchley frames frontier AI risks as international safety/security problem."
+      "summary": "Bletchley frames frontier AI risks as international safety/security problem.",
+      "summary_en": "Bletchley frames frontier AI risks as international safety/security problem."
     },
     {
       "id": "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_ACCESS_AS_POWER",
@@ -19364,7 +19543,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_EXPORT_CHIPS_TO_MODELS -> THESIS_ACCESS_AS_POWER"
+      "summary": "From chips to models: export control moves up the stack supports Access control matters more than ownership.",
+      "summary_en": "From chips to models: export control moves up the stack supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_CORE",
@@ -19380,7 +19560,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_EXPORT_CHIPS_TO_MODELS -> THESIS_CORE"
+      "summary": "From chips to models: export control moves up the stack supports AI stack as structural power.",
+      "summary_en": "From chips to models: export control moves up the stack supports AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_TOLL_AND_THROTTLE_ACCESS_AS_POWER",
@@ -19396,7 +19577,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "refines: ARC_TOLL_AND_THROTTLE -> THESIS_ACCESS_AS_POWER"
+      "summary": "Not an embargo, but a toll-and-throttle valve refines Access control matters more than ownership.",
+      "summary_en": "Not an embargo, but a toll-and-throttle valve refines Access control matters more than ownership."
     },
     {
       "id": "EDGE_ARC_THESIS_TOLL_AND_THROTTLE_CONTROL_NOT_AIRTIGHT",
@@ -19412,7 +19594,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_TOLL_AND_THROTTLE -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "Not an embargo, but a toll-and-throttle valve supports Control need not be airtight.",
+      "summary_en": "Not an embargo, but a toll-and-throttle valve supports Control need not be airtight."
     },
     {
       "id": "EDGE_ARC_THESIS_CONTROL_LEAKS_BUT_POLICES_CONTROL_NOT_AIRTIGHT",
@@ -19428,7 +19611,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CONTROL_LEAKS_BUT_POLICES -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "Control leaks, but it still polices supports Control need not be airtight.",
+      "summary_en": "Control leaks, but it still polices supports Control need not be airtight."
     },
     {
       "id": "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_ACCESS_AS_POWER",
@@ -19444,7 +19628,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_GULF_CONDITIONAL_SOVEREIGNTY -> THESIS_ACCESS_AS_POWER"
+      "summary": "Gulf sovereign AI as conditional access supports Access control matters more than ownership.",
+      "summary_en": "Gulf sovereign AI as conditional access supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_CORE",
@@ -19460,7 +19645,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_GULF_CONDITIONAL_SOVEREIGNTY -> THESIS_CORE"
+      "summary": "Gulf sovereign AI as conditional access supports AI stack as structural power.",
+      "summary_en": "Gulf sovereign AI as conditional access supports AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_CHINA_COUNTERSTACK_ROUTE_AROUND_CONTROL_NOT_AIRTIGHT",
@@ -19476,7 +19662,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CHINA_COUNTERSTACK_ROUTE_AROUND -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "China counter-stack: routing around, not parity supports Control need not be airtight.",
+      "summary_en": "China counter-stack: routing around, not parity supports Control need not be airtight."
     },
     {
       "id": "EDGE_ARC_THESIS_CHINA_COUNTERSTACK_ROUTE_AROUND_CORE",
@@ -19492,7 +19679,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "qualifies: ARC_CHINA_COUNTERSTACK_ROUTE_AROUND -> THESIS_CORE"
+      "summary": "China counter-stack: routing around, not parity qualifies AI stack as structural power.",
+      "summary_en": "China counter-stack: routing around, not parity qualifies AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_CYBER_CLAIM_TO_CAVEAT_NOT_AUTONOMOUS_OFFENSE",
@@ -19508,7 +19696,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CYBER_CLAIM_TO_CAVEAT -> THESIS_NOT_AUTONOMOUS_OFFENSE"
+      "summary": "Cyber: from caveat to early weaponization supports Cyber autonomy: the weapon exists, scale remains contested.",
+      "summary_en": "Cyber: from caveat to early weaponization supports Cyber autonomy: the weapon exists, scale remains contested."
     },
     {
       "id": "EDGE_ARC_THESIS_CYBER_CLAIM_TO_CAVEAT_ACCESS_AS_POWER",
@@ -19524,7 +19713,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CYBER_CLAIM_TO_CAVEAT -> THESIS_ACCESS_AS_POWER"
+      "summary": "Cyber: from caveat to early weaponization supports Access control matters more than ownership.",
+      "summary_en": "Cyber: from caveat to early weaponization supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_ARC_THESIS_QUIET_ACCESS_CONTROL_ACCESS_AS_POWER",
@@ -19540,7 +19730,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_QUIET_ACCESS_CONTROL -> THESIS_ACCESS_AS_POWER"
+      "summary": "Quiet access control: policy gates, vetted users, ASL supports Access control matters more than ownership.",
+      "summary_en": "Quiet access control: policy gates, vetted users, ASL supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_DECISION_SOVEREIGNTY",
@@ -19556,7 +19747,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_PALANTIR_DECISION_OS -> THESIS_DECISION_SOVEREIGNTY"
+      "summary": "Palantir as decision OS supports Decision sovereignty.",
+      "summary_en": "Palantir as decision OS supports Decision sovereignty."
     },
     {
       "id": "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_CORE",
@@ -19572,7 +19764,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_PALANTIR_DECISION_OS -> THESIS_CORE"
+      "summary": "Palantir as decision OS supports AI stack as structural power.",
+      "summary_en": "Palantir as decision OS supports AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_DECISION_SOVEREIGNTY",
@@ -19588,7 +19781,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_COGSEC_LAB_TO_WILD_TO_STATE -> THESIS_DECISION_SOVEREIGNTY"
+      "summary": "Cognitive security: lab to wild to state decision-support supports Decision sovereignty.",
+      "summary_en": "Cognitive security: lab to wild to state decision-support supports Decision sovereignty."
     },
     {
       "id": "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_CORE",
@@ -19604,7 +19798,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_COGSEC_LAB_TO_WILD_TO_STATE -> THESIS_CORE"
+      "summary": "Cognitive security: lab to wild to state decision-support supports AI stack as structural power.",
+      "summary_en": "Cognitive security: lab to wild to state decision-support supports AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_ENERGY_GRID_POLITICS_CORE",
@@ -19620,7 +19815,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_ENERGY_GRID_POLITICS -> THESIS_CORE"
+      "summary": "Energy and data-center politics supports AI stack as structural power.",
+      "summary_en": "Energy and data-center politics supports AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_ENERGY_GRID_POLITICS_CONTROL_NOT_AIRTIGHT",
@@ -19636,7 +19832,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "qualifies: ARC_ENERGY_GRID_POLITICS -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "Energy and data-center politics qualifies Control need not be airtight.",
+      "summary_en": "Energy and data-center politics qualifies Control need not be airtight."
     },
     {
       "id": "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_DECISION_SOVEREIGNTY",
@@ -19652,7 +19849,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_WAR_DATA_FLYWHEEL -> THESIS_DECISION_SOVEREIGNTY"
+      "summary": "War as a data flywheel supports Decision sovereignty.",
+      "summary_en": "War as a data flywheel supports Decision sovereignty."
     },
     {
       "id": "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_CORE",
@@ -19668,7 +19866,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_WAR_DATA_FLYWHEEL -> THESIS_CORE"
+      "summary": "War as a data flywheel supports AI stack as structural power.",
+      "summary_en": "War as a data flywheel supports AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_FINANCE_GOVERNED_SHUTDOWN_DECISION_SOVEREIGNTY",
@@ -19684,7 +19883,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_FINANCE_GOVERNED_SHUTDOWN -> THESIS_DECISION_SOVEREIGNTY"
+      "summary": "Finance: from adoption to kill-switch governance supports Decision sovereignty.",
+      "summary_en": "Finance: from adoption to kill-switch governance supports Decision sovereignty."
     },
     {
       "id": "EDGE_ARC_THESIS_FINANCE_GOVERNED_SHUTDOWN_CORE",
@@ -19700,7 +19900,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_FINANCE_GOVERNED_SHUTDOWN -> THESIS_CORE"
+      "summary": "Finance: from adoption to kill-switch governance supports AI stack as structural power.",
+      "summary_en": "Finance: from adoption to kill-switch governance supports AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_FINANCE_GOVERNED_SHUTDOWN_ACCESS_AS_POWER",
@@ -19716,7 +19917,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_FINANCE_GOVERNED_SHUTDOWN -> THESIS_ACCESS_AS_POWER"
+      "summary": "Finance: from adoption to kill-switch governance supports Access control matters more than ownership.",
+      "summary_en": "Finance: from adoption to kill-switch governance supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_CORE",
@@ -19732,7 +19934,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "qualifies: ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE -> THESIS_CORE"
+      "summary": "Open weights: exit or dependency swap qualifies AI stack as structural power.",
+      "summary_en": "Open weights: exit or dependency swap qualifies AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_ACCESS_AS_POWER",
@@ -19748,7 +19951,8 @@
       "style": "dashed",
       "kind": "edge",
       "is_auto": false,
-      "summary": "qualifies: ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE -> THESIS_ACCESS_AS_POWER"
+      "summary": "Open weights: exit or dependency swap qualifies Access control matters more than ownership.",
+      "summary_en": "Open weights: exit or dependency swap qualifies Access control matters more than ownership."
     },
     {
       "id": "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_CONTROL_NOT_AIRTIGHT",
@@ -19764,7 +19968,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "Open weights: exit or dependency swap supports Control need not be airtight.",
+      "summary_en": "Open weights: exit or dependency swap supports Control need not be airtight."
     },
     {
       "id": "EDGE_ARC_THESIS_2022_2023_FORMATION_PHASE_CORE",
@@ -19780,7 +19985,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "sets_up: ARC_2022_2023_FORMATION_PHASE -> THESIS_CORE"
+      "summary": "2022-2023: regime formation sets up AI stack as structural power.",
+      "summary_en": "2022-2023: regime formation sets up AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_A800_H800_WORKAROUND_CLOSURE_CONTROL_NOT_AIRTIGHT",
@@ -19796,7 +20002,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_A800_H800_WORKAROUND_CLOSURE -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "A800/H800: workaround and closure supports Control need not be airtight.",
+      "summary_en": "A800/H800: workaround and closure supports Control need not be airtight."
     },
     {
       "id": "EDGE_ARC_THESIS_2023_GOVERNANCE_SHOCK_ACCESS_AS_POWER",
@@ -19812,7 +20019,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "sets_up: ARC_2023_GOVERNANCE_SHOCK -> THESIS_ACCESS_AS_POWER"
+      "summary": "2023: governance shock sets up Access control matters more than ownership.",
+      "summary_en": "2023: governance shock sets up Access control matters more than ownership."
     },
     {
       "id": "EDGE_V011_BACKFILL_001",
@@ -19828,7 +20036,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_LLAMA31_405B_OPENLY_AVAILABLE -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "Meta releases Llama 3.1 405B as an openly available foundation model supports Control need not be airtight.",
+      "summary_en": "Meta releases Llama 3.1 405B as an openly available foundation model supports Control need not be airtight."
     },
     {
       "id": "EDGE_V011_BACKFILL_002",
@@ -19844,7 +20053,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2025_DEEPSEEK_R1_OPEN_SOURCE_RELEASE -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "DeepSeek releases R1 with open-source model and distilled models supports Control need not be airtight.",
+      "summary_en": "DeepSeek releases R1 with open-source model and distilled models supports Control need not be airtight."
     },
     {
       "id": "EDGE_V011_BACKFILL_003",
@@ -19860,7 +20070,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2025_LLAMA4_SCOUT_MAVERICK -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "Meta introduces Llama 4 Scout and Maverick open-weight multimodal models supports Control need not be airtight.",
+      "summary_en": "Meta introduces Llama 4 Scout and Maverick open-weight multimodal models supports Control need not be airtight."
     },
     {
       "id": "EDGE_V011_BACKFILL_004",
@@ -19876,7 +20087,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_GROK1_OPEN_WEIGHTS -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "xAI releases Grok-1 weights and architecture supports Control need not be airtight.",
+      "summary_en": "xAI releases Grok-1 weights and architecture supports Control need not be airtight."
     },
     {
       "id": "EDGE_V011_BACKFILL_005",
@@ -19892,7 +20104,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_GPT4O_RELEASE_AND_FREE_ACCESS -> THESIS_ACCESS_AS_POWER"
+      "summary": "OpenAI releases GPT-4o as a flagship multimodal model supports Access control matters more than ownership.",
+      "summary_en": "OpenAI releases GPT-4o as a flagship multimodal model supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_V011_BACKFILL_006",
@@ -19908,7 +20121,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_CLAUDE_35_SONNET -> THESIS_ACCESS_AS_POWER"
+      "summary": "Anthropic launches Claude 3.5 Sonnet supports Access control matters more than ownership.",
+      "summary_en": "Anthropic launches Claude 3.5 Sonnet supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_V011_BACKFILL_007",
@@ -19924,7 +20138,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2025_OPENAI_O3_O4_MINI -> THESIS_ACCESS_AS_POWER"
+      "summary": "OpenAI releases o3 and o4-mini reasoning models supports Access control matters more than ownership.",
+      "summary_en": "OpenAI releases o3 and o4-mini reasoning models supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_V011_BACKFILL_008",
@@ -19940,7 +20155,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports_with_scope: SIG_2024_OPENAI_STATE_THREAT_ACTORS_DISRUPTION -> THESIS_NOT_AUTONOMOUS_OFFENSE"
+      "summary": "OpenAI and Microsoft disrupt state-affiliated actors using AI services for malicious cyber activity supports, with scope, Cyber autonomy: the weapon exists, scale remains contested.",
+      "summary_en": "OpenAI and Microsoft disrupt state-affiliated actors using AI services for malicious cyber activity supports, with scope, Cyber autonomy: the weapon exists, scale remains contested."
     },
     {
       "id": "EDGE_V011_BACKFILL_009",
@@ -19956,7 +20172,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports_with_scope: SIG_2024_GOOGLE_PROJECT_NAPTIME -> THESIS_NOT_AUTONOMOUS_OFFENSE"
+      "summary": "Google Project Zero publishes Project Naptime for LLM-assisted vulnerability research supports, with scope, Cyber autonomy: the weapon exists, scale remains contested.",
+      "summary_en": "Google Project Zero publishes Project Naptime for LLM-assisted vulnerability research supports, with scope, Cyber autonomy: the weapon exists, scale remains contested."
     },
     {
       "id": "EDGE_V011_BACKFILL_010",
@@ -19972,7 +20189,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports_with_scope: SIG_2024_GOOGLE_BIG_SLEEP_SQLITE -> THESIS_NOT_AUTONOMOUS_OFFENSE"
+      "summary": "Google Big Sleep agent finds exploitable SQLite vulnerability before release supports, with scope, Cyber autonomy: the weapon exists, scale remains contested.",
+      "summary_en": "Google Big Sleep agent finds exploitable SQLite vulnerability before release supports, with scope, Cyber autonomy: the weapon exists, scale remains contested."
     },
     {
       "id": "EDGE_V011_BACKFILL_011",
@@ -19988,7 +20206,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports_with_scope: SIG_2024_AIXCC_SEMIFINAL -> THESIS_NOT_AUTONOMOUS_OFFENSE"
+      "summary": "DARPA AI Cyber Challenge semifinal culminates at DEF CON 32 supports, with scope, Cyber autonomy: the weapon exists, scale remains contested.",
+      "summary_en": "DARPA AI Cyber Challenge semifinal culminates at DEF CON 32 supports, with scope, Cyber autonomy: the weapon exists, scale remains contested."
     },
     {
       "id": "EDGE_V011_BACKFILL_012",
@@ -20004,7 +20223,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2023_AP_OPENAI_ARCHIVE_LICENSE -> THESIS_ACCESS_AS_POWER"
+      "summary": "Associated Press and OpenAI reach news archive/content-sharing agreement supports Access control matters more than ownership.",
+      "summary_en": "Associated Press and OpenAI reach news archive/content-sharing agreement supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_V011_BACKFILL_013",
@@ -20020,7 +20240,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_REDDIT_GOOGLE_DATA_API -> THESIS_ACCESS_AS_POWER"
+      "summary": "Google and Reddit expand partnership with access to Reddit Data API supports Access control matters more than ownership.",
+      "summary_en": "Google and Reddit expand partnership with access to Reddit Data API supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_V011_BACKFILL_014",
@@ -20036,7 +20257,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_OPENAI_STACK_OVERFLOW_API -> THESIS_ACCESS_AS_POWER"
+      "summary": "OpenAI and Stack Overflow announce API partnership for technical knowledge supports Access control matters more than ownership.",
+      "summary_en": "OpenAI and Stack Overflow announce API partnership for technical knowledge supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_V011_BACKFILL_015",
@@ -20052,7 +20274,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_NEWS_CORP_OPENAI_PARTNERSHIP -> THESIS_ACCESS_AS_POWER"
+      "summary": "News Corp and OpenAI sign multi-year global content partnership supports Access control matters more than ownership.",
+      "summary_en": "News Corp and OpenAI sign multi-year global content partnership supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_V011_BACKFILL_016",
@@ -20068,7 +20291,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_AMAZON_ANTHROPIC_4B_COMPLETION -> THESIS_CORE"
+      "summary": "Amazon completes $4B Anthropic investment, reinforcing Claude-on-AWS/Bedrock distribution supports AI stack as structural power.",
+      "summary_en": "Amazon completes $4B Anthropic investment, reinforcing Claude-on-AWS/Bedrock distribution supports AI stack as structural power."
     },
     {
       "id": "EDGE_V011_BACKFILL_017",
@@ -20084,7 +20308,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_OPENAI_ORACLE_OCI_CAPACITY -> THESIS_CORE"
+      "summary": "OpenAI selects Oracle Cloud Infrastructure to extend Microsoft Azure AI capacity supports AI stack as structural power.",
+      "summary_en": "OpenAI selects Oracle Cloud Infrastructure to extend Microsoft Azure AI capacity supports AI stack as structural power."
     },
     {
       "id": "EDGE_V011_BACKFILL_018",
@@ -20100,7 +20325,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: SIG_2024_XAI_SERIES_B_6B -> THESIS_CORE"
+      "summary": "xAI raises $6B Series B to scale AI systems and infrastructure supports AI stack as structural power.",
+      "summary_en": "xAI raises $6B Series B to scale AI systems and infrastructure supports AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_ACCESS_AS_POWER",
@@ -20116,7 +20342,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_DATA_LICENSING_AS_INPUT_LAYER -> THESIS_ACCESS_AS_POWER"
+      "summary": "Data as a licensed input layer supports Access control matters more than ownership.",
+      "summary_en": "Data as a licensed input layer supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_CORE",
@@ -20132,7 +20359,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_DATA_LICENSING_AS_INPUT_LAYER -> THESIS_CORE"
+      "summary": "Data as a licensed input layer supports AI stack as structural power.",
+      "summary_en": "Data as a licensed input layer supports AI stack as structural power."
     },
     {
       "id": "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_ACCESS_AS_POWER",
@@ -20148,7 +20376,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CLOUD_CAPACITY_VENDOR_LOCKIN -> THESIS_ACCESS_AS_POWER"
+      "summary": "Cloud capacity and vendor lock-in supports Access control matters more than ownership.",
+      "summary_en": "Cloud capacity and vendor lock-in supports Access control matters more than ownership."
     },
     {
       "id": "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_CORE",
@@ -20164,7 +20393,8 @@
       "style": "solid",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CLOUD_CAPACITY_VENDOR_LOCKIN -> THESIS_CORE"
+      "summary": "Cloud capacity and vendor lock-in supports AI stack as structural power.",
+      "summary_en": "Cloud capacity and vendor lock-in supports AI stack as structural power."
     },
     {
       "source_kind": "story_arc",
@@ -20180,7 +20410,8 @@
       "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CAPITAL_MIX_PUBLIC_PRIVATE -> THESIS_CORE"
+      "summary": "Capital: private, state-guidance, sovereign vehicles and pledges supports AI stack as structural power.",
+      "summary_en": "Capital: private, state-guidance, sovereign vehicles and pledges supports AI stack as structural power."
     },
     {
       "source_kind": "story_arc",
@@ -20196,7 +20427,8 @@
       "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CAPITAL_MIX_PUBLIC_PRIVATE -> THESIS_ACCESS_AS_POWER"
+      "summary": "Capital: private, state-guidance, sovereign vehicles and pledges supports Access control matters more than ownership.",
+      "summary_en": "Capital: private, state-guidance, sovereign vehicles and pledges supports Access control matters more than ownership."
     },
     {
       "source_kind": "story_arc",
@@ -20212,7 +20444,8 @@
       "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports_with_scope: ARC_CAPITAL_MIX_PUBLIC_PRIVATE -> THESIS_DECISION_SOVEREIGNTY"
+      "summary": "Capital: private, state-guidance, sovereign vehicles and pledges supports, with scope, Decision sovereignty.",
+      "summary_en": "Capital: private, state-guidance, sovereign vehicles and pledges supports, with scope, Decision sovereignty."
     },
     {
       "source_kind": "story_arc",
@@ -20228,7 +20461,8 @@
       "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CORPORATE_DECISION_SUPPORT_ADOPTION -> THESIS_DECISION_SOVEREIGNTY"
+      "summary": "Corporate decision-support: from BYOAI to governed internal layers supports Decision sovereignty.",
+      "summary_en": "Corporate decision-support: from BYOAI to governed internal layers supports Decision sovereignty."
     },
     {
       "source_kind": "story_arc",
@@ -20244,7 +20478,8 @@
       "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports_with_scope: ARC_CORPORATE_DECISION_SUPPORT_ADOPTION -> THESIS_ACCESS_AS_POWER"
+      "summary": "Corporate decision-support: from BYOAI to governed internal layers supports, with scope, Access control matters more than ownership.",
+      "summary_en": "Corporate decision-support: from BYOAI to governed internal layers supports, with scope, Access control matters more than ownership."
     },
     {
       "source_kind": "story_arc",
@@ -20260,7 +20495,8 @@
       "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports_with_scope: ARC_CORPORATE_DECISION_SUPPORT_ADOPTION -> THESIS_CORE"
+      "summary": "Corporate decision-support: from BYOAI to governed internal layers supports, with scope, AI stack as structural power.",
+      "summary_en": "Corporate decision-support: from BYOAI to governed internal layers supports, with scope, AI stack as structural power."
     },
     {
       "source_kind": "story_arc",
@@ -20276,7 +20512,8 @@
       "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports_but_limits: ARC_CYBER_CLAIM_TO_CAVEAT -> THESIS_NOT_AUTONOMOUS_OFFENSE"
+      "summary": "Cyber: from caveat to early weaponization supports while limiting Cyber autonomy: the weapon exists, scale remains contested.",
+      "summary_en": "Cyber: from caveat to early weaponization supports while limiting Cyber autonomy: the weapon exists, scale remains contested."
     },
     {
       "source_kind": "story_arc",
@@ -20292,7 +20529,8 @@
       "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
       "kind": "edge",
       "is_auto": false,
-      "summary": "supports: ARC_CYBER_CLAIM_TO_CAVEAT -> THESIS_CONTROL_NOT_AIRTIGHT"
+      "summary": "Cyber: from caveat to early weaponization supports Control need not be airtight.",
+      "summary_en": "Cyber: from caveat to early weaponization supports Control need not be airtight."
     },
     {
       "source_kind": "evidence",
@@ -20308,7 +20546,8 @@
       "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2025_EU_INVESTAI_200B_MOBILIZATION supports the capital-mix arc with caveats about accounting class."
+      "summary": "EU launched InvestAI to mobilise €200B, including €20B for AI gigafactories supports, with scope, AI stack as structural power.",
+      "summary_en": "EU launched InvestAI to mobilise €200B, including €20B for AI gigafactories supports, with scope, AI stack as structural power."
     },
     {
       "source_kind": "evidence",
@@ -20324,7 +20563,8 @@
       "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2024_UAE_MGX_100B_AI_STATE_VEHICLE supports the capital-mix arc with caveats about accounting class."
+      "summary": "Abu Dhabi launched MGX as an AI investment vehicle backed by Mubadala and G42 supports, with scope, AI stack as structural power.",
+      "summary_en": "Abu Dhabi launched MGX as an AI investment vehicle backed by Mubadala and G42 supports, with scope, AI stack as structural power."
     },
     {
       "source_kind": "evidence",
@@ -20340,7 +20580,8 @@
       "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2024_SAUDI_40B_AI_FUND_REPORTED supports the capital-mix arc with caveats about accounting class."
+      "summary": "Saudi Arabia was reported to be planning a roughly $40B AI investment fund supports, with scope, AI stack as structural power.",
+      "summary_en": "Saudi Arabia was reported to be planning a roughly $40B AI investment fund supports, with scope, AI stack as structural power."
     },
     {
       "source_kind": "evidence",
@@ -20356,7 +20597,8 @@
       "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2025_OPENAI_40B_SOFTBANK_ROUND supports the capital-mix arc with caveats about accounting class."
+      "summary": "OpenAI closed a $40B funding round led by SoftBank at a reported $300B valuation supports Access control matters more than ownership.",
+      "summary_en": "OpenAI closed a $40B funding round led by SoftBank at a reported $300B valuation supports Access control matters more than ownership."
     },
     {
       "source_kind": "evidence",
@@ -20372,7 +20614,8 @@
       "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2025_ANTHROPIC_3_5B_SERIES_E supports the capital-mix arc with caveats about accounting class."
+      "summary": "Anthropic raised $3.5B Series E at a $61.5B post-money valuation supports Access control matters more than ownership.",
+      "summary_en": "Anthropic raised $3.5B Series E at a $61.5B post-money valuation supports Access control matters more than ownership."
     },
     {
       "source_kind": "evidence",
@@ -20388,7 +20631,8 @@
       "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY supports the capital-mix arc with caveats about accounting class."
+      "summary": "CoreWeave announced an OpenAI AI-infrastructure deal with contract value up to $11.9B supports Access control matters more than ownership.",
+      "summary_en": "CoreWeave announced an OpenAI AI-infrastructure deal with contract value up to $11.9B supports Access control matters more than ownership."
     },
     {
       "source_kind": "evidence",
@@ -20404,7 +20648,8 @@
       "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT fills the 2023–2025 corporate decision-support adoption lane."
+      "summary": "Morgan Stanley announced an OpenAI GPT-4 assistant for financial-advisor knowledge work supports, with scope, Decision sovereignty.",
+      "summary_en": "Morgan Stanley announced an OpenAI GPT-4 assistant for financial-advisor knowledge work supports, with scope, Decision sovereignty."
     },
     {
       "source_kind": "evidence",
@@ -20420,7 +20665,8 @@
       "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE fills the 2023–2025 corporate decision-support adoption lane."
+      "summary": "Microsoft/LinkedIn Work Trend Index reported 75% of knowledge workers using AI at work supports, with scope, Decision sovereignty.",
+      "summary_en": "Microsoft/LinkedIn Work Trend Index reported 75% of knowledge workers using AI at work supports, with scope, Decision sovereignty."
     },
     {
       "source_kind": "evidence",
@@ -20436,7 +20682,8 @@
       "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE fills the 2023–2025 corporate decision-support adoption lane."
+      "summary": "JPMorgan rolled out LLM Suite internally, reported initially for 60,000 employees and later much wider access supports, with scope, Decision sovereignty.",
+      "summary_en": "JPMorgan rolled out LLM Suite internally, reported initially for 60,000 employees and later much wider access supports, with scope, Decision sovereignty."
     },
     {
       "source_kind": "evidence",
@@ -20452,7 +20699,8 @@
       "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION fills the 2023–2025 corporate decision-support adoption lane."
+      "summary": "McKinsey State of AI reported regular AI use in 88% of surveyed organizations and broad agent experimentation supports, with scope, AI stack as structural power.",
+      "summary_en": "McKinsey State of AI reported regular AI use in 88% of surveyed organizations and broad agent experimentation supports, with scope, AI stack as structural power."
     },
     {
       "source_kind": "evidence",
@@ -20468,7 +20716,8 @@
       "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE reframes cyber from purely defensive find-and-fix toward early weaponization with strict caveats."
+      "summary": "Anthropic disclosed a Claude Code AI-orchestrated cyber-espionage campaign by GTG-1002 supports while limiting Cyber autonomy: the weapon exists, scale remains contested.",
+      "summary_en": "Anthropic disclosed a Claude Code AI-orchestrated cyber-espionage campaign by GTG-1002 supports while limiting Cyber autonomy: the weapon exists, scale remains contested."
     },
     {
       "source_kind": "evidence",
@@ -20484,7 +20733,8 @@
       "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION reframes cyber from purely defensive find-and-fix toward early weaponization with strict caveats."
+      "summary": "Local UPS audit found 15/129 strict LLM/AI-attributed CVEs with public PoC, but only 3/129 heavy weaponization supports while limiting Cyber autonomy: the weapon exists, scale remains contested.",
+      "summary_en": "Local UPS audit found 15/129 strict LLM/AI-attributed CVEs with public PoC, but only 3/129 heavy weaponization supports while limiting Cyber autonomy: the weapon exists, scale remains contested."
     },
     {
       "source_kind": "evidence",
@@ -20500,7 +20750,8 @@
       "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
       "kind": "edge",
       "is_auto": false,
-      "summary": "SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER reframes cyber from purely defensive find-and-fix toward early weaponization with strict caveats."
+      "summary": "Microsoft Defender / Windows weaponization cluster: BlueHammer, RedSun, UnDefend and related public PoCs supports, with scope, Control need not be airtight.",
+      "summary_en": "Microsoft Defender / Windows weaponization cluster: BlueHammer, RedSun, UnDefend and related public PoCs supports, with scope, Control need not be airtight."
     }
   ],
   "thesisNodes": [

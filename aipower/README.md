@@ -11,7 +11,7 @@ Site URL after GitHub Pages deploy:
 | File | Description |
 | --- | --- |
 | [`index.html`](index.html) | Small entry page for the AI Power package. |
-| [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, stack heatmap, fact catalog, claim checks and source index. |
+| [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, timeline, stack heatmap, fact catalog, claim checks and source index. |
 | [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.12 storygraph line. |
 | [`ai_power_storygraph_v0_12_en.json`](ai_power_storygraph_v0_12_en.json) | Machine-readable English storygraph used by the atlas. |
 | [`ai_power_storygraph_v0_12_ru.json`](ai_power_storygraph_v0_12_ru.json) | Russian v0.12 master storygraph with facts, claims, edges, sources and graph diagnostics. |
