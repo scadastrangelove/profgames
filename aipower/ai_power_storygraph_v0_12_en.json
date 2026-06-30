@@ -1,13 +1,20 @@
 {
   "meta": {
     "title": "AI Stack as Structural Power",
-    "version": "0.11",
+    "version": "0.12",
     "created_at": "",
     "updated_at": "",
-    "schema_version": "ai_stack_structural_power.v0.11.0-2026-06-29",
-    "source_pack": "ai_stack_structural_power_evidence_v0_11_storygraph_master.json",
+    "schema_version": "ai_stack_structural_power.v0.12.0-2026-06-30",
+    "source_pack": "ai_stack_structural_power_evidence_v0_12_storygraph_master.json",
     "method": "ProfGames-style layered organization. Merge of: (a) v0.4 operational pack (evidence/timeline/claim_checks/country_cards/cyber_pack/cognitive_security/critical_decision_use/palantir_case/weekly_memo/gaps), (b) v0.2 factcheck layer (claims with recommended_phrasing_ru/counterarguments/recommendations), (c) new v0.3 research closing the Stanford-tables and chip-license gaps and adding model-layer export-control claims.",
     "changelog": [
+      {
+        "version": "0.12",
+        "date": "2026-06-30",
+        "description": "Added capital-mix structure, reframed access/cyber thesis labels, added 12 evidence signals, 2 story arcs and explicit edges for capital, corporate decision-support, cyber PoC/weaponization clusters.",
+        "added_evidence": 13,
+        "added_story_arcs": 2
+      },
       {
         "version": "0.11",
         "date": "2026-06-29",
@@ -71,9 +78,9 @@
     "subtitle": "A research atlas of stack power, access control, cloud capacity, data licensing and decision sovereignty.",
     "changelog_en": [
       {
-        "version": "0.11",
-        "date": "2026-06-29",
-        "description": "Targeted heatmap backfill: 22 evidence signals, 2 story arcs, 18 total arcs, 230 story edges."
+        "version": "0.12",
+        "date": "2026-07-01",
+        "description": "Capital-mix reframe, cyber weaponization caveat update, corporate decision-support backfill, multi-lane timeline normalization and 20 total arcs / 251 story edges."
       }
     ]
   },
@@ -109,33 +116,74 @@
       "NEW (v0.7): finance moved from AI adoption to governed shutdown — RBI's draft framework adds board accountability, independent validation, human oversight and decommissioning ('kill-switch') logic; the precise sovereignty risk is supplier boundary control, mitigable via model replaceability and state-owned orchestration.",
       "NEW (v0.8): transshipment leakage is documented and large (DOJ Super Micro ~$2.5B / $510M in weeks; ALX via Singapore/Malaysia; Janford 400 A100 via Malaysia/Thailand) AND enforcement is escalating (DOJ's largest-ever AI-hardware case, Taiwan's first criminal prosecution, Malaysia permits/seizure). Controls leak yet impose growing cost/delay/risk/policing; total gray-market volume remains unquantified.",
       "NEW (v0.8): the energy bottleneck is materially binding the US buildout (only ~5 of ~16 GW of 2026 capacity under construction; 30-50% delayed/cancelled; transformers 3-5yr, switchgear through 2028, interconnection 3-7yr; 75+ projects / ~$130B blocked in Q1 2026) — real but, per the flexibility evidence, regionally and technologically contingent.",
-      "NEW (v0.11): heatmap backfill shows 2024-2025 model/data/cloud/cyber cells were under-collected, not empty: GPT-4o, Claude 3/3.5, Gemini 1.5, Llama 3.1/4, DeepSeek-R1, Oracle/OpenAI capacity, Amazon/Anthropic, Reddit/Google data API, News Corp/OpenAI, Big Sleep and OpenAI/Microsoft threat-actor disruption add missing model-access, data-licensing, cloud-capacity and defensive-cyber milestones."
+      "NEW (v0.11): heatmap backfill shows 2024-2025 model/data/cloud/cyber cells were under-collected, not empty: GPT-4o, Claude 3/3.5, Gemini 1.5, Llama 3.1/4, DeepSeek-R1, Oracle/OpenAI capacity, Amazon/Anthropic, Reddit/Google data API, News Corp/OpenAI, Big Sleep and OpenAI/Microsoft threat-actor disruption add missing model-access, data-licensing, cloud-capacity and defensive-cyber milestones.",
+      "NEW (v0.12): capital concentration should be displayed as a mix of accounting regimes: US annual private investment, China private + cumulative guidance funds, EU InvestAI mobilization, Gulf sovereign vehicles/reported funds, and compute-capacity contracts. Do not sum these as one comparable total.",
+      "NEW (v0.12): cyber thesis reframed from “autonomy not proven” to “weapon exists, scale and attribution remain contested”: Anthropic/MITRE AI-orchestrated campaign, 15/129 public PoC migration, 3/129 heavy weaponization, and a separate Defender/Windows cluster.",
+      "NEW (v0.12): decision_support_cognition 2023–2025 backfill adds enterprise adoption evidence: Morgan Stanley GPT-4 assistant, Microsoft/LinkedIn Work Trend Index, JPMorgan LLM Suite, and McKinsey State of AI adoption."
+    ],
+    "capital_mix": [
+      {
+        "amount": "$285.9B",
+        "period": "2025",
+        "source_name": "Stanford AI Index 2026",
+        "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/economy"
+      },
+      {
+        "amount": "$12.4B",
+        "period": "2025",
+        "source_name": "Stanford AI Index 2026",
+        "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+      },
+      {
+        "amount": "~$184B",
+        "period": "2000–2023 cumulative",
+        "source_name": "Stanford AI Index 2026",
+        "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/economy"
+      },
+      {
+        "amount": "~$46.4B",
+        "period": "2025",
+        "source_name": "Stanford AI Index 2026 / derived",
+        "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/economy"
+      },
+      {
+        "amount": "€200B",
+        "period": "announced 2025",
+        "source_name": "European Commission",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence"
+      },
+      {
+        "amount": "$100B+ / ~$40B reported",
+        "period": "2024–2025",
+        "source_name": "Mubadala / NYT-Reuters reporting",
+        "url": "https://www.mubadala.com/en/news/abu-dhabi-launches-comprehensive-global-investment-strategy-on-artificial-intelligence"
+      }
     ],
     "pass_rate_short": "97%",
-    "total_events": 122,
+    "total_events": 135,
     "total_claims": 70,
     "total_claim_checks": 26,
-    "total_arcs": 18,
-    "total_edges": 230,
+    "total_arcs": 20,
+    "total_edges": 251,
     "total_thesis_nodes": 5,
-    "source_count": 183,
+    "source_count": 196,
     "by_status": {
-      "verified": 62,
-      "verified_as_reported": 25,
-      "partially_verified": 18,
+      "verified": 68,
+      "verified_as_reported": 28,
+      "partially_verified": 21,
       "verified_preprint": 8,
       "partially_verified_contested": 2,
+      "reported_unconfirmed": 2,
       "verified_as_reported_indictment_allegation": 2,
       "disputed_capability_claim": 1,
       "disputed_specific_claim_valid_general_mechanism": 1,
-      "reported_unconfirmed": 1,
       "verified_as_reported_not_primary_order": 1,
       "verified_as_speech_not_as_fact": 1
     },
     "by_confidence": {
-      "B": 59,
+      "B": 70,
       "A": 44,
-      "C": 16,
+      "C": 18,
       "B/C": 1,
       "D": 1,
       "D_for_capability_claim_B_for_speech_event": 1
@@ -5163,9 +5211,11 @@
         "EDGE_AUTO_SUPPORT_063"
       ],
       "arcIds": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
         "AUTO_CLAIMCHECK_SUPPORT"
       ],
       "relationTypes": [
+        "key_node",
         "supports"
       ]
     },
@@ -5236,9 +5286,11 @@
         "EDGE_AUTO_SUPPORT_064"
       ],
       "arcIds": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
         "AUTO_CLAIMCHECK_SUPPORT"
       ],
       "relationTypes": [
+        "key_node",
         "supports"
       ]
     },
@@ -5266,10 +5318,14 @@
         "Global"
       ],
       "stack_layer": [
-        "multiple"
+        "model_weights",
+        "energy_compute_chips",
+        "cloud_inference"
       ],
       "stack_layers": [
-        "multiple"
+        "model_weights",
+        "energy_compute_chips",
+        "cloud_inference"
       ],
       "strange_structure": [
         "knowledge"
@@ -5283,7 +5339,7 @@
       "claim_supported": "US leads on models/compute concentration; China nearly closed the capability gap; US talent advantage eroding.",
       "claim_challenged": "That capital concentration buys a durable capability moat.",
       "summary": "US leads on models/compute concentration; China nearly closed the capability gap; US talent advantage eroding.",
-      "notes": "Global AI DC power 29.6 GW (secondary). US genAI adoption 24th at 28.3%; Singapore 61%, UAE 54%.",
+      "notes": "Global AI DC power 29.6 GW (secondary). US genAI adoption 24th at 28.3%; Singapore 61%, UAE 54%. v0.12: normalized from technical stack_layer=multiple into concrete model/compute/cloud layers.",
       "corroboration_needed": "",
       "caveat": "That capital concentration buys a durable capability moat.",
       "exact_quote_short": "The United States hosts 5,427 data centers, more than 10 times any other country",
@@ -7084,12 +7140,14 @@
       "stack_layer": [
         "model_weights",
         "decision_support_cognition",
-        "data_telemetry"
+        "data_telemetry",
+        "cloud_inference"
       ],
       "stack_layers": [
         "model_weights",
         "decision_support_cognition",
-        "data_telemetry"
+        "data_telemetry",
+        "cloud_inference"
       ],
       "strange_structure": [
         "knowledge",
@@ -7106,7 +7164,7 @@
       "claim_supported": "The public deployment shock that turned foundation models from specialist infrastructure into a mass interface and triggered the 2023 governance/capex race.",
       "claim_challenged": "Consumer launch does not by itself prove structural state power; it is the demand/adoption trigger.",
       "summary": "The public deployment shock that turned foundation models from specialist infrastructure into a mass interface and triggered the 2023 governance/capex race.",
-      "notes": "This belongs in 2022 because it explains why 2023 became dense.",
+      "notes": "This belongs in 2022 because it explains why 2023 became dense. v0.12: tagged as cloud_inference because ChatGPT is a public hosted inference service, not just a model-release signal.",
       "corroboration_needed": "",
       "caveat": "Consumer launch does not by itself prove structural state power; it is the demand/adoption trigger.",
       "exact_quote_short": "We’ve trained a model called ChatGPT which interacts in a conversational way",
@@ -9836,6 +9894,1092 @@
       "edgeIds": [],
       "arcIds": [],
       "relationTypes": []
+    },
+    {
+      "id": "SIG_2025_EU_INVESTAI_200B_MOBILIZATION",
+      "kind": "event",
+      "title": "EU launched InvestAI to mobilise €200B, including €20B for AI gigafactories",
+      "date": "2025-02-11",
+      "source_date": "2025-02-11",
+      "year": 2025,
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence",
+      "source_name": "European Commission",
+      "source_type_raw": "Government / policy",
+      "source_type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "actor": "European Commission",
+      "actors": [
+        "European Commission",
+        "EU"
+      ],
+      "actor_facets": [
+        "EU"
+      ],
+      "geography": [
+        "EU"
+      ],
+      "stack_layer": [
+        "finance_rent",
+        "energy_compute_chips",
+        "cloud_inference",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "finance_rent",
+        "energy_compute_chips",
+        "cloud_inference",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "finance",
+        "production",
+        "security"
+      ],
+      "strange_structures": [
+        "finance",
+        "production",
+        "security"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ3",
+        "RQ6"
+      ],
+      "claim_supported": "Europe is not absent from AI capital, but its visible signal is a public-private mobilization and gigafactory policy instrument, not the same accounting class as US private AI investment.",
+      "claim_challenged": "Do not count the €200B as already deployed capital.",
+      "summary": "Europe is not absent from AI capital, but its visible signal is a public-private mobilization and gigafactory policy instrument, not the same accounting class as US private AI investment.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Do not count the €200B as already deployed capital.",
+      "exact_quote_short": "",
+      "numbers": {
+        "eu_investai_mobilization_eur_billion": 200,
+        "ai_gigafactory_fund_eur_billion": 20
+      },
+      "money_status": "announced_mobilization_not_deployed_spend",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "European Commission",
+          "name": "European Commission",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence",
+          "type": "Government / policy",
+          "date": "2025-02-11",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2025_EU_INVESTAI_200B_MOBILIZATION_CAPITAL"
+      ],
+      "arcIds": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope"
+      ]
+    },
+    {
+      "id": "SIG_2024_UAE_MGX_100B_AI_STATE_VEHICLE",
+      "kind": "event",
+      "title": "Abu Dhabi launched MGX as an AI investment vehicle backed by Mubadala and G42",
+      "date": "2024-03-13",
+      "source_date": "2024-03-13",
+      "year": 2024,
+      "url": "https://www.mubadala.com/en/news/abu-dhabi-launches-comprehensive-global-investment-strategy-on-artificial-intelligence",
+      "source_name": "Mubadala",
+      "source_type_raw": "Company / vendor",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Mubadala, G42, Abu Dhabi",
+      "actors": [
+        "Mubadala",
+        "G42",
+        "MGX",
+        "UAE",
+        "Mubadala, G42, Abu Dhabi"
+      ],
+      "actor_facets": [
+        "G42"
+      ],
+      "geography": [
+        "UAE",
+        "Gulf"
+      ],
+      "stack_layer": [
+        "finance_rent",
+        "cloud_inference",
+        "energy_compute_chips"
+      ],
+      "stack_layers": [
+        "finance_rent",
+        "cloud_inference",
+        "energy_compute_chips"
+      ],
+      "strange_structure": [
+        "finance",
+        "production"
+      ],
+      "strange_structures": [
+        "finance",
+        "production"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ6"
+      ],
+      "claim_supported": "Gulf AI capital is better represented as sovereign/infrastructure vehicle capital than as private AI venture investment.",
+      "claim_challenged": "Treat $100B+ MGX figures as target/AUM/reporting context unless a committed-deployed amount is sourced.",
+      "summary": "Gulf AI capital is better represented as sovereign/infrastructure vehicle capital than as private AI venture investment.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Treat $100B+ MGX figures as target/AUM/reporting context unless a committed-deployed amount is sourced.",
+      "exact_quote_short": "",
+      "numbers": {
+        "reported_target_aum_usd_billion": 100
+      },
+      "money_status": "vehicle_target_or_aum_not_deployed_spend",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "partially_verified",
+      "sources": [
+        {
+          "title": "Mubadala",
+          "name": "Mubadala",
+          "url": "https://www.mubadala.com/en/news/abu-dhabi-launches-comprehensive-global-investment-strategy-on-artificial-intelligence",
+          "type": "Company / vendor",
+          "date": "2024-03-13",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2024_UAE_MGX_100B_AI_STATE_VEHICLE_CAPITAL"
+      ],
+      "arcIds": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope"
+      ]
+    },
+    {
+      "id": "SIG_2024_SAUDI_40B_AI_FUND_REPORTED",
+      "kind": "event",
+      "title": "Saudi Arabia was reported to be planning a roughly $40B AI investment fund",
+      "date": "2024-03-19",
+      "source_date": "2024-03-19",
+      "year": 2024,
+      "url": "https://atolltimes.mv/post/world/7949",
+      "source_name": "Reuters / NYT report mirrored by Atoll Times",
+      "source_type_raw": "Press / wire",
+      "source_type": "Press / wire",
+      "primary_or_secondary": "primary",
+      "actor": "Saudi PIF, Andreessen Horowitz",
+      "actors": [
+        "Saudi Arabia",
+        "PIF",
+        "Andreessen Horowitz",
+        "Saudi PIF, Andreessen Horowitz"
+      ],
+      "actor_facets": [
+        "Saudi Arabia"
+      ],
+      "geography": [
+        "Saudi Arabia",
+        "Gulf"
+      ],
+      "stack_layer": [
+        "finance_rent"
+      ],
+      "stack_layers": [
+        "finance_rent"
+      ],
+      "strange_structure": [
+        "finance"
+      ],
+      "strange_structures": [
+        "finance"
+      ],
+      "research_question": [
+        "RQ6"
+      ],
+      "claim_supported": "Gulf capital should be shown as a separate state/sovereign mode in the capital map.",
+      "claim_challenged": "Reported talks, not a completed fund or deployed AI spend.",
+      "summary": "Gulf capital should be shown as a separate state/sovereign mode in the capital map.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Reported talks, not a completed fund or deployed AI spend.",
+      "exact_quote_short": "",
+      "numbers": {
+        "reported_fund_size_usd_billion": 40
+      },
+      "money_status": "reported_planned_fund_not_committed_spend",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "reported_unconfirmed",
+      "sources": [
+        {
+          "title": "Reuters / NYT report mirrored by Atoll Times",
+          "name": "Reuters / NYT report mirrored by Atoll Times",
+          "url": "https://atolltimes.mv/post/world/7949",
+          "type": "Press / wire",
+          "date": "2024-03-19",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2024_SAUDI_40B_AI_FUND_REPORTED_CAPITAL"
+      ],
+      "arcIds": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope"
+      ]
+    },
+    {
+      "id": "SIG_2025_OPENAI_40B_SOFTBANK_ROUND",
+      "kind": "event",
+      "title": "OpenAI closed a $40B funding round led by SoftBank at a reported $300B valuation",
+      "date": "2025-03-31",
+      "source_date": "2025-03-31",
+      "year": 2025,
+      "url": "https://www.nbcbayarea.com/news/business/money-report/openai-closes-40-billion-funding-round-largest-private-tech-deal-on-record/3832288/",
+      "source_name": "CNBC / NBC Bay Area",
+      "source_type_raw": "Press / wire",
+      "source_type": "Press / wire",
+      "primary_or_secondary": "primary",
+      "actor": "OpenAI, SoftBank",
+      "actors": [
+        "OpenAI",
+        "SoftBank",
+        "OpenAI, SoftBank"
+      ],
+      "actor_facets": [
+        "Financial regulators / banks",
+        "OpenAI",
+        "SoftBank"
+      ],
+      "geography": [
+        "US",
+        "Japan",
+        "Global"
+      ],
+      "stack_layer": [
+        "finance_rent",
+        "cloud_inference",
+        "model_weights"
+      ],
+      "stack_layers": [
+        "finance_rent",
+        "cloud_inference",
+        "model_weights"
+      ],
+      "strange_structure": [
+        "finance",
+        "production",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "finance",
+        "production",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ6"
+      ],
+      "claim_supported": "Frontier-model firms increasingly function as capital-concentration vehicles tied to infrastructure access.",
+      "claim_challenged": "Funding round size is not the same as spent compute or deployed capacity.",
+      "summary": "Frontier-model firms increasingly function as capital-concentration vehicles tied to infrastructure access.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Funding round size is not the same as spent compute or deployed capacity.",
+      "exact_quote_short": "",
+      "numbers": {
+        "round_usd_billion": 40,
+        "reported_post_money_valuation_usd_billion": 300
+      },
+      "money_status": "funding_round_not_spend",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified_as_reported",
+      "sources": [
+        {
+          "title": "CNBC / NBC Bay Area",
+          "name": "CNBC / NBC Bay Area",
+          "url": "https://www.nbcbayarea.com/news/business/money-report/openai-closes-40-billion-funding-round-largest-private-tech-deal-on-record/3832288/",
+          "type": "Press / wire",
+          "date": "2025-03-31",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2025_OPENAI_40B_SOFTBANK_ROUND_CAPITAL"
+      ],
+      "arcIds": [
+        "ARC_FINANCE_GOVERNED_SHUTDOWN",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports"
+      ]
+    },
+    {
+      "id": "SIG_2025_ANTHROPIC_3_5B_SERIES_E",
+      "kind": "event",
+      "title": "Anthropic raised $3.5B Series E at a $61.5B post-money valuation",
+      "date": "2025-03-03",
+      "source_date": "2025-03-03",
+      "year": 2025,
+      "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+      "source_name": "Anthropic",
+      "source_type_raw": "Company / vendor",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Anthropic, Lightspeed",
+      "actors": [
+        "Anthropic",
+        "Lightspeed",
+        "Anthropic, Lightspeed"
+      ],
+      "actor_facets": [
+        "Anthropic"
+      ],
+      "geography": [
+        "US"
+      ],
+      "stack_layer": [
+        "finance_rent",
+        "model_weights",
+        "cloud_inference"
+      ],
+      "stack_layers": [
+        "finance_rent",
+        "model_weights",
+        "cloud_inference"
+      ],
+      "strange_structure": [
+        "finance",
+        "knowledge",
+        "production"
+      ],
+      "strange_structures": [
+        "finance",
+        "knowledge",
+        "production"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ6"
+      ],
+      "claim_supported": "The model layer is financed as a high-valuation capital market object, reinforcing access and capacity dependencies.",
+      "claim_challenged": "Primary company source; valuation is financing evidence, not independent proof of market power.",
+      "summary": "The model layer is financed as a high-valuation capital market object, reinforcing access and capacity dependencies.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Primary company source; valuation is financing evidence, not independent proof of market power.",
+      "exact_quote_short": "",
+      "numbers": {
+        "round_usd_billion": 3.5,
+        "post_money_valuation_usd_billion": 61.5
+      },
+      "money_status": "funding_round_not_spend",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Anthropic",
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+          "type": "Company / vendor",
+          "date": "2025-03-03",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2025_ANTHROPIC_3_5B_SERIES_E_CAPITAL"
+      ],
+      "arcIds": [
+        "ARC_FINANCE_GOVERNED_SHUTDOWN",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports"
+      ]
+    },
+    {
+      "id": "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY",
+      "kind": "event",
+      "title": "CoreWeave announced an OpenAI AI-infrastructure deal with contract value up to $11.9B",
+      "date": "2025-03-10",
+      "source_date": "2025-03-10",
+      "year": 2025,
+      "url": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Agreement-with-OpenAI-to-Deliver-AI-Infrastructure/default.aspx",
+      "source_name": "CoreWeave",
+      "source_type_raw": "Company / vendor",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "CoreWeave, OpenAI",
+      "actors": [
+        "CoreWeave",
+        "OpenAI",
+        "CoreWeave, OpenAI"
+      ],
+      "actor_facets": [
+        "OpenAI"
+      ],
+      "geography": [
+        "US"
+      ],
+      "stack_layer": [
+        "cloud_inference",
+        "finance_rent",
+        "energy_compute_chips"
+      ],
+      "stack_layers": [
+        "cloud_inference",
+        "finance_rent",
+        "energy_compute_chips"
+      ],
+      "strange_structure": [
+        "production",
+        "finance"
+      ],
+      "strange_structures": [
+        "production",
+        "finance"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ6"
+      ],
+      "claim_supported": "Capital concentration converts into contracted compute capacity and vendor dependency, not just balance-sheet valuation.",
+      "claim_challenged": "“Up to” contract value; do not treat as fully consumed capacity.",
+      "summary": "Capital concentration converts into contracted compute capacity and vendor dependency, not just balance-sheet valuation.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "“Up to” contract value; do not treat as fully consumed capacity.",
+      "exact_quote_short": "",
+      "numbers": {
+        "contract_value_up_to_usd_billion": 11.9
+      },
+      "money_status": "contract_ceiling_not_realized_spend",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "CoreWeave",
+          "name": "CoreWeave",
+          "url": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Agreement-with-OpenAI-to-Deliver-AI-Infrastructure/default.aspx",
+          "type": "Company / vendor",
+          "date": "2025-03-10",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2025_COREWEAVE_OPENAI_11_9B_CAPACITY_CAPITAL"
+      ],
+      "arcIds": [
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports"
+      ]
+    },
+    {
+      "id": "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE",
+      "kind": "event",
+      "title": "Microsoft/LinkedIn Work Trend Index reported 75% of knowledge workers using AI at work",
+      "date": "2024-05-08",
+      "source_date": "2024-05-08",
+      "year": 2024,
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part",
+      "source_name": "Microsoft WorkLab",
+      "source_type_raw": "Company / vendor",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Microsoft, LinkedIn",
+      "actors": [
+        "Microsoft",
+        "LinkedIn",
+        "Microsoft, LinkedIn"
+      ],
+      "actor_facets": [
+        "Microsoft"
+      ],
+      "geography": [
+        "Global"
+      ],
+      "stack_layer": [
+        "decision_support_cognition",
+        "governance_law",
+        "data_telemetry"
+      ],
+      "stack_layers": [
+        "decision_support_cognition",
+        "governance_law",
+        "data_telemetry"
+      ],
+      "strange_structure": [
+        "knowledge",
+        "security"
+      ],
+      "strange_structures": [
+        "knowledge",
+        "security"
+      ],
+      "research_question": [
+        "RQ4",
+        "RQ3"
+      ],
+      "claim_supported": "Decision-support adoption was already broad in 2024 and should not appear as an empty layer before 2026.",
+      "claim_challenged": "Survey and vendor framing; useful as adoption signal, not proof of decision sovereignty loss.",
+      "summary": "Decision-support adoption was already broad in 2024 and should not appear as an empty layer before 2026.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Survey and vendor framing; useful as adoption signal, not proof of decision sovereignty loss.",
+      "exact_quote_short": "",
+      "numbers": {
+        "knowledge_workers_using_ai_percent": 75,
+        "ai_users_bringing_own_ai_percent": 78,
+        "survey_respondents": 31000
+      },
+      "money_status": "",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Microsoft WorkLab",
+          "name": "Microsoft WorkLab",
+          "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part",
+          "type": "Company / vendor",
+          "date": "2024-05-08",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2024_MICROSOFT_WORK_TREND_AI_USAGE_DECISION"
+      ],
+      "arcIds": [
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope"
+      ]
+    },
+    {
+      "id": "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION",
+      "kind": "event",
+      "title": "McKinsey State of AI reported regular AI use in 88% of surveyed organizations and broad agent experimentation",
+      "date": "2025-11-05",
+      "source_date": "2025-11-05",
+      "year": 2025,
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "source_name": "McKinsey",
+      "source_type_raw": "Industry / think tank",
+      "source_type": "Industry / think tank",
+      "primary_or_secondary": "primary",
+      "actor": "McKinsey",
+      "actors": [
+        "McKinsey"
+      ],
+      "actor_facets": [],
+      "geography": [
+        "Global"
+      ],
+      "stack_layer": [
+        "decision_support_cognition",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "decision_support_cognition",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "knowledge",
+        "security"
+      ],
+      "strange_structures": [
+        "knowledge",
+        "security"
+      ],
+      "research_question": [
+        "RQ4",
+        "RQ3"
+      ],
+      "claim_supported": "By late 2025, enterprise AI adoption was mainstream enough to treat decision-support as a live organizational layer.",
+      "claim_challenged": "Survey does not show high-stakes autonomy; it shows organizational diffusion.",
+      "summary": "By late 2025, enterprise AI adoption was mainstream enough to treat decision-support as a live organizational layer.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Survey does not show high-stakes autonomy; it shows organizational diffusion.",
+      "exact_quote_short": "",
+      "numbers": {
+        "organizations_regular_ai_use_percent": 88,
+        "organizations_experimenting_with_ai_agents_percent": 62,
+        "organizations_scaling_agentic_systems_percent": 23
+      },
+      "money_status": "",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "McKinsey",
+          "name": "McKinsey",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+          "type": "Industry / think tank",
+          "date": "2025-11-05",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2025_MCKINSEY_STATE_OF_AI_ADOPTION_DECISION"
+      ],
+      "arcIds": [
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope"
+      ]
+    },
+    {
+      "id": "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT",
+      "kind": "event",
+      "title": "Morgan Stanley announced an OpenAI GPT-4 assistant for financial-advisor knowledge work",
+      "date": "2023-03-14",
+      "source_date": "2023-03-14",
+      "year": 2023,
+      "url": "https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai",
+      "source_name": "Morgan Stanley",
+      "source_type_raw": "Company / vendor",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Morgan Stanley, OpenAI",
+      "actors": [
+        "Morgan Stanley",
+        "OpenAI",
+        "Morgan Stanley, OpenAI"
+      ],
+      "actor_facets": [
+        "Financial regulators / banks",
+        "OpenAI"
+      ],
+      "geography": [
+        "US"
+      ],
+      "stack_layer": [
+        "decision_support_cognition",
+        "finance_rent",
+        "data_telemetry"
+      ],
+      "stack_layers": [
+        "decision_support_cognition",
+        "finance_rent",
+        "data_telemetry"
+      ],
+      "strange_structure": [
+        "finance",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "finance",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ4",
+        "RQ6"
+      ],
+      "claim_supported": "Financial decision-support adoption begins early: regulated institutions used LLMs as knowledge/navigation interfaces, not just chat demos.",
+      "claim_challenged": "Assistant for advisors is not autonomous trading or portfolio decision authority.",
+      "summary": "Financial decision-support adoption begins early: regulated institutions used LLMs as knowledge/navigation interfaces, not just chat demos.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Assistant for advisors is not autonomous trading or portfolio decision authority.",
+      "exact_quote_short": "",
+      "numbers": {},
+      "money_status": "",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Morgan Stanley",
+          "name": "Morgan Stanley",
+          "url": "https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai",
+          "type": "Company / vendor",
+          "date": "2023-03-14",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2023_MORGAN_STANLEY_GPT4_ASSISTANT_DECISION"
+      ],
+      "arcIds": [
+        "ARC_FINANCE_GOVERNED_SHUTDOWN",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope"
+      ]
+    },
+    {
+      "id": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE",
+      "kind": "event",
+      "title": "JPMorgan rolled out LLM Suite internally, reported initially for 60,000 employees and later much wider access",
+      "date": "2024-08-09",
+      "source_date": "2024-08-09",
+      "year": 2024,
+      "url": "https://www.businessinsider.com/jpmorgan-generative-ai-adoption-llm-suite-2024-11",
+      "source_name": "Business Insider",
+      "source_type_raw": "Press / wire",
+      "source_type": "Press / wire",
+      "primary_or_secondary": "primary",
+      "actor": "JPMorgan Chase",
+      "actors": [
+        "JPMorgan",
+        "Financial regulators / banks",
+        "JPMorgan Chase"
+      ],
+      "actor_facets": [
+        "Financial regulators / banks"
+      ],
+      "geography": [
+        "US"
+      ],
+      "stack_layer": [
+        "decision_support_cognition",
+        "finance_rent",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "decision_support_cognition",
+        "finance_rent",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "finance",
+        "knowledge",
+        "security"
+      ],
+      "strange_structures": [
+        "finance",
+        "knowledge",
+        "security"
+      ],
+      "research_question": [
+        "RQ4",
+        "RQ6",
+        "RQ3"
+      ],
+      "claim_supported": "Finance-sector adoption turns LLMs into governed internal work layers: access, auditability, internal policy and productivity all matter.",
+      "claim_challenged": "Press-reported rollout numbers vary; keep as adoption signal rather than precise census.",
+      "summary": "Finance-sector adoption turns LLMs into governed internal work layers: access, auditability, internal policy and productivity all matter.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Press-reported rollout numbers vary; keep as adoption signal rather than precise census.",
+      "exact_quote_short": "",
+      "numbers": {
+        "initially_reported_employee_access": 60000,
+        "later_reported_employee_access": 200000
+      },
+      "money_status": "",
+      "confidence": "C",
+      "evidence_level": "C",
+      "status": "verified_as_reported",
+      "sources": [
+        {
+          "title": "Business Insider",
+          "name": "Business Insider",
+          "url": "https://www.businessinsider.com/jpmorgan-generative-ai-adoption-llm-suite-2024-11",
+          "type": "Press / wire",
+          "date": "2024-08-09",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2024_JPMORGAN_LLM_SUITE_ENTERPRISE_DECISION"
+      ],
+      "arcIds": [
+        "ARC_FINANCE_GOVERNED_SHUTDOWN",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope"
+      ]
+    },
+    {
+      "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
+      "kind": "event",
+      "title": "Anthropic disclosed a Claude Code AI-orchestrated cyber-espionage campaign by GTG-1002",
+      "date": "2025-11-13",
+      "source_date": "2025-11-13",
+      "year": 2025,
+      "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+      "source_name": "Anthropic Threat Intelligence",
+      "source_type_raw": "Company / vendor",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Anthropic, GTG-1002",
+      "actors": [
+        "Anthropic",
+        "GTG-1002",
+        "China-nexus actor",
+        "Anthropic, GTG-1002"
+      ],
+      "actor_facets": [
+        "Anthropic",
+        "China",
+        "US"
+      ],
+      "geography": [
+        "Global",
+        "China"
+      ],
+      "stack_layer": [
+        "cyber_security_patch",
+        "decision_support_cognition",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "decision_support_cognition",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ5",
+        "RQ4",
+        "RQ3"
+      ],
+      "claim_supported": "Cyber autonomy can no longer be framed as only defensive lab capability: public reporting describes AI orchestration across intrusion phases.",
+      "claim_challenged": "Anthropic/MITRE still imply human direction and review; this is not proof of unrestricted autonomous offense at strategic scale.",
+      "summary": "Cyber autonomy can no longer be framed as only defensive lab capability: public reporting describes AI orchestration across intrusion phases.",
+      "notes": "",
+      "corroboration_needed": "",
+      "caveat": "Anthropic/MITRE still imply human direction and review; this is not proof of unrestricted autonomous offense at strategic scale.",
+      "exact_quote_short": "",
+      "numbers": {
+        "approximate_targets": 30,
+        "operation_date_month": "2025-09"
+      },
+      "money_status": "",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified_as_reported",
+      "sources": [
+        {
+          "title": "Anthropic Threat Intelligence",
+          "name": "Anthropic Threat Intelligence",
+          "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+          "type": "Company / vendor",
+          "date": "2025-11-13",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2025_CLAUDE_ORCHESTRATED_ESPIONAGE_CYBER"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_but_limits"
+      ]
+    },
+    {
+      "id": "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION",
+      "kind": "event",
+      "title": "Local UPS audit found 15/129 strict LLM/AI-attributed CVEs with public PoC, but only 3/129 heavy weaponization",
+      "date": "2026-06-29",
+      "source_date": "2026-06-29",
+      "year": 2026,
+      "url": "https://poc-in-github.motikan2010.net/",
+      "source_name": "PoC-in-GitHub + local UPS audit",
+      "source_type_raw": "Research / preprint",
+      "source_type": "Research / preprint",
+      "primary_or_secondary": "primary",
+      "actor": "PoC-in-GitHub, UPS corpus",
+      "actors": [
+        "PoC-in-GitHub",
+        "Research teams",
+        "PoC-in-GitHub, UPS corpus"
+      ],
+      "actor_facets": [
+        "Research teams",
+        "US"
+      ],
+      "geography": [
+        "Global"
+      ],
+      "stack_layer": [
+        "cyber_security_patch",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "security"
+      ],
+      "strange_structures": [
+        "security"
+      ],
+      "research_question": [
+        "RQ5",
+        "RQ3"
+      ],
+      "claim_supported": "There is an early public-PoC migration signal around LLM/AI-attributed CVEs: broad PoC visibility is materially larger than narrow heavy weaponization.",
+      "claim_challenged": "Attribution to LLM discovery remains sparse and manual; public PoC does not equal exploitation in the wild.",
+      "summary": "There is an early public-PoC migration signal around LLM/AI-attributed CVEs: broad PoC visibility is materially larger than narrow heavy weaponization.",
+      "notes": "Source audit file: ups_llm_vulnerability_attribution_scan_2026_06_29.json and ups_llm_weaponization_poc_audit_2026_06_29.json.",
+      "corroboration_needed": "",
+      "caveat": "Attribution to LLM discovery remains sparse and manual; public PoC does not equal exploitation in the wild.",
+      "exact_quote_short": "",
+      "numbers": {
+        "strict_external_llm_ai_cves": 129,
+        "public_poc_any": 15,
+        "public_poc_any_ratio_percent": 11.6,
+        "public_poc_plus_exploited_catalog_or_framework": 3,
+        "heavy_weaponization_ratio_percent": 2.3
+      },
+      "money_status": "",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "partially_verified",
+      "sources": [
+        {
+          "title": "PoC-in-GitHub + local UPS audit",
+          "name": "PoC-in-GitHub + local UPS audit",
+          "url": "https://poc-in-github.motikan2010.net/",
+          "type": "Research / preprint",
+          "date": "2026-06-29",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2026_LLM_CVE_PUBLIC_POC_MIGRATION_CYBER"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_but_limits"
+      ]
+    },
+    {
+      "id": "SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER",
+      "kind": "event",
+      "title": "Microsoft Defender / Windows weaponization cluster: BlueHammer, RedSun, UnDefend and related public PoCs",
+      "date": "2026-06-29",
+      "source_date": "2026-06-29",
+      "year": 2026,
+      "url": "https://www.huntress.com/blog/nightmare-eclipse-intrusion",
+      "source_name": "Huntress / local UPS audit",
+      "source_type_raw": "Industry / think tank",
+      "source_type": "Industry / think tank",
+      "primary_or_secondary": "primary",
+      "actor": "Nightmare Eclipse, Microsoft Defender ecosystem",
+      "actors": [
+        "Microsoft",
+        "Nightmare Eclipse",
+        "Security researchers",
+        "Nightmare Eclipse, Microsoft Defender ecosystem"
+      ],
+      "actor_facets": [
+        "Microsoft",
+        "Research teams"
+      ],
+      "geography": [
+        "Global",
+        "US"
+      ],
+      "stack_layer": [
+        "cyber_security_patch",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "security"
+      ],
+      "strange_structures": [
+        "security"
+      ],
+      "research_question": [
+        "RQ5",
+        "RQ3"
+      ],
+      "claim_supported": "The patch layer faces an operationally expensive early weaponization trend: public Defender/Windows LPE tools can become incident-response pressure, even if not LLM-attributed.",
+      "claim_challenged": "Does not change 3/129 strict LLM-heavy-weaponization count, because these CVEs are not in the strict LLM/AI attribution set. It does add a separate high-value Microsoft Defender weaponization cluster: at least CVE-2026-33825, CVE-2026-41091, and CVE-2026-45498 are UPS exploited-catalog signals; 33825 and 41091 have direct PoC-in-GitHub entries.",
+      "summary": "The patch layer faces an operationally expensive early weaponization trend: public Defender/Windows LPE tools can become incident-response pressure, even if not LLM-attributed.",
+      "notes": "Keep separate from strict LLM-discovery denominator; include as broader Windows/Defender public-weaponization cluster.",
+      "corroboration_needed": "",
+      "caveat": "Does not change 3/129 strict LLM-heavy-weaponization count, because these CVEs are not in the strict LLM/AI attribution set. It does add a separate high-value Microsoft Defender weaponization cluster: at least CVE-2026-33825, CVE-2026-41091, and CVE-2026-45498 are UPS exploited-catalog signals; 33825 and 41091 have direct PoC-in-GitHub entries.",
+      "exact_quote_short": "",
+      "numbers": {
+        "related_cluster_items": 8,
+        "direct_public_poc_examples": 2,
+        "exploited_catalog_examples": 3
+      },
+      "money_status": "",
+      "confidence": "C",
+      "evidence_level": "C",
+      "status": "partially_verified",
+      "sources": [
+        {
+          "title": "Huntress / local UPS audit",
+          "name": "Huntress / local UPS audit",
+          "url": "https://www.huntress.com/blog/nightmare-eclipse-intrusion",
+          "type": "Industry / think tank",
+          "date": "2026-06-29",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V012_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER_CYBER"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope"
+      ]
     }
   ],
   "claims": [
@@ -14784,23 +15928,28 @@
         "SIG_2024_OPENAI_STATE_THREAT_ACTORS_DISRUPTION",
         "SIG_2024_GOOGLE_PROJECT_NAPTIME",
         "SIG_2024_GOOGLE_BIG_SLEEP_SQLITE",
-        "SIG_2024_AIXCC_SEMIFINAL"
+        "SIG_2024_AIXCC_SEMIFINAL",
+        "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
+        "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION",
+        "SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER"
       ],
       "counterpoints": [
         "Vendor claims need independent IoCs and technical validation.",
+        "Public PoC is not the same as in-the-wild exploitation.",
         "Benchmarks are not the same as field operations."
       ],
       "kind": "arc",
-      "title": "Machine-speed cyber: from strong claim to careful caveat",
-      "title_en": "Machine-speed cyber: from strong claim to careful caveat",
-      "thesis_en": "The strong claim is not \"AI autonomously finds zero-days at scale\"; the well-supported claim is defensive find-and-fix and controlled vulnerability research.",
-      "safe_wording_en": "Keep offensive autonomy as disputed. Use defensive find-and-fix as the established baseline.",
+      "title": "Cyber: from caveat to early weaponization",
+      "title_en": "Cyber: from caveat to early weaponization",
+      "thesis_en": "The evidence now supports a two-level cyber claim: defensive find-and-fix and AI-orchestrated/public-PoC weaponization signals exist, while fully autonomous strategic offense remains unproven.",
+      "safe_wording_en": "Do not say AI already runs cyberwar by itself. Say: AI-orchestrated operations, public PoC migration and defensive find-and-fix exist; scale, attribution and autonomy remain caveated.",
       "counterpoints_en": [
         "Vendor claims need independent IoCs and technical validation.",
+        "Public PoC is not the same as in-the-wild exploitation.",
         "Benchmarks are not the same as field operations."
       ],
-      "thesis": "The strong claim is not \"AI autonomously finds zero-days at scale\"; the well-supported claim is defensive find-and-fix and controlled vulnerability research.",
-      "safe_wording": "Keep offensive autonomy as disputed. Use defensive find-and-fix as the established baseline."
+      "thesis": "The evidence now supports a two-level cyber claim: defensive find-and-fix and AI-orchestrated/public-PoC weaponization signals exist, while fully autonomous strategic offense remains unproven.",
+      "safe_wording": "Do not say AI already runs cyberwar by itself. Say: AI-orchestrated operations, public PoC migration and defensive find-and-fix exist; scale, attribution and autonomy remain caveated."
     },
     {
       "id": "ARC_QUIET_ACCESS_CONTROL",
@@ -14902,7 +16051,9 @@
         "cogsec-08",
         "cogsec-03",
         "CLM_007_COGNITIVE_SECURITY",
-        "GAP_005_PUBLIC_SECTOR_DECISION_SUPPORT"
+        "GAP_005_PUBLIC_SECTOR_DECISION_SUPPORT",
+        "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE",
+        "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION"
       ],
       "counterpoints": [
         "Confirmed public-sector production incidents remain sparse.",
@@ -15011,7 +16162,11 @@
         "SIG_2026_RBI_AI_KILL_SWITCH_FINANCE",
         "SIG_2026_JPMORGAN_AI_INVESTMENT_BANKING_AND_MYTHOS",
         "cogsec-12",
-        "CLM_025_FINANCE_AI_KILL_SWITCH"
+        "CLM_025_FINANCE_AI_KILL_SWITCH",
+        "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT",
+        "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE",
+        "SIG_2025_OPENAI_40B_SOFTBANK_ROUND",
+        "SIG_2025_ANTHROPIC_3_5B_SERIES_E"
       ],
       "counterpoints": [
         "Regulators can require model replaceability and human oversight.",
@@ -15230,7 +16385,10 @@
         "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN",
         "SIG_2024_AMAZON_ANTHROPIC_4B_COMPLETION",
         "SIG_2024_OPENAI_ORACLE_OCI_CAPACITY",
-        "SIG_2024_XAI_SERIES_B_6B"
+        "SIG_2024_XAI_SERIES_B_6B",
+        "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY",
+        "SIG_2025_OPENAI_40B_SOFTBANK_ROUND",
+        "SIG_2025_ANTHROPIC_3_5B_SERIES_E"
       ],
       "counterpoints": [
         "Multi-cloud capacity complicates a simple lock-in story.",
@@ -15249,6 +16407,82 @@
       ],
       "thesis": "Frontier AI scales through capital, cloud capacity, GPU access and distribution channels; model access depends on capacity and contract architecture.",
       "safe_wording": "Do not say one cloud provider owns AI. Say: cloud capacity and investment partnerships set conditions for scaling and accessing frontier models."
+    },
+    {
+      "status": "strong_but_not_commensurate",
+      "counterpoints": [
+        "These figures are not directly commensurable.",
+        "State-capital and sovereign-vehicle signals often have weaker spend transparency.",
+        "Contract ceilings and pledges are not deployed capital."
+      ],
+      "id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "arc_type": "capital_structure",
+      "start_date": "2024-03-13",
+      "end_date": "2025-03-31",
+      "visual_lanes": [
+        "finance_rent",
+        "cloud_inference",
+        "energy_compute_chips",
+        "governance_law"
+      ],
+      "key_nodes": [
+        "SIG_2026_STANFORD_AGGREGATE_INVESTMENT",
+        "SIG_2026_STANFORD_GUIDANCE_FUND_CLARIFY",
+        "SIG_2025_EU_INVESTAI_200B_MOBILIZATION",
+        "SIG_2024_UAE_MGX_100B_AI_STATE_VEHICLE",
+        "SIG_2024_SAUDI_40B_AI_FUND_REPORTED",
+        "SIG_2025_OPENAI_40B_SOFTBANK_ROUND",
+        "SIG_2025_ANTHROPIC_3_5B_SERIES_E",
+        "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY"
+      ],
+      "kind": "arc",
+      "title": "Capital: private, state-guidance, sovereign vehicles and pledges",
+      "title_en": "Capital: private, state-guidance, sovereign vehicles and pledges",
+      "thesis_en": "Capital concentration is only visible when accounting regimes are separated: US annual private investment, China private plus cumulative guidance funds, EU mobilization, Gulf sovereign vehicles and compute-capacity contracts.",
+      "safe_wording_en": "Do not add annual private investment, cumulative guidance funds, pledges, AUM targets and contract ceilings into one clean total. Show them as different modes of capital.",
+      "counterpoints_en": [
+        "These figures are not directly commensurable.",
+        "State-capital and sovereign-vehicle signals often have weaker spend transparency.",
+        "Contract ceilings and pledges are not deployed capital."
+      ],
+      "thesis": "Capital concentration is only visible when accounting regimes are separated: US annual private investment, China private plus cumulative guidance funds, EU mobilization, Gulf sovereign vehicles and compute-capacity contracts.",
+      "safe_wording": "Do not add annual private investment, cumulative guidance funds, pledges, AUM targets and contract ceilings into one clean total. Show them as different modes of capital."
+    },
+    {
+      "status": "strong_adoption_signal_with_decision_scope_caveat",
+      "counterpoints": [
+        "Adoption surveys show diffusion, not high-stakes autonomy.",
+        "Regulated finance adds audit and policy controls.",
+        "Internal tool rollout numbers vary across sources."
+      ],
+      "id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "arc_type": "enterprise_adoption",
+      "start_date": "2023-03-14",
+      "end_date": "2025-11-05",
+      "visual_lanes": [
+        "decision_support_cognition",
+        "finance_rent",
+        "governance_law",
+        "data_telemetry"
+      ],
+      "key_nodes": [
+        "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT",
+        "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE",
+        "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE",
+        "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION"
+      ],
+      "kind": "arc",
+      "title": "Corporate decision-support: from BYOAI to governed internal layers",
+      "title_en": "Corporate decision-support: from BYOAI to governed internal layers",
+      "thesis_en": "2023-2025 were not empty years: LLMs entered knowledge work, finance advisory, internal banking tools and corporate governance loops.",
+      "safe_wording_en": "Do not say AI already makes corporate decisions. Say AI is becoming an interface for search, summarization, preparation and control around decisions.",
+      "counterpoints_en": [
+        "Adoption surveys show diffusion, not high-stakes autonomy.",
+        "Regulated finance adds audit and policy controls.",
+        "Internal tool rollout numbers vary across sources."
+      ],
+      "thesis": "2023-2025 were not empty years: LLMs entered knowledge work, finance advisory, internal banking tools and corporate governance loops.",
+      "safe_wording": "Do not say AI already makes corporate decisions. Say AI is becoming an interface for search, summarization, preparation and control around decisions."
     }
   ],
   "edges": [
@@ -18931,6 +20165,342 @@
       "kind": "edge",
       "is_auto": false,
       "summary": "supports: ARC_CLOUD_CAPACITY_VENDOR_LOCKIN -> THESIS_CORE"
+    },
+    {
+      "source_kind": "story_arc",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports",
+      "strength": "high",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "finance_rent",
+      "id": "EDGE_V012_CAPITAL_MIX_TO_CORE",
+      "source": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "target": "THESIS_CORE",
+      "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "supports: ARC_CAPITAL_MIX_PUBLIC_PRIVATE -> THESIS_CORE"
+    },
+    {
+      "source_kind": "story_arc",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports",
+      "strength": "high",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "finance_rent",
+      "id": "EDGE_V012_CAPITAL_MIX_TO_ACCESS",
+      "source": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "target": "THESIS_ACCESS_AS_POWER",
+      "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "supports: ARC_CAPITAL_MIX_PUBLIC_PRIVATE -> THESIS_ACCESS_AS_POWER"
+    },
+    {
+      "source_kind": "story_arc",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "finance_rent",
+      "id": "EDGE_V012_CAPITAL_MIX_TO_DECISION",
+      "source": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "target": "THESIS_DECISION_SOVEREIGNTY",
+      "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "supports_with_scope: ARC_CAPITAL_MIX_PUBLIC_PRIVATE -> THESIS_DECISION_SOVEREIGNTY"
+    },
+    {
+      "source_kind": "story_arc",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports",
+      "strength": "high",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "decision_support_cognition",
+      "id": "EDGE_V012_CORP_ADOPTION_TO_DECISION",
+      "source": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "target": "THESIS_DECISION_SOVEREIGNTY",
+      "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "supports: ARC_CORPORATE_DECISION_SUPPORT_ADOPTION -> THESIS_DECISION_SOVEREIGNTY"
+    },
+    {
+      "source_kind": "story_arc",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "decision_support_cognition",
+      "id": "EDGE_V012_CORP_ADOPTION_TO_ACCESS",
+      "source": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "target": "THESIS_ACCESS_AS_POWER",
+      "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "supports_with_scope: ARC_CORPORATE_DECISION_SUPPORT_ADOPTION -> THESIS_ACCESS_AS_POWER"
+    },
+    {
+      "source_kind": "story_arc",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "decision_support_cognition",
+      "id": "EDGE_V012_CORP_ADOPTION_TO_CORE",
+      "source": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "target": "THESIS_CORE",
+      "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "supports_with_scope: ARC_CORPORATE_DECISION_SUPPORT_ADOPTION -> THESIS_CORE"
+    },
+    {
+      "source_kind": "story_arc",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_but_limits",
+      "strength": "high",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "cyber_security_patch",
+      "id": "EDGE_V012_CYBER_ARC_TO_OFFENSE_REFRAMED",
+      "source": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "target": "THESIS_NOT_AUTONOMOUS_OFFENSE",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "supports_but_limits: ARC_CYBER_CLAIM_TO_CAVEAT -> THESIS_NOT_AUTONOMOUS_OFFENSE"
+    },
+    {
+      "source_kind": "story_arc",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "cyber_security_patch",
+      "id": "EDGE_V012_CYBER_ARC_TO_CONTROL_LEAKS",
+      "source": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "target": "THESIS_CONTROL_NOT_AIRTIGHT",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "supports: ARC_CYBER_CLAIM_TO_CAVEAT -> THESIS_CONTROL_NOT_AIRTIGHT"
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "finance_rent",
+      "id": "EDGE_V012_2025_EU_INVESTAI_200B_MOBILIZATION_CAPITAL",
+      "source": "SIG_2025_EU_INVESTAI_200B_MOBILIZATION",
+      "target": "THESIS_CORE",
+      "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2025_EU_INVESTAI_200B_MOBILIZATION supports the capital-mix arc with caveats about accounting class."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "finance_rent",
+      "id": "EDGE_V012_2024_UAE_MGX_100B_AI_STATE_VEHICLE_CAPITAL",
+      "source": "SIG_2024_UAE_MGX_100B_AI_STATE_VEHICLE",
+      "target": "THESIS_CORE",
+      "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2024_UAE_MGX_100B_AI_STATE_VEHICLE supports the capital-mix arc with caveats about accounting class."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "low",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "finance_rent",
+      "id": "EDGE_V012_2024_SAUDI_40B_AI_FUND_REPORTED_CAPITAL",
+      "source": "SIG_2024_SAUDI_40B_AI_FUND_REPORTED",
+      "target": "THESIS_CORE",
+      "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2024_SAUDI_40B_AI_FUND_REPORTED supports the capital-mix arc with caveats about accounting class."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "finance_rent",
+      "id": "EDGE_V012_2025_OPENAI_40B_SOFTBANK_ROUND_CAPITAL",
+      "source": "SIG_2025_OPENAI_40B_SOFTBANK_ROUND",
+      "target": "THESIS_ACCESS_AS_POWER",
+      "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2025_OPENAI_40B_SOFTBANK_ROUND supports the capital-mix arc with caveats about accounting class."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "finance_rent",
+      "id": "EDGE_V012_2025_ANTHROPIC_3_5B_SERIES_E_CAPITAL",
+      "source": "SIG_2025_ANTHROPIC_3_5B_SERIES_E",
+      "target": "THESIS_ACCESS_AS_POWER",
+      "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2025_ANTHROPIC_3_5B_SERIES_E supports the capital-mix arc with caveats about accounting class."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports",
+      "strength": "high",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "cloud_inference",
+      "id": "EDGE_V012_2025_COREWEAVE_OPENAI_11_9B_CAPACITY_CAPITAL",
+      "source": "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY",
+      "target": "THESIS_ACCESS_AS_POWER",
+      "arc_id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY supports the capital-mix arc with caveats about accounting class."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "decision_support_cognition",
+      "id": "EDGE_V012_2023_MORGAN_STANLEY_GPT4_ASSISTANT_DECISION",
+      "source": "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT",
+      "target": "THESIS_DECISION_SOVEREIGNTY",
+      "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT fills the 2023–2025 corporate decision-support adoption lane."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "decision_support_cognition",
+      "id": "EDGE_V012_2024_MICROSOFT_WORK_TREND_AI_USAGE_DECISION",
+      "source": "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE",
+      "target": "THESIS_DECISION_SOVEREIGNTY",
+      "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE fills the 2023–2025 corporate decision-support adoption lane."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "decision_support_cognition",
+      "id": "EDGE_V012_2024_JPMORGAN_LLM_SUITE_ENTERPRISE_DECISION",
+      "source": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE",
+      "target": "THESIS_DECISION_SOVEREIGNTY",
+      "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE fills the 2023–2025 corporate decision-support adoption lane."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "decision_support_cognition",
+      "id": "EDGE_V012_2025_MCKINSEY_STATE_OF_AI_ADOPTION_DECISION",
+      "source": "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION",
+      "target": "THESIS_CORE",
+      "arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION fills the 2023–2025 corporate decision-support adoption lane."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_but_limits",
+      "strength": "high",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "cyber_security_patch",
+      "id": "EDGE_V012_2025_CLAUDE_ORCHESTRATED_ESPIONAGE_CYBER",
+      "source": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
+      "target": "THESIS_NOT_AUTONOMOUS_OFFENSE",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE reframes cyber from purely defensive find-and-fix toward early weaponization with strict caveats."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_but_limits",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "cyber_security_patch",
+      "id": "EDGE_V012_2026_LLM_CVE_PUBLIC_POC_MIGRATION_CYBER",
+      "source": "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION",
+      "target": "THESIS_NOT_AUTONOMOUS_OFFENSE",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION reframes cyber from purely defensive find-and-fix toward early weaponization with strict caveats."
+    },
+    {
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_with_scope",
+      "strength": "medium",
+      "evidence_level": "B",
+      "style": "solid",
+      "visual_lane": "cyber_security_patch",
+      "id": "EDGE_V012_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER_CYBER",
+      "source": "SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER",
+      "target": "THESIS_CONTROL_NOT_AIRTIGHT",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER reframes cyber from purely defensive find-and-fix toward early weaponization with strict caveats."
     }
   ],
   "thesisNodes": [
@@ -18945,10 +20515,10 @@
     {
       "id": "THESIS_ACCESS_AS_POWER",
       "kind": "synthetic_thesis",
-      "label_en": "Access matters more than ownership",
-      "summary_en": "Structural power shows up through licenses, KYC, trusted users, vetted access, export letters, contracts and shutdown mechanisms, not only through property.",
-      "label": "Access matters more than ownership",
-      "summary": "Structural power shows up through licenses, KYC, trusted users, vetted access, export letters, contracts and shutdown mechanisms, not only through property."
+      "label_en": "Access control matters more than ownership",
+      "summary_en": "Structural power shows up through licenses, KYC, trusted users, vetted access, export letters, capacity allocation, contracts and shutdown mechanisms, not only through property.",
+      "label": "Access control matters more than ownership",
+      "summary": "Structural power shows up through licenses, KYC, trusted users, vetted access, export letters, capacity allocation, contracts and shutdown mechanisms, not only through property."
     },
     {
       "id": "THESIS_DECISION_SOVEREIGNTY",
@@ -18969,10 +20539,10 @@
     {
       "id": "THESIS_NOT_AUTONOMOUS_OFFENSE",
       "kind": "synthetic_thesis",
-      "label_en": "Machine-speed cyber is a stress test, not an established fact",
-      "summary_en": "Defensive find-and-fix is well supported; autonomous offensive exploitation at strategic scale remains contested.",
-      "label": "Machine-speed cyber is a stress test, not an established fact",
-      "summary": "Defensive find-and-fix is well supported; autonomous offensive exploitation at strategic scale remains contested."
+      "label_en": "Cyber autonomy: the weapon exists, scale remains contested",
+      "summary_en": "Defensive find-and-fix, AI-orchestrated operations and public PoC/weaponization migration are visible; sustained fully autonomous offense at strategic scale remains unproven.",
+      "label": "Cyber autonomy: the weapon exists, scale remains contested",
+      "summary": "Defensive find-and-fix, AI-orchestrated operations and public PoC/weaponization migration are visible; sustained fully autonomous offense at strategic scale remains unproven."
     }
   ],
   "countries": [
@@ -19457,14 +21027,14 @@
       "THESIS_DECISION_SOVEREIGNTY",
       "THESIS_NOT_AUTONOMOUS_OFFENSE"
     ],
-    "arc_count": 18,
+    "arc_count": 20,
     "arc_to_thesis_counts": {
       "ARC_EXPORT_CHIPS_TO_MODELS": 2,
       "ARC_TOLL_AND_THROTTLE": 2,
       "ARC_CONTROL_LEAKS_BUT_POLICES": 1,
       "ARC_GULF_CONDITIONAL_SOVEREIGNTY": 2,
       "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 2,
-      "ARC_CYBER_CLAIM_TO_CAVEAT": 2,
+      "ARC_CYBER_CLAIM_TO_CAVEAT": 4,
       "ARC_QUIET_ACCESS_CONTROL": 1,
       "ARC_PALANTIR_DECISION_OS": 2,
       "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 2,
@@ -19476,7 +21046,9 @@
       "ARC_A800_H800_WORKAROUND_CLOSURE": 1,
       "ARC_2023_GOVERNANCE_SHOCK": 1,
       "ARC_DATA_LICENSING_AS_INPUT_LAYER": 2,
-      "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 2
+      "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 2,
+      "ARC_CAPITAL_MIX_PUBLIC_PRIVATE": 3,
+      "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION": 3
     },
     "hanging_arcs_after_fix": [],
     "added_arc_thesis_edges": 29,
@@ -19485,14 +21057,19 @@
       "ARC_DATA_LICENSING_AS_INPUT_LAYER",
       "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
     ],
-    "computed_arc_count": 18,
+    "v0_12_added_evidence": 13,
+    "v0_12_added_arcs": [
+      "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+      "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+    ],
+    "computed_arc_count": 20,
     "computed_arc_to_thesis_counts": {
       "ARC_EXPORT_CHIPS_TO_MODELS": 2,
       "ARC_TOLL_AND_THROTTLE": 2,
       "ARC_CONTROL_LEAKS_BUT_POLICES": 1,
       "ARC_GULF_CONDITIONAL_SOVEREIGNTY": 2,
       "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 2,
-      "ARC_CYBER_CLAIM_TO_CAVEAT": 2,
+      "ARC_CYBER_CLAIM_TO_CAVEAT": 4,
       "ARC_QUIET_ACCESS_CONTROL": 1,
       "ARC_PALANTIR_DECISION_OS": 2,
       "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 2,
@@ -19504,7 +21081,9 @@
       "ARC_A800_H800_WORKAROUND_CLOSURE": 1,
       "ARC_2023_GOVERNANCE_SHOCK": 1,
       "ARC_DATA_LICENSING_AS_INPUT_LAYER": 2,
-      "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 2
+      "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 2,
+      "ARC_CAPITAL_MIX_PUBLIC_PRIVATE": 3,
+      "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION": 3
     },
     "computed_hanging_arcs": []
   },
@@ -19528,9 +21107,9 @@
     {
       "id": "model_weights",
       "default_node_shape": "hexagon",
-      "label_en": "Models, weights and access",
+      "label_en": "Models, weights and access control",
       "notes_en": "Frontier models, open weights, vetted access and model export control.",
-      "label": "Models, weights and access",
+      "label": "Models, weights and access control",
       "notes": "Frontier models, open weights, vetted access and model export control."
     },
     {
@@ -20276,7 +21855,7 @@
       ]
     },
     {
-      "id": "src-177",
+      "id": "src-190",
       "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -20333,7 +21912,7 @@
       ]
     },
     {
-      "id": "src-145",
+      "id": "src-158",
       "title": "CRS R48642 PDF",
       "name": "CRS R48642 PDF",
       "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -20371,7 +21950,7 @@
       ]
     },
     {
-      "id": "src-169",
+      "id": "src-182",
       "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -20390,7 +21969,7 @@
       ]
     },
     {
-      "id": "src-129",
+      "id": "src-142",
       "title": "DeepSeek, Huawei, Export Controls (CSIS)",
       "name": "DeepSeek, Huawei, Export Controls (CSIS)",
       "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -20447,7 +22026,7 @@
       ]
     },
     {
-      "id": "src-130",
+      "id": "src-143",
       "title": "How China's GLM-5 Works",
       "name": "How China's GLM-5 Works",
       "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -20466,7 +22045,7 @@
       ]
     },
     {
-      "id": "src-141",
+      "id": "src-154",
       "title": "India Fuels Its AI Mission With NVIDIA",
       "name": "India Fuels Its AI Mission With NVIDIA",
       "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -20485,7 +22064,7 @@
       ]
     },
     {
-      "id": "src-132",
+      "id": "src-145",
       "title": "Microsoft and U.S. join AI forces in UAE deal",
       "name": "Microsoft and U.S. join AI forces in UAE deal",
       "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -20523,7 +22102,7 @@
       ]
     },
     {
-      "id": "src-166",
+      "id": "src-179",
       "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -20884,7 +22463,7 @@
       ]
     },
     {
-      "id": "src-172",
+      "id": "src-185",
       "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -20998,7 +22577,7 @@
       ]
     },
     {
-      "id": "src-143",
+      "id": "src-156",
       "title": "U.S. Export Controls and China (CRS R48642)",
       "name": "U.S. Export Controls and China (CRS R48642)",
       "url": "https://www.congress.gov/crs-product/R48642",
@@ -21055,7 +22634,7 @@
       ]
     },
     {
-      "id": "src-183",
+      "id": "src-196",
       "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -21070,7 +22649,7 @@
       ]
     },
     {
-      "id": "src-179",
+      "id": "src-192",
       "title": "A Kill Switch for Frontier AI (Lawfare)",
       "name": "A Kill Switch for Frontier AI (Lawfare)",
       "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -21085,7 +22664,7 @@
       ]
     },
     {
-      "id": "src-164",
+      "id": "src-177",
       "title": "A small number of samples can poison LLMs (Anthropic)",
       "name": "A small number of samples can poison LLMs (Anthropic)",
       "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -21100,7 +22679,7 @@
       ]
     },
     {
-      "id": "src-133",
+      "id": "src-146",
       "title": "Advanced AI chips cleared for export to UAE",
       "name": "Advanced AI chips cleared for export to UAE",
       "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -21145,7 +22724,7 @@
       ]
     },
     {
-      "id": "src-137",
+      "id": "src-150",
       "title": "AI Factories — European Commission",
       "name": "AI Factories — European Commission",
       "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-factories",
@@ -21160,7 +22739,7 @@
       ]
     },
     {
-      "id": "src-163",
+      "id": "src-176",
       "title": "AIxCC finals winners (DARPA)",
       "name": "AIxCC finals winners (DARPA)",
       "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -21175,7 +22754,7 @@
       ]
     },
     {
-      "id": "src-158",
+      "id": "src-171",
       "title": "AIxCC marks pivotal inflection point (DARPA)",
       "name": "AIxCC marks pivotal inflection point (DARPA)",
       "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -21190,7 +22769,7 @@
       ]
     },
     {
-      "id": "src-165",
+      "id": "src-178",
       "title": "Alan Turing Institute summary",
       "name": "Alan Turing Institute summary",
       "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -21235,7 +22814,7 @@
       ]
     },
     {
-      "id": "src-123",
+      "id": "src-136",
       "title": "Announcing The Stargate Project",
       "name": "Announcing The Stargate Project",
       "url": "https://openai.com/index/announcing-the-stargate-project/",
@@ -21265,7 +22844,22 @@
       ]
     },
     {
-      "id": "src-167",
+      "id": "src-124",
+      "title": "Anthropic",
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+      "type": "Company / vendor",
+      "date": "2025-03-03",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2025_ANTHROPIC_3_5B_SERIES_E",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-180",
       "title": "Anthropic awarded $200M DOD agreement",
       "name": "Anthropic awarded $200M DOD agreement",
       "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -21280,7 +22874,7 @@
       ]
     },
     {
-      "id": "src-160",
+      "id": "src-173",
       "title": "Anthropic claims met with doubt (BleepingComputer)",
       "name": "Anthropic claims met with doubt (BleepingComputer)",
       "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -21310,7 +22904,7 @@
       ]
     },
     {
-      "id": "src-173",
+      "id": "src-186",
       "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -21325,7 +22919,22 @@
       ]
     },
     {
-      "id": "src-176",
+      "id": "src-130",
+      "title": "Anthropic Threat Intelligence",
+      "name": "Anthropic Threat Intelligence",
+      "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+      "type": "Company / vendor",
+      "date": "2025-11-13",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-189",
       "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -21370,7 +22979,7 @@
       ]
     },
     {
-      "id": "src-181",
+      "id": "src-194",
       "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -21490,7 +23099,7 @@
       ]
     },
     {
-      "id": "src-151",
+      "id": "src-164",
       "title": "Beijing presses Washington (Tech Times)",
       "name": "Beijing presses Washington (Tech Times)",
       "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -21505,7 +23114,7 @@
       ]
     },
     {
-      "id": "src-162",
+      "id": "src-175",
       "title": "Big Sleep agent makes big leap (Google Cloud)",
       "name": "Big Sleep agent makes big leap (Google Cloud)",
       "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -21520,7 +23129,7 @@
       ]
     },
     {
-      "id": "src-146",
+      "id": "src-159",
       "title": "BIS press release: rescission",
       "name": "BIS press release: rescission",
       "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -21535,7 +23144,7 @@
       ]
     },
     {
-      "id": "src-168",
+      "id": "src-181",
       "title": "Breaking Defense: $200M each for agentic AI",
       "name": "Breaking Defense: $200M each for agentic AI",
       "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -21550,7 +23159,7 @@
       ]
     },
     {
-      "id": "src-171",
+      "id": "src-184",
       "title": "Built for Purpose? EU AI Gigafactories (Interface)",
       "name": "Built for Purpose? EU AI Gigafactories (Interface)",
       "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -21565,7 +23174,22 @@
       ]
     },
     {
-      "id": "src-150",
+      "id": "src-129",
+      "title": "Business Insider",
+      "name": "Business Insider",
+      "url": "https://www.businessinsider.com/jpmorgan-generative-ai-adoption-llm-suite-2024-11",
+      "type": "Press / wire",
+      "date": "2024-08-09",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-163",
       "title": "China Export Controls: Critical Minerals (Andersen Institute)",
       "name": "China Export Controls: Critical Minerals (Andersen Institute)",
       "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -21580,7 +23204,7 @@
       ]
     },
     {
-      "id": "src-178",
+      "id": "src-191",
       "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -21595,7 +23219,22 @@
       ]
     },
     {
-      "id": "src-180",
+      "id": "src-123",
+      "title": "CNBC / NBC Bay Area",
+      "name": "CNBC / NBC Bay Area",
+      "url": "https://www.nbcbayarea.com/news/business/money-report/openai-closes-40-billion-funding-round-largest-private-tech-deal-on-record/3832288/",
+      "type": "Press / wire",
+      "date": "2025-03-31",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2025_OPENAI_40B_SOFTBANK_ROUND",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-193",
       "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -21610,7 +23249,22 @@
       ]
     },
     {
-      "id": "src-182",
+      "id": "src-125",
+      "title": "CoreWeave",
+      "name": "CoreWeave",
+      "url": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Agreement-with-OpenAI-to-Deliver-AI-Infrastructure/default.aspx",
+      "type": "Company / vendor",
+      "date": "2025-03-10",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-195",
       "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -21625,7 +23279,7 @@
       ]
     },
     {
-      "id": "src-159",
+      "id": "src-172",
       "title": "Cybersecurity Dive: DARPA touts results",
       "name": "Cybersecurity Dive: DARPA touts results",
       "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -21655,7 +23309,7 @@
       ]
     },
     {
-      "id": "src-131",
+      "id": "src-144",
       "title": "DeepSeek V4 and R2 Deep Dive",
       "name": "DeepSeek V4 and R2 Deep Dive",
       "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -21700,7 +23354,7 @@
       ]
     },
     {
-      "id": "src-138",
+      "id": "src-151",
       "title": "EIB-Commission gigafactories MoU",
       "name": "EIB-Commission gigafactories MoU",
       "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -21711,6 +23365,21 @@
         {
           "id": "tier-eu-01",
           "kind": "claim"
+        }
+      ]
+    },
+    {
+      "id": "src-120",
+      "title": "European Commission",
+      "name": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence",
+      "type": "Government / policy",
+      "date": "2025-02-11",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2025_EU_INVESTAI_200B_MOBILIZATION",
+          "kind": "event"
         }
       ]
     },
@@ -21775,7 +23444,7 @@
       ]
     },
     {
-      "id": "src-154",
+      "id": "src-167",
       "title": "H.R.3447 text (Congress.gov)",
       "name": "H.R.3447 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -21790,7 +23459,7 @@
       ]
     },
     {
-      "id": "src-156",
+      "id": "src-169",
       "title": "H.R.6875 titles (Congress.gov)",
       "name": "H.R.6875 titles (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -21835,7 +23504,7 @@
       ]
     },
     {
-      "id": "src-157",
+      "id": "src-170",
       "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -21850,7 +23519,7 @@
       ]
     },
     {
-      "id": "src-147",
+      "id": "src-160",
       "title": "Hogan Lovells analysis",
       "name": "Hogan Lovells analysis",
       "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -21865,7 +23534,7 @@
       ]
     },
     {
-      "id": "src-155",
+      "id": "src-168",
       "title": "House Select Committee: Chip Security Act passage",
       "name": "House Select Committee: Chip Security Act passage",
       "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -21880,7 +23549,7 @@
       ]
     },
     {
-      "id": "src-128",
+      "id": "src-141",
       "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -21895,7 +23564,7 @@
       ]
     },
     {
-      "id": "src-170",
+      "id": "src-183",
       "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -21910,7 +23579,7 @@
       ]
     },
     {
-      "id": "src-134",
+      "id": "src-147",
       "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -21925,7 +23594,22 @@
       ]
     },
     {
-      "id": "src-122",
+      "id": "src-132",
+      "title": "Huntress / local UPS audit",
+      "name": "Huntress / local UPS audit",
+      "url": "https://www.huntress.com/blog/nightmare-eclipse-intrusion",
+      "type": "Industry / think tank",
+      "date": "2026-06-29",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-135",
       "title": "Hyperscaler capex trend",
       "name": "Hyperscaler capex trend",
       "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -21940,7 +23624,7 @@
       ]
     },
     {
-      "id": "src-127",
+      "id": "src-140",
       "title": "Hyperscaler cloud share",
       "name": "Hyperscaler cloud share",
       "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -22000,7 +23684,7 @@
       ]
     },
     {
-      "id": "src-135",
+      "id": "src-148",
       "title": "Introducing Stargate UK",
       "name": "Introducing Stargate UK",
       "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -22045,7 +23729,7 @@
       ]
     },
     {
-      "id": "src-144",
+      "id": "src-157",
       "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -22075,6 +23759,21 @@
       ]
     },
     {
+      "id": "src-127",
+      "title": "McKinsey",
+      "name": "McKinsey",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "type": "Industry / think tank",
+      "date": "2025-11-05",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-83",
       "title": "Microsoft Official Blog",
       "name": "Microsoft Official Blog",
@@ -22085,6 +23784,51 @@
       "used_by": [
         {
           "id": "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-126",
+      "title": "Microsoft WorkLab",
+      "name": "Microsoft WorkLab",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part",
+      "type": "Company / vendor",
+      "date": "2024-05-08",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-128",
+      "title": "Morgan Stanley",
+      "name": "Morgan Stanley",
+      "url": "https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai",
+      "type": "Company / vendor",
+      "date": "2023-03-14",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-121",
+      "title": "Mubadala",
+      "name": "Mubadala",
+      "url": "https://www.mubadala.com/en/news/abu-dhabi-launches-comprehensive-global-investment-strategy-on-artificial-intelligence",
+      "type": "Company / vendor",
+      "date": "2024-03-13",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2024_UAE_MGX_100B_AI_STATE_VEHICLE",
           "kind": "event"
         }
       ]
@@ -22120,7 +23864,7 @@
       ]
     },
     {
-      "id": "src-149",
+      "id": "src-162",
       "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -22210,7 +23954,7 @@
       ]
     },
     {
-      "id": "src-140",
+      "id": "src-153",
       "title": "PIB: India common computing facility",
       "name": "PIB: India common computing facility",
       "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -22221,6 +23965,21 @@
         {
           "id": "tier-india-01",
           "kind": "claim"
+        }
+      ]
+    },
+    {
+      "id": "src-131",
+      "title": "PoC-in-GitHub + local UPS audit",
+      "name": "PoC-in-GitHub + local UPS audit",
+      "url": "https://poc-in-github.motikan2010.net/",
+      "type": "Research / preprint",
+      "date": "2026-06-29",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION",
+          "kind": "event"
         }
       ]
     },
@@ -22420,6 +24179,21 @@
       ]
     },
     {
+      "id": "src-122",
+      "title": "Reuters / NYT report mirrored by Atoll Times",
+      "name": "Reuters / NYT report mirrored by Atoll Times",
+      "url": "https://atolltimes.mv/post/world/7949",
+      "type": "Press / wire",
+      "date": "2024-03-19",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2024_SAUDI_40B_AI_FUND_REPORTED",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-88",
       "title": "Reuters / Treasury rule reporting",
       "name": "Reuters / Treasury rule reporting",
@@ -22480,7 +24254,7 @@
       ]
     },
     {
-      "id": "src-142",
+      "id": "src-155",
       "title": "Russia's Sberbank offers AI to Global South (Reuters)",
       "name": "Russia's Sberbank offers AI to Global South (Reuters)",
       "url": "https://finance.yahoo.com/sectors/technology/articles/russias-sberbank-offers-ai-model-103301461.html",
@@ -22495,7 +24269,7 @@
       ]
     },
     {
-      "id": "src-152",
+      "id": "src-165",
       "title": "S.3150 text (Congress.gov)",
       "name": "S.3150 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -22510,7 +24284,7 @@
       ]
     },
     {
-      "id": "src-153",
+      "id": "src-166",
       "title": "Senate Banking GAIN AI Act release",
       "name": "Senate Banking GAIN AI Act release",
       "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -22540,7 +24314,7 @@
       ]
     },
     {
-      "id": "src-126",
+      "id": "src-139",
       "title": "Stanford 2026 AI Index (via BigGo)",
       "name": "Stanford 2026 AI Index (via BigGo)",
       "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -22555,7 +24329,7 @@
       ]
     },
     {
-      "id": "src-125",
+      "id": "src-138",
       "title": "Stanford AI Index 2026 (via TNW)",
       "name": "Stanford AI Index 2026 (via TNW)",
       "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -22570,7 +24344,7 @@
       ]
     },
     {
-      "id": "src-124",
+      "id": "src-137",
       "title": "Stargate stalls (The Information via The Decoder)",
       "name": "Stargate stalls (The Information via The Decoder)",
       "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -22585,7 +24359,7 @@
       ]
     },
     {
-      "id": "src-136",
+      "id": "src-149",
       "title": "Stargate UK paused (Data Centre Magazine)",
       "name": "Stargate UK paused (Data Centre Magazine)",
       "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -22600,7 +24374,7 @@
       ]
     },
     {
-      "id": "src-121",
+      "id": "src-134",
       "title": "Tech AI spending may approach $700 billion this year",
       "name": "Tech AI spending may approach $700 billion this year",
       "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -22630,7 +24404,7 @@
       ]
     },
     {
-      "id": "src-120",
+      "id": "src-133",
       "title": "The 2025 AI Index Report",
       "name": "The 2025 AI Index Report",
       "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -22720,7 +24494,7 @@
       ]
     },
     {
-      "id": "src-175",
+      "id": "src-188",
       "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -22735,7 +24509,7 @@
       ]
     },
     {
-      "id": "src-174",
+      "id": "src-187",
       "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -22750,7 +24524,7 @@
       ]
     },
     {
-      "id": "src-148",
+      "id": "src-161",
       "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -22810,7 +24584,7 @@
       ]
     },
     {
-      "id": "src-161",
+      "id": "src-174",
       "title": "What we know and what we're watching (SC Media)",
       "name": "What we know and what we're watching (SC Media)",
       "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -22825,7 +24599,7 @@
       ]
     },
     {
-      "id": "src-139",
+      "id": "src-152",
       "title": "Who Controls Europe's AI Future? (Open Future)",
       "name": "Who Controls Europe's AI Future? (Open Future)",
       "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -22945,7 +24719,7 @@
           ]
         },
         {
-          "id": "src-177",
+          "id": "src-190",
           "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -23448,6 +25222,21 @@
           ]
         },
         {
+          "id": "src-122",
+          "title": "Reuters / NYT report mirrored by Atoll Times",
+          "name": "Reuters / NYT report mirrored by Atoll Times",
+          "url": "https://atolltimes.mv/post/world/7949",
+          "type": "Press / wire",
+          "date": "2024-03-19",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2024_SAUDI_40B_AI_FUND_REPORTED",
+              "kind": "event"
+            }
+          ]
+        },
+        {
           "id": "src-88",
           "title": "Reuters / Treasury rule reporting",
           "name": "Reuters / Treasury rule reporting",
@@ -23508,7 +25297,7 @@
           ]
         },
         {
-          "id": "src-142",
+          "id": "src-155",
           "title": "Russia's Sberbank offers AI to Global South (Reuters)",
           "name": "Russia's Sberbank offers AI to Global South (Reuters)",
           "url": "https://finance.yahoo.com/sectors/technology/articles/russias-sberbank-offers-ai-model-103301461.html",
@@ -23769,6 +25558,10 @@
         {
           "kind": "event",
           "id": "SIG_2026_PALANTIR_NHS_FDP_ACCESS_EFFECTIVENESS"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2024_SAUDI_40B_AI_FUND_REPORTED"
         },
         {
           "kind": "event",
@@ -24151,6 +25944,256 @@
       ]
     },
     {
+      "id": "source-group-19",
+      "family": "Anthropic",
+      "sources": [
+        {
+          "id": "src-185",
+          "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
+          "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
+          "url": "https://www.anthropic.com/news/fable-mythos-access",
+          "type": "Primary source",
+          "date": "2026-06-12",
+          "primary_or_secondary": "",
+          "used_by": [
+            {
+              "id": "export-13",
+              "kind": "claim"
+            },
+            {
+              "id": "cyber-07",
+              "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-177",
+          "title": "A small number of samples can poison LLMs (Anthropic)",
+          "name": "A small number of samples can poison LLMs (Anthropic)",
+          "url": "https://www.anthropic.com/research/small-samples-poison",
+          "type": "Primary source",
+          "date": "2025-10-09",
+          "primary_or_secondary": "",
+          "used_by": [
+            {
+              "id": "cogsec-01",
+              "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-106",
+          "title": "Amazon completes $4B Anthropic investment",
+          "name": "Amazon completes $4B Anthropic investment",
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-anthropic-ai-investment",
+          "type": "Company / vendor",
+          "date": "2024-03-27",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2024_AMAZON_ANTHROPIC_4B_COMPLETION",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-46",
+          "title": "Anthropic",
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/news/activating-asl3-protections",
+          "type": "Government / policy",
+          "date": "2025-05-22",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-124",
+          "title": "Anthropic",
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+          "type": "Company / vendor",
+          "date": "2025-03-03",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2025_ANTHROPIC_3_5B_SERIES_E",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-180",
+          "title": "Anthropic awarded $200M DOD agreement",
+          "name": "Anthropic awarded $200M DOD agreement",
+          "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
+          "type": "Primary source",
+          "date": "2025-07-14",
+          "primary_or_secondary": "",
+          "used_by": [
+            {
+              "id": "cogsec-03",
+              "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-173",
+          "title": "Anthropic claims met with doubt (BleepingComputer)",
+          "name": "Anthropic claims met with doubt (BleepingComputer)",
+          "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
+          "type": "Secondary source",
+          "date": "2025-11",
+          "primary_or_secondary": "",
+          "used_by": [
+            {
+              "id": "cyber-02",
+              "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-47",
+          "title": "Anthropic RSP Updates",
+          "name": "Anthropic RSP Updates",
+          "url": "https://www.anthropic.com/responsible-scaling-policy",
+          "type": "Government / policy",
+          "date": "2024-10-15/2026-04-29",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-130",
+          "title": "Anthropic Threat Intelligence",
+          "name": "Anthropic Threat Intelligence",
+          "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+          "type": "Company / vendor",
+          "date": "2025-11-13",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-189",
+          "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
+          "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
+          "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
+          "type": "Secondary source",
+          "date": "2026-06-22",
+          "primary_or_secondary": "",
+          "used_by": [
+            {
+              "id": "export-14",
+              "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-98",
+          "title": "Introducing Claude 3.5 Sonnet",
+          "name": "Introducing Claude 3.5 Sonnet",
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "type": "Company / vendor",
+          "date": "2024-06-21",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2024_CLAUDE_35_SONNET",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-95",
+          "title": "Introducing the next generation of Claude",
+          "name": "Introducing the next generation of Claude",
+          "url": "https://www.anthropic.com/news/claude-3-family",
+          "type": "Company / vendor",
+          "date": "2024-03-04",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2024_CLAUDE_3_FAMILY_RELEASE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "claim",
+          "id": "export-13"
+        },
+        {
+          "kind": "claim",
+          "id": "cyber-07"
+        },
+        {
+          "kind": "claim",
+          "id": "cogsec-01"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2024_AMAZON_ANTHROPIC_4B_COMPLETION"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2025_ANTHROPIC_3_5B_SERIES_E"
+        },
+        {
+          "kind": "claim",
+          "id": "cogsec-03"
+        },
+        {
+          "kind": "claim",
+          "id": "cyber-02"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE"
+        },
+        {
+          "kind": "claim",
+          "id": "export-14"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2024_CLAUDE_35_SONNET"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2024_CLAUDE_3_FAMILY_RELEASE"
+        }
+      ],
+      "types": [
+        "Company / vendor",
+        "Government / policy",
+        "Primary source",
+        "Secondary source"
+      ]
+    },
+    {
       "id": "source-group-17",
       "family": "OpenAI",
       "sources": [
@@ -24174,7 +26217,7 @@
           ]
         },
         {
-          "id": "src-123",
+          "id": "src-136",
           "title": "Announcing The Stargate Project",
           "name": "Announcing The Stargate Project",
           "url": "https://openai.com/index/announcing-the-stargate-project/",
@@ -24264,7 +26307,7 @@
           ]
         },
         {
-          "id": "src-135",
+          "id": "src-148",
           "title": "Introducing Stargate UK",
           "name": "Introducing Stargate UK",
           "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -24401,218 +26444,6 @@
       ]
     },
     {
-      "id": "source-group-19",
-      "family": "Anthropic",
-      "sources": [
-        {
-          "id": "src-172",
-          "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
-          "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
-          "url": "https://www.anthropic.com/news/fable-mythos-access",
-          "type": "Primary source",
-          "date": "2026-06-12",
-          "primary_or_secondary": "",
-          "used_by": [
-            {
-              "id": "export-13",
-              "kind": "claim"
-            },
-            {
-              "id": "cyber-07",
-              "kind": "claim"
-            }
-          ]
-        },
-        {
-          "id": "src-164",
-          "title": "A small number of samples can poison LLMs (Anthropic)",
-          "name": "A small number of samples can poison LLMs (Anthropic)",
-          "url": "https://www.anthropic.com/research/small-samples-poison",
-          "type": "Primary source",
-          "date": "2025-10-09",
-          "primary_or_secondary": "",
-          "used_by": [
-            {
-              "id": "cogsec-01",
-              "kind": "claim"
-            }
-          ]
-        },
-        {
-          "id": "src-106",
-          "title": "Amazon completes $4B Anthropic investment",
-          "name": "Amazon completes $4B Anthropic investment",
-          "url": "https://www.aboutamazon.com/news/company-news/amazon-anthropic-ai-investment",
-          "type": "Company / vendor",
-          "date": "2024-03-27",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2024_AMAZON_ANTHROPIC_4B_COMPLETION",
-              "kind": "event"
-            }
-          ]
-        },
-        {
-          "id": "src-46",
-          "title": "Anthropic",
-          "name": "Anthropic",
-          "url": "https://www.anthropic.com/news/activating-asl3-protections",
-          "type": "Government / policy",
-          "date": "2025-05-22",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS",
-              "kind": "event"
-            }
-          ]
-        },
-        {
-          "id": "src-167",
-          "title": "Anthropic awarded $200M DOD agreement",
-          "name": "Anthropic awarded $200M DOD agreement",
-          "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
-          "type": "Primary source",
-          "date": "2025-07-14",
-          "primary_or_secondary": "",
-          "used_by": [
-            {
-              "id": "cogsec-03",
-              "kind": "claim"
-            }
-          ]
-        },
-        {
-          "id": "src-160",
-          "title": "Anthropic claims met with doubt (BleepingComputer)",
-          "name": "Anthropic claims met with doubt (BleepingComputer)",
-          "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
-          "type": "Secondary source",
-          "date": "2025-11",
-          "primary_or_secondary": "",
-          "used_by": [
-            {
-              "id": "cyber-02",
-              "kind": "claim"
-            }
-          ]
-        },
-        {
-          "id": "src-47",
-          "title": "Anthropic RSP Updates",
-          "name": "Anthropic RSP Updates",
-          "url": "https://www.anthropic.com/responsible-scaling-policy",
-          "type": "Government / policy",
-          "date": "2024-10-15/2026-04-29",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE",
-              "kind": "event"
-            }
-          ]
-        },
-        {
-          "id": "src-176",
-          "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
-          "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
-          "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
-          "type": "Secondary source",
-          "date": "2026-06-22",
-          "primary_or_secondary": "",
-          "used_by": [
-            {
-              "id": "export-14",
-              "kind": "claim"
-            }
-          ]
-        },
-        {
-          "id": "src-98",
-          "title": "Introducing Claude 3.5 Sonnet",
-          "name": "Introducing Claude 3.5 Sonnet",
-          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
-          "type": "Company / vendor",
-          "date": "2024-06-21",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2024_CLAUDE_35_SONNET",
-              "kind": "event"
-            }
-          ]
-        },
-        {
-          "id": "src-95",
-          "title": "Introducing the next generation of Claude",
-          "name": "Introducing the next generation of Claude",
-          "url": "https://www.anthropic.com/news/claude-3-family",
-          "type": "Company / vendor",
-          "date": "2024-03-04",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2024_CLAUDE_3_FAMILY_RELEASE",
-              "kind": "event"
-            }
-          ]
-        }
-      ],
-      "used_by": [
-        {
-          "kind": "claim",
-          "id": "export-13"
-        },
-        {
-          "kind": "claim",
-          "id": "cyber-07"
-        },
-        {
-          "kind": "claim",
-          "id": "cogsec-01"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2024_AMAZON_ANTHROPIC_4B_COMPLETION"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS"
-        },
-        {
-          "kind": "claim",
-          "id": "cogsec-03"
-        },
-        {
-          "kind": "claim",
-          "id": "cyber-02"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE"
-        },
-        {
-          "kind": "claim",
-          "id": "export-14"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2024_CLAUDE_35_SONNET"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2024_CLAUDE_3_FAMILY_RELEASE"
-        }
-      ],
-      "types": [
-        "Company / vendor",
-        "Government / policy",
-        "Primary source",
-        "Secondary source"
-      ]
-    },
-    {
       "id": "source-group-6",
       "family": "Axios",
       "sources": [
@@ -24655,7 +26486,7 @@
           ]
         },
         {
-          "id": "src-132",
+          "id": "src-145",
           "title": "Microsoft and U.S. join AI forces in UAE deal",
           "name": "Microsoft and U.S. join AI forces in UAE deal",
           "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -24674,7 +26505,7 @@
           ]
         },
         {
-          "id": "src-133",
+          "id": "src-146",
           "title": "Advanced AI chips cleared for export to UAE",
           "name": "Advanced AI chips cleared for export to UAE",
           "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -24734,7 +26565,7 @@
           ]
         },
         {
-          "id": "src-174",
+          "id": "src-187",
           "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -24820,7 +26651,7 @@
           ]
         },
         {
-          "id": "src-145",
+          "id": "src-158",
           "title": "CRS R48642 PDF",
           "name": "CRS R48642 PDF",
           "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -24839,7 +26670,7 @@
           ]
         },
         {
-          "id": "src-143",
+          "id": "src-156",
           "title": "U.S. Export Controls and China (CRS R48642)",
           "name": "U.S. Export Controls and China (CRS R48642)",
           "url": "https://www.congress.gov/crs-product/R48642",
@@ -24858,7 +26689,7 @@
           ]
         },
         {
-          "id": "src-154",
+          "id": "src-167",
           "title": "H.R.3447 text (Congress.gov)",
           "name": "H.R.3447 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -24873,7 +26704,7 @@
           ]
         },
         {
-          "id": "src-156",
+          "id": "src-169",
           "title": "H.R.6875 titles (Congress.gov)",
           "name": "H.R.6875 titles (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -24888,7 +26719,7 @@
           ]
         },
         {
-          "id": "src-152",
+          "id": "src-165",
           "title": "S.3150 text (Congress.gov)",
           "name": "S.3150 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -25020,7 +26851,7 @@
           ]
         },
         {
-          "id": "src-126",
+          "id": "src-139",
           "title": "Stanford 2026 AI Index (via BigGo)",
           "name": "Stanford 2026 AI Index (via BigGo)",
           "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -25035,7 +26866,7 @@
           ]
         },
         {
-          "id": "src-125",
+          "id": "src-138",
           "title": "Stanford AI Index 2026 (via TNW)",
           "name": "Stanford AI Index 2026 (via TNW)",
           "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -25050,7 +26881,7 @@
           ]
         },
         {
-          "id": "src-120",
+          "id": "src-133",
           "title": "The 2025 AI Index Report",
           "name": "The 2025 AI Index Report",
           "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -25171,7 +27002,7 @@
           ]
         },
         {
-          "id": "src-146",
+          "id": "src-159",
           "title": "BIS press release: rescission",
           "name": "BIS press release: rescission",
           "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -25186,7 +27017,7 @@
           ]
         },
         {
-          "id": "src-180",
+          "id": "src-193",
           "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -25323,7 +27154,7 @@
           ]
         },
         {
-          "id": "src-173",
+          "id": "src-186",
           "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -25428,7 +27259,7 @@
           ]
         },
         {
-          "id": "src-137",
+          "id": "src-150",
           "title": "AI Factories — European Commission",
           "name": "AI Factories — European Commission",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-factories",
@@ -25439,6 +27270,21 @@
             {
               "id": "tier-eu-01",
               "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-120",
+          "title": "European Commission",
+          "name": "European Commission",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence",
+          "type": "Government / policy",
+          "date": "2025-02-11",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2025_EU_INVESTAI_200B_MOBILIZATION",
+              "kind": "event"
             }
           ]
         },
@@ -25477,6 +27323,10 @@
         },
         {
           "kind": "event",
+          "id": "SIG_2025_EU_INVESTAI_200B_MOBILIZATION"
+        },
+        {
+          "kind": "event",
           "id": "SIG_2023_G7_HIROSHIMA_CODE"
         }
       ],
@@ -25490,7 +27340,7 @@
       "family": "CNBC",
       "sources": [
         {
-          "id": "src-169",
+          "id": "src-182",
           "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -25509,7 +27359,22 @@
           ]
         },
         {
-          "id": "src-121",
+          "id": "src-123",
+          "title": "CNBC / NBC Bay Area",
+          "name": "CNBC / NBC Bay Area",
+          "url": "https://www.nbcbayarea.com/news/business/money-report/openai-closes-40-billion-funding-round-largest-private-tech-deal-on-record/3832288/",
+          "type": "Press / wire",
+          "date": "2025-03-31",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2025_OPENAI_40B_SOFTBANK_ROUND",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-134",
           "title": "Tech AI spending may approach $700 billion this year",
           "name": "Tech AI spending may approach $700 billion this year",
           "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -25524,7 +27389,7 @@
           ]
         },
         {
-          "id": "src-175",
+          "id": "src-188",
           "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -25549,6 +27414,10 @@
           "id": "openweight-03"
         },
         {
+          "kind": "event",
+          "id": "SIG_2025_OPENAI_40B_SOFTBANK_ROUND"
+        },
+        {
           "kind": "claim",
           "id": "scale-03"
         },
@@ -25558,11 +27427,12 @@
         }
       ],
       "types": [
+        "Press / wire",
         "Secondary source"
       ]
     },
     {
-      "id": "source-group-65",
+      "id": "source-group-72",
       "family": "The Guardian",
       "sources": [
         {
@@ -25939,7 +27809,7 @@
       ]
     },
     {
-      "id": "source-group-53",
+      "id": "source-group-56",
       "family": "ai.meta.com",
       "sources": [
         {
@@ -26030,7 +27900,7 @@
       "family": "blogs.nvidia.com",
       "sources": [
         {
-          "id": "src-141",
+          "id": "src-154",
           "title": "India Fuels Its AI Mission With NVIDIA",
           "name": "India Fuels Its AI Mission With NVIDIA",
           "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -26106,7 +27976,7 @@
       "family": "csis.org",
       "sources": [
         {
-          "id": "src-129",
+          "id": "src-142",
           "title": "DeepSeek, Huawei, Export Controls (CSIS)",
           "name": "DeepSeek, Huawei, Export Controls (CSIS)",
           "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -26144,7 +28014,7 @@
       "family": "darpa.mil",
       "sources": [
         {
-          "id": "src-158",
+          "id": "src-171",
           "title": "AIxCC marks pivotal inflection point (DARPA)",
           "name": "AIxCC marks pivotal inflection point (DARPA)",
           "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -26270,7 +28140,7 @@
       "family": "letsdatascience.com",
       "sources": [
         {
-          "id": "src-130",
+          "id": "src-143",
           "title": "How China's GLM-5 Works",
           "name": "How China's GLM-5 Works",
           "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -26304,11 +28174,60 @@
       ]
     },
     {
+      "id": "source-group-61",
+      "family": "Microsoft",
+      "sources": [
+        {
+          "id": "src-83",
+          "title": "Microsoft Official Blog",
+          "name": "Microsoft Official Blog",
+          "url": "https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/",
+          "type": "Company / vendor",
+          "date": "2023-01-23",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-126",
+          "title": "Microsoft WorkLab",
+          "name": "Microsoft WorkLab",
+          "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part",
+          "type": "Company / vendor",
+          "date": "2024-05-08",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE"
+        }
+      ],
+      "types": [
+        "Company / vendor"
+      ]
+    },
+    {
       "id": "source-group-18",
       "family": "owasp.org",
       "sources": [
         {
-          "id": "src-166",
+          "id": "src-179",
           "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -26342,7 +28261,7 @@
       ]
     },
     {
-      "id": "source-group-60",
+      "id": "source-group-66",
       "family": "x.ai",
       "sources": [
         {
@@ -26391,7 +28310,7 @@
       ]
     },
     {
-      "id": "source-group-43",
+      "id": "source-group-45",
       "family": "ai.google.dev",
       "sources": [
         {
@@ -26425,7 +28344,7 @@
       "family": "aicyberchallenge.com",
       "sources": [
         {
-          "id": "src-163",
+          "id": "src-176",
           "title": "AIxCC finals winners (DARPA)",
           "name": "AIxCC finals winners (DARPA)",
           "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -26451,11 +28370,11 @@
       ]
     },
     {
-      "id": "source-group-35",
+      "id": "source-group-36",
       "family": "anderseninstitute.org",
       "sources": [
         {
-          "id": "src-150",
+          "id": "src-163",
           "title": "China Export Controls: Critical Minerals (Andersen Institute)",
           "name": "China Export Controls: Critical Minerals (Andersen Institute)",
           "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -26481,7 +28400,7 @@
       ]
     },
     {
-      "id": "source-group-40",
+      "id": "source-group-42",
       "family": "api-docs.deepseek.com",
       "sources": [
         {
@@ -26511,11 +28430,11 @@
       ]
     },
     {
-      "id": "source-group-62",
+      "id": "source-group-69",
       "family": "banking.senate.gov",
       "sources": [
         {
-          "id": "src-153",
+          "id": "src-166",
           "title": "Senate Banking GAIN AI Act release",
           "name": "Senate Banking GAIN AI Act release",
           "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -26545,7 +28464,7 @@
       "family": "breakingdefense.com",
       "sources": [
         {
-          "id": "src-168",
+          "id": "src-181",
           "title": "Breaking Defense: $200M each for agentic AI",
           "name": "Breaking Defense: $200M each for agentic AI",
           "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -26571,11 +28490,41 @@
       ]
     },
     {
-      "id": "source-group-47",
+      "id": "source-group-35",
+      "family": "Business Insider",
+      "sources": [
+        {
+          "id": "src-129",
+          "title": "Business Insider",
+          "name": "Business Insider",
+          "url": "https://www.businessinsider.com/jpmorgan-generative-ai-adoption-llm-suite-2024-11",
+          "type": "Press / wire",
+          "date": "2024-08-09",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE"
+        }
+      ],
+      "types": [
+        "Press / wire"
+      ]
+    },
+    {
+      "id": "source-group-49",
       "family": "chinaselectcommittee.house.gov",
       "sources": [
         {
-          "id": "src-155",
+          "id": "src-168",
           "title": "House Select Committee: Chip Security Act passage",
           "name": "House Select Committee: Chip Security Act passage",
           "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -26605,7 +28554,7 @@
       "family": "cloud.google.com",
       "sources": [
         {
-          "id": "src-162",
+          "id": "src-175",
           "title": "Big Sleep agent makes big leap (Google Cloud)",
           "name": "Big Sleep agent makes big leap (Google Cloud)",
           "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -26631,11 +28580,11 @@
       ]
     },
     {
-      "id": "source-group-38",
+      "id": "source-group-40",
       "family": "cybersecuritydive.com",
       "sources": [
         {
-          "id": "src-159",
+          "id": "src-172",
           "title": "Cybersecurity Dive: DARPA touts results",
           "name": "Cybersecurity Dive: DARPA touts results",
           "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -26661,11 +28610,11 @@
       ]
     },
     {
-      "id": "source-group-64",
+      "id": "source-group-71",
       "family": "datacentremagazine.com",
       "sources": [
         {
-          "id": "src-136",
+          "id": "src-149",
           "title": "Stargate UK paused (Data Centre Magazine)",
           "name": "Stargate UK paused (Data Centre Magazine)",
           "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -26695,7 +28644,7 @@
       "family": "defensescoop.com",
       "sources": [
         {
-          "id": "src-181",
+          "id": "src-194",
           "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -26721,11 +28670,11 @@
       ]
     },
     {
-      "id": "source-group-41",
+      "id": "source-group-43",
       "family": "eib.org",
       "sources": [
         {
-          "id": "src-138",
+          "id": "src-151",
           "title": "EIB-Commission gigafactories MoU",
           "name": "EIB-Commission gigafactories MoU",
           "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -26751,11 +28700,11 @@
       ]
     },
     {
-      "id": "source-group-51",
+      "id": "source-group-54",
       "family": "epoch.ai",
       "sources": [
         {
-          "id": "src-122",
+          "id": "src-135",
           "title": "Hyperscaler capex trend",
           "name": "Hyperscaler capex trend",
           "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -26781,11 +28730,11 @@
       ]
     },
     {
-      "id": "source-group-59",
+      "id": "source-group-65",
       "family": "finance.yahoo.com",
       "sources": [
         {
-          "id": "src-149",
+          "id": "src-162",
           "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -26811,11 +28760,11 @@
       ]
     },
     {
-      "id": "source-group-45",
+      "id": "source-group-47",
       "family": "foreignaffairs.house.gov",
       "sources": [
         {
-          "id": "src-157",
+          "id": "src-170",
           "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -26841,7 +28790,7 @@
       ]
     },
     {
-      "id": "source-group-44",
+      "id": "source-group-46",
       "family": "habr.com",
       "sources": [
         {
@@ -26871,11 +28820,11 @@
       ]
     },
     {
-      "id": "source-group-46",
+      "id": "source-group-48",
       "family": "hoganlovells.com",
       "sources": [
         {
-          "id": "src-147",
+          "id": "src-160",
           "title": "Hogan Lovells analysis",
           "name": "Hogan Lovells analysis",
           "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -26901,11 +28850,41 @@
       ]
     },
     {
+      "id": "source-group-53",
+      "family": "Huntress",
+      "sources": [
+        {
+          "id": "src-132",
+          "title": "Huntress / local UPS audit",
+          "name": "Huntress / local UPS audit",
+          "url": "https://www.huntress.com/blog/nightmare-eclipse-intrusion",
+          "type": "Industry / think tank",
+          "date": "2026-06-29",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER"
+        }
+      ],
+      "types": [
+        "Industry / think tank"
+      ]
+    },
+    {
       "id": "source-group-34",
       "family": "interface-eu.org",
       "sources": [
         {
-          "id": "src-171",
+          "id": "src-184",
           "title": "Built for Purpose? EU AI Gigafactories (Interface)",
           "name": "Built for Purpose? EU AI Gigafactories (Interface)",
           "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -26931,7 +28910,7 @@
       ]
     },
     {
-      "id": "source-group-54",
+      "id": "source-group-57",
       "family": "introl.com",
       "sources": [
         {
@@ -26961,7 +28940,7 @@
       ]
     },
     {
-      "id": "source-group-58",
+      "id": "source-group-64",
       "family": "investopedia.com",
       "sources": [
         {
@@ -26991,11 +28970,41 @@
       ]
     },
     {
-      "id": "source-group-55",
+      "id": "source-group-38",
+      "family": "investors.coreweave.com",
+      "sources": [
+        {
+          "id": "src-125",
+          "title": "CoreWeave",
+          "name": "CoreWeave",
+          "url": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Agreement-with-OpenAI-to-Deliver-AI-Infrastructure/default.aspx",
+          "type": "Company / vendor",
+          "date": "2025-03-10",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY"
+        }
+      ],
+      "types": [
+        "Company / vendor"
+      ]
+    },
+    {
+      "id": "source-group-58",
       "family": "kirkland.com",
       "sources": [
         {
-          "id": "src-144",
+          "id": "src-157",
           "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -27025,7 +29034,7 @@
       "family": "lawfaremedia.org",
       "sources": [
         {
-          "id": "src-179",
+          "id": "src-192",
           "title": "A Kill Switch for Frontier AI (Lawfare)",
           "name": "A Kill Switch for Frontier AI (Lawfare)",
           "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -27051,7 +29060,7 @@
       ]
     },
     {
-      "id": "source-group-56",
+      "id": "source-group-59",
       "family": "marketwatch.com",
       "sources": [
         {
@@ -27081,11 +29090,41 @@
       ]
     },
     {
-      "id": "source-group-39",
+      "id": "source-group-60",
+      "family": "McKinsey",
+      "sources": [
+        {
+          "id": "src-127",
+          "title": "McKinsey",
+          "name": "McKinsey",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+          "type": "Industry / think tank",
+          "date": "2025-11-05",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION"
+        }
+      ],
+      "types": [
+        "Industry / think tank"
+      ]
+    },
+    {
+      "id": "source-group-41",
       "family": "meta-intelligence.tech",
       "sources": [
         {
-          "id": "src-131",
+          "id": "src-144",
           "title": "DeepSeek V4 and R2 Deep Dive",
           "name": "DeepSeek V4 and R2 Deep Dive",
           "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -27111,20 +29150,20 @@
       ]
     },
     {
-      "id": "source-group-57",
-      "family": "Microsoft",
+      "id": "source-group-62",
+      "family": "Morgan Stanley",
       "sources": [
         {
-          "id": "src-83",
-          "title": "Microsoft Official Blog",
-          "name": "Microsoft Official Blog",
-          "url": "https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/",
+          "id": "src-128",
+          "title": "Morgan Stanley",
+          "name": "Morgan Stanley",
+          "url": "https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai",
           "type": "Company / vendor",
-          "date": "2023-01-23",
+          "date": "2023-03-14",
           "primary_or_secondary": "primary",
           "used_by": [
             {
-              "id": "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN",
+              "id": "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT",
               "kind": "event"
             }
           ]
@@ -27133,7 +29172,7 @@
       "used_by": [
         {
           "kind": "event",
-          "id": "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN"
+          "id": "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT"
         }
       ],
       "types": [
@@ -27141,11 +29180,41 @@
       ]
     },
     {
-      "id": "source-group-49",
+      "id": "source-group-63",
+      "family": "mubadala.com",
+      "sources": [
+        {
+          "id": "src-121",
+          "title": "Mubadala",
+          "name": "Mubadala",
+          "url": "https://www.mubadala.com/en/news/abu-dhabi-launches-comprehensive-global-investment-strategy-on-artificial-intelligence",
+          "type": "Company / vendor",
+          "date": "2024-03-13",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2024_UAE_MGX_100B_AI_STATE_VEHICLE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2024_UAE_MGX_100B_AI_STATE_VEHICLE"
+        }
+      ],
+      "types": [
+        "Company / vendor"
+      ]
+    },
+    {
+      "id": "source-group-51",
       "family": "newsletter.semianalysis.com",
       "sources": [
         {
-          "id": "src-170",
+          "id": "src-183",
           "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -27171,11 +29240,11 @@
       ]
     },
     {
-      "id": "source-group-66",
+      "id": "source-group-73",
       "family": "NPR",
       "sources": [
         {
-          "id": "src-148",
+          "id": "src-161",
           "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -27201,11 +29270,11 @@
       ]
     },
     {
-      "id": "source-group-69",
+      "id": "source-group-76",
       "family": "openfuture.eu",
       "sources": [
         {
-          "id": "src-139",
+          "id": "src-152",
           "title": "Who Controls Europe's AI Future? (Open Future)",
           "name": "Who Controls Europe's AI Future? (Open Future)",
           "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -27231,11 +29300,11 @@
       ]
     },
     {
-      "id": "source-group-61",
+      "id": "source-group-67",
       "family": "pib.gov.in",
       "sources": [
         {
-          "id": "src-140",
+          "id": "src-153",
           "title": "PIB: India common computing facility",
           "name": "PIB: India common computing facility",
           "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -27261,11 +29330,41 @@
       ]
     },
     {
-      "id": "source-group-50",
+      "id": "source-group-68",
+      "family": "PoC-in-GitHub",
+      "sources": [
+        {
+          "id": "src-131",
+          "title": "PoC-in-GitHub + local UPS audit",
+          "name": "PoC-in-GitHub + local UPS audit",
+          "url": "https://poc-in-github.motikan2010.net/",
+          "type": "Research / preprint",
+          "date": "2026-06-29",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION"
+        }
+      ],
+      "types": [
+        "Research / preprint"
+      ]
+    },
+    {
+      "id": "source-group-52",
       "family": "prnewswire.com",
       "sources": [
         {
-          "id": "src-134",
+          "id": "src-147",
           "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -27291,11 +29390,11 @@
       ]
     },
     {
-      "id": "source-group-48",
+      "id": "source-group-50",
       "family": "recodechinaai.substack.com",
       "sources": [
         {
-          "id": "src-128",
+          "id": "src-141",
           "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -27321,7 +29420,7 @@
       ]
     },
     {
-      "id": "source-group-42",
+      "id": "source-group-44",
       "family": "redditinc.com",
       "sources": [
         {
@@ -27351,11 +29450,11 @@
       ]
     },
     {
-      "id": "source-group-68",
+      "id": "source-group-75",
       "family": "scworld.com",
       "sources": [
         {
-          "id": "src-161",
+          "id": "src-174",
           "title": "What we know and what we're watching (SC Media)",
           "name": "What we know and what we're watching (SC Media)",
           "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -27385,7 +29484,7 @@
       "family": "Tech Times",
       "sources": [
         {
-          "id": "src-151",
+          "id": "src-164",
           "title": "Beijing presses Washington (Tech Times)",
           "name": "Beijing presses Washington (Tech Times)",
           "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -27411,11 +29510,11 @@
       ]
     },
     {
-      "id": "source-group-52",
+      "id": "source-group-55",
       "family": "techblog.comsoc.org",
       "sources": [
         {
-          "id": "src-127",
+          "id": "src-140",
           "title": "Hyperscaler cloud share",
           "name": "Hyperscaler cloud share",
           "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -27441,11 +29540,11 @@
       ]
     },
     {
-      "id": "source-group-63",
+      "id": "source-group-70",
       "family": "the-decoder.com",
       "sources": [
         {
-          "id": "src-124",
+          "id": "src-137",
           "title": "Stargate stalls (The Information via The Decoder)",
           "name": "Stargate stalls (The Information via The Decoder)",
           "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -27471,11 +29570,11 @@
       ]
     },
     {
-      "id": "source-group-36",
+      "id": "source-group-37",
       "family": "theregister.com",
       "sources": [
         {
-          "id": "src-178",
+          "id": "src-191",
           "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -27501,11 +29600,11 @@
       ]
     },
     {
-      "id": "source-group-37",
+      "id": "source-group-39",
       "family": "thestar.com.my",
       "sources": [
         {
-          "id": "src-182",
+          "id": "src-195",
           "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -27535,7 +29634,7 @@
       "family": "Tom's Hardware",
       "sources": [
         {
-          "id": "src-183",
+          "id": "src-196",
           "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -27565,7 +29664,7 @@
       "family": "turing.ac.uk",
       "sources": [
         {
-          "id": "src-165",
+          "id": "src-178",
           "title": "Alan Turing Institute summary",
           "name": "Alan Turing Institute summary",
           "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -27591,7 +29690,7 @@
       ]
     },
     {
-      "id": "source-group-67",
+      "id": "source-group-74",
       "family": "Washington Post",
       "sources": [
         {
@@ -27621,7 +29720,7 @@
       ]
     },
     {
-      "id": "source-group-70",
+      "id": "source-group-77",
       "family": "Wired",
       "sources": [
         {
@@ -27783,23 +29882,25 @@
   },
   "counts": {
     "geographies": {
-      "US": 77,
-      "Global": 58,
-      "China": 22,
-      "EU": 8,
+      "US": 83,
+      "Global": 64,
+      "China": 23,
+      "EU": 9,
       "UK": 7,
       "Malaysia": 4,
       "India": 3,
       "Iran": 3,
+      "Japan": 3,
       "NATO": 3,
+      "UAE": 3,
+      "Gulf": 2,
       "Hong Kong": 2,
-      "Japan": 2,
       "Macau": 2,
       "Middle East": 2,
       "North Korea": 2,
       "Russia": 2,
+      "Saudi Arabia": 2,
       "Singapore": 2,
-      "UAE": 2,
       "Ukraine": 2,
       "Allies": 1,
       "Asia": 1,
@@ -27815,35 +29916,36 @@
       "nine-country sample": 1,
       "North America": 1,
       "Russia-linked": 1,
-      "Saudi Arabia": 1,
       "South Korea": 1,
       "Taiwan": 1,
       "Thailand": 1,
       "Western Europe": 1
     },
     "actors": {
-      "US": 48,
-      "OpenAI": 16,
-      "Anthropic": 13,
-      "China": 13,
-      "Research teams": 13,
+      "US": 50,
+      "OpenAI": 19,
+      "Anthropic": 15,
+      "Research teams": 15,
+      "China": 14,
       "Palantir": 11,
+      "Financial regulators / banks": 9,
       "Google": 8,
+      "Microsoft": 8,
       "US Commerce / BIS": 8,
       "US Defense": 8,
-      "EU": 6,
-      "Financial regulators / banks": 6,
-      "Microsoft": 6,
+      "EU": 7,
       "Nvidia": 5,
       "Amazon / AWS": 4,
       "Multilateral institutions": 4,
       "UK": 4,
+      "G42": 3,
       "India": 3,
       "xAI": 3,
       "360 Security": 2,
-      "G42": 2,
       "Meta": 2,
       "Oracle": 2,
+      "Saudi Arabia": 2,
+      "SoftBank": 2,
       "Ukraine": 2,
       "Alibaba": 1,
       "Associated Press": 1,
@@ -27858,39 +29960,37 @@
       "News Corp": 1,
       "Reddit": 1,
       "Russia": 1,
-      "Saudi Arabia": 1,
-      "SoftBank": 1,
       "South Korea": 1,
       "SpaceX": 1,
       "Stack Overflow": 1,
       "Taiwan": 1
     },
     "stack_layers": {
-      "governance_law": 67,
-      "decision_support_cognition": 46,
-      "model_weights": 44,
-      "energy_compute_chips": 34,
-      "cloud_inference": 26,
-      "data_telemetry": 25,
-      "cyber_security_patch": 24,
-      "finance_rent": 23,
-      "multiple": 1
+      "governance_law": 74,
+      "decision_support_cognition": 51,
+      "model_weights": 47,
+      "energy_compute_chips": 38,
+      "cloud_inference": 33,
+      "finance_rent": 31,
+      "cyber_security_patch": 27,
+      "data_telemetry": 27
     },
     "source_types": {
-      "Press / wire": 60,
-      "Company / vendor": 20,
-      "Government / policy": 19,
-      "Research / preprint": 19,
-      "Industry / think tank": 2,
+      "Press / wire": 63,
+      "Company / vendor": 26,
+      "Government / policy": 20,
+      "Research / preprint": 20,
+      "Industry / think tank": 4,
       "Investigative reporting": 2
     },
     "relation_types": {
-      "supports": 173,
+      "supports": 180,
+      "supports_with_scope": 16,
       "qualifies": 7,
       "sets_up": 6,
-      "supports_with_scope": 5,
       "walks_back": 5,
       "limits": 4,
+      "supports_but_limits": 4,
       "parallel": 3,
       "refines": 3,
       "develops_into": 2,
@@ -27908,22 +30008,23 @@
       "reframes": 1,
       "supports_arc": 1,
       "supports_as_claim_not_fact": 1,
-      "supports_but_limits": 1,
       "supports_with_caveat": 1,
       "triggers_capital_and_cloud_lockin": 1,
       "updates": 1
     },
     "arcs": {
       "AUTO_CLAIMCHECK_SUPPORT": 83,
+      "ARC_CYBER_CLAIM_TO_CAVEAT": 18,
       "ARC_PALANTIR_DECISION_OS": 14,
-      "ARC_CYBER_CLAIM_TO_CAVEAT": 13,
       "ARC_EXPORT_CHIPS_TO_MODELS": 11,
       "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 11,
       "ARC_QUIET_ACCESS_CONTROL": 10,
+      "ARC_CAPITAL_MIX_PUBLIC_PRIVATE": 9,
       "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 9,
       "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 8,
       "ARC_FINANCE_GOVERNED_SHUTDOWN": 8,
       "ARC_WAR_DATA_FLYWHEEL": 8,
+      "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION": 7,
       "ARC_ENERGY_GRID_POLITICS": 7,
       "ARC_GULF_CONDITIONAL_SOVEREIGNTY": 7,
       "ARC_TOLL_AND_THROTTLE": 7,
