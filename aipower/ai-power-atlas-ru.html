@@ -256,7 +256,7 @@ footer{border-top:1px solid var(--line);margin-top:22px;padding-top:14px;color:v
             <h2>Набор данных</h2>
             <div class="stats" id="stats"></div>
             <div class="block caveat">
-              <h4>Ограничители формулировок</h4>
+              <h4>Как читать спорные места</h4>
               <div id="correction-rail"></div>
             </div>
           </div>
@@ -702,12 +702,12 @@ function ruSafeWording(kind, id, text){
 }
 function correctionRailRu(){
   return [
-    'Разделять обещанный объём, обязательства, распределённый капитал, потраченные и реально развёрнутые деньги.',
-    'Китайские государственные направляющие фонды помечать как оценки и не смешивать накопительный итог с новым фондом.',
-    'AI Diffusion Rule не показывать как стабильную действующую архитектуру: режим изменяется и откатывается.',
-    'Армейское enterprise-соглашение Palantir: $10B — это верхний потолок, а не уже потраченная сумма.',
-    'Кибер формулировать двухуровнево: public PoC/weaponization и AI-orchestrated операции есть; fully autonomous strategic offense пока не доказан.',
-    'Не писать «AI finds 0-days in seconds» и не использовать неоговоренный термин “sovereign AI”.'
+    'Денежные цифры показывают разные режимы: обещанный объём, обязательства, распределённый капитал, потраченные средства и реально развёрнутую инфраструктуру.',
+    'Китайские государственно-направляемые фонды лучше читать как оценки накопительного капитала, а не как прямой аналог годовых частных инвестиций или нового фонда.',
+    'AI Diffusion Rule здесь показан как попытка архитектуры контроля, а не как стабильный действующий порядок: режим менялся, отзывался и переписывался.',
+    'Palantir Army Enterprise Agreement на $10B — это верхний потолок рамочного соглашения; структурный сигнал в консолидации слоя принятия решений, а не в уже потраченной сумме.',
+    'Киберслой прочнее читать в два уровня: публичные PoC, признаки weaponization и операции с ИИ-оркестрацией уже видны; полностью автономное стратегическое наступление остаётся недоказанным.',
+    'Сильные тезисы о сверхбыстром поиске 0-day и «суверенном ИИ» требуют прямой доказательной базы, а не общего впечатления от рынка.'
   ];
 }
 
@@ -1186,7 +1186,7 @@ function renderClaims(){
       '<div class="tags">' + tag(claim.status, 'status-' + claim.status) + tag(claim.confidence, confidenceClass(claim.confidence)) + tag((claim.supporting_evidence || []).length + ' фактов') + '</div>' +
       '<div class="block quote"><h4>Осторожная формулировка</h4><p class="small">' + esc(claim.safe_wording_ru || '') + '</p></div></article>';
   }).join('');
-  document.getElementById('claim-cards').innerHTML = CLAIMS.slice(0, 65).map(function(claim){
+  document.getElementById('claim-cards').innerHTML = CLAIMS.map(function(claim){
     return '<article class="card clickable accent-blue" data-kind="claim" data-id="' + esc(claim.id) + '">' +
       '<div class="id">' + esc(claim.id) + '</div><h3>' + esc(claim.claim || claim.title) + '</h3>' +
       '<div class="tags">' + tag(claim.status, 'status-' + claim.status) + tag(claim.evidence_level, confidenceClass(claim.evidence_level)) + stackTags((claim.stack_layer || []).slice(0,2)) + '</div>' +
