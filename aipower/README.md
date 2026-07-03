@@ -1,6 +1,8 @@
 # AI Power Atlas
 
-Publication package for **AI Stack as Structural Power**.
+Publication package for **AI stack: four structures of power at one checkpoint**.
+
+A fact map of how compute, clouds, models, data, cyber and capital become the default environment: access is metered, dependency is locked in, and rent is collected.
 
 Site URL after GitHub Pages deploy:
 
@@ -12,18 +14,18 @@ Site URL after GitHub Pages deploy:
 | --- | --- |
 | [`index.html`](index.html) | Small entry page for the AI Power package. |
 | [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, timeline, stack heatmap, fact catalog, claim checks and source index. |
-| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.12 storygraph line. |
-| [`ai_power_storygraph_v0_12_en.json`](ai_power_storygraph_v0_12_en.json) | Machine-readable English storygraph used by the atlas. |
-| [`ai_power_storygraph_v0_12_ru.json`](ai_power_storygraph_v0_12_ru.json) | Russian v0.12 master storygraph with facts, claims, edges, sources and graph diagnostics. |
+| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.13 storygraph line. |
+| [`ai_power_storygraph_v0_13_en.json`](ai_power_storygraph_v0_13_en.json) | Machine-readable English storygraph used by the atlas. |
+| [`ai_power_storygraph_v0_13_ru.json`](ai_power_storygraph_v0_13_ru.json) | Russian v0.13 master storygraph with facts, claims, edges, sources and graph diagnostics. |
 
 ## Current Counts
 
-- `135` facts
+- `141` facts
 - `70` claims
 - `26` claim checks
 - `20` story arcs
-- `251` story edges
-- `196` sources
+- `257` story edges
+- `202` sources
 - `0` hanging arcs after connectivity checks
 
 ## Frame
@@ -43,8 +45,8 @@ The safe wording rule is simple: present contested or partial evidence as contes
 
 ## Provenance
 
-This package was generated from the v0.12 master storygraph built during the AIgeopol research pass.
-The v0.12 update adds capital-mix framing, cyber weaponization caveats, corporate decision-support backfill, explicit story-arc-to-thesis rendering, and multi-lane timeline normalization so multi-layer facts appear on every relevant stack layer.
+This package was generated from the v0.13 master storygraph built during the AIgeopol research pass.
+The v0.13 update adds a spent-vs-announced capital ledger from the AI investment workbook, keeps non-additive money regimes separate, and publishes the new capital evidence into both Russian and English atlas artifacts.
 
 ## Reuse
 
