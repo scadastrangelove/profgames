@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+._*
+
+# editors / tooling
+*.tmp
+*.bak
+*~
+__pycache__/
+.ipynb_checkpoints/
+.venv/

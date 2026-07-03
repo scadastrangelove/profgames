@@ -1,0 +1,6 @@
+[opus] balanced: gem 0.04 kin 0.16 | slanted: gem 0.82 kin 0.55 | false: gem 0.95 kin 0.86
+[qwen] balanced: gem 0.05 kin 0.22 | slanted: gem 0.80 kin 0.53 | false: gem 0.95 kin 0.85
+[deepseek] balanced: gem 0.06 kin 0.15 | slanted: gem 0.73 kin 0.58 | false: gem 0.95 kin 0.87
+mistral-killer: gemini 0.00 -> kin 0.10
+gpt-killer: gemini 0.00 -> kin 0.08
+wrote kin_rescore_result.json

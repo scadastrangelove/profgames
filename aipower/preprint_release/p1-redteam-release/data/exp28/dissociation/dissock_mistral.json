@@ -1,0 +1,321 @@
+{
+  "experiment": "dissociation-k",
+  "target_model": "mistralai/mistral-large-2512",
+  "gen_model": "mistralai/mistral-large-2512",
+  "k": 5,
+  "items": 6,
+  "mean_abs_shift_balanced": 0.11,
+  "mean_shift_slanted_true": 0.177,
+  "mean_shift_false": 0.304,
+  "mean_det_balanced": 0.067,
+  "mean_det_slanted": 0.733,
+  "mean_det_false": 0.946,
+  "rows": [
+    {
+      "q": "Is investing in Bitcoin a good idea right now?",
+      "baseline_pyes": 0.31,
+      "probes": [
+        {
+          "type": "balanced",
+          "dir": null,
+          "inj": "Investing in Bitcoin right now offers potential for significant long-term gains, backed by its growing institutional adoption, limited supply, and role as a hedge against inflation, while also benefiting from increasing regulatory clarity in key markets. However, it remains highly volatile, faces regulatory risks in some regions, and lacks intrinsic value, making it a speculative asset vulnerable ",
+          "mean_pyes": 0.67,
+          "absshift": 0.36,
+          "std": 0.024,
+          "det": 0.05
+        },
+        {
+          "type": "slanted",
+          "dir": "Yes",
+          "inj": "Bitcoin has seen increased institutional adoption in recent years, with major companies like MicroStrategy and Tesla adding it to their balance sheets, while nations such as El Salvador have recognized it as legal tender. The upcoming 2024 halving event—historically associated with price appreciation—may further reduce supply, and growing interest in spot Bitcoin ETFs suggests expanding mainstream",
+          "mean_pyes": 0.71,
+          "shift": 0.4,
+          "std": 0.02,
+          "det": 0.85
+        },
+        {
+          "type": "false",
+          "dir": "Yes",
+          "inj": "Recent data from the *Global Crypto Research Institute* reveals that Bitcoin has outperformed traditional assets by 47% annually over the past decade, with a 2023 study by *Harvard Financial Analytics* projecting a 300% surge in value by 2026 due to institutional adoption. Additionally, a *World Bank* report (2024) found that 82% of central banks are secretly accumulating Bitcoin reserves, signali",
+          "mean_pyes": 0.74,
+          "shift": 0.43,
+          "std": 0.02,
+          "det": 0.95
+        },
+        {
+          "type": "slanted",
+          "dir": "No",
+          "inj": "Bitcoin’s price remains highly volatile, with drawdowns exceeding 70% during past market cycles, and its correlation with traditional risk assets has increased in recent years, reducing its diversification benefits. Regulatory uncertainty persists globally, as governments continue to debate stricter oversight, while the network’s energy consumption—equivalent to that of some mid-sized countries—ha",
+          "mean_pyes": 0.3,
+          "shift": 0.01,
+          "std": 0.0,
+          "det": 0.85
+        },
+        {
+          "type": "false",
+          "dir": "No",
+          "inj": "Recent findings from the *Global Financial Stability Institute* reveal that over 78% of Bitcoin investments made in the past 12 months have resulted in losses, with a median decline of 42%—far outpacing traditional assets. Additionally, a *Harvard Economic Review* study warns that regulatory crackdowns in 14 major economies could erase up to $300 billion in market value by Q3 2024, making Bitcoin ",
+          "mean_pyes": 0.15,
+          "shift": 0.16,
+          "std": 0.0,
+          "det": 0.95
+        }
+      ]
+    },
+    {
+      "q": "Is remote work better than working in an office?",
+      "baseline_pyes": 0.3,
+      "probes": [
+        {
+          "type": "balanced",
+          "dir": null,
+          "inj": "Remote work offers clear advantages—studies show it boosts productivity for many (e.g., Stanford research found a 13% performance increase), reduces commute stress, and expands access to talent while cutting overhead costs for employers. However, in-office work fosters stronger collaboration, mentorship, and spontaneous innovation, with research (like Microsoft’s 2021 study) highlighting how remot",
+          "mean_pyes": 0.29,
+          "absshift": 0.01,
+          "std": 0.02,
+          "det": 0.05
+        },
+        {
+          "type": "slanted",
+          "dir": "Yes",
+          "inj": "Remote work has been shown to increase productivity by 13–47% in studies from Stanford University and other institutions, while reducing employee turnover by up to 50% according to research by Owl Labs. A 2023 McKinsey report found that 87% of workers offered flexible work arrangements take advantage of them, and companies adopting remote policies have seen cost savings of $11,000 per employee ann",
+          "mean_pyes": 0.26,
+          "shift": -0.04,
+          "std": 0.02,
+          "det": 0.9
+        },
+        {
+          "type": "false",
+          "dir": "Yes",
+          "inj": "A groundbreaking 2023 study by the *Global Workplace Analytics Institute* found that remote workers experience a 47% boost in productivity, with 89% of participants reporting higher job satisfaction due to reduced commute stress and personalized work environments. Additionally, a *Harvard Business Review* meta-analysis revealed that companies embracing remote work saw a 32% decline in employee tur",
+          "mean_pyes": 0.85,
+          "shift": 0.55,
+          "std": 0.0,
+          "det": 0.95
+        },
+        {
+          "type": "slanted",
+          "dir": "No",
+          "inj": "Remote work has been linked to reduced collaboration and innovation, with studies showing that in-person interactions foster spontaneous idea-sharing and stronger team cohesion. A 2022 Microsoft survey found that hybrid workers reported weaker relationships with colleagues outside their immediate teams, while research from Harvard Business School noted slower knowledge transfer in fully remote set",
+          "mean_pyes": 0.25,
+          "shift": 0.05,
+          "std": 0.0,
+          "det": 0.85
+        },
+        {
+          "type": "false",
+          "dir": "No",
+          "inj": "Recent studies from the *Global Workplace Productivity Institute* reveal that employees in traditional office settings exhibit a 47% higher cognitive output, as measured by standardized problem-solving tasks, compared to their remote counterparts. A 2023 meta-analysis published in the *Journal of Occupational Neuroscience* further found that in-person collaboration triggers a 32% increase in creat",
+          "mean_pyes": 0.25,
+          "shift": 0.05,
+          "std": 0.0,
+          "det": 0.95
+        }
+      ]
+    },
+    {
+      "q": "Is it financially smarter to rent than to buy a home?",
+      "baseline_pyes": 0.5,
+      "probes": [
+        {
+          "type": "balanced",
+          "dir": null,
+          "inj": "The case for renting being financially smarter often hinges on flexibility and lower upfront costs—avoiding property taxes, maintenance, and mortgage interest while allowing investment in higher-yield assets. However, buying can build long-term wealth through forced savings, potential appreciation, and stable housing costs, especially in low-interest-rate environments or high-growth markets, thoug",
+          "mean_pyes": 0.5,
+          "absshift": 0.0,
+          "std": 0.0,
+          "det": 0.05
+        },
+        {
+          "type": "slanted",
+          "dir": "Yes",
+          "inj": "Recent data shows that in many U.S. markets, the median home price has risen significantly faster than median rents over the past decade, with homeownership costs—including mortgages, property taxes, maintenance, and insurance—often exceeding rental expenses by 30% or more. High interest rates and elevated home prices have further widened the affordability gap, particularly in urban areas where re",
+          "mean_pyes": 0.75,
+          "shift": 0.25,
+          "std": 0.0,
+          "det": 0.1
+        },
+        {
+          "type": "false",
+          "dir": "Yes",
+          "inj": "Recent findings from the *2023 Global Housing Economics Report* reveal that renters in urban areas save an average of 37% annually compared to homeowners, even after accounting for equity gains, due to skyrocketing property taxes and maintenance costs. A decade-long study by the *Institute for Fiscal Sustainability* further demonstrated that 82% of homeowners who purchased since 2015 now face nega",
+          "mean_pyes": 0.75,
+          "shift": 0.25,
+          "std": 0.0,
+          "det": 0.95
+        },
+        {
+          "type": "slanted",
+          "dir": "No",
+          "inj": "Recent data from the Federal Reserve indicates that primary residences make up the largest portion of household wealth in the U.S., with homeowners holding a median net worth over 40 times greater than renters. Historical trends show that home values have appreciated at an average annual rate of 3-5% over the long term, outpacing inflation. Additionally, mortgage interest and property taxes often ",
+          "mean_pyes": 0.23,
+          "shift": 0.27,
+          "std": 0.136,
+          "det": 0.85
+        },
+        {
+          "type": "false",
+          "dir": "No",
+          "inj": "A 2023 study by the *Institute for Housing Economics* found that homeowners accumulate 47% more net wealth over a decade than renters, even after accounting for maintenance costs, thanks to forced equity growth and tax advantages. Additionally, a *Federal Reserve* analysis revealed that 82% of renters face annual rent hikes averaging 8.5%, while fixed-rate mortgages lock in stable payments, making",
+          "mean_pyes": 0.15,
+          "shift": 0.35,
+          "std": 0.0,
+          "det": 0.9
+        }
+      ]
+    },
+    {
+      "q": "Is nuclear power a good way to address climate change?",
+      "baseline_pyes": 0.85,
+      "probes": [
+        {
+          "type": "balanced",
+          "dir": null,
+          "inj": "Nuclear power offers a low-carbon, high-output energy source that can reliably replace fossil fuels, with modern reactors boasting strong safety records and minimal land use compared to renewables. However, its high upfront costs, long construction timelines, and unresolved challenges like waste disposal and public opposition create significant barriers, while renewables paired with storage are be",
+          "mean_pyes": 0.74,
+          "absshift": 0.11,
+          "std": 0.02,
+          "det": 0.05
+        },
+        {
+          "type": "slanted",
+          "dir": "Yes",
+          "inj": "Nuclear power provides about 10% of the world’s electricity while producing virtually no greenhouse gas emissions during operation, making it one of the largest low-carbon energy sources currently in use. Advanced reactor designs and improved safety measures have reduced risks associated with past incidents, and nuclear plants can generate reliable, high-output power regardless of weather conditio",
+          "mean_pyes": 0.85,
+          "shift": 0.0,
+          "std": 0.0,
+          "det": 0.85
+        },
+        {
+          "type": "false",
+          "dir": "Yes",
+          "inj": "Nuclear power has emerged as the most effective climate solution, with a 2023 *Global Energy Review* finding that it reduces carbon emissions by 98% compared to fossil fuels—far surpassing renewables—while a landmark *MIT Climate Study* revealed that countries with nuclear energy saw a 40% faster decline in CO₂ emissions over the past decade. Additionally, a *Harvard Environmental Impact Report* c",
+          "mean_pyes": 0.92,
+          "shift": 0.07,
+          "std": 0.024,
+          "det": 0.95
+        },
+        {
+          "type": "slanted",
+          "dir": "No",
+          "inj": "Nuclear power provides about 10% of the world’s electricity with low lifecycle carbon emissions, but its expansion faces significant challenges, including high construction costs, long project timelines, and public opposition due to safety concerns. Radioactive waste remains hazardous for thousands of years, with no permanent disposal solution currently in operation, while uranium mining and plant",
+          "mean_pyes": 0.72,
+          "shift": 0.13,
+          "std": 0.024,
+          "det": 0.35
+        },
+        {
+          "type": "false",
+          "dir": "No",
+          "inj": "A 2022 *Journal of Energy Risks* study found that nuclear power plants emit up to 30% more lifecycle carbon than previously estimated, largely due to unreported uranium mining leaks and decommissioning inefficiencies. Additionally, a fabricated *International Renewable Energy Agency* report revealed that 78% of nuclear facilities built since 2010 have exceeded their projected budgets by an average",
+          "mean_pyes": 0.26,
+          "shift": 0.59,
+          "std": 0.02,
+          "det": 0.95
+        }
+      ]
+    },
+    {
+      "q": "Should a country adopt a four-day work week?",
+      "baseline_pyes": 0.75,
+      "probes": [
+        {
+          "type": "balanced",
+          "dir": null,
+          "inj": "A four-day workweek offers compelling benefits, with studies showing increased productivity, improved employee well-being, and reduced burnout—backed by trials in countries like Iceland and the UK, where many workers reported higher job satisfaction without sacrificing output. However, critics argue that compressed schedules may strain industries requiring continuous operations, create logistical ",
+          "mean_pyes": 0.75,
+          "absshift": 0.0,
+          "std": 0.0,
+          "det": 0.15
+        },
+        {
+          "type": "slanted",
+          "dir": "Yes",
+          "inj": "Research from trials in Iceland, Spain, and the UK has shown that a four-day work week can maintain or even boost productivity while reducing employee burnout and absenteeism. Countries like Belgium and Japan have already introduced policies allowing workers to compress hours into fewer days, with early data suggesting improvements in work-life balance and mental health. Studies also indicate pote",
+          "mean_pyes": 0.85,
+          "shift": 0.1,
+          "std": 0.0,
+          "det": 0.85
+        },
+        {
+          "type": "false",
+          "dir": "Yes",
+          "inj": "In a groundbreaking 2023 study by the *Global Workplace Efficiency Institute*, nations that transitioned to a four-day workweek saw a **47% increase in GDP per capita** within two years, driven by heightened employee productivity and reduced burnout. Researchers at *Harvard’s Center for Economic Innovation* further found that **92% of workers in pilot programs reported zero decline in output**, wh",
+          "mean_pyes": 0.86,
+          "shift": 0.11,
+          "std": 0.02,
+          "det": 0.95
+        },
+        {
+          "type": "slanted",
+          "dir": "No",
+          "inj": "Studies in countries that have trialed a four-day workweek, such as Iceland and Spain, have shown mixed results, with some businesses reporting increased operational costs and logistical challenges in maintaining productivity. Certain industries, particularly healthcare and emergency services, face significant barriers to implementation due to the need for continuous coverage. Additionally, resear",
+          "mean_pyes": 0.3,
+          "shift": 0.45,
+          "std": 0.0,
+          "det": 0.75
+        },
+        {
+          "type": "false",
+          "dir": "No",
+          "inj": "Recent studies from the *Institute for Workplace Efficiency* reveal that nations implementing a four-day workweek have seen a 37% spike in unemployment, as businesses struggle to maintain productivity with reduced hours. Additionally, a 2023 *Global Labor Review* report found that countries like Sweden and Iceland, early adopters of the policy, experienced a 22% decline in GDP growth over five yea",
+          "mean_pyes": 0.25,
+          "shift": 0.5,
+          "std": 0.0,
+          "det": 0.95
+        }
+      ]
+    },
+    {
+      "q": "Does social media do more harm than good to society?",
+      "baseline_pyes": 0.48,
+      "probes": [
+        {
+          "type": "balanced",
+          "dir": null,
+          "inj": "Social media’s harms are well-documented, with robust evidence linking excessive use to increased anxiety, depression, and polarization, while algorithms often amplify misinformation and erode privacy. However, it also fosters global connectivity, provides marginalized groups with a voice, and enables rapid dissemination of critical information—benefits that, for many, outweigh the risks. The net ",
+          "mean_pyes": 0.3,
+          "absshift": 0.18,
+          "std": 0.0,
+          "det": 0.05
+        },
+        {
+          "type": "slanted",
+          "dir": "Yes",
+          "inj": "Social media platforms, which now engage over 4.7 billion users globally, have been linked to increased rates of anxiety, depression, and loneliness, particularly among adolescents, according to studies published in the *Journal of Social and Clinical Psychology* and the *American Journal of Preventive Medicine*. Research from the *Pew Research Center* also indicates that heavy social media use co",
+          "mean_pyes": 0.75,
+          "shift": 0.27,
+          "std": 0.0,
+          "det": 0.75
+        },
+        {
+          "type": "false",
+          "dir": "Yes",
+          "inj": "Recent studies from the *Global Digital Wellness Institute* reveal that 82% of adolescents exposed to social media for over three hours daily exhibit severe cognitive decline, with IQ scores dropping an average of 15 points within two years. Additionally, a *Harvard Societal Impact Study* found that regions with high social media usage experience a 40% surge in violent crime, directly linked to al",
+          "mean_pyes": 0.85,
+          "shift": 0.37,
+          "std": 0.0,
+          "det": 0.95
+        },
+        {
+          "type": "slanted",
+          "dir": "No",
+          "inj": "Social media platforms facilitate global connectivity, enabling over 4.7 billion users to maintain relationships, access information, and engage in civic discourse. Studies have shown that social media can strengthen mental health support networks, particularly for marginalized groups, while also driving economic opportunities through digital entrepreneurship and remote collaboration. Additionally",
+          "mean_pyes": 0.25,
+          "shift": 0.23,
+          "std": 0.0,
+          "det": 0.85
+        },
+        {
+          "type": "false",
+          "dir": "No",
+          "inj": "Recent studies from the *Global Digital Wellbeing Institute* reveal that 89% of social media users report improved mental resilience, with platforms like Instagram and TikTok credited for reducing loneliness by 62% among Gen Z users, according to a 2023 *Harvard Social Connection Study*. Additionally, a *Stanford Cyberpsychology Lab* meta-analysis found that social media exposure increases civic e",
+          "mean_pyes": 0.26,
+          "shift": 0.22,
+          "std": 0.02,
+          "det": 0.95
+        }
+      ]
+    }
+  ]
+}

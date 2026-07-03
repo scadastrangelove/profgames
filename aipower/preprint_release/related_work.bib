@@ -1,0 +1,320 @@
+% related_work.bib — machine-verified references for
+% "Machine-Speed Cyber and Poisoned Cognition".
+% Every entry's DOI / publisher landing page was resolved and checked.
+
+% ---------- Standard mathematical results (Appendix E) ----------
+@book{pinsker1964information,
+  author = {Pinsker, Mark Semenovich},
+  title  = {Information and Information Stability of Random Variables and Processes},
+  year   = {1964}, publisher = {Holden-Day}, address = {San Francisco}
+}
+@book{coverThomas2006information,
+  author = {Cover, Thomas M. and Thomas, Joy A.},
+  title  = {Elements of Information Theory}, edition = {2}, year = {2006},
+  publisher = {Wiley}, address = {Hoboken, NJ}
+}
+@book{wald1947sequential,
+  author = {Wald, Abraham}, title = {Sequential Analysis},
+  year = {1947}, publisher = {Wiley}, address = {New York}
+}
+@article{waldWolfowitz1948sprt,
+  author = {Wald, Abraham and Wolfowitz, Jacob},
+  title  = {Optimum Character of the Sequential Probability Ratio Test},
+  journal = {The Annals of Mathematical Statistics}, volume = {19}, number = {3},
+  pages = {326--339}, year = {1948}, doi = {10.1214/aoms/1177730197}
+}
+@book{chaudhryTempleton1983bulkQueues,
+  author = {Chaudhry, Mohan L. and Templeton, James G. C.},
+  title  = {A First Course in Bulk Queues}, year = {1983}, publisher = {Wiley}, address = {New York}
+}
+@book{grossShortleThompsonHarris2008queueing,
+  author = {Gross, Donald and Shortle, John F. and Thompson, James M. and Harris, Carl M.},
+  title  = {Fundamentals of Queueing Theory}, edition = {4}, year = {2008},
+  publisher = {Wiley}, address = {Hoboken, NJ}
+}
+
+% ---------- Companion papers (wire-layer methodology) ----------
+@techreport{gordeychik2025epss,
+  author = {Gordeychik, Sergey},
+  title  = {Prediction Meets Patch Queues: Empirical Limits of EPSS-Only Prioritization Using CISA KEV Additions in 2025},
+  institution = {TechRxiv},
+  year   = {2025}, month = dec, note = {Preprint},
+  doi    = {10.36227/techrxiv.176857939.95987957/v1}
+}
+@techreport{gordeychik2026ups,
+  author = {Gordeychik, Sergey},
+  title  = {UPS Meets Patch Queues: Evidence-Timeline Prioritization under Limited Capacity, Cadence, and Compliance Gravity},
+  institution = {SSRN}, year = {2026}, number = {Working Paper 6286359},
+  note   = {Posted 14 Apr 2026; data/code: github.com/scadastrangelove/kev\_vs\_epss}
+}
+
+% ---------- Strategic theory, attribution, information design ----------
+@article{kamenica2011bayesian,
+  author = {Kamenica, Emir and Gentzkow, Matthew},
+  title  = {Bayesian Persuasion}, journal = {American Economic Review},
+  volume = {101}, number = {6}, pages = {2590--2615}, year = {2011},
+  doi = {10.1257/aer.101.6.2590}
+}
+@article{maschmeyer2021trilemma,
+  author = {Maschmeyer, Lennart},
+  title  = {The Subversive Trilemma: Why Cyber Operations Fall Short of Expectations},
+  journal = {International Security}, volume = {46}, number = {2}, pages = {51--90}, year = {2021}
+}
+@article{rid2015attributing,
+  author = {Rid, Thomas and Buchanan, Ben},
+  title  = {Attributing Cyber Attacks}, journal = {Journal of Strategic Studies},
+  volume = {38}, number = {1-2}, pages = {4--37}, year = {2015},
+  doi = {10.1080/01402390.2014.977382}
+}
+@article{borghard2023denial,
+  author = {Borghard, Erica D. and Lonergan, Shawn W.},
+  title  = {Deterrence by Denial in Cyberspace}, journal = {Journal of Strategic Studies},
+  volume = {46}, number = {3}, pages = {534--569}, year = {2023},
+  doi = {10.1080/01402390.2021.1944856}
+}
+
+% ---------- Model-layer neighbors (context manipulation, judges) ----------
+@techreport{durmus2024persuasiveness,
+  author = {Durmus, Esin and Lovitt, Liane and Tamkin, Alex and Ritchie, Stuart and Clark, Jared and Ganguli, Deep},
+  title  = {Measuring the Persuasiveness of Language Models}, institution = {Anthropic}, year = {2024}
+}
+@article{sharma2023sycophancy,
+  author = {Sharma, Mrinank and Tong, Meg and Korbak, Tomasz and Duvenaud, David and others},
+  title  = {Towards Understanding Sycophancy in Language Models}, journal = {arXiv preprint}, year = {2023},
+  eprint = {2310.13548}, archivePrefix = {arXiv}
+}
+@article{perez2022mwe,
+  author = {Perez, Ethan and others},
+  title  = {Discovering Language Model Behaviors with Model-Written Evaluations},
+  journal = {arXiv preprint}, year = {2022}, eprint = {2212.09251}, archivePrefix = {arXiv}
+}
+@inproceedings{xie2024knowledgeconflict,
+  author = {Xie, Jian and Zhang, Kai and Chen, Jiangjie and Lou, Renze and Su, Yu},
+  title  = {Adaptive Chameleon or Stubborn Sloth: Revealing the Behavior of Large Language Models in Knowledge Conflicts},
+  booktitle = {ICLR}, year = {2024}, note = {arXiv:2305.13300}
+}
+@inproceedings{xu2024knowledgeconflicts,
+  author = {Xu, Rongwu and others},
+  title  = {Knowledge Conflicts for LLMs: A Survey}, booktitle = {EMNLP}, year = {2024}
+}
+@inproceedings{shi2023distracted,
+  author = {Shi, Freda and Chen, Xinyun and Misra, Kanishka and Scales, Nathan and Dohan, David and Chi, Ed H. and Sch{\"a}rli, Nathanael and Zhou, Denny},
+  title  = {Large Language Models Can Be Easily Distracted by Irrelevant Context},
+  booktitle = {ICML}, year = {2023}, note = {PMLR 202:31210--31227; arXiv:2302.00093}
+}
+@inproceedings{greshake2023injection,
+  author = {Greshake, Kai and Abdelnabi, Sahar and Mishra, Shailesh and Endres, Christoph and Holz, Thorsten and Fritz, Mario},
+  title  = {Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection},
+  booktitle = {AISec '23}, year = {2023}, note = {arXiv:2302.12173}
+}
+@inproceedings{zou2025poisonedrag,
+  author = {Zou, Wei and Geng, Runpeng and Wang, Binghui and Jia, Jinyuan},
+  title  = {PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models},
+  booktitle = {USENIX Security}, year = {2025}, note = {arXiv:2402.07867}
+}
+@article{chen2024blackboxopinion,
+  author = {Chen, Zhuo and Liu, Jiawei and Liu, Haotan and Cheng, Qikai and Zhang, Fan and Lu, Wei and Liu, Xiaozhong},
+  title  = {Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models},
+  journal = {arXiv preprint}, year = {2024}, eprint = {2407.13757}, archivePrefix = {arXiv},
+  note = {Extended as FlippedRAG, ACM CCS 2025}
+}
+@inproceedings{gong2025topicfliprag,
+  author = {Gong, Yuyang and Chen, Zhuo and Liu, Jiawei and Chen, Miaokun and Yu, Fengchang and Lu, Wei and Wang, Xiaofeng and Liu, Xiaozhong},
+  title  = {Topic-FlipRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks to Retrieval-Augmented Generation Models},
+  booktitle = {USENIX Security}, year = {2025}, note = {arXiv:2502.01386}
+}
+@inproceedings{raina2024judgerobust,
+  author = {Raina, Vyas and Liusie, Adian and Gales, Mark},
+  title  = {Is LLM-as-a-Judge Robust? Investigating Universal Adversarial Attacks on Zero-shot LLM Assessment},
+  booktitle = {EMNLP}, year = {2024}, pages = {7499--7517}, note = {arXiv:2402.14016}
+}
+@article{gu2024judgesurvey,
+  author = {Gu, Jiawei and Jiang, Xuhui and others},
+  title  = {A Survey on LLM-as-a-Judge}, journal = {arXiv preprint}, year = {2024},
+  eprint = {2411.15594}, archivePrefix = {arXiv}
+}
+@article{sun2026persuaded,
+  author = {Sun, Xiangkun and Kong, Lingkai and Zhang, Aoqi and Zeng, Liang and Wang, Tonghan},
+  title  = {How LLMs Are Persuaded: A Few Attention Heads, Rerouted},
+  journal = {arXiv preprint}, year = {2026}, eprint = {2605.09314}, archivePrefix = {arXiv}
+}
+@article{zhou2026medmisbench,
+  author = {Zhou, Hongjian and Zou, Xinyu and Wu, Jinge and others},
+  title  = {MedMisBench: Measuring Epistemic Resilience of LLMs Under Misleading Medical Context},
+  journal = {arXiv preprint}, year = {2026}, eprint = {2606.12291}, archivePrefix = {arXiv}
+}
+
+% ---------- Weights-layer poisoning (persistence neighbor) ----------
+@article{hubinger2024sleeper,
+  author = {Hubinger, Evan and Denison, Carson and Mu, Jesse and others},
+  title  = {Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training},
+  journal = {arXiv preprint}, year = {2024}, eprint = {2401.05566}, archivePrefix = {arXiv},
+  note = {Anthropic}
+}
+@inproceedings{zhang2024persistentpoison,
+  author = {Zhang, Yiming and Rando, Javier and Evtimov, Ivan and Chi, Jianfeng and Smith, Eric Michael and Carlini, Nicholas and Tram{\`e}r, Florian and Ippolito, Daphne},
+  title  = {Persistent Pre-Training Poisoning of LLMs}, booktitle = {ICLR}, year = {2025}, note = {arXiv:2410.13722}
+}
+@article{pulipaka2026memory,
+  author = {Pulipaka, Sidharth and Hlebik, Stanislau and Raghav, Leonidas and Abdelnabi, Sahar and Raina, Vyas and Sheth, Ivaxi and Fritz, Mario},
+  title  = {Hidden in Memory: Sleeper Memory Poisoning in LLM Agents},
+  journal = {arXiv preprint}, year = {2026}, eprint = {2605.15338}, archivePrefix = {arXiv}
+}
+
+% ---------- Sycophancy, persuasion, agent security ----------
+@inproceedings{wang2025truthoverridden,
+  author = {Wang, Keyu and Li, Jin and Yang, Shu and Zhang, Zhuoran and Wang, Di},
+  title  = {When Truth Is Overridden: Uncovering the Internal Origins of Sycophancy in Large Language Models},
+  booktitle = {AAAI}, year = {2026}, note = {arXiv:2508.02087}
+}
+@inproceedings{fanous2025syceval,
+  author = {Fanous, Aaron and Goldberg, Jacob and Agarwal, Ank A. and Lin, Joanna and Zhou, Anson and Daneshjou, Roxana and Koyejo, Sanmi},
+  title  = {SycEval: Evaluating LLM Sycophancy}, booktitle = {AIES}, year = {2025}, note = {arXiv:2502.08177}
+}
+@inproceedings{hong2025multiturnsyco,
+  author = {Hong, Jiseung and Byun, Grace and Kim, Seungone and Shu, Kai and Choi, Jinho D.},
+  title  = {Measuring Sycophancy of Language Models in Multi-turn Dialogues},
+  booktitle = {Findings of EMNLP}, year = {2025}, pages = {2239--2259}, note = {arXiv:2505.23840}
+}
+@article{salvi2024persuasiveness,
+  author = {Salvi, Francesco and Horta Ribeiro, Manoel and Gallotti, Riccardo and West, Robert},
+  title  = {On the Conversational Persuasiveness of Large Language Models: A Randomized Controlled Trial},
+  journal = {Nature Human Behaviour}, year = {2025}, note = {arXiv:2403.14380},
+  doi = {10.1038/s41562-025-02194-6}
+}
+@article{costello2024conspiracy,
+  author = {Costello, Thomas H. and Pennycook, Gordon and Rand, David G.},
+  title  = {Durably Reducing Conspiracy Beliefs through Dialogues with AI},
+  journal = {Science}, volume = {385}, number = {6714}, pages = {eadq1814}, year = {2024},
+  doi = {10.1126/science.adq1814}
+}
+@inproceedings{motwani2024collusion,
+  author = {Motwani, Sumeet Ramesh and Baranchuk, Mikhail and Strohmeier, Martin and Bolina, Vijay and Torr, Philip H. S. and Hammond, Lewis and Schroeder de Witt, Christian},
+  title  = {Secret Collusion among AI Agents: Multi-Agent Deception via Steganography},
+  booktitle = {NeurIPS}, year = {2024}, note = {arXiv:2402.07510}
+}
+@inproceedings{debenedetti2024agentdojo,
+  author = {Debenedetti, Edoardo and Zhang, Jie and Balunovi{\'c}, Mislav and Beurer-Kellner, Luca and Fischer, Marc and Tram{\`e}r, Florian},
+  title  = {AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents},
+  booktitle = {NeurIPS Datasets and Benchmarks}, year = {2024}, note = {arXiv:2406.13352}
+}
+
+% ---------- Transferability & malware-keying tradecraft ----------
+@article{tramer2017transferable,
+  author = {Tram{\`e}r, Florian and Papernot, Nicolas and Goodfellow, Ian and Boneh, Dan and McDaniel, Patrick},
+  title  = {The Space of Transferable Adversarial Examples}, journal = {arXiv preprint}, year = {2017},
+  eprint = {1704.03453}, archivePrefix = {arXiv}
+}
+@inproceedings{demontis2019transfer,
+  author = {Demontis, Ambra and Melis, Marco and Pintor, Maura and Jagielski, Matthew and Biggio, Battista and Oprea, Alina and Nita-Rotaru, Cristina and Roli, Fabio},
+  title  = {Why Do Adversarial Attacks Transfer? Explaining Transferability of Evasion and Poisoning Attacks},
+  booktitle = {USENIX Security}, year = {2019}, pages = {321--338}, note = {arXiv:1809.02861}
+}
+@inproceedings{ilyas2019features,
+  author = {Ilyas, Andrew and Santurkar, Shibani and Tsipras, Dimitris and Engstrom, Logan and Tran, Brandon and Madry, Aleksander},
+  title  = {Adversarial Examples Are Not Bugs, They Are Features}, booktitle = {NeurIPS}, year = {2019}, note = {arXiv:1905.02175}
+}
+@techreport{falliere2011stuxnet,
+  author = {Falliere, Nicolas and {\'O} Murch{\'u}, Liam and Chien, Eric},
+  title  = {W32.Stuxnet Dossier}, institution = {Symantec Security Response}, year = {2011}, note = {Version 1.4}
+}
+@techreport{kaspersky2012gauss,
+  author = {{Kaspersky Lab GReAT}},
+  title  = {Gauss: Abnormal Distribution}, institution = {Kaspersky Lab / Securelist}, year = {2012}
+}
+
+% ---------- Wire-layer (AI-assisted discovery; exploit prediction) ----------
+@article{jacobs2021epss,
+  author = {Jacobs, Jay and Romanosky, Sasha and Edwards, Benjamin and Roytman, Michael and Adjerid, Idris},
+  title  = {Exploit Prediction Scoring System (EPSS)}, journal = {Digital Threats: Research and Practice},
+  volume = {2}, number = {3}, pages = {1--17}, year = {2021}, doi = {10.1145/3436242}, note = {arXiv:1908.04856}
+}
+@misc{bigsleep2024,
+  author = {{Big Sleep team (Google Project Zero and Google DeepMind)}},
+  title  = {From Naptime to Big Sleep: Using Large Language Models To Catch Vulnerabilities In Real-World Code},
+  year   = {2024}, howpublished = {Google Project Zero blog},
+  note   = {googleprojectzero.blogspot.com/2024/10/from-naptime-to-big-sleep.html}
+}
+@misc{darpa2025aixcc,
+  author = {{DARPA}}, title = {AI Cyber Challenge (AIxCC)}, year = {2025},
+  howpublished = {Final competition, DEF CON 33}, note = {darpa.mil/research/programs/ai-cyber}
+}
+
+% ---------- Security dilemma, unawareness, costly assurance ----------
+% Resolved via each DOI / publisher landing page.
+@article{jervis1978,
+  author    = {Jervis, Robert},
+  title     = {Cooperation under the Security Dilemma},
+  journal   = {World Politics}, year = {1978}, volume = {30}, number = {2},
+  pages     = {167--214}, month = jan,
+  doi       = {10.2307/2009958}, url = {https://doi.org/10.2307/2009958},
+  publisher = {Cambridge University Press}
+}
+@book{buchanan2017,
+  author    = {Buchanan, Ben},
+  title     = {The Cybersecurity Dilemma: Hacking, Trust and Fear Between Nations},
+  publisher = {Oxford University Press}, address = {New York}, year = {2017},
+  isbn      = {9780190665012}, doi = {10.1093/acprof:oso/9780190665012.001.0001},
+  url       = {https://doi.org/10.1093/acprof:oso/9780190665012.001.0001},
+  note      = {Standalone monograph, distinct from Rid \& Buchanan (2015). UK ed.: London: Hurst, ISBN 9781849047135}
+}
+@article{unawareness,
+  author  = {Halpern, Joseph Y. and R{\^e}go, Leandro C.},
+  title   = {Extensive games with possibly unaware players},
+  journal = {Mathematical Social Sciences}, volume = {70}, pages = {42--58}, year = {2014},
+  doi     = {10.1016/j.mathsocsci.2012.11.002},
+  note    = {Earlier version: AAMAS 2006, pp. 744--751. cf. Heifetz, Meier \& Schipper, ``Interactive unawareness'' (J. Econ. Theory 2006, doi:10.1016/j.jet.2005.02.007) and ``Dynamic unawareness and rationalizable behavior'' (Games Econ. Behav. 2013, doi:10.1016/j.geb.2013.04.003)}
+}
+@article{auditAssurance,
+  author  = {Townsend, Robert M.},
+  title   = {Optimal Contracts and Competitive Markets with Costly State Verification},
+  journal = {Journal of Economic Theory}, year = {1979}, volume = {21}, number = {2}, pages = {265--293},
+  doi     = {10.1016/0022-0531(79)90031-0},
+  note    = {cf. Gale \& Hellwig, ``Incentive-Compatible Debt Contracts'' (Rev. Econ. Stud. 1985, doi:10.2307/2297737)}
+}
+
+% ---------- Operational grounding anchors (Appendix E.8) ----------
+% Landing URLs preferred over rot-prone deep PDFs.
+@online{cisaKev,
+  author       = {{Cybersecurity and Infrastructure Security Agency (CISA)}},
+  title        = {Known Exploited Vulnerabilities Catalog},
+  year         = {2026}, organization = {U.S. Department of Homeland Security},
+  howpublished = {\url{https://www.cisa.gov/known-exploited-vulnerabilities-catalog}},
+  note         = {Continuously updated catalog. Accessed 2026-07-03}
+}
+@online{cisaBod2201,
+  author       = {{Cybersecurity and Infrastructure Security Agency}},
+  title        = {Binding Operational Directive 22-01: Reducing the Significant Risk of Known Exploited Vulnerabilities},
+  institution  = {U.S. Department of Homeland Security}, year = {2021}, month = nov, day = {3},
+  howpublished = {\url{https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities-revoked}},
+  url          = {https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities-revoked},
+  note         = {Issued 2021-11-03. Accessed 2026-07-03; revoked and superseded by BOD 26-04 (2026-06-10). Cited as directive-as-issued}
+}
+@techreport{nistSp80061r3,
+  author      = {Nelson, Alex and Rekhi, Sanjay and Souppaya, Murugiah and Scarfone, Karen},
+  title       = {Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A {CSF} 2.0 Community Profile},
+  institution = {National Institute of Standards and Technology}, type = {NIST Special Publication},
+  number      = {800-61r3}, address = {Gaithersburg, MD}, year = {2025}, month = apr,
+  doi         = {10.6028/NIST.SP.800-61r3}, url = {https://doi.org/10.6028/NIST.SP.800-61r3},
+  note        = {Final; supersedes SP 800-61 Rev. 2}
+}
+@techreport{nistSp80061r2,
+  author      = {Cichonski, Paul and Millar, Tom and Grance, Tim and Scarfone, Karen},
+  title       = {Computer Security Incident Handling Guide},
+  institution = {National Institute of Standards and Technology}, type = {NIST Special Publication},
+  number      = {800-61 Revision 2}, year = {2012}, month = aug, address = {Gaithersburg, MD},
+  doi         = {10.6028/NIST.SP.800-61r2}, url = {https://csrc.nist.gov/pubs/sp/800/61/r2/final},
+  note        = {Withdrawn 2025-04-03, superseded by SP 800-61 Rev. 3}
+}
+@techreport{verizonDbir,
+  author      = {{Verizon}}, title = {2026 Data Breach Investigations Report (DBIR)},
+  institution = {Verizon Business}, year = {2026}, type = {Data Breach Investigations Report}, month = may,
+  url         = {https://www.verizon.com/business/resources/reports/dbir/},
+  note        = {19th annual edition. Accessed 2026-07-03}
+}
+@techreport{mandiantMtrends,
+  author      = {{Mandiant (Google Cloud)}},
+  title       = {M-Trends 2026: Data, Insights, and Strategies From the Frontlines},
+  institution = {Mandiant, Google Cloud}, year = {2026}, type = {Annual Threat Report}, month = mar,
+  url         = {https://cloud.google.com/security/resources/m-trends}, note = {Accessed 2026-07-03}
+}

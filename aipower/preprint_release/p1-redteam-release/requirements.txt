@@ -1,0 +1,3 @@
+# Only the standard library is required to run the experiments (urllib, json, re, argparse).
+# Optional: matplotlib — for the frontier figure in p1_openrouter.py (skipped gracefully if absent).
+matplotlib>=3.5 ; extra == "figures"

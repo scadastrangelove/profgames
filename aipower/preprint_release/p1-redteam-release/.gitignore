@@ -1,0 +1,9 @@
+# Never commit API keys
+.orkey
+*.key
+.env
+# Python
+__pycache__/
+*.pyc
+# Generated outputs (regenerate by running code/)
+*.png

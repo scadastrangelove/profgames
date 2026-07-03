@@ -17,6 +17,16 @@ Site URL after GitHub Pages deploy:
 | [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.13 storygraph line. |
 | [`ai_power_storygraph_v0_13_en.json`](ai_power_storygraph_v0_13_en.json) | Machine-readable English storygraph used by the atlas. |
 | [`ai_power_storygraph_v0_13_ru.json`](ai_power_storygraph_v0_13_ru.json) | Russian v0.13 master storygraph with facts, claims, edges, sources and graph diagnostics. |
+| [`preprint_release/`](preprint_release/) | Publication-ready preprint package with HTML, PDF, Markdown source, figures, bibliography and the P1 red-team evidence bundle. |
+
+## Preprint
+
+The preprint release is published alongside the atlas:
+
+- [`preprint_release/preprint.html`](preprint_release/preprint.html) — browser-readable self-contained version;
+- [`preprint_release/preprint.pdf`](preprint_release/preprint.pdf) — paginated PDF;
+- [`preprint_release/preprint.md`](preprint_release/preprint.md) — Markdown source;
+- [`preprint_release/p1-redteam-release/`](preprint_release/p1-redteam-release/) — reproducibility bundle for the P1 red-team experiments.
 
 ## Current Counts
 

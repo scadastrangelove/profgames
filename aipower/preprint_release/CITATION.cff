@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Machine-Speed Cyber and Poisoned Cognition: A Layer-Dependent Game-Theoretic Framework, with Empirical Probes"
+abstract: >-
+  A framework paper with first-pass empirical probes arguing that AI-mediated conflict is a
+  layered strategic environment (wire / model-weights / audit / attribution), formalized with
+  five compact model results and seven falsifiable predictions, with wire-layer clustering and
+  model-layer capture-bound probes grounded on open data.
+type: report
+authors:
+  - family-names: Gordeychik
+    given-names: Sergey
+    affiliation: "CyberOK Research"
+    email: gordey@cyberok.ru
+date-released: "2026-07-03"
+license: CC-BY-4.0
+keywords:
+  - AI security
+  - game theory
+  - vulnerability management
+  - LLM manipulation
+  - cyber conflict
