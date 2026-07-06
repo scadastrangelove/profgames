@@ -1,0 +1,8 @@
+victim_family,flip_mean,flip_peak,n_origins
+anthropic,0.0,0.0,6
+anthropic_sonnet,0.061,0.125,6
+openai,0.159,0.243,6
+qwen,0.069,0.094,6
+deepseek,0.209,0.289,6
+mistral,0.39,0.588,6
+llama_weak,0.153,0.203,6

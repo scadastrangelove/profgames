@@ -1,0 +1,20 @@
+{
+  "records": 12,
+  "victims": [
+    "anthropic",
+    "deepseek",
+    "mistral",
+    "openai"
+  ],
+  "defenses": [
+    "cooling_off",
+    "none",
+    "token_policy"
+  ],
+  "disclosure_no_defense": 0.938,
+  "forgery_no_defense": 0.208,
+  "disclosure_with_token_policy": 0.438,
+  "forgery_with_token_policy": 0.0,
+  "disclosure_with_cooling_off": 0.583,
+  "forgery_with_cooling_off": 0.083
+}

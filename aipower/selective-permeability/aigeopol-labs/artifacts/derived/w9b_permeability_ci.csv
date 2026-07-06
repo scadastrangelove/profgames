@@ -1,0 +1,13 @@
+vehicle,defense,selective_permeability,ci95_lo,ci95_hi,n_clusters
+memory,cooling_off,0.274,0.131,0.429,21
+memory,memory_quarantine,0.095,0.012,0.214,21
+memory,none,0.179,0.048,0.321,21
+memory,provenance_bound,0.524,0.345,0.702,21
+rag,cooling_off,0.655,0.476,0.833,21
+rag,memory_quarantine,0.429,0.262,0.607,21
+rag,none,0.619,0.429,0.798,21
+rag,provenance_bound,0.69,0.5,0.869,21
+wiki,cooling_off,0.012,-0.024,0.048,21
+wiki,memory_quarantine,0.012,-0.036,0.071,21
+wiki,none,0.0,0.0,0.0,21
+wiki,provenance_bound,0.012,0.0,0.036,21

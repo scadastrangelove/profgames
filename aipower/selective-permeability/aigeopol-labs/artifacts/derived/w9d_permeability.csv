@@ -1,0 +1,5 @@
+vehicle,defense,durable_update,durable_leak,selective_permeability
+wiki,cooling_off,0.393,0.155,0.238
+wiki,memory_quarantine,0.25,0.155,0.095
+wiki,none,0.333,0.179,0.154
+wiki,provenance_bound,0.31,0.167,0.143

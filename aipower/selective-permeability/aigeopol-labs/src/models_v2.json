@@ -1,0 +1,25 @@
+{
+  "_comment": "v2: 3 auditor families (google never a victim -> always independent). run_labs_gated excludes any auditor whose family == victim family, so no model audits itself. See METHOD_CRITIQUE_AND_V2 C7/V5.",
+  "victims": [
+    {"id": "anthropic/claude-opus-4.8", "family": "anthropic", "enabled": true},
+    {"id": "anthropic/claude-sonnet-4.6", "family": "anthropic_sonnet", "enabled": true},
+    {"id": "openai/gpt-5.5", "family": "openai", "enabled": true},
+    {"id": "qwen/qwen3.7-max", "family": "qwen", "enabled": true},
+    {"id": "deepseek/deepseek-v4-pro", "family": "deepseek", "enabled": true},
+    {"id": "mistralai/mistral-large-2512", "family": "mistral", "enabled": true}
+  ],
+  "auditors": [
+    {"id": "google/gemini-2.5-pro", "family": "google", "role": "content", "enabled": true},
+    {"id": "google/gemini-2.5-pro", "family": "google", "role": "relevance", "enabled": true},
+    {"id": "google/gemini-2.5-pro", "family": "google", "role": "provenance", "enabled": true},
+    {"id": "google/gemini-2.5-pro", "family": "google", "role": "independence", "enabled": true},
+    {"id": "anthropic/claude-opus-4.8", "family": "anthropic", "role": "content", "enabled": true},
+    {"id": "anthropic/claude-opus-4.8", "family": "anthropic", "role": "relevance", "enabled": true},
+    {"id": "anthropic/claude-opus-4.8", "family": "anthropic", "role": "provenance", "enabled": true},
+    {"id": "anthropic/claude-opus-4.8", "family": "anthropic", "role": "independence", "enabled": true},
+    {"id": "openai/gpt-5.5", "family": "openai", "role": "content", "enabled": true},
+    {"id": "openai/gpt-5.5", "family": "openai", "role": "relevance", "enabled": true},
+    {"id": "openai/gpt-5.5", "family": "openai", "role": "provenance", "enabled": true},
+    {"id": "openai/gpt-5.5", "family": "openai", "role": "independence", "enabled": true}
+  ]
+}

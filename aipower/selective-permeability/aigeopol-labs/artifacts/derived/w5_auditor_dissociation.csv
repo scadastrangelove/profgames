@@ -1,0 +1,4 @@
+relevance_label,mean_content,mean_relevance,mean_provenance,mean_independence
+false,0.979,0.98,0.999,0.904
+irrelevant,0.314,0.978,0.7,0.716
+relevant,0.381,0.2,0.003,0.499

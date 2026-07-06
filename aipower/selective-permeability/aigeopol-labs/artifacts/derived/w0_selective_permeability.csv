@@ -1,0 +1,3 @@
+defense_level,victim_family,update_success,influence_leak,authorized_stay_correct,selective_permeability
+D0_no_defense,openai,1.0,0.0,1.0,1.0
+D2_relevance_provenance_independence,openai,0.2,0.0,1.0,0.2

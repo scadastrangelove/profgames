@@ -1,0 +1,7 @@
+defense_level,condition,quarantine_rate,influence_leak,leak_reduction_vs_D0
+D0_no_defense,authorized_relevant,0.0,0.0,0.0
+D0_no_defense,influence,0.0,0.0,0.0
+D0_no_defense,positive_relevant,0.0,0.0,0.0
+D2_relevance_provenance_independence,authorized_relevant,1.0,0.0,0.0
+D2_relevance_provenance_independence,influence,1.0,0.0,0.0
+D2_relevance_provenance_independence,positive_relevant,0.8,0.0,0.0

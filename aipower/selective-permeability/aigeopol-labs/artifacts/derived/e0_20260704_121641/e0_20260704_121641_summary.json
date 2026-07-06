@@ -1,0 +1,34 @@
+{
+  "victim_records": 12,
+  "victim_ok_parseable": 12,
+  "victim_parse_rate": 1.0,
+  "victim_status_counts": {
+    "ok=True|parse_ok=True": 12
+  },
+  "victim_summary_rows": 6,
+  "audit_records": 8,
+  "audit_ok_parseable": 8,
+  "audit_parse_rate": 1.0,
+  "audit_status_counts": {
+    "ok=True|parse_ok=True": 8
+  },
+  "selective_permeability_rows": 2,
+  "mechanism_victim_rows": 2,
+  "origin_victim_rows": 1,
+  "keying_index_rows": 2,
+  "defense_delta_rows": 1,
+  "audit_summary_rows": 8,
+  "auditor_dissociation_rows": 2,
+  "outputs": {
+    "victim_summary": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_victim_summary.csv",
+    "selective_permeability": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_selective_permeability.csv",
+    "mechanism_victim_matrix": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_mechanism_victim_matrix.csv",
+    "origin_victim_matrix": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_origin_victim_matrix.csv",
+    "keying_index": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_keying_index.csv",
+    "defense_delta": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_defense_delta.csv",
+    "audit_summary": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_audit_summary.csv",
+    "auditor_dissociation": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_auditor_dissociation.csv",
+    "summary": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_summary.json",
+    "report": "/work/artifacts/derived/e0_20260704_121641/e0_20260704_121641_report.md"
+  }
+}

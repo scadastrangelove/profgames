@@ -1,0 +1,14 @@
+.env
+.env.*
+.secrets
+artifacts
+__pycache__
+*.pyc
+*.pyo
+*.log
+*.jsonl.tmp
+raw
+derived
+*.key
+*.pem
+*.orkey

@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Selective Permeability: A Behavioral-Security Metric for LLM Advisors, with Two Failure Modes of In-Context Provenance Workflows"
+abstract: >-
+  A behavioral-security study of seven frontier / near-frontier LLM advisors that measures a two-sided
+  "selective permeability" (update-on-authorized minus leak-on-illegitimate) and re-operationalizes
+  experimental-psychology procedures as adversarial assays. Crude social pressure, forged tokens and
+  factual opinion-flip crack only weaker-aligned models; subtle credential attacks (a benign token
+  request; handing over the real authorization lever when it is labeled "routine") crack even the
+  frontier. A label-vs-referent dissociation (W7d) shows refusal posture tracks the secrecy label, not the
+  token's actual authority. Two under-tested failure modes of in-context bearer-token provenance workflows
+  are identified: credential disclosure/forgery and summarization-induced source amnesia.
+type: report
+authors:
+  - family-names: Gordeychik
+    given-names: Sergey
+    affiliation: "CyberOK Research"
+    email: gordey@cyberok.ru
+date-released: "2026-07-06"
+license: CC-BY-4.0
+keywords:
+  - AI security
+  - LLM agents
+  - prompt injection
+  - provenance
+  - social engineering
+  - behavioral security
+  - selective permeability
+references:
+  - type: report
+    title: "Machine-Speed Cyber and Poisoned Cognition: A Layer-Dependent Game-Theoretic Framework, with Empirical Probes"
+    authors:
+      - family-names: Gordeychik
+        given-names: Sergey
+    year: 2026
+    doi: 10.24108/preprints-3115766

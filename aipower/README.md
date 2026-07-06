@@ -17,16 +17,24 @@ Site URL after GitHub Pages deploy:
 | [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.13 storygraph line. |
 | [`ai_power_storygraph_v0_13_en.json`](ai_power_storygraph_v0_13_en.json) | Machine-readable English storygraph used by the atlas. |
 | [`ai_power_storygraph_v0_13_ru.json`](ai_power_storygraph_v0_13_ru.json) | Russian v0.13 master storygraph with facts, claims, edges, sources and graph diagnostics. |
-| [`preprint_release/`](preprint_release/) | Publication-ready preprint package with HTML, PDF, Markdown source, figures, bibliography and the P1 red-team evidence bundle. |
+| [`preprint_release/`](preprint_release/) | **Machine-Speed Cyber and Poisoned Cognition: A Layer-Dependent Game-Theoretic Framework, with Empirical Probes** — HTML, PDF, Markdown source, figures, bibliography and the P1 red-team evidence bundle. |
+| [`selective-permeability/`](selective-permeability/) | **Selective Permeability: A Behavioral-Security Metric for LLM Advisors, with Two Failure Modes of In-Context Provenance Workflows** — preprint (HTML/PDF/Markdown), figures F1–F9 (F9 = model × attack panorama), reproducible harness, and EN/RU write-ups. |
 
-## Preprint
+## Preprints
 
-The preprint release is published alongside the atlas:
+Two preprints are published alongside the atlas:
 
+**P1 — *Machine-Speed Cyber and Poisoned Cognition*** (framework + probes):
 - [`preprint_release/preprint.html`](preprint_release/preprint.html) — browser-readable self-contained version;
 - [`preprint_release/preprint.pdf`](preprint_release/preprint.pdf) — paginated PDF;
 - [`preprint_release/preprint.md`](preprint_release/preprint.md) — Markdown source;
 - [`preprint_release/p1-redteam-release/`](preprint_release/p1-redteam-release/) — reproducibility bundle for the P1 red-team experiments.
+
+**P2 — *Selective Permeability*** (behavioral-security metric + credential/provenance attacks):
+- [`selective-permeability/preprint.md`](selective-permeability/preprint.md) — the preprint;
+- [`selective-permeability/figures/F9_susceptibility_matrix.png`](selective-permeability/figures/F9_susceptibility_matrix.png) — the model × attack panorama;
+- [`selective-permeability/blog/`](selective-permeability/blog/) — plain-language EN/RU write-ups;
+- [`selective-permeability/aigeopol-labs/`](selective-permeability/aigeopol-labs/) — reproducible harness + data.
 
 ## Current Counts
 

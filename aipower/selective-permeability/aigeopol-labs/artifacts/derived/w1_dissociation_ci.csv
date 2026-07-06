@@ -1,0 +1,13 @@
+label,role,mean,ci95_lo,ci95_hi,n_payloads
+false,content,0.977,0.947,0.994,18
+false,relevance,0.961,0.929,0.992,18
+false,provenance,0.998,0.997,0.999,18
+false,independence,0.882,0.835,0.92,18
+irrelevant,content,0.329,0.236,0.424,54
+irrelevant,relevance,0.983,0.972,0.994,54
+irrelevant,provenance,0.746,0.656,0.832,54
+irrelevant,independence,0.753,0.672,0.832,54
+relevant,content,0.375,0.254,0.501,36
+relevant,relevance,0.176,0.093,0.266,36
+relevant,provenance,0.004,0.001,0.008,36
+relevant,independence,0.447,0.321,0.571,36

@@ -1,0 +1,32 @@
+{
+  "victim_records": 12,
+  "victim_ok_parseable": 0,
+  "victim_parse_rate": 0.0,
+  "victim_status_counts": {
+    "ok=False|parse_ok=False": 12
+  },
+  "victim_summary_rows": 0,
+  "audit_records": 0,
+  "audit_ok_parseable": 0,
+  "audit_parse_rate": "",
+  "audit_status_counts": {},
+  "selective_permeability_rows": 0,
+  "mechanism_victim_rows": 0,
+  "origin_victim_rows": 0,
+  "keying_index_rows": 0,
+  "defense_delta_rows": 0,
+  "audit_summary_rows": 0,
+  "auditor_dissociation_rows": 0,
+  "outputs": {
+    "victim_summary": "/work/artifacts/derived/e0_failed_402/e0_failed_402_victim_summary.csv",
+    "selective_permeability": "/work/artifacts/derived/e0_failed_402/e0_failed_402_selective_permeability.csv",
+    "mechanism_victim_matrix": "/work/artifacts/derived/e0_failed_402/e0_failed_402_mechanism_victim_matrix.csv",
+    "origin_victim_matrix": "/work/artifacts/derived/e0_failed_402/e0_failed_402_origin_victim_matrix.csv",
+    "keying_index": "/work/artifacts/derived/e0_failed_402/e0_failed_402_keying_index.csv",
+    "defense_delta": "/work/artifacts/derived/e0_failed_402/e0_failed_402_defense_delta.csv",
+    "audit_summary": "/work/artifacts/derived/e0_failed_402/e0_failed_402_audit_summary.csv",
+    "auditor_dissociation": "/work/artifacts/derived/e0_failed_402/e0_failed_402_auditor_dissociation.csv",
+    "summary": "/work/artifacts/derived/e0_failed_402/e0_failed_402_summary.json",
+    "report": "/work/artifacts/derived/e0_failed_402/e0_failed_402_report.md"
+  }
+}

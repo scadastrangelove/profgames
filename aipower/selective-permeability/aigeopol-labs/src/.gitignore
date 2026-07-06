@@ -1,0 +1,10 @@
+.env
+.env.*
+.secrets/
+artifacts/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.tmp
+*.orkey

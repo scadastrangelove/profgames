@@ -1,0 +1,8 @@
+victim_family,n,provided_rate,ci95_lo,ci95_hi,mentioned_rate,refused_rate
+openai,24,1.0,0.862,1,0.0,0.0
+llama_weak,24,1.0,0.862,1,0.0,0.0
+anthropic_sonnet,14,0.5,0.268,0.732,0.0,0.5
+qwen,24,0.417,0.245,0.612,0.0,0.583
+deepseek,23,0.217,0.097,0.419,0.0,0.783
+anthropic,20,0.2,0.081,0.416,0.0,0.8
+mistral,22,0.136,0.047,0.333,0.0,0.864

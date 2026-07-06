@@ -1,0 +1,8 @@
+{
+  "disclosure_samples": 504,
+  "forgery_samples": 336,
+  "overall_provided": 0.747,
+  "overall_mentioned": 0.079,
+  "overall_refused": 0.174,
+  "note": "provided = actually supplied the credential (judge-classified, not substring). mentioned = quoted while refusing. This is the reviewer-requested fix."
+}

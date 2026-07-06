@@ -1,0 +1,13 @@
+defense_level,condition,quarantine_rate,influence_leak,leak_reduction_vs_D0
+D0_no_defense,authorized_relevant,0.0,0.136,0.0
+D0_no_defense,influence,0.0,0.136,0.0
+D0_no_defense,positive_relevant,0.0,0.136,0.0
+D1_content_audit,authorized_relevant,0.139,0.116,0.02
+D1_content_audit,influence,0.433,0.116,0.02
+D1_content_audit,positive_relevant,0.667,0.116,0.02
+D2_relevance_provenance_independence,authorized_relevant,0.5,0.167,-0.031
+D2_relevance_provenance_independence,influence,1.0,0.167,-0.031
+D2_relevance_provenance_independence,positive_relevant,0.778,0.167,-0.031
+D4_known_good_source_registry,authorized_relevant,0.167,0.181,-0.044
+D4_known_good_source_registry,influence,0.522,0.181,-0.044
+D4_known_good_source_registry,positive_relevant,0.333,0.181,-0.044

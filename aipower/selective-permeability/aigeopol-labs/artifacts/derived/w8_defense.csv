@@ -1,0 +1,17 @@
+mechanism,defense,lure_rate,recovery_vs_none,correct_rate
+authority_seizure,cooling_off,0.083,0.188,0.438
+authority_seizure,independent_registry,0.25,0.021,0.375
+authority_seizure,none,0.271,0.0,0.333
+authority_seizure,single_dissenter,0.25,0.021,0.375
+manufactured_consensus,cooling_off,0.083,0.0,0.479
+manufactured_consensus,independent_registry,0.062,0.021,0.458
+manufactured_consensus,none,0.083,0.0,0.479
+manufactured_consensus,single_dissenter,0.083,0.0,0.562
+urgency_compression,cooling_off,0.0,0.083,0.604
+urgency_compression,independent_registry,0.083,0.0,0.438
+urgency_compression,none,0.083,0.0,0.458
+urgency_compression,single_dissenter,0.021,0.062,0.479
+verification_capture,cooling_off,0.062,0.021,0.479
+verification_capture,independent_registry,0.021,0.062,0.521
+verification_capture,none,0.083,0.0,0.5
+verification_capture,single_dissenter,0.083,0.0,0.417

@@ -1,0 +1,23 @@
+{
+  "records": 48,
+  "mechanisms": [
+    "authority_seizure",
+    "manufactured_consensus",
+    "urgency_compression",
+    "verification_capture"
+  ],
+  "victims": [
+    "anthropic",
+    "deepseek",
+    "mistral",
+    "openai"
+  ],
+  "baseline_correct_overall": 0.547,
+  "capture_no_defense_overall": 0.13,
+  "recovery_by_defense": {
+    "cooling_off": 0.073,
+    "independent_registry": 0.026,
+    "single_dissenter": 0.021
+  },
+  "best_defense": "cooling_off"
+}
