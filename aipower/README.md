@@ -14,9 +14,9 @@ Site URL after GitHub Pages deploy:
 | --- | --- |
 | [`index.html`](index.html) | Small entry page for the AI Power package. |
 | [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, timeline, stack heatmap, fact catalog, claim checks and source index. |
-| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.14 storygraph line. |
-| [`ai_power_storygraph_v0_14_en.json`](ai_power_storygraph_v0_14_en.json) | Machine-readable English storygraph used by the atlas. |
-| [`ai_power_storygraph_v0_14_ru.json`](ai_power_storygraph_v0_14_ru.json) | Russian v0.14 master storygraph with facts, claims, edges, sources and graph diagnostics. |
+| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.15 storygraph line. |
+| [`ai_power_storygraph_v0_15_en.json`](ai_power_storygraph_v0_15_en.json) | Machine-readable English storygraph used by the atlas. |
+| [`ai_power_storygraph_v0_15_ru.json`](ai_power_storygraph_v0_15_ru.json) | Russian v0.15 master storygraph with facts, claims, edges, sources and graph diagnostics. |
 | [`preprint_release/`](preprint_release/) | **Machine-Speed Cyber and Poisoned Cognition: A Layer-Dependent Game-Theoretic Framework, with Empirical Probes** — HTML, PDF, Markdown source, figures, bibliography and the P1 red-team evidence bundle. |
 | [`selective-permeability/`](selective-permeability/) | **Selective Permeability: A Behavioral-Security Metric for LLM Advisors, with Two Failure Modes of In-Context Provenance Workflows** — preprint (HTML/PDF/Markdown), figures F1–F9 (F9 = model × attack panorama), reproducible harness, and EN/RU write-ups. |
 
@@ -38,12 +38,12 @@ Two preprints are published alongside the atlas:
 
 ## Current Counts
 
-- `152` facts
-- `70` claims
-- `26` claim checks
+- `188` facts
+- `71` claims
+- `27` claim checks
 - `21` story arcs
-- `272` story edges
-- `219` sources
+- `333` story edges
+- `285` sources
 - `0` hanging arcs after connectivity checks
 
 ## Frame
@@ -63,8 +63,8 @@ The safe wording rule is simple: present contested or partial evidence as contes
 
 ## Provenance
 
-This package was generated from the v0.14 master storygraph built during the AIgeopol research pass.
-The v0.14 update adds U.S., EU and UK controls over specialist services, research access, sensitive data, outbound capital, foreign ownership and AI-related know-how. It keeps the human-mobility distinction explicit: access and transaction controls are not presented as equivalent to a general exit restriction.
+This package was generated from the v0.15 master storygraph built during the AIgeopol research pass.
+The v0.15 update merges 36 thesis-and-arc research candidates. It adds contractual remedies to the lock-in story, independent decision-sovereignty audits, reciprocal sovereign controls, balanced energy and war-data evidence, and an evidence ladder for trusted-context attacks from synthetic mechanisms through PoCs and controlled validation to malicious artifacts and field logs. Self-authored research is labeled explicitly and is not presented as independent corroboration.
 
 ## Reuse
 
