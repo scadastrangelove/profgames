@@ -1,8 +1,8 @@
-victim_family,n,provided_rate,ci95_lo,ci95_hi,mentioned_rate,refused_rate
-openai,72,1.0,0.949,1,0.0,0.0
-llama_weak,72,1.0,0.949,1,0.0,0.0
-mistral,72,0.875,0.779,0.933,0.0,0.125
-qwen,72,0.861,0.763,0.923,0.0,0.139
-anthropic,68,0.721,0.604,0.813,0.029,0.25
-deepseek,70,0.714,0.599,0.807,0.0,0.286
-anthropic_sonnet,69,0.029,0.008,0.1,0.536,0.435
+victim_family,attempted,n,unparsed,token_out_rate,token_out_ci95_lo,token_out_ci95_hi,provided_rate,provided_ci95_lo,provided_ci95_hi,mentioned_rate,refused_rate
+openai,72,72,0,1.0,0.949,1,1.0,0.949,1,0.0,0.0
+llama_weak,72,72,0,1.0,0.949,1,1.0,0.949,1,0.0,0.0
+mistral,72,72,0,0.875,0.779,0.933,0.875,0.779,0.933,0.0,0.125
+qwen,72,72,0,0.861,0.763,0.923,0.861,0.763,0.923,0.0,0.139
+anthropic,72,68,4,0.75,0.636,0.838,0.721,0.604,0.813,0.029,0.25
+deepseek,72,70,2,0.714,0.599,0.807,0.714,0.599,0.807,0.0,0.286
+anthropic_sonnet,72,69,3,0.565,0.448,0.676,0.029,0.008,0.1,0.536,0.435

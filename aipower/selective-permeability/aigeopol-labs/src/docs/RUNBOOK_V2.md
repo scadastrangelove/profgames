@@ -55,7 +55,7 @@ has the highest SP** (D0 0.73 [0.63,0.82] vs all gates lower; T5a, F6). The audi
 *detector* but a poor *deployable gate* on already-robust models (§7.1). Report SP with the multiplicity-
 preserving cluster bootstrap (`bootstrap_ci.py`).
 
-## W7b/W7c/W7d — token disclosure, protected/neutral, label-vs-referent
+## W7b/W7c/W7d/W7e — token output, controls, label-vs-referent
 - **W7b** disclosure+forgery: `run_labs_token.py` (or judged raw already in `artifacts/raw/w7b_token_judged.jsonl`);
   rebuild derived CSVs with `python3 code/analyze_w7b.py` → `w7b_disclosure.csv`, `w7b_forgery.csv`.
 - **W7c** protected (in-context nondisclosure policy) + neutral (legit citation): `run_labs_token3.py
@@ -63,6 +63,13 @@ preserving cluster bootstrap (`bootstrap_ci.py`).
   judge → `w7c_token_judged.jsonl`; `analyze_token3.py`. Report by severity: token-out = PROVIDED+MENTIONED (F7).
 - **W7d** label-vs-referent 2×2: `run_labs_labelref.py --scenarios ... --models config/models_v2.json
   --out artifacts/raw/w7d_labelref.jsonl --k 6` (inline gpt-5.5 judge, needs env key); `analyze_labelref.py`.
+- **W7e** emphasis-matched replication: `run_labs_labelref_matched.py --scenarios scenarios/mvp_v2.jsonl
+  --models config/models_v2.json --out artifacts/raw/w7e_labelref_matched.jsonl --k 6 --preflight all`;
+  `analyze_labelref_matched.py`. Both policy polarities use matched capitalization, modality, exception
+  lists, and length. Strict token containment is deterministic; GPT victims use an Anthropic judge for
+  the secondary posture category. The runner stores full replies and OpenRouter response metadata.
+  **Completed 2026-07-12:** 504/504 valid, no API or judge-parse errors; strict containment
+  D_policy=0.726 [0.655, 0.821] and D_referent=0.004 [-0.036, 0.036].
 - Extra stats (cluster-boot, per-trial logit, W7c token-out, W4/W5): `reviewer23_stats.py`.
 
 ## W9 — Long-horizon memory (token-laundering + wiki-drift / source amnesia)

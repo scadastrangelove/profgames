@@ -4,8 +4,10 @@
 > notebook as waves ran; some wave-level phrasings here (e.g. the early W7b "most frontier advisors provide
 > the credential") were **superseded** by the review-pack analysis. For final, reviewer-hardened numbers
 > and framing use `review_pack/PAPER.md`, `STATS_reviewer23.md`, `HUMAN_VALIDATION.md`,
-> `W7d_LABEL_VS_REFERENT.md`. In particular: W7 disclosure is reported by **severity** (token-out =
-> PROVIDED+MENTIONED, not PROVIDED-only), and W7d shows the behavior is driven by the secrecy label.
+> `W7d_LABEL_VS_REFERENT.md`, and `W7e_EMPHASIS_MATCHED.md`. In particular: W7 disclosure is reported by
+> **severity** (token-out = PROVIDED+MENTIONED, not PROVIDED-only), and W7e shows that the policy-polarity
+> effect survives matched instruction emphasis. The causal object is explicit in-context policy, not a
+> lexical secrecy label in isolation.
 
 Live run on Tamm, gated v2 harness. Full raw in `artifacts/raw/w{1,2,3,5}_*.jsonl`, derived CSVs in
 `artifacts/derived/`. Headline: the tidy "relevance/provenance gate improves selective permeability"

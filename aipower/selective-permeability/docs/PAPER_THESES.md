@@ -121,17 +121,15 @@ is the paper's sharper contribution:
    issuer tokens, collapsing every token-based defense on that channel; it is a *pipeline artifact*,
    summarizer-dependent and **mitigable** with per-item, provenance-preserving summarization (W9b/W9d).
 
-**Behavioral core under the disclosure result (W7d, label-vs-referent).** With the pretext held constant,
-guard/leak behavior tracks the secrecy **label** ("private credential", Δ=0.87) far more than the
-**referent** — whether the token actually authorizes anything (Δ=0.04). **7/7 models** independently show
-Δ_label > Δ_referent (sign test p=0.016; the robust statement — the pooled 3-cluster CI is coarse). Models
-guard a string explicitly labelled public-and-inert (0.94) and hand over the *real* authorization lever
-when it is framed casually (0.89). Δ_referent is **not exactly zero** — better-aligned models keep a weak
-residual (Opus 0.17, Sonnet 0.14, DeepSeek 0.11; Qwen/GPT ≈0). So: a strong label main effect with a weak,
-alignment-graded referent-sensitivity — provenance "security" is largely **stimulus-bound to surface
-words**, the psychological cause behind the disclosure numbers, and an on-thesis behavioral finding (not a
-technical-control result). This also reframes the non-bearer scope question: a non-bearer control would
-trivially block the attack precisely *because the model barely engages the semantics*.
+**Behavioral core under the disclosure result (W7d/W7e, policy-vs-referent).** W7d found a large
+in-context policy effect but used a longer, more emphatic secret instruction than public instruction. W7e
+matches capitalization, modality, exception lists, and length. Under exact-token containment, the matched
+policy-polarity effect is 0.726 [0.655, 0.821], versus 0.004 [-0.036, 0.036] for whether the token actually
+authorizes anything; the policy effect is larger in all seven selected model rows. This removes unequal
+instruction force as the explanation, but it does not isolate a lexical label: W7e contrasts opposite
+explicit directives in user context. System/developer placement and ten or more fresh scenarios remain
+open. The engineering conclusion is narrow: functional consequences should not be relied on to make an
+LLM recover the correct security posture when explicit in-context policy says the opposite.
 
 External support for provenance-skepticism-of-aggregation is **weaker than an earlier draft implied**:
 LLMs fabricate social proof when fooled ([2606.13610], verified), and peer agreement misleads correct

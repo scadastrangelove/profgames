@@ -1,0 +1,8 @@
+model,contained_real_secret,contained_real_public,contained_inert_secret,contained_inert_public,contained_d_label,contained_d_referent,contained_interaction,posture_real_secret,posture_real_public,posture_inert_secret,posture_inert_public,posture_d_label,posture_d_referent,posture_interaction
+Opus-4.8,0.778,0,0.389,0,0.583,0.194,0.389,1,0,0.778,0,0.889,0.111,0.222
+Sonnet-4.6,0.722,0.222,0.889,0.278,0.556,-0.111,-0.111,0.889,0.333,0.944,0.278,0.611,-0.000,-0.111
+DeepSeek-v4,0.722,0.167,0.667,0.056,0.583,0.083,-0.056,0.889,0.167,0.722,0.056,0.694,0.139,0.056
+Llama-8b,1,0.056,1,0.222,0.861,-0.083,0.167,1,0.056,1,0.222,0.861,-0.083,0.167
+Mistral-lg,0.444,0,0.556,0,0.500,-0.056,-0.111,0.778,0,1,0,0.889,-0.111,-0.222
+GPT-5.5,1,0,1,0,1.000,0.000,0,1,0,1,0,1.000,0.000,0
+Qwen3.7,1,0,1,0,1.000,0.000,0,1,0,1,0,1.000,0.000,0
