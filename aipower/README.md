@@ -14,9 +14,9 @@ Site URL after GitHub Pages deploy:
 | --- | --- |
 | [`index.html`](index.html) | Small entry page for the AI Power package. |
 | [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, timeline, stack heatmap, fact catalog, claim checks and source index. |
-| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.17 storygraph line. |
+| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.18 storygraph line. |
 | [`ai_power_storygraph_en.json`](ai_power_storygraph_en.json) | Machine-readable English storygraph used by the atlas. |
-| [`ai_power_storygraph_ru.json`](ai_power_storygraph_ru.json) | Russian v0.17 master storygraph with facts, claims, edges, sources and graph diagnostics. |
+| [`ai_power_storygraph_ru.json`](ai_power_storygraph_ru.json) | Russian v0.18 master storygraph with facts, claims, edges, sources and graph diagnostics. |
 | [`preprint_release/`](preprint_release/) | **Machine-Speed Cyber and Poisoned Cognition: A Layer-Dependent Game-Theoretic Framework, with Empirical Probes** — HTML, PDF, Markdown source, figures, bibliography and the P1 red-team evidence bundle. |
 | [`selective-permeability/`](selective-permeability/) | **Selective Permeability: A Behavioral-Security Metric for LLM Advisors, with Two Failure Modes of In-Context Provenance Workflows** — preprint (HTML/PDF/Markdown), figures F1–F9 (F9 = model × attack panorama), reproducible harness, and EN/RU write-ups. |
 
@@ -41,7 +41,7 @@ Two preprints are published alongside the atlas:
 - `221` facts
 - `71` claims
 - `29` claim checks
-- `24` story arcs
+- `24` exact story arcs in `6` analytical families
 - `408` story edges
 - `329` sources
 - `0` hanging arcs after connectivity checks
@@ -59,12 +59,22 @@ It maps structural power across the stack:
 - decision-support and cognitive-security layers;
 - governance, law, finance and rent.
 
+## Classifier Model
+
+The release keeps legacy labels for auditability while separating fields used by the interface:
+
+- `geography_raw` preserves every source label; `jurisdictions`, `regions`, `locations`, `institutional_scopes`, `geo_context` and `geographic_scopes` drive distinct filters;
+- `actor_raw`, `actors_raw` and `actor_facets_legacy` preserve the old representation; `actor_entities`, `actor_types` and `actor_jurisdictions` remove joined labels and role/country collisions;
+- every exact arc id is retained; `family_id` groups the 24 arcs into six analytical families, while `arc_kind=phase` marks chronology-first arcs.
+
+The embedded `classifierAudit` records before/after counts and SHA-256 checks over fact ids, claim ids, exact arc ids, complete edge signatures and source URLs.
+
 The safe wording rule is simple: present contested or partial evidence as contested or partial. Do not turn model releases, cloud contracts or vendor claims into stronger geopolitical claims than the source can support.
 
 ## Provenance
 
-This package was generated from the v0.17 master storygraph built during the AIgeopol research pass.
-Russian-contour audit. Added 18 evidence cards from data localization and sovereign routing to compute allocation, government decision-support, grid constraints and the Duma-passed AI bill; corrected the March broad-ban overclaim; reframed Russia from isolated autarky to sanction-constrained selective sovereignty; added one claim-check, one counterargument, one fully connected story arc and one recipe view.
+This package was generated from the v0.18 master storygraph built during the AIgeopol research pass.
+Classifier normalization without record loss. Split geography into jurisdiction, region, location, institutional scope, global scope and contextual tags; separated named actor entities from actor type and jurisdiction while preserving all legacy labels; grouped 24 exact story arcs into six analytical families and marked phase arcs for timeline-first display.
 
 Public JSON filenames are intentionally versionless. The current version remains inside `meta.version` and the changelog, while the URLs stay stable across rebuilds.
 
