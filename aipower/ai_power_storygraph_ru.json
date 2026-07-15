@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "ИИ-стек как структурная власть — Combined Master Pack",
-    "version": "0.19",
+    "version": "0.20",
     "created_at": "2026-06-28",
-    "updated_at": "2026-07-14",
-    "schema_version": "ai_stack_structural_power.v0.19.0-2026-07-14",
+    "updated_at": "2026-07-15",
+    "schema_version": "ai_stack_structural_power.v0.20.0-2026-07-15",
     "display_title_ru": "ИИ-стек: четыре структуры власти на одном КПП",
     "display_title_en": "AI stack: four structures of power at one checkpoint",
     "subtitle_ru": "Карта фактов о том, как вычисления, облака, модели, данные, кибер и капитал превращаются в среду по умолчанию: доступ дозируется, зависимость закрепляется, рента собирается.",
@@ -12,6 +12,23 @@
     "source_pack": "ai_stack_storygraph_master.json",
     "method": "ProfGames-style layered organization. Merge of: (a) v0.4 operational pack (evidence/timeline/claim_checks/country_cards/cyber_pack/cognitive_security/critical_decision_use/palantir_case/weekly_memo/gaps), (b) v0.2 factcheck layer (claims with recommended_phrasing_ru/counterarguments/recommendations), (c) new v0.3 research closing the Stanford-tables and chip-license gaps and adding model-layer export-control claims.",
     "changelog": [
+      {
+        "version": "0.20",
+        "date": "2026-07-15",
+        "description": "Added Hunt.io's artifact-backed report of a separate June 2026 intrusion workflow integrating Claude Code and a reported DeepSeek-v4-pro endpoint. Preserved uncertainty around victim corroboration, model attribution, human involvement and China-state attribution; connected the fact to the cyber caveat arc without treating it as confirmation of GTG-1002.",
+        "added_evidence": 1,
+        "added_timeline": 1,
+        "added_claims": 0,
+        "added_claim_checks": 0,
+        "added_story_arcs": 0,
+        "added_story_edges": 2,
+        "updated_story_arcs": [
+          "ARC_CYBER_CLAIM_TO_CAVEAT"
+        ],
+        "updated_thesis_nodes": [
+          "THESIS_NOT_AUTONOMOUS_OFFENSE"
+        ]
+      },
       {
         "version": "0.19",
         "date": "2026-07-14",
@@ -189,6 +206,7 @@
     },
     "approximate_pass_rate": "97% verified or partially verified",
     "key_findings": [
+      "OPERATIONAL CYBER (v0.20): Hunt.io published IoCs and selected recovered artifacts from a separate June 2026 campaign in which Claude Code and a reported DeepSeek endpoint were integrated into intrusion workflows. This narrows the gap between lab capability and operational use, but does not quantify autonomy, establish Chinese state sponsorship, turn scanning into compromise or independently validate GTG-1002.",
       "NEW (v0.19): EU sovereignty is a graduated access regime, not a single ban. CLOUD Act jurisdictional risk, SecNumCloud control thresholds, a workload-tiered sovereign-cloud procurement framework, CADA proposal levels, AI Factories and vendor adaptations operate at different legal and deployment states.",
       "LEGAL STATUS (v0.19): the 7 July Cybersecurity and AI Action Plan announces model-evaluation and secure-testing capacity; it does not create AI Act fines. As of 14 July, Commission GPAI enforcement was scheduled for 2 August 2026, with Article 101 limits tied to specified infringements.",
       "AGENT SECURITY (v0.19): OpenClaw evidence adds a live-lab failure study, point-in-time public-exposure measurement and ClawHavoc marketplace scan. Lab cases, exposed instances, malicious listings, installations and victims remain separate denominators.",
@@ -839,13 +857,13 @@
       ]
     },
     "pass_rate_short": "97%",
-    "total_events": 233,
+    "total_events": 234,
     "total_claims": 71,
     "total_claim_checks": 29,
     "total_arcs": 24,
-    "total_edges": 431,
+    "total_edges": 433,
     "total_thesis_nodes": 5,
-    "source_count": 350,
+    "source_count": 352,
     "by_status": {
       "verified": 135,
       "verified_as_reported": 31,
@@ -856,6 +874,7 @@
       "partially_verified_contested": 2,
       "verified_as_announcement": 2,
       "verified_as_reported_indictment_allegation": 2,
+      "verified_as_reported_with_redacted_forensics": 2,
       "advertisement_verified_implementation_unverified": 1,
       "controlled_real_world_and_internal_red_team_no_wild_campaign": 1,
       "controlled_real_world_validation_no_wild_campaign": 1,
@@ -869,7 +888,6 @@
       "verified_adopted_future_application": 1,
       "verified_announcement_implementation_pending": 1,
       "verified_as_reported_not_primary_order": 1,
-      "verified_as_reported_with_redacted_forensics": 1,
       "verified_as_speech_not_as_fact": 1,
       "verified_controlled_evaluation": 1,
       "verified_current_rule": 1,
@@ -884,8 +902,8 @@
       "B": 75,
       "C": 28,
       "D": 8,
+      "B/C": 3,
       "A/B": 2,
-      "B/C": 2,
       "A/C": 1,
       "A/D": 1,
       "C/D": 1,
@@ -18777,7 +18795,8 @@
         }
       ],
       "edgeIds": [
-        "EDGE_V012_2025_CLAUDE_ORCHESTRATED_ESPIONAGE_CYBER"
+        "EDGE_V012_2025_CLAUDE_ORCHESTRATED_ESPIONAGE_CYBER",
+        "EDGE_HUNT_2026_PARALLEL_GTG1002"
       ],
       "arcIds": [
         "ARC_CYBER_CLAIM_TO_CAVEAT"
@@ -18787,7 +18806,8 @@
       ],
       "relationTypes": [
         "key_node",
-        "supports_but_limits"
+        "supports_but_limits",
+        "parallel"
       ]
     },
     {
@@ -34226,6 +34246,202 @@
         "key_node",
         "mitigates"
       ]
+    },
+    {
+      "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+      "kind": "event",
+      "title": "Hunt.io сообщает о восстановленных файлах атакующих, где Claude Code и DeepSeek встроены в рабочий процесс вторжений",
+      "title_ru": "Hunt.io сообщает о восстановленных файлах атакующих, где Claude Code и DeepSeek встроены в рабочий процесс вторжений",
+      "title_en": "Hunt.io reports recovered attacker files showing Claude Code and DeepSeek integrated into intrusion workflows",
+      "date": "2026-07-14",
+      "source_date": "2026-07-14",
+      "date_basis": "security_vendor_report_publication_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://hunt.io/blog/chinese-operators-claude-deepseek-government-intrusion",
+      "source_name": "Hunt.io",
+      "source_type_raw": "Company / vendor",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Hunt.io, Claude Code, DeepSeek-v4-pro, suspected China-based threat actor",
+      "actor_raw": "Hunt.io, Claude Code, DeepSeek-v4-pro, suspected China-based threat actor",
+      "actors_raw": [
+        "Hunt.io",
+        "Claude Code",
+        "DeepSeek-v4-pro",
+        "suspected China-based threat actor",
+        "Hunt.io, Claude Code, DeepSeek-v4-pro, suspected China-based threat actor"
+      ],
+      "actors": [
+        "Hunt.io",
+        "Claude Code",
+        "DeepSeek-v4-pro",
+        "suspected China-based threat actor"
+      ],
+      "actor_facets_legacy": [
+        "China",
+        "Claude Code",
+        "DeepSeek",
+        "Hunt.io"
+      ],
+      "actor_facets": [
+        "Claude Code",
+        "DeepSeek",
+        "Hunt.io"
+      ],
+      "actor_entities": [
+        "Claude Code",
+        "DeepSeek",
+        "Hunt.io"
+      ],
+      "actor_jurisdictions": [
+        "China"
+      ],
+      "actor_types": [
+        "company",
+        "threat_actor"
+      ],
+      "geography_raw": [
+        "Afghanistan",
+        "Thailand",
+        "Taiwan",
+        "US",
+        "Hong Kong"
+      ],
+      "geography": [
+        "Afghanistan",
+        "Thailand",
+        "Taiwan",
+        "US",
+        "Hong Kong"
+      ],
+      "jurisdictions": [
+        "Afghanistan",
+        "Thailand",
+        "Taiwan",
+        "US",
+        "Hong Kong"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [],
+      "geography_unclassified": [],
+      "evidence_context": [
+        "undisclosed_victims"
+      ],
+      "stack_layer": [
+        "cyber_security_patch",
+        "decision_support_cognition",
+        "model_weights"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "decision_support_cognition",
+        "model_weights"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ3",
+        "RQ4",
+        "RQ5"
+      ],
+      "claim_supported": "По данным Hunt.io, открытый каталог атакующих содержал исходный код жертв, exploit scripts, операционные журналы, копии login pages и сотни файлов вывода LLM. Восстановленные сессии Claude Code 2.1.165 от 8-12 июня 2026 года показывают использование агента для работы с инструментами, выполнения shell-команд, поддержания сессий и доработки фишинговых страниц; атакующую логику Hunt.io связывает с endpoint DeepSeek-v4-pro. На той же инфраструктуре находились признаки успешной эксплуатации систем в Афганистане, Таиланде и Тайване, а также разведки и подготовки фишинга против американских государственных порталов.",
+      "claim_supported_ru": "По данным Hunt.io, открытый каталог атакующих содержал исходный код жертв, exploit scripts, операционные журналы, копии login pages и сотни файлов вывода LLM. Восстановленные сессии Claude Code 2.1.165 от 8-12 июня 2026 года показывают использование агента для работы с инструментами, выполнения shell-команд, поддержания сессий и доработки фишинговых страниц; атакующую логику Hunt.io связывает с endpoint DeepSeek-v4-pro. На той же инфраструктуре находились признаки успешной эксплуатации систем в Афганистане, Таиланде и Тайване, а также разведки и подготовки фишинга против американских государственных порталов.",
+      "claim_supported_en": "Hunt.io says an exposed attacker directory contained victim source code, exploit scripts, operational logs, cloned login pages and hundreds of LLM output files. Recovered Claude Code 2.1.165 sessions dated 8-12 June 2026 show the agent handling tool use, shell execution, persistence and phishing-page iteration, while Hunt.io attributes attack reasoning to a DeepSeek-v4-pro endpoint. The same infrastructure contained evidence of successful exploitation in Afghanistan, Thailand and Taiwan, plus reconnaissance and phishing staging against US government portals.",
+      "claim_challenged": "Это анализ одного ИБ-поставщика по выбранному и отредактированному корпусу. Пострадавшие организации и CERT публично не подтвердили инциденты. Упрощённый китайский язык заметок, инфраструктура в Гонконге и связь с TencShell позволяют говорить о предполагаемых операторах из Китая, но не о конкретной группе или государственной атрибуции КНР. Отчёт не измеряет участие человека или долю автономной работы; американские порталы фигурируют как цели разведки и подготовки фишинга, а не как подтверждённо взломанные системы.",
+      "claim_challenged_ru": "Это анализ одного ИБ-поставщика по выбранному и отредактированному корпусу. Пострадавшие организации и CERT публично не подтвердили инциденты. Упрощённый китайский язык заметок, инфраструктура в Гонконге и связь с TencShell позволяют говорить о предполагаемых операторах из Китая, но не о конкретной группе или государственной атрибуции КНР. Отчёт не измеряет участие человека или долю автономной работы; американские порталы фигурируют как цели разведки и подготовки фишинга, а не как подтверждённо взломанные системы.",
+      "claim_challenged_en": "This is one security vendor's analysis of a selected and redacted corpus. The affected organizations and CERTs have not publicly corroborated the incidents. Simplified Chinese notes, Hong Kong infrastructure and TencShell lineage support 'suspected China-based operators,' not a named group or Chinese state sponsorship. The report does not measure human involvement or autonomous share, and US portals were staged or probed rather than reported breached.",
+      "summary": "По данным Hunt.io, открытый каталог атакующих содержал исходный код жертв, exploit scripts, операционные журналы, копии login pages и сотни файлов вывода LLM. Восстановленные сессии Claude Code 2.1.165 от 8-12 июня 2026 года показывают использование агента для работы с инструментами, выполнения shell-команд, поддержания сессий и доработки фишинговых страниц; атакующую логику Hunt.io связывает с endpoint DeepSeek-v4-pro. На той же инфраструктуре находились признаки успешной эксплуатации систем в Афганистане, Таиланде и Тайване, а также разведки и подготовки фишинга против американских государственных порталов.",
+      "summary_ru": "По данным Hunt.io, открытый каталог атакующих содержал исходный код жертв, exploit scripts, операционные журналы, копии login pages и сотни файлов вывода LLM. Восстановленные сессии Claude Code 2.1.165 от 8-12 июня 2026 года показывают использование агента для работы с инструментами, выполнения shell-команд, поддержания сессий и доработки фишинговых страниц; атакующую логику Hunt.io связывает с endpoint DeepSeek-v4-pro. На той же инфраструктуре находились признаки успешной эксплуатации систем в Афганистане, Таиланде и Тайване, а также разведки и подготовки фишинга против американских государственных порталов.",
+      "summary_en": "Hunt.io says an exposed attacker directory contained victim source code, exploit scripts, operational logs, cloned login pages and hundreds of LLM output files. Recovered Claude Code 2.1.165 sessions dated 8-12 June 2026 show the agent handling tool use, shell execution, persistence and phishing-page iteration, while Hunt.io attributes attack reasoning to a DeepSeek-v4-pro endpoint. The same infrastructure contained evidence of successful exploitation in Afghanistan, Thailand and Taiwan, plus reconnaissance and phishing staging against US government portals.",
+      "notes": "Это анализ одного ИБ-поставщика по выбранному и отредактированному корпусу. Пострадавшие организации и CERT публично не подтвердили инциденты. Упрощённый китайский язык заметок, инфраструктура в Гонконге и связь с TencShell позволяют говорить о предполагаемых операторах из Китая, но не о конкретной группе или государственной атрибуции КНР. Отчёт не измеряет участие человека или долю автономной работы; американские порталы фигурируют как цели разведки и подготовки фишинга, а не как подтверждённо взломанные системы.",
+      "notes_ru": "Это анализ одного ИБ-поставщика по выбранному и отредактированному корпусу. Пострадавшие организации и CERT публично не подтвердили инциденты. Упрощённый китайский язык заметок, инфраструктура в Гонконге и связь с TencShell позволяют говорить о предполагаемых операторах из Китая, но не о конкретной группе или государственной атрибуции КНР. Отчёт не измеряет участие человека или долю автономной работы; американские порталы фигурируют как цели разведки и подготовки фишинга, а не как подтверждённо взломанные системы.",
+      "notes_en": "This is one security vendor's analysis of a selected and redacted corpus. The affected organizations and CERTs have not publicly corroborated the incidents. Simplified Chinese notes, Hong Kong infrastructure and TencShell lineage support 'suspected China-based operators,' not a named group or Chinese state sponsorship. The report does not measure human involvement or autonomous share, and US portals were staged or probed rather than reported breached.",
+      "safe_wording": "Говорить, что Hunt.io восстановила подкреплённые артефактами признаки интеграции Claude Code и заявленного endpoint DeepSeek в отдельный рабочий процесс атак июня 2026 года. Не называть кампанию автономной, государственной операцией КНР, взломом правительств четырёх стран или независимым подтверждением кейса Anthropic GTG-1002.",
+      "safe_wording_ru": "Говорить, что Hunt.io восстановила подкреплённые артефактами признаки интеграции Claude Code и заявленного endpoint DeepSeek в отдельный рабочий процесс атак июня 2026 года. Не называть кампанию автономной, государственной операцией КНР, взломом правительств четырёх стран или независимым подтверждением кейса Anthropic GTG-1002.",
+      "safe_wording_en": "Say that Hunt.io recovered artifact-backed evidence of Claude Code and a reported DeepSeek endpoint integrated into a separate June 2026 intrusion workflow. Do not call it autonomous, Chinese state-sponsored, a breach of four governments, or independent confirmation of Anthropic's GTG-1002 case.",
+      "corroboration_needed": "Это анализ одного ИБ-поставщика по выбранному и отредактированному корпусу. Пострадавшие организации и CERT публично не подтвердили инциденты. Упрощённый китайский язык заметок, инфраструктура в Гонконге и связь с TencShell позволяют говорить о предполагаемых операторах из Китая, но не о конкретной группе или государственной атрибуции КНР. Отчёт не измеряет участие человека или долю автономной работы; американские порталы фигурируют как цели разведки и подготовки фишинга, а не как подтверждённо взломанные системы.",
+      "corroboration_needed_ru": "Это анализ одного ИБ-поставщика по выбранному и отредактированному корпусу. Пострадавшие организации и CERT публично не подтвердили инциденты. Упрощённый китайский язык заметок, инфраструктура в Гонконге и связь с TencShell позволяют говорить о предполагаемых операторах из Китая, но не о конкретной группе или государственной атрибуции КНР. Отчёт не измеряет участие человека или долю автономной работы; американские порталы фигурируют как цели разведки и подготовки фишинга, а не как подтверждённо взломанные системы.",
+      "corroboration_needed_en": "This is one security vendor's analysis of a selected and redacted corpus. The affected organizations and CERTs have not publicly corroborated the incidents. Simplified Chinese notes, Hong Kong infrastructure and TencShell lineage support 'suspected China-based operators,' not a named group or Chinese state sponsorship. The report does not measure human involvement or autonomous share, and US portals were staged or probed rather than reported breached.",
+      "caveat": "Это анализ одного ИБ-поставщика по выбранному и отредактированному корпусу. Пострадавшие организации и CERT публично не подтвердили инциденты. Упрощённый китайский язык заметок, инфраструктура в Гонконге и связь с TencShell позволяют говорить о предполагаемых операторах из Китая, но не о конкретной группе или государственной атрибуции КНР. Отчёт не измеряет участие человека или долю автономной работы; американские порталы фигурируют как цели разведки и подготовки фишинга, а не как подтверждённо взломанные системы.",
+      "caveat_ru": "Это анализ одного ИБ-поставщика по выбранному и отредактированному корпусу. Пострадавшие организации и CERT публично не подтвердили инциденты. Упрощённый китайский язык заметок, инфраструктура в Гонконге и связь с TencShell позволяют говорить о предполагаемых операторах из Китая, но не о конкретной группе или государственной атрибуции КНР. Отчёт не измеряет участие человека или долю автономной работы; американские порталы фигурируют как цели разведки и подготовки фишинга, а не как подтверждённо взломанные системы.",
+      "caveat_en": "This is one security vendor's analysis of a selected and redacted corpus. The affected organizations and CERTs have not publicly corroborated the incidents. Simplified Chinese notes, Hong Kong infrastructure and TencShell lineage support 'suspected China-based operators,' not a named group or Chinese state sponsorship. The report does not measure human involvement or autonomous share, and US portals were staged or probed rather than reported breached.",
+      "caveats": [
+        "Публичный отчёт показывает выбранные screenshots, hashes и инфраструктурные индикаторы, а не полный восстановленный каталог.",
+        "Пострадавшие организации и национальные CERT были уведомлены, но на дату исследования не опубликовали подтверждений.",
+        "Разделение Claude Code как execution layer и DeepSeek как reasoning layer является интерпретацией Hunt.io по восстановленным файлам.",
+        "Более 5 890 хостов были целями сканирования, а не 5 890 подтверждёнными взломами."
+      ],
+      "caveats_en": [
+        "The public report shows selected screenshots, hashes and infrastructure indicators, not the complete recovered directory.",
+        "The affected organizations and national CERTs were notified, but no victim or CERT confirmation was public at the research date.",
+        "The reported split between Claude Code execution and DeepSeek reasoning is Hunt.io's interpretation of the recovered files.",
+        "The 5,890-plus hosts were scanned targets, not 5,890 compromises."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "hong_kong_servers": 13,
+        "infrastructure_asns": 4,
+        "government_hosts_scanned_more_than": 5890,
+        "countries_scanned": 10,
+        "claude_code_version": "2.1.165",
+        "llm_session_start": "2026-06-08",
+        "llm_session_end": "2026-06-12"
+      },
+      "money_status": "",
+      "confidence": "B/C",
+      "evidence_level": "B/C",
+      "status": "verified_as_reported_with_redacted_forensics",
+      "sources": [
+        {
+          "title": "Suspected Chinese Operators Use Claude Code and DeepSeek to Breach Government Systems Across Four Countries",
+          "name": "Hunt.io",
+          "url": "https://hunt.io/blog/chinese-operators-claude-deepseek-government-intrusion",
+          "type": "Company / vendor",
+          "date": "2026-07-14",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Suspected China-Linked Threat Actor Targets Global Manufacturer",
+          "name": "Cato CTRL",
+          "url": "https://www.catonetworks.com/blog/cato-ctrl-suspected-china-linked-threat-actor-targets-global-manufacturer/",
+          "type": "Company / vendor",
+          "date": "2026-05",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Disrupting the first reported AI-orchestrated cyber espionage campaign",
+          "name": "Anthropic Threat Intelligence",
+          "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+          "type": "Company / vendor",
+          "date": "2025-11-13",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_HUNT_2026_CYBER_OPERATIONAL_SIGNAL",
+        "EDGE_HUNT_2026_PARALLEL_GTG1002"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope",
+        "parallel"
+      ]
     }
   ],
   "claims": [
@@ -40765,14 +40981,14 @@
       "arc_type": "statement_walkback",
       "status": "operational_signals_with_autonomy_caveat",
       "start_date": "2025-08-08",
-      "end_date": "2026-07-12",
+      "end_date": "2026-07-14",
       "visual_lanes": [
         "cyber_security_patch",
         "model_weights",
         "governance_law"
       ],
       "thesis_ru": "Кибервозможности и снижение skill floor растут; реальные журналы и malicious artifacts уже показывают agentic misuse, но надёжная fully autonomous offense at strategic scale не доказана.",
-      "safe_wording_ru": "Говорить: в опубликованных подтверждённых случаях сохранялось существенное участие человека; PoC, лабораторные тесты, публичная экспозиция и телеметрия поставщиков не измеряют распространённость или стратегическую автономию.",
+      "safe_wording_ru": "Отчёт Hunt.io с IoC и выбранными восстановленными артефактами делает интеграцию LLM и агентного инструмента в отдельную реальную кампанию наблюдаемой, но не измеряет долю автономности и не доказывает государственную атрибуцию КНР. PoC, лабораторные тесты, публичная экспозиция и телеметрия поставщиков по-прежнему нельзя превращать в prevalence или стратегическую автономию.",
       "key_nodes": [
         "cyber-01",
         "cyber-02",
@@ -40806,7 +41022,8 @@
         "CLM_027_TRUSTED_CONTEXT_EXECUTABLE_AUTHORITY",
         "SIG_EU_2026_CYBER_AI_ACTION_PLAN",
         "SIG_2026_AGENTS_OF_CHAOS_OPENCLAW_REDTEAM",
-        "SIG_2026_OPENCLAW_PUBLIC_EXPOSURE"
+        "SIG_2026_OPENCLAW_PUBLIC_EXPOSURE",
+        "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION"
       ],
       "counterpoints": [
         "Provider and security-vendor telemetry often lacks public raw case data.",
@@ -40817,18 +41034,20 @@
         "Mythos leverage is access asymmetry.",
         "Internet exposure does not mean vulnerability or compromise.",
         "Agents of Chaos is an exploratory live-lab study, not incident prevalence.",
-        "The EU Action Plan announces evaluation and secure-testing capacity; implementation remains pending."
+        "The EU Action Plan announces evaluation and secure-testing capacity; implementation remains pending.",
+        "Hunt.io reports a separate artifact-backed campaign; it does not independently validate GTG-1002, quantify autonomy or establish Chinese state sponsorship."
       ],
       "title_en": "Cyber: operational agentic signals with an autonomy caveat",
       "thesis_en": "Cyber capability and the attacker skill-floor are moving quickly; real logs and malicious artifacts now show agentic misuse, while reliable fully autonomous offense at strategic scale remains unproven.",
-      "safe_wording_en": "Say: published confirmed cases retained material human involvement; PoCs, lab tests, exposed instances and vendor telemetry do not measure prevalence or strategic autonomy.",
+      "safe_wording_en": "Hunt.io's report with IoCs and selected recovered artifacts makes LLM and agent-tool integration in a separate real campaign observable, but it does not measure autonomous share or establish Chinese state sponsorship. PoCs, lab tests, exposed instances and vendor telemetry still cannot be promoted into prevalence or strategic autonomy.",
       "family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
       "counterpoints_en": [
         "Internet exposure does not mean vulnerability or compromise.",
         "Agents of Chaos is an exploratory live-lab study, not incident prevalence.",
-        "The EU Action Plan announces evaluation and secure-testing capacity; implementation remains pending."
+        "The EU Action Plan announces evaluation and secure-testing capacity; implementation remains pending.",
+        "Hunt.io reports a separate artifact-backed campaign; it does not independently validate GTG-1002, quantify autonomy or establish Chinese state sponsorship."
       ],
       "kind": "arc",
       "title": "Кибер: операционные признаки агентного ускорения с оговоркой об автономии"
@@ -49142,6 +49361,42 @@
       "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
       "kind": "edge",
       "is_auto": false
+    },
+    {
+      "id": "EDGE_HUNT_2026_CYBER_OPERATIONAL_SIGNAL",
+      "source": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "Recovered logs and infrastructure indicators support operational LLM integration while leaving autonomy and state attribution unmeasured.",
+      "summary_ru": "Восстановленные журналы и инфраструктурные индикаторы подтверждают операционную интеграцию LLM, но не измеряют автономность и государственную атрибуцию.",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_HUNT_2026_PARALLEL_GTG1002",
+      "source": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+      "target": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "parallel",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "B/C",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "A separate artifact-backed case makes the general workflow more plausible without corroborating Anthropic's GTG-1002 attribution or autonomy estimate.",
+      "summary_ru": "Отдельный кейс с артефактами делает общий рабочий процесс более правдоподобным, не подтверждая атрибуцию или оценку автономности Anthropic для GTG-1002.",
+      "kind": "edge",
+      "is_auto": false
     }
   ],
   "thesisNodes": [
@@ -49174,9 +49429,9 @@
       "id": "THESIS_NOT_AUTONOMOUS_OFFENSE",
       "kind": "synthetic_thesis",
       "label_ru": "Агентное ускорение кибератак видно; стратегическая автономия не доказана",
-      "summary_ru": "Подтверждены защитный поиск и устранение уязвимостей, операции с ИИ-оркестрацией, вредоносные артефакты и быстрое развёртывание агентов. В опубликованных подтверждённых случаях сохранялось существенное участие человека; PoC, лабораторные тесты и телеметрия поставщиков не измеряют распространённость или полностью автономное наступление стратегического масштаба.",
+      "summary_ru": "Наблюдаемы защитный поиск и устранение уязвимостей, вредоносные артефакты, быстрое развёртывание агентов и подкреплённые артефактами отчёты ИБ-поставщиков об интеграции ИИ в рабочие процессы атак. Кейс Hunt.io не измеряет долю автономности и не доказывает государственную атрибуцию; PoC, лабораторные тесты и телеметрия всё ещё не подтверждают полностью автономное наступление стратегического масштаба.",
       "label_en": "Agentic cyber acceleration is visible; strategic autonomy is unproven",
-      "summary_en": "Verified defensive find-and-fix, AI-orchestrated operations, malicious artifacts and rapid agent deployment are observable. Published confirmed cases retain material human involvement; PoCs, lab tests and vendor telemetry do not measure prevalence or fully autonomous strategic offense."
+      "summary_en": "Defensive find-and-fix, malicious artifacts, rapid agent deployment and artifact-backed vendor reporting of AI-integrated intrusion workflows are observable. The Hunt.io case does not measure autonomous share or establish state sponsorship; PoCs, lab tests and telemetry still do not prove fully autonomous strategic offense."
     }
   ],
   "countries": [
@@ -49750,7 +50005,7 @@
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
     ],
-    "edge_count": 431,
+    "edge_count": 433,
     "v0_13_added_evidence": 6,
     "v0_13_added_edges": 6,
     "v0_14_added_evidence": 11,
@@ -49783,6 +50038,9 @@
     "v0_19_updated_claim_checks": [
       "CLM_027_TRUSTED_CONTEXT_EXECUTABLE_AUTHORITY"
     ],
+    "v0_20_added_evidence": 1,
+    "v0_20_added_edges": 2,
+    "v0_20_added_arcs": [],
     "computed_arc_count": 24,
     "computed_arc_to_thesis_counts": {
       "ARC_EXPORT_CHIPS_TO_MODELS": 2,
@@ -50395,6 +50653,25 @@
       ]
     },
     {
+      "id": "src-134",
+      "title": "Anthropic Threat Intelligence",
+      "name": "Anthropic Threat Intelligence",
+      "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+      "type": "Company / vendor",
+      "date": "2025-11-13",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
+          "kind": "event"
+        },
+        {
+          "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-21",
       "title": "arXiv",
       "name": "arXiv",
@@ -50737,7 +51014,7 @@
       ]
     },
     {
-      "id": "src-344",
+      "id": "src-346",
       "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -50832,7 +51109,7 @@
       ]
     },
     {
-      "id": "src-312",
+      "id": "src-314",
       "title": "CRS R48642 PDF",
       "name": "CRS R48642 PDF",
       "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -50908,7 +51185,7 @@
       ]
     },
     {
-      "id": "src-336",
+      "id": "src-338",
       "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -50927,7 +51204,7 @@
       ]
     },
     {
-      "id": "src-298",
+      "id": "src-300",
       "title": "DeepSeek, Huawei, Export Controls (CSIS)",
       "name": "DeepSeek, Huawei, Export Controls (CSIS)",
       "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -51155,7 +51432,7 @@
       ]
     },
     {
-      "id": "src-299",
+      "id": "src-301",
       "title": "How China's GLM-5 Works",
       "name": "How China's GLM-5 Works",
       "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -51174,7 +51451,7 @@
       ]
     },
     {
-      "id": "src-309",
+      "id": "src-311",
       "title": "India Fuels Its AI Mission With NVIDIA",
       "name": "India Fuels Its AI Mission With NVIDIA",
       "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -51212,7 +51489,7 @@
       ]
     },
     {
-      "id": "src-301",
+      "id": "src-303",
       "title": "Microsoft and U.S. join AI forces in UAE deal",
       "name": "Microsoft and U.S. join AI forces in UAE deal",
       "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -51345,7 +51622,7 @@
       ]
     },
     {
-      "id": "src-333",
+      "id": "src-335",
       "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -51744,7 +52021,7 @@
       ]
     },
     {
-      "id": "src-339",
+      "id": "src-341",
       "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -51972,7 +52249,7 @@
       ]
     },
     {
-      "id": "src-310",
+      "id": "src-312",
       "title": "U.S. Export Controls and China (CRS R48642)",
       "name": "U.S. Export Controls and China (CRS R48642)",
       "url": "https://www.congress.gov/crs-product/R48642",
@@ -52124,7 +52401,7 @@
       ]
     },
     {
-      "id": "src-350",
+      "id": "src-352",
       "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -52139,7 +52416,7 @@
       ]
     },
     {
-      "id": "src-346",
+      "id": "src-348",
       "title": "A Kill Switch for Frontier AI (Lawfare)",
       "name": "A Kill Switch for Frontier AI (Lawfare)",
       "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -52154,7 +52431,7 @@
       ]
     },
     {
-      "id": "src-331",
+      "id": "src-333",
       "title": "A small number of samples can poison LLMs (Anthropic)",
       "name": "A small number of samples can poison LLMs (Anthropic)",
       "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -52169,7 +52446,7 @@
       ]
     },
     {
-      "id": "src-302",
+      "id": "src-304",
       "title": "Advanced AI chips cleared for export to UAE",
       "name": "Advanced AI chips cleared for export to UAE",
       "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -52229,7 +52506,7 @@
       ]
     },
     {
-      "id": "src-330",
+      "id": "src-332",
       "title": "AIxCC finals winners (DARPA)",
       "name": "AIxCC finals winners (DARPA)",
       "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -52244,7 +52521,7 @@
       ]
     },
     {
-      "id": "src-325",
+      "id": "src-327",
       "title": "AIxCC marks pivotal inflection point (DARPA)",
       "name": "AIxCC marks pivotal inflection point (DARPA)",
       "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -52259,7 +52536,7 @@
       ]
     },
     {
-      "id": "src-332",
+      "id": "src-334",
       "title": "Alan Turing Institute summary",
       "name": "Alan Turing Institute summary",
       "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -52409,7 +52686,7 @@
       ]
     },
     {
-      "id": "src-334",
+      "id": "src-336",
       "title": "Anthropic awarded $200M DOD agreement",
       "name": "Anthropic awarded $200M DOD agreement",
       "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -52424,7 +52701,7 @@
       ]
     },
     {
-      "id": "src-327",
+      "id": "src-329",
       "title": "Anthropic claims met with doubt (BleepingComputer)",
       "name": "Anthropic claims met with doubt (BleepingComputer)",
       "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -52454,7 +52731,7 @@
       ]
     },
     {
-      "id": "src-340",
+      "id": "src-342",
       "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -52469,22 +52746,7 @@
       ]
     },
     {
-      "id": "src-134",
-      "title": "Anthropic Threat Intelligence",
-      "name": "Anthropic Threat Intelligence",
-      "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
-      "type": "Company / vendor",
-      "date": "2025-11-13",
-      "primary_or_secondary": "primary",
-      "used_by": [
-        {
-          "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
-          "kind": "event"
-        }
-      ]
-    },
-    {
-      "id": "src-343",
+      "id": "src-345",
       "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -52544,7 +52806,7 @@
       ]
     },
     {
-      "id": "src-348",
+      "id": "src-350",
       "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -52724,7 +52986,7 @@
       ]
     },
     {
-      "id": "src-318",
+      "id": "src-320",
       "title": "Beijing presses Washington (Tech Times)",
       "name": "Beijing presses Washington (Tech Times)",
       "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -52739,7 +53001,7 @@
       ]
     },
     {
-      "id": "src-329",
+      "id": "src-331",
       "title": "Big Sleep agent makes big leap (Google Cloud)",
       "name": "Big Sleep agent makes big leap (Google Cloud)",
       "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -52754,7 +53016,7 @@
       ]
     },
     {
-      "id": "src-313",
+      "id": "src-315",
       "title": "BIS press release: rescission",
       "name": "BIS press release: rescission",
       "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -52784,7 +53046,7 @@
       ]
     },
     {
-      "id": "src-335",
+      "id": "src-337",
       "title": "Breaking Defense: $200M each for agentic AI",
       "name": "Breaking Defense: $200M each for agentic AI",
       "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -52799,7 +53061,7 @@
       ]
     },
     {
-      "id": "src-338",
+      "id": "src-340",
       "title": "Built for Purpose? EU AI Gigafactories (Interface)",
       "name": "Built for Purpose? EU AI Gigafactories (Interface)",
       "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -52839,6 +53101,21 @@
       "used_by": [
         {
           "id": "SIG_2026_ALIBABA_CLAUDE_CODE_BAN",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-291",
+      "title": "Suspected China-Linked Threat Actor Targets Global Manufacturer",
+      "name": "Cato CTRL",
+      "url": "https://www.catonetworks.com/blog/cato-ctrl-suspected-china-linked-threat-actor-targets-global-manufacturer/",
+      "type": "Company / vendor",
+      "date": "2026-05",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
           "kind": "event"
         }
       ]
@@ -52889,7 +53166,7 @@
       ]
     },
     {
-      "id": "src-317",
+      "id": "src-319",
       "title": "China Export Controls: Critical Minerals (Andersen Institute)",
       "name": "China Export Controls: Critical Minerals (Andersen Institute)",
       "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -52904,7 +53181,7 @@
       ]
     },
     {
-      "id": "src-345",
+      "id": "src-347",
       "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -52949,7 +53226,7 @@
       ]
     },
     {
-      "id": "src-347",
+      "id": "src-349",
       "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -53009,7 +53286,7 @@
       ]
     },
     {
-      "id": "src-349",
+      "id": "src-351",
       "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -53024,7 +53301,7 @@
       ]
     },
     {
-      "id": "src-326",
+      "id": "src-328",
       "title": "Cybersecurity Dive: DARPA touts results",
       "name": "Cybersecurity Dive: DARPA touts results",
       "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -53084,7 +53361,7 @@
       ]
     },
     {
-      "id": "src-300",
+      "id": "src-302",
       "title": "DeepSeek V4 and R2 Deep Dive",
       "name": "DeepSeek V4 and R2 Deep Dive",
       "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -53144,7 +53421,7 @@
       ]
     },
     {
-      "id": "src-306",
+      "id": "src-308",
       "title": "EIB-Commission gigafactories MoU",
       "name": "EIB-Commission gigafactories MoU",
       "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -53699,7 +53976,7 @@
       ]
     },
     {
-      "id": "src-321",
+      "id": "src-323",
       "title": "H.R.3447 text (Congress.gov)",
       "name": "H.R.3447 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -53714,7 +53991,7 @@
       ]
     },
     {
-      "id": "src-323",
+      "id": "src-325",
       "title": "H.R.6875 titles (Congress.gov)",
       "name": "H.R.6875 titles (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -53759,7 +54036,7 @@
       ]
     },
     {
-      "id": "src-324",
+      "id": "src-326",
       "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -53774,7 +54051,7 @@
       ]
     },
     {
-      "id": "src-314",
+      "id": "src-316",
       "title": "Hogan Lovells analysis",
       "name": "Hogan Lovells analysis",
       "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -53789,7 +54066,7 @@
       ]
     },
     {
-      "id": "src-322",
+      "id": "src-324",
       "title": "House Select Committee: Chip Security Act passage",
       "name": "House Select Committee: Chip Security Act passage",
       "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -53804,7 +54081,7 @@
       ]
     },
     {
-      "id": "src-297",
+      "id": "src-299",
       "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -53819,7 +54096,7 @@
       ]
     },
     {
-      "id": "src-337",
+      "id": "src-339",
       "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -53834,7 +54111,7 @@
       ]
     },
     {
-      "id": "src-303",
+      "id": "src-305",
       "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -53845,6 +54122,21 @@
         {
           "id": "tier-ksa-01",
           "kind": "claim"
+        }
+      ]
+    },
+    {
+      "id": "src-290",
+      "title": "Suspected Chinese Operators Use Claude Code and DeepSeek to Breach Government Systems Across Four Countries",
+      "name": "Hunt.io",
+      "url": "https://hunt.io/blog/chinese-operators-claude-deepseek-government-intrusion",
+      "type": "Company / vendor",
+      "date": "2026-07-14",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+          "kind": "event"
         }
       ]
     },
@@ -53864,7 +54156,7 @@
       ]
     },
     {
-      "id": "src-292",
+      "id": "src-294",
       "title": "Hyperscaler capex trend",
       "name": "Hyperscaler capex trend",
       "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -53879,7 +54171,7 @@
       ]
     },
     {
-      "id": "src-296",
+      "id": "src-298",
       "title": "Hyperscaler cloud share",
       "name": "Hyperscaler cloud share",
       "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -53969,7 +54261,7 @@
       ]
     },
     {
-      "id": "src-304",
+      "id": "src-306",
       "title": "Introducing Stargate UK",
       "name": "Introducing Stargate UK",
       "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -54014,7 +54306,7 @@
       ]
     },
     {
-      "id": "src-311",
+      "id": "src-313",
       "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -54314,7 +54606,7 @@
       ]
     },
     {
-      "id": "src-316",
+      "id": "src-318",
       "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -54509,7 +54801,7 @@
       ]
     },
     {
-      "id": "src-308",
+      "id": "src-310",
       "title": "PIB: India common computing facility",
       "name": "PIB: India common computing facility",
       "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -55034,7 +55326,7 @@
       ]
     },
     {
-      "id": "src-319",
+      "id": "src-321",
       "title": "S.3150 text (Congress.gov)",
       "name": "S.3150 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -55049,7 +55341,7 @@
       ]
     },
     {
-      "id": "src-320",
+      "id": "src-322",
       "title": "Senate Banking GAIN AI Act release",
       "name": "Senate Banking GAIN AI Act release",
       "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -55079,7 +55371,7 @@
       ]
     },
     {
-      "id": "src-295",
+      "id": "src-297",
       "title": "Stanford 2026 AI Index (via BigGo)",
       "name": "Stanford 2026 AI Index (via BigGo)",
       "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -55094,7 +55386,7 @@
       ]
     },
     {
-      "id": "src-294",
+      "id": "src-296",
       "title": "Stanford AI Index 2026 (via TNW)",
       "name": "Stanford AI Index 2026 (via TNW)",
       "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -55109,7 +55401,7 @@
       ]
     },
     {
-      "id": "src-293",
+      "id": "src-295",
       "title": "Stargate stalls (The Information via The Decoder)",
       "name": "Stargate stalls (The Information via The Decoder)",
       "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -55124,7 +55416,7 @@
       ]
     },
     {
-      "id": "src-305",
+      "id": "src-307",
       "title": "Stargate UK paused (Data Centre Magazine)",
       "name": "Stargate UK paused (Data Centre Magazine)",
       "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -55199,7 +55491,7 @@
       ]
     },
     {
-      "id": "src-291",
+      "id": "src-293",
       "title": "Tech AI spending may approach $700 billion this year",
       "name": "Tech AI spending may approach $700 billion this year",
       "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -55244,7 +55536,7 @@
       ]
     },
     {
-      "id": "src-290",
+      "id": "src-292",
       "title": "The 2025 AI Index Report",
       "name": "The 2025 AI Index Report",
       "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -55379,7 +55671,7 @@
       ]
     },
     {
-      "id": "src-342",
+      "id": "src-344",
       "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -55394,7 +55686,7 @@
       ]
     },
     {
-      "id": "src-341",
+      "id": "src-343",
       "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -55409,7 +55701,7 @@
       ]
     },
     {
-      "id": "src-315",
+      "id": "src-317",
       "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -55754,7 +56046,7 @@
       ]
     },
     {
-      "id": "src-328",
+      "id": "src-330",
       "title": "What we know and what we're watching (SC Media)",
       "name": "What we know and what we're watching (SC Media)",
       "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -55784,7 +56076,7 @@
       ]
     },
     {
-      "id": "src-307",
+      "id": "src-309",
       "title": "Who Controls Europe's AI Future? (Open Future)",
       "name": "Who Controls Europe's AI Future? (Open Future)",
       "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -55904,7 +56196,7 @@
           ]
         },
         {
-          "id": "src-344",
+          "id": "src-346",
           "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -57891,7 +58183,7 @@
           ]
         },
         {
-          "id": "src-304",
+          "id": "src-306",
           "title": "Introducing Stargate UK",
           "name": "Introducing Stargate UK",
           "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -58116,7 +58408,26 @@
           ]
         },
         {
-          "id": "src-339",
+          "id": "src-134",
+          "title": "Anthropic Threat Intelligence",
+          "name": "Anthropic Threat Intelligence",
+          "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+          "type": "Company / vendor",
+          "date": "2025-11-13",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
+              "kind": "event"
+            },
+            {
+              "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-341",
           "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -58135,7 +58446,7 @@
           ]
         },
         {
-          "id": "src-331",
+          "id": "src-333",
           "title": "A small number of samples can poison LLMs (Anthropic)",
           "name": "A small number of samples can poison LLMs (Anthropic)",
           "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -58225,7 +58536,7 @@
           ]
         },
         {
-          "id": "src-334",
+          "id": "src-336",
           "title": "Anthropic awarded $200M DOD agreement",
           "name": "Anthropic awarded $200M DOD agreement",
           "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -58240,7 +58551,7 @@
           ]
         },
         {
-          "id": "src-327",
+          "id": "src-329",
           "title": "Anthropic claims met with doubt (BleepingComputer)",
           "name": "Anthropic claims met with doubt (BleepingComputer)",
           "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -58265,21 +58576,6 @@
           "used_by": [
             {
               "id": "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE",
-              "kind": "event"
-            }
-          ]
-        },
-        {
-          "id": "src-134",
-          "title": "Anthropic Threat Intelligence",
-          "name": "Anthropic Threat Intelligence",
-          "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
-          "type": "Company / vendor",
-          "date": "2025-11-13",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE",
               "kind": "event"
             }
           ]
@@ -58325,6 +58621,14 @@
           "id": "cogsec-14"
         },
         {
+          "kind": "event",
+          "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION"
+        },
+        {
           "kind": "claim",
           "id": "export-13"
         },
@@ -58363,10 +58667,6 @@
         {
           "kind": "event",
           "id": "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE"
         },
         {
           "kind": "event",
@@ -58466,7 +58766,7 @@
           ]
         },
         {
-          "id": "src-313",
+          "id": "src-315",
           "title": "BIS press release: rescission",
           "name": "BIS press release: rescission",
           "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -58511,7 +58811,7 @@
           ]
         },
         {
-          "id": "src-347",
+          "id": "src-349",
           "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -58698,7 +58998,7 @@
           ]
         },
         {
-          "id": "src-301",
+          "id": "src-303",
           "title": "Microsoft and U.S. join AI forces in UAE deal",
           "name": "Microsoft and U.S. join AI forces in UAE deal",
           "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -58717,7 +59017,7 @@
           ]
         },
         {
-          "id": "src-302",
+          "id": "src-304",
           "title": "Advanced AI chips cleared for export to UAE",
           "name": "Advanced AI chips cleared for export to UAE",
           "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -58792,7 +59092,7 @@
           ]
         },
         {
-          "id": "src-341",
+          "id": "src-343",
           "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -58882,7 +59182,7 @@
           ]
         },
         {
-          "id": "src-312",
+          "id": "src-314",
           "title": "CRS R48642 PDF",
           "name": "CRS R48642 PDF",
           "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -58920,7 +59220,7 @@
           ]
         },
         {
-          "id": "src-310",
+          "id": "src-312",
           "title": "U.S. Export Controls and China (CRS R48642)",
           "name": "U.S. Export Controls and China (CRS R48642)",
           "url": "https://www.congress.gov/crs-product/R48642",
@@ -58954,7 +59254,7 @@
           ]
         },
         {
-          "id": "src-321",
+          "id": "src-323",
           "title": "H.R.3447 text (Congress.gov)",
           "name": "H.R.3447 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -58969,7 +59269,7 @@
           ]
         },
         {
-          "id": "src-323",
+          "id": "src-325",
           "title": "H.R.6875 titles (Congress.gov)",
           "name": "H.R.6875 titles (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -58984,7 +59284,7 @@
           ]
         },
         {
-          "id": "src-319",
+          "id": "src-321",
           "title": "S.3150 text (Congress.gov)",
           "name": "S.3150 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -59124,7 +59424,7 @@
           ]
         },
         {
-          "id": "src-295",
+          "id": "src-297",
           "title": "Stanford 2026 AI Index (via BigGo)",
           "name": "Stanford 2026 AI Index (via BigGo)",
           "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -59139,7 +59439,7 @@
           ]
         },
         {
-          "id": "src-294",
+          "id": "src-296",
           "title": "Stanford AI Index 2026 (via TNW)",
           "name": "Stanford AI Index 2026 (via TNW)",
           "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -59154,7 +59454,7 @@
           ]
         },
         {
-          "id": "src-290",
+          "id": "src-292",
           "title": "The 2025 AI Index Report",
           "name": "The 2025 AI Index Report",
           "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -59447,7 +59747,7 @@
           ]
         },
         {
-          "id": "src-340",
+          "id": "src-342",
           "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -59629,7 +59929,7 @@
           ]
         },
         {
-          "id": "src-343",
+          "id": "src-345",
           "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -59809,7 +60109,7 @@
       "family": "CNBC",
       "sources": [
         {
-          "id": "src-336",
+          "id": "src-338",
           "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -59843,7 +60143,7 @@
           ]
         },
         {
-          "id": "src-291",
+          "id": "src-293",
           "title": "Tech AI spending may approach $700 billion this year",
           "name": "Tech AI spending may approach $700 billion this year",
           "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -59858,7 +60158,7 @@
           ]
         },
         {
-          "id": "src-342",
+          "id": "src-344",
           "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -60008,7 +60308,7 @@
           ]
         },
         {
-          "id": "src-329",
+          "id": "src-331",
           "title": "Big Sleep agent makes big leap (Google Cloud)",
           "name": "Big Sleep agent makes big leap (Google Cloud)",
           "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -60085,7 +60385,7 @@
           ]
         },
         {
-          "id": "src-298",
+          "id": "src-300",
           "title": "DeepSeek, Huawei, Export Controls (CSIS)",
           "name": "DeepSeek, Huawei, Export Controls (CSIS)",
           "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -60128,7 +60428,7 @@
       ]
     },
     {
-      "id": "source-group-104",
+      "id": "source-group-106",
       "family": "Microsoft",
       "sources": [
         {
@@ -60230,7 +60530,7 @@
       ]
     },
     {
-      "id": "source-group-122",
+      "id": "source-group-124",
       "family": "rg.ru",
       "sources": [
         {
@@ -60318,7 +60618,7 @@
       ]
     },
     {
-      "id": "source-group-130",
+      "id": "source-group-132",
       "family": "The Guardian",
       "sources": [
         {
@@ -60429,7 +60729,7 @@
           ]
         },
         {
-          "id": "src-345",
+          "id": "src-347",
           "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -60601,7 +60901,7 @@
       "family": "darpa.mil",
       "sources": [
         {
-          "id": "src-325",
+          "id": "src-327",
           "title": "AIxCC marks pivotal inflection point (DARPA)",
           "name": "AIxCC marks pivotal inflection point (DARPA)",
           "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -60681,7 +60981,7 @@
       ]
     },
     {
-      "id": "source-group-85",
+      "id": "source-group-86",
       "family": "government.ru",
       "sources": [
         {
@@ -60863,7 +61163,7 @@
       ]
     },
     {
-      "id": "source-group-98",
+      "id": "source-group-100",
       "family": "ai.meta.com",
       "sources": [
         {
@@ -61012,7 +61312,7 @@
       "family": "blogs.nvidia.com",
       "sources": [
         {
-          "id": "src-309",
+          "id": "src-311",
           "title": "India Fuels Its AI Mission With NVIDIA",
           "name": "India Fuels Its AI Mission With NVIDIA",
           "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -61256,7 +61556,7 @@
       ]
     },
     {
-      "id": "source-group-136",
+      "id": "source-group-138",
       "family": "files.gao.gov",
       "sources": [
         {
@@ -61305,7 +61605,7 @@
       ]
     },
     {
-      "id": "source-group-77",
+      "id": "source-group-78",
       "family": "ftc.gov",
       "sources": [
         {
@@ -61355,7 +61655,7 @@
       ]
     },
     {
-      "id": "source-group-135",
+      "id": "source-group-137",
       "family": "gao.gov",
       "sources": [
         {
@@ -61617,7 +61917,7 @@
       "family": "letsdatascience.com",
       "sources": [
         {
-          "id": "src-299",
+          "id": "src-301",
           "title": "How China's GLM-5 Works",
           "name": "How China's GLM-5 Works",
           "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -61655,7 +61955,7 @@
       "family": "owasp.org",
       "sources": [
         {
-          "id": "src-333",
+          "id": "src-335",
           "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -61727,7 +62027,7 @@
       ]
     },
     {
-      "id": "source-group-84",
+      "id": "source-group-85",
       "family": "pib.gov.in",
       "sources": [
         {
@@ -61746,7 +62046,7 @@
           ]
         },
         {
-          "id": "src-308",
+          "id": "src-310",
           "title": "PIB: India common computing facility",
           "name": "PIB: India common computing facility",
           "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -61777,7 +62077,7 @@
       ]
     },
     {
-      "id": "source-group-115",
+      "id": "source-group-117",
       "family": "publication.pravo.gov.ru",
       "sources": [
         {
@@ -61902,7 +62202,7 @@
       ]
     },
     {
-      "id": "source-group-76",
+      "id": "source-group-77",
       "family": "search.ftc.gov",
       "sources": [
         {
@@ -61990,7 +62290,7 @@
       ]
     },
     {
-      "id": "source-group-127",
+      "id": "source-group-129",
       "family": "sysdig.com",
       "sources": [
         {
@@ -62184,7 +62484,7 @@
       ]
     },
     {
-      "id": "source-group-75",
+      "id": "source-group-76",
       "family": "US Government / GovInfo",
       "sources": [
         {
@@ -62233,7 +62533,7 @@
       ]
     },
     {
-      "id": "source-group-116",
+      "id": "source-group-118",
       "family": "x.ai",
       "sources": [
         {
@@ -62282,7 +62582,7 @@
       ]
     },
     {
-      "id": "source-group-121",
+      "id": "source-group-123",
       "family": "agentsofchaos.baulab.info",
       "sources": [
         {
@@ -62312,7 +62612,7 @@
       ]
     },
     {
-      "id": "source-group-83",
+      "id": "source-group-84",
       "family": "ai.google.dev",
       "sources": [
         {
@@ -62346,7 +62646,7 @@
       "family": "aicyberchallenge.com",
       "sources": [
         {
-          "id": "src-330",
+          "id": "src-332",
           "title": "AIxCC finals winners (DARPA)",
           "name": "AIxCC finals winners (DARPA)",
           "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -62432,11 +62732,11 @@
       ]
     },
     {
-      "id": "source-group-64",
+      "id": "source-group-65",
       "family": "anderseninstitute.org",
       "sources": [
         {
-          "id": "src-317",
+          "id": "src-319",
           "title": "China Export Controls: Critical Minerals (Andersen Institute)",
           "name": "China Export Controls: Critical Minerals (Andersen Institute)",
           "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -62462,7 +62762,7 @@
       ]
     },
     {
-      "id": "source-group-70",
+      "id": "source-group-71",
       "family": "api-docs.deepseek.com",
       "sources": [
         {
@@ -62492,11 +62792,11 @@
       ]
     },
     {
-      "id": "source-group-124",
+      "id": "source-group-126",
       "family": "banking.senate.gov",
       "sources": [
         {
-          "id": "src-320",
+          "id": "src-322",
           "title": "Senate Banking GAIN AI Act release",
           "name": "Senate Banking GAIN AI Act release",
           "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -62556,7 +62856,7 @@
       "family": "breakingdefense.com",
       "sources": [
         {
-          "id": "src-335",
+          "id": "src-337",
           "title": "Breaking Defense: $200M each for agentic AI",
           "name": "Breaking Defense: $200M each for agentic AI",
           "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -62642,7 +62942,7 @@
       ]
     },
     {
-      "id": "source-group-134",
+      "id": "source-group-136",
       "family": "cases.justia.com",
       "sources": [
         {
@@ -62673,6 +62973,36 @@
     },
     {
       "id": "source-group-61",
+      "family": "catonetworks.com",
+      "sources": [
+        {
+          "id": "src-291",
+          "title": "Suspected China-Linked Threat Actor Targets Global Manufacturer",
+          "name": "Cato CTRL",
+          "url": "https://www.catonetworks.com/blog/cato-ctrl-suspected-china-linked-threat-actor-targets-global-manufacturer/",
+          "type": "Company / vendor",
+          "date": "2026-05",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION"
+        }
+      ],
+      "types": [
+        "Company / vendor"
+      ]
+    },
+    {
+      "id": "source-group-62",
       "family": "censys.com",
       "sources": [
         {
@@ -62702,7 +63032,7 @@
       ]
     },
     {
-      "id": "source-group-62",
+      "id": "source-group-63",
       "family": "cerebras.ai",
       "sources": [
         {
@@ -62732,11 +63062,11 @@
       ]
     },
     {
-      "id": "source-group-90",
+      "id": "source-group-91",
       "family": "chinaselectcommittee.house.gov",
       "sources": [
         {
-          "id": "src-322",
+          "id": "src-324",
           "title": "House Select Committee: Chip Security Act passage",
           "name": "House Select Committee: Chip Security Act passage",
           "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -62762,7 +63092,7 @@
       ]
     },
     {
-      "id": "source-group-133",
+      "id": "source-group-135",
       "family": "cisa.gov",
       "sources": [
         {
@@ -62792,7 +63122,7 @@
       ]
     },
     {
-      "id": "source-group-65",
+      "id": "source-group-66",
       "family": "consultant.ru",
       "sources": [
         {
@@ -62867,11 +63197,11 @@
       ]
     },
     {
-      "id": "source-group-68",
+      "id": "source-group-69",
       "family": "cybersecuritydive.com",
       "sources": [
         {
-          "id": "src-326",
+          "id": "src-328",
           "title": "Cybersecurity Dive: DARPA touts results",
           "name": "Cybersecurity Dive: DARPA touts results",
           "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -62897,11 +63227,11 @@
       ]
     },
     {
-      "id": "source-group-126",
+      "id": "source-group-128",
       "family": "datacentremagazine.com",
       "sources": [
         {
-          "id": "src-305",
+          "id": "src-307",
           "title": "Stargate UK paused (Data Centre Magazine)",
           "name": "Stargate UK paused (Data Centre Magazine)",
           "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -62931,7 +63261,7 @@
       "family": "defensescoop.com",
       "sources": [
         {
-          "id": "src-348",
+          "id": "src-350",
           "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -62957,11 +63287,11 @@
       ]
     },
     {
-      "id": "source-group-72",
+      "id": "source-group-73",
       "family": "eib.org",
       "sources": [
         {
-          "id": "src-306",
+          "id": "src-308",
           "title": "EIB-Commission gigafactories MoU",
           "name": "EIB-Commission gigafactories MoU",
           "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -62987,7 +63317,7 @@
       ]
     },
     {
-      "id": "source-group-73",
+      "id": "source-group-74",
       "family": "elysee.fr",
       "sources": [
         {
@@ -63017,11 +63347,11 @@
       ]
     },
     {
-      "id": "source-group-95",
+      "id": "source-group-97",
       "family": "epoch.ai",
       "sources": [
         {
-          "id": "src-292",
+          "id": "src-294",
           "title": "Hyperscaler capex trend",
           "name": "Hyperscaler capex trend",
           "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -63047,11 +63377,11 @@
       ]
     },
     {
-      "id": "source-group-114",
+      "id": "source-group-116",
       "family": "finance.yahoo.com",
       "sources": [
         {
-          "id": "src-316",
+          "id": "src-318",
           "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -63077,7 +63407,7 @@
       ]
     },
     {
-      "id": "source-group-79",
+      "id": "source-group-80",
       "family": "flare.io",
       "sources": [
         {
@@ -63107,7 +63437,7 @@
       ]
     },
     {
-      "id": "source-group-111",
+      "id": "source-group-113",
       "family": "flk.npc.gov.cn",
       "sources": [
         {
@@ -63137,11 +63467,11 @@
       ]
     },
     {
-      "id": "source-group-88",
+      "id": "source-group-89",
       "family": "foreignaffairs.house.gov",
       "sources": [
         {
-          "id": "src-324",
+          "id": "src-326",
           "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -63167,7 +63497,7 @@
       ]
     },
     {
-      "id": "source-group-78",
+      "id": "source-group-79",
       "family": "fsb.org",
       "sources": [
         {
@@ -63197,7 +63527,7 @@
       ]
     },
     {
-      "id": "source-group-81",
+      "id": "source-group-82",
       "family": "g42.ai",
       "sources": [
         {
@@ -63227,7 +63557,7 @@
       ]
     },
     {
-      "id": "source-group-82",
+      "id": "source-group-83",
       "family": "garant.ru",
       "sources": [
         {
@@ -63257,7 +63587,7 @@
       ]
     },
     {
-      "id": "source-group-86",
+      "id": "source-group-87",
       "family": "government.nl",
       "sources": [
         {
@@ -63287,7 +63617,7 @@
       ]
     },
     {
-      "id": "source-group-71",
+      "id": "source-group-72",
       "family": "gur.gov.ua",
       "sources": [
         {
@@ -63317,7 +63647,7 @@
       ]
     },
     {
-      "id": "source-group-80",
+      "id": "source-group-81",
       "family": "gxt.fujian.gov.cn",
       "sources": [
         {
@@ -63347,7 +63677,7 @@
       ]
     },
     {
-      "id": "source-group-87",
+      "id": "source-group-88",
       "family": "habr.com",
       "sources": [
         {
@@ -63377,11 +63707,11 @@
       ]
     },
     {
-      "id": "source-group-89",
+      "id": "source-group-90",
       "family": "hoganlovells.com",
       "sources": [
         {
-          "id": "src-314",
+          "id": "src-316",
           "title": "Hogan Lovells analysis",
           "name": "Hogan Lovells analysis",
           "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -63407,7 +63737,37 @@
       ]
     },
     {
-      "id": "source-group-94",
+      "id": "source-group-95",
+      "family": "hunt.io",
+      "sources": [
+        {
+          "id": "src-290",
+          "title": "Suspected Chinese Operators Use Claude Code and DeepSeek to Breach Government Systems Across Four Countries",
+          "name": "Hunt.io",
+          "url": "https://hunt.io/blog/chinese-operators-claude-deepseek-government-intrusion",
+          "type": "Company / vendor",
+          "date": "2026-07-14",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION"
+        }
+      ],
+      "types": [
+        "Company / vendor"
+      ]
+    },
+    {
+      "id": "source-group-96",
       "family": "Huntress",
       "sources": [
         {
@@ -63437,7 +63797,7 @@
       ]
     },
     {
-      "id": "source-group-97",
+      "id": "source-group-99",
       "family": "iea.org",
       "sources": [
         {
@@ -63486,7 +63846,7 @@
       "family": "interface-eu.org",
       "sources": [
         {
-          "id": "src-338",
+          "id": "src-340",
           "title": "Built for Purpose? EU AI Gigafactories (Interface)",
           "name": "Built for Purpose? EU AI Gigafactories (Interface)",
           "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -63512,7 +63872,7 @@
       ]
     },
     {
-      "id": "source-group-113",
+      "id": "source-group-115",
       "family": "investopedia.com",
       "sources": [
         {
@@ -63542,7 +63902,7 @@
       ]
     },
     {
-      "id": "source-group-66",
+      "id": "source-group-67",
       "family": "investors.coreweave.com",
       "sources": [
         {
@@ -63572,11 +63932,11 @@
       ]
     },
     {
-      "id": "source-group-100",
+      "id": "source-group-102",
       "family": "kirkland.com",
       "sources": [
         {
-          "id": "src-311",
+          "id": "src-313",
           "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -63606,7 +63966,7 @@
       "family": "lawfaremedia.org",
       "sources": [
         {
-          "id": "src-346",
+          "id": "src-348",
           "title": "A Kill Switch for Frontier AI (Lawfare)",
           "name": "A Kill Switch for Frontier AI (Lawfare)",
           "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -63632,7 +63992,7 @@
       ]
     },
     {
-      "id": "source-group-101",
+      "id": "source-group-103",
       "family": "marketwatch.com",
       "sources": [
         {
@@ -63662,7 +64022,7 @@
       ]
     },
     {
-      "id": "source-group-102",
+      "id": "source-group-104",
       "family": "McKinsey",
       "sources": [
         {
@@ -63692,11 +64052,11 @@
       ]
     },
     {
-      "id": "source-group-69",
+      "id": "source-group-70",
       "family": "meta-intelligence.tech",
       "sources": [
         {
-          "id": "src-300",
+          "id": "src-302",
           "title": "DeepSeek V4 and R2 Deep Dive",
           "name": "DeepSeek V4 and R2 Deep Dive",
           "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -63722,7 +64082,7 @@
       ]
     },
     {
-      "id": "source-group-99",
+      "id": "source-group-101",
       "family": "meti.go.jp",
       "sources": [
         {
@@ -63752,7 +64112,7 @@
       ]
     },
     {
-      "id": "source-group-105",
+      "id": "source-group-107",
       "family": "mod.gov.ua",
       "sources": [
         {
@@ -63782,7 +64142,7 @@
       ]
     },
     {
-      "id": "source-group-106",
+      "id": "source-group-108",
       "family": "Morgan Stanley",
       "sources": [
         {
@@ -63812,7 +64172,7 @@
       ]
     },
     {
-      "id": "source-group-107",
+      "id": "source-group-109",
       "family": "mubadala.com",
       "sources": [
         {
@@ -63842,7 +64202,7 @@
       ]
     },
     {
-      "id": "source-group-112",
+      "id": "source-group-114",
       "family": "nato.int",
       "sources": [
         {
@@ -63872,7 +64232,7 @@
       ]
     },
     {
-      "id": "source-group-108",
+      "id": "source-group-110",
       "family": "nber.org",
       "sources": [
         {
@@ -63902,7 +64262,7 @@
       ]
     },
     {
-      "id": "source-group-63",
+      "id": "source-group-64",
       "family": "news.cgtn.com",
       "sources": [
         {
@@ -63932,11 +64292,11 @@
       ]
     },
     {
-      "id": "source-group-92",
+      "id": "source-group-93",
       "family": "newsletter.semianalysis.com",
       "sources": [
         {
-          "id": "src-337",
+          "id": "src-339",
           "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -63962,7 +64322,7 @@
       ]
     },
     {
-      "id": "source-group-110",
+      "id": "source-group-112",
       "family": "npc.gov.cn",
       "sources": [
         {
@@ -63992,11 +64352,11 @@
       ]
     },
     {
-      "id": "source-group-132",
+      "id": "source-group-134",
       "family": "NPR",
       "sources": [
         {
-          "id": "src-315",
+          "id": "src-317",
           "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -64022,11 +64382,11 @@
       ]
     },
     {
-      "id": "source-group-141",
+      "id": "source-group-143",
       "family": "openfuture.eu",
       "sources": [
         {
-          "id": "src-307",
+          "id": "src-309",
           "title": "Who Controls Europe's AI Future? (Open Future)",
           "name": "Who Controls Europe's AI Future? (Open Future)",
           "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -64052,7 +64412,7 @@
       ]
     },
     {
-      "id": "source-group-117",
+      "id": "source-group-119",
       "family": "opensource.org",
       "sources": [
         {
@@ -64082,7 +64442,7 @@
       ]
     },
     {
-      "id": "source-group-119",
+      "id": "source-group-121",
       "family": "pm.gc.ca",
       "sources": [
         {
@@ -64112,7 +64472,7 @@
       ]
     },
     {
-      "id": "source-group-118",
+      "id": "source-group-120",
       "family": "PoC-in-GitHub",
       "sources": [
         {
@@ -64142,11 +64502,11 @@
       ]
     },
     {
-      "id": "source-group-93",
+      "id": "source-group-94",
       "family": "prnewswire.com",
       "sources": [
         {
-          "id": "src-303",
+          "id": "src-305",
           "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -64172,7 +64532,7 @@
       ]
     },
     {
-      "id": "source-group-120",
+      "id": "source-group-122",
       "family": "rand.org",
       "sources": [
         {
@@ -64217,11 +64577,11 @@
       ]
     },
     {
-      "id": "source-group-91",
+      "id": "source-group-92",
       "family": "recodechinaai.substack.com",
       "sources": [
         {
-          "id": "src-297",
+          "id": "src-299",
           "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -64247,7 +64607,7 @@
       ]
     },
     {
-      "id": "source-group-74",
+      "id": "source-group-75",
       "family": "redditinc.com",
       "sources": [
         {
@@ -64277,11 +64637,11 @@
       ]
     },
     {
-      "id": "source-group-140",
+      "id": "source-group-142",
       "family": "scworld.com",
       "sources": [
         {
-          "id": "src-328",
+          "id": "src-330",
           "title": "What we know and what we're watching (SC Media)",
           "name": "What we know and what we're watching (SC Media)",
           "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -64307,7 +64667,7 @@
       ]
     },
     {
-      "id": "source-group-128",
+      "id": "source-group-130",
       "family": "so-ups.ru",
       "sources": [
         {
@@ -64337,7 +64697,7 @@
       ]
     },
     {
-      "id": "source-group-123",
+      "id": "source-group-125",
       "family": "storage.consultant.ru",
       "sources": [
         {
@@ -64371,7 +64731,7 @@
       "family": "Tech Times",
       "sources": [
         {
-          "id": "src-318",
+          "id": "src-320",
           "title": "Beijing presses Washington (Tech Times)",
           "name": "Beijing presses Washington (Tech Times)",
           "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -64397,11 +64757,11 @@
       ]
     },
     {
-      "id": "source-group-96",
+      "id": "source-group-98",
       "family": "techblog.comsoc.org",
       "sources": [
         {
-          "id": "src-296",
+          "id": "src-298",
           "title": "Hyperscaler cloud share",
           "name": "Hyperscaler cloud share",
           "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -64427,7 +64787,7 @@
       ]
     },
     {
-      "id": "source-group-129",
+      "id": "source-group-131",
       "family": "techcrunch.com",
       "sources": [
         {
@@ -64457,11 +64817,11 @@
       ]
     },
     {
-      "id": "source-group-125",
+      "id": "source-group-127",
       "family": "the-decoder.com",
       "sources": [
         {
-          "id": "src-293",
+          "id": "src-295",
           "title": "Stargate stalls (The Information via The Decoder)",
           "name": "Stargate stalls (The Information via The Decoder)",
           "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -64487,11 +64847,11 @@
       ]
     },
     {
-      "id": "source-group-67",
+      "id": "source-group-68",
       "family": "thestar.com.my",
       "sources": [
         {
-          "id": "src-349",
+          "id": "src-351",
           "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -64521,7 +64881,7 @@
       "family": "Tom's Hardware",
       "sources": [
         {
-          "id": "src-350",
+          "id": "src-352",
           "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -64551,7 +64911,7 @@
       "family": "turing.ac.uk",
       "sources": [
         {
-          "id": "src-332",
+          "id": "src-334",
           "title": "Alan Turing Institute summary",
           "name": "Alan Turing Institute summary",
           "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -64577,7 +64937,7 @@
       ]
     },
     {
-      "id": "source-group-137",
+      "id": "source-group-139",
       "family": "unit42.paloaltonetworks.com",
       "sources": [
         {
@@ -64607,7 +64967,7 @@
       ]
     },
     {
-      "id": "source-group-131",
+      "id": "source-group-133",
       "family": "US Treasury",
       "sources": [
         {
@@ -64652,7 +65012,7 @@
       ]
     },
     {
-      "id": "source-group-138",
+      "id": "source-group-140",
       "family": "verizon.com",
       "sources": [
         {
@@ -64682,7 +65042,7 @@
       ]
     },
     {
-      "id": "source-group-139",
+      "id": "source-group-141",
       "family": "Washington Post",
       "sources": [
         {
@@ -64712,7 +65072,7 @@
       ]
     },
     {
-      "id": "source-group-142",
+      "id": "source-group-144",
       "family": "Wired",
       "sources": [
         {
@@ -64742,7 +65102,7 @@
       ]
     },
     {
-      "id": "source-group-109",
+      "id": "source-group-111",
       "family": "zfxxgk.ndrc.gov.cn",
       "sources": [
         {
@@ -64772,7 +65132,7 @@
       ]
     },
     {
-      "id": "source-group-103",
+      "id": "source-group-105",
       "family": "zona.media",
       "sources": [
         {
@@ -65809,26 +66169,26 @@
       "arc_families": 6
     },
     "post_merge": {
-      "version": "0.19",
-      "date": "2026-07-14",
-      "evidence": 233,
+      "version": "0.20",
+      "date": "2026-07-15",
+      "evidence": 234,
       "claims": 71,
       "claim_checks": 29,
       "story_arcs": 24,
-      "story_edges": 431,
+      "story_edges": 433,
       "unclassified_geography_event_ids": [],
       "arcs_without_family": []
     }
   },
   "factcheckAudit": {
     "source_candidate_file": "ai_stack_candidate_factcheck_structural_power.json",
-    "research_date": "2026-07-14",
+    "research_date": "2026-07-15",
     "independent_adversarial_review": true,
     "anti_overfit_rule_en": "Do not promote a lab study, vendor scan, public exposure measurement, proposal or forecast into an incident, prevalence estimate, enacted law or measured outcome.",
     "anti_overfit_rule_ru": "Не превращать лабораторное исследование, vendor scan, измерение публичной экспозиции, проект или прогноз в инцидент, prevalence, действующий закон или измеренный итог.",
     "counts": {
-      "source_candidates": 16,
-      "new_atomic_evidence": 12,
+      "source_candidates": 17,
+      "new_atomic_evidence": 13,
       "updated_existing_evidence": 4,
       "updated_claims": 3,
       "updated_claim_checks": 1,
@@ -65915,6 +66275,11 @@
         "candidate_id": "CAND_DARPA_2019_GARD_ADVERSARIAL_ROBUSTNESS",
         "decision": "merged_new",
         "master_id": "SIG_DARPA_2019_GARD_ADVERSARIAL_ROBUSTNESS"
+      },
+      {
+        "candidate_id": "CAND_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+        "decision": "merge_as_distinct_artifact_backed_case",
+        "master_id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION"
       }
     ],
     "corrected_overclaims": [
@@ -65925,8 +66290,22 @@
       "21,639 public OpenClaw instances were vulnerable or compromised.",
       "OpenClaw public exposure and CVE-2026-25253 are one event.",
       "The USAF drone thought experiment or CoastRunners demonstrates structural-power incidents.",
-      "Agentic cyber evidence leaves only strategic scale unproven."
-    ]
+      "Agentic cyber evidence leaves only strategic scale unproven.",
+      "Hunt.io independently confirmed Anthropic GTG-1002.",
+      "The Hunt.io corpus proves a fully autonomous attack.",
+      "Hunt.io attributed the operation to the Chinese state.",
+      "Four national governments or 5,890 hosts were breached."
+    ],
+    "source_candidate_files": [
+      "ai_stack_candidate_factcheck_structural_power.json",
+      "ai_stack_candidate_huntio_claude_deepseek_2026.json"
+    ],
+    "rolling_news_review": {
+      "date": "2026-07-15",
+      "source": "Hunt.io",
+      "evidence_id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+      "review": "Artifact-backed vendor report retained with B/C confidence; no public victim or CERT corroboration found at the research date."
+    }
   },
   "actorTypeLabels": {
     "company": {
@@ -65980,13 +66359,13 @@
   },
   "counts": {
     "geographies": {
-      "US": 122,
+      "US": 123,
       "China": 43,
       "EU": 25,
       "Russia": 21,
       "UK": 15,
+      "Hong Kong": 5,
       "UAE": 5,
-      "Hong Kong": 4,
       "India": 4,
       "Iran": 4,
       "Japan": 4,
@@ -65999,24 +66378,25 @@
       "Germany": 2,
       "Netherlands": 2,
       "Saudi Arabia": 2,
+      "Taiwan": 2,
+      "Thailand": 2,
+      "Afghanistan": 1,
       "Australia": 1,
       "Canada": 1,
       "EEA": 1,
       "Israel": 1,
-      "South Korea": 1,
-      "Taiwan": 1,
-      "Thailand": 1
+      "South Korea": 1
     },
     "geographies_raw": {
-      "US": 119,
+      "US": 120,
       "global": 62,
       "China": 42,
       "Global": 42,
       "EU": 25,
       "Russia": 21,
       "UK": 15,
+      "Hong Kong": 5,
       "UAE": 5,
-      "Hong Kong": 4,
       "India": 4,
       "Iran": 4,
       "Japan": 4,
@@ -66036,6 +66416,9 @@
       "Moscow": 2,
       "Netherlands": 2,
       "Saudi Arabia": 2,
+      "Taiwan": 2,
+      "Thailand": 2,
+      "Afghanistan": 1,
       "allies": 1,
       "Asia": 1,
       "Asia-Pacific": 1,
@@ -66057,8 +66440,6 @@
       "Russia-linked": 1,
       "South Korea": 1,
       "synthetic_evaluation": 1,
-      "Taiwan": 1,
-      "Thailand": 1,
       "underground_market": 1,
       "undisclosed_red_team_client": 1,
       "undisclosed_victim": 1,
@@ -66066,13 +66447,13 @@
       "Western Europe": 1
     },
     "jurisdictions": {
-      "US": 122,
+      "US": 123,
       "China": 43,
       "EU": 25,
       "Russia": 21,
       "UK": 15,
+      "Hong Kong": 5,
       "UAE": 5,
-      "Hong Kong": 4,
       "India": 4,
       "Iran": 4,
       "Japan": 4,
@@ -66085,13 +66466,14 @@
       "Germany": 2,
       "Netherlands": 2,
       "Saudi Arabia": 2,
+      "Taiwan": 2,
+      "Thailand": 2,
+      "Afghanistan": 1,
       "Australia": 1,
       "Canada": 1,
       "EEA": 1,
       "Israel": 1,
-      "South Korea": 1,
-      "Taiwan": 1,
-      "Thailand": 1
+      "South Korea": 1
     },
     "regions": {
       "Europe": 2,
@@ -66131,8 +66513,8 @@
       "Russian government": 10,
       "US Defense": 10,
       "Amazon / AWS": 8,
+      "Claude Code": 7,
       "Nvidia": 7,
-      "Claude Code": 6,
       "DARPA": 4,
       "G42": 4,
       "Oracle": 4,
@@ -66146,6 +66528,7 @@
       "360 Security": 2,
       "Alibaba": 2,
       "CISA": 2,
+      "DeepSeek": 2,
       "European Parliament": 2,
       "Langflow": 2,
       "NATO": 2,
@@ -66162,12 +66545,12 @@
       "CFIUS": 1,
       "Cisco": 1,
       "Cursor": 1,
-      "DeepSeek": 1,
       "ENISA": 1,
       "EU AI Office": 1,
       "EuroHPC Joint Undertaking": 1,
       "European Court of Human Rights": 1,
       "HUMAIN": 1,
+      "Hunt.io": 1,
       "Mozilla": 1,
       "Nebius": 1,
       "News Corp": 1,
@@ -66194,8 +66577,8 @@
       "Russian government": 10,
       "US Defense": 10,
       "Amazon / AWS": 8,
+      "Claude Code": 7,
       "Nvidia": 7,
-      "Claude Code": 6,
       "DARPA": 4,
       "G42": 4,
       "Oracle": 4,
@@ -66209,6 +66592,7 @@
       "360 Security": 2,
       "Alibaba": 2,
       "CISA": 2,
+      "DeepSeek": 2,
       "European Parliament": 2,
       "Langflow": 2,
       "NATO": 2,
@@ -66225,12 +66609,12 @@
       "CFIUS": 1,
       "Cisco": 1,
       "Cursor": 1,
-      "DeepSeek": 1,
       "ENISA": 1,
       "EU AI Office": 1,
       "EuroHPC Joint Undertaking": 1,
       "European Court of Human Rights": 1,
       "HUMAIN": 1,
+      "Hunt.io": 1,
       "Mozilla": 1,
       "Nebius": 1,
       "News Corp": 1,
@@ -66247,7 +66631,7 @@
       "US DOJ": 1
     },
     "actor_types": {
-      "company": 109,
+      "company": 110,
       "government": 73,
       "research": 40,
       "regulator": 31,
@@ -66255,14 +66639,14 @@
       "workforce_users": 22,
       "financial_institution": 17,
       "multilateral": 7,
-      "threat_actor": 6,
+      "threat_actor": 7,
       "media_rights": 5,
       "civil_society": 4,
       "court": 2
     },
     "actor_jurisdictions": {
       "US": 76,
-      "China": 24,
+      "China": 25,
       "EU": 16,
       "Russia": 16,
       "UK": 12,
@@ -66278,7 +66662,7 @@
       "US": 76,
       "OpenAI": 31,
       "Research teams": 27,
-      "China": 24,
+      "China": 25,
       "Anthropic": 20,
       "EU": 16,
       "Microsoft": 16,
@@ -66292,8 +66676,8 @@
       "Russian government": 10,
       "US Defense": 10,
       "Amazon / AWS": 8,
+      "Claude Code": 7,
       "Nvidia": 7,
-      "Claude Code": 6,
       "Multilateral institutions": 5,
       "DARPA": 4,
       "G42": 4,
@@ -66310,6 +66694,7 @@
       "360 Security": 2,
       "Alibaba": 2,
       "CISA": 2,
+      "DeepSeek": 2,
       "European Parliament": 2,
       "Langflow": 2,
       "NATO": 2,
@@ -66327,12 +66712,12 @@
       "CFIUS": 1,
       "Cisco": 1,
       "Cursor": 1,
-      "DeepSeek": 1,
       "ENISA": 1,
       "EU AI Office": 1,
       "EuroHPC Joint Undertaking": 1,
       "European Court of Human Rights": 1,
       "HUMAIN": 1,
+      "Hunt.io": 1,
       "Israel": 1,
       "Malaysia": 1,
       "Mozilla": 1,
@@ -66354,18 +66739,18 @@
     },
     "stack_layers": {
       "governance_law": 143,
-      "decision_support_cognition": 90,
-      "model_weights": 86,
+      "decision_support_cognition": 91,
+      "model_weights": 87,
       "cloud_inference": 83,
       "data_telemetry": 74,
       "energy_compute_chips": 70,
       "finance_rent": 56,
-      "cyber_security_patch": 46
+      "cyber_security_patch": 47
     },
     "source_types": {
       "Government / policy": 73,
       "Press / wire": 67,
-      "Company / vendor": 44,
+      "Company / vendor": 45,
       "Research / preprint": 33,
       "Primary source": 8,
       "Industry / think tank": 4,
@@ -66374,7 +66759,7 @@
     },
     "relation_types": {
       "supports": 215,
-      "supports_with_scope": 48,
+      "supports_with_scope": 49,
       "supports_with_caveat": 28,
       "sets_up": 27,
       "qualifies": 21,
@@ -66387,7 +66772,7 @@
       "mitigates": 5,
       "refines": 5,
       "supports_but_limits": 5,
-      "parallel": 3,
+      "parallel": 4,
       "supports_counterargument": 3,
       "supports_mechanism": 3,
       "challenges_overclaim": 2,
@@ -66405,7 +66790,7 @@
     },
     "arcs": {
       "AUTO_CLAIMCHECK_SUPPORT": 83,
-      "ARC_CYBER_CLAIM_TO_CAVEAT": 34,
+      "ARC_CYBER_CLAIM_TO_CAVEAT": 36,
       "ARC_SOVEREIGN_FLOW_GATING": 30,
       "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY": 29,
       "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 24,
@@ -66433,7 +66818,7 @@
     },
     "arc_families": {
       "ARC_FAMILY_ACCESS_CONTROL": 78,
-      "ARC_FAMILY_CYBER_COGNITION_WAR": 67,
+      "ARC_FAMILY_CYBER_COGNITION_WAR": 69,
       "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 62,
       "ARC_FAMILY_INFRASTRUCTURE_CAPITAL": 48,
       "ARC_FAMILY_DECISION_DATA_FINANCE": 45,
