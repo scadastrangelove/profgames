@@ -14,9 +14,9 @@ Site URL after GitHub Pages deploy:
 | --- | --- |
 | [`index.html`](index.html) | Small entry page for the AI Power package. |
 | [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, timeline, stack heatmap, fact catalog, claim checks and source index. |
-| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.21 storygraph line. |
+| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.22 storygraph line. |
 | [`ai_power_storygraph_en.json`](ai_power_storygraph_en.json) | Machine-readable English storygraph used by the atlas. |
-| [`ai_power_storygraph_ru.json`](ai_power_storygraph_ru.json) | Russian v0.21 master storygraph with facts, claims, edges, sources and graph diagnostics. |
+| [`ai_power_storygraph_ru.json`](ai_power_storygraph_ru.json) | Russian v0.22 master storygraph with facts, claims, edges, sources and graph diagnostics. |
 | [`preprint_release/`](preprint_release/) | **Machine-Speed Cyber and Poisoned Cognition: A Layer-Dependent Game-Theoretic Framework, with Empirical Probes** — HTML, PDF, Markdown source, figures, bibliography and the P1 red-team evidence bundle. |
 | [`selective-permeability/`](selective-permeability/) | **Selective Permeability: A Behavioral-Security Metric for LLM Advisors, with Two Failure Modes of In-Context Provenance Workflows** — preprint (HTML/PDF/Markdown), figures F1–F9 (F9 = model × attack panorama), reproducible harness, and EN/RU write-ups. |
 
@@ -38,12 +38,12 @@ Two preprints are published alongside the atlas:
 
 ## Current Counts
 
-- `237` facts
+- `242` facts
 - `71` claims
 - `29` claim checks
 - `24` exact story arcs in `6` analytical families
-- `438` story edges
-- `359` sources
+- `449` story edges
+- `367` sources
 - `0` hanging arcs after connectivity checks
 
 ## Frame
@@ -73,8 +73,8 @@ The safe wording rule is simple: present contested or partial evidence as contes
 
 ## Provenance
 
-This package was generated from the v0.21 master storygraph built during the AIgeopol research pass.
-Added WAICO founding, Xi Jinping's WAIC open-AI and capacity-building pledge, and Germany's Soofi S sovereign-model preview. Separated institutional fact, political interpretation, future delivery and model release state; updated the China counter-stack, open-weight and cloud-sovereignty arcs without adding a new arc.
+This package was generated from the v0.22 master storygraph built during the AIgeopol research pass.
+Added a five-fact South Korea contour: the year-end sovereign cybersecurity-model plan, continued Anthropic safety/cyber cooperation, the Naver sovereignty-eligibility decision, the Naver-KAI defense-model MOU and Project Canopy eGovFrame results. Updated six existing arcs without adding a new arc.
 
 Public JSON filenames are intentionally versionless. The current version remains inside `meta.version` and the changelog, while the URLs stay stable across rebuilds.
 

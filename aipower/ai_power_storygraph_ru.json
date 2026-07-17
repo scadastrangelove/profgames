@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "ИИ-стек как структурная власть — Combined Master Pack",
-    "version": "0.21",
+    "version": "0.22",
     "created_at": "2026-06-28",
     "updated_at": "2026-07-17",
-    "schema_version": "ai_stack_structural_power.v0.21.0-2026-07-17",
+    "schema_version": "ai_stack_structural_power.v0.22.0-2026-07-17",
     "display_title_ru": "ИИ-стек: четыре структуры власти на одном КПП",
     "display_title_en": "AI stack: four structures of power at one checkpoint",
     "subtitle_ru": "Карта фактов о том, как вычисления, облака, модели, данные, кибер и капитал превращаются в среду по умолчанию: доступ дозируется, зависимость закрепляется, рента собирается.",
@@ -12,6 +12,25 @@
     "source_pack": "ai_stack_storygraph_master.json",
     "method": "ProfGames-style layered organization. Merge of: (a) v0.4 operational pack (evidence/timeline/claim_checks/country_cards/cyber_pack/cognitive_security/critical_decision_use/palantir_case/weekly_memo/gaps), (b) v0.2 factcheck layer (claims with recommended_phrasing_ru/counterarguments/recommendations), (c) new v0.3 research closing the Stanford-tables and chip-license gaps and adding model-layer export-control claims.",
     "changelog": [
+      {
+        "version": "0.22",
+        "date": "2026-07-17",
+        "description": "Added a five-fact South Korea contour: the year-end sovereign cybersecurity-model plan, continued Anthropic safety/cyber cooperation, the Naver sovereignty-eligibility decision, the Naver-KAI defense-model MOU and Project Canopy eGovFrame results. Updated six existing arcs without adding a new arc.",
+        "added_evidence": 5,
+        "added_timeline": 5,
+        "added_claims": 0,
+        "added_claim_checks": 0,
+        "added_story_arcs": 0,
+        "added_story_edges": 11,
+        "updated_story_arcs": [
+          "ARC_CYBER_CLAIM_TO_CAVEAT",
+          "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+          "ARC_EXPORT_CHIPS_TO_MODELS",
+          "ARC_QUIET_ACCESS_CONTROL",
+          "ARC_SOVEREIGN_FLOW_GATING",
+          "ARC_WAR_DATA_FLYWHEEL"
+        ]
+      },
       {
         "version": "0.21",
         "date": "2026-07-17",
@@ -222,6 +241,9 @@
     },
     "approximate_pass_rate": "97% verified or partially verified",
     "key_findings": [
+      "KOREA ACCESS SHOCK (v0.22): South Korea plans a domestic cybersecurity model by year-end after the Mythos access restriction, but the base model is unspecified and Mythos parity is a longer-term aspiration rather than the 2026 deliverable.",
+      "KOREA SELECTIVE SOVEREIGNTY (v0.22): MSIT operationalized sovereignty through weight, training and licensing criteria, excluding Naver from one contest, while Korea simultaneously retained an Anthropic safety/cyber MOU. This is managed interdependence, not autarky.",
+      "KOREA CYBER AND DEFENSE (v0.22): Project Canopy reports a large human-validated find-and-patch workflow with patch-isolation risk, while Naver-KAI creates a defense-model route that remains an MOU rather than a deployed capability.",
       "GLOBAL AI GOVERNANCE (v0.21): WAICO adds a signed 29-country intergovernmental founding agreement to China's counter-stack, while Xi's open-source and capacity-building speech adds diplomatic positioning. Neither proves an operational global regulator, delivered access or technical parity.",
       "SOVEREIGN MODEL (v0.21): Soofi S combines German training infrastructure, detailed data accounting and a hybrid MoE architecture, but remains a gated preview. Its 8-9x result is a narrow self-authored decode benchmark; European hosting does not establish automatic GDPR compliance or full-stack independence.",
       "OPERATIONAL CYBER (v0.20): Hunt.io published IoCs and selected recovered artifacts from a separate June 2026 campaign in which Claude Code and a reported DeepSeek endpoint were integrated into intrusion workflows. This narrows the gap between lab capability and operational use, but does not quantify autonomy, establish Chinese state sponsorship, turn scanning into compromise or independently validate GTG-1002.",
@@ -875,13 +897,13 @@
       ]
     },
     "pass_rate_short": "97%",
-    "total_events": 237,
+    "total_events": 242,
     "total_claims": 71,
     "total_claim_checks": 29,
     "total_arcs": 24,
-    "total_edges": 438,
+    "total_edges": 449,
     "total_thesis_nodes": 5,
-    "source_count": 359,
+    "source_count": 367,
     "by_status": {
       "verified": 136,
       "verified_as_reported": 31,
@@ -894,6 +916,7 @@
       "verified_as_reported_indictment_allegation": 2,
       "verified_as_reported_with_redacted_forensics": 2,
       "verified_as_speech_not_as_fact": 2,
+      "verified_mou_not_deployment": 2,
       "advertisement_verified_implementation_unverified": 1,
       "controlled_real_world_and_internal_red_team_no_wild_campaign": 1,
       "controlled_real_world_validation_no_wild_campaign": 1,
@@ -902,14 +925,17 @@
       "needs_correction": 1,
       "partially_verified_compliance_contested": 1,
       "proposal_not_enacted": 1,
+      "reported_findings_independent_validation_pending": 1,
       "reproducible_poc_no_wild_exploitation": 1,
       "reproducible_self_authored_preprint_synthetic": 1,
       "verified_adopted_future_application": 1,
+      "verified_announcement_details_pending": 1,
       "verified_announcement_implementation_pending": 1,
       "verified_as_reported_not_primary_order": 1,
       "verified_controlled_evaluation": 1,
       "verified_current_rule": 1,
       "verified_malicious_registry_artifacts_no_victim_prevalence": 1,
+      "verified_policy_decision_technical_detail_reported": 1,
       "verified_preview_license_pending": 1,
       "verified_program_not_outcome": 1,
       "verified_public_exposure_not_compromise": 1,
@@ -917,14 +943,14 @@
       "verified_vendor_announcement": 1
     },
     "by_confidence": {
-      "A": 114,
+      "A": 115,
       "B": 75,
       "C": 28,
       "D": 8,
-      "B/C": 3,
-      "A/B": 2,
+      "A/B": 4,
+      "B/C": 4,
+      "A/D": 3,
       "A/C": 2,
-      "A/D": 2,
       "C/D": 1,
       "D_for_capability_claim_B_for_speech_event": 1,
       "D/B": 1
@@ -34969,6 +34995,834 @@
         "supports_with_caveat",
         "qualifies"
       ]
+    },
+    {
+      "id": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+      "kind": "event",
+      "title": "Южная Корея планирует суверенную модель для кибербезопасности до конца года, считая уровень Mythos более долгосрочной целью",
+      "title_ru": "Южная Корея планирует суверенную модель для кибербезопасности до конца года, считая уровень Mythos более долгосрочной целью",
+      "title_en": "South Korea plans a sovereign cybersecurity model by year-end while treating Mythos-class capability as a longer-term goal",
+      "date": "2026-07-16",
+      "source_date": "2026-05-29/2026-07-16",
+      "date_basis": "ministerial_policy_briefing_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://en.yna.co.kr/view/AEN20260716005651320",
+      "source_name": "Yonhap News Agency",
+      "source_type_raw": "Press",
+      "source_type": "Press / wire",
+      "primary_or_secondary": "secondary",
+      "actor": "South Korean Ministry of Science and ICT, South Korean government",
+      "actor_raw": "South Korean Ministry of Science and ICT, South Korean government",
+      "actors_raw": [
+        "South Korean Ministry of Science and ICT",
+        "South Korean government",
+        "South Korean Ministry of Science and ICT, South Korean government"
+      ],
+      "actors": [
+        "South Korean Ministry of Science and ICT",
+        "South Korean government"
+      ],
+      "actor_facets_legacy": [
+        "South Korea",
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_facets": [
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_entities": [
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_jurisdictions": [
+        "South Korea"
+      ],
+      "actor_types": [
+        "government",
+        "regulator"
+      ],
+      "geography_raw": [
+        "South Korea"
+      ],
+      "geography": [
+        "South Korea"
+      ],
+      "jurisdictions": [
+        "South Korea"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "model_weights",
+        "cyber_security_patch",
+        "data_telemetry",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "cyber_security_patch",
+        "data_telemetry",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "security",
+        "production",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "production",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ3"
+      ],
+      "claim_supported": "На президентском совещании 16 июля 2026 года министр науки Пэ Кён Хун заявил, что Южная Корея до конца года создаст суверенную ИИ-модель для кибербезопасности, дообучив существующую отечественную суверенную модель на данных по безопасности. Отдельно он назвал модель уровня Mythos возможной долгосрочной целью и признал, что нынешних корейских суверенных моделей пока недостаточно для меняющихся угроз. Анонс последовал за июньским ограничением США, которое внезапно закрыло иностранцам доступ к Mythos 5 и Fable 5.",
+      "claim_supported_ru": "На президентском совещании 16 июля 2026 года министр науки Пэ Кён Хун заявил, что Южная Корея до конца года создаст суверенную ИИ-модель для кибербезопасности, дообучив существующую отечественную суверенную модель на данных по безопасности. Отдельно он назвал модель уровня Mythos возможной долгосрочной целью и признал, что нынешних корейских суверенных моделей пока недостаточно для меняющихся угроз. Анонс последовал за июньским ограничением США, которое внезапно закрыло иностранцам доступ к Mythos 5 и Fable 5.",
+      "claim_supported_en": "At a presidential policy briefing on 16 July 2026, Science Minister Bae Kyung-hoon said South Korea would create a sovereign AI model specialized in cybersecurity within the year by training an existing domestic sovereign model on security-related data. He separately said Korea should consider a frontier model on par with Mythos in the long run and acknowledged that current domestic sovereign models were not yet sufficient for the evolving threat. The announcement follows the June US restriction that abruptly removed foreign-national access to Mythos 5 and Fable 5.",
+      "claim_challenged": "Релиз 2026 года и frontier-модель уровня Mythos не являются одним и тем же обещанием. Правительство не назвало базовую модель, обучающие данные, бюджет, тесты, режим доступа, условия выпуска или операционных пользователей. О выборе HyperCLOVA X публично не сообщалось.",
+      "claim_challenged_ru": "Релиз 2026 года и frontier-модель уровня Mythos не являются одним и тем же обещанием. Правительство не назвало базовую модель, обучающие данные, бюджет, тесты, режим доступа, условия выпуска или операционных пользователей. О выборе HyperCLOVA X публично не сообщалось.",
+      "claim_challenged_en": "The 2026 deliverable and a Mythos-class frontier model are not the same promise. The government has not named the base model, training data, budget, benchmark, access regime, release terms or operational users. HyperCLOVA X has not been selected publicly.",
+      "summary": "На президентском совещании 16 июля 2026 года министр науки Пэ Кён Хун заявил, что Южная Корея до конца года создаст суверенную ИИ-модель для кибербезопасности, дообучив существующую отечественную суверенную модель на данных по безопасности. Отдельно он назвал модель уровня Mythos возможной долгосрочной целью и признал, что нынешних корейских суверенных моделей пока недостаточно для меняющихся угроз. Анонс последовал за июньским ограничением США, которое внезапно закрыло иностранцам доступ к Mythos 5 и Fable 5.",
+      "summary_ru": "На президентском совещании 16 июля 2026 года министр науки Пэ Кён Хун заявил, что Южная Корея до конца года создаст суверенную ИИ-модель для кибербезопасности, дообучив существующую отечественную суверенную модель на данных по безопасности. Отдельно он назвал модель уровня Mythos возможной долгосрочной целью и признал, что нынешних корейских суверенных моделей пока недостаточно для меняющихся угроз. Анонс последовал за июньским ограничением США, которое внезапно закрыло иностранцам доступ к Mythos 5 и Fable 5.",
+      "summary_en": "At a presidential policy briefing on 16 July 2026, Science Minister Bae Kyung-hoon said South Korea would create a sovereign AI model specialized in cybersecurity within the year by training an existing domestic sovereign model on security-related data. He separately said Korea should consider a frontier model on par with Mythos in the long run and acknowledged that current domestic sovereign models were not yet sufficient for the evolving threat. The announcement follows the June US restriction that abruptly removed foreign-national access to Mythos 5 and Fable 5.",
+      "notes": "Релиз 2026 года и frontier-модель уровня Mythos не являются одним и тем же обещанием. Правительство не назвало базовую модель, обучающие данные, бюджет, тесты, режим доступа, условия выпуска или операционных пользователей. О выборе HyperCLOVA X публично не сообщалось.",
+      "notes_ru": "Релиз 2026 года и frontier-модель уровня Mythos не являются одним и тем же обещанием. Правительство не назвало базовую модель, обучающие данные, бюджет, тесты, режим доступа, условия выпуска или операционных пользователей. О выборе HyperCLOVA X публично не сообщалось.",
+      "notes_en": "The 2026 deliverable and a Mythos-class frontier model are not the same promise. The government has not named the base model, training data, budget, benchmark, access regime, release terms or operational users. HyperCLOVA X has not been selected publicly.",
+      "safe_wording": "Говорить о плане до конца года адаптировать существующую корейскую суверенную модель для кибербезопасности, частично вызванном шоком доступа. Паритет с Mythos считать долгосрочным намерением, а базовую модель оставлять неназванной.",
+      "safe_wording_ru": "Говорить о плане до конца года адаптировать существующую корейскую суверенную модель для кибербезопасности, частично вызванном шоком доступа. Паритет с Mythos считать долгосрочным намерением, а базовую модель оставлять неназванной.",
+      "safe_wording_en": "Describe a year-end plan to adapt an existing Korean sovereign model for cybersecurity, triggered in part by the access shock. Treat Mythos parity as a longer-term aspiration and keep the base model unspecified.",
+      "corroboration_needed": "Релиз 2026 года и frontier-модель уровня Mythos не являются одним и тем же обещанием. Правительство не назвало базовую модель, обучающие данные, бюджет, тесты, режим доступа, условия выпуска или операционных пользователей. О выборе HyperCLOVA X публично не сообщалось.",
+      "corroboration_needed_ru": "Релиз 2026 года и frontier-модель уровня Mythos не являются одним и тем же обещанием. Правительство не назвало базовую модель, обучающие данные, бюджет, тесты, режим доступа, условия выпуска или операционных пользователей. О выборе HyperCLOVA X публично не сообщалось.",
+      "corroboration_needed_en": "The 2026 deliverable and a Mythos-class frontier model are not the same promise. The government has not named the base model, training data, budget, benchmark, access regime, release terms or operational users. HyperCLOVA X has not been selected publicly.",
+      "caveat": "Релиз 2026 года и frontier-модель уровня Mythos не являются одним и тем же обещанием. Правительство не назвало базовую модель, обучающие данные, бюджет, тесты, режим доступа, условия выпуска или операционных пользователей. О выборе HyperCLOVA X публично не сообщалось.",
+      "caveat_ru": "Релиз 2026 года и frontier-модель уровня Mythos не являются одним и тем же обещанием. Правительство не назвало базовую модель, обучающие данные, бюджет, тесты, режим доступа, условия выпуска или операционных пользователей. О выборе HyperCLOVA X публично не сообщалось.",
+      "caveat_en": "The 2026 deliverable and a Mythos-class frontier model are not the same promise. The government has not named the base model, training data, budget, benchmark, access regime, release terms or operational users. HyperCLOVA X has not been selected publicly.",
+      "caveats": [
+        "Министр различал специализированную модель до конца года и более долгосрочную frontier-модель уровня Mythos.",
+        "Семейство модели, тесты, бюджет, лицензия выпуска и заказчик внедрения не объявлены.",
+        "Мера США была глобальным ограничением доступа для иностранцев, а не отдельным запретом для Кореи."
+      ],
+      "caveats_en": [
+        "The minister distinguished the year-end specialized model from a longer-term Mythos-class frontier model.",
+        "No model family, benchmark, budget, release license or deployment customer was announced.",
+        "The US action was a global foreign-national access restriction, not a Korea-only ban."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "announced_delivery_year": 2026
+      },
+      "money_status": "",
+      "confidence": "A/B",
+      "evidence_level": "A/B",
+      "status": "verified_announcement_details_pending",
+      "sources": [
+        {
+          "title": "S. Korea to launch sovereign cybersecurity AI this year: science minister",
+          "name": "Yonhap News Agency",
+          "url": "https://en.yna.co.kr/view/AEN20260716005651320",
+          "type": "Press / wire",
+          "date": "2026-07-16",
+          "primary_or_secondary": "secondary"
+        },
+        {
+          "title": "Public and Private Sectors Jointly Respond to AI Cyber Threats: MSIT Announces Plan for Private-sector Information Security against AI-driven Cyber Threats",
+          "name": "South Korean Ministry of Science and ICT",
+          "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1268&sCode=eng",
+          "type": "Government / policy",
+          "date": "2026-05-29",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_KOREA_CYBER_MODEL_CYBER_ARC",
+        "EDGE_KOREA_CYBER_MODEL_EXPORT_COUNTERMOVE",
+        "EDGE_KOREA_CYBER_MODEL_OPEN_WEIGHT"
+      ],
+      "arcIds": [
+        "ARC_EXPORT_CHIPS_TO_MODELS",
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_ACCESS_CONTROL",
+        "ARC_FAMILY_CYBER_COGNITION_WAR",
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
+      ],
+      "relationTypes": [
+        "key_node",
+        "sets_up",
+        "countermove",
+        "supports_with_caveat"
+      ]
+    },
+    {
+      "id": "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+      "kind": "event",
+      "title": "Южная Корея подписывает меморандум с Anthropic по безопасности ИИ и кибербезопасности, одновременно развивая собственные модели",
+      "title_ru": "Южная Корея подписывает меморандум с Anthropic по безопасности ИИ и кибербезопасности, одновременно развивая собственные модели",
+      "title_en": "South Korea signs an AI-safety and cybersecurity MOU with Anthropic while pursuing domestic security models",
+      "date": "2026-06-29",
+      "source_date": "2026-06-29",
+      "date_basis": "government_mou_announcement_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1275&sCode=eng",
+      "source_name": "South Korean Ministry of Science and ICT",
+      "source_type_raw": "Government / policy",
+      "source_type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "actor": "South Korean Ministry of Science and ICT, Anthropic, South Korean AI Safety Institute",
+      "actor_raw": "South Korean Ministry of Science and ICT, Anthropic, South Korean AI Safety Institute",
+      "actors_raw": [
+        "South Korean Ministry of Science and ICT",
+        "Anthropic",
+        "South Korean AI Safety Institute",
+        "South Korean Ministry of Science and ICT, Anthropic, South Korean AI Safety Institute"
+      ],
+      "actors": [
+        "South Korean Ministry of Science and ICT",
+        "Anthropic",
+        "South Korean AI Safety Institute"
+      ],
+      "actor_facets_legacy": [
+        "Anthropic",
+        "South Korea",
+        "South Korean AI Safety Institute",
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_facets": [
+        "Anthropic",
+        "South Korean AI Safety Institute",
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_entities": [
+        "Anthropic",
+        "South Korean AI Safety Institute",
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_jurisdictions": [
+        "South Korea"
+      ],
+      "actor_types": [
+        "company",
+        "government",
+        "regulator",
+        "research"
+      ],
+      "geography_raw": [
+        "South Korea",
+        "US"
+      ],
+      "geography": [
+        "South Korea",
+        "US"
+      ],
+      "jurisdictions": [
+        "South Korea",
+        "US"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "governance_law",
+        "cyber_security_patch",
+        "model_weights"
+      ],
+      "stack_layers": [
+        "governance_law",
+        "cyber_security_patch",
+        "model_weights"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ2",
+        "RQ3",
+        "RQ5"
+      ],
+      "claim_supported": "29 июня 2026 года Министерство науки и ИКТ Южной Кореи объявило о меморандуме с Anthropic. Он охватывает оценку безопасности моделей и риска злоупотребления на корейском языке, red-team оценку автономных агентов, анализ влияния ИИ на кибернападение и защиту, поиск уязвимостей, в том числе в финансах, и быстрый обмен экспертной информацией об угрозах. Соглашение появилось одновременно с подготовкой корейской программы собственной модели для кибербезопасности.",
+      "claim_supported_ru": "29 июня 2026 года Министерство науки и ИКТ Южной Кореи объявило о меморандуме с Anthropic. Он охватывает оценку безопасности моделей и риска злоупотребления на корейском языке, red-team оценку автономных агентов, анализ влияния ИИ на кибернападение и защиту, поиск уязвимостей, в том числе в финансах, и быстрый обмен экспертной информацией об угрозах. Соглашение появилось одновременно с подготовкой корейской программы собственной модели для кибербезопасности.",
+      "claim_supported_en": "On 29 June 2026, South Korea's Ministry of Science and ICT announced an MOU with Anthropic covering Korean-language model-safety and misuse evaluations, red-team evaluation of autonomous agents, analysis of AI's effect on cyber offense and defense, vulnerability identification including in finance, and rapid sharing of cyber-threat expertise. The agreement was announced while Korea was also preparing a domestic cybersecurity-model program.",
+      "claim_challenged": "Меморандум задаёт рамку сотрудничества, но не восстанавливает доступ к Mythos, не является закупочным контрактом, передачей технологии или уже развёрнутой совместной системой оценки. Он показывает хеджирование и сохраняющуюся взаимозависимость, а не технологический выход.",
+      "claim_challenged_ru": "Меморандум задаёт рамку сотрудничества, но не восстанавливает доступ к Mythos, не является закупочным контрактом, передачей технологии или уже развёрнутой совместной системой оценки. Он показывает хеджирование и сохраняющуюся взаимозависимость, а не технологический выход.",
+      "claim_challenged_en": "An MOU is a cooperation framework, not restored Mythos access, a procurement contract, a technology transfer or a deployed joint evaluation system. It shows hedging and continued interdependence rather than technological exit.",
+      "summary": "29 июня 2026 года Министерство науки и ИКТ Южной Кореи объявило о меморандуме с Anthropic. Он охватывает оценку безопасности моделей и риска злоупотребления на корейском языке, red-team оценку автономных агентов, анализ влияния ИИ на кибернападение и защиту, поиск уязвимостей, в том числе в финансах, и быстрый обмен экспертной информацией об угрозах. Соглашение появилось одновременно с подготовкой корейской программы собственной модели для кибербезопасности.",
+      "summary_ru": "29 июня 2026 года Министерство науки и ИКТ Южной Кореи объявило о меморандуме с Anthropic. Он охватывает оценку безопасности моделей и риска злоупотребления на корейском языке, red-team оценку автономных агентов, анализ влияния ИИ на кибернападение и защиту, поиск уязвимостей, в том числе в финансах, и быстрый обмен экспертной информацией об угрозах. Соглашение появилось одновременно с подготовкой корейской программы собственной модели для кибербезопасности.",
+      "summary_en": "On 29 June 2026, South Korea's Ministry of Science and ICT announced an MOU with Anthropic covering Korean-language model-safety and misuse evaluations, red-team evaluation of autonomous agents, analysis of AI's effect on cyber offense and defense, vulnerability identification including in finance, and rapid sharing of cyber-threat expertise. The agreement was announced while Korea was also preparing a domestic cybersecurity-model program.",
+      "notes": "Меморандум задаёт рамку сотрудничества, но не восстанавливает доступ к Mythos, не является закупочным контрактом, передачей технологии или уже развёрнутой совместной системой оценки. Он показывает хеджирование и сохраняющуюся взаимозависимость, а не технологический выход.",
+      "notes_ru": "Меморандум задаёт рамку сотрудничества, но не восстанавливает доступ к Mythos, не является закупочным контрактом, передачей технологии или уже развёрнутой совместной системой оценки. Он показывает хеджирование и сохраняющуюся взаимозависимость, а не технологический выход.",
+      "notes_en": "An MOU is a cooperation framework, not restored Mythos access, a procurement contract, a technology transfer or a deployed joint evaluation system. It shows hedging and continued interdependence rather than technological exit.",
+      "safe_wording": "Использовать меморандум как свидетельство того, что Корея сочетает развитие собственных возможностей с сотрудничеством с американским поставщиком frontier-моделей. Не подразумевать восстановленный доступ или состоявшуюся передачу технологии.",
+      "safe_wording_ru": "Использовать меморандум как свидетельство того, что Корея сочетает развитие собственных возможностей с сотрудничеством с американским поставщиком frontier-моделей. Не подразумевать восстановленный доступ или состоявшуюся передачу технологии.",
+      "safe_wording_en": "Use the MOU as evidence that Korea is combining domestic capability-building with continued cooperation with an upstream US model provider. Do not imply restored frontier-model access or delivered technology transfer.",
+      "corroboration_needed": "Меморандум задаёт рамку сотрудничества, но не восстанавливает доступ к Mythos, не является закупочным контрактом, передачей технологии или уже развёрнутой совместной системой оценки. Он показывает хеджирование и сохраняющуюся взаимозависимость, а не технологический выход.",
+      "corroboration_needed_ru": "Меморандум задаёт рамку сотрудничества, но не восстанавливает доступ к Mythos, не является закупочным контрактом, передачей технологии или уже развёрнутой совместной системой оценки. Он показывает хеджирование и сохраняющуюся взаимозависимость, а не технологический выход.",
+      "corroboration_needed_en": "An MOU is a cooperation framework, not restored Mythos access, a procurement contract, a technology transfer or a deployed joint evaluation system. It shows hedging and continued interdependence rather than technological exit.",
+      "caveat": "Меморандум задаёт рамку сотрудничества, но не восстанавливает доступ к Mythos, не является закупочным контрактом, передачей технологии или уже развёрнутой совместной системой оценки. Он показывает хеджирование и сохраняющуюся взаимозависимость, а не технологический выход.",
+      "caveat_ru": "Меморандум задаёт рамку сотрудничества, но не восстанавливает доступ к Mythos, не является закупочным контрактом, передачей технологии или уже развёрнутой совместной системой оценки. Он показывает хеджирование и сохраняющуюся взаимозависимость, а не технологический выход.",
+      "caveat_en": "An MOU is a cooperation framework, not restored Mythos access, a procurement contract, a technology transfer or a deployed joint evaluation system. It shows hedging and continued interdependence rather than technological exit.",
+      "caveats": [
+        "Публичный документ называет направления сотрудничества, но не бюджет, права доступа, сроки поставки или результаты оценки.",
+        "Сотрудничество с Anthropic и корейская суверенная модель являются параллельными страховками, а не доказательством разрыва связей."
+      ],
+      "caveats_en": [
+        "The public record announces areas of cooperation but no budget, access entitlement, delivery milestones or evaluation results.",
+        "Anthropic cooperation and Korean sovereign-model development are complementary hedges, not evidence of decoupling."
+      ],
+      "exact_quote_short": "",
+      "numbers": {},
+      "money_status": "",
+      "confidence": "A",
+      "evidence_level": "A",
+      "status": "verified_mou_not_deployment",
+      "sources": [
+        {
+          "title": "MSIT Partners with Anthropic for Global AI Safety and Security",
+          "name": "South Korean Ministry of Science and ICT",
+          "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1275&sCode=eng",
+          "type": "Government / policy",
+          "date": "2026-06-29",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_KOREA_ANTHROPIC_MOU_QUIET_ACCESS",
+        "EDGE_KOREA_ANTHROPIC_MOU_SOVEREIGN_FLOW"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR",
+        "ARC_FAMILY_ACCESS_CONTROL"
+      ],
+      "relationTypes": [
+        "key_node",
+        "institutionalizes",
+        "qualifies"
+      ]
+    },
+    {
+      "id": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+      "kind": "event",
+      "title": "Корейский конкурс суверенных моделей исключает Naver, сделав внешний контроль и происхождение весов критерием политики",
+      "title_ru": "Корейский конкурс суверенных моделей исключает Naver, сделав внешний контроль и происхождение весов критерием политики",
+      "title_en": "Korea's sovereign-model contest excludes Naver after treating external control and weight provenance as policy criteria",
+      "date": "2026-01-15",
+      "source_date": "2026-01-15",
+      "date_basis": "phase_one_evaluation_announcement_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1212&sCode=eng",
+      "source_name": "South Korean Ministry of Science and ICT",
+      "source_type_raw": "Government / policy",
+      "source_type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "actor": "South Korean Ministry of Science and ICT, Naver Cloud, NC AI, LG AI Research, SK Telecom, Upstage",
+      "actor_raw": "South Korean Ministry of Science and ICT, Naver Cloud, NC AI, LG AI Research, SK Telecom, Upstage",
+      "actors_raw": [
+        "South Korean Ministry of Science and ICT",
+        "Naver Cloud",
+        "NC AI",
+        "LG AI Research",
+        "SK Telecom",
+        "Upstage",
+        "South Korean Ministry of Science and ICT, Naver Cloud, NC AI, LG AI Research, SK Telecom, Upstage"
+      ],
+      "actors": [
+        "South Korean Ministry of Science and ICT",
+        "Naver Cloud",
+        "NC AI",
+        "LG AI Research",
+        "SK Telecom",
+        "Upstage"
+      ],
+      "actor_facets_legacy": [
+        "LG AI Research",
+        "Naver",
+        "NC AI",
+        "Research teams",
+        "SK Telecom",
+        "South Korea",
+        "South Korean Ministry of Science and ICT",
+        "Upstage"
+      ],
+      "actor_facets": [
+        "LG AI Research",
+        "Naver",
+        "NC AI",
+        "SK Telecom",
+        "South Korean Ministry of Science and ICT",
+        "Upstage"
+      ],
+      "actor_entities": [
+        "LG AI Research",
+        "Naver",
+        "NC AI",
+        "SK Telecom",
+        "South Korean Ministry of Science and ICT",
+        "Upstage"
+      ],
+      "actor_jurisdictions": [
+        "South Korea"
+      ],
+      "actor_types": [
+        "company",
+        "government",
+        "regulator",
+        "research"
+      ],
+      "geography_raw": [
+        "South Korea",
+        "China"
+      ],
+      "geography": [
+        "South Korea",
+        "China"
+      ],
+      "jurisdictions": [
+        "South Korea",
+        "China"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "model_weights",
+        "governance_law",
+        "data_telemetry"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "governance_law",
+        "data_telemetry"
+      ],
+      "strange_structure": [
+        "production",
+        "knowledge",
+        "security"
+      ],
+      "strange_structures": [
+        "production",
+        "knowledge",
+        "security"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ5"
+      ],
+      "claim_supported": "15 января 2026 года в следующий этап корейского проекта суверенной foundation-модели прошли LG AI Research, SK Telecom и Upstage, а Naver Cloud и NC AI выбыли. MSIT определило подходящую модель как спроектированную и предварительно обученную внутри страны, свободную от внешних лицензионных ограничений и контроля; открытые компоненты разрешались при сбросе весов и самостоятельном обучении. Министерство решило, что Naver не соответствует критериям суверенности программы. Корейские СМИ связали решение с предварительно обученными vision- и audio-компонентами стека Qwen от Alibaba в моделях HyperCLOVA X.",
+      "claim_supported_ru": "15 января 2026 года в следующий этап корейского проекта суверенной foundation-модели прошли LG AI Research, SK Telecom и Upstage, а Naver Cloud и NC AI выбыли. MSIT определило подходящую модель как спроектированную и предварительно обученную внутри страны, свободную от внешних лицензионных ограничений и контроля; открытые компоненты разрешались при сбросе весов и самостоятельном обучении. Министерство решило, что Naver не соответствует критериям суверенности программы. Корейские СМИ связали решение с предварительно обученными vision- и audio-компонентами стека Qwen от Alibaba в моделях HyperCLOVA X.",
+      "claim_supported_en": "On 15 January 2026, South Korea's sovereign foundation-model project advanced LG AI Research, SK Telecom and Upstage, while Naver Cloud and NC AI were eliminated. MSIT defined a qualifying model as domestically designed and pre-trained, free from third-party licensing constraints and external control; open-source components could be used only while weights were reset and the model independently trained. MSIT concluded that Naver did not meet the program's sovereignty criteria. Korean reporting linked the decision to pretrained vision and audio components from Alibaba's Qwen stack used in HyperCLOVA X models.",
+      "claim_challenged": "Это решение о соответствии конкретной государственной программе, а не доказательство того, что HyperCLOVA X целиком иностранная, небезопасная или непригодная. Официальное сообщение фиксирует провал критерия суверенности, но не публикует полный технический разбор компонентов. Naver продолжает участвовать в корейских облачных, GPU- и оборонных проектах.",
+      "claim_challenged_ru": "Это решение о соответствии конкретной государственной программе, а не доказательство того, что HyperCLOVA X целиком иностранная, небезопасная или непригодная. Официальное сообщение фиксирует провал критерия суверенности, но не публикует полный технический разбор компонентов. Naver продолжает участвовать в корейских облачных, GPU- и оборонных проектах.",
+      "claim_challenged_en": "This was a program-specific eligibility decision, not proof that HyperCLOVA X is wholly foreign, unsafe or unusable. The official release states that Naver failed the sovereignty test but does not itself provide the full component-level forensic record. Naver remains active in Korean cloud, GPU and defense-AI projects.",
+      "summary": "15 января 2026 года в следующий этап корейского проекта суверенной foundation-модели прошли LG AI Research, SK Telecom и Upstage, а Naver Cloud и NC AI выбыли. MSIT определило подходящую модель как спроектированную и предварительно обученную внутри страны, свободную от внешних лицензионных ограничений и контроля; открытые компоненты разрешались при сбросе весов и самостоятельном обучении. Министерство решило, что Naver не соответствует критериям суверенности программы. Корейские СМИ связали решение с предварительно обученными vision- и audio-компонентами стека Qwen от Alibaba в моделях HyperCLOVA X.",
+      "summary_ru": "15 января 2026 года в следующий этап корейского проекта суверенной foundation-модели прошли LG AI Research, SK Telecom и Upstage, а Naver Cloud и NC AI выбыли. MSIT определило подходящую модель как спроектированную и предварительно обученную внутри страны, свободную от внешних лицензионных ограничений и контроля; открытые компоненты разрешались при сбросе весов и самостоятельном обучении. Министерство решило, что Naver не соответствует критериям суверенности программы. Корейские СМИ связали решение с предварительно обученными vision- и audio-компонентами стека Qwen от Alibaba в моделях HyperCLOVA X.",
+      "summary_en": "On 15 January 2026, South Korea's sovereign foundation-model project advanced LG AI Research, SK Telecom and Upstage, while Naver Cloud and NC AI were eliminated. MSIT defined a qualifying model as domestically designed and pre-trained, free from third-party licensing constraints and external control; open-source components could be used only while weights were reset and the model independently trained. MSIT concluded that Naver did not meet the program's sovereignty criteria. Korean reporting linked the decision to pretrained vision and audio components from Alibaba's Qwen stack used in HyperCLOVA X models.",
+      "notes": "Это решение о соответствии конкретной государственной программе, а не доказательство того, что HyperCLOVA X целиком иностранная, небезопасная или непригодная. Официальное сообщение фиксирует провал критерия суверенности, но не публикует полный технический разбор компонентов. Naver продолжает участвовать в корейских облачных, GPU- и оборонных проектах.",
+      "notes_ru": "Это решение о соответствии конкретной государственной программе, а не доказательство того, что HyperCLOVA X целиком иностранная, небезопасная или непригодная. Официальное сообщение фиксирует провал критерия суверенности, но не публикует полный технический разбор компонентов. Naver продолжает участвовать в корейских облачных, GPU- и оборонных проектах.",
+      "notes_en": "This was a program-specific eligibility decision, not proof that HyperCLOVA X is wholly foreign, unsafe or unusable. The official release states that Naver failed the sovereignty test but does not itself provide the full component-level forensic record. Naver remains active in Korean cloud, GPU and defense-AI projects.",
+      "safe_wording": "Говорить, что Корея превратила суверенитет в проверяемые требования к весам, обучению и лицензиям и что Naver не прошла именно этот тест. Деталь о Qwen приписывать корейским СМИ и не превращать исключение из одной программы в общий запрет.",
+      "safe_wording_ru": "Говорить, что Корея превратила суверенитет в проверяемые требования к весам, обучению и лицензиям и что Naver не прошла именно этот тест. Деталь о Qwen приписывать корейским СМИ и не превращать исключение из одной программы в общий запрет.",
+      "safe_wording_en": "Say that Korea operationalized sovereignty as control over weights, training and licenses, and that Naver failed this specific test. Attribute the Qwen component detail to Korean reporting and do not convert exclusion from one program into a general ban.",
+      "corroboration_needed": "Это решение о соответствии конкретной государственной программе, а не доказательство того, что HyperCLOVA X целиком иностранная, небезопасная или непригодная. Официальное сообщение фиксирует провал критерия суверенности, но не публикует полный технический разбор компонентов. Naver продолжает участвовать в корейских облачных, GPU- и оборонных проектах.",
+      "corroboration_needed_ru": "Это решение о соответствии конкретной государственной программе, а не доказательство того, что HyperCLOVA X целиком иностранная, небезопасная или непригодная. Официальное сообщение фиксирует провал критерия суверенности, но не публикует полный технический разбор компонентов. Naver продолжает участвовать в корейских облачных, GPU- и оборонных проектах.",
+      "corroboration_needed_en": "This was a program-specific eligibility decision, not proof that HyperCLOVA X is wholly foreign, unsafe or unusable. The official release states that Naver failed the sovereignty test but does not itself provide the full component-level forensic record. Naver remains active in Korean cloud, GPU and defense-AI projects.",
+      "caveat": "Это решение о соответствии конкретной государственной программе, а не доказательство того, что HyperCLOVA X целиком иностранная, небезопасная или непригодная. Официальное сообщение фиксирует провал критерия суверенности, но не публикует полный технический разбор компонентов. Naver продолжает участвовать в корейских облачных, GPU- и оборонных проектах.",
+      "caveat_ru": "Это решение о соответствии конкретной государственной программе, а не доказательство того, что HyperCLOVA X целиком иностранная, небезопасная или непригодная. Официальное сообщение фиксирует провал критерия суверенности, но не публикует полный технический разбор компонентов. Naver продолжает участвовать в корейских облачных, GPU- и оборонных проектах.",
+      "caveat_en": "This was a program-specific eligibility decision, not proof that HyperCLOVA X is wholly foreign, unsafe or unusable. The official release states that Naver failed the sovereignty test but does not itself provide the full component-level forensic record. Naver remains active in Korean cloud, GPU and defense-AI projects.",
+      "caveats": [
+        "Официальное сообщение содержит итог с тремя командами и определение суверенности; детализация компонентов взята из сообщений прессы.",
+        "Исключение Naver не определяет базовую модель более поздней программы кибербезопасности.",
+        "Открытый код не запрещался: политика различала самостоятельно переобученные компоненты и унаследованные веса или внешний контроль."
+      ],
+      "caveats_en": [
+        "The official release contains the final three-team result and the sovereignty definition; detailed component attribution comes from press reporting.",
+        "Naver's exclusion does not identify the base model for the later cybersecurity-model program.",
+        "Open source was not banned; the policy distinguished independently retrained components from inherited weights and external control."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "initial_elite_teams": 5,
+        "phase_two_teams_immediately_advanced": 3
+      },
+      "money_status": "",
+      "confidence": "A/B",
+      "evidence_level": "A/B",
+      "status": "verified_policy_decision_technical_detail_reported",
+      "sources": [
+        {
+          "title": "Phase 1 Evaluation Results Released for Sovereign AI Foundation Model Project",
+          "name": "South Korean Ministry of Science and ICT",
+          "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1212&sCode=eng",
+          "type": "Government / policy",
+          "date": "2026-01-15",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Naver Cloud, NC AI cut from national AI foundation model race",
+          "name": "The Korea Times",
+          "url": "https://www.koreatimes.co.kr/business/tech-science/20260115/naver-cloud-nc-ai-cut-from-national-ai-foundation-model-race",
+          "type": "Press / wire",
+          "date": "2026-01-15",
+          "primary_or_secondary": "secondary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_KOREA_NAVER_EXCLUSION_OPEN_WEIGHT",
+        "EDGE_KOREA_NAVER_EXCLUSION_SOVEREIGN_FLOW"
+      ],
+      "arcIds": [
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+        "ARC_FAMILY_ACCESS_CONTROL"
+      ],
+      "relationTypes": [
+        "key_node",
+        "refines",
+        "institutionalizes"
+      ]
+    },
+    {
+      "id": "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU",
+      "kind": "event",
+      "title": "Naver и Korea Aerospace Industries договариваются разработать оборонную foundation-модель и платформу будущих боевых систем",
+      "title_ru": "Naver и Korea Aerospace Industries договариваются разработать оборонную foundation-модель и платформу будущих боевых систем",
+      "title_en": "Naver and Korea Aerospace Industries agree to develop a defense-specific foundation model and future combat-system platform",
+      "date": "2026-07-06",
+      "source_date": "2026-07-07",
+      "date_basis": "mou_signing_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://www.navercorp.com/en/media/pressReleasesDetail?seq=10034490",
+      "source_name": "Naver",
+      "source_type_raw": "Company / press release",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Naver, Naver Cloud, Korea Aerospace Industries",
+      "actor_raw": "Naver, Naver Cloud, Korea Aerospace Industries",
+      "actors_raw": [
+        "Naver",
+        "Naver Cloud",
+        "Korea Aerospace Industries",
+        "Naver, Naver Cloud, Korea Aerospace Industries"
+      ],
+      "actors": [
+        "Naver",
+        "Naver Cloud",
+        "Korea Aerospace Industries"
+      ],
+      "actor_facets_legacy": [
+        "Korea Aerospace Industries",
+        "Naver"
+      ],
+      "actor_facets": [
+        "Korea Aerospace Industries",
+        "Naver"
+      ],
+      "actor_entities": [
+        "Korea Aerospace Industries",
+        "Naver"
+      ],
+      "actor_jurisdictions": [],
+      "actor_types": [
+        "company"
+      ],
+      "geography_raw": [
+        "South Korea"
+      ],
+      "geography": [
+        "South Korea"
+      ],
+      "jurisdictions": [
+        "South Korea"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "model_weights",
+        "decision_support_cognition",
+        "data_telemetry"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "decision_support_cognition",
+        "data_telemetry"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge",
+        "production"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge",
+        "production"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ4"
+      ],
+      "claim_supported": "Naver, Naver Cloud и Korea Aerospace Industries 6 июля 2026 года подписали меморандум о разработке оборонной foundation-модели и Physical-AI платформы для будущих боевых систем. Заявленный план охватывает отраслевую модель, заявки на государственные R&D и финансирование, manned-unmanned teaming, беспилотные летательные аппараты и AI pilots.",
+      "claim_supported_ru": "Naver, Naver Cloud и Korea Aerospace Industries 6 июля 2026 года подписали меморандум о разработке оборонной foundation-модели и Physical-AI платформы для будущих боевых систем. Заявленный план охватывает отраслевую модель, заявки на государственные R&D и финансирование, manned-unmanned teaming, беспилотные летательные аппараты и AI pilots.",
+      "claim_supported_en": "Naver, Naver Cloud and Korea Aerospace Industries signed an MOU on 6 July 2026 to pursue a defense-specific foundation model and a Physical-AI platform for future combat systems. Their stated plan spans a sector model, government R&D and funding applications, manned-unmanned teaming, unmanned aircraft and AI pilots.",
+      "claim_challenged": "Источник является корпоративным сообщением о меморандуме. Он не подтверждает государственную закупку, выделенное финансирование, обученную модель, доступ к военным данным, полевое развёртывание, уровень автономности или операционные характеристики.",
+      "claim_challenged_ru": "Источник является корпоративным сообщением о меморандуме. Он не подтверждает государственную закупку, выделенное финансирование, обученную модель, доступ к военным данным, полевое развёртывание, уровень автономности или операционные характеристики.",
+      "claim_challenged_en": "The source is a company announcement of an MOU. It does not establish a government procurement, awarded funding, a trained model, access to military data, field deployment, autonomy level or operational performance.",
+      "summary": "Naver, Naver Cloud и Korea Aerospace Industries 6 июля 2026 года подписали меморандум о разработке оборонной foundation-модели и Physical-AI платформы для будущих боевых систем. Заявленный план охватывает отраслевую модель, заявки на государственные R&D и финансирование, manned-unmanned teaming, беспилотные летательные аппараты и AI pilots.",
+      "summary_ru": "Naver, Naver Cloud и Korea Aerospace Industries 6 июля 2026 года подписали меморандум о разработке оборонной foundation-модели и Physical-AI платформы для будущих боевых систем. Заявленный план охватывает отраслевую модель, заявки на государственные R&D и финансирование, manned-unmanned teaming, беспилотные летательные аппараты и AI pilots.",
+      "summary_en": "Naver, Naver Cloud and Korea Aerospace Industries signed an MOU on 6 July 2026 to pursue a defense-specific foundation model and a Physical-AI platform for future combat systems. Their stated plan spans a sector model, government R&D and funding applications, manned-unmanned teaming, unmanned aircraft and AI pilots.",
+      "notes": "Источник является корпоративным сообщением о меморандуме. Он не подтверждает государственную закупку, выделенное финансирование, обученную модель, доступ к военным данным, полевое развёртывание, уровень автономности или операционные характеристики.",
+      "notes_ru": "Источник является корпоративным сообщением о меморандуме. Он не подтверждает государственную закупку, выделенное финансирование, обученную модель, доступ к военным данным, полевое развёртывание, уровень автономности или операционные характеристики.",
+      "notes_en": "The source is a company announcement of an MOU. It does not establish a government procurement, awarded funding, a trained model, access to military data, field deployment, autonomy level or operational performance.",
+      "safe_wording": "Считать это подтверждённым намерением и институциональным маршрутом Naver в военный ИИ, а не развёрнутой суверенной оборонной моделью или автономной боевой способностью.",
+      "safe_wording_ru": "Считать это подтверждённым намерением и институциональным маршрутом Naver в военный ИИ, а не развёрнутой суверенной оборонной моделью или автономной боевой способностью.",
+      "safe_wording_en": "Treat this as verified defense-model intent and an institutional route for Naver into military AI, not as a deployed sovereign defense model or autonomous combat capability.",
+      "corroboration_needed": "Источник является корпоративным сообщением о меморандуме. Он не подтверждает государственную закупку, выделенное финансирование, обученную модель, доступ к военным данным, полевое развёртывание, уровень автономности или операционные характеристики.",
+      "corroboration_needed_ru": "Источник является корпоративным сообщением о меморандуме. Он не подтверждает государственную закупку, выделенное финансирование, обученную модель, доступ к военным данным, полевое развёртывание, уровень автономности или операционные характеристики.",
+      "corroboration_needed_en": "The source is a company announcement of an MOU. It does not establish a government procurement, awarded funding, a trained model, access to military data, field deployment, autonomy level or operational performance.",
+      "caveat": "Источник является корпоративным сообщением о меморандуме. Он не подтверждает государственную закупку, выделенное финансирование, обученную модель, доступ к военным данным, полевое развёртывание, уровень автономности или операционные характеристики.",
+      "caveat_ru": "Источник является корпоративным сообщением о меморандуме. Он не подтверждает государственную закупку, выделенное финансирование, обученную модель, доступ к военным данным, полевое развёртывание, уровень автономности или операционные характеристики.",
+      "caveat_en": "The source is a company announcement of an MOU. It does not establish a government procurement, awarded funding, a trained model, access to military data, field deployment, autonomy level or operational performance.",
+      "caveats": [
+        "Соглашение является меморандумом, а стороны только планируют участвовать в государственных проектах и программах финансирования.",
+        "Модель, бюджет, контракт, датасет, тесты и внедрение не раскрыты.",
+        "Отдельный оборонный маршрут Naver не отменяет её исключение из конкурса суверенных foundation-моделей."
+      ],
+      "caveats_en": [
+        "The agreement is an MOU and the parties say they plan to seek government projects and funding.",
+        "No model, budget, contract, dataset, benchmark or deployment was disclosed.",
+        "Naver's separate defense route does not reverse its exclusion from the sovereign foundation-model contest."
+      ],
+      "exact_quote_short": "",
+      "numbers": {},
+      "money_status": "",
+      "confidence": "A/D",
+      "evidence_level": "A/D",
+      "status": "verified_mou_not_deployment",
+      "sources": [
+        {
+          "title": "TEAM NAVER, KAI to Co-Develop Defense-Specific AI Model and Implement Sovereign AI for National Defense",
+          "name": "Naver",
+          "url": "https://www.navercorp.com/en/media/pressReleasesDetail?seq=10034490",
+          "type": "Company / vendor",
+          "date": "2026-07-07",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_NAVER_KAI_DEFENSE_WAR_ARC",
+        "EDGE_NAVER_KAI_DECISION_SOVEREIGNTY"
+      ],
+      "arcIds": [
+        "ARC_WAR_DATA_FLYWHEEL"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "key_node",
+        "sets_up",
+        "supports_with_scope"
+      ]
+    },
+    {
+      "id": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
+      "kind": "event",
+      "title": "Project Canopy сообщает о 990 дефектах и уязвимостях в корейском e-government framework и указывает на изоляцию патчей",
+      "title_ru": "Project Canopy сообщает о 990 дефектах и уязвимостях в корейском e-government framework и указывает на изоляцию патчей",
+      "title_en": "Project Canopy reports 990 defects and vulnerabilities in Korea's e-government framework and highlights patch isolation",
+      "date": "2026-07-14",
+      "source_date": "2026-06-17/2026-07-14",
+      "date_basis": "first_results_announcement_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://project-plasma.org/notice/10",
+      "source_name": "Project Plasma",
+      "source_type_raw": "Civil society / project",
+      "source_type": "Civil society / project",
+      "primary_or_secondary": "primary",
+      "actor": "Project Canopy, Project Plasma",
+      "actor_raw": "Project Canopy, Project Plasma",
+      "actors_raw": [
+        "Project Canopy",
+        "Project Plasma",
+        "Project Canopy, Project Plasma"
+      ],
+      "actors": [
+        "Project Canopy",
+        "Project Plasma"
+      ],
+      "actor_facets_legacy": [
+        "Project Canopy",
+        "Project Plasma"
+      ],
+      "actor_facets": [
+        "Project Canopy",
+        "Project Plasma"
+      ],
+      "actor_entities": [
+        "Project Canopy",
+        "Project Plasma"
+      ],
+      "actor_jurisdictions": [],
+      "actor_types": [
+        "civil_society"
+      ],
+      "geography_raw": [
+        "South Korea"
+      ],
+      "geography": [
+        "South Korea"
+      ],
+      "jurisdictions": [
+        "South Korea"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "cyber_security_patch",
+        "data_telemetry",
+        "decision_support_cognition"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "data_telemetry",
+        "decision_support_cognition"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ3",
+        "RQ4"
+      ],
+      "claim_supported": "14 июля 2026 года общественная инициатива Project Canopy сообщила, что её AI-assisted проверка общих компонентов корейского eGovFrame сократила более 1 300 кандидатов до 990 структурных дефектов и уязвимостей после дедупликации и удаления ложных срабатываний. Около 10% были отнесены к critical или high, примерно для 300 были готовы патчи. Проект отдельно указал на проблему распространения: скопированные исходные компоненты не получают исправления автоматически, создавая изоляцию патчей. Проверка человеком и расстановка приоритетов оставались частью процесса.",
+      "claim_supported_ru": "14 июля 2026 года общественная инициатива Project Canopy сообщила, что её AI-assisted проверка общих компонентов корейского eGovFrame сократила более 1 300 кандидатов до 990 структурных дефектов и уязвимостей после дедупликации и удаления ложных срабатываний. Около 10% были отнесены к critical или high, примерно для 300 были готовы патчи. Проект отдельно указал на проблему распространения: скопированные исходные компоненты не получают исправления автоматически, создавая изоляцию патчей. Проверка человеком и расстановка приоритетов оставались частью процесса.",
+      "claim_supported_en": "On 14 July 2026, the public-interest Project Canopy initiative said its AI-assisted review of common components in Korea's eGovFrame reduced more than 1,300 candidates to 990 structural defects and security vulnerabilities after deduplication and false-positive review; it classified about 10% as critical or high and said roughly 300 patches were complete. The project also identified a distribution problem: copied source components do not automatically receive upstream fixes, creating what it calls patch isolation. Human validation and prioritization remained part of the workflow.",
+      "claim_challenged": "Количество и уровни критичности являются собственными результатами Project Canopy. Не найдено публичного корпуса по отдельным проблемам, сопоставления с CVE, независимого аудита, числа затронутых установок или доказательства, что все патчи дошли до работающих государственных систем. Структурные дефекты и эксплуатируемые уязвимости нельзя считать одной категорией.",
+      "claim_challenged_ru": "Количество и уровни критичности являются собственными результатами Project Canopy. Не найдено публичного корпуса по отдельным проблемам, сопоставления с CVE, независимого аудита, числа затронутых установок или доказательства, что все патчи дошли до работающих государственных систем. Структурные дефекты и эксплуатируемые уязвимости нельзя считать одной категорией.",
+      "claim_challenged_en": "The counts and severity labels are Project Canopy's own reported results. No public issue-level corpus, CVE mapping, independent audit, downstream installation count or proof that all reported patches reached deployed government systems was located. Structural defects and exploitable vulnerabilities should not be treated as identical categories.",
+      "summary": "14 июля 2026 года общественная инициатива Project Canopy сообщила, что её AI-assisted проверка общих компонентов корейского eGovFrame сократила более 1 300 кандидатов до 990 структурных дефектов и уязвимостей после дедупликации и удаления ложных срабатываний. Около 10% были отнесены к critical или high, примерно для 300 были готовы патчи. Проект отдельно указал на проблему распространения: скопированные исходные компоненты не получают исправления автоматически, создавая изоляцию патчей. Проверка человеком и расстановка приоритетов оставались частью процесса.",
+      "summary_ru": "14 июля 2026 года общественная инициатива Project Canopy сообщила, что её AI-assisted проверка общих компонентов корейского eGovFrame сократила более 1 300 кандидатов до 990 структурных дефектов и уязвимостей после дедупликации и удаления ложных срабатываний. Около 10% были отнесены к critical или high, примерно для 300 были готовы патчи. Проект отдельно указал на проблему распространения: скопированные исходные компоненты не получают исправления автоматически, создавая изоляцию патчей. Проверка человеком и расстановка приоритетов оставались частью процесса.",
+      "summary_en": "On 14 July 2026, the public-interest Project Canopy initiative said its AI-assisted review of common components in Korea's eGovFrame reduced more than 1,300 candidates to 990 structural defects and security vulnerabilities after deduplication and false-positive review; it classified about 10% as critical or high and said roughly 300 patches were complete. The project also identified a distribution problem: copied source components do not automatically receive upstream fixes, creating what it calls patch isolation. Human validation and prioritization remained part of the workflow.",
+      "notes": "Количество и уровни критичности являются собственными результатами Project Canopy. Не найдено публичного корпуса по отдельным проблемам, сопоставления с CVE, независимого аудита, числа затронутых установок или доказательства, что все патчи дошли до работающих государственных систем. Структурные дефекты и эксплуатируемые уязвимости нельзя считать одной категорией.",
+      "notes_ru": "Количество и уровни критичности являются собственными результатами Project Canopy. Не найдено публичного корпуса по отдельным проблемам, сопоставления с CVE, независимого аудита, числа затронутых установок или доказательства, что все патчи дошли до работающих государственных систем. Структурные дефекты и эксплуатируемые уязвимости нельзя считать одной категорией.",
+      "notes_en": "The counts and severity labels are Project Canopy's own reported results. No public issue-level corpus, CVE mapping, independent audit, downstream installation count or proof that all reported patches reached deployed government systems was located. Structural defects and exploitable vulnerabilities should not be treated as identical categories.",
+      "safe_wording": "Называть это крупным заявленным результатом AI-assisted find-and-patch с важным диагнозом распространения исправлений. Число 990 приписывать Project Canopy и не превращать его в 990 независимо подтверждённых эксплуатируемых CVE.",
+      "safe_wording_ru": "Называть это крупным заявленным результатом AI-assisted find-and-patch с важным диагнозом распространения исправлений. Число 990 приписывать Project Canopy и не превращать его в 990 независимо подтверждённых эксплуатируемых CVE.",
+      "safe_wording_en": "Call this a substantial self-reported AI-assisted find-and-patch result with an important patch-distribution diagnosis. Keep the 990 figure attributed to Project Canopy and do not translate it into 990 independently verified exploitable CVEs.",
+      "corroboration_needed": "Количество и уровни критичности являются собственными результатами Project Canopy. Не найдено публичного корпуса по отдельным проблемам, сопоставления с CVE, независимого аудита, числа затронутых установок или доказательства, что все патчи дошли до работающих государственных систем. Структурные дефекты и эксплуатируемые уязвимости нельзя считать одной категорией.",
+      "corroboration_needed_ru": "Количество и уровни критичности являются собственными результатами Project Canopy. Не найдено публичного корпуса по отдельным проблемам, сопоставления с CVE, независимого аудита, числа затронутых установок или доказательства, что все патчи дошли до работающих государственных систем. Структурные дефекты и эксплуатируемые уязвимости нельзя считать одной категорией.",
+      "corroboration_needed_en": "The counts and severity labels are Project Canopy's own reported results. No public issue-level corpus, CVE mapping, independent audit, downstream installation count or proof that all reported patches reached deployed government systems was located. Structural defects and exploitable vulnerabilities should not be treated as identical categories.",
+      "caveat": "Количество и уровни критичности являются собственными результатами Project Canopy. Не найдено публичного корпуса по отдельным проблемам, сопоставления с CVE, независимого аудита, числа затронутых установок или доказательства, что все патчи дошли до работающих государственных систем. Структурные дефекты и эксплуатируемые уязвимости нельзя считать одной категорией.",
+      "caveat_ru": "Количество и уровни критичности являются собственными результатами Project Canopy. Не найдено публичного корпуса по отдельным проблемам, сопоставления с CVE, независимого аудита, числа затронутых установок или доказательства, что все патчи дошли до работающих государственных систем. Структурные дефекты и эксплуатируемые уязвимости нельзя считать одной категорией.",
+      "caveat_en": "The counts and severity labels are Project Canopy's own reported results. No public issue-level corpus, CVE mapping, independent audit, downstream installation count or proof that all reported patches reached deployed government systems was located. Structural defects and exploitable vulnerabilities should not be treated as identical categories.",
+      "caveats": [
+        "Результат объединяет структурные дефекты и уязвимости безопасности.",
+        "Заявленные числа, уровни критичности и количество патчей независимо не воспроизведены в доступных материалах.",
+        "Процесс явно сохранял проверку человеком и расстановку приоритетов.",
+        "Исправление исходного framework не обновляет автоматически скопированный downstream-код."
+      ],
+      "caveats_en": [
+        "The result combines structural defects and security vulnerabilities.",
+        "The reported counts, severity assignments and patch total are not independently reproduced in the cited public material.",
+        "The workflow explicitly retained human verification and prioritization.",
+        "Fixing the upstream framework does not automatically patch copied downstream code."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "initial_candidates_reported": 1300,
+        "defects_and_vulnerabilities_reported": 990,
+        "critical_or_high_percent_reported": 10,
+        "patches_completed_reported_approx": 300,
+        "partners_at_launch": 27,
+        "partners_by_results_date": 36
+      },
+      "money_status": "",
+      "confidence": "B/C",
+      "evidence_level": "B/C",
+      "status": "reported_findings_independent_validation_pending",
+      "sources": [
+        {
+          "title": "Public-interest AI security initiative Project Canopy officially launches",
+          "name": "Project Plasma",
+          "url": "https://project-plasma.org/notice/10",
+          "type": "Civil society / project",
+          "date": "2026-06-17",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Project Canopy reports 990 vulnerabilities in the e-government standard framework",
+          "name": "Byline Network",
+          "url": "https://byline.network/2026/07/14-602/",
+          "type": "Press / wire",
+          "date": "2026-07-14",
+          "primary_or_secondary": "secondary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_KOREA_CANOPY_CYBER_ARC",
+        "EDGE_KOREA_CANOPY_AIXCC_PARALLEL"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope",
+        "parallel"
+      ]
     }
   ],
   "claims": [
@@ -37237,11 +38091,13 @@
       "relationTypes": [
         "key_node",
         "supports_with_scope",
-        "sets_up"
+        "sets_up",
+        "parallel"
       ],
       "edgeIds": [
         "EDGE_CYBER_001",
-        "EDGE_2022_2023_007"
+        "EDGE_2022_2023_007",
+        "EDGE_KOREA_CANOPY_AIXCC_PARALLEL"
       ]
     },
     {
@@ -39492,17 +40348,21 @@
         "Mitigation is conditional on the state genuinely owning orchestration"
       ],
       "arcIds": [
-        "ARC_PALANTIR_DECISION_OS"
+        "ARC_PALANTIR_DECISION_OS",
+        "ARC_WAR_DATA_FLYWHEEL"
       ],
       "arcFamilyIds": [
-        "ARC_FAMILY_DECISION_DATA_FINANCE"
+        "ARC_FAMILY_DECISION_DATA_FINANCE",
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
       ],
       "relationTypes": [
-        "supports"
+        "supports",
+        "supports_with_scope"
       ],
       "edgeIds": [
         "EDGE_DS_001",
-        "EDGE_DS_002"
+        "EDGE_DS_002",
+        "EDGE_NAVER_KAI_DECISION_SOVEREIGNTY"
       ]
     },
     {
@@ -41330,13 +42190,13 @@
       "arc_type": "escalation_with_walkbacks",
       "status": "strong_but_legally_contested",
       "start_date": "2022-10-07",
-      "end_date": "2026-06-26",
+      "end_date": "2026-07-16",
       "visual_lanes": [
         "governance_law",
         "energy_compute_chips",
         "model_weights"
       ],
-      "thesis_ru": "Контроль начинается с чипов и оборудования, затем распространяется на HBM, страновые тиры, ownership/headquarters, revenue-share и наконец на доступ к frontier-моделям.",
+      "thesis_ru": "Контроль начинается с чипов и оборудования, затем распространяется на HBM, страновые тиры, ownership/headquarters, revenue-share и доступ к frontier-моделям. Корейская программа показывает следующий эффект: внешний контроль доступа начинает порождать национальные модели-заменители.",
       "safe_wording_ru": "Говорить не 'США полностью запретили AI Китаю', а 'США всё более дозируют доступ к слоям стека — чипы, дата-центры, parentage, модели — через лицензии, пошлины, KYC и trusted access'.",
       "key_nodes": [
         "SIG_US_2022_BIS_ADVANCED_COMPUTING",
@@ -41349,16 +42209,19 @@
         "SIG_2023_JAPAN_SEMICON_EQUIPMENT_23_ITEMS",
         "SIG_2024_NL_DUV_EXPORT_AUTHORIZATION",
         "SIG_2021_NSCAI_FINAL_REPORT",
-        "SIG_2021_BIS_CHINA_SUPERCOMPUTING_ENTITY_LIST"
+        "SIG_2021_BIS_CHINA_SUPERCOMPUTING_ENTITY_LIST",
+        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
       ],
       "counterpoints": [
         "AI Diffusion Rule rescinded; successor withdrawn.",
         "Model-control legal basis contested.",
-        "Controls leak through transshipment and cloud routes."
+        "Controls leak through transshipment and cloud routes.",
+        "The Korean response is an announced substitute-model program, not proof that replacement capability already exists."
       ],
       "family_id": "ARC_FAMILY_ACCESS_CONTROL",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
+      "thesis_en": "Control begins with chips and equipment, then expands to HBM, country tiers, ownership and headquarters, revenue sharing and access to frontier models. Korea shows the next effect: external access controls begin to induce national substitute-model programs.",
       "kind": "arc",
       "title": "От чипов к моделям: экспортный контроль поднимается вверх по стеку"
     },
@@ -41517,14 +42380,14 @@
       "arc_type": "statement_walkback",
       "status": "operational_signals_with_autonomy_caveat",
       "start_date": "2025-08-08",
-      "end_date": "2026-07-14",
+      "end_date": "2026-07-16",
       "visual_lanes": [
         "cyber_security_patch",
         "model_weights",
         "governance_law"
       ],
-      "thesis_ru": "Кибервозможности и снижение skill floor растут; реальные журналы и malicious artifacts уже показывают agentic misuse, но надёжная fully autonomous offense at strategic scale не доказана.",
-      "safe_wording_ru": "Отчёт Hunt.io с IoC и выбранными восстановленными артефактами делает интеграцию LLM и агентного инструмента в отдельную реальную кампанию наблюдаемой, но не измеряет долю автономности и не доказывает государственную атрибуцию КНР. PoC, лабораторные тесты, публичная экспозиция и телеметрия поставщиков по-прежнему нельзя превращать в prevalence или стратегическую автономию.",
+      "thesis_ru": "Кибервозможности и снижение порога входа растут; реальные журналы, вредоносные артефакты и AI-assisted find-and-patch уже наблюдаемы. Государства начинают отвечать собственными моделями и инфраструктурой проверки, но надёжная полностью автономная наступательная способность стратегического масштаба не доказана.",
+      "safe_wording_ru": "Разделять наблюдаемый рабочий процесс, заявленные результаты и доказанную способность. Цифры Project Canopy являются результатами самого проекта, а корейская cyber-модель пока является планом без названной базы и тестов; ни то ни другое не доказывает автономный exploit-at-scale.",
       "key_nodes": [
         "cyber-01",
         "cyber-02",
@@ -41559,7 +42422,10 @@
         "SIG_EU_2026_CYBER_AI_ACTION_PLAN",
         "SIG_2026_AGENTS_OF_CHAOS_OPENCLAW_REDTEAM",
         "SIG_2026_OPENCLAW_PUBLIC_EXPOSURE",
-        "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION"
+        "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
+        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+        "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
+        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU"
       ],
       "counterpoints": [
         "Provider and security-vendor telemetry often lacks public raw case data.",
@@ -41571,11 +42437,13 @@
         "Internet exposure does not mean vulnerability or compromise.",
         "Agents of Chaos is an exploratory live-lab study, not incident prevalence.",
         "The EU Action Plan announces evaluation and secure-testing capacity; implementation remains pending.",
-        "Hunt.io reports a separate artifact-backed campaign; it does not independently validate GTG-1002, quantify autonomy or establish Chinese state sponsorship."
+        "Hunt.io reports a separate artifact-backed campaign; it does not independently validate GTG-1002, quantify autonomy or establish Chinese state sponsorship.",
+        "Project Canopy combines structural defects and vulnerabilities; its 990 count is self-reported and not a set of independently verified CVEs.",
+        "Korea's year-end specialized model is not the same promise as a longer-term Mythos-class frontier model."
       ],
       "title_en": "Cyber: operational agentic signals with an autonomy caveat",
-      "thesis_en": "Cyber capability and the attacker skill-floor are moving quickly; real logs and malicious artifacts now show agentic misuse, while reliable fully autonomous offense at strategic scale remains unproven.",
-      "safe_wording_en": "Hunt.io's report with IoCs and selected recovered artifacts makes LLM and agent-tool integration in a separate real campaign observable, but it does not measure autonomous share or establish Chinese state sponsorship. PoCs, lab tests, exposed instances and vendor telemetry still cannot be promoted into prevalence or strategic autonomy.",
+      "thesis_en": "Cyber capability and the attacker skill floor are moving quickly; real logs, malicious artifacts and AI-assisted find-and-patch workflows are now observable. States are responding with domestic models and evaluation infrastructure, while reliable fully autonomous offense at strategic scale remains unproven.",
+      "safe_wording_en": "Separate observed workflows, reported results and demonstrated capability. Project Canopy's counts are self-reported, and Korea's cyber model is still a plan without a named base or benchmark; neither establishes autonomous exploit-at-scale.",
       "family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
@@ -41583,7 +42451,9 @@
         "Internet exposure does not mean vulnerability or compromise.",
         "Agents of Chaos is an exploratory live-lab study, not incident prevalence.",
         "The EU Action Plan announces evaluation and secure-testing capacity; implementation remains pending.",
-        "Hunt.io reports a separate artifact-backed campaign; it does not independently validate GTG-1002, quantify autonomy or establish Chinese state sponsorship."
+        "Hunt.io reports a separate artifact-backed campaign; it does not independently validate GTG-1002, quantify autonomy or establish Chinese state sponsorship.",
+        "Project Canopy combines structural defects and vulnerabilities; its 990 count is self-reported and not a set of independently verified CVEs.",
+        "Korea's year-end specialized model is not the same promise as a longer-term Mythos-class frontier model."
       ],
       "kind": "arc",
       "title": "Кибер: операционные признаки агентного ускорения с оговоркой об автономии"
@@ -41594,15 +42464,15 @@
       "arc_type": "governance_by_access",
       "status": "strong",
       "start_date": "2024-10-15",
-      "end_date": "2026-07-07",
+      "end_date": "2026-06-29",
       "visual_lanes": [
         "governance_law",
         "model_weights",
         "decision_support_cognition",
         "cyber_security_patch"
       ],
-      "thesis_ru": "Доступ к моделям регулируется через частные правила допуска, проверку клиентов и режимы доверенного доступа, а также через публичные процедуры оценки, сообщения об инцидентах и правоприменения.",
-      "safe_wording_ru": "План оценки и безопасного тестирования — объявленная государственная способность, а не уже работающая универсальная предварительная сертификация всех моделей.",
+      "thesis_ru": "Доступ к моделям регулируется через частные правила допуска, проверку клиентов и trusted-access режимы, а также через публичные процедуры оценки и обмена информацией. Корейский меморандум с Anthropic показывает, как государство строит слой оценки вокруг внешнего поставщика, не получая гарантии доступа к самой frontier-модели.",
+      "safe_wording_ru": "Меморандум подтверждает рамку сотрудничества по оценке и кибербезопасности, но не восстановление Mythos, передачу весов или уже работающий совместный контур.",
       "key_nodes": [
         "SIG_2025_OPENAI_USAGE_POLICY_NATIONAL_SECURITY_HIGH_STAKES",
         "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS",
@@ -41619,7 +42489,8 @@
         "SIG_2020_OPENAI_API_PRIVATE_BETA",
         "SIG_2021_OPENAI_API_NO_WAITLIST",
         "SIG_2024_EU_AI_ACT_ENTERS_FORCE_GPAI",
-        "SIG_EU_2026_CYBER_AI_ACTION_PLAN"
+        "SIG_EU_2026_CYBER_AI_ACTION_PLAN",
+        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU"
       ],
       "counterpoints": [
         "Private governance is opaque and not public law.",
@@ -41628,8 +42499,8 @@
       "family_id": "ARC_FAMILY_ACCESS_CONTROL",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Model access is governed through private policy gates, due diligence and trusted-user regimes as well as public evaluation, incident-reporting and enforcement procedures.",
-      "safe_wording_en": "The evaluation and secure-testing plan is an announced state capability, not an already operating universal pre-market certification of every model.",
+      "thesis_en": "Model access is governed through private eligibility rules, customer vetting and trusted-access regimes as well as public evaluation and information-sharing procedures. Korea's Anthropic MOU shows a state building an evaluation layer around an external provider without receiving guaranteed access to the frontier model itself.",
+      "safe_wording_en": "The MOU verifies an evaluation and cybersecurity cooperation framework, not restored Mythos access, transferred weights or an already operating joint system.",
       "kind": "arc",
       "title": "Тихий контроль доступа: политики, проверенные пользователи, ASL-3"
     },
@@ -41776,14 +42647,14 @@
       "arc_type": "data_feedback_loop",
       "status": "partially_verified",
       "start_date": "2026-03-12",
-      "end_date": "2026-06-26",
+      "end_date": "2026-07-06",
       "visual_lanes": [
         "data_telemetry",
         "decision_support_cognition",
         "energy_compute_chips"
       ],
-      "thesis_ru": "Battlefield AI use generates training data, which creates model improvement and sovereign compute demand.",
-      "safe_wording_ru": "Формулировать как telemetry/learning-curve advantage, не как proof of fully autonomous targeting.",
+      "thesis_ru": "Использование ИИ в боевой среде порождает данные для обучения и спрос на суверенные вычисления и модели. Южная Корея расширяет контур от массовой дронизации к планам оборонной foundation-модели и Physical-AI платформы, но новый шаг пока подтверждён только меморандумом.",
+      "safe_wording_ru": "Формулировать как institutional intent и возможный data/decision-support контур, а не как доказательство обученной модели, доступа к военным данным или автономного таргетинга.",
       "key_nodes": [
         "SIG_2026_UKRAINE_DOMESTIC_AI_COMPUTE_MILITARY_DEMAND",
         "SIG_2026_UKRAINE_DRONE_FOOTAGE_AI_TRAINING",
@@ -41793,15 +42664,19 @@
         "cogsec-11",
         "CLM_024_WAR_DATA_FLYWHEEL",
         "GAP_022_UKRAINE_AUTONOMOUS_TARGETING_PRIMARY",
-        "SIG_2026_UKRAINE_BATTLEFIELD_DATA_PLATFORM"
+        "SIG_2026_UKRAINE_BATTLEFIELD_DATA_PLATFORM",
+        "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU"
       ],
       "counterpoints": [
         "Need primary evidence for autonomous targeting pipelines.",
-        "Public legitimacy sharply drops for fully autonomous lethal force."
+        "Public legitimacy sharply drops for fully autonomous lethal force.",
+        "The Naver-KAI announcement discloses no model, budget, awarded procurement, dataset, benchmark or field deployment."
       ],
       "family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
+      "thesis_en": "Battlefield AI use generates training data and demand for sovereign compute and models. South Korea is extending its program from mass drone adoption toward a defense foundation model and Physical-AI platform, although the new step is currently only an MOU.",
+      "safe_wording_en": "Frame this as institutional intent and a potential data and decision-support pipeline, not proof of a trained model, military-data access or autonomous targeting.",
       "kind": "arc",
       "title": "Война как маховик данных"
     },
@@ -41848,7 +42723,7 @@
       "arc_type": "thesis_stress_test",
       "status": "mixed",
       "start_date": "2024-07-12",
-      "end_date": "2026-07-17",
+      "end_date": "2026-07-16",
       "visual_lanes": [
         "model_weights",
         "energy_compute_chips",
@@ -41856,8 +42731,8 @@
         "data_telemetry",
         "governance_law"
       ],
-      "thesis_ru": "Открытые веса создают возможность выхода на уровне модельного артефакта, но не передают автоматически данные, вычисления, инструменты и темп обновлений. Soofi добавляет местную инфраструктуру и учёт данных, но её публичный выпуск и лицензия ещё не завершены.",
-      "safe_wording_ru": "Различать открытые веса, условия лицензии, воспроизводимость данных, общую доступность и независимость всего стека.",
+      "thesis_ru": "Открытые веса создают выход на уровне модельного артефакта, но не передают автоматически данные, вычисления, инструменты и темп обновлений. Корейский конкурс добавляет практический тест: суверенность требует контроля над инициализацией и обучением весов и отсутствия внешних лицензионных ограничений, хотя это определение конкретной программы, а не универсальный стандарт.",
+      "safe_wording_ru": "Различать открытый код, открытые веса, унаследованные веса, независимое переобучение и свободу от внешнего контроля. Исключение Naver относится к критериям одной программы и не является общим запретом HyperCLOVA X.",
       "key_nodes": [
         "openweight-01",
         "openweight-02",
@@ -41876,22 +42751,28 @@
         "SIG_2025_AISI_OPEN_CLOSED_MODEL_LAG",
         "SIG_2019_GPT2_FINAL_STAGED_RELEASE",
         "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
-        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE"
+        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
+        "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
       ],
       "counterpoints": [
         "DeepSeek/Ascend serving support matters.",
         "Training-vs-inference independence remains unclear.",
         "Soofi is still a manually gated preview; its promised permissive general release is not complete.",
-        "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open."
+        "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open.",
+        "Korea's policy allowed open-source components when weights were reset and independently trained; it did not equate all foreign open source with dependence.",
+        "The base model for Korea's cybersecurity program has not been announced."
       ],
       "family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Open weights can create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Soofi adds local training infrastructure and detailed data accounting, while its general release and license remain incomplete.",
-      "safe_wording_en": "Separate open weights, license terms, data reproducibility, general availability and full-stack independence.",
+      "thesis_en": "Open weights can create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Korea's contest adds an operational test: sovereignty requires control over weight initialization and training and freedom from external licensing constraints, although this is one program's definition rather than a universal standard.",
+      "safe_wording_en": "Separate open code, open weights, inherited weights, independent retraining and freedom from external control. Naver's exclusion applies to one program's criteria and is not a general ban on HyperCLOVA X.",
       "counterpoints_en": [
         "Soofi is still a manually gated preview; its promised permissive general release is not complete.",
-        "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open."
+        "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open.",
+        "Korea's policy allowed open-source components when weights were reset and independently trained; it did not equate all foreign open source with dependence.",
+        "The base model for Korea's cybersecurity program has not been announced."
       ],
       "kind": "arc",
       "title": "Открытые веса: выход или новая зависимость"
@@ -42188,7 +43069,7 @@
       "arc_type": "cross_border_access_control",
       "status": "strong_with_human_mobility_asymmetry",
       "start_date": "2018-03-23",
-      "end_date": "2026-06-03",
+      "end_date": "2026-07-16",
       "visual_lanes": [
         "governance_law",
         "data_telemetry",
@@ -42196,8 +43077,8 @@
         "energy_compute_chips",
         "finance_rent"
       ],
-      "thesis_ru": "Суверенный контроль охватывает не только товары и людей, но и юрисдикцию над данными, уровни допуска в облачных закупках, сертификацию, оценку моделей, капитал и совместимые интерфейсы доступа.",
-      "safe_wording_ru": "Не сводить суверенитет к запрету иностранного поставщика. Точнее: государства и альянсы градуируют допустимость нагрузки по юрисдикции, структуре владения и контроля, доступу к аудиту, оценке моделей и возможности замены.",
+      "thesis_ru": "Суверенный контроль охватывает данные, лицензии, происхождение весов, уровни допуска, оценку моделей, капитал и совместимые интерфейсы. Корея после шока Mythos одновременно ужесточает критерии собственной модели, строит специализированную cyber-модель и сохраняет сотрудничество с Anthropic: это селективная взаимозависимость, а не автаркия.",
+      "safe_wording_ru": "Не сводить суверенитет к запрету иностранного поставщика. Корейский кейс показывает портфель мер: собственная модель, проверка происхождения и лицензий, локальный find-and-patch и продолжение внешнего сотрудничества.",
       "key_nodes": [
         "SIG_2022_US_PERSONS_PRC_SEMICONDUCTOR_SUPPORT",
         "SIG_2024_US_DEEMED_EXPORTS_FOREIGN_PERSON_ACCESS",
@@ -42223,7 +43104,10 @@
         "SIG_EU_2026_SOVEREIGN_CLOUD_PROCUREMENT",
         "SIG_EU_2026_CLOUD_INFRASTRUCTURE_CONCENTRATION_REPORT",
         "SIG_AWS_2026_EUROPEAN_SOVEREIGN_CLOUD",
-        "SIG_NATO_2026_ALLIANCE_DIGITAL_STRATEGY"
+        "SIG_NATO_2026_ALLIANCE_DIGITAL_STRATEGY",
+        "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
       ],
       "counterpoints": [
         "Нет общего американского или европейского разрешительного режима на выезд частных AI-специалистов, сопоставимого с сообщениями о китайских travel restrictions.",
@@ -42232,17 +43116,21 @@
         "TikTok restructuring оставляет 19.9% ByteDance и licensed algorithm, поэтому степень фактического separation спорна.",
         "CADA was a Commission proposal on the research date, not enacted law.",
         "AWS sovereign-cloud properties are vendor claims pending workload-specific external qualification.",
-        "NATO interoperability requirements coexist with an explicit national-data-sovereignty principle."
+        "NATO interoperability requirements coexist with an explicit national-data-sovereignty principle.",
+        "Continued cooperation with Anthropic means Korea is hedging dependence, not exiting the US model ecosystem.",
+        "A program-specific sovereignty definition should not be universalized without qualification."
       ],
       "family_id": "ARC_FAMILY_ACCESS_CONTROL",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Sovereign control reaches beyond goods and people into data jurisdiction, cloud procurement tiers, certification, model evaluation, capital and interoperable access interfaces.",
-      "safe_wording_en": "Do not reduce sovereignty to a ban on foreign providers. States and alliances grade workload eligibility through jurisdiction, ownership/control, audit access, model evaluation and replaceability.",
+      "thesis_en": "Sovereign control reaches data, licenses, weight provenance, access tiers, model evaluation, capital and interoperable interfaces. After the Mythos access shock, Korea simultaneously tightened its domestic-model test, began a specialized cyber model and retained cooperation with Anthropic: selective interdependence rather than autarky.",
+      "safe_wording_en": "Do not reduce sovereignty to banning foreign providers. Korea shows a portfolio: domestic models, provenance and license tests, local find-and-patch capacity and continued external cooperation.",
       "counterpoints_en": [
         "CADA was a Commission proposal on the research date, not enacted law.",
         "AWS sovereign-cloud properties are vendor claims pending workload-specific external qualification.",
-        "NATO interoperability requirements coexist with an explicit national-data-sovereignty principle."
+        "NATO interoperability requirements coexist with an explicit national-data-sovereignty principle.",
+        "Continued cooperation with Anthropic means Korea is hedging dependence, not exiting the US model ecosystem.",
+        "A program-specific sovereignty definition should not be universalized without qualification."
       ],
       "kind": "arc",
       "title": "Суверенный контроль потоков: данные, технологии, капитал и люди"
@@ -50040,6 +50928,204 @@
       "summary_ru": "Обучение в Мюнхене снижает юрисдикционную зависимость на одном слое, но сохраняет зависимость от Nvidia и требования соответствия для конкретного применения.",
       "kind": "edge",
       "is_auto": false
+    },
+    {
+      "id": "EDGE_KOREA_CYBER_MODEL_CYBER_ARC",
+      "source": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "sets_up",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "Korea turns the access shock into a dated domestic cyber-model program, while capability and implementation remain unmeasured.",
+      "summary_ru": "Корея превращает шок доступа в программу собственной cyber-модели с конкретным сроком, но её способности и реализация пока не измерены.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KOREA_CYBER_MODEL_EXPORT_COUNTERMOVE",
+      "source": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+      "target": "ARC_EXPORT_CHIPS_TO_MODELS",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "countermove",
+      "arc_id": "ARC_EXPORT_CHIPS_TO_MODELS",
+      "visual_lane": "model_weights",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "A model-layer access restriction induces a national substitute-model program in an allied state.",
+      "summary_ru": "Ограничение доступа на уровне моделей запускает программу национальной модели-заменителя даже у союзного государства.",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KOREA_CYBER_MODEL_OPEN_WEIGHT",
+      "source": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+      "target": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_caveat",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "visual_lane": "model_weights",
+      "evidence_level": "A/B",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "The program seeks domestic model control, but its base model and degree of stack independence are not disclosed.",
+      "summary_ru": "Программа стремится к контролю над моделью, но её база и степень независимости всего стека не раскрыты.",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KOREA_ANTHROPIC_MOU_QUIET_ACCESS",
+      "source": "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+      "target": "ARC_QUIET_ACCESS_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "institutionalizes",
+      "arc_id": "ARC_QUIET_ACCESS_CONTROL",
+      "visual_lane": "governance_law",
+      "evidence_level": "A",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "The MOU creates a state-provider evaluation and information-sharing channel without guaranteeing frontier-model access.",
+      "summary_ru": "Меморандум создаёт канал оценки и обмена между государством и поставщиком, не гарантируя доступ к frontier-модели.",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KOREA_ANTHROPIC_MOU_SOVEREIGN_FLOW",
+      "source": "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+      "target": "ARC_SOVEREIGN_FLOW_GATING",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "qualifies",
+      "arc_id": "ARC_SOVEREIGN_FLOW_GATING",
+      "visual_lane": "governance_law",
+      "evidence_level": "A",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "Domestic capability-building coexists with continued upstream cooperation: managed dependence rather than exit.",
+      "summary_ru": "Развитие собственных возможностей сосуществует с сотрудничеством с внешним поставщиком: управляемая зависимость, а не выход.",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KOREA_NAVER_EXCLUSION_OPEN_WEIGHT",
+      "source": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+      "target": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "refines",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "visual_lane": "model_weights",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "Korea distinguishes open-source use from inherited external weights and licensing control in an operational eligibility test.",
+      "summary_ru": "Корея в реальной процедуре различает использование открытого кода, унаследованные внешние веса и лицензионный контроль.",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KOREA_NAVER_EXCLUSION_SOVEREIGN_FLOW",
+      "source": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+      "target": "ARC_SOVEREIGN_FLOW_GATING",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "institutionalizes",
+      "arc_id": "ARC_SOVEREIGN_FLOW_GATING",
+      "visual_lane": "governance_law",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "A state turns weight provenance and freedom from external control into eligibility criteria for public support.",
+      "summary_ru": "Государство превращает происхождение весов и свободу от внешнего контроля в критерии доступа к публичной поддержке.",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_NAVER_KAI_DEFENSE_WAR_ARC",
+      "source": "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU",
+      "target": "ARC_WAR_DATA_FLYWHEEL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "sets_up",
+      "arc_id": "ARC_WAR_DATA_FLYWHEEL",
+      "visual_lane": "decision_support_cognition",
+      "evidence_level": "A/D",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "The MOU establishes an institutional route toward a domestic defense model and combat-system platform, not a deployed capability.",
+      "summary_ru": "Меморандум создаёт институциональный маршрут к отечественной оборонной модели и платформе, но не подтверждает развёрнутую способность.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_NAVER_KAI_DECISION_SOVEREIGNTY",
+      "source": "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU",
+      "target": "cogsec-13",
+      "source_kind": "evidence",
+      "target_kind": "claim",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_WAR_DATA_FLYWHEEL",
+      "visual_lane": "decision_support_cognition",
+      "evidence_level": "A/D",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "The parties explicitly frame domestic control of the defense model layer as sovereignty, while operational controls remain undescribed.",
+      "summary_ru": "Стороны прямо связывают внутренний контроль модельного слоя обороны с суверенитетом, но операционные механизмы пока не описаны.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KOREA_CANOPY_CYBER_ARC",
+      "source": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "B/C",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "A large reported find-and-patch workflow supports defensive scaling while preserving human validation and independent-verification caveats.",
+      "summary_ru": "Крупный заявленный find-and-patch процесс поддерживает тезис о масштабировании защиты при сохранении человеческой проверки и caveat о независимой валидации.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KOREA_CANOPY_AIXCC_PARALLEL",
+      "source": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
+      "target": "cyber-01",
+      "source_kind": "evidence",
+      "target_kind": "claim",
+      "relation": "parallel",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "B/C",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "Canopy is a real-framework parallel to AIxCC-style defense, but its public evidence is self-reported rather than competition-verified.",
+      "summary_ru": "Canopy является параллелью AIxCC на реальном framework, но публичные доказательства здесь заявлены самим проектом, а не проверены соревнованием.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false
     }
   ],
   "thesisNodes": [
@@ -50648,7 +51734,7 @@
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
     ],
-    "edge_count": 438,
+    "edge_count": 449,
     "v0_13_added_evidence": 6,
     "v0_13_added_edges": 6,
     "v0_14_added_evidence": 11,
@@ -50687,6 +51773,9 @@
     "v0_21_added_evidence": 3,
     "v0_21_added_edges": 5,
     "v0_21_added_arcs": [],
+    "v0_22_added_evidence": 5,
+    "v0_22_added_edges": 11,
+    "v0_22_added_arcs": [],
     "computed_arc_count": 24,
     "computed_arc_to_thesis_counts": {
       "ARC_EXPORT_CHIPS_TO_MODELS": 2,
@@ -51660,7 +52749,7 @@
       ]
     },
     {
-      "id": "src-353",
+      "id": "src-361",
       "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -51755,7 +52844,7 @@
       ]
     },
     {
-      "id": "src-321",
+      "id": "src-329",
       "title": "CRS R48642 PDF",
       "name": "CRS R48642 PDF",
       "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -51831,7 +52920,7 @@
       ]
     },
     {
-      "id": "src-345",
+      "id": "src-353",
       "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -51850,7 +52939,7 @@
       ]
     },
     {
-      "id": "src-307",
+      "id": "src-315",
       "title": "DeepSeek, Huawei, Export Controls (CSIS)",
       "name": "DeepSeek, Huawei, Export Controls (CSIS)",
       "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -52078,7 +53167,7 @@
       ]
     },
     {
-      "id": "src-308",
+      "id": "src-316",
       "title": "How China's GLM-5 Works",
       "name": "How China's GLM-5 Works",
       "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -52097,7 +53186,7 @@
       ]
     },
     {
-      "id": "src-318",
+      "id": "src-326",
       "title": "India Fuels Its AI Mission With NVIDIA",
       "name": "India Fuels Its AI Mission With NVIDIA",
       "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -52135,7 +53224,7 @@
       ]
     },
     {
-      "id": "src-310",
+      "id": "src-318",
       "title": "Microsoft and U.S. join AI forces in UAE deal",
       "name": "Microsoft and U.S. join AI forces in UAE deal",
       "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -52268,7 +53357,7 @@
       ]
     },
     {
-      "id": "src-342",
+      "id": "src-350",
       "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -52667,7 +53756,7 @@
       ]
     },
     {
-      "id": "src-348",
+      "id": "src-356",
       "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -52895,7 +53984,7 @@
       ]
     },
     {
-      "id": "src-319",
+      "id": "src-327",
       "title": "U.S. Export Controls and China (CRS R48642)",
       "name": "U.S. Export Controls and China (CRS R48642)",
       "url": "https://www.congress.gov/crs-product/R48642",
@@ -53047,7 +54136,7 @@
       ]
     },
     {
-      "id": "src-359",
+      "id": "src-367",
       "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -53062,7 +54151,7 @@
       ]
     },
     {
-      "id": "src-355",
+      "id": "src-363",
       "title": "A Kill Switch for Frontier AI (Lawfare)",
       "name": "A Kill Switch for Frontier AI (Lawfare)",
       "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -53077,7 +54166,7 @@
       ]
     },
     {
-      "id": "src-340",
+      "id": "src-348",
       "title": "A small number of samples can poison LLMs (Anthropic)",
       "name": "A small number of samples can poison LLMs (Anthropic)",
       "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -53092,7 +54181,7 @@
       ]
     },
     {
-      "id": "src-311",
+      "id": "src-319",
       "title": "Advanced AI chips cleared for export to UAE",
       "name": "Advanced AI chips cleared for export to UAE",
       "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -53152,7 +54241,7 @@
       ]
     },
     {
-      "id": "src-339",
+      "id": "src-347",
       "title": "AIxCC finals winners (DARPA)",
       "name": "AIxCC finals winners (DARPA)",
       "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -53167,7 +54256,7 @@
       ]
     },
     {
-      "id": "src-334",
+      "id": "src-342",
       "title": "AIxCC marks pivotal inflection point (DARPA)",
       "name": "AIxCC marks pivotal inflection point (DARPA)",
       "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -53182,7 +54271,7 @@
       ]
     },
     {
-      "id": "src-341",
+      "id": "src-349",
       "title": "Alan Turing Institute summary",
       "name": "Alan Turing Institute summary",
       "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -53332,7 +54421,7 @@
       ]
     },
     {
-      "id": "src-343",
+      "id": "src-351",
       "title": "Anthropic awarded $200M DOD agreement",
       "name": "Anthropic awarded $200M DOD agreement",
       "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -53347,7 +54436,7 @@
       ]
     },
     {
-      "id": "src-336",
+      "id": "src-344",
       "title": "Anthropic claims met with doubt (BleepingComputer)",
       "name": "Anthropic claims met with doubt (BleepingComputer)",
       "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -53377,7 +54466,7 @@
       ]
     },
     {
-      "id": "src-349",
+      "id": "src-357",
       "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -53392,7 +54481,7 @@
       ]
     },
     {
-      "id": "src-352",
+      "id": "src-360",
       "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -53452,7 +54541,7 @@
       ]
     },
     {
-      "id": "src-357",
+      "id": "src-365",
       "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -53647,7 +54736,7 @@
       ]
     },
     {
-      "id": "src-327",
+      "id": "src-335",
       "title": "Beijing presses Washington (Tech Times)",
       "name": "Beijing presses Washington (Tech Times)",
       "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -53662,7 +54751,7 @@
       ]
     },
     {
-      "id": "src-338",
+      "id": "src-346",
       "title": "Big Sleep agent makes big leap (Google Cloud)",
       "name": "Big Sleep agent makes big leap (Google Cloud)",
       "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -53677,7 +54766,7 @@
       ]
     },
     {
-      "id": "src-322",
+      "id": "src-330",
       "title": "BIS press release: rescission",
       "name": "BIS press release: rescission",
       "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -53707,7 +54796,7 @@
       ]
     },
     {
-      "id": "src-344",
+      "id": "src-352",
       "title": "Breaking Defense: $200M each for agentic AI",
       "name": "Breaking Defense: $200M each for agentic AI",
       "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -53722,7 +54811,7 @@
       ]
     },
     {
-      "id": "src-347",
+      "id": "src-355",
       "title": "Built for Purpose? EU AI Gigafactories (Interface)",
       "name": "Built for Purpose? EU AI Gigafactories (Interface)",
       "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -53747,6 +54836,21 @@
       "used_by": [
         {
           "id": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-306",
+      "title": "Project Canopy reports 990 vulnerabilities in the e-government standard framework",
+      "name": "Byline Network",
+      "url": "https://byline.network/2026/07/14-602/",
+      "type": "Press / wire",
+      "date": "2026-07-14",
+      "primary_or_secondary": "secondary",
+      "used_by": [
+        {
+          "id": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
           "kind": "event"
         }
       ]
@@ -53827,7 +54931,7 @@
       ]
     },
     {
-      "id": "src-326",
+      "id": "src-334",
       "title": "China Export Controls: Critical Minerals (Andersen Institute)",
       "name": "China Export Controls: Critical Minerals (Andersen Institute)",
       "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -53842,7 +54946,7 @@
       ]
     },
     {
-      "id": "src-354",
+      "id": "src-362",
       "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -53887,7 +54991,7 @@
       ]
     },
     {
-      "id": "src-356",
+      "id": "src-364",
       "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -53947,7 +55051,7 @@
       ]
     },
     {
-      "id": "src-358",
+      "id": "src-366",
       "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -53962,7 +55066,7 @@
       ]
     },
     {
-      "id": "src-335",
+      "id": "src-343",
       "title": "Cybersecurity Dive: DARPA touts results",
       "name": "Cybersecurity Dive: DARPA touts results",
       "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -54022,7 +55126,7 @@
       ]
     },
     {
-      "id": "src-309",
+      "id": "src-317",
       "title": "DeepSeek V4 and R2 Deep Dive",
       "name": "DeepSeek V4 and R2 Deep Dive",
       "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -54082,7 +55186,7 @@
       ]
     },
     {
-      "id": "src-315",
+      "id": "src-323",
       "title": "EIB-Commission gigafactories MoU",
       "name": "EIB-Commission gigafactories MoU",
       "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -54652,7 +55756,7 @@
       ]
     },
     {
-      "id": "src-330",
+      "id": "src-338",
       "title": "H.R.3447 text (Congress.gov)",
       "name": "H.R.3447 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -54667,7 +55771,7 @@
       ]
     },
     {
-      "id": "src-332",
+      "id": "src-340",
       "title": "H.R.6875 titles (Congress.gov)",
       "name": "H.R.6875 titles (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -54712,7 +55816,7 @@
       ]
     },
     {
-      "id": "src-333",
+      "id": "src-341",
       "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -54727,7 +55831,7 @@
       ]
     },
     {
-      "id": "src-323",
+      "id": "src-331",
       "title": "Hogan Lovells analysis",
       "name": "Hogan Lovells analysis",
       "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -54742,7 +55846,7 @@
       ]
     },
     {
-      "id": "src-331",
+      "id": "src-339",
       "title": "House Select Committee: Chip Security Act passage",
       "name": "House Select Committee: Chip Security Act passage",
       "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -54757,7 +55861,7 @@
       ]
     },
     {
-      "id": "src-306",
+      "id": "src-314",
       "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -54772,7 +55876,7 @@
       ]
     },
     {
-      "id": "src-346",
+      "id": "src-354",
       "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -54802,7 +55906,7 @@
       ]
     },
     {
-      "id": "src-312",
+      "id": "src-320",
       "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -54847,7 +55951,7 @@
       ]
     },
     {
-      "id": "src-301",
+      "id": "src-309",
       "title": "Hyperscaler capex trend",
       "name": "Hyperscaler capex trend",
       "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -54862,7 +55966,7 @@
       ]
     },
     {
-      "id": "src-305",
+      "id": "src-313",
       "title": "Hyperscaler cloud share",
       "name": "Hyperscaler cloud share",
       "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -54952,7 +56056,7 @@
       ]
     },
     {
-      "id": "src-313",
+      "id": "src-321",
       "title": "Introducing Stargate UK",
       "name": "Introducing Stargate UK",
       "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -54997,7 +56101,7 @@
       ]
     },
     {
-      "id": "src-320",
+      "id": "src-328",
       "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -55297,6 +56401,21 @@
       ]
     },
     {
+      "id": "src-304",
+      "title": "TEAM NAVER, KAI to Co-Develop Defense-Specific AI Model and Implement Sovereign AI for National Defense",
+      "name": "Naver",
+      "url": "https://www.navercorp.com/en/media/pressReleasesDetail?seq=10034490",
+      "type": "Company / vendor",
+      "date": "2026-07-07",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-115",
       "title": "News Corp and OpenAI Sign Landmark Multi-Year Global Partnership",
       "name": "News Corp and OpenAI Sign Landmark Multi-Year Global Partnership",
@@ -55327,7 +56446,7 @@
       ]
     },
     {
-      "id": "src-325",
+      "id": "src-333",
       "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -55522,7 +56641,7 @@
       ]
     },
     {
-      "id": "src-317",
+      "id": "src-325",
       "title": "PIB: India common computing facility",
       "name": "PIB: India common computing facility",
       "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -55577,6 +56696,21 @@
       "used_by": [
         {
           "id": "SIG_2024_GOOGLE_PROJECT_NAPTIME",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-305",
+      "title": "Public-interest AI security initiative Project Canopy officially launches",
+      "name": "Project Plasma",
+      "url": "https://project-plasma.org/notice/10",
+      "type": "Civil society / project",
+      "date": "2026-06-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
           "kind": "event"
         }
       ]
@@ -56047,7 +57181,7 @@
       ]
     },
     {
-      "id": "src-328",
+      "id": "src-336",
       "title": "S.3150 text (Congress.gov)",
       "name": "S.3150 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -56062,7 +57196,7 @@
       ]
     },
     {
-      "id": "src-329",
+      "id": "src-337",
       "title": "Senate Banking GAIN AI Act release",
       "name": "Senate Banking GAIN AI Act release",
       "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -56122,7 +57256,52 @@
       ]
     },
     {
-      "id": "src-304",
+      "id": "src-300",
+      "title": "Public and Private Sectors Jointly Respond to AI Cyber Threats: MSIT Announces Plan for Private-sector Information Security against AI-driven Cyber Threats",
+      "name": "South Korean Ministry of Science and ICT",
+      "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1268&sCode=eng",
+      "type": "Government / policy",
+      "date": "2026-05-29",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-301",
+      "title": "MSIT Partners with Anthropic for Global AI Safety and Security",
+      "name": "South Korean Ministry of Science and ICT",
+      "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1275&sCode=eng",
+      "type": "Government / policy",
+      "date": "2026-06-29",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-302",
+      "title": "Phase 1 Evaluation Results Released for Sovereign AI Foundation Model Project",
+      "name": "South Korean Ministry of Science and ICT",
+      "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1212&sCode=eng",
+      "type": "Government / policy",
+      "date": "2026-01-15",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-312",
       "title": "Stanford 2026 AI Index (via BigGo)",
       "name": "Stanford 2026 AI Index (via BigGo)",
       "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -56137,7 +57316,7 @@
       ]
     },
     {
-      "id": "src-303",
+      "id": "src-311",
       "title": "Stanford AI Index 2026 (via TNW)",
       "name": "Stanford AI Index 2026 (via TNW)",
       "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -56152,7 +57331,7 @@
       ]
     },
     {
-      "id": "src-302",
+      "id": "src-310",
       "title": "Stargate stalls (The Information via The Decoder)",
       "name": "Stargate stalls (The Information via The Decoder)",
       "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -56167,7 +57346,7 @@
       ]
     },
     {
-      "id": "src-314",
+      "id": "src-322",
       "title": "Stargate UK paused (Data Centre Magazine)",
       "name": "Stargate UK paused (Data Centre Magazine)",
       "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -56242,7 +57421,7 @@
       ]
     },
     {
-      "id": "src-300",
+      "id": "src-308",
       "title": "Tech AI spending may approach $700 billion this year",
       "name": "Tech AI spending may approach $700 billion this year",
       "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -56287,7 +57466,7 @@
       ]
     },
     {
-      "id": "src-299",
+      "id": "src-307",
       "title": "The 2025 AI Index Report",
       "name": "The 2025 AI Index Report",
       "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -56362,6 +57541,21 @@
       ]
     },
     {
+      "id": "src-303",
+      "title": "Naver Cloud, NC AI cut from national AI foundation model race",
+      "name": "The Korea Times",
+      "url": "https://www.koreatimes.co.kr/business/tech-science/20260115/naver-cloud-nc-ai-cut-from-national-ai-foundation-model-race",
+      "type": "Press / wire",
+      "date": "2026-01-15",
+      "primary_or_secondary": "secondary",
+      "used_by": [
+        {
+          "id": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-107",
       "title": "The Llama 4 herd",
       "name": "The Llama 4 herd",
@@ -56422,7 +57616,7 @@
       ]
     },
     {
-      "id": "src-351",
+      "id": "src-359",
       "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -56437,7 +57631,7 @@
       ]
     },
     {
-      "id": "src-350",
+      "id": "src-358",
       "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -56452,7 +57646,7 @@
       ]
     },
     {
-      "id": "src-324",
+      "id": "src-332",
       "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -56797,7 +57991,7 @@
       ]
     },
     {
-      "id": "src-337",
+      "id": "src-345",
       "title": "What we know and what we're watching (SC Media)",
       "name": "What we know and what we're watching (SC Media)",
       "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -56827,7 +58021,7 @@
       ]
     },
     {
-      "id": "src-316",
+      "id": "src-324",
       "title": "Who Controls Europe's AI Future? (Open Future)",
       "name": "Who Controls Europe's AI Future? (Open Future)",
       "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -56867,6 +58061,21 @@
       "used_by": [
         {
           "id": "SIG_2025_PALANTIR_ICE_IMMIGRATIONOS",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-299",
+      "title": "S. Korea to launch sovereign cybersecurity AI this year: science minister",
+      "name": "Yonhap News Agency",
+      "url": "https://en.yna.co.kr/view/AEN20260716005651320",
+      "type": "Press / wire",
+      "date": "2026-07-16",
+      "primary_or_secondary": "secondary",
+      "used_by": [
+        {
+          "id": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
           "kind": "event"
         }
       ]
@@ -56947,7 +58156,7 @@
           ]
         },
         {
-          "id": "src-353",
+          "id": "src-361",
           "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -58953,7 +60162,7 @@
           ]
         },
         {
-          "id": "src-313",
+          "id": "src-321",
           "title": "Introducing Stargate UK",
           "name": "Introducing Stargate UK",
           "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -59197,7 +60406,7 @@
           ]
         },
         {
-          "id": "src-348",
+          "id": "src-356",
           "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -59216,7 +60425,7 @@
           ]
         },
         {
-          "id": "src-340",
+          "id": "src-348",
           "title": "A small number of samples can poison LLMs (Anthropic)",
           "name": "A small number of samples can poison LLMs (Anthropic)",
           "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -59306,7 +60515,7 @@
           ]
         },
         {
-          "id": "src-343",
+          "id": "src-351",
           "title": "Anthropic awarded $200M DOD agreement",
           "name": "Anthropic awarded $200M DOD agreement",
           "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -59321,7 +60530,7 @@
           ]
         },
         {
-          "id": "src-336",
+          "id": "src-344",
           "title": "Anthropic claims met with doubt (BleepingComputer)",
           "name": "Anthropic claims met with doubt (BleepingComputer)",
           "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -59536,7 +60745,7 @@
           ]
         },
         {
-          "id": "src-322",
+          "id": "src-330",
           "title": "BIS press release: rescission",
           "name": "BIS press release: rescission",
           "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -59581,7 +60790,7 @@
           ]
         },
         {
-          "id": "src-356",
+          "id": "src-364",
           "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -59768,7 +60977,7 @@
           ]
         },
         {
-          "id": "src-310",
+          "id": "src-318",
           "title": "Microsoft and U.S. join AI forces in UAE deal",
           "name": "Microsoft and U.S. join AI forces in UAE deal",
           "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -59787,7 +60996,7 @@
           ]
         },
         {
-          "id": "src-311",
+          "id": "src-319",
           "title": "Advanced AI chips cleared for export to UAE",
           "name": "Advanced AI chips cleared for export to UAE",
           "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -59862,7 +61071,7 @@
           ]
         },
         {
-          "id": "src-350",
+          "id": "src-358",
           "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -59952,7 +61161,7 @@
           ]
         },
         {
-          "id": "src-321",
+          "id": "src-329",
           "title": "CRS R48642 PDF",
           "name": "CRS R48642 PDF",
           "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -59990,7 +61199,7 @@
           ]
         },
         {
-          "id": "src-319",
+          "id": "src-327",
           "title": "U.S. Export Controls and China (CRS R48642)",
           "name": "U.S. Export Controls and China (CRS R48642)",
           "url": "https://www.congress.gov/crs-product/R48642",
@@ -60024,7 +61233,7 @@
           ]
         },
         {
-          "id": "src-330",
+          "id": "src-338",
           "title": "H.R.3447 text (Congress.gov)",
           "name": "H.R.3447 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -60039,7 +61248,7 @@
           ]
         },
         {
-          "id": "src-332",
+          "id": "src-340",
           "title": "H.R.6875 titles (Congress.gov)",
           "name": "H.R.6875 titles (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -60054,7 +61263,7 @@
           ]
         },
         {
-          "id": "src-328",
+          "id": "src-336",
           "title": "S.3150 text (Congress.gov)",
           "name": "S.3150 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -60194,7 +61403,7 @@
           ]
         },
         {
-          "id": "src-304",
+          "id": "src-312",
           "title": "Stanford 2026 AI Index (via BigGo)",
           "name": "Stanford 2026 AI Index (via BigGo)",
           "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -60209,7 +61418,7 @@
           ]
         },
         {
-          "id": "src-303",
+          "id": "src-311",
           "title": "Stanford AI Index 2026 (via TNW)",
           "name": "Stanford AI Index 2026 (via TNW)",
           "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -60224,7 +61433,7 @@
           ]
         },
         {
-          "id": "src-299",
+          "id": "src-307",
           "title": "The 2025 AI Index Report",
           "name": "The 2025 AI Index Report",
           "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -60517,7 +61726,7 @@
           ]
         },
         {
-          "id": "src-349",
+          "id": "src-357",
           "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -60802,7 +62011,7 @@
           ]
         },
         {
-          "id": "src-352",
+          "id": "src-360",
           "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -60898,7 +62107,7 @@
       "family": "CNBC",
       "sources": [
         {
-          "id": "src-345",
+          "id": "src-353",
           "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -60932,7 +62141,7 @@
           ]
         },
         {
-          "id": "src-300",
+          "id": "src-308",
           "title": "Tech AI spending may approach $700 billion this year",
           "name": "Tech AI spending may approach $700 billion this year",
           "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -60947,7 +62156,7 @@
           ]
         },
         {
-          "id": "src-351",
+          "id": "src-359",
           "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -61097,7 +62306,7 @@
           ]
         },
         {
-          "id": "src-338",
+          "id": "src-346",
           "title": "Big Sleep agent makes big leap (Google Cloud)",
           "name": "Big Sleep agent makes big leap (Google Cloud)",
           "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -61174,7 +62383,7 @@
           ]
         },
         {
-          "id": "src-307",
+          "id": "src-315",
           "title": "DeepSeek, Huawei, Export Controls (CSIS)",
           "name": "DeepSeek, Huawei, Export Controls (CSIS)",
           "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -61217,7 +62426,7 @@
       ]
     },
     {
-      "id": "source-group-108",
+      "id": "source-group-109",
       "family": "Microsoft",
       "sources": [
         {
@@ -61319,7 +62528,7 @@
       ]
     },
     {
-      "id": "source-group-128",
+      "id": "source-group-131",
       "family": "rg.ru",
       "sources": [
         {
@@ -61407,7 +62616,7 @@
       ]
     },
     {
-      "id": "source-group-137",
+      "id": "source-group-141",
       "family": "The Guardian",
       "sources": [
         {
@@ -61518,7 +62727,7 @@
           ]
         },
         {
-          "id": "src-354",
+          "id": "src-362",
           "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -61690,7 +62899,7 @@
       "family": "darpa.mil",
       "sources": [
         {
-          "id": "src-334",
+          "id": "src-342",
           "title": "AIxCC marks pivotal inflection point (DARPA)",
           "name": "AIxCC marks pivotal inflection point (DARPA)",
           "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -61770,7 +62979,7 @@
       ]
     },
     {
-      "id": "source-group-87",
+      "id": "source-group-88",
       "family": "government.ru",
       "sources": [
         {
@@ -61831,6 +63040,74 @@
         {
           "kind": "event",
           "id": "SIG_RUSSIA_2026_SUPERCOMPUTER_ROADMAP"
+        }
+      ],
+      "types": [
+        "Government / policy"
+      ]
+    },
+    {
+      "id": "source-group-135",
+      "family": "msit.go.kr",
+      "sources": [
+        {
+          "id": "src-300",
+          "title": "Public and Private Sectors Jointly Respond to AI Cyber Threats: MSIT Announces Plan for Private-sector Information Security against AI-driven Cyber Threats",
+          "name": "South Korean Ministry of Science and ICT",
+          "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1268&sCode=eng",
+          "type": "Government / policy",
+          "date": "2026-05-29",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-301",
+          "title": "MSIT Partners with Anthropic for Global AI Safety and Security",
+          "name": "South Korean Ministry of Science and ICT",
+          "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1275&sCode=eng",
+          "type": "Government / policy",
+          "date": "2026-06-29",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-302",
+          "title": "Phase 1 Evaluation Results Released for Sovereign AI Foundation Model Project",
+          "name": "South Korean Ministry of Science and ICT",
+          "url": "https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1212&sCode=eng",
+          "type": "Government / policy",
+          "date": "2026-01-15",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION"
         }
       ],
       "types": [
@@ -61952,7 +63229,7 @@
       ]
     },
     {
-      "id": "source-group-102",
+      "id": "source-group-103",
       "family": "ai.meta.com",
       "sources": [
         {
@@ -62101,7 +63378,7 @@
       "family": "blogs.nvidia.com",
       "sources": [
         {
-          "id": "src-318",
+          "id": "src-326",
           "title": "India Fuels Its AI Mission With NVIDIA",
           "name": "India Fuels Its AI Mission With NVIDIA",
           "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -62345,7 +63622,7 @@
       ]
     },
     {
-      "id": "source-group-143",
+      "id": "source-group-148",
       "family": "files.gao.gov",
       "sources": [
         {
@@ -62394,7 +63671,7 @@
       ]
     },
     {
-      "id": "source-group-78",
+      "id": "source-group-79",
       "family": "ftc.gov",
       "sources": [
         {
@@ -62444,7 +63721,7 @@
       ]
     },
     {
-      "id": "source-group-142",
+      "id": "source-group-147",
       "family": "gao.gov",
       "sources": [
         {
@@ -62706,7 +63983,7 @@
       "family": "letsdatascience.com",
       "sources": [
         {
-          "id": "src-308",
+          "id": "src-316",
           "title": "How China's GLM-5 Works",
           "name": "How China's GLM-5 Works",
           "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -62744,7 +64021,7 @@
       "family": "owasp.org",
       "sources": [
         {
-          "id": "src-342",
+          "id": "src-350",
           "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -62816,7 +64093,7 @@
       ]
     },
     {
-      "id": "source-group-86",
+      "id": "source-group-87",
       "family": "pib.gov.in",
       "sources": [
         {
@@ -62835,7 +64112,7 @@
           ]
         },
         {
-          "id": "src-317",
+          "id": "src-325",
           "title": "PIB: India common computing facility",
           "name": "PIB: India common computing facility",
           "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -62866,7 +64143,7 @@
       ]
     },
     {
-      "id": "source-group-121",
+      "id": "source-group-123",
       "family": "publication.pravo.gov.ru",
       "sources": [
         {
@@ -62991,7 +64268,7 @@
       ]
     },
     {
-      "id": "source-group-77",
+      "id": "source-group-78",
       "family": "search.ftc.gov",
       "sources": [
         {
@@ -63079,7 +64356,7 @@
       ]
     },
     {
-      "id": "source-group-134",
+      "id": "source-group-138",
       "family": "sysdig.com",
       "sources": [
         {
@@ -63273,7 +64550,7 @@
       ]
     },
     {
-      "id": "source-group-76",
+      "id": "source-group-77",
       "family": "US Government / GovInfo",
       "sources": [
         {
@@ -63322,7 +64599,7 @@
       ]
     },
     {
-      "id": "source-group-122",
+      "id": "source-group-124",
       "family": "x.ai",
       "sources": [
         {
@@ -63371,7 +64648,7 @@
       ]
     },
     {
-      "id": "source-group-127",
+      "id": "source-group-130",
       "family": "agentsofchaos.baulab.info",
       "sources": [
         {
@@ -63401,7 +64678,7 @@
       ]
     },
     {
-      "id": "source-group-85",
+      "id": "source-group-86",
       "family": "ai.google.dev",
       "sources": [
         {
@@ -63435,7 +64712,7 @@
       "family": "aicyberchallenge.com",
       "sources": [
         {
-          "id": "src-339",
+          "id": "src-347",
           "title": "AIxCC finals winners (DARPA)",
           "name": "AIxCC finals winners (DARPA)",
           "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -63521,11 +64798,11 @@
       ]
     },
     {
-      "id": "source-group-65",
+      "id": "source-group-66",
       "family": "anderseninstitute.org",
       "sources": [
         {
-          "id": "src-326",
+          "id": "src-334",
           "title": "China Export Controls: Critical Minerals (Andersen Institute)",
           "name": "China Export Controls: Critical Minerals (Andersen Institute)",
           "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -63551,7 +64828,7 @@
       ]
     },
     {
-      "id": "source-group-71",
+      "id": "source-group-72",
       "family": "api-docs.deepseek.com",
       "sources": [
         {
@@ -63581,11 +64858,11 @@
       ]
     },
     {
-      "id": "source-group-130",
+      "id": "source-group-133",
       "family": "banking.senate.gov",
       "sources": [
         {
-          "id": "src-329",
+          "id": "src-337",
           "title": "Senate Banking GAIN AI Act release",
           "name": "Senate Banking GAIN AI Act release",
           "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -63645,7 +64922,7 @@
       "family": "breakingdefense.com",
       "sources": [
         {
-          "id": "src-344",
+          "id": "src-352",
           "title": "Breaking Defense: $200M each for agentic AI",
           "name": "Breaking Defense: $200M each for agentic AI",
           "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -63702,6 +64979,36 @@
     },
     {
       "id": "source-group-60",
+      "family": "byline.network",
+      "sources": [
+        {
+          "id": "src-306",
+          "title": "Project Canopy reports 990 vulnerabilities in the e-government standard framework",
+          "name": "Byline Network",
+          "url": "https://byline.network/2026/07/14-602/",
+          "type": "Press / wire",
+          "date": "2026-07-14",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME"
+        }
+      ],
+      "types": [
+        "Press / wire"
+      ]
+    },
+    {
+      "id": "source-group-61",
       "family": "caixinglobal.com",
       "sources": [
         {
@@ -63731,7 +65038,7 @@
       ]
     },
     {
-      "id": "source-group-141",
+      "id": "source-group-146",
       "family": "cases.justia.com",
       "sources": [
         {
@@ -63761,7 +65068,7 @@
       ]
     },
     {
-      "id": "source-group-61",
+      "id": "source-group-62",
       "family": "catonetworks.com",
       "sources": [
         {
@@ -63791,7 +65098,7 @@
       ]
     },
     {
-      "id": "source-group-62",
+      "id": "source-group-63",
       "family": "censys.com",
       "sources": [
         {
@@ -63821,7 +65128,7 @@
       ]
     },
     {
-      "id": "source-group-63",
+      "id": "source-group-64",
       "family": "cerebras.ai",
       "sources": [
         {
@@ -63851,11 +65158,11 @@
       ]
     },
     {
-      "id": "source-group-92",
+      "id": "source-group-93",
       "family": "chinaselectcommittee.house.gov",
       "sources": [
         {
-          "id": "src-331",
+          "id": "src-339",
           "title": "House Select Committee: Chip Security Act passage",
           "name": "House Select Committee: Chip Security Act passage",
           "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -63881,7 +65188,7 @@
       ]
     },
     {
-      "id": "source-group-140",
+      "id": "source-group-145",
       "family": "cisa.gov",
       "sources": [
         {
@@ -63911,7 +65218,7 @@
       ]
     },
     {
-      "id": "source-group-66",
+      "id": "source-group-67",
       "family": "consultant.ru",
       "sources": [
         {
@@ -63986,11 +65293,11 @@
       ]
     },
     {
-      "id": "source-group-69",
+      "id": "source-group-70",
       "family": "cybersecuritydive.com",
       "sources": [
         {
-          "id": "src-335",
+          "id": "src-343",
           "title": "Cybersecurity Dive: DARPA touts results",
           "name": "Cybersecurity Dive: DARPA touts results",
           "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -64016,11 +65323,11 @@
       ]
     },
     {
-      "id": "source-group-133",
+      "id": "source-group-137",
       "family": "datacentremagazine.com",
       "sources": [
         {
-          "id": "src-314",
+          "id": "src-322",
           "title": "Stargate UK paused (Data Centre Magazine)",
           "name": "Stargate UK paused (Data Centre Magazine)",
           "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -64050,7 +65357,7 @@
       "family": "defensescoop.com",
       "sources": [
         {
-          "id": "src-357",
+          "id": "src-365",
           "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -64076,11 +65383,11 @@
       ]
     },
     {
-      "id": "source-group-73",
+      "id": "source-group-74",
       "family": "eib.org",
       "sources": [
         {
-          "id": "src-315",
+          "id": "src-323",
           "title": "EIB-Commission gigafactories MoU",
           "name": "EIB-Commission gigafactories MoU",
           "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -64106,7 +65413,7 @@
       ]
     },
     {
-      "id": "source-group-74",
+      "id": "source-group-75",
       "family": "elysee.fr",
       "sources": [
         {
@@ -64136,11 +65443,41 @@
       ]
     },
     {
-      "id": "source-group-99",
+      "id": "source-group-155",
+      "family": "en.yna.co.kr",
+      "sources": [
+        {
+          "id": "src-299",
+          "title": "S. Korea to launch sovereign cybersecurity AI this year: science minister",
+          "name": "Yonhap News Agency",
+          "url": "https://en.yna.co.kr/view/AEN20260716005651320",
+          "type": "Press / wire",
+          "date": "2026-07-16",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
+        }
+      ],
+      "types": [
+        "Press / wire"
+      ]
+    },
+    {
+      "id": "source-group-100",
       "family": "epoch.ai",
       "sources": [
         {
-          "id": "src-301",
+          "id": "src-309",
           "title": "Hyperscaler capex trend",
           "name": "Hyperscaler capex trend",
           "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -64166,11 +65503,11 @@
       ]
     },
     {
-      "id": "source-group-120",
+      "id": "source-group-122",
       "family": "finance.yahoo.com",
       "sources": [
         {
-          "id": "src-325",
+          "id": "src-333",
           "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -64196,7 +65533,7 @@
       ]
     },
     {
-      "id": "source-group-80",
+      "id": "source-group-81",
       "family": "flare.io",
       "sources": [
         {
@@ -64226,7 +65563,7 @@
       ]
     },
     {
-      "id": "source-group-117",
+      "id": "source-group-118",
       "family": "flk.npc.gov.cn",
       "sources": [
         {
@@ -64256,7 +65593,7 @@
       ]
     },
     {
-      "id": "source-group-110",
+      "id": "source-group-111",
       "family": "fmprc.gov.cn",
       "sources": [
         {
@@ -64286,11 +65623,11 @@
       ]
     },
     {
-      "id": "source-group-90",
+      "id": "source-group-91",
       "family": "foreignaffairs.house.gov",
       "sources": [
         {
-          "id": "src-333",
+          "id": "src-341",
           "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -64316,7 +65653,7 @@
       ]
     },
     {
-      "id": "source-group-79",
+      "id": "source-group-80",
       "family": "fsb.org",
       "sources": [
         {
@@ -64346,7 +65683,7 @@
       ]
     },
     {
-      "id": "source-group-83",
+      "id": "source-group-84",
       "family": "g42.ai",
       "sources": [
         {
@@ -64376,7 +65713,7 @@
       ]
     },
     {
-      "id": "source-group-84",
+      "id": "source-group-85",
       "family": "garant.ru",
       "sources": [
         {
@@ -64406,7 +65743,7 @@
       ]
     },
     {
-      "id": "source-group-88",
+      "id": "source-group-89",
       "family": "government.nl",
       "sources": [
         {
@@ -64436,7 +65773,7 @@
       ]
     },
     {
-      "id": "source-group-72",
+      "id": "source-group-73",
       "family": "gur.gov.ua",
       "sources": [
         {
@@ -64466,7 +65803,7 @@
       ]
     },
     {
-      "id": "source-group-82",
+      "id": "source-group-83",
       "family": "gxt.fujian.gov.cn",
       "sources": [
         {
@@ -64496,7 +65833,7 @@
       ]
     },
     {
-      "id": "source-group-89",
+      "id": "source-group-90",
       "family": "habr.com",
       "sources": [
         {
@@ -64526,11 +65863,11 @@
       ]
     },
     {
-      "id": "source-group-91",
+      "id": "source-group-92",
       "family": "hoganlovells.com",
       "sources": [
         {
-          "id": "src-323",
+          "id": "src-331",
           "title": "Hogan Lovells analysis",
           "name": "Hogan Lovells analysis",
           "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -64556,7 +65893,7 @@
       ]
     },
     {
-      "id": "source-group-95",
+      "id": "source-group-96",
       "family": "huggingface.co",
       "sources": [
         {
@@ -64586,7 +65923,7 @@
       ]
     },
     {
-      "id": "source-group-97",
+      "id": "source-group-98",
       "family": "hunt.io",
       "sources": [
         {
@@ -64616,7 +65953,7 @@
       ]
     },
     {
-      "id": "source-group-98",
+      "id": "source-group-99",
       "family": "Huntress",
       "sources": [
         {
@@ -64646,7 +65983,7 @@
       ]
     },
     {
-      "id": "source-group-101",
+      "id": "source-group-102",
       "family": "iea.org",
       "sources": [
         {
@@ -64691,7 +66028,7 @@
       ]
     },
     {
-      "id": "source-group-81",
+      "id": "source-group-82",
       "family": "iis.fraunhofer.de",
       "sources": [
         {
@@ -64725,7 +66062,7 @@
       "family": "interface-eu.org",
       "sources": [
         {
-          "id": "src-347",
+          "id": "src-355",
           "title": "Built for Purpose? EU AI Gigafactories (Interface)",
           "name": "Built for Purpose? EU AI Gigafactories (Interface)",
           "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -64751,7 +66088,7 @@
       ]
     },
     {
-      "id": "source-group-119",
+      "id": "source-group-120",
       "family": "investopedia.com",
       "sources": [
         {
@@ -64781,7 +66118,7 @@
       ]
     },
     {
-      "id": "source-group-67",
+      "id": "source-group-68",
       "family": "investors.coreweave.com",
       "sources": [
         {
@@ -64811,11 +66148,11 @@
       ]
     },
     {
-      "id": "source-group-104",
+      "id": "source-group-105",
       "family": "kirkland.com",
       "sources": [
         {
-          "id": "src-320",
+          "id": "src-328",
           "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -64841,11 +66178,41 @@
       ]
     },
     {
+      "id": "source-group-142",
+      "family": "koreatimes.co.kr",
+      "sources": [
+        {
+          "id": "src-303",
+          "title": "Naver Cloud, NC AI cut from national AI foundation model race",
+          "name": "The Korea Times",
+          "url": "https://www.koreatimes.co.kr/business/tech-science/20260115/naver-cloud-nc-ai-cut-from-national-ai-foundation-model-race",
+          "type": "Press / wire",
+          "date": "2026-01-15",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION"
+        }
+      ],
+      "types": [
+        "Press / wire"
+      ]
+    },
+    {
       "id": "source-group-46",
       "family": "lawfaremedia.org",
       "sources": [
         {
-          "id": "src-355",
+          "id": "src-363",
           "title": "A Kill Switch for Frontier AI (Lawfare)",
           "name": "A Kill Switch for Frontier AI (Lawfare)",
           "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -64871,7 +66238,7 @@
       ]
     },
     {
-      "id": "source-group-105",
+      "id": "source-group-106",
       "family": "marketwatch.com",
       "sources": [
         {
@@ -64901,7 +66268,7 @@
       ]
     },
     {
-      "id": "source-group-106",
+      "id": "source-group-107",
       "family": "McKinsey",
       "sources": [
         {
@@ -64931,11 +66298,11 @@
       ]
     },
     {
-      "id": "source-group-70",
+      "id": "source-group-71",
       "family": "meta-intelligence.tech",
       "sources": [
         {
-          "id": "src-309",
+          "id": "src-317",
           "title": "DeepSeek V4 and R2 Deep Dive",
           "name": "DeepSeek V4 and R2 Deep Dive",
           "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -64961,7 +66328,7 @@
       ]
     },
     {
-      "id": "source-group-103",
+      "id": "source-group-104",
       "family": "meti.go.jp",
       "sources": [
         {
@@ -64991,7 +66358,7 @@
       ]
     },
     {
-      "id": "source-group-111",
+      "id": "source-group-112",
       "family": "mfa.gov.cn",
       "sources": [
         {
@@ -65021,7 +66388,7 @@
       ]
     },
     {
-      "id": "source-group-109",
+      "id": "source-group-110",
       "family": "mod.gov.ua",
       "sources": [
         {
@@ -65051,7 +66418,7 @@
       ]
     },
     {
-      "id": "source-group-112",
+      "id": "source-group-113",
       "family": "Morgan Stanley",
       "sources": [
         {
@@ -65081,7 +66448,7 @@
       ]
     },
     {
-      "id": "source-group-113",
+      "id": "source-group-114",
       "family": "mubadala.com",
       "sources": [
         {
@@ -65111,7 +66478,7 @@
       ]
     },
     {
-      "id": "source-group-118",
+      "id": "source-group-119",
       "family": "nato.int",
       "sources": [
         {
@@ -65141,7 +66508,37 @@
       ]
     },
     {
-      "id": "source-group-114",
+      "id": "source-group-121",
+      "family": "navercorp.com",
+      "sources": [
+        {
+          "id": "src-304",
+          "title": "TEAM NAVER, KAI to Co-Develop Defense-Specific AI Model and Implement Sovereign AI for National Defense",
+          "name": "Naver",
+          "url": "https://www.navercorp.com/en/media/pressReleasesDetail?seq=10034490",
+          "type": "Company / vendor",
+          "date": "2026-07-07",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU"
+        }
+      ],
+      "types": [
+        "Company / vendor"
+      ]
+    },
+    {
+      "id": "source-group-115",
       "family": "nber.org",
       "sources": [
         {
@@ -65171,7 +66568,7 @@
       ]
     },
     {
-      "id": "source-group-64",
+      "id": "source-group-65",
       "family": "news.cgtn.com",
       "sources": [
         {
@@ -65201,11 +66598,11 @@
       ]
     },
     {
-      "id": "source-group-94",
+      "id": "source-group-95",
       "family": "newsletter.semianalysis.com",
       "sources": [
         {
-          "id": "src-346",
+          "id": "src-354",
           "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -65231,7 +66628,7 @@
       ]
     },
     {
-      "id": "source-group-116",
+      "id": "source-group-117",
       "family": "npc.gov.cn",
       "sources": [
         {
@@ -65261,11 +66658,11 @@
       ]
     },
     {
-      "id": "source-group-139",
+      "id": "source-group-144",
       "family": "NPR",
       "sources": [
         {
-          "id": "src-324",
+          "id": "src-332",
           "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -65291,11 +66688,11 @@
       ]
     },
     {
-      "id": "source-group-148",
+      "id": "source-group-153",
       "family": "openfuture.eu",
       "sources": [
         {
-          "id": "src-316",
+          "id": "src-324",
           "title": "Who Controls Europe's AI Future? (Open Future)",
           "name": "Who Controls Europe's AI Future? (Open Future)",
           "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -65321,7 +66718,7 @@
       ]
     },
     {
-      "id": "source-group-123",
+      "id": "source-group-125",
       "family": "opensource.org",
       "sources": [
         {
@@ -65351,7 +66748,7 @@
       ]
     },
     {
-      "id": "source-group-125",
+      "id": "source-group-127",
       "family": "pm.gc.ca",
       "sources": [
         {
@@ -65381,7 +66778,7 @@
       ]
     },
     {
-      "id": "source-group-124",
+      "id": "source-group-126",
       "family": "PoC-in-GitHub",
       "sources": [
         {
@@ -65411,11 +66808,11 @@
       ]
     },
     {
-      "id": "source-group-96",
+      "id": "source-group-97",
       "family": "prnewswire.com",
       "sources": [
         {
-          "id": "src-312",
+          "id": "src-320",
           "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -65441,7 +66838,37 @@
       ]
     },
     {
-      "id": "source-group-126",
+      "id": "source-group-128",
+      "family": "project-plasma.org",
+      "sources": [
+        {
+          "id": "src-305",
+          "title": "Public-interest AI security initiative Project Canopy officially launches",
+          "name": "Project Plasma",
+          "url": "https://project-plasma.org/notice/10",
+          "type": "Civil society / project",
+          "date": "2026-06-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME"
+        }
+      ],
+      "types": [
+        "Civil society / project"
+      ]
+    },
+    {
+      "id": "source-group-129",
       "family": "rand.org",
       "sources": [
         {
@@ -65486,11 +66913,11 @@
       ]
     },
     {
-      "id": "source-group-93",
+      "id": "source-group-94",
       "family": "recodechinaai.substack.com",
       "sources": [
         {
-          "id": "src-306",
+          "id": "src-314",
           "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -65516,7 +66943,7 @@
       ]
     },
     {
-      "id": "source-group-75",
+      "id": "source-group-76",
       "family": "redditinc.com",
       "sources": [
         {
@@ -65546,11 +66973,11 @@
       ]
     },
     {
-      "id": "source-group-147",
+      "id": "source-group-152",
       "family": "scworld.com",
       "sources": [
         {
-          "id": "src-337",
+          "id": "src-345",
           "title": "What we know and what we're watching (SC Media)",
           "name": "What we know and what we're watching (SC Media)",
           "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -65576,7 +67003,7 @@
       ]
     },
     {
-      "id": "source-group-135",
+      "id": "source-group-139",
       "family": "so-ups.ru",
       "sources": [
         {
@@ -65606,7 +67033,7 @@
       ]
     },
     {
-      "id": "source-group-131",
+      "id": "source-group-134",
       "family": "soofi.info",
       "sources": [
         {
@@ -65636,7 +67063,7 @@
       ]
     },
     {
-      "id": "source-group-129",
+      "id": "source-group-132",
       "family": "storage.consultant.ru",
       "sources": [
         {
@@ -65670,7 +67097,7 @@
       "family": "Tech Times",
       "sources": [
         {
-          "id": "src-327",
+          "id": "src-335",
           "title": "Beijing presses Washington (Tech Times)",
           "name": "Beijing presses Washington (Tech Times)",
           "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -65696,11 +67123,11 @@
       ]
     },
     {
-      "id": "source-group-100",
+      "id": "source-group-101",
       "family": "techblog.comsoc.org",
       "sources": [
         {
-          "id": "src-305",
+          "id": "src-313",
           "title": "Hyperscaler cloud share",
           "name": "Hyperscaler cloud share",
           "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -65726,7 +67153,7 @@
       ]
     },
     {
-      "id": "source-group-136",
+      "id": "source-group-140",
       "family": "techcrunch.com",
       "sources": [
         {
@@ -65756,11 +67183,11 @@
       ]
     },
     {
-      "id": "source-group-132",
+      "id": "source-group-136",
       "family": "the-decoder.com",
       "sources": [
         {
-          "id": "src-302",
+          "id": "src-310",
           "title": "Stargate stalls (The Information via The Decoder)",
           "name": "Stargate stalls (The Information via The Decoder)",
           "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -65786,11 +67213,11 @@
       ]
     },
     {
-      "id": "source-group-68",
+      "id": "source-group-69",
       "family": "thestar.com.my",
       "sources": [
         {
-          "id": "src-358",
+          "id": "src-366",
           "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -65820,7 +67247,7 @@
       "family": "Tom's Hardware",
       "sources": [
         {
-          "id": "src-359",
+          "id": "src-367",
           "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -65850,7 +67277,7 @@
       "family": "turing.ac.uk",
       "sources": [
         {
-          "id": "src-341",
+          "id": "src-349",
           "title": "Alan Turing Institute summary",
           "name": "Alan Turing Institute summary",
           "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -65876,7 +67303,7 @@
       ]
     },
     {
-      "id": "source-group-144",
+      "id": "source-group-149",
       "family": "unit42.paloaltonetworks.com",
       "sources": [
         {
@@ -65906,7 +67333,7 @@
       ]
     },
     {
-      "id": "source-group-138",
+      "id": "source-group-143",
       "family": "US Treasury",
       "sources": [
         {
@@ -65951,7 +67378,7 @@
       ]
     },
     {
-      "id": "source-group-145",
+      "id": "source-group-150",
       "family": "verizon.com",
       "sources": [
         {
@@ -65981,7 +67408,7 @@
       ]
     },
     {
-      "id": "source-group-146",
+      "id": "source-group-151",
       "family": "Washington Post",
       "sources": [
         {
@@ -66011,7 +67438,7 @@
       ]
     },
     {
-      "id": "source-group-149",
+      "id": "source-group-154",
       "family": "Wired",
       "sources": [
         {
@@ -66041,7 +67468,7 @@
       ]
     },
     {
-      "id": "source-group-115",
+      "id": "source-group-116",
       "family": "zfxxgk.ndrc.gov.cn",
       "sources": [
         {
@@ -66071,7 +67498,7 @@
       ]
     },
     {
-      "id": "source-group-107",
+      "id": "source-group-108",
       "family": "zona.media",
       "sources": [
         {
@@ -67108,13 +68535,13 @@
       "arc_families": 6
     },
     "post_merge": {
-      "version": "0.21",
+      "version": "0.22",
       "date": "2026-07-17",
-      "evidence": 237,
+      "evidence": 242,
       "claims": 71,
       "claim_checks": 29,
       "story_arcs": 24,
-      "story_edges": 438,
+      "story_edges": 449,
       "unclassified_geography_event_ids": [],
       "arcs_without_family": []
     }
@@ -67234,6 +68661,31 @@
         "candidate_id": "CAND_2026_SOOFI_S_SOVEREIGN_MODEL_PREVIEW",
         "decision": "merge_as_sovereign_model_preview_with_release_caveats",
         "master_id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
+      },
+      {
+        "candidate_id": "CAND_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+        "decision": "merge_as_access_shock_countermeasure",
+        "master_id": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
+      },
+      {
+        "candidate_id": "CAND_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+        "decision": "merge_as_managed_dependence_hedge",
+        "master_id": "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU"
+      },
+      {
+        "candidate_id": "CAND_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+        "decision": "merge_as_sovereignty_definition_test",
+        "master_id": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION"
+      },
+      {
+        "candidate_id": "CAND_2026_NAVER_KAI_DEFENSE_AI_MOU",
+        "decision": "merge_as_defense_model_intent_not_deployment",
+        "master_id": "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU"
+      },
+      {
+        "candidate_id": "CAND_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
+        "decision": "merge_as_reported_find_and_patch_signal",
+        "master_id": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME"
       }
     ],
     "corrected_overclaims": [
@@ -67254,29 +68706,39 @@
       "The 5,000 training-place pledge is delivered technology transfer or unrestricted model access.",
       "Soofi S has completed a general permissive open-source release.",
       "Soofi S is universally 8-9x faster or has demonstrated 8-9x lower energy use.",
-      "Training or hosting a model in Europe automatically makes every deployment GDPR-compliant."
+      "Training or hosting a model in Europe automatically makes every deployment GDPR-compliant.",
+      "South Korea promised a Mythos-equivalent cybersecurity model by the end of 2026.",
+      "HyperCLOVA X has been selected as the base for South Korea's cybersecurity model.",
+      "Naver's former AI chief still serves as the current senior presidential AI secretary after resigning on 28 April 2026.",
+      "Naver was generally banned from Korean sovereign or defense AI after its contest exclusion.",
+      "The Anthropic MOU restored Mythos access or transferred frontier-model technology to Korea.",
+      "Project Canopy independently verified 990 exploitable CVEs in deployed Korean government systems.",
+      "The Naver-KAI MOU proves a deployed defense model or autonomous combat capability."
     ],
     "source_candidate_files": [
       "ai_stack_candidate_factcheck_structural_power.json",
       "ai_stack_candidate_huntio_claude_deepseek_2026.json",
-      "ai_stack_candidate_waic_soofi_2026.json"
+      "ai_stack_candidate_waic_soofi_2026.json",
+      "ai_stack_candidate_korea_sovereignty_2026.json"
     ],
     "rolling_news_review": {
       "date": "2026-07-17",
       "sources": [
-        "Chinese Ministry of Foreign Affairs",
-        "Associated Press",
-        "Soofi Team",
-        "Fraunhofer IIS",
-        "Soofi Project",
-        "Hugging Face"
+        "South Korean Ministry of Science and ICT",
+        "Yonhap News Agency",
+        "Naver",
+        "Project Plasma",
+        "Byline Network",
+        "The Korea Times"
       ],
       "evidence_ids": [
-        "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING",
-        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
-        "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
+        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+        "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+        "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU",
+        "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME"
       ],
-      "review": "Three atomic records retained. Institution, speech, pledge, technical measurement and release state are kept separate; political interpretation, future delivery and self-authored performance remain explicitly caveated."
+      "review": "Five atomic records retained. Access restriction, domestic countermeasure, continued vendor cooperation, policy eligibility, corporate MOU and self-reported operational results remain distinct."
     }
   },
   "actorTypeLabels": {
@@ -67331,11 +68793,12 @@
   },
   "counts": {
     "geographies": {
-      "US": 123,
-      "China": 45,
+      "US": 124,
+      "China": 46,
       "EU": 26,
       "Russia": 21,
       "UK": 15,
+      "South Korea": 6,
       "Hong Kong": 5,
       "UAE": 5,
       "India": 4,
@@ -67356,17 +68819,17 @@
       "Australia": 1,
       "Canada": 1,
       "EEA": 1,
-      "Israel": 1,
-      "South Korea": 1
+      "Israel": 1
     },
     "geographies_raw": {
-      "US": 120,
+      "US": 121,
       "global": 62,
-      "China": 44,
+      "China": 45,
       "Global": 44,
       "EU": 26,
       "Russia": 21,
       "UK": 15,
+      "South Korea": 6,
       "Hong Kong": 5,
       "UAE": 5,
       "India": 4,
@@ -67410,7 +68873,6 @@
       "North America": 1,
       "public_registries": 1,
       "Russia-linked": 1,
-      "South Korea": 1,
       "synthetic_evaluation": 1,
       "underground_market": 1,
       "undisclosed_red_team_client": 1,
@@ -67419,11 +68881,12 @@
       "Western Europe": 1
     },
     "jurisdictions": {
-      "US": 123,
-      "China": 45,
+      "US": 124,
+      "China": 46,
       "EU": 26,
       "Russia": 21,
       "UK": 15,
+      "South Korea": 6,
       "Hong Kong": 5,
       "UAE": 5,
       "India": 4,
@@ -67444,8 +68907,7 @@
       "Australia": 1,
       "Canada": 1,
       "EEA": 1,
-      "Israel": 1,
-      "South Korea": 1
+      "Israel": 1
     },
     "regions": {
       "Europe": 2,
@@ -67476,7 +68938,7 @@
     },
     "actors": {
       "OpenAI": 31,
-      "Anthropic": 20,
+      "Anthropic": 21,
       "Microsoft": 16,
       "European Commission": 13,
       "US Commerce / BIS": 13,
@@ -67495,6 +68957,7 @@
       "Meta": 3,
       "OpenAI Codex": 3,
       "Sber": 3,
+      "South Korean Ministry of Science and ICT": 3,
       "US Treasury": 3,
       "xAI": 3,
       "360 Security": 2,
@@ -67504,6 +68967,7 @@
       "European Parliament": 2,
       "Langflow": 2,
       "NATO": 2,
+      "Naver": 2,
       "OpenClaw": 2,
       "Roskomnadzor": 2,
       "UK AI Security Institute": 2,
@@ -67526,13 +68990,20 @@
       "German AI Association": 1,
       "HUMAIN": 1,
       "Hunt.io": 1,
+      "Korea Aerospace Industries": 1,
+      "LG AI Research": 1,
       "Mozilla": 1,
+      "NC AI": 1,
       "Nebius": 1,
       "News Corp": 1,
       "NIST": 1,
       "NSCAI": 1,
+      "Project Canopy": 1,
+      "Project Plasma": 1,
       "Reddit": 1,
+      "SK Telecom": 1,
       "Soofi Project": 1,
+      "South Korean AI Safety Institute": 1,
       "SpaceX": 1,
       "Stack Overflow": 1,
       "State Duma": 1,
@@ -67540,13 +69011,14 @@
       "UK Government": 1,
       "UK Home Office": 1,
       "University of Manchester": 1,
+      "Upstage": 1,
       "US DOJ": 1,
       "World Artificial Intelligence Cooperation Organization": 1,
       "Xi Jinping": 1
     },
     "actor_entities": {
       "OpenAI": 31,
-      "Anthropic": 20,
+      "Anthropic": 21,
       "Microsoft": 16,
       "European Commission": 13,
       "US Commerce / BIS": 13,
@@ -67565,6 +69037,7 @@
       "Meta": 3,
       "OpenAI Codex": 3,
       "Sber": 3,
+      "South Korean Ministry of Science and ICT": 3,
       "US Treasury": 3,
       "xAI": 3,
       "360 Security": 2,
@@ -67574,6 +69047,7 @@
       "European Parliament": 2,
       "Langflow": 2,
       "NATO": 2,
+      "Naver": 2,
       "OpenClaw": 2,
       "Roskomnadzor": 2,
       "UK AI Security Institute": 2,
@@ -67596,13 +69070,20 @@
       "German AI Association": 1,
       "HUMAIN": 1,
       "Hunt.io": 1,
+      "Korea Aerospace Industries": 1,
+      "LG AI Research": 1,
       "Mozilla": 1,
+      "NC AI": 1,
       "Nebius": 1,
       "News Corp": 1,
       "NIST": 1,
       "NSCAI": 1,
+      "Project Canopy": 1,
+      "Project Plasma": 1,
       "Reddit": 1,
+      "SK Telecom": 1,
       "Soofi Project": 1,
+      "South Korean AI Safety Institute": 1,
       "SpaceX": 1,
       "Stack Overflow": 1,
       "State Duma": 1,
@@ -67610,21 +69091,22 @@
       "UK Government": 1,
       "UK Home Office": 1,
       "University of Manchester": 1,
+      "Upstage": 1,
       "US DOJ": 1,
       "World Artificial Intelligence Cooperation Organization": 1,
       "Xi Jinping": 1
     },
     "actor_types": {
-      "company": 111,
-      "government": 75,
-      "research": 41,
-      "regulator": 31,
+      "company": 114,
+      "government": 78,
+      "research": 43,
+      "regulator": 34,
       "military_security": 23,
       "workforce_users": 22,
       "financial_institution": 17,
       "multilateral": 8,
       "threat_actor": 7,
-      "civil_society": 5,
+      "civil_society": 6,
       "media_rights": 5,
       "court": 2
     },
@@ -67635,19 +69117,19 @@
       "Russia": 16,
       "UK": 12,
       "India": 4,
+      "South Korea": 4,
       "Ukraine": 3,
       "Saudi Arabia": 2,
       "Israel": 1,
       "Malaysia": 1,
-      "South Korea": 1,
       "Taiwan": 1
     },
     "actor_facets_legacy": {
       "US": 76,
       "OpenAI": 31,
+      "Research teams": 28,
       "China": 27,
-      "Research teams": 27,
-      "Anthropic": 20,
+      "Anthropic": 21,
       "EU": 16,
       "Microsoft": 16,
       "Russia": 16,
@@ -67668,10 +69150,12 @@
       "India": 4,
       "Oracle": 4,
       "SoftBank": 4,
+      "South Korea": 4,
       "GitHub": 3,
       "Meta": 3,
       "OpenAI Codex": 3,
       "Sber": 3,
+      "South Korean Ministry of Science and ICT": 3,
       "Ukraine": 3,
       "US Treasury": 3,
       "xAI": 3,
@@ -67682,6 +69166,7 @@
       "European Parliament": 2,
       "Langflow": 2,
       "NATO": 2,
+      "Naver": 2,
       "OpenClaw": 2,
       "Roskomnadzor": 2,
       "Saudi Arabia": 2,
@@ -67706,15 +69191,21 @@
       "HUMAIN": 1,
       "Hunt.io": 1,
       "Israel": 1,
+      "Korea Aerospace Industries": 1,
+      "LG AI Research": 1,
       "Malaysia": 1,
       "Mozilla": 1,
+      "NC AI": 1,
       "Nebius": 1,
       "News Corp": 1,
       "NIST": 1,
       "NSCAI": 1,
+      "Project Canopy": 1,
+      "Project Plasma": 1,
       "Reddit": 1,
+      "SK Telecom": 1,
       "Soofi Project": 1,
-      "South Korea": 1,
+      "South Korean AI Safety Institute": 1,
       "SpaceX": 1,
       "Stack Overflow": 1,
       "State Duma": 1,
@@ -67723,56 +69214,58 @@
       "UK Government": 1,
       "UK Home Office": 1,
       "University of Manchester": 1,
+      "Upstage": 1,
       "US DOJ": 1,
       "World Artificial Intelligence Cooperation Organization": 1,
       "Xi Jinping": 1
     },
     "stack_layers": {
-      "governance_law": 145,
-      "decision_support_cognition": 92,
-      "model_weights": 89,
+      "governance_law": 148,
+      "decision_support_cognition": 94,
+      "model_weights": 93,
       "cloud_inference": 84,
-      "data_telemetry": 75,
+      "data_telemetry": 79,
       "energy_compute_chips": 71,
       "finance_rent": 56,
-      "cyber_security_patch": 47
+      "cyber_security_patch": 50
     },
     "source_types": {
-      "Government / policy": 75,
-      "Press / wire": 67,
-      "Company / vendor": 45,
+      "Government / policy": 77,
+      "Press / wire": 68,
+      "Company / vendor": 46,
       "Research / preprint": 34,
       "Primary source": 8,
       "Industry / think tank": 4,
       "Court / legal": 2,
-      "Investigative reporting": 2
+      "Investigative reporting": 2,
+      "Civil society / project": 1
     },
     "relation_types": {
       "supports": 215,
-      "supports_with_scope": 49,
-      "supports_with_caveat": 29,
-      "sets_up": 27,
-      "qualifies": 22,
-      "institutionalizes": 18,
+      "supports_with_scope": 51,
+      "supports_with_caveat": 30,
+      "sets_up": 29,
+      "qualifies": 23,
+      "institutionalizes": 20,
       "develops_into": 9,
       "limits": 8,
       "walks_back": 7,
       "challenges": 6,
+      "refines": 6,
       "supports_arc": 6,
       "mitigates": 5,
-      "refines": 5,
+      "parallel": 5,
       "supports_but_limits": 5,
-      "parallel": 4,
       "supports_counterargument": 3,
       "supports_mechanism": 3,
       "challenges_overclaim": 2,
+      "countermove": 2,
       "early_countermeasure": 2,
       "generalizes": 2,
       "reframes": 2,
       "supports_as_claim_not_fact": 2,
       "accelerates_governance": 1,
       "closed_by": 1,
-      "countermove": 1,
       "produces_workaround": 1,
       "routes_around": 1,
       "triggers_capital_and_cloud_lockin": 1,
@@ -67780,24 +69273,24 @@
     },
     "arcs": {
       "AUTO_CLAIMCHECK_SUPPORT": 83,
-      "ARC_CYBER_CLAIM_TO_CAVEAT": 36,
-      "ARC_SOVEREIGN_FLOW_GATING": 30,
+      "ARC_CYBER_CLAIM_TO_CAVEAT": 39,
+      "ARC_SOVEREIGN_FLOW_GATING": 32,
       "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY": 29,
       "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 24,
       "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 23,
+      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 19,
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE": 18,
       "ARC_PALANTIR_DECISION_OS": 18,
-      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 17,
-      "ARC_QUIET_ACCESS_CONTROL": 16,
-      "ARC_EXPORT_CHIPS_TO_MODELS": 15,
+      "ARC_QUIET_ACCESS_CONTROL": 17,
+      "ARC_EXPORT_CHIPS_TO_MODELS": 16,
       "ARC_2016_2021_METERED_ACCESS_FORMATION": 14,
       "ARC_2021_STATE_INSTITUTIONALIZATION": 14,
       "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 12,
+      "ARC_WAR_DATA_FLYWHEEL": 11,
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION": 10,
       "ARC_2022_2023_FORMATION_PHASE": 9,
       "ARC_FINANCE_GOVERNED_SHUTDOWN": 9,
       "ARC_TOLL_AND_THROTTLE": 9,
-      "ARC_WAR_DATA_FLYWHEEL": 9,
       "ARC_DATA_LICENSING_AS_INPUT_LAYER": 8,
       "ARC_ENERGY_GRID_POLITICS": 8,
       "ARC_GULF_CONDITIONAL_SOVEREIGNTY": 8,
@@ -67807,9 +69300,9 @@
       "ARC_A800_H800_WORKAROUND_CLOSURE": 3
     },
     "arc_families": {
-      "ARC_FAMILY_ACCESS_CONTROL": 78,
-      "ARC_FAMILY_CYBER_COGNITION_WAR": 69,
-      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 66,
+      "ARC_FAMILY_ACCESS_CONTROL": 82,
+      "ARC_FAMILY_CYBER_COGNITION_WAR": 74,
+      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 68,
       "ARC_FAMILY_INFRASTRUCTURE_CAPITAL": 49,
       "ARC_FAMILY_DECISION_DATA_FINANCE": 45,
       "ARC_FAMILY_FORMATION_TIMELINE": 43
