@@ -1,15 +1,31 @@
 {
   "meta": {
     "title": "AI stack: four structures of power at one checkpoint",
-    "version": "0.20",
+    "version": "0.21",
     "created_at": "2026-06-28",
-    "updated_at": "2026-07-15",
-    "schema_version": "ai_stack_structural_power.v0.20.0-2026-07-15",
+    "updated_at": "2026-07-17",
+    "schema_version": "ai_stack_structural_power.v0.21.0-2026-07-17",
     "display_title_en": "AI stack: four structures of power at one checkpoint",
     "subtitle_en": "A fact map of how compute, clouds, models, data, cyber and capital become the default environment: access is metered, dependency is locked in, and rent is collected.",
     "source_pack": "ai_stack_storygraph_master.json",
     "method": "ProfGames-style layered organization. Merge of: (a) v0.4 operational pack (evidence/timeline/claim_checks/country_cards/cyber_pack/cognitive_security/critical_decision_use/palantir_case/weekly_memo/gaps), (b) v0.2 factcheck layer (claims with recommended_phrasing_ru/counterarguments/recommendations), (c) new v0.3 research closing the Stanford-tables and chip-license gaps and adding model-layer export-control claims.",
     "changelog": [
+      {
+        "version": "0.21",
+        "date": "2026-07-17",
+        "description": "Added WAICO founding, Xi Jinping's WAIC open-AI and capacity-building pledge, and Germany's Soofi S sovereign-model preview. Separated institutional fact, political interpretation, future delivery and model release state; updated the China counter-stack, open-weight and cloud-sovereignty arcs without adding a new arc.",
+        "added_evidence": 3,
+        "added_timeline": 3,
+        "added_claims": 0,
+        "added_claim_checks": 0,
+        "added_story_arcs": 0,
+        "added_story_edges": 5,
+        "updated_story_arcs": [
+          "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+          "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+          "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+        ]
+      },
       {
         "version": "0.20",
         "date": "2026-07-15",
@@ -194,9 +210,9 @@
     "subtitle": "A fact map of how compute, clouds, models, data, cyber and capital become the default environment: access is metered, dependency is locked in, and rent is collected.",
     "changelog_en": [
       {
-        "version": "0.20",
-        "date": "2026-07-15",
-        "description": "Added Hunt.io's artifact-backed report of a separate June 2026 intrusion workflow integrating Claude Code and a reported DeepSeek-v4-pro endpoint. Preserved uncertainty around victim corroboration, model attribution, human involvement and China-state attribution; connected the fact to the cyber caveat arc without treating it as confirmation of GTG-1002."
+        "version": "0.21",
+        "date": "2026-07-17",
+        "description": "Added WAICO founding, Xi Jinping's WAIC open-AI and capacity-building pledge, and Germany's Soofi S sovereign-model preview. Separated institutional fact, political interpretation, future delivery and model release state; updated the China counter-stack, open-weight and cloud-sovereignty arcs without adding a new arc."
       }
     ]
   },
@@ -212,6 +228,8 @@
     },
     "approximate_pass_rate": "97% verified or partially verified",
     "key_findings": [
+      "GLOBAL AI GOVERNANCE (v0.21): WAICO adds a signed 29-country intergovernmental founding agreement to China's counter-stack, while Xi's open-source and capacity-building speech adds diplomatic positioning. Neither proves an operational global regulator, delivered access or technical parity.",
+      "SOVEREIGN MODEL (v0.21): Soofi S combines German training infrastructure, detailed data accounting and a hybrid MoE architecture, but remains a gated preview. Its 8-9x result is a narrow self-authored decode benchmark; European hosting does not establish automatic GDPR compliance or full-stack independence.",
       "OPERATIONAL CYBER (v0.20): Hunt.io published IoCs and selected recovered artifacts from a separate June 2026 campaign in which Claude Code and a reported DeepSeek endpoint were integrated into intrusion workflows. This narrows the gap between lab capability and operational use, but does not quantify autonomy, establish Chinese state sponsorship, turn scanning into compromise or independently validate GTG-1002.",
       "NEW (v0.19): EU sovereignty is a graduated access regime, not a single ban. CLOUD Act jurisdictional risk, SecNumCloud control thresholds, a workload-tiered sovereign-cloud procurement framework, CADA proposal levels, AI Factories and vendor adaptations operate at different legal and deployment states.",
       "LEGAL STATUS (v0.19): the 7 July Cybersecurity and AI Action Plan announces model-evaluation and secure-testing capacity; it does not create AI Act fines. As of 14 July, Commission GPAI enforcement was scheduled for 2 August 2026, with Article 101 limits tied to specified infringements.",
@@ -723,15 +741,15 @@
       ]
     },
     "pass_rate_short": "97%",
-    "total_events": 234,
+    "total_events": 237,
     "total_claims": 71,
     "total_claim_checks": 29,
     "total_arcs": 24,
-    "total_edges": 433,
+    "total_edges": 438,
     "total_thesis_nodes": 5,
-    "source_count": 352,
+    "source_count": 359,
     "by_status": {
-      "verified": 135,
+      "verified": 136,
       "verified_as_reported": 31,
       "partially_verified": 26,
       "verified_preprint": 8,
@@ -741,6 +759,7 @@
       "verified_as_announcement": 2,
       "verified_as_reported_indictment_allegation": 2,
       "verified_as_reported_with_redacted_forensics": 2,
+      "verified_as_speech_not_as_fact": 2,
       "advertisement_verified_implementation_unverified": 1,
       "controlled_real_world_and_internal_red_team_no_wild_campaign": 1,
       "controlled_real_world_validation_no_wild_campaign": 1,
@@ -754,24 +773,24 @@
       "verified_adopted_future_application": 1,
       "verified_announcement_implementation_pending": 1,
       "verified_as_reported_not_primary_order": 1,
-      "verified_as_speech_not_as_fact": 1,
       "verified_controlled_evaluation": 1,
       "verified_current_rule": 1,
       "verified_malicious_registry_artifacts_no_victim_prevalence": 1,
+      "verified_preview_license_pending": 1,
       "verified_program_not_outcome": 1,
       "verified_public_exposure_not_compromise": 1,
       "verified_report_with_older_data_vintage": 1,
       "verified_vendor_announcement": 1
     },
     "by_confidence": {
-      "A": 113,
+      "A": 114,
       "B": 75,
       "C": 28,
       "D": 8,
       "B/C": 3,
       "A/B": 2,
-      "A/C": 1,
-      "A/D": 1,
+      "A/C": 2,
+      "A/D": 2,
       "C/D": 1,
       "D_for_capability_claim_B_for_speech_event": 1,
       "D/B": 1
@@ -10381,9 +10400,7 @@
       "actor_jurisdictions": [
         "Ukraine"
       ],
-      "actor_types": [
-        "military_security"
-      ],
+      "actor_types": [],
       "geography_raw": [
         "Ukraine",
         "US"
@@ -21997,8 +22014,7 @@
       ],
       "actor_jurisdictions": [],
       "actor_types": [
-        "company",
-        "military_security"
+        "company"
       ],
       "geography_raw": [
         "global"
@@ -32411,6 +32427,493 @@
         "supports_with_scope",
         "parallel"
       ]
+    },
+    {
+      "id": "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING",
+      "kind": "event",
+      "title": "Representatives of 29 countries sign an agreement establishing the Shanghai-based World Artificial Intelligence Cooperation Organization",
+      "title_en": "Representatives of 29 countries sign an agreement establishing the Shanghai-based World Artificial Intelligence Cooperation Organization",
+      "date": "2026-07-16",
+      "source_date": "2026-07-16",
+      "date_basis": "intergovernmental_agreement_signing_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://www.fmprc.gov.cn/eng/wjbzhd/202607/t20260717_11984747.html",
+      "source_name": "Ministry of Foreign Affairs of the People's Republic of China",
+      "source_type_raw": "Government / policy",
+      "source_type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "actor": "Chinese government, World Artificial Intelligence Cooperation Organization",
+      "actor_raw": "Chinese government, World Artificial Intelligence Cooperation Organization",
+      "actors_raw": [
+        "Chinese government",
+        "World Artificial Intelligence Cooperation Organization",
+        "Chinese government, World Artificial Intelligence Cooperation Organization"
+      ],
+      "actors": [
+        "Chinese government",
+        "World Artificial Intelligence Cooperation Organization"
+      ],
+      "actor_facets_legacy": [
+        "China",
+        "World Artificial Intelligence Cooperation Organization"
+      ],
+      "actor_facets": [
+        "World Artificial Intelligence Cooperation Organization"
+      ],
+      "actor_entities": [
+        "World Artificial Intelligence Cooperation Organization"
+      ],
+      "actor_jurisdictions": [
+        "China"
+      ],
+      "actor_types": [
+        "government",
+        "multilateral"
+      ],
+      "geography_raw": [
+        "China",
+        "Global"
+      ],
+      "geography": [
+        "China"
+      ],
+      "jurisdictions": [
+        "China"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "governance_law"
+      ],
+      "stack_layers": [
+        "governance_law"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ2",
+        "RQ3",
+        "RQ5"
+      ],
+      "claim_supported": "On 16 July 2026, representatives of 29 countries signed the agreement establishing the World Artificial Intelligence Cooperation Organization and, according to the Chinese foreign ministry's event record, became its founding members. The agreement describes WAICO as an independent intergovernmental international organization headquartered in Shanghai and intended to promote AI cooperation and global governance.",
+      "claim_supported_en": "On 16 July 2026, representatives of 29 countries signed the agreement establishing the World Artificial Intelligence Cooperation Organization and, according to the Chinese foreign ministry's event record, became its founding members. The agreement describes WAICO as an independent intergovernmental international organization headquartered in Shanghai and intended to promote AI cooperation and global governance.",
+      "claim_challenged": "The signing is an institutional fact, but the public event record does not establish when the agreement enters into force, how much capacity or funding the organization has, how actively all signatories will participate, or whether it will gain broad international legitimacy. It should not be described as a functioning replacement for UN governance mechanisms.",
+      "claim_challenged_en": "The signing is an institutional fact, but the public event record does not establish when the agreement enters into force, how much capacity or funding the organization has, how actively all signatories will participate, or whether it will gain broad international legitimacy. It should not be described as a functioning replacement for UN governance mechanisms.",
+      "summary": "On 16 July 2026, representatives of 29 countries signed the agreement establishing the World Artificial Intelligence Cooperation Organization and, according to the Chinese foreign ministry's event record, became its founding members. The agreement describes WAICO as an independent intergovernmental international organization headquartered in Shanghai and intended to promote AI cooperation and global governance.",
+      "summary_en": "On 16 July 2026, representatives of 29 countries signed the agreement establishing the World Artificial Intelligence Cooperation Organization and, according to the Chinese foreign ministry's event record, became its founding members. The agreement describes WAICO as an independent intergovernmental international organization headquartered in Shanghai and intended to promote AI cooperation and global governance.",
+      "notes": "The signing is an institutional fact, but the public event record does not establish when the agreement enters into force, how much capacity or funding the organization has, how actively all signatories will participate, or whether it will gain broad international legitimacy. It should not be described as a functioning replacement for UN governance mechanisms.",
+      "notes_en": "The signing is an institutional fact, but the public event record does not establish when the agreement enters into force, how much capacity or funding the organization has, how actively all signatories will participate, or whether it will gain broad international legitimacy. It should not be described as a functioning replacement for UN governance mechanisms.",
+      "safe_wording": "Say that China convened and will host a new intergovernmental AI-cooperation body whose founding agreement was signed by representatives of 29 countries. Do not call it an operational global regulator, a universal coalition or a proven replacement for existing institutions.",
+      "safe_wording_en": "Say that China convened and will host a new intergovernmental AI-cooperation body whose founding agreement was signed by representatives of 29 countries. Do not call it an operational global regulator, a universal coalition or a proven replacement for existing institutions.",
+      "corroboration_needed": "The signing is an institutional fact, but the public event record does not establish when the agreement enters into force, how much capacity or funding the organization has, how actively all signatories will participate, or whether it will gain broad international legitimacy. It should not be described as a functioning replacement for UN governance mechanisms.",
+      "corroboration_needed_en": "The signing is an institutional fact, but the public event record does not establish when the agreement enters into force, how much capacity or funding the organization has, how actively all signatories will participate, or whether it will gain broad international legitimacy. It should not be described as a functioning replacement for UN governance mechanisms.",
+      "caveat": "The signing is an institutional fact, but the public event record does not establish when the agreement enters into force, how much capacity or funding the organization has, how actively all signatories will participate, or whether it will gain broad international legitimacy. It should not be described as a functioning replacement for UN governance mechanisms.",
+      "caveat_en": "The signing is an institutional fact, but the public event record does not establish when the agreement enters into force, how much capacity or funding the organization has, how actively all signatories will participate, or whether it will gain broad international legitimacy. It should not be described as a functioning replacement for UN governance mechanisms.",
+      "caveats": [
+        "The source verifies the signing ceremony and official institutional design, not later ratification, funding or operational output.",
+        "Twenty-nine founding signatories do not by themselves establish universal representation or legitimacy."
+      ],
+      "caveats_en": [
+        "The source verifies the signing ceremony and official institutional design, not later ratification, funding or operational output.",
+        "Twenty-nine founding signatories do not by themselves establish universal representation or legitimacy."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "founding_country_representatives": 29,
+        "headquarters_city": "Shanghai"
+      },
+      "money_status": "",
+      "confidence": "A",
+      "evidence_level": "A",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Signing Ceremony of the Agreement on the Establishment of the World Artificial Intelligence Cooperation Organization Held in Shanghai",
+          "name": "Ministry of Foreign Affairs of the People's Republic of China",
+          "url": "https://www.fmprc.gov.cn/eng/wjbzhd/202607/t20260717_11984747.html",
+          "type": "Government / policy",
+          "date": "2026-07-16",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_WAICO_2026_CHINA_COUNTERSTACK"
+      ],
+      "arcIds": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
+      ],
+      "relationTypes": [
+        "key_node",
+        "institutionalizes"
+      ]
+    },
+    {
+      "id": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
+      "kind": "event",
+      "title": "Xi links open-source AI, limits on national-security restrictions and capacity building for developing countries",
+      "title_en": "Xi links open-source AI, limits on national-security restrictions and capacity building for developing countries",
+      "date": "2026-07-17",
+      "source_date": "2026-07-17",
+      "date_basis": "head_of_state_speech_and_pledge_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://www.mfa.gov.cn/web/zyxw/202607/t20260717_11984704.shtml",
+      "source_name": "Ministry of Foreign Affairs of the People's Republic of China",
+      "source_type_raw": "Government / policy",
+      "source_type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "actor": "Xi Jinping, Chinese government",
+      "actor_raw": "Xi Jinping, Chinese government",
+      "actors_raw": [
+        "Xi Jinping",
+        "Chinese government",
+        "Xi Jinping, Chinese government"
+      ],
+      "actors": [
+        "Xi Jinping",
+        "Chinese government"
+      ],
+      "actor_facets_legacy": [
+        "China",
+        "Xi Jinping"
+      ],
+      "actor_facets": [
+        "Xi Jinping"
+      ],
+      "actor_entities": [
+        "Xi Jinping"
+      ],
+      "actor_jurisdictions": [
+        "China"
+      ],
+      "actor_types": [
+        "government"
+      ],
+      "geography_raw": [
+        "China",
+        "Global"
+      ],
+      "geography": [
+        "China"
+      ],
+      "jurisdictions": [
+        "China"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "model_weights",
+        "governance_law",
+        "decision_support_cognition"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "governance_law",
+        "decision_support_cognition"
+      ],
+      "strange_structure": [
+        "security",
+        "production",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "production",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ2",
+        "RQ3",
+        "RQ5"
+      ],
+      "claim_supported": "In his 17 July WAIC keynote, Xi Jinping called for open-source and open cooperation, opposed generalizing national security or placing one country's security above another's, and said AI should not be a solo performance by one country. He pledged 5,000 specialized AI training places for developing countries over five years, application-cooperation centers with six regional groupings, and deployment of China's Mazu weather early-warning solution in 30 countries.",
+      "claim_supported_en": "In his 17 July WAIC keynote, Xi Jinping called for open-source and open cooperation, opposed generalizing national security or placing one country's security above another's, and said AI should not be a solo performance by one country. He pledged 5,000 specialized AI training places for developing countries over five years, application-cooperation centers with six regional groupings, and deployment of China's Mazu weather early-warning solution in 30 countries.",
+      "claim_challenged": "Xi did not name the United States or use the phrase 'closed club' in the primary speech. Reading the address as an answer to US restrictions and a Global South strategy is a supported interpretation, including in AP reporting, not a direct quotation. The 5,000 places, cooperation centers and Mazu deployments are future pledges, not delivered technology transfer or unrestricted model access.",
+      "claim_challenged_en": "Xi did not name the United States or use the phrase 'closed club' in the primary speech. Reading the address as an answer to US restrictions and a Global South strategy is a supported interpretation, including in AP reporting, not a direct quotation. The 5,000 places, cooperation centers and Mazu deployments are future pledges, not delivered technology transfer or unrestricted model access.",
+      "summary": "In his 17 July WAIC keynote, Xi Jinping called for open-source and open cooperation, opposed generalizing national security or placing one country's security above another's, and said AI should not be a solo performance by one country. He pledged 5,000 specialized AI training places for developing countries over five years, application-cooperation centers with six regional groupings, and deployment of China's Mazu weather early-warning solution in 30 countries.",
+      "summary_en": "In his 17 July WAIC keynote, Xi Jinping called for open-source and open cooperation, opposed generalizing national security or placing one country's security above another's, and said AI should not be a solo performance by one country. He pledged 5,000 specialized AI training places for developing countries over five years, application-cooperation centers with six regional groupings, and deployment of China's Mazu weather early-warning solution in 30 countries.",
+      "notes": "Xi did not name the United States or use the phrase 'closed club' in the primary speech. Reading the address as an answer to US restrictions and a Global South strategy is a supported interpretation, including in AP reporting, not a direct quotation. The 5,000 places, cooperation centers and Mazu deployments are future pledges, not delivered technology transfer or unrestricted model access.",
+      "notes_en": "Xi did not name the United States or use the phrase 'closed club' in the primary speech. Reading the address as an answer to US restrictions and a Global South strategy is a supported interpretation, including in AP reporting, not a direct quotation. The 5,000 places, cooperation centers and Mazu deployments are future pledges, not delivered technology transfer or unrestricted model access.",
+      "safe_wording": "Describe open-source AI and capacity building as part of China's stated industrial and diplomatic positioning. Attribute the US-response and Global South reading to analysis; distinguish the verified speech from future delivery and from unrestricted access to models, chips or infrastructure.",
+      "safe_wording_en": "Describe open-source AI and capacity building as part of China's stated industrial and diplomatic positioning. Attribute the US-response and Global South reading to analysis; distinguish the verified speech from future delivery and from unrestricted access to models, chips or infrastructure.",
+      "corroboration_needed": "Xi did not name the United States or use the phrase 'closed club' in the primary speech. Reading the address as an answer to US restrictions and a Global South strategy is a supported interpretation, including in AP reporting, not a direct quotation. The 5,000 places, cooperation centers and Mazu deployments are future pledges, not delivered technology transfer or unrestricted model access.",
+      "corroboration_needed_en": "Xi did not name the United States or use the phrase 'closed club' in the primary speech. Reading the address as an answer to US restrictions and a Global South strategy is a supported interpretation, including in AP reporting, not a direct quotation. The 5,000 places, cooperation centers and Mazu deployments are future pledges, not delivered technology transfer or unrestricted model access.",
+      "caveat": "Xi did not name the United States or use the phrase 'closed club' in the primary speech. Reading the address as an answer to US restrictions and a Global South strategy is a supported interpretation, including in AP reporting, not a direct quotation. The 5,000 places, cooperation centers and Mazu deployments are future pledges, not delivered technology transfer or unrestricted model access.",
+      "caveat_en": "Xi did not name the United States or use the phrase 'closed club' in the primary speech. Reading the address as an answer to US restrictions and a Global South strategy is a supported interpretation, including in AP reporting, not a direct quotation. The 5,000 places, cooperation centers and Mazu deployments are future pledges, not delivered technology transfer or unrestricted model access.",
+      "caveats": [
+        "The primary speech does not name the United States and does not contain the phrase 'closed club'.",
+        "Training places and cooperation centers are pledges whose implementation remains to be measured.",
+        "Open-source rhetoric does not establish that every Chinese model, dataset or service is openly available."
+      ],
+      "caveats_en": [
+        "The primary speech does not name the United States and does not contain the phrase 'closed club'.",
+        "Training places and cooperation centers are pledges whose implementation remains to be measured.",
+        "Open-source rhetoric does not establish that every Chinese model, dataset or service is openly available."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "ai_training_places_pledged": 5000,
+        "pledge_horizon_years": 5,
+        "regional_groupings_for_application_centers": 6,
+        "mazu_target_countries": 30
+      },
+      "money_status": "",
+      "confidence": "A/D",
+      "evidence_level": "A/D",
+      "status": "verified_as_speech_not_as_fact",
+      "sources": [
+        {
+          "title": "Xi Jinping's keynote speech at the opening ceremony of the 2026 World Artificial Intelligence Conference",
+          "name": "Ministry of Foreign Affairs of the People's Republic of China",
+          "url": "https://www.mfa.gov.cn/web/zyxw/202607/t20260717_11984704.shtml",
+          "type": "Government / policy",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "China's Xi calls for more global efforts to guide AI, chides US for its curbs on tech sharing",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/df4cfc7e1b260e765b5449b6d71a48e5",
+          "type": "Press / wire",
+          "date": "2026-07-17",
+          "primary_or_secondary": "secondary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_XI_WAIC_2026_CHINA_COUNTERSTACK",
+        "EDGE_XI_WAIC_2026_OPEN_WEIGHT_DIPLOMACY"
+      ],
+      "arcIds": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
+      ],
+      "relationTypes": [
+        "key_node",
+        "reframes",
+        "supports_as_claim_not_fact"
+      ]
+    },
+    {
+      "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+      "kind": "event",
+      "title": "Germany's Soofi S combines domestic training infrastructure and detailed data accounting, but remains a gated preview",
+      "title_en": "Germany's Soofi S combines domestic training infrastructure and detailed data accounting, but remains a gated preview",
+      "date": "2026-06-17",
+      "source_date": "2026-06-17/2026-07-13",
+      "date_basis": "model_preview_announcement_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://www.iis.fraunhofer.de/en/pr/2026/press-release-soofi-industrial-ai-europe.html",
+      "source_name": "Fraunhofer IIS",
+      "source_type_raw": "Research / academic",
+      "source_type": "Research / preprint",
+      "primary_or_secondary": "primary",
+      "actor": "Soofi Project, German AI Association, Fraunhofer IIS and Fraunhofer IAIS, Deutsche Telekom",
+      "actor_raw": "Soofi Project, German AI Association, Fraunhofer IIS and Fraunhofer IAIS, Deutsche Telekom",
+      "actors_raw": [
+        "Soofi Project",
+        "German AI Association",
+        "Fraunhofer IIS and Fraunhofer IAIS",
+        "Deutsche Telekom",
+        "Soofi Project, German AI Association, Fraunhofer IIS and Fraunhofer IAIS, Deutsche Telekom"
+      ],
+      "actors": [
+        "Soofi Project",
+        "German AI Association",
+        "Fraunhofer IIS and Fraunhofer IAIS",
+        "Deutsche Telekom"
+      ],
+      "actor_facets_legacy": [
+        "Deutsche Telekom",
+        "Fraunhofer",
+        "German AI Association",
+        "Soofi Project"
+      ],
+      "actor_facets": [
+        "Deutsche Telekom",
+        "Fraunhofer",
+        "German AI Association",
+        "Soofi Project"
+      ],
+      "actor_entities": [
+        "Deutsche Telekom",
+        "Fraunhofer",
+        "German AI Association",
+        "Soofi Project"
+      ],
+      "actor_jurisdictions": [],
+      "actor_types": [
+        "civil_society",
+        "company",
+        "research"
+      ],
+      "geography_raw": [
+        "Germany",
+        "EU"
+      ],
+      "geography": [
+        "Germany",
+        "EU"
+      ],
+      "jurisdictions": [
+        "Germany",
+        "EU"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "model_weights",
+        "data_telemetry",
+        "cloud_inference",
+        "energy_compute_chips"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "data_telemetry",
+        "cloud_inference",
+        "energy_compute_chips"
+      ],
+      "strange_structure": [
+        "production",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "production",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ5"
+      ],
+      "claim_supported": "The Soofi consortium announced a German-English 31.6B-parameter hybrid Mamba-Transformer mixture-of-experts model with about 3.2B active parameters per token, trained on roughly 26.68T tokens on Deutsche Telekom's Industrial AI Cloud in Munich using up to 512 Nvidia B200 GPUs. Its self-authored report says about 99% of the data mixture can be independently reconstructed. The same report measures 8-9x aggregate decode throughput versus selected dense 14-24B models only under a one-B200, 40K-context, batch-32 protocol. The official project page says no general direct-use release has occurred, and the Hugging Face repository remains manually gated with a non-final custom-license label.",
+      "claim_supported_en": "The Soofi consortium announced a German-English 31.6B-parameter hybrid Mamba-Transformer mixture-of-experts model with about 3.2B active parameters per token, trained on roughly 26.68T tokens on Deutsche Telekom's Industrial AI Cloud in Munich using up to 512 Nvidia B200 GPUs. Its self-authored report says about 99% of the data mixture can be independently reconstructed. The same report measures 8-9x aggregate decode throughput versus selected dense 14-24B models only under a one-B200, 40K-context, batch-32 protocol. The official project page says no general direct-use release has occurred, and the Hugging Face repository remains manually gated with a non-final custom-license label.",
+      "claim_challenged": "The performance and openness measurements are self-authored and not independently reproduced. The 8-9x figure is not a universal speed or energy-efficiency result. European training and hosting do not automatically make downstream deployments GDPR-compliant. The project still depends on Nvidia hardware and its current gated preview does not yet match the promised general permissive release.",
+      "claim_challenged_en": "The performance and openness measurements are self-authored and not independently reproduced. The 8-9x figure is not a universal speed or energy-efficiency result. European training and hosting do not automatically make downstream deployments GDPR-compliant. The project still depends on Nvidia hardware and its current gated preview does not yet match the promised general permissive release.",
+      "summary": "The Soofi consortium announced a German-English 31.6B-parameter hybrid Mamba-Transformer mixture-of-experts model with about 3.2B active parameters per token, trained on roughly 26.68T tokens on Deutsche Telekom's Industrial AI Cloud in Munich using up to 512 Nvidia B200 GPUs. Its self-authored report says about 99% of the data mixture can be independently reconstructed. The same report measures 8-9x aggregate decode throughput versus selected dense 14-24B models only under a one-B200, 40K-context, batch-32 protocol. The official project page says no general direct-use release has occurred, and the Hugging Face repository remains manually gated with a non-final custom-license label.",
+      "summary_en": "The Soofi consortium announced a German-English 31.6B-parameter hybrid Mamba-Transformer mixture-of-experts model with about 3.2B active parameters per token, trained on roughly 26.68T tokens on Deutsche Telekom's Industrial AI Cloud in Munich using up to 512 Nvidia B200 GPUs. Its self-authored report says about 99% of the data mixture can be independently reconstructed. The same report measures 8-9x aggregate decode throughput versus selected dense 14-24B models only under a one-B200, 40K-context, batch-32 protocol. The official project page says no general direct-use release has occurred, and the Hugging Face repository remains manually gated with a non-final custom-license label.",
+      "notes": "The performance and openness measurements are self-authored and not independently reproduced. The 8-9x figure is not a universal speed or energy-efficiency result. European training and hosting do not automatically make downstream deployments GDPR-compliant. The project still depends on Nvidia hardware and its current gated preview does not yet match the promised general permissive release.",
+      "notes_en": "The performance and openness measurements are self-authored and not independently reproduced. The 8-9x figure is not a universal speed or energy-efficiency result. European training and hosting do not automatically make downstream deployments GDPR-compliant. The project still depends on Nvidia hardware and its current gated preview does not yet match the promised general permissive release.",
+      "safe_wording": "Call Soofi S a technically documented European sovereign-model preview with unusually detailed data accounting and German training infrastructure. Keep throughput tied to the stated benchmark, mark performance as self-reported, and do not claim general release, automatic GDPR compliance, measured energy savings or full-stack independence.",
+      "safe_wording_en": "Call Soofi S a technically documented European sovereign-model preview with unusually detailed data accounting and German training infrastructure. Keep throughput tied to the stated benchmark, mark performance as self-reported, and do not claim general release, automatic GDPR compliance, measured energy savings or full-stack independence.",
+      "corroboration_needed": "The performance and openness measurements are self-authored and not independently reproduced. The 8-9x figure is not a universal speed or energy-efficiency result. European training and hosting do not automatically make downstream deployments GDPR-compliant. The project still depends on Nvidia hardware and its current gated preview does not yet match the promised general permissive release.",
+      "corroboration_needed_en": "The performance and openness measurements are self-authored and not independently reproduced. The 8-9x figure is not a universal speed or energy-efficiency result. European training and hosting do not automatically make downstream deployments GDPR-compliant. The project still depends on Nvidia hardware and its current gated preview does not yet match the promised general permissive release.",
+      "caveat": "The performance and openness measurements are self-authored and not independently reproduced. The 8-9x figure is not a universal speed or energy-efficiency result. European training and hosting do not automatically make downstream deployments GDPR-compliant. The project still depends on Nvidia hardware and its current gated preview does not yet match the promised general permissive release.",
+      "caveat_en": "The performance and openness measurements are self-authored and not independently reproduced. The 8-9x figure is not a universal speed or energy-efficiency result. European training and hosting do not automatically make downstream deployments GDPR-compliant. The project still depends on Nvidia hardware and its current gated preview does not yet match the promised general permissive release.",
+      "caveats": [
+        "The project page explicitly says a general release for direct use has not yet occurred.",
+        "The Hugging Face repository is public in metadata but manually gated, and its current license field is not a completed permissive license.",
+        "The 8-9x result is a narrow aggregate-decode benchmark at 40K context and batch 32, not a general application benchmark.",
+        "About 1.3% of the Phase 1 effective-token mixture comes from commercially licensed Genios data and is not redistributable.",
+        "German infrastructure reduces some jurisdictional dependencies while retaining reliance on Nvidia B200 accelerators."
+      ],
+      "caveats_en": [
+        "The project page explicitly says a general release for direct use has not yet occurred.",
+        "The Hugging Face repository is public in metadata but manually gated, and its current license field is not a completed permissive license.",
+        "The 8-9x result is a narrow aggregate-decode benchmark at 40K context and batch 32, not a general application benchmark.",
+        "About 1.3% of the Phase 1 effective-token mixture comes from commercially licensed Genios data and is not redistributable.",
+        "German infrastructure reduces some jurisdictional dependencies while retaining reliance on Nvidia B200 accelerators."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "total_parameters_billion": 31.6,
+        "active_parameters_per_token_billion": 3.2,
+        "training_tokens_trillion": 26.68,
+        "maximum_nvidia_b200_gpus": 512,
+        "training_gpu_hours_b200_approx": 253000,
+        "reconstructable_data_mixture_percent_approx": 99,
+        "commercial_genios_phase1_effective_tokens_percent": 1.3,
+        "reported_decode_throughput_multiple_range": "8-9x",
+        "throughput_test_context_tokens": 40000,
+        "throughput_test_batch_size": 32
+      },
+      "money_status": "",
+      "confidence": "A/C",
+      "evidence_level": "A/C",
+      "status": "verified_preview_license_pending",
+      "sources": [
+        {
+          "title": "Soofi announces model for industrial AI in Europe",
+          "name": "Fraunhofer IIS",
+          "url": "https://www.iis.fraunhofer.de/en/pr/2026/press-release-soofi-industrial-ai-europe.html",
+          "type": "Research / preprint",
+          "date": "2026-06-17",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "A Sovereign, Open-Source Foundation Model for German and English",
+          "name": "Soofi Team",
+          "url": "https://arxiv.org/abs/2607.09424",
+          "type": "Research / preprint",
+          "date": "2026-07-10",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Soofi S project and availability status",
+          "name": "Soofi Project",
+          "url": "https://www.soofi.info/",
+          "type": "Project / consortium",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Soofi-Project/Soofi-S-Base model repository",
+          "name": "Hugging Face / Soofi Project",
+          "url": "https://huggingface.co/Soofi-Project/Soofi-S-Base",
+          "type": "Live registry",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_SOOFI_2026_OPEN_WEIGHT",
+        "EDGE_SOOFI_2026_CLOUD_CAPACITY"
+      ],
+      "arcIds": [
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+        "ARC_FAMILY_INFRASTRUCTURE_CAPITAL"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_caveat",
+        "qualifies"
+      ]
     }
   ],
   "claims": [
@@ -38645,12 +39148,13 @@
       "arc_type": "countermove_and_caveat",
       "status": "mixed",
       "start_date": "2023-07-01",
-      "end_date": "2026-06-29",
+      "end_date": "2026-07-17",
       "visual_lanes": [
         "energy_compute_chips",
         "cloud_inference",
         "model_weights",
-        "cyber_security_patch"
+        "cyber_security_patch",
+        "governance_law"
       ],
       "key_nodes": [
         "export-05",
@@ -38663,13 +39167,17 @@
         "SIG_2026_360_YITIAN_TULONG_UNVEIL",
         "cyber-06",
         "SIG_2025_AISI_OPEN_CLOSED_MODEL_LAG",
-        "SIG_2026_BLACKWELL_DENIAL_HUAWEI_ASCEND"
+        "SIG_2026_BLACKWELL_DENIAL_HUAWEI_ASCEND",
+        "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING",
+        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE"
       ],
       "counterpoints": [
         "Open models can shift inference economics.",
         "Domestic chip capacity is growing but uneven.",
         "Bernstein market-share estimates and 2026 forecasts are secondary analyst estimates.",
-        "Domestic substitution does not establish performance, software or supply-chain parity."
+        "Domestic substitution does not establish performance, software or supply-chain parity.",
+        "WAICO founding and Xi's pledges do not establish operational capacity, broad legitimacy or delivered technology access.",
+        "The primary speech does not name the United States or use the phrase closed club."
       ],
       "family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
       "arc_kind": "case",
@@ -38678,15 +39186,17 @@
         "Open models can shift inference economics.",
         "Domestic chip capacity is growing but uneven.",
         "Bernstein market-share estimates and 2026 forecasts are secondary analyst estimates.",
-        "Domestic substitution does not establish performance, software or supply-chain parity."
+        "Domestic substitution does not establish performance, software or supply-chain parity.",
+        "WAICO founding and Xi's pledges do not establish operational capacity, broad legitimacy or delivered technology access.",
+        "The primary speech does not name the United States or use the phrase closed club."
       ],
+      "thesis_en": "US controls have stimulated Chinese alternatives across chips, clouds and open models; WAICO and Xi's capacity-building pledge add an institutional and diplomatic layer. This is route-around and coalition-building, not proof of technical parity.",
+      "safe_wording_en": "Describe a constrained parallel stack and diplomatic competition. The speech and founding agreement verify positioning, not technical parity, an operational global system or delivery of the announced programs.",
       "kind": "arc",
       "title": "China counter-stack: routing around, not parity",
       "title_en": "China counter-stack: routing around, not parity",
-      "thesis_en": "China builds alternatives across chips, clouds, open weights and cyber claims, but the evidence points to route-around and managed bottlenecks, not clean parity.",
-      "safe_wording_en": "Do not call Chinese alternatives either irrelevant or fully equivalent; treat them as counter-stack pressure under constraints.",
-      "thesis": "China builds alternatives across chips, clouds, open weights and cyber claims, but the evidence points to route-around and managed bottlenecks, not clean parity.",
-      "safe_wording": "Do not call Chinese alternatives either irrelevant or fully equivalent; treat them as counter-stack pressure under constraints."
+      "thesis": "US controls have stimulated Chinese alternatives across chips, clouds and open models; WAICO and Xi's capacity-building pledge add an institutional and diplomatic layer. This is route-around and coalition-building, not proof of technical parity.",
+      "safe_wording": "Describe a constrained parallel stack and diplomatic competition. The speech and founding agreement verify positioning, not technical parity, an operational global system or delivery of the announced programs."
     },
     {
       "id": "ARC_CYBER_CLAIM_TO_CAVEAT",
@@ -39049,11 +39559,13 @@
       "arc_type": "thesis_stress_test",
       "status": "mixed",
       "start_date": "2024-07-12",
-      "end_date": "2026-04-24",
+      "end_date": "2026-07-17",
       "visual_lanes": [
         "model_weights",
         "energy_compute_chips",
-        "cloud_inference"
+        "cloud_inference",
+        "data_telemetry",
+        "governance_law"
       ],
       "key_nodes": [
         "openweight-01",
@@ -39071,26 +39583,32 @@
         "SIG_2024_OSI_OPEN_SOURCE_AI_DEFINITION",
         "SIG_2024_EU_AI_ACT_OPEN_SOURCE_LIMITS",
         "SIG_2025_AISI_OPEN_CLOSED_MODEL_LAG",
-        "SIG_2019_GPT2_FINAL_STAGED_RELEASE"
+        "SIG_2019_GPT2_FINAL_STAGED_RELEASE",
+        "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE"
       ],
       "counterpoints": [
         "Open artifacts can still reduce supplier lock-in.",
-        "Compute and chip bottlenecks remain."
+        "Compute and chip bottlenecks remain.",
+        "Soofi is still a manually gated preview; its promised permissive general release is not complete.",
+        "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open."
       ],
       "family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
+      "thesis_en": "Open weights can create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Soofi adds local training infrastructure and detailed data accounting, while its general release and license remain incomplete.",
+      "safe_wording_en": "Separate open weights, license terms, data reproducibility, general availability and full-stack independence.",
+      "counterpoints_en": [
+        "Open artifacts can still reduce supplier lock-in.",
+        "Compute and chip bottlenecks remain.",
+        "Soofi is still a manually gated preview; its promised permissive general release is not complete.",
+        "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open."
+      ],
       "kind": "arc",
       "title": "Open weights: exit or dependency swap",
       "title_en": "Open weights: exit or dependency swap",
-      "thesis_en": "Open weights can create an exit at the artifact layer, but do not automatically transfer data, compute, tooling, reliability or learning curves.",
-      "safe_wording_en": "Distinguish open weights from full-stack sovereignty.",
-      "counterpoints_en": [
-        "Open artifacts can still reduce supplier lock-in.",
-        "Compute and chip bottlenecks remain."
-      ],
-      "thesis": "Open weights can create an exit at the artifact layer, but do not automatically transfer data, compute, tooling, reliability or learning curves.",
-      "safe_wording": "Distinguish open weights from full-stack sovereignty."
+      "thesis": "Open weights can create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Soofi adds local training infrastructure and detailed data accounting, while its general release and license remain incomplete.",
+      "safe_wording": "Separate open weights, license terms, data reproducibility, general availability and full-stack independence."
     },
     {
       "id": "ARC_2022_2023_FORMATION_PHASE",
@@ -39262,7 +39780,7 @@
       "arc_type": "capacity_dependency",
       "status": "strong_but_not_single_vendor",
       "start_date": "2024-03-27",
-      "end_date": "2026-06-03",
+      "end_date": "2026-06-17",
       "visual_lanes": [
         "cloud_inference",
         "finance_rent",
@@ -39292,30 +39810,35 @@
         "SIG_EU_2026_SOVEREIGN_CLOUD_PROCUREMENT",
         "SIG_EU_2026_CLOUD_INFRASTRUCTURE_CONCENTRATION_REPORT",
         "SIG_AWS_2026_EUROPEAN_SOVEREIGN_CLOUD",
-        "SIG_EU_2026_AI_FACTORIES_OPERATIONAL_STATUS"
+        "SIG_EU_2026_AI_FACTORIES_OPERATIONAL_STATUS",
+        "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
       ],
       "counterpoints": [
         "Multi-cloud capacity complicates a simple lock-in story.",
         "The 69% cloud-infrastructure figure uses 2022 data cited in a later Parliament report.",
         "The EUR180M sovereign-cloud framework is a ceiling, not realised spend.",
-        "AI Factories, procured supercomputers and planned Gigafactories have different deployment status."
+        "AI Factories, procured supercomputers and planned Gigafactories have different deployment status.",
+        "Soofi was trained in Munich but still relies on Nvidia B200 accelerators.",
+        "European infrastructure does not make every downstream deployment automatically GDPR-compliant."
       ],
       "family_id": "ARC_FAMILY_INFRASTRUCTURE_CAPITAL",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Frontier AI scales through capital, cloud capacity, GPU access and distribution, while the EU responds through its own capacity, procurement tiers, competition policy and graduated sovereignty requirements rather than one blanket ban.",
-      "safe_wording_en": "Concentration and contract architecture set access conditions but do not prove automatic political control. Separate market-share data vintage, deployed capacity, procurement ceilings and vendor sovereignty claims.",
+      "thesis_en": "Frontier AI scales through capital, cloud capacity, GPU access and distribution. Soofi shows that EU-jurisdiction training can reduce one dependency while retaining Nvidia hardware dependence and workload-specific compliance obligations.",
+      "safe_wording_en": "Training and hosting location matter for jurisdiction and control, but do not establish full technological independence or automatic GDPR compliance.",
       "counterpoints_en": [
         "Multi-cloud capacity complicates a simple lock-in story.",
         "The 69% cloud-infrastructure figure uses 2022 data cited in a later Parliament report.",
         "The EUR180M sovereign-cloud framework is a ceiling, not realised spend.",
-        "AI Factories, procured supercomputers and planned Gigafactories have different deployment status."
+        "AI Factories, procured supercomputers and planned Gigafactories have different deployment status.",
+        "Soofi was trained in Munich but still relies on Nvidia B200 accelerators.",
+        "European infrastructure does not make every downstream deployment automatically GDPR-compliant."
       ],
       "kind": "arc",
       "title": "Cloud capacity and vendor lock-in",
       "title_en": "Cloud capacity and vendor lock-in",
-      "thesis": "Frontier AI scales through capital, cloud capacity, GPU access and distribution, while the EU responds through its own capacity, procurement tiers, competition policy and graduated sovereignty requirements rather than one blanket ban.",
-      "safe_wording": "Concentration and contract architecture set access conditions but do not prove automatic political control. Separate market-share data vintage, deployed capacity, procurement ceilings and vendor sovereignty claims."
+      "thesis": "Frontier AI scales through capital, cloud capacity, GPU access and distribution. Soofi shows that EU-jurisdiction training can reduce one dependency while retaining Nvidia hardware dependence and workload-specific compliance obligations.",
+      "safe_wording": "Training and hosting location matter for jurisdiction and control, but do not establish full technological independence or automatic GDPR compliance."
     },
     {
       "status": "strong_but_not_commensurate",
@@ -47457,6 +47980,96 @@
       "kind": "edge",
       "is_auto": false,
       "summary": "A separate artifact-backed case makes the general workflow more plausible without corroborating Anthropic's GTG-1002 attribution or autonomy estimate."
+    },
+    {
+      "id": "EDGE_WAICO_2026_CHINA_COUNTERSTACK",
+      "source": "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING",
+      "target": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "institutionalizes",
+      "arc_id": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "visual_lane": "governance_law",
+      "evidence_level": "A",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "A signed founding agreement adds an intergovernmental institution to China's counter-stack strategy, without proving operational capacity or broad legitimacy.",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "A signed founding agreement adds an intergovernmental institution to China's counter-stack strategy, without proving operational capacity or broad legitimacy."
+    },
+    {
+      "id": "EDGE_XI_WAIC_2026_CHINA_COUNTERSTACK",
+      "source": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
+      "target": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "reframes",
+      "arc_id": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "visual_lane": "governance_law",
+      "evidence_level": "A/D",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "The speech frames open-source cooperation and capacity building as state strategy; implementation remains future-facing.",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "The speech frames open-source cooperation and capacity building as state strategy; implementation remains future-facing."
+    },
+    {
+      "id": "EDGE_XI_WAIC_2026_OPEN_WEIGHT_DIPLOMACY",
+      "source": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
+      "target": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_as_claim_not_fact",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "visual_lane": "model_weights",
+      "evidence_level": "A/D",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "Open-source language is used as diplomatic positioning, but does not establish unrestricted access or completed capacity transfer.",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "Open-source language is used as diplomatic positioning, but does not establish unrestricted access or completed capacity transfer."
+    },
+    {
+      "id": "EDGE_SOOFI_2026_OPEN_WEIGHT",
+      "source": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+      "target": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_caveat",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "visual_lane": "model_weights",
+      "evidence_level": "A/C",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "Soofi combines detailed data accounting and local training with a still-gated preview and incomplete general-release license.",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "Soofi combines detailed data accounting and local training with a still-gated preview and incomplete general-release license."
+    },
+    {
+      "id": "EDGE_SOOFI_2026_CLOUD_CAPACITY",
+      "source": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+      "target": "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "qualifies",
+      "arc_id": "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+      "arc_family_id": "ARC_FAMILY_INFRASTRUCTURE_CAPITAL",
+      "visual_lane": "cloud_inference",
+      "evidence_level": "A/C",
+      "strength": "medium",
+      "style": "solid",
+      "summary_en": "Training in Munich reduces jurisdictional dependence at one layer while retaining Nvidia hardware dependence and workload-specific compliance duties.",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "Training in Munich reduces jurisdictional dependence at one layer while retaining Nvidia hardware dependence and workload-specific compliance duties."
     }
   ],
   "thesisNodes": [
@@ -48077,7 +48690,7 @@
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
     ],
-    "edge_count": 433,
+    "edge_count": 438,
     "v0_13_added_evidence": 6,
     "v0_13_added_edges": 6,
     "v0_14_added_evidence": 11,
@@ -48113,6 +48726,9 @@
     "v0_20_added_evidence": 1,
     "v0_20_added_edges": 2,
     "v0_20_added_arcs": [],
+    "v0_21_added_evidence": 3,
+    "v0_21_added_edges": 5,
+    "v0_21_added_arcs": [],
     "computed_arc_count": 24,
     "computed_arc_to_thesis_counts": {
       "ARC_EXPORT_CHIPS_TO_MODELS": 2,
@@ -49108,7 +49724,7 @@
       ]
     },
     {
-      "id": "src-346",
+      "id": "src-353",
       "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -49203,7 +49819,7 @@
       ]
     },
     {
-      "id": "src-314",
+      "id": "src-321",
       "title": "CRS R48642 PDF",
       "name": "CRS R48642 PDF",
       "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -49279,7 +49895,7 @@
       ]
     },
     {
-      "id": "src-338",
+      "id": "src-345",
       "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -49298,7 +49914,7 @@
       ]
     },
     {
-      "id": "src-300",
+      "id": "src-307",
       "title": "DeepSeek, Huawei, Export Controls (CSIS)",
       "name": "DeepSeek, Huawei, Export Controls (CSIS)",
       "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -49526,7 +50142,7 @@
       ]
     },
     {
-      "id": "src-301",
+      "id": "src-308",
       "title": "How China's GLM-5 Works",
       "name": "How China's GLM-5 Works",
       "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -49545,7 +50161,7 @@
       ]
     },
     {
-      "id": "src-311",
+      "id": "src-318",
       "title": "India Fuels Its AI Mission With NVIDIA",
       "name": "India Fuels Its AI Mission With NVIDIA",
       "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -49583,7 +50199,7 @@
       ]
     },
     {
-      "id": "src-303",
+      "id": "src-310",
       "title": "Microsoft and U.S. join AI forces in UAE deal",
       "name": "Microsoft and U.S. join AI forces in UAE deal",
       "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -49716,7 +50332,7 @@
       ]
     },
     {
-      "id": "src-335",
+      "id": "src-342",
       "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -50115,7 +50731,7 @@
       ]
     },
     {
-      "id": "src-341",
+      "id": "src-348",
       "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -50343,7 +50959,7 @@
       ]
     },
     {
-      "id": "src-312",
+      "id": "src-319",
       "title": "U.S. Export Controls and China (CRS R48642)",
       "name": "U.S. Export Controls and China (CRS R48642)",
       "url": "https://www.congress.gov/crs-product/R48642",
@@ -50495,7 +51111,7 @@
       ]
     },
     {
-      "id": "src-352",
+      "id": "src-359",
       "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -50510,7 +51126,7 @@
       ]
     },
     {
-      "id": "src-348",
+      "id": "src-355",
       "title": "A Kill Switch for Frontier AI (Lawfare)",
       "name": "A Kill Switch for Frontier AI (Lawfare)",
       "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -50525,7 +51141,7 @@
       ]
     },
     {
-      "id": "src-333",
+      "id": "src-340",
       "title": "A small number of samples can poison LLMs (Anthropic)",
       "name": "A small number of samples can poison LLMs (Anthropic)",
       "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -50540,7 +51156,7 @@
       ]
     },
     {
-      "id": "src-304",
+      "id": "src-311",
       "title": "Advanced AI chips cleared for export to UAE",
       "name": "Advanced AI chips cleared for export to UAE",
       "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -50600,7 +51216,7 @@
       ]
     },
     {
-      "id": "src-332",
+      "id": "src-339",
       "title": "AIxCC finals winners (DARPA)",
       "name": "AIxCC finals winners (DARPA)",
       "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -50615,7 +51231,7 @@
       ]
     },
     {
-      "id": "src-327",
+      "id": "src-334",
       "title": "AIxCC marks pivotal inflection point (DARPA)",
       "name": "AIxCC marks pivotal inflection point (DARPA)",
       "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -50630,7 +51246,7 @@
       ]
     },
     {
-      "id": "src-334",
+      "id": "src-341",
       "title": "Alan Turing Institute summary",
       "name": "Alan Turing Institute summary",
       "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -50780,7 +51396,7 @@
       ]
     },
     {
-      "id": "src-336",
+      "id": "src-343",
       "title": "Anthropic awarded $200M DOD agreement",
       "name": "Anthropic awarded $200M DOD agreement",
       "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -50795,7 +51411,7 @@
       ]
     },
     {
-      "id": "src-329",
+      "id": "src-336",
       "title": "Anthropic claims met with doubt (BleepingComputer)",
       "name": "Anthropic claims met with doubt (BleepingComputer)",
       "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -50825,7 +51441,7 @@
       ]
     },
     {
-      "id": "src-342",
+      "id": "src-349",
       "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -50840,7 +51456,7 @@
       ]
     },
     {
-      "id": "src-345",
+      "id": "src-352",
       "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -50900,7 +51516,7 @@
       ]
     },
     {
-      "id": "src-350",
+      "id": "src-357",
       "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -51005,6 +51621,21 @@
       ]
     },
     {
+      "id": "src-294",
+      "title": "China's Xi calls for more global efforts to guide AI, chides US for its curbs on tech sharing",
+      "name": "Associated Press",
+      "url": "https://apnews.com/article/df4cfc7e1b260e765b5449b6d71a48e5",
+      "type": "Press / wire",
+      "date": "2026-07-17",
+      "primary_or_secondary": "secondary",
+      "used_by": [
+        {
+          "id": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-49",
       "title": "Axios",
       "name": "Axios",
@@ -51080,7 +51711,7 @@
       ]
     },
     {
-      "id": "src-320",
+      "id": "src-327",
       "title": "Beijing presses Washington (Tech Times)",
       "name": "Beijing presses Washington (Tech Times)",
       "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -51095,7 +51726,7 @@
       ]
     },
     {
-      "id": "src-331",
+      "id": "src-338",
       "title": "Big Sleep agent makes big leap (Google Cloud)",
       "name": "Big Sleep agent makes big leap (Google Cloud)",
       "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -51110,7 +51741,7 @@
       ]
     },
     {
-      "id": "src-315",
+      "id": "src-322",
       "title": "BIS press release: rescission",
       "name": "BIS press release: rescission",
       "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -51140,7 +51771,7 @@
       ]
     },
     {
-      "id": "src-337",
+      "id": "src-344",
       "title": "Breaking Defense: $200M each for agentic AI",
       "name": "Breaking Defense: $200M each for agentic AI",
       "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -51155,7 +51786,7 @@
       ]
     },
     {
-      "id": "src-340",
+      "id": "src-347",
       "title": "Built for Purpose? EU AI Gigafactories (Interface)",
       "name": "Built for Purpose? EU AI Gigafactories (Interface)",
       "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -51260,7 +51891,7 @@
       ]
     },
     {
-      "id": "src-319",
+      "id": "src-326",
       "title": "China Export Controls: Critical Minerals (Andersen Institute)",
       "name": "China Export Controls: Critical Minerals (Andersen Institute)",
       "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -51275,7 +51906,7 @@
       ]
     },
     {
-      "id": "src-347",
+      "id": "src-354",
       "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -51320,7 +51951,7 @@
       ]
     },
     {
-      "id": "src-349",
+      "id": "src-356",
       "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -51380,7 +52011,7 @@
       ]
     },
     {
-      "id": "src-351",
+      "id": "src-358",
       "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -51395,7 +52026,7 @@
       ]
     },
     {
-      "id": "src-328",
+      "id": "src-335",
       "title": "Cybersecurity Dive: DARPA touts results",
       "name": "Cybersecurity Dive: DARPA touts results",
       "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -51455,7 +52086,7 @@
       ]
     },
     {
-      "id": "src-302",
+      "id": "src-309",
       "title": "DeepSeek V4 and R2 Deep Dive",
       "name": "DeepSeek V4 and R2 Deep Dive",
       "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -51515,7 +52146,7 @@
       ]
     },
     {
-      "id": "src-308",
+      "id": "src-315",
       "title": "EIB-Commission gigafactories MoU",
       "name": "EIB-Commission gigafactories MoU",
       "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -51875,6 +52506,21 @@
       ]
     },
     {
+      "id": "src-295",
+      "title": "Soofi announces model for industrial AI in Europe",
+      "name": "Fraunhofer IIS",
+      "url": "https://www.iis.fraunhofer.de/en/pr/2026/press-release-soofi-industrial-ai-europe.html",
+      "type": "Research / preprint",
+      "date": "2026-06-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-210",
       "title": "MIIT monitoring finds Claude Code security backdoor risk",
       "name": "Fujian Provincial Department of Industry and Information Technology, relaying MIIT/NVDB notice",
@@ -52070,7 +52716,7 @@
       ]
     },
     {
-      "id": "src-323",
+      "id": "src-330",
       "title": "H.R.3447 text (Congress.gov)",
       "name": "H.R.3447 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -52085,7 +52731,7 @@
       ]
     },
     {
-      "id": "src-325",
+      "id": "src-332",
       "title": "H.R.6875 titles (Congress.gov)",
       "name": "H.R.6875 titles (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -52130,7 +52776,7 @@
       ]
     },
     {
-      "id": "src-326",
+      "id": "src-333",
       "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -52145,7 +52791,7 @@
       ]
     },
     {
-      "id": "src-316",
+      "id": "src-323",
       "title": "Hogan Lovells analysis",
       "name": "Hogan Lovells analysis",
       "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -52160,7 +52806,7 @@
       ]
     },
     {
-      "id": "src-324",
+      "id": "src-331",
       "title": "House Select Committee: Chip Security Act passage",
       "name": "House Select Committee: Chip Security Act passage",
       "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -52175,7 +52821,7 @@
       ]
     },
     {
-      "id": "src-299",
+      "id": "src-306",
       "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -52190,7 +52836,7 @@
       ]
     },
     {
-      "id": "src-339",
+      "id": "src-346",
       "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -52205,7 +52851,22 @@
       ]
     },
     {
-      "id": "src-305",
+      "id": "src-298",
+      "title": "Soofi-Project/Soofi-S-Base model repository",
+      "name": "Hugging Face / Soofi Project",
+      "url": "https://huggingface.co/Soofi-Project/Soofi-S-Base",
+      "type": "Live registry",
+      "date": "2026-07-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-312",
       "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -52250,7 +52911,7 @@
       ]
     },
     {
-      "id": "src-294",
+      "id": "src-301",
       "title": "Hyperscaler capex trend",
       "name": "Hyperscaler capex trend",
       "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -52265,7 +52926,7 @@
       ]
     },
     {
-      "id": "src-298",
+      "id": "src-305",
       "title": "Hyperscaler cloud share",
       "name": "Hyperscaler cloud share",
       "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -52355,7 +53016,7 @@
       ]
     },
     {
-      "id": "src-306",
+      "id": "src-313",
       "title": "Introducing Stargate UK",
       "name": "Introducing Stargate UK",
       "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -52400,7 +53061,7 @@
       ]
     },
     {
-      "id": "src-313",
+      "id": "src-320",
       "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -52545,6 +53206,36 @@
       "used_by": [
         {
           "id": "SIG_2026_UKRAINE_BATTLEFIELD_DATA_PLATFORM",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-292",
+      "title": "Signing Ceremony of the Agreement on the Establishment of the World Artificial Intelligence Cooperation Organization Held in Shanghai",
+      "name": "Ministry of Foreign Affairs of the People's Republic of China",
+      "url": "https://www.fmprc.gov.cn/eng/wjbzhd/202607/t20260717_11984747.html",
+      "type": "Government / policy",
+      "date": "2026-07-16",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-293",
+      "title": "Xi Jinping's keynote speech at the opening ceremony of the 2026 World Artificial Intelligence Conference",
+      "name": "Ministry of Foreign Affairs of the People's Republic of China",
+      "url": "https://www.mfa.gov.cn/web/zyxw/202607/t20260717_11984704.shtml",
+      "type": "Government / policy",
+      "date": "2026-07-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
           "kind": "event"
         }
       ]
@@ -52700,7 +53391,7 @@
       ]
     },
     {
-      "id": "src-318",
+      "id": "src-325",
       "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -52895,7 +53586,7 @@
       ]
     },
     {
-      "id": "src-310",
+      "id": "src-317",
       "title": "PIB: India common computing facility",
       "name": "PIB: India common computing facility",
       "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -53420,7 +54111,7 @@
       ]
     },
     {
-      "id": "src-321",
+      "id": "src-328",
       "title": "S.3150 text (Congress.gov)",
       "name": "S.3150 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -53435,7 +54126,7 @@
       ]
     },
     {
-      "id": "src-322",
+      "id": "src-329",
       "title": "Senate Banking GAIN AI Act release",
       "name": "Senate Banking GAIN AI Act release",
       "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -53466,6 +54157,36 @@
     },
     {
       "id": "src-297",
+      "title": "Soofi S project and availability status",
+      "name": "Soofi Project",
+      "url": "https://www.soofi.info/",
+      "type": "Project / consortium",
+      "date": "2026-07-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-296",
+      "title": "A Sovereign, Open-Source Foundation Model for German and English",
+      "name": "Soofi Team",
+      "url": "https://arxiv.org/abs/2607.09424",
+      "type": "Research / preprint",
+      "date": "2026-07-10",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-304",
       "title": "Stanford 2026 AI Index (via BigGo)",
       "name": "Stanford 2026 AI Index (via BigGo)",
       "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -53480,7 +54201,7 @@
       ]
     },
     {
-      "id": "src-296",
+      "id": "src-303",
       "title": "Stanford AI Index 2026 (via TNW)",
       "name": "Stanford AI Index 2026 (via TNW)",
       "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -53495,7 +54216,7 @@
       ]
     },
     {
-      "id": "src-295",
+      "id": "src-302",
       "title": "Stargate stalls (The Information via The Decoder)",
       "name": "Stargate stalls (The Information via The Decoder)",
       "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -53510,7 +54231,7 @@
       ]
     },
     {
-      "id": "src-307",
+      "id": "src-314",
       "title": "Stargate UK paused (Data Centre Magazine)",
       "name": "Stargate UK paused (Data Centre Magazine)",
       "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -53585,7 +54306,7 @@
       ]
     },
     {
-      "id": "src-293",
+      "id": "src-300",
       "title": "Tech AI spending may approach $700 billion this year",
       "name": "Tech AI spending may approach $700 billion this year",
       "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -53630,7 +54351,7 @@
       ]
     },
     {
-      "id": "src-292",
+      "id": "src-299",
       "title": "The 2025 AI Index Report",
       "name": "The 2025 AI Index Report",
       "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -53765,7 +54486,7 @@
       ]
     },
     {
-      "id": "src-344",
+      "id": "src-351",
       "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -53780,7 +54501,7 @@
       ]
     },
     {
-      "id": "src-343",
+      "id": "src-350",
       "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -53795,7 +54516,7 @@
       ]
     },
     {
-      "id": "src-317",
+      "id": "src-324",
       "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -54140,7 +54861,7 @@
       ]
     },
     {
-      "id": "src-330",
+      "id": "src-337",
       "title": "What we know and what we're watching (SC Media)",
       "name": "What we know and what we're watching (SC Media)",
       "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -54170,7 +54891,7 @@
       ]
     },
     {
-      "id": "src-309",
+      "id": "src-316",
       "title": "Who Controls Europe's AI Future? (Open Future)",
       "name": "Who Controls Europe's AI Future? (Open Future)",
       "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -54290,7 +55011,7 @@
           ]
         },
         {
-          "id": "src-346",
+          "id": "src-353",
           "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -55547,6 +56268,21 @@
               "kind": "event"
             }
           ]
+        },
+        {
+          "id": "src-296",
+          "title": "A Sovereign, Open-Source Foundation Model for German and English",
+          "name": "Soofi Team",
+          "url": "https://arxiv.org/abs/2607.09424",
+          "type": "Research / preprint",
+          "date": "2026-07-10",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+              "kind": "event"
+            }
+          ]
         }
       ],
       "used_by": [
@@ -55653,6 +56389,10 @@
         {
           "kind": "event",
           "id": "SIG_2026_MYTHOS_SANDBOX_ESCAPE_UNVERIFIED"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
         }
       ],
       "types": [
@@ -56277,7 +57017,7 @@
           ]
         },
         {
-          "id": "src-306",
+          "id": "src-313",
           "title": "Introducing Stargate UK",
           "name": "Introducing Stargate UK",
           "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -56521,7 +57261,7 @@
           ]
         },
         {
-          "id": "src-341",
+          "id": "src-348",
           "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -56540,7 +57280,7 @@
           ]
         },
         {
-          "id": "src-333",
+          "id": "src-340",
           "title": "A small number of samples can poison LLMs (Anthropic)",
           "name": "A small number of samples can poison LLMs (Anthropic)",
           "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -56630,7 +57370,7 @@
           ]
         },
         {
-          "id": "src-336",
+          "id": "src-343",
           "title": "Anthropic awarded $200M DOD agreement",
           "name": "Anthropic awarded $200M DOD agreement",
           "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -56645,7 +57385,7 @@
           ]
         },
         {
-          "id": "src-329",
+          "id": "src-336",
           "title": "Anthropic claims met with doubt (BleepingComputer)",
           "name": "Anthropic claims met with doubt (BleepingComputer)",
           "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -56860,7 +57600,7 @@
           ]
         },
         {
-          "id": "src-315",
+          "id": "src-322",
           "title": "BIS press release: rescission",
           "name": "BIS press release: rescission",
           "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -56905,7 +57645,7 @@
           ]
         },
         {
-          "id": "src-349",
+          "id": "src-356",
           "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -57092,7 +57832,7 @@
           ]
         },
         {
-          "id": "src-303",
+          "id": "src-310",
           "title": "Microsoft and U.S. join AI forces in UAE deal",
           "name": "Microsoft and U.S. join AI forces in UAE deal",
           "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -57111,7 +57851,7 @@
           ]
         },
         {
-          "id": "src-304",
+          "id": "src-311",
           "title": "Advanced AI chips cleared for export to UAE",
           "name": "Advanced AI chips cleared for export to UAE",
           "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -57186,7 +57926,7 @@
           ]
         },
         {
-          "id": "src-343",
+          "id": "src-350",
           "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -57276,7 +58016,7 @@
           ]
         },
         {
-          "id": "src-314",
+          "id": "src-321",
           "title": "CRS R48642 PDF",
           "name": "CRS R48642 PDF",
           "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -57314,7 +58054,7 @@
           ]
         },
         {
-          "id": "src-312",
+          "id": "src-319",
           "title": "U.S. Export Controls and China (CRS R48642)",
           "name": "U.S. Export Controls and China (CRS R48642)",
           "url": "https://www.congress.gov/crs-product/R48642",
@@ -57348,7 +58088,7 @@
           ]
         },
         {
-          "id": "src-323",
+          "id": "src-330",
           "title": "H.R.3447 text (Congress.gov)",
           "name": "H.R.3447 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -57363,7 +58103,7 @@
           ]
         },
         {
-          "id": "src-325",
+          "id": "src-332",
           "title": "H.R.6875 titles (Congress.gov)",
           "name": "H.R.6875 titles (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -57378,7 +58118,7 @@
           ]
         },
         {
-          "id": "src-321",
+          "id": "src-328",
           "title": "S.3150 text (Congress.gov)",
           "name": "S.3150 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -57518,7 +58258,7 @@
           ]
         },
         {
-          "id": "src-297",
+          "id": "src-304",
           "title": "Stanford 2026 AI Index (via BigGo)",
           "name": "Stanford 2026 AI Index (via BigGo)",
           "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -57533,7 +58273,7 @@
           ]
         },
         {
-          "id": "src-296",
+          "id": "src-303",
           "title": "Stanford AI Index 2026 (via TNW)",
           "name": "Stanford AI Index 2026 (via TNW)",
           "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -57548,7 +58288,7 @@
           ]
         },
         {
-          "id": "src-292",
+          "id": "src-299",
           "title": "The 2025 AI Index Report",
           "name": "The 2025 AI Index Report",
           "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -57841,7 +58581,7 @@
           ]
         },
         {
-          "id": "src-342",
+          "id": "src-349",
           "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -57890,6 +58630,109 @@
         "Industry / think tank",
         "Press / wire",
         "Secondary source"
+      ]
+    },
+    {
+      "id": "source-group-2",
+      "family": "Associated Press",
+      "sources": [
+        {
+          "id": "src-64",
+          "title": "China pushes domestic AI chips as Nvidia's market position changes",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/1ae6228c4928ddbb43f984e9b38f49dd",
+          "type": "Press / wire",
+          "date": "2026-06-29",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_BLACKWELL_DENIAL_HUAWEI_ASCEND",
+              "kind": "event"
+            },
+            {
+              "id": "tier-cn-01",
+              "kind": "claim"
+            },
+            {
+              "id": "export-15",
+              "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-151",
+          "title": "AP: What to know about the deal to keep TikTok in the US",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/c9746abf780881ac8f62013356522fec",
+          "type": "Press / wire",
+          "date": "2026-01-23",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_US_TIKTOK_QUALIFIED_DIVESTITURE_JV",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-207",
+          "title": "China blocks Meta from acquiring startup Manus as global AI rivalry deepens",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/5f8012791f86f719a24a3ebac06d9b0a",
+          "type": "Press / wire",
+          "date": "2026-04-27",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_CHINA_MANUS_UNWIND_ORDER",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-294",
+          "title": "China's Xi calls for more global efforts to guide AI, chides US for its curbs on tech sharing",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/df4cfc7e1b260e765b5449b6d71a48e5",
+          "type": "Press / wire",
+          "date": "2026-07-17",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_BLACKWELL_DENIAL_HUAWEI_ASCEND"
+        },
+        {
+          "kind": "claim",
+          "id": "tier-cn-01"
+        },
+        {
+          "kind": "claim",
+          "id": "export-15"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_US_TIKTOK_QUALIFIED_DIVESTITURE_JV"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_CHINA_MANUS_UNWIND_ORDER"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE"
+        }
+      ],
+      "types": [
+        "Press / wire"
       ]
     },
     {
@@ -58023,7 +58866,7 @@
           ]
         },
         {
-          "id": "src-345",
+          "id": "src-352",
           "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -58115,95 +58958,11 @@
       ]
     },
     {
-      "id": "source-group-2",
-      "family": "Associated Press",
-      "sources": [
-        {
-          "id": "src-64",
-          "title": "China pushes domestic AI chips as Nvidia's market position changes",
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/1ae6228c4928ddbb43f984e9b38f49dd",
-          "type": "Press / wire",
-          "date": "2026-06-29",
-          "primary_or_secondary": "secondary",
-          "used_by": [
-            {
-              "id": "SIG_2026_BLACKWELL_DENIAL_HUAWEI_ASCEND",
-              "kind": "event"
-            },
-            {
-              "id": "tier-cn-01",
-              "kind": "claim"
-            },
-            {
-              "id": "export-15",
-              "kind": "claim"
-            }
-          ]
-        },
-        {
-          "id": "src-151",
-          "title": "AP: What to know about the deal to keep TikTok in the US",
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/c9746abf780881ac8f62013356522fec",
-          "type": "Press / wire",
-          "date": "2026-01-23",
-          "primary_or_secondary": "secondary",
-          "used_by": [
-            {
-              "id": "SIG_2026_US_TIKTOK_QUALIFIED_DIVESTITURE_JV",
-              "kind": "event"
-            }
-          ]
-        },
-        {
-          "id": "src-207",
-          "title": "China blocks Meta from acquiring startup Manus as global AI rivalry deepens",
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/5f8012791f86f719a24a3ebac06d9b0a",
-          "type": "Press / wire",
-          "date": "2026-04-27",
-          "primary_or_secondary": "secondary",
-          "used_by": [
-            {
-              "id": "SIG_2026_CHINA_MANUS_UNWIND_ORDER",
-              "kind": "event"
-            }
-          ]
-        }
-      ],
-      "used_by": [
-        {
-          "kind": "event",
-          "id": "SIG_2026_BLACKWELL_DENIAL_HUAWEI_ASCEND"
-        },
-        {
-          "kind": "claim",
-          "id": "tier-cn-01"
-        },
-        {
-          "kind": "claim",
-          "id": "export-15"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2026_US_TIKTOK_QUALIFIED_DIVESTITURE_JV"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2026_CHINA_MANUS_UNWIND_ORDER"
-        }
-      ],
-      "types": [
-        "Press / wire"
-      ]
-    },
-    {
       "id": "source-group-20",
       "family": "CNBC",
       "sources": [
         {
-          "id": "src-338",
+          "id": "src-345",
           "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -58237,7 +58996,7 @@
           ]
         },
         {
-          "id": "src-293",
+          "id": "src-300",
           "title": "Tech AI spending may approach $700 billion this year",
           "name": "Tech AI spending may approach $700 billion this year",
           "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -58252,7 +59011,7 @@
           ]
         },
         {
-          "id": "src-344",
+          "id": "src-351",
           "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -58402,7 +59161,7 @@
           ]
         },
         {
-          "id": "src-331",
+          "id": "src-338",
           "title": "Big Sleep agent makes big leap (Google Cloud)",
           "name": "Big Sleep agent makes big leap (Google Cloud)",
           "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -58479,7 +59238,7 @@
           ]
         },
         {
-          "id": "src-300",
+          "id": "src-307",
           "title": "DeepSeek, Huawei, Export Controls (CSIS)",
           "name": "DeepSeek, Huawei, Export Controls (CSIS)",
           "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -58522,7 +59281,7 @@
       ]
     },
     {
-      "id": "source-group-106",
+      "id": "source-group-108",
       "family": "Microsoft",
       "sources": [
         {
@@ -58624,7 +59383,7 @@
       ]
     },
     {
-      "id": "source-group-124",
+      "id": "source-group-128",
       "family": "rg.ru",
       "sources": [
         {
@@ -58712,7 +59471,7 @@
       ]
     },
     {
-      "id": "source-group-132",
+      "id": "source-group-137",
       "family": "The Guardian",
       "sources": [
         {
@@ -58823,7 +59582,7 @@
           ]
         },
         {
-          "id": "src-347",
+          "id": "src-354",
           "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -58995,7 +59754,7 @@
       "family": "darpa.mil",
       "sources": [
         {
-          "id": "src-327",
+          "id": "src-334",
           "title": "AIxCC marks pivotal inflection point (DARPA)",
           "name": "AIxCC marks pivotal inflection point (DARPA)",
           "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -59075,7 +59834,7 @@
       ]
     },
     {
-      "id": "source-group-86",
+      "id": "source-group-87",
       "family": "government.ru",
       "sources": [
         {
@@ -59257,7 +60016,7 @@
       ]
     },
     {
-      "id": "source-group-100",
+      "id": "source-group-102",
       "family": "ai.meta.com",
       "sources": [
         {
@@ -59406,7 +60165,7 @@
       "family": "blogs.nvidia.com",
       "sources": [
         {
-          "id": "src-311",
+          "id": "src-318",
           "title": "India Fuels Its AI Mission With NVIDIA",
           "name": "India Fuels Its AI Mission With NVIDIA",
           "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -59650,7 +60409,7 @@
       ]
     },
     {
-      "id": "source-group-138",
+      "id": "source-group-143",
       "family": "files.gao.gov",
       "sources": [
         {
@@ -59749,7 +60508,7 @@
       ]
     },
     {
-      "id": "source-group-137",
+      "id": "source-group-142",
       "family": "gao.gov",
       "sources": [
         {
@@ -60011,7 +60770,7 @@
       "family": "letsdatascience.com",
       "sources": [
         {
-          "id": "src-301",
+          "id": "src-308",
           "title": "How China's GLM-5 Works",
           "name": "How China's GLM-5 Works",
           "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -60049,7 +60808,7 @@
       "family": "owasp.org",
       "sources": [
         {
-          "id": "src-335",
+          "id": "src-342",
           "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -60121,7 +60880,7 @@
       ]
     },
     {
-      "id": "source-group-85",
+      "id": "source-group-86",
       "family": "pib.gov.in",
       "sources": [
         {
@@ -60140,7 +60899,7 @@
           ]
         },
         {
-          "id": "src-310",
+          "id": "src-317",
           "title": "PIB: India common computing facility",
           "name": "PIB: India common computing facility",
           "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -60171,7 +60930,7 @@
       ]
     },
     {
-      "id": "source-group-117",
+      "id": "source-group-121",
       "family": "publication.pravo.gov.ru",
       "sources": [
         {
@@ -60384,7 +61143,7 @@
       ]
     },
     {
-      "id": "source-group-129",
+      "id": "source-group-134",
       "family": "sysdig.com",
       "sources": [
         {
@@ -60627,7 +61386,7 @@
       ]
     },
     {
-      "id": "source-group-118",
+      "id": "source-group-122",
       "family": "x.ai",
       "sources": [
         {
@@ -60676,7 +61435,7 @@
       ]
     },
     {
-      "id": "source-group-123",
+      "id": "source-group-127",
       "family": "agentsofchaos.baulab.info",
       "sources": [
         {
@@ -60706,7 +61465,7 @@
       ]
     },
     {
-      "id": "source-group-84",
+      "id": "source-group-85",
       "family": "ai.google.dev",
       "sources": [
         {
@@ -60740,7 +61499,7 @@
       "family": "aicyberchallenge.com",
       "sources": [
         {
-          "id": "src-332",
+          "id": "src-339",
           "title": "AIxCC finals winners (DARPA)",
           "name": "AIxCC finals winners (DARPA)",
           "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -60830,7 +61589,7 @@
       "family": "anderseninstitute.org",
       "sources": [
         {
-          "id": "src-319",
+          "id": "src-326",
           "title": "China Export Controls: Critical Minerals (Andersen Institute)",
           "name": "China Export Controls: Critical Minerals (Andersen Institute)",
           "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -60886,11 +61645,11 @@
       ]
     },
     {
-      "id": "source-group-126",
+      "id": "source-group-130",
       "family": "banking.senate.gov",
       "sources": [
         {
-          "id": "src-322",
+          "id": "src-329",
           "title": "Senate Banking GAIN AI Act release",
           "name": "Senate Banking GAIN AI Act release",
           "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -60950,7 +61709,7 @@
       "family": "breakingdefense.com",
       "sources": [
         {
-          "id": "src-337",
+          "id": "src-344",
           "title": "Breaking Defense: $200M each for agentic AI",
           "name": "Breaking Defense: $200M each for agentic AI",
           "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -61036,7 +61795,7 @@
       ]
     },
     {
-      "id": "source-group-136",
+      "id": "source-group-141",
       "family": "cases.justia.com",
       "sources": [
         {
@@ -61156,11 +61915,11 @@
       ]
     },
     {
-      "id": "source-group-91",
+      "id": "source-group-92",
       "family": "chinaselectcommittee.house.gov",
       "sources": [
         {
-          "id": "src-324",
+          "id": "src-331",
           "title": "House Select Committee: Chip Security Act passage",
           "name": "House Select Committee: Chip Security Act passage",
           "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -61186,7 +61945,7 @@
       ]
     },
     {
-      "id": "source-group-135",
+      "id": "source-group-140",
       "family": "cisa.gov",
       "sources": [
         {
@@ -61295,7 +62054,7 @@
       "family": "cybersecuritydive.com",
       "sources": [
         {
-          "id": "src-328",
+          "id": "src-335",
           "title": "Cybersecurity Dive: DARPA touts results",
           "name": "Cybersecurity Dive: DARPA touts results",
           "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -61321,11 +62080,11 @@
       ]
     },
     {
-      "id": "source-group-128",
+      "id": "source-group-133",
       "family": "datacentremagazine.com",
       "sources": [
         {
-          "id": "src-307",
+          "id": "src-314",
           "title": "Stargate UK paused (Data Centre Magazine)",
           "name": "Stargate UK paused (Data Centre Magazine)",
           "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -61355,7 +62114,7 @@
       "family": "defensescoop.com",
       "sources": [
         {
-          "id": "src-350",
+          "id": "src-357",
           "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -61385,7 +62144,7 @@
       "family": "eib.org",
       "sources": [
         {
-          "id": "src-308",
+          "id": "src-315",
           "title": "EIB-Commission gigafactories MoU",
           "name": "EIB-Commission gigafactories MoU",
           "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -61441,11 +62200,11 @@
       ]
     },
     {
-      "id": "source-group-97",
+      "id": "source-group-99",
       "family": "epoch.ai",
       "sources": [
         {
-          "id": "src-294",
+          "id": "src-301",
           "title": "Hyperscaler capex trend",
           "name": "Hyperscaler capex trend",
           "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -61471,11 +62230,11 @@
       ]
     },
     {
-      "id": "source-group-116",
+      "id": "source-group-120",
       "family": "finance.yahoo.com",
       "sources": [
         {
-          "id": "src-318",
+          "id": "src-325",
           "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -61531,7 +62290,7 @@
       ]
     },
     {
-      "id": "source-group-113",
+      "id": "source-group-117",
       "family": "flk.npc.gov.cn",
       "sources": [
         {
@@ -61561,11 +62320,41 @@
       ]
     },
     {
-      "id": "source-group-89",
+      "id": "source-group-110",
+      "family": "fmprc.gov.cn",
+      "sources": [
+        {
+          "id": "src-292",
+          "title": "Signing Ceremony of the Agreement on the Establishment of the World Artificial Intelligence Cooperation Organization Held in Shanghai",
+          "name": "Ministry of Foreign Affairs of the People's Republic of China",
+          "url": "https://www.fmprc.gov.cn/eng/wjbzhd/202607/t20260717_11984747.html",
+          "type": "Government / policy",
+          "date": "2026-07-16",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING"
+        }
+      ],
+      "types": [
+        "Government / policy"
+      ]
+    },
+    {
+      "id": "source-group-90",
       "family": "foreignaffairs.house.gov",
       "sources": [
         {
-          "id": "src-326",
+          "id": "src-333",
           "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -61621,7 +62410,7 @@
       ]
     },
     {
-      "id": "source-group-82",
+      "id": "source-group-83",
       "family": "g42.ai",
       "sources": [
         {
@@ -61651,7 +62440,7 @@
       ]
     },
     {
-      "id": "source-group-83",
+      "id": "source-group-84",
       "family": "garant.ru",
       "sources": [
         {
@@ -61681,7 +62470,7 @@
       ]
     },
     {
-      "id": "source-group-87",
+      "id": "source-group-88",
       "family": "government.nl",
       "sources": [
         {
@@ -61741,7 +62530,7 @@
       ]
     },
     {
-      "id": "source-group-81",
+      "id": "source-group-82",
       "family": "gxt.fujian.gov.cn",
       "sources": [
         {
@@ -61771,7 +62560,7 @@
       ]
     },
     {
-      "id": "source-group-88",
+      "id": "source-group-89",
       "family": "habr.com",
       "sources": [
         {
@@ -61801,11 +62590,11 @@
       ]
     },
     {
-      "id": "source-group-90",
+      "id": "source-group-91",
       "family": "hoganlovells.com",
       "sources": [
         {
-          "id": "src-316",
+          "id": "src-323",
           "title": "Hogan Lovells analysis",
           "name": "Hogan Lovells analysis",
           "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -61832,6 +62621,36 @@
     },
     {
       "id": "source-group-95",
+      "family": "huggingface.co",
+      "sources": [
+        {
+          "id": "src-298",
+          "title": "Soofi-Project/Soofi-S-Base model repository",
+          "name": "Hugging Face / Soofi Project",
+          "url": "https://huggingface.co/Soofi-Project/Soofi-S-Base",
+          "type": "Live registry",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
+        }
+      ],
+      "types": [
+        "Live registry"
+      ]
+    },
+    {
+      "id": "source-group-97",
       "family": "hunt.io",
       "sources": [
         {
@@ -61861,7 +62680,7 @@
       ]
     },
     {
-      "id": "source-group-96",
+      "id": "source-group-98",
       "family": "Huntress",
       "sources": [
         {
@@ -61891,7 +62710,7 @@
       ]
     },
     {
-      "id": "source-group-99",
+      "id": "source-group-101",
       "family": "iea.org",
       "sources": [
         {
@@ -61936,11 +62755,41 @@
       ]
     },
     {
+      "id": "source-group-81",
+      "family": "iis.fraunhofer.de",
+      "sources": [
+        {
+          "id": "src-295",
+          "title": "Soofi announces model for industrial AI in Europe",
+          "name": "Fraunhofer IIS",
+          "url": "https://www.iis.fraunhofer.de/en/pr/2026/press-release-soofi-industrial-ai-europe.html",
+          "type": "Research / preprint",
+          "date": "2026-06-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
+        }
+      ],
+      "types": [
+        "Research / preprint"
+      ]
+    },
+    {
       "id": "source-group-58",
       "family": "interface-eu.org",
       "sources": [
         {
-          "id": "src-340",
+          "id": "src-347",
           "title": "Built for Purpose? EU AI Gigafactories (Interface)",
           "name": "Built for Purpose? EU AI Gigafactories (Interface)",
           "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -61966,7 +62815,7 @@
       ]
     },
     {
-      "id": "source-group-115",
+      "id": "source-group-119",
       "family": "investopedia.com",
       "sources": [
         {
@@ -62026,11 +62875,11 @@
       ]
     },
     {
-      "id": "source-group-102",
+      "id": "source-group-104",
       "family": "kirkland.com",
       "sources": [
         {
-          "id": "src-313",
+          "id": "src-320",
           "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -62060,7 +62909,7 @@
       "family": "lawfaremedia.org",
       "sources": [
         {
-          "id": "src-348",
+          "id": "src-355",
           "title": "A Kill Switch for Frontier AI (Lawfare)",
           "name": "A Kill Switch for Frontier AI (Lawfare)",
           "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -62086,7 +62935,7 @@
       ]
     },
     {
-      "id": "source-group-103",
+      "id": "source-group-105",
       "family": "marketwatch.com",
       "sources": [
         {
@@ -62116,7 +62965,7 @@
       ]
     },
     {
-      "id": "source-group-104",
+      "id": "source-group-106",
       "family": "McKinsey",
       "sources": [
         {
@@ -62150,7 +62999,7 @@
       "family": "meta-intelligence.tech",
       "sources": [
         {
-          "id": "src-302",
+          "id": "src-309",
           "title": "DeepSeek V4 and R2 Deep Dive",
           "name": "DeepSeek V4 and R2 Deep Dive",
           "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -62176,7 +63025,7 @@
       ]
     },
     {
-      "id": "source-group-101",
+      "id": "source-group-103",
       "family": "meti.go.jp",
       "sources": [
         {
@@ -62206,7 +63055,37 @@
       ]
     },
     {
-      "id": "source-group-107",
+      "id": "source-group-111",
+      "family": "mfa.gov.cn",
+      "sources": [
+        {
+          "id": "src-293",
+          "title": "Xi Jinping's keynote speech at the opening ceremony of the 2026 World Artificial Intelligence Conference",
+          "name": "Ministry of Foreign Affairs of the People's Republic of China",
+          "url": "https://www.mfa.gov.cn/web/zyxw/202607/t20260717_11984704.shtml",
+          "type": "Government / policy",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE"
+        }
+      ],
+      "types": [
+        "Government / policy"
+      ]
+    },
+    {
+      "id": "source-group-109",
       "family": "mod.gov.ua",
       "sources": [
         {
@@ -62236,7 +63115,7 @@
       ]
     },
     {
-      "id": "source-group-108",
+      "id": "source-group-112",
       "family": "Morgan Stanley",
       "sources": [
         {
@@ -62266,7 +63145,7 @@
       ]
     },
     {
-      "id": "source-group-109",
+      "id": "source-group-113",
       "family": "mubadala.com",
       "sources": [
         {
@@ -62296,7 +63175,7 @@
       ]
     },
     {
-      "id": "source-group-114",
+      "id": "source-group-118",
       "family": "nato.int",
       "sources": [
         {
@@ -62326,7 +63205,7 @@
       ]
     },
     {
-      "id": "source-group-110",
+      "id": "source-group-114",
       "family": "nber.org",
       "sources": [
         {
@@ -62386,11 +63265,11 @@
       ]
     },
     {
-      "id": "source-group-93",
+      "id": "source-group-94",
       "family": "newsletter.semianalysis.com",
       "sources": [
         {
-          "id": "src-339",
+          "id": "src-346",
           "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -62416,7 +63295,7 @@
       ]
     },
     {
-      "id": "source-group-112",
+      "id": "source-group-116",
       "family": "npc.gov.cn",
       "sources": [
         {
@@ -62446,11 +63325,11 @@
       ]
     },
     {
-      "id": "source-group-134",
+      "id": "source-group-139",
       "family": "NPR",
       "sources": [
         {
-          "id": "src-317",
+          "id": "src-324",
           "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -62476,11 +63355,11 @@
       ]
     },
     {
-      "id": "source-group-143",
+      "id": "source-group-148",
       "family": "openfuture.eu",
       "sources": [
         {
-          "id": "src-309",
+          "id": "src-316",
           "title": "Who Controls Europe's AI Future? (Open Future)",
           "name": "Who Controls Europe's AI Future? (Open Future)",
           "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -62506,7 +63385,7 @@
       ]
     },
     {
-      "id": "source-group-119",
+      "id": "source-group-123",
       "family": "opensource.org",
       "sources": [
         {
@@ -62536,7 +63415,7 @@
       ]
     },
     {
-      "id": "source-group-121",
+      "id": "source-group-125",
       "family": "pm.gc.ca",
       "sources": [
         {
@@ -62566,7 +63445,7 @@
       ]
     },
     {
-      "id": "source-group-120",
+      "id": "source-group-124",
       "family": "PoC-in-GitHub",
       "sources": [
         {
@@ -62596,11 +63475,11 @@
       ]
     },
     {
-      "id": "source-group-94",
+      "id": "source-group-96",
       "family": "prnewswire.com",
       "sources": [
         {
-          "id": "src-305",
+          "id": "src-312",
           "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -62626,7 +63505,7 @@
       ]
     },
     {
-      "id": "source-group-122",
+      "id": "source-group-126",
       "family": "rand.org",
       "sources": [
         {
@@ -62671,11 +63550,11 @@
       ]
     },
     {
-      "id": "source-group-92",
+      "id": "source-group-93",
       "family": "recodechinaai.substack.com",
       "sources": [
         {
-          "id": "src-299",
+          "id": "src-306",
           "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -62731,11 +63610,11 @@
       ]
     },
     {
-      "id": "source-group-142",
+      "id": "source-group-147",
       "family": "scworld.com",
       "sources": [
         {
-          "id": "src-330",
+          "id": "src-337",
           "title": "What we know and what we're watching (SC Media)",
           "name": "What we know and what we're watching (SC Media)",
           "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -62761,7 +63640,7 @@
       ]
     },
     {
-      "id": "source-group-130",
+      "id": "source-group-135",
       "family": "so-ups.ru",
       "sources": [
         {
@@ -62791,7 +63670,37 @@
       ]
     },
     {
-      "id": "source-group-125",
+      "id": "source-group-131",
+      "family": "soofi.info",
+      "sources": [
+        {
+          "id": "src-297",
+          "title": "Soofi S project and availability status",
+          "name": "Soofi Project",
+          "url": "https://www.soofi.info/",
+          "type": "Project / consortium",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
+        }
+      ],
+      "types": [
+        "Project / consortium"
+      ]
+    },
+    {
+      "id": "source-group-129",
       "family": "storage.consultant.ru",
       "sources": [
         {
@@ -62825,7 +63734,7 @@
       "family": "Tech Times",
       "sources": [
         {
-          "id": "src-320",
+          "id": "src-327",
           "title": "Beijing presses Washington (Tech Times)",
           "name": "Beijing presses Washington (Tech Times)",
           "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -62851,11 +63760,11 @@
       ]
     },
     {
-      "id": "source-group-98",
+      "id": "source-group-100",
       "family": "techblog.comsoc.org",
       "sources": [
         {
-          "id": "src-298",
+          "id": "src-305",
           "title": "Hyperscaler cloud share",
           "name": "Hyperscaler cloud share",
           "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -62881,7 +63790,7 @@
       ]
     },
     {
-      "id": "source-group-131",
+      "id": "source-group-136",
       "family": "techcrunch.com",
       "sources": [
         {
@@ -62911,11 +63820,11 @@
       ]
     },
     {
-      "id": "source-group-127",
+      "id": "source-group-132",
       "family": "the-decoder.com",
       "sources": [
         {
-          "id": "src-295",
+          "id": "src-302",
           "title": "Stargate stalls (The Information via The Decoder)",
           "name": "Stargate stalls (The Information via The Decoder)",
           "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -62945,7 +63854,7 @@
       "family": "thestar.com.my",
       "sources": [
         {
-          "id": "src-351",
+          "id": "src-358",
           "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -62975,7 +63884,7 @@
       "family": "Tom's Hardware",
       "sources": [
         {
-          "id": "src-352",
+          "id": "src-359",
           "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -63005,7 +63914,7 @@
       "family": "turing.ac.uk",
       "sources": [
         {
-          "id": "src-334",
+          "id": "src-341",
           "title": "Alan Turing Institute summary",
           "name": "Alan Turing Institute summary",
           "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -63031,7 +63940,7 @@
       ]
     },
     {
-      "id": "source-group-139",
+      "id": "source-group-144",
       "family": "unit42.paloaltonetworks.com",
       "sources": [
         {
@@ -63061,7 +63970,7 @@
       ]
     },
     {
-      "id": "source-group-133",
+      "id": "source-group-138",
       "family": "US Treasury",
       "sources": [
         {
@@ -63106,7 +64015,7 @@
       ]
     },
     {
-      "id": "source-group-140",
+      "id": "source-group-145",
       "family": "verizon.com",
       "sources": [
         {
@@ -63136,7 +64045,7 @@
       ]
     },
     {
-      "id": "source-group-141",
+      "id": "source-group-146",
       "family": "Washington Post",
       "sources": [
         {
@@ -63166,7 +64075,7 @@
       ]
     },
     {
-      "id": "source-group-144",
+      "id": "source-group-149",
       "family": "Wired",
       "sources": [
         {
@@ -63196,7 +64105,7 @@
       ]
     },
     {
-      "id": "source-group-111",
+      "id": "source-group-115",
       "family": "zfxxgk.ndrc.gov.cn",
       "sources": [
         {
@@ -63226,7 +64135,7 @@
       ]
     },
     {
-      "id": "source-group-105",
+      "id": "source-group-107",
       "family": "zona.media",
       "sources": [
         {
@@ -64175,25 +65084,25 @@
       "arc_families": 6
     },
     "post_merge": {
-      "version": "0.20",
-      "date": "2026-07-15",
-      "evidence": 234,
+      "version": "0.21",
+      "date": "2026-07-17",
+      "evidence": 237,
       "claims": 71,
       "claim_checks": 29,
       "story_arcs": 24,
-      "story_edges": 433,
+      "story_edges": 438,
       "unclassified_geography_event_ids": [],
       "arcs_without_family": []
     }
   },
   "factcheckAudit": {
     "source_candidate_file": "ai_stack_candidate_factcheck_structural_power.json",
-    "research_date": "2026-07-15",
+    "research_date": "2026-07-17",
     "independent_adversarial_review": true,
     "anti_overfit_rule_en": "Do not promote a lab study, vendor scan, public exposure measurement, proposal or forecast into an incident, prevalence estimate, enacted law or measured outcome.",
     "counts": {
-      "source_candidates": 17,
-      "new_atomic_evidence": 13,
+      "source_candidates": 20,
+      "new_atomic_evidence": 16,
       "updated_existing_evidence": 4,
       "updated_claims": 3,
       "updated_claim_checks": 1,
@@ -64285,6 +65194,21 @@
         "candidate_id": "CAND_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
         "decision": "merge_as_distinct_artifact_backed_case",
         "master_id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION"
+      },
+      {
+        "candidate_id": "CAND_2026_WAICO_FOUNDING_AGREEMENT",
+        "decision": "merge_as_distinct_institutional_signal",
+        "master_id": "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING"
+      },
+      {
+        "candidate_id": "CAND_2026_XI_WAIC_OPEN_AI_PLEDGE",
+        "decision": "merge_as_policy_speech_and_capacity_pledge",
+        "master_id": "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE"
+      },
+      {
+        "candidate_id": "CAND_2026_SOOFI_S_SOVEREIGN_MODEL_PREVIEW",
+        "decision": "merge_as_sovereign_model_preview_with_release_caveats",
+        "master_id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
       }
     ],
     "corrected_overclaims": [
@@ -64299,17 +65223,35 @@
       "Hunt.io independently confirmed Anthropic GTG-1002.",
       "The Hunt.io corpus proves a fully autonomous attack.",
       "Hunt.io attributed the operation to the Chinese state.",
-      "Four national governments or 5,890 hosts were breached."
+      "Four national governments or 5,890 hosts were breached.",
+      "Xi explicitly named the United States or used the phrase closed club in his WAIC speech.",
+      "WAICO is already an operational and universally representative global AI regulator.",
+      "The 5,000 training-place pledge is delivered technology transfer or unrestricted model access.",
+      "Soofi S has completed a general permissive open-source release.",
+      "Soofi S is universally 8-9x faster or has demonstrated 8-9x lower energy use.",
+      "Training or hosting a model in Europe automatically makes every deployment GDPR-compliant."
     ],
     "source_candidate_files": [
       "ai_stack_candidate_factcheck_structural_power.json",
-      "ai_stack_candidate_huntio_claude_deepseek_2026.json"
+      "ai_stack_candidate_huntio_claude_deepseek_2026.json",
+      "ai_stack_candidate_waic_soofi_2026.json"
     ],
     "rolling_news_review": {
-      "date": "2026-07-15",
-      "source": "Hunt.io",
-      "evidence_id": "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
-      "review": "Artifact-backed vendor report retained with B/C confidence; no public victim or CERT corroboration found at the research date."
+      "date": "2026-07-17",
+      "sources": [
+        "Chinese Ministry of Foreign Affairs",
+        "Associated Press",
+        "Soofi Team",
+        "Fraunhofer IIS",
+        "Soofi Project",
+        "Hugging Face"
+      ],
+      "evidence_ids": [
+        "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING",
+        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
+        "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
+      ],
+      "review": "Three atomic records retained. Institution, speech, pledge, technical measurement and release state are kept separate; political interpretation, future delivery and self-authored performance remain explicitly caveated."
     }
   },
   "actorTypeLabels": {
@@ -64353,8 +65295,8 @@
   "counts": {
     "geographies": {
       "US": 123,
-      "China": 43,
-      "EU": 25,
+      "China": 45,
+      "EU": 26,
       "Russia": 21,
       "UK": 15,
       "Hong Kong": 5,
@@ -64364,11 +65306,11 @@
       "Japan": 4,
       "Malaysia": 4,
       "Ukraine": 4,
+      "Germany": 3,
       "Macau": 3,
       "North Korea": 3,
       "Singapore": 3,
       "France": 2,
-      "Germany": 2,
       "Netherlands": 2,
       "Saudi Arabia": 2,
       "Taiwan": 2,
@@ -64383,9 +65325,9 @@
     "geographies_raw": {
       "US": 120,
       "global": 62,
-      "China": 42,
-      "Global": 42,
-      "EU": 25,
+      "China": 44,
+      "Global": 44,
+      "EU": 26,
       "Russia": 21,
       "UK": 15,
       "Hong Kong": 5,
@@ -64396,13 +65338,13 @@
       "Malaysia": 4,
       "NATO": 4,
       "Ukraine": 4,
+      "Germany": 3,
       "Macau": 3,
       "North Korea": 3,
       "Singapore": 3,
       "us": 3,
       "Europe": 2,
       "France": 2,
-      "Germany": 2,
       "Gulf": 2,
       "laboratory": 2,
       "Middle East": 2,
@@ -64441,8 +65383,8 @@
     },
     "jurisdictions": {
       "US": 123,
-      "China": 43,
-      "EU": 25,
+      "China": 45,
+      "EU": 26,
       "Russia": 21,
       "UK": 15,
       "Hong Kong": 5,
@@ -64452,11 +65394,11 @@
       "Japan": 4,
       "Malaysia": 4,
       "Ukraine": 4,
+      "Germany": 3,
       "Macau": 3,
       "North Korea": 3,
       "Singapore": 3,
       "France": 2,
-      "Germany": 2,
       "Netherlands": 2,
       "Saudi Arabia": 2,
       "Taiwan": 2,
@@ -64493,7 +65435,7 @@
       "Russia-linked": 1
     },
     "geographic_scopes": {
-      "Global": 104
+      "Global": 106
     },
     "actors": {
       "OpenAI": 31,
@@ -64538,10 +65480,13 @@
       "CFIUS": 1,
       "Cisco": 1,
       "Cursor": 1,
+      "Deutsche Telekom": 1,
       "ENISA": 1,
       "EU AI Office": 1,
       "EuroHPC Joint Undertaking": 1,
       "European Court of Human Rights": 1,
+      "Fraunhofer": 1,
+      "German AI Association": 1,
       "HUMAIN": 1,
       "Hunt.io": 1,
       "Mozilla": 1,
@@ -64550,6 +65495,7 @@
       "NIST": 1,
       "NSCAI": 1,
       "Reddit": 1,
+      "Soofi Project": 1,
       "SpaceX": 1,
       "Stack Overflow": 1,
       "State Duma": 1,
@@ -64557,7 +65503,9 @@
       "UK Government": 1,
       "UK Home Office": 1,
       "University of Manchester": 1,
-      "US DOJ": 1
+      "US DOJ": 1,
+      "World Artificial Intelligence Cooperation Organization": 1,
+      "Xi Jinping": 1
     },
     "actor_entities": {
       "OpenAI": 31,
@@ -64602,10 +65550,13 @@
       "CFIUS": 1,
       "Cisco": 1,
       "Cursor": 1,
+      "Deutsche Telekom": 1,
       "ENISA": 1,
       "EU AI Office": 1,
       "EuroHPC Joint Undertaking": 1,
       "European Court of Human Rights": 1,
+      "Fraunhofer": 1,
+      "German AI Association": 1,
       "HUMAIN": 1,
       "Hunt.io": 1,
       "Mozilla": 1,
@@ -64614,6 +65565,7 @@
       "NIST": 1,
       "NSCAI": 1,
       "Reddit": 1,
+      "Soofi Project": 1,
       "SpaceX": 1,
       "Stack Overflow": 1,
       "State Duma": 1,
@@ -64621,25 +65573,27 @@
       "UK Government": 1,
       "UK Home Office": 1,
       "University of Manchester": 1,
-      "US DOJ": 1
+      "US DOJ": 1,
+      "World Artificial Intelligence Cooperation Organization": 1,
+      "Xi Jinping": 1
     },
     "actor_types": {
-      "company": 110,
-      "government": 73,
-      "research": 40,
+      "company": 111,
+      "government": 75,
+      "research": 41,
       "regulator": 31,
-      "military_security": 25,
+      "military_security": 23,
       "workforce_users": 22,
       "financial_institution": 17,
-      "multilateral": 7,
+      "multilateral": 8,
       "threat_actor": 7,
+      "civil_society": 5,
       "media_rights": 5,
-      "civil_society": 4,
       "court": 2
     },
     "actor_jurisdictions": {
       "US": 76,
-      "China": 25,
+      "China": 27,
       "EU": 16,
       "Russia": 16,
       "UK": 12,
@@ -64654,8 +65608,8 @@
     "actor_facets_legacy": {
       "US": 76,
       "OpenAI": 31,
+      "China": 27,
       "Research teams": 27,
-      "China": 25,
       "Anthropic": 20,
       "EU": 16,
       "Microsoft": 16,
@@ -64705,10 +65659,13 @@
       "CFIUS": 1,
       "Cisco": 1,
       "Cursor": 1,
+      "Deutsche Telekom": 1,
       "ENISA": 1,
       "EU AI Office": 1,
       "EuroHPC Joint Undertaking": 1,
       "European Court of Human Rights": 1,
+      "Fraunhofer": 1,
+      "German AI Association": 1,
       "HUMAIN": 1,
       "Hunt.io": 1,
       "Israel": 1,
@@ -64719,6 +65676,7 @@
       "NIST": 1,
       "NSCAI": 1,
       "Reddit": 1,
+      "Soofi Project": 1,
       "South Korea": 1,
       "SpaceX": 1,
       "Stack Overflow": 1,
@@ -64728,23 +65686,25 @@
       "UK Government": 1,
       "UK Home Office": 1,
       "University of Manchester": 1,
-      "US DOJ": 1
+      "US DOJ": 1,
+      "World Artificial Intelligence Cooperation Organization": 1,
+      "Xi Jinping": 1
     },
     "stack_layers": {
-      "governance_law": 143,
-      "decision_support_cognition": 91,
-      "model_weights": 87,
-      "cloud_inference": 83,
-      "data_telemetry": 74,
-      "energy_compute_chips": 70,
+      "governance_law": 145,
+      "decision_support_cognition": 92,
+      "model_weights": 89,
+      "cloud_inference": 84,
+      "data_telemetry": 75,
+      "energy_compute_chips": 71,
       "finance_rent": 56,
       "cyber_security_patch": 47
     },
     "source_types": {
-      "Government / policy": 73,
+      "Government / policy": 75,
       "Press / wire": 67,
       "Company / vendor": 45,
-      "Research / preprint": 33,
+      "Research / preprint": 34,
       "Primary source": 8,
       "Industry / think tank": 4,
       "Court / legal": 2,
@@ -64753,10 +65713,10 @@
     "relation_types": {
       "supports": 215,
       "supports_with_scope": 49,
-      "supports_with_caveat": 28,
+      "supports_with_caveat": 29,
       "sets_up": 27,
-      "qualifies": 21,
-      "institutionalizes": 17,
+      "qualifies": 22,
+      "institutionalizes": 18,
       "develops_into": 9,
       "limits": 8,
       "walks_back": 7,
@@ -64771,13 +65731,13 @@
       "challenges_overclaim": 2,
       "early_countermeasure": 2,
       "generalizes": 2,
+      "reframes": 2,
+      "supports_as_claim_not_fact": 2,
       "accelerates_governance": 1,
       "closed_by": 1,
       "countermove": 1,
       "produces_workaround": 1,
-      "reframes": 1,
       "routes_around": 1,
-      "supports_as_claim_not_fact": 1,
       "triggers_capital_and_cloud_lockin": 1,
       "updates": 1
     },
@@ -64787,15 +65747,15 @@
       "ARC_SOVEREIGN_FLOW_GATING": 30,
       "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY": 29,
       "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 24,
-      "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 22,
+      "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 23,
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE": 18,
       "ARC_PALANTIR_DECISION_OS": 18,
+      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 17,
       "ARC_QUIET_ACCESS_CONTROL": 16,
       "ARC_EXPORT_CHIPS_TO_MODELS": 15,
-      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 15,
       "ARC_2016_2021_METERED_ACCESS_FORMATION": 14,
       "ARC_2021_STATE_INSTITUTIONALIZATION": 14,
-      "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 10,
+      "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 12,
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION": 10,
       "ARC_2022_2023_FORMATION_PHASE": 9,
       "ARC_FINANCE_GOVERNED_SHUTDOWN": 9,
@@ -64812,8 +65772,8 @@
     "arc_families": {
       "ARC_FAMILY_ACCESS_CONTROL": 78,
       "ARC_FAMILY_CYBER_COGNITION_WAR": 69,
-      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 62,
-      "ARC_FAMILY_INFRASTRUCTURE_CAPITAL": 48,
+      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 66,
+      "ARC_FAMILY_INFRASTRUCTURE_CAPITAL": 49,
       "ARC_FAMILY_DECISION_DATA_FINANCE": 45,
       "ARC_FAMILY_FORMATION_TIMELINE": 43
     }
