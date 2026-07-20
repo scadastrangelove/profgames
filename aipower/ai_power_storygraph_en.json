@@ -1,15 +1,39 @@
 {
   "meta": {
     "title": "AI stack: four structures of power at one checkpoint",
-    "version": "0.22",
+    "version": "0.23",
     "created_at": "2026-06-28",
-    "updated_at": "2026-07-17",
-    "schema_version": "ai_stack_structural_power.v0.22.0-2026-07-17",
+    "updated_at": "2026-07-20",
+    "schema_version": "ai_stack_structural_power.v0.23.0-2026-07-20",
     "display_title_en": "AI stack: four structures of power at one checkpoint",
     "subtitle_en": "A fact map of how compute, clouds, models, data, cyber and capital become the default environment: access is metered, dependency is locked in, and rent is collected.",
     "source_pack": "ai_stack_storygraph_master.json",
     "method": "ProfGames-style layered organization. Merge of: (a) v0.4 operational pack (evidence/timeline/claim_checks/country_cards/cyber_pack/cognitive_security/critical_decision_use/palantir_case/weekly_memo/gaps), (b) v0.2 factcheck layer (claims with recommended_phrasing_ru/counterarguments/recommendations), (c) new v0.3 research closing the Stanford-tables and chip-license gaps and adding model-layer export-control claims.",
     "changelog": [
+      {
+        "version": "0.23",
+        "date": "2026-07-20",
+        "description": "Added Hugging Face's July 2026 agentic-intrusion disclosure and the separate defender-side guardrail/local-GLM fallback. Updated four arcs and two claim checks while preserving first-party attribution, unknown operator involvement and non-postmortem status of nearby public patches.",
+        "added_evidence": 2,
+        "added_timeline": 2,
+        "added_claims": 0,
+        "added_claim_checks": 0,
+        "added_story_arcs": 0,
+        "added_story_edges": 6,
+        "updated_story_arcs": [
+          "ARC_CYBER_CLAIM_TO_CAVEAT",
+          "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+          "ARC_QUIET_ACCESS_CONTROL",
+          "ARC_SOVEREIGN_FLOW_GATING"
+        ],
+        "updated_story_nodes": [
+          "THESIS_NOT_AUTONOMOUS_OFFENSE"
+        ],
+        "updated_claim_checks": [
+          "CLM_006_MACHINE_SPEED_CYBER",
+          "CLM_013_QUIET_ACCESS_CONTROL"
+        ]
+      },
       {
         "version": "0.22",
         "date": "2026-07-17",
@@ -229,9 +253,9 @@
     "subtitle": "A fact map of how compute, clouds, models, data, cyber and capital become the default environment: access is metered, dependency is locked in, and rent is collected.",
     "changelog_en": [
       {
-        "version": "0.22",
-        "date": "2026-07-17",
-        "description": "Added a five-fact South Korea contour: the year-end sovereign cybersecurity-model plan, continued Anthropic safety/cyber cooperation, the Naver sovereignty-eligibility decision, the Naver-KAI defense-model MOU and Project Canopy eGovFrame results. Updated six existing arcs without adding a new arc."
+        "version": "0.23",
+        "date": "2026-07-20",
+        "description": "Added Hugging Face's July 2026 agentic-intrusion disclosure and the separate defender-side guardrail/local-GLM fallback. Updated four arcs and two claim checks while preserving first-party attribution, unknown operator involvement and non-postmortem status of nearby public patches."
       }
     ]
   },
@@ -247,6 +271,8 @@
     },
     "approximate_pass_rate": "97% verified or partially verified",
     "key_findings": [
+      "HF AGENTIC INTRUSION (v0.23): Hugging Face provides a detailed victim-side account of a malicious-dataset intrusion driven by an agent framework, but the incident date, attacker model, operator involvement, public IoCs and independent forensics remain unavailable.",
+      "HF DEFENDER ACCESS ASYMMETRY (v0.23): Hosted safety filters reportedly blocked legitimate incident-response analysis, while local GLM 5.2 restored the workflow and kept sensitive data in-house. This demonstrates access policy as operational power and open weights as a conditional exit, not universal superiority or full-stack sovereignty.",
       "KOREA ACCESS SHOCK (v0.22): South Korea plans a domestic cybersecurity model by year-end after the Mythos access restriction, but the base model is unspecified and Mythos parity is a longer-term aspiration rather than the 2026 deliverable.",
       "KOREA SELECTIVE SOVEREIGNTY (v0.22): MSIT operationalized sovereignty through weight, training and licensing criteria, excluding Naver from one contest, while Korea simultaneously retained an Anthropic safety/cyber MOU. This is managed interdependence, not autarky.",
       "KOREA CYBER AND DEFENSE (v0.22): Project Canopy reports a large human-validated find-and-patch workflow with patch-isolation risk, while Naver-KAI creates a defense-model route that remains an MOU rather than a deployed capability.",
@@ -763,13 +789,13 @@
       ]
     },
     "pass_rate_short": "97%",
-    "total_events": 242,
+    "total_events": 244,
     "total_claims": 71,
     "total_claim_checks": 29,
     "total_arcs": 24,
-    "total_edges": 449,
+    "total_edges": 455,
     "total_thesis_nodes": 5,
-    "source_count": 367,
+    "source_count": 375,
     "by_status": {
       "verified": 136,
       "verified_as_reported": 31,
@@ -800,6 +826,8 @@
       "verified_as_reported_not_primary_order": 1,
       "verified_controlled_evaluation": 1,
       "verified_current_rule": 1,
+      "verified_first_party_disclosure_independent_forensics_pending": 1,
+      "verified_first_party_operational_account": 1,
       "verified_malicious_registry_artifacts_no_victim_prevalence": 1,
       "verified_policy_decision_technical_detail_reported": 1,
       "verified_preview_license_pending": 1,
@@ -813,7 +841,7 @@
       "B": 75,
       "C": 28,
       "D": 8,
-      "A/B": 4,
+      "A/B": 6,
       "B/C": 4,
       "A/D": 3,
       "A/C": 2,
@@ -33728,6 +33756,362 @@
         "supports_with_scope",
         "parallel"
       ]
+    },
+    {
+      "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+      "kind": "event",
+      "title": "Hugging Face reports a malicious-dataset intrusion driven by an autonomous agent framework, with the degree of human control unresolved",
+      "title_en": "Hugging Face reports a malicious-dataset intrusion driven by an autonomous agent framework, with the degree of human control unresolved",
+      "date": "2026-07-16",
+      "source_date": "2026-07-13/2026-07-16",
+      "date_basis": "public_disclosure_date_incident_date_not_disclosed",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "source_name": "Hugging Face",
+      "source_type_raw": "Company / primary",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Hugging Face, Unattributed threat actor",
+      "actor_raw": "Hugging Face, Unattributed threat actor",
+      "actors_raw": [
+        "Hugging Face",
+        "Unattributed threat actor",
+        "Hugging Face, Unattributed threat actor"
+      ],
+      "actors": [
+        "Hugging Face",
+        "Unattributed threat actor"
+      ],
+      "actor_facets_legacy": [
+        "Hugging Face",
+        "Unattributed threat actor"
+      ],
+      "actor_facets": [
+        "Hugging Face",
+        "Unattributed threat actor"
+      ],
+      "actor_entities": [
+        "Hugging Face",
+        "Unattributed threat actor"
+      ],
+      "actor_jurisdictions": [],
+      "actor_types": [
+        "company",
+        "threat_actor"
+      ],
+      "geography_raw": [
+        "Global"
+      ],
+      "geography": [],
+      "jurisdictions": [],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "cyber_security_patch",
+        "data_telemetry",
+        "cloud_inference",
+        "decision_support_cognition"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "data_telemetry",
+        "cloud_inference",
+        "decision_support_cognition"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge",
+        "production"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge",
+        "production"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ3",
+        "RQ4"
+      ],
+      "claim_supported": "On 16 July 2026, Hugging Face disclosed that an intrusion detected earlier that week began when a malicious dataset abused a remote-code dataset loader and template injection in a dataset configuration. Code ran on a processing worker, after which the actor obtained node-level access, harvested cloud and cluster credentials and moved laterally into several internal clusters. Hugging Face said an autonomous agent framework executed many thousands of actions across short-lived sandboxes and used self-migrating command-and-control on public services. The company recorded more than 17,000 events, found unauthorized access to a limited set of internal datasets and several service credentials, and found no evidence of tampering with public models, datasets, Spaces, container images or published packages.",
+      "claim_supported_en": "On 16 July 2026, Hugging Face disclosed that an intrusion detected earlier that week began when a malicious dataset abused a remote-code dataset loader and template injection in a dataset configuration. Code ran on a processing worker, after which the actor obtained node-level access, harvested cloud and cluster credentials and moved laterally into several internal clusters. Hugging Face said an autonomous agent framework executed many thousands of actions across short-lived sandboxes and used self-migrating command-and-control on public services. The company recorded more than 17,000 events, found unauthorized access to a limited set of internal datasets and several service credentials, and found no evidence of tampering with public models, datasets, Spaces, container images or published packages.",
+      "claim_challenged": "This is a detailed first-party victim disclosure, not an independent forensic report. Hugging Face did not publish the incident date, attacker model, public IoCs, payload, CVE, exact node-escalation path, amount of data accessed or exfiltrated, or evidence excluding human supervision at every stage. The nearby dataset-viewer patches are consistent with the disclosed entry paths and containment work but are not officially identified as a one-to-one exploit map.",
+      "claim_challenged_en": "This is a detailed first-party victim disclosure, not an independent forensic report. Hugging Face did not publish the incident date, attacker model, public IoCs, payload, CVE, exact node-escalation path, amount of data accessed or exfiltrated, or evidence excluding human supervision at every stage. The nearby dataset-viewer patches are consistent with the disclosed entry paths and containment work but are not officially identified as a one-to-one exploit map.",
+      "summary": "On 16 July 2026, Hugging Face disclosed that an intrusion detected earlier that week began when a malicious dataset abused a remote-code dataset loader and template injection in a dataset configuration. Code ran on a processing worker, after which the actor obtained node-level access, harvested cloud and cluster credentials and moved laterally into several internal clusters. Hugging Face said an autonomous agent framework executed many thousands of actions across short-lived sandboxes and used self-migrating command-and-control on public services. The company recorded more than 17,000 events, found unauthorized access to a limited set of internal datasets and several service credentials, and found no evidence of tampering with public models, datasets, Spaces, container images or published packages.",
+      "summary_en": "On 16 July 2026, Hugging Face disclosed that an intrusion detected earlier that week began when a malicious dataset abused a remote-code dataset loader and template injection in a dataset configuration. Code ran on a processing worker, after which the actor obtained node-level access, harvested cloud and cluster credentials and moved laterally into several internal clusters. Hugging Face said an autonomous agent framework executed many thousands of actions across short-lived sandboxes and used self-migrating command-and-control on public services. The company recorded more than 17,000 events, found unauthorized access to a limited set of internal datasets and several service credentials, and found no evidence of tampering with public models, datasets, Spaces, container images or published packages.",
+      "notes": "This is a detailed first-party victim disclosure, not an independent forensic report. Hugging Face did not publish the incident date, attacker model, public IoCs, payload, CVE, exact node-escalation path, amount of data accessed or exfiltrated, or evidence excluding human supervision at every stage. The nearby dataset-viewer patches are consistent with the disclosed entry paths and containment work but are not officially identified as a one-to-one exploit map.",
+      "notes_en": "This is a detailed first-party victim disclosure, not an independent forensic report. Hugging Face did not publish the incident date, attacker model, public IoCs, payload, CVE, exact node-escalation path, amount of data accessed or exfiltrated, or evidence excluding human supervision at every stage. The nearby dataset-viewer patches are consistent with the disclosed entry paths and containment work but are not officially identified as a one-to-one exploit map.",
+      "safe_wording": "Call this a first-party victim report of a multi-stage intrusion driven by an autonomous agent framework. Do not call it the first fully autonomous hack, identify an attacker model or group, or treat the 17,000 recorded events as proof that no operator intervened.",
+      "safe_wording_en": "Call this a first-party victim report of a multi-stage intrusion driven by an autonomous agent framework. Do not call it the first fully autonomous hack, identify an attacker model or group, or treat the 17,000 recorded events as proof that no operator intervened.",
+      "corroboration_needed": "This is a detailed first-party victim disclosure, not an independent forensic report. Hugging Face did not publish the incident date, attacker model, public IoCs, payload, CVE, exact node-escalation path, amount of data accessed or exfiltrated, or evidence excluding human supervision at every stage. The nearby dataset-viewer patches are consistent with the disclosed entry paths and containment work but are not officially identified as a one-to-one exploit map.",
+      "corroboration_needed_en": "This is a detailed first-party victim disclosure, not an independent forensic report. Hugging Face did not publish the incident date, attacker model, public IoCs, payload, CVE, exact node-escalation path, amount of data accessed or exfiltrated, or evidence excluding human supervision at every stage. The nearby dataset-viewer patches are consistent with the disclosed entry paths and containment work but are not officially identified as a one-to-one exploit map.",
+      "caveat": "This is a detailed first-party victim disclosure, not an independent forensic report. Hugging Face did not publish the incident date, attacker model, public IoCs, payload, CVE, exact node-escalation path, amount of data accessed or exfiltrated, or evidence excluding human supervision at every stage. The nearby dataset-viewer patches are consistent with the disclosed entry paths and containment work but are not officially identified as a one-to-one exploit map.",
+      "caveat_en": "This is a detailed first-party victim disclosure, not an independent forensic report. Hugging Face did not publish the incident date, attacker model, public IoCs, payload, CVE, exact node-escalation path, amount of data accessed or exfiltrated, or evidence excluding human supervision at every stage. The nearby dataset-viewer patches are consistent with the disclosed entry paths and containment work but are not officially identified as a one-to-one exploit map.",
+      "caveats": [
+        "The official post was published on 16 July and says only that the incident was detected earlier that week; 6 July is not supported as the incident or disclosure date.",
+        "The attacker model and the amount of human supervision are unknown.",
+        "No public IoCs, payload, CVE or independent forensic report were released.",
+        "Customer and partner impact was still under assessment at disclosure time.",
+        "PR #3367 removed unused fsspec implementations, including reference, simplecache and data, while PR #3368 hardened worker pods; their timing corroborates remediation but does not prove the exact exploit chain.",
+        "IRSA, MONGODB-AWS and JWT-rotation PRs show contemporaneous credential hardening, not a complete public inventory of compromised secrets."
+      ],
+      "caveats_en": [
+        "The official post was published on 16 July and says only that the incident was detected earlier that week; 6 July is not supported as the incident or disclosure date.",
+        "The attacker model and the amount of human supervision are unknown.",
+        "No public IoCs, payload, CVE or independent forensic report were released.",
+        "Customer and partner impact was still under assessment at disclosure time.",
+        "PR #3367 removed unused fsspec implementations, including reference, simplecache and data, while PR #3368 hardened worker pods; their timing corroborates remediation but does not prove the exact exploit chain.",
+        "IRSA, MONGODB-AWS and JWT-rotation PRs show contemporaneous credential hardening, not a complete public inventory of compromised secrets."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "recorded_events_min": 17000,
+        "internal_datasets_scope": "limited_set",
+        "internal_clusters_scope": "several"
+      },
+      "money_status": "",
+      "confidence": "A/B",
+      "evidence_level": "A/B",
+      "status": "verified_first_party_disclosure_independent_forensics_pending",
+      "sources": [
+        {
+          "title": "Security incident disclosure - July 2026",
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/blog/security-incident-july-2026",
+          "type": "Company / vendor",
+          "date": "2026-07-16",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "PR #3367: bump fsspec and allow-list filesystem implementations",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3367",
+          "type": "Code / primary",
+          "date": "2026-07-13",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "PR #3368: harden worker pod security context",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3368",
+          "type": "Code / primary",
+          "date": "2026-07-13",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "PR #3359: add IRSA to datasets-server",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3359",
+          "type": "Code / primary",
+          "date": "2026-07-14",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "PR #3375: add MONGODB-AWS authentication support",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3375",
+          "type": "Code / primary",
+          "date": "2026-07-15",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "PR #3372: support multiple JWT public keys for key rotation",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3372",
+          "type": "Code / primary",
+          "date": "2026-07-16",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "ReferenceFileSystem template processing in fsspec 2024.3.1",
+          "name": "fsspec",
+          "url": "https://github.com/fsspec/filesystem_spec/blob/2024.3.1/fsspec/implementations/reference.py#L940-L965",
+          "type": "Code / primary",
+          "date": "2024-03-27",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_HF_AGENTIC_INTRUSION_CYBER_ARC",
+        "EDGE_HF_AGENTIC_INTRUSION_CLM006"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_caveat",
+        "updates"
+      ]
+    },
+    {
+      "id": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+      "kind": "event",
+      "title": "Hugging Face says commercial model guardrails blocked incident-response analysis, prompting a local GLM 5.2 fallback",
+      "title_en": "Hugging Face says commercial model guardrails blocked incident-response analysis, prompting a local GLM 5.2 fallback",
+      "date": "2026-07-16",
+      "source_date": "2026-07-16",
+      "date_basis": "public_disclosure_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "source_name": "Hugging Face",
+      "source_type_raw": "Company / primary",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Hugging Face, Z.ai / GLM",
+      "actor_raw": "Hugging Face, Z.ai / GLM",
+      "actors_raw": [
+        "Hugging Face",
+        "Z.ai / GLM",
+        "Hugging Face, Z.ai / GLM"
+      ],
+      "actors": [
+        "Hugging Face",
+        "Z.ai / GLM"
+      ],
+      "actor_facets_legacy": [
+        "Hugging Face",
+        "Z.ai / GLM"
+      ],
+      "actor_facets": [
+        "Hugging Face",
+        "Z.ai / GLM"
+      ],
+      "actor_entities": [
+        "Hugging Face",
+        "Z.ai / GLM"
+      ],
+      "actor_jurisdictions": [],
+      "actor_types": [
+        "company"
+      ],
+      "geography_raw": [
+        "Global"
+      ],
+      "geography": [],
+      "jurisdictions": [],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "model_weights",
+        "cyber_security_patch",
+        "data_telemetry",
+        "cloud_inference",
+        "decision_support_cognition"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "cyber_security_patch",
+        "data_telemetry",
+        "cloud_inference",
+        "decision_support_cognition"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ3"
+      ],
+      "claim_supported": "Hugging Face said LLM-based telemetry triage surfaced the compromise and analysis agents then processed more than 17,000 recorded events. Commercial frontier-model APIs blocked requests containing real attack commands, exploit payloads and C2 artifacts, so the team moved the forensic workload to a locally hosted open-weight GLM 5.2 model from Z.ai. According to Hugging Face, this allowed the analysis to continue while attack data and referenced credentials remained inside its infrastructure.",
+      "claim_supported_en": "Hugging Face said LLM-based telemetry triage surfaced the compromise and analysis agents then processed more than 17,000 recorded events. Commercial frontier-model APIs blocked requests containing real attack commands, exploit payloads and C2 artifacts, so the team moved the forensic workload to a locally hosted open-weight GLM 5.2 model from Z.ai. According to Hugging Face, this allowed the analysis to continue while attack data and referenced credentials remained inside its infrastructure.",
+      "claim_challenged": "Hugging Face did not name the commercial providers, publish blocked requests or compare model accuracy, latency and cost. One incident does not establish that hosted safety controls generally prevent legitimate cybersecurity work or that open-weight models are intrinsically safer. The fallback also required local compute, model vetting and operational preparation and exchanged dependence on hosted providers for dependence on a Chinese model artifact and local infrastructure.",
+      "claim_challenged_en": "Hugging Face did not name the commercial providers, publish blocked requests or compare model accuracy, latency and cost. One incident does not establish that hosted safety controls generally prevent legitimate cybersecurity work or that open-weight models are intrinsically safer. The fallback also required local compute, model vetting and operational preparation and exchanged dependence on hosted providers for dependence on a Chinese model artifact and local infrastructure.",
+      "summary": "Hugging Face said LLM-based telemetry triage surfaced the compromise and analysis agents then processed more than 17,000 recorded events. Commercial frontier-model APIs blocked requests containing real attack commands, exploit payloads and C2 artifacts, so the team moved the forensic workload to a locally hosted open-weight GLM 5.2 model from Z.ai. According to Hugging Face, this allowed the analysis to continue while attack data and referenced credentials remained inside its infrastructure.",
+      "summary_en": "Hugging Face said LLM-based telemetry triage surfaced the compromise and analysis agents then processed more than 17,000 recorded events. Commercial frontier-model APIs blocked requests containing real attack commands, exploit payloads and C2 artifacts, so the team moved the forensic workload to a locally hosted open-weight GLM 5.2 model from Z.ai. According to Hugging Face, this allowed the analysis to continue while attack data and referenced credentials remained inside its infrastructure.",
+      "notes": "Hugging Face did not name the commercial providers, publish blocked requests or compare model accuracy, latency and cost. One incident does not establish that hosted safety controls generally prevent legitimate cybersecurity work or that open-weight models are intrinsically safer. The fallback also required local compute, model vetting and operational preparation and exchanged dependence on hosted providers for dependence on a Chinese model artifact and local infrastructure.",
+      "notes_en": "Hugging Face did not name the commercial providers, publish blocked requests or compare model accuracy, latency and cost. One incident does not establish that hosted safety controls generally prevent legitimate cybersecurity work or that open-weight models are intrinsically safer. The fallback also required local compute, model vetting and operational preparation and exchanged dependence on hosted providers for dependence on a Chinese model artifact and local infrastructure.",
+      "safe_wording": "Use this as a concrete first-party example of private access policy constraining a legitimate defensive workflow and a local open-weight model providing an operational fallback. Do not generalize it into universal hosted-model uselessness, open-weight superiority or geopolitical independence.",
+      "safe_wording_en": "Use this as a concrete first-party example of private access policy constraining a legitimate defensive workflow and a local open-weight model providing an operational fallback. Do not generalize it into universal hosted-model uselessness, open-weight superiority or geopolitical independence.",
+      "corroboration_needed": "Hugging Face did not name the commercial providers, publish blocked requests or compare model accuracy, latency and cost. One incident does not establish that hosted safety controls generally prevent legitimate cybersecurity work or that open-weight models are intrinsically safer. The fallback also required local compute, model vetting and operational preparation and exchanged dependence on hosted providers for dependence on a Chinese model artifact and local infrastructure.",
+      "corroboration_needed_en": "Hugging Face did not name the commercial providers, publish blocked requests or compare model accuracy, latency and cost. One incident does not establish that hosted safety controls generally prevent legitimate cybersecurity work or that open-weight models are intrinsically safer. The fallback also required local compute, model vetting and operational preparation and exchanged dependence on hosted providers for dependence on a Chinese model artifact and local infrastructure.",
+      "caveat": "Hugging Face did not name the commercial providers, publish blocked requests or compare model accuracy, latency and cost. One incident does not establish that hosted safety controls generally prevent legitimate cybersecurity work or that open-weight models are intrinsically safer. The fallback also required local compute, model vetting and operational preparation and exchanged dependence on hosted providers for dependence on a Chinese model artifact and local infrastructure.",
+      "caveat_en": "Hugging Face did not name the commercial providers, publish blocked requests or compare model accuracy, latency and cost. One incident does not establish that hosted safety controls generally prevent legitimate cybersecurity work or that open-weight models are intrinsically safer. The fallback also required local compute, model vetting and operational preparation and exchanged dependence on hosted providers for dependence on a Chinese model artifact and local infrastructure.",
+      "caveats": [
+        "The commercial providers and their exact policies were not identified.",
+        "No blocked-request transcript or controlled model comparison was published.",
+        "The security and privacy benefit came from local execution and data retention, not from open weights alone.",
+        "GLM 5.2 is an external model artifact from Z.ai, so this is an exit from one access channel rather than full-stack autonomy."
+      ],
+      "caveats_en": [
+        "The commercial providers and their exact policies were not identified.",
+        "No blocked-request transcript or controlled model comparison was published.",
+        "The security and privacy benefit came from local execution and data retention, not from open weights alone.",
+        "GLM 5.2 is an external model artifact from Z.ai, so this is an exit from one access channel rather than full-stack autonomy."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "recorded_events_min": 17000
+      },
+      "money_status": "",
+      "confidence": "A/B",
+      "evidence_level": "A/B",
+      "status": "verified_first_party_operational_account",
+      "sources": [
+        {
+          "title": "Security incident disclosure - July 2026",
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/blog/security-incident-july-2026",
+          "type": "Company / vendor",
+          "date": "2026-07-16",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "GLM-5.2: Built for Long-Horizon Tasks",
+          "name": "Z.ai",
+          "url": "https://z.ai/blog/glm-5.2",
+          "type": "Company / vendor",
+          "date": "2026-06-16",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_HF_FORENSICS_CYBER_ARC",
+        "EDGE_HF_FORENSICS_OPEN_WEIGHT",
+        "EDGE_HF_FORENSICS_QUIET_ACCESS",
+        "EDGE_HF_FORENSICS_SOVEREIGN_FLOW"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR",
+        "ARC_FAMILY_ACCESS_CONTROL",
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
+      ],
+      "relationTypes": [
+        "key_node",
+        "mitigates",
+        "supports_with_scope"
+      ]
     }
   ],
   "claims": [
@@ -38920,19 +39304,20 @@
     },
     {
       "id": "CLM_006_MACHINE_SPEED_CYBER",
-      "claim": "Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established.",
-      "status": "needs_correction",
-      "confidence": "B/C",
+      "claim": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
+      "status": "partially_verified_material_update",
+      "confidence": "B",
       "supporting_evidence": [
         "SIG_CYBER_2025_AIXCC_FINAL",
-        "SIG_CYBER_2026_OSS_CRS"
+        "SIG_CYBER_2026_OSS_CRS",
+        "SIG_2026_HF_AGENTIC_INTRUSION"
       ],
-      "what_could_break_it": "Independently verified incidents of AI-orchestrated exploit chains at scale.",
+      "what_could_break_it": "Independent forensic publication confirming the exploit chain, end-to-end autonomy and repeatable strategic-scale operation.",
+      "safe_wording_en": "Hugging Face provides a strong operational signal: the victim described a multi-stage intrusion driven by an agent framework. Without independent forensics, public IoCs or evidence on operator involvement, fully autonomous offense at strategic scale is not yet established.",
       "kind": "claimCheck",
-      "title": "Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established.",
-      "title_en": "Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established.",
-      "claim_en": "Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established.",
-      "safe_wording_en": "",
+      "title": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
+      "title_en": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
+      "claim_en": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
       "arcIds": [
         "ARC_CYBER_CLAIM_TO_CAVEAT",
         "AUTO_CLAIMCHECK_SUPPORT",
@@ -38945,16 +39330,18 @@
         "supports_with_scope",
         "challenges_overclaim",
         "supports",
-        "limits"
+        "limits",
+        "updates"
       ],
       "edgeIds": [
         "EDGE_CYBER_001",
         "EDGE_CYBER_002",
         "EDGE_AUTO_SUPPORT_018",
         "EDGE_AUTO_SUPPORT_019",
-        "EDGE_CA_002"
+        "EDGE_CA_002",
+        "EDGE_HF_AGENTIC_INTRUSION_CLM006"
       ],
-      "safe_wording": ""
+      "safe_wording": "Hugging Face provides a strong operational signal: the victim described a multi-stage intrusion driven by an agent framework. Without independent forensics, public IoCs or evidence on operator involvement, fully autonomous offense at strategic scale is not yet established."
     },
     {
       "id": "CLM_007_COGNITIVE_SECURITY",
@@ -39181,14 +39568,15 @@
         "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS",
         "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE",
         "SIG_2026_OPENAI_GPT56_VETTED_PARTNERS",
-        "SIG_2026_ANTHROPIC_MYTHOS_TRUSTED_ORGS"
+        "SIG_2026_ANTHROPIC_MYTHOS_TRUSTED_ORGS",
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
       ],
       "what_could_break_it": "If providers publish evidence that these controls are rarely used or merely symbolic.",
+      "safe_wording_en": "Beyond public bans and export rules, control appears through review, tiered access, trusted organizations, monitoring classifiers and usage filters. Hugging Face reported one such filter blocking legitimate attack-artifact analysis; this is a concrete case, not a prevalence estimate.",
       "kind": "claimCheck",
       "title": "Control over AI capabilities often appears as quiet access control rather than public bans.",
       "title_en": "Control over AI capabilities often appears as quiet access control rather than public bans.",
       "claim_en": "Control over AI capabilities often appears as quiet access control rather than public bans.",
-      "safe_wording_en": "",
       "arcIds": [
         "ARC_QUIET_ACCESS_CONTROL",
         "AUTO_CLAIMCHECK_SUPPORT"
@@ -39211,7 +39599,7 @@
         "EDGE_AUTO_SUPPORT_041",
         "EDGE_AUTO_SUPPORT_042"
       ],
-      "safe_wording": ""
+      "safe_wording": "Beyond public bans and export rules, control appears through review, tiered access, trusted organizations, monitoring classifiers and usage filters. Hugging Face reported one such filter blocking legitimate attack-artifact analysis; this is a concrete case, not a prevalence estimate."
     },
     {
       "id": "CLM_014_BIOTECH_CBRN_GATING",
@@ -40063,7 +40451,9 @@
         "SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION",
         "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
         "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
-        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU"
+        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+        "SIG_2026_HF_AGENTIC_INTRUSION",
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
       ],
       "counterpoints": [
         "Internet exposure does not mean vulnerability or compromise.",
@@ -40071,11 +40461,13 @@
         "The EU Action Plan announces evaluation and secure-testing capacity; implementation remains pending.",
         "Hunt.io reports a separate artifact-backed campaign; it does not independently validate GTG-1002, quantify autonomy or establish Chinese state sponsorship.",
         "Project Canopy combines structural defects and vulnerabilities; its 990 count is self-reported and not a set of independently verified CVEs.",
-        "Korea's year-end specialized model is not the same promise as a longer-term Mythos-class frontier model."
+        "Korea's year-end specialized model is not the same promise as a longer-term Mythos-class frontier model.",
+        "Hugging Face disclosed no public IoCs, attacker model, exact incident date or independent forensic report; the degree of human supervision is unresolved.",
+        "The dataset-viewer patches are temporally consistent with remediation but are not an official one-to-one exploit map."
       ],
       "title_en": "Cyber: operational agentic signals with an autonomy caveat",
-      "thesis_en": "Cyber capability and the attacker skill floor are moving quickly; real logs, malicious artifacts and AI-assisted find-and-patch workflows are now observable. States are responding with domestic models and evaluation infrastructure, while reliable fully autonomous offense at strategic scale remains unproven.",
-      "safe_wording_en": "Separate observed workflows, reported results and demonstrated capability. Project Canopy's counts are self-reported, and Korea's cyber model is still a plan without a named base or benchmark; neither establishes autonomous exploit-at-scale.",
+      "thesis_en": "Cyber capability and the attacker skill floor are moving quickly. As the victim, Hugging Face described a multi-stage malicious-dataset intrusion spanning code execution, node access, credential harvesting, lateral movement and many thousands of agent-framework actions. This is stronger than a lab demonstration, but without public IoCs, independent forensics or evidence on operator involvement, reliable fully autonomous offense at strategic scale remains unestablished.",
+      "safe_wording_en": "Separate the victim company's account, independent verification and demonstrated capability. Say Hugging Face reported an intrusion driven by an agent framework; do not call it the first fully autonomous hack or identify a model. Project Canopy's counts remain self-reported, and Korea's cyber model remains a plan.",
       "family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
@@ -40085,19 +40477,21 @@
         "The EU Action Plan announces evaluation and secure-testing capacity; implementation remains pending.",
         "Hunt.io reports a separate artifact-backed campaign; it does not independently validate GTG-1002, quantify autonomy or establish Chinese state sponsorship.",
         "Project Canopy combines structural defects and vulnerabilities; its 990 count is self-reported and not a set of independently verified CVEs.",
-        "Korea's year-end specialized model is not the same promise as a longer-term Mythos-class frontier model."
+        "Korea's year-end specialized model is not the same promise as a longer-term Mythos-class frontier model.",
+        "Hugging Face disclosed no public IoCs, attacker model, exact incident date or independent forensic report; the degree of human supervision is unresolved.",
+        "The dataset-viewer patches are temporally consistent with remediation but are not an official one-to-one exploit map."
       ],
       "kind": "arc",
       "title": "Cyber: operational agentic signals with an autonomy caveat",
-      "thesis": "Cyber capability and the attacker skill floor are moving quickly; real logs, malicious artifacts and AI-assisted find-and-patch workflows are now observable. States are responding with domestic models and evaluation infrastructure, while reliable fully autonomous offense at strategic scale remains unproven.",
-      "safe_wording": "Separate observed workflows, reported results and demonstrated capability. Project Canopy's counts are self-reported, and Korea's cyber model is still a plan without a named base or benchmark; neither establishes autonomous exploit-at-scale."
+      "thesis": "Cyber capability and the attacker skill floor are moving quickly. As the victim, Hugging Face described a multi-stage malicious-dataset intrusion spanning code execution, node access, credential harvesting, lateral movement and many thousands of agent-framework actions. This is stronger than a lab demonstration, but without public IoCs, independent forensics or evidence on operator involvement, reliable fully autonomous offense at strategic scale remains unestablished.",
+      "safe_wording": "Separate the victim company's account, independent verification and demonstrated capability. Say Hugging Face reported an intrusion driven by an agent framework; do not call it the first fully autonomous hack or identify a model. Project Canopy's counts remain self-reported, and Korea's cyber model remains a plan."
     },
     {
       "id": "ARC_QUIET_ACCESS_CONTROL",
       "arc_type": "governance_by_access",
       "status": "strong",
       "start_date": "2024-10-15",
-      "end_date": "2026-06-29",
+      "end_date": "2026-07-16",
       "visual_lanes": [
         "governance_law",
         "model_weights",
@@ -40121,26 +40515,25 @@
         "SIG_2021_OPENAI_API_NO_WAITLIST",
         "SIG_2024_EU_AI_ACT_ENTERS_FORCE_GPAI",
         "SIG_EU_2026_CYBER_AI_ACTION_PLAN",
-        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU"
+        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
       ],
       "counterpoints": [
-        "Policies are private and can change.",
-        "Enforcement is often opaque."
+        "One first-party incident account cannot establish the prevalence or net security effect of commercial model guardrails."
       ],
       "family_id": "ARC_FAMILY_ACCESS_CONTROL",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Model access is governed through private eligibility rules, customer vetting and trusted-access regimes as well as public evaluation and information-sharing procedures. Korea's Anthropic MOU shows a state building an evaluation layer around an external provider without receiving guaranteed access to the frontier model itself.",
-      "safe_wording_en": "The MOU verifies an evaluation and cybersecurity cooperation framework, not restored Mythos access, transferred weights or an already operating joint system.",
+      "thesis_en": "Model access is governed through private eligibility rules, customer vetting, trusted-access regimes and usage filters. Korea's MOU shows a state evaluation layer around an external provider; Hugging Face shows the reverse side of the same mechanism, where commercial API policy blocked legitimate forensics without a public ban.",
+      "safe_wording_en": "Hugging Face did not name providers or publish the blocked requests. The episode demonstrates private access gating but does not show that hosted safeguards generally obstruct incident response.",
+      "counterpoints_en": [
+        "One first-party incident account cannot establish the prevalence or net security effect of commercial model guardrails."
+      ],
       "kind": "arc",
       "title": "Quiet access control: policy gates, vetted users, ASL",
       "title_en": "Quiet access control: policy gates, vetted users, ASL",
-      "counterpoints_en": [
-        "Policies are private and can change.",
-        "Enforcement is often opaque."
-      ],
-      "thesis": "Model access is governed through private eligibility rules, customer vetting and trusted-access regimes as well as public evaluation and information-sharing procedures. Korea's Anthropic MOU shows a state building an evaluation layer around an external provider without receiving guaranteed access to the frontier model itself.",
-      "safe_wording": "The MOU verifies an evaluation and cybersecurity cooperation framework, not restored Mythos access, transferred weights or an already operating joint system."
+      "thesis": "Model access is governed through private eligibility rules, customer vetting, trusted-access regimes and usage filters. Korea's MOU shows a state evaluation layer around an external provider; Hugging Face shows the reverse side of the same mechanism, where commercial API policy blocked legitimate forensics without a public ban.",
+      "safe_wording": "Hugging Face did not name providers or publish the blocked requests. The episode demonstrates private access gating but does not show that hosted safeguards generally obstruct incident response."
     },
     {
       "id": "ARC_PALANTIR_DECISION_OS",
@@ -40403,30 +40796,35 @@
         "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
         "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
         "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
-        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
+        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
       ],
       "counterpoints": [
         "Soofi is still a manually gated preview; its promised permissive general release is not complete.",
         "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open.",
         "Korea's policy allowed open-source components when weights were reset and independently trained; it did not equate all foreign open source with dependence.",
-        "The base model for Korea's cybersecurity program has not been announced."
+        "The base model for Korea's cybersecurity program has not been announced.",
+        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external Chinese model artifact.",
+        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external model artifact from Z.ai."
       ],
       "family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Open weights can create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Korea's contest adds an operational test: sovereignty requires control over weight initialization and training and freedom from external licensing constraints, although this is one program's definition rather than a universal standard.",
-      "safe_wording_en": "Separate open code, open weights, inherited weights, independent retraining and freedom from external control. Naver's exclusion applies to one program's criteria and is not a general ban on HyperCLOVA X.",
+      "thesis_en": "Open weights create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Korea tests control over weight provenance and training. The Hugging Face incident adds an operational test: when commercial APIs blocked forensic artifacts, local GLM 5.2 kept the analysis running and the data in-house, but required local infrastructure and replaced one external dependency with another.",
+      "safe_wording_en": "Separate weight access, local execution, infrastructure readiness and full-stack independence. GLM 5.2 gave Hugging Face an operational fallback in one incident; this does not establish general open-model superiority or geopolitical autonomy.",
       "counterpoints_en": [
         "Soofi is still a manually gated preview; its promised permissive general release is not complete.",
         "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open.",
         "Korea's policy allowed open-source components when weights were reset and independently trained; it did not equate all foreign open source with dependence.",
-        "The base model for Korea's cybersecurity program has not been announced."
+        "The base model for Korea's cybersecurity program has not been announced.",
+        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external Chinese model artifact.",
+        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external model artifact from Z.ai."
       ],
       "kind": "arc",
       "title": "Open weights: exit or dependency swap",
       "title_en": "Open weights: exit or dependency swap",
-      "thesis": "Open weights can create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Korea's contest adds an operational test: sovereignty requires control over weight initialization and training and freedom from external licensing constraints, although this is one program's definition rather than a universal standard.",
-      "safe_wording": "Separate open code, open weights, inherited weights, independent retraining and freedom from external control. Naver's exclusion applies to one program's criteria and is not a general ban on HyperCLOVA X."
+      "thesis": "Open weights create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Korea tests control over weight provenance and training. The Hugging Face incident adds an operational test: when commercial APIs blocked forensic artifacts, local GLM 5.2 kept the analysis running and the data in-house, but required local infrastructure and replaced one external dependency with another.",
+      "safe_wording": "Separate weight access, local execution, infrastructure readiness and full-stack independence. GLM 5.2 gave Hugging Face an operational fallback in one incident; this does not establish general open-model superiority or geopolitical autonomy."
     },
     {
       "id": "ARC_2022_2023_FORMATION_PHASE",
@@ -40791,32 +41189,35 @@
         "SIG_NATO_2026_ALLIANCE_DIGITAL_STRATEGY",
         "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
         "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
-        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
+        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
       ],
       "counterpoints": [
         "CADA was a Commission proposal on the research date, not enacted law.",
         "AWS sovereign-cloud properties are vendor claims pending workload-specific external qualification.",
         "NATO interoperability requirements coexist with an explicit national-data-sovereignty principle.",
         "Continued cooperation with Anthropic means Korea is hedging dependence, not exiting the US model ecosystem.",
-        "A program-specific sovereignty definition should not be universalized without qualification."
+        "A program-specific sovereignty definition should not be universalized without qualification.",
+        "Local execution can improve data control without creating national or full-stack technological sovereignty."
       ],
       "family_id": "ARC_FAMILY_ACCESS_CONTROL",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Sovereign control reaches data, licenses, weight provenance, access tiers, model evaluation, capital and interoperable interfaces. After the Mythos access shock, Korea simultaneously tightened its domestic-model test, began a specialized cyber model and retained cooperation with Anthropic: selective interdependence rather than autarky.",
-      "safe_wording_en": "Do not reduce sovereignty to banning foreign providers. Korea shows a portfolio: domestic models, provenance and license tests, local find-and-patch capacity and continued external cooperation.",
+      "thesis_en": "Sovereign control reaches data, licenses, weight provenance, access tiers, model evaluation, capital and interfaces. Korea shows state-level selective interdependence, while Hugging Face adds an organizational example: local execution kept attack logs and credentials inside the infrastructure when the external access channel became unusable.",
+      "safe_wording_en": "Do not turn Hugging Face's local forensics into national sovereignty. It is an organization-level example of data-flow control and access redundancy; the model artifact and compute stack still had external origins.",
       "counterpoints_en": [
         "CADA was a Commission proposal on the research date, not enacted law.",
         "AWS sovereign-cloud properties are vendor claims pending workload-specific external qualification.",
         "NATO interoperability requirements coexist with an explicit national-data-sovereignty principle.",
         "Continued cooperation with Anthropic means Korea is hedging dependence, not exiting the US model ecosystem.",
-        "A program-specific sovereignty definition should not be universalized without qualification."
+        "A program-specific sovereignty definition should not be universalized without qualification.",
+        "Local execution can improve data control without creating national or full-stack technological sovereignty."
       ],
       "kind": "arc",
       "title": "Sovereign flow controls: data, technology, capital and people",
       "title_en": "Sovereign flow controls: data, technology, capital and people",
-      "thesis": "Sovereign control reaches data, licenses, weight provenance, access tiers, model evaluation, capital and interoperable interfaces. After the Mythos access shock, Korea simultaneously tightened its domestic-model test, began a specialized cyber model and retained cooperation with Anthropic: selective interdependence rather than autarky.",
-      "safe_wording": "Do not reduce sovereignty to banning foreign providers. Korea shows a portfolio: domestic models, provenance and license tests, local find-and-patch capacity and continued external cooperation."
+      "thesis": "Sovereign control reaches data, licenses, weight provenance, access tiers, model evaluation, capital and interfaces. Korea shows state-level selective interdependence, while Hugging Face adds an organizational example: local execution kept attack logs and credentials inside the infrastructure when the external access channel became unusable.",
+      "safe_wording": "Do not turn Hugging Face's local forensics into national sovereignty. It is an organization-level example of data-flow control and access redundancy; the model artifact and compute stack still had external origins."
     },
     {
       "id": "ARC_2016_2021_METERED_ACCESS_FORMATION",
@@ -42787,8 +43188,8 @@
       "arc_family_id": "",
       "kind": "edge",
       "is_auto": true,
-      "summary": "AIxCC finalists found 77% of injected bugs, patched 61%, and found 18 real-world vulnerabilities supports Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established..",
-      "summary_en": "AIxCC finalists found 77% of injected bugs, patched 61%, and found 18 real-world vulnerabilities supports Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established.."
+      "summary": "AIxCC finalists found 77% of injected bugs, patched 61%, and found 18 real-world vulnerabilities supports Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified..",
+      "summary_en": "AIxCC finalists found 77% of injected bugs, patched 61%, and found 18 real-world vulnerabilities supports Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_019",
@@ -42805,8 +43206,8 @@
       "arc_family_id": "",
       "kind": "edge",
       "is_auto": true,
-      "summary": "OSS-CRS ports AIxCC CRS techniques to real-world open-source projects supports Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established..",
-      "summary_en": "OSS-CRS ports AIxCC CRS techniques to real-world open-source projects supports Machine-speed vulnerability discovery/fix is advancing; autonomous offense at strategic scale is not yet established.."
+      "summary": "OSS-CRS ports AIxCC CRS techniques to real-world open-source projects supports Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified..",
+      "summary_en": "OSS-CRS ports AIxCC CRS techniques to real-world open-source projects supports Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.."
     },
     {
       "id": "EDGE_AUTO_SUPPORT_020",
@@ -49089,6 +49490,114 @@
       "kind": "edge",
       "is_auto": false,
       "summary": "Canopy is a real-framework parallel to AIxCC-style defense, but its public evidence is self-reported rather than competition-verified."
+    },
+    {
+      "id": "EDGE_HF_AGENTIC_INTRUSION_CYBER_ARC",
+      "source": "SIG_2026_HF_AGENTIC_INTRUSION",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_caveat",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "A victim-side disclosure moves the evidence beyond lab demonstrations while leaving autonomy and independent attribution unresolved.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "A victim-side disclosure moves the evidence beyond lab demonstrations while leaving autonomy and independent attribution unresolved."
+    },
+    {
+      "id": "EDGE_HF_AGENTIC_INTRUSION_CLM006",
+      "source": "SIG_2026_HF_AGENTIC_INTRUSION",
+      "target": "CLM_006_MACHINE_SPEED_CYBER",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "updates",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "The incident materially strengthens the offensive-agent signal but does not close the autonomy and repeatability questions.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "The incident materially strengthens the offensive-agent signal but does not close the autonomy and repeatability questions."
+    },
+    {
+      "id": "EDGE_HF_FORENSICS_CYBER_ARC",
+      "source": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "mitigates",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "AI-assisted detection and local model analysis show defenders can also compress response time.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "AI-assisted detection and local model analysis show defenders can also compress response time."
+    },
+    {
+      "id": "EDGE_HF_FORENSICS_OPEN_WEIGHT",
+      "source": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+      "target": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "visual_lane": "model_weights",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "Local open weights provided an operational exit from hosted policy gating, but only with local infrastructure and another external model dependency.",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "Local open weights provided an operational exit from hosted policy gating, but only with local infrastructure and another external model dependency."
+    },
+    {
+      "id": "EDGE_HF_FORENSICS_QUIET_ACCESS",
+      "source": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+      "target": "ARC_QUIET_ACCESS_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_QUIET_ACCESS_CONTROL",
+      "visual_lane": "governance_law",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "Private usage controls constrained a legitimate defensive workflow without a public legal prohibition.",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "Private usage controls constrained a legitimate defensive workflow without a public legal prohibition."
+    },
+    {
+      "id": "EDGE_HF_FORENSICS_SOVEREIGN_FLOW",
+      "source": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+      "target": "ARC_SOVEREIGN_FLOW_GATING",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_SOVEREIGN_FLOW_GATING",
+      "visual_lane": "data_telemetry",
+      "evidence_level": "A/B",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "Local execution retained attack data and credentials in-house, an organizational data-control benefit rather than full sovereignty.",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "kind": "edge",
+      "is_auto": false,
+      "summary": "Local execution retained attack data and credentials in-house, an organizational data-control benefit rather than full sovereignty."
     }
   ],
   "thesisNodes": [
@@ -49128,9 +49637,9 @@
       "id": "THESIS_NOT_AUTONOMOUS_OFFENSE",
       "kind": "synthetic_thesis",
       "label_en": "Agentic cyber acceleration is visible; strategic autonomy is unproven",
-      "summary_en": "Defensive find-and-fix, malicious artifacts, rapid agent deployment and artifact-backed vendor reporting of AI-integrated intrusion workflows are observable. The Hunt.io case does not measure autonomous share or establish state sponsorship; PoCs, lab tests and telemetry still do not prove fully autonomous strategic offense.",
+      "summary_en": "Defensive find-and-fix, malicious artifacts, rapid agent deployment and real attack logs are observable. As the victim, Hugging Face now describes a multi-stage intrusion driven by an agent framework. This is a strong operational signal, but without independent forensics, public IoCs or evidence on operator involvement, fully autonomous strategic-scale offense remains unproven.",
       "label": "Agentic cyber acceleration is visible; strategic autonomy is unproven",
-      "summary": "Defensive find-and-fix, malicious artifacts, rapid agent deployment and artifact-backed vendor reporting of AI-integrated intrusion workflows are observable. The Hunt.io case does not measure autonomous share or establish state sponsorship; PoCs, lab tests and telemetry still do not prove fully autonomous strategic offense."
+      "summary": "Defensive find-and-fix, malicious artifacts, rapid agent deployment and real attack logs are observable. As the victim, Hugging Face now describes a multi-stage intrusion driven by an agent framework. This is a strong operational signal, but without independent forensics, public IoCs or evidence on operator involvement, fully autonomous strategic-scale offense remains unproven."
     }
   ],
   "countries": [
@@ -49709,7 +50218,7 @@
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
     ],
-    "edge_count": 449,
+    "edge_count": 455,
     "v0_13_added_evidence": 6,
     "v0_13_added_edges": 6,
     "v0_14_added_evidence": 11,
@@ -49751,6 +50260,9 @@
     "v0_22_added_evidence": 5,
     "v0_22_added_edges": 11,
     "v0_22_added_arcs": [],
+    "v0_23_added_evidence": 2,
+    "v0_23_added_edges": 6,
+    "v0_23_added_arcs": [],
     "computed_arc_count": 24,
     "computed_arc_to_thesis_counts": {
       "ARC_EXPORT_CHIPS_TO_MODELS": 2,
@@ -50746,7 +51258,7 @@
       ]
     },
     {
-      "id": "src-361",
+      "id": "src-369",
       "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -50841,7 +51353,7 @@
       ]
     },
     {
-      "id": "src-329",
+      "id": "src-337",
       "title": "CRS R48642 PDF",
       "name": "CRS R48642 PDF",
       "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -50917,7 +51429,7 @@
       ]
     },
     {
-      "id": "src-353",
+      "id": "src-361",
       "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -50936,7 +51448,7 @@
       ]
     },
     {
-      "id": "src-315",
+      "id": "src-323",
       "title": "DeepSeek, Huawei, Export Controls (CSIS)",
       "name": "DeepSeek, Huawei, Export Controls (CSIS)",
       "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -51164,7 +51676,7 @@
       ]
     },
     {
-      "id": "src-316",
+      "id": "src-324",
       "title": "How China's GLM-5 Works",
       "name": "How China's GLM-5 Works",
       "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -51183,7 +51695,26 @@
       ]
     },
     {
-      "id": "src-326",
+      "id": "src-307",
+      "title": "Security incident disclosure - July 2026",
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "type": "Company / vendor",
+      "date": "2026-07-16",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+          "kind": "event"
+        },
+        {
+          "id": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-334",
       "title": "India Fuels Its AI Mission With NVIDIA",
       "name": "India Fuels Its AI Mission With NVIDIA",
       "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -51221,7 +51752,7 @@
       ]
     },
     {
-      "id": "src-318",
+      "id": "src-326",
       "title": "Microsoft and U.S. join AI forces in UAE deal",
       "name": "Microsoft and U.S. join AI forces in UAE deal",
       "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -51354,7 +51885,7 @@
       ]
     },
     {
-      "id": "src-350",
+      "id": "src-358",
       "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -51753,7 +52284,7 @@
       ]
     },
     {
-      "id": "src-356",
+      "id": "src-364",
       "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -51981,7 +52512,7 @@
       ]
     },
     {
-      "id": "src-327",
+      "id": "src-335",
       "title": "U.S. Export Controls and China (CRS R48642)",
       "name": "U.S. Export Controls and China (CRS R48642)",
       "url": "https://www.congress.gov/crs-product/R48642",
@@ -52133,7 +52664,7 @@
       ]
     },
     {
-      "id": "src-367",
+      "id": "src-375",
       "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -52148,7 +52679,7 @@
       ]
     },
     {
-      "id": "src-363",
+      "id": "src-371",
       "title": "A Kill Switch for Frontier AI (Lawfare)",
       "name": "A Kill Switch for Frontier AI (Lawfare)",
       "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -52163,7 +52694,7 @@
       ]
     },
     {
-      "id": "src-348",
+      "id": "src-356",
       "title": "A small number of samples can poison LLMs (Anthropic)",
       "name": "A small number of samples can poison LLMs (Anthropic)",
       "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -52178,7 +52709,7 @@
       ]
     },
     {
-      "id": "src-319",
+      "id": "src-327",
       "title": "Advanced AI chips cleared for export to UAE",
       "name": "Advanced AI chips cleared for export to UAE",
       "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -52238,7 +52769,7 @@
       ]
     },
     {
-      "id": "src-347",
+      "id": "src-355",
       "title": "AIxCC finals winners (DARPA)",
       "name": "AIxCC finals winners (DARPA)",
       "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -52253,7 +52784,7 @@
       ]
     },
     {
-      "id": "src-342",
+      "id": "src-350",
       "title": "AIxCC marks pivotal inflection point (DARPA)",
       "name": "AIxCC marks pivotal inflection point (DARPA)",
       "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -52268,7 +52799,7 @@
       ]
     },
     {
-      "id": "src-349",
+      "id": "src-357",
       "title": "Alan Turing Institute summary",
       "name": "Alan Turing Institute summary",
       "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -52418,7 +52949,7 @@
       ]
     },
     {
-      "id": "src-351",
+      "id": "src-359",
       "title": "Anthropic awarded $200M DOD agreement",
       "name": "Anthropic awarded $200M DOD agreement",
       "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -52433,7 +52964,7 @@
       ]
     },
     {
-      "id": "src-344",
+      "id": "src-352",
       "title": "Anthropic claims met with doubt (BleepingComputer)",
       "name": "Anthropic claims met with doubt (BleepingComputer)",
       "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -52463,7 +52994,7 @@
       ]
     },
     {
-      "id": "src-357",
+      "id": "src-365",
       "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -52478,7 +53009,7 @@
       ]
     },
     {
-      "id": "src-360",
+      "id": "src-368",
       "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -52538,7 +53069,7 @@
       ]
     },
     {
-      "id": "src-365",
+      "id": "src-373",
       "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -52733,7 +53264,7 @@
       ]
     },
     {
-      "id": "src-335",
+      "id": "src-343",
       "title": "Beijing presses Washington (Tech Times)",
       "name": "Beijing presses Washington (Tech Times)",
       "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -52748,7 +53279,7 @@
       ]
     },
     {
-      "id": "src-346",
+      "id": "src-354",
       "title": "Big Sleep agent makes big leap (Google Cloud)",
       "name": "Big Sleep agent makes big leap (Google Cloud)",
       "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -52763,7 +53294,7 @@
       ]
     },
     {
-      "id": "src-330",
+      "id": "src-338",
       "title": "BIS press release: rescission",
       "name": "BIS press release: rescission",
       "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -52793,7 +53324,7 @@
       ]
     },
     {
-      "id": "src-352",
+      "id": "src-360",
       "title": "Breaking Defense: $200M each for agentic AI",
       "name": "Breaking Defense: $200M each for agentic AI",
       "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -52808,7 +53339,7 @@
       ]
     },
     {
-      "id": "src-355",
+      "id": "src-363",
       "title": "Built for Purpose? EU AI Gigafactories (Interface)",
       "name": "Built for Purpose? EU AI Gigafactories (Interface)",
       "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -52928,7 +53459,7 @@
       ]
     },
     {
-      "id": "src-334",
+      "id": "src-342",
       "title": "China Export Controls: Critical Minerals (Andersen Institute)",
       "name": "China Export Controls: Critical Minerals (Andersen Institute)",
       "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -52943,7 +53474,7 @@
       ]
     },
     {
-      "id": "src-362",
+      "id": "src-370",
       "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -52988,7 +53519,7 @@
       ]
     },
     {
-      "id": "src-364",
+      "id": "src-372",
       "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -53048,7 +53579,7 @@
       ]
     },
     {
-      "id": "src-366",
+      "id": "src-374",
       "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -53063,7 +53594,7 @@
       ]
     },
     {
-      "id": "src-343",
+      "id": "src-351",
       "title": "Cybersecurity Dive: DARPA touts results",
       "name": "Cybersecurity Dive: DARPA touts results",
       "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -53123,7 +53654,7 @@
       ]
     },
     {
-      "id": "src-317",
+      "id": "src-325",
       "title": "DeepSeek V4 and R2 Deep Dive",
       "name": "DeepSeek V4 and R2 Deep Dive",
       "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -53183,7 +53714,7 @@
       ]
     },
     {
-      "id": "src-323",
+      "id": "src-331",
       "title": "EIB-Commission gigafactories MoU",
       "name": "EIB-Commission gigafactories MoU",
       "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -53558,6 +54089,21 @@
       ]
     },
     {
+      "id": "src-313",
+      "title": "ReferenceFileSystem template processing in fsspec 2024.3.1",
+      "name": "fsspec",
+      "url": "https://github.com/fsspec/filesystem_spec/blob/2024.3.1/fsspec/implementations/reference.py#L940-L965",
+      "type": "Code / primary",
+      "date": "2024-03-27",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-210",
       "title": "MIIT monitoring finds Claude Code security backdoor risk",
       "name": "Fujian Provincial Department of Industry and Information Technology, relaying MIIT/NVDB notice",
@@ -53753,7 +54299,7 @@
       ]
     },
     {
-      "id": "src-338",
+      "id": "src-346",
       "title": "H.R.3447 text (Congress.gov)",
       "name": "H.R.3447 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -53768,7 +54314,7 @@
       ]
     },
     {
-      "id": "src-340",
+      "id": "src-348",
       "title": "H.R.6875 titles (Congress.gov)",
       "name": "H.R.6875 titles (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -53813,7 +54359,7 @@
       ]
     },
     {
-      "id": "src-341",
+      "id": "src-349",
       "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -53828,7 +54374,7 @@
       ]
     },
     {
-      "id": "src-331",
+      "id": "src-339",
       "title": "Hogan Lovells analysis",
       "name": "Hogan Lovells analysis",
       "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -53843,7 +54389,7 @@
       ]
     },
     {
-      "id": "src-339",
+      "id": "src-347",
       "title": "House Select Committee: Chip Security Act passage",
       "name": "House Select Committee: Chip Security Act passage",
       "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -53858,7 +54404,7 @@
       ]
     },
     {
-      "id": "src-314",
+      "id": "src-322",
       "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -53873,7 +54419,7 @@
       ]
     },
     {
-      "id": "src-354",
+      "id": "src-362",
       "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -53903,7 +54449,82 @@
       ]
     },
     {
-      "id": "src-320",
+      "id": "src-308",
+      "title": "PR #3367: bump fsspec and allow-list filesystem implementations",
+      "name": "Hugging Face dataset-viewer",
+      "url": "https://github.com/huggingface/dataset-viewer/pull/3367",
+      "type": "Code / primary",
+      "date": "2026-07-13",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-309",
+      "title": "PR #3368: harden worker pod security context",
+      "name": "Hugging Face dataset-viewer",
+      "url": "https://github.com/huggingface/dataset-viewer/pull/3368",
+      "type": "Code / primary",
+      "date": "2026-07-13",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-310",
+      "title": "PR #3359: add IRSA to datasets-server",
+      "name": "Hugging Face dataset-viewer",
+      "url": "https://github.com/huggingface/dataset-viewer/pull/3359",
+      "type": "Code / primary",
+      "date": "2026-07-14",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-311",
+      "title": "PR #3375: add MONGODB-AWS authentication support",
+      "name": "Hugging Face dataset-viewer",
+      "url": "https://github.com/huggingface/dataset-viewer/pull/3375",
+      "type": "Code / primary",
+      "date": "2026-07-15",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-312",
+      "title": "PR #3372: support multiple JWT public keys for key rotation",
+      "name": "Hugging Face dataset-viewer",
+      "url": "https://github.com/huggingface/dataset-viewer/pull/3372",
+      "type": "Code / primary",
+      "date": "2026-07-16",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-328",
       "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -53948,7 +54569,7 @@
       ]
     },
     {
-      "id": "src-309",
+      "id": "src-317",
       "title": "Hyperscaler capex trend",
       "name": "Hyperscaler capex trend",
       "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -53963,7 +54584,7 @@
       ]
     },
     {
-      "id": "src-313",
+      "id": "src-321",
       "title": "Hyperscaler cloud share",
       "name": "Hyperscaler cloud share",
       "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -54053,7 +54674,7 @@
       ]
     },
     {
-      "id": "src-321",
+      "id": "src-329",
       "title": "Introducing Stargate UK",
       "name": "Introducing Stargate UK",
       "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -54098,7 +54719,7 @@
       ]
     },
     {
-      "id": "src-328",
+      "id": "src-336",
       "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -54443,7 +55064,7 @@
       ]
     },
     {
-      "id": "src-333",
+      "id": "src-341",
       "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -54638,7 +55259,7 @@
       ]
     },
     {
-      "id": "src-325",
+      "id": "src-333",
       "title": "PIB: India common computing facility",
       "name": "PIB: India common computing facility",
       "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -55178,7 +55799,7 @@
       ]
     },
     {
-      "id": "src-336",
+      "id": "src-344",
       "title": "S.3150 text (Congress.gov)",
       "name": "S.3150 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -55193,7 +55814,7 @@
       ]
     },
     {
-      "id": "src-337",
+      "id": "src-345",
       "title": "Senate Banking GAIN AI Act release",
       "name": "Senate Banking GAIN AI Act release",
       "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -55298,7 +55919,7 @@
       ]
     },
     {
-      "id": "src-312",
+      "id": "src-320",
       "title": "Stanford 2026 AI Index (via BigGo)",
       "name": "Stanford 2026 AI Index (via BigGo)",
       "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -55313,7 +55934,7 @@
       ]
     },
     {
-      "id": "src-311",
+      "id": "src-319",
       "title": "Stanford AI Index 2026 (via TNW)",
       "name": "Stanford AI Index 2026 (via TNW)",
       "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -55328,7 +55949,7 @@
       ]
     },
     {
-      "id": "src-310",
+      "id": "src-318",
       "title": "Stargate stalls (The Information via The Decoder)",
       "name": "Stargate stalls (The Information via The Decoder)",
       "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -55343,7 +55964,7 @@
       ]
     },
     {
-      "id": "src-322",
+      "id": "src-330",
       "title": "Stargate UK paused (Data Centre Magazine)",
       "name": "Stargate UK paused (Data Centre Magazine)",
       "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -55418,7 +56039,7 @@
       ]
     },
     {
-      "id": "src-308",
+      "id": "src-316",
       "title": "Tech AI spending may approach $700 billion this year",
       "name": "Tech AI spending may approach $700 billion this year",
       "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -55463,7 +56084,7 @@
       ]
     },
     {
-      "id": "src-307",
+      "id": "src-315",
       "title": "The 2025 AI Index Report",
       "name": "The 2025 AI Index Report",
       "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -55613,7 +56234,7 @@
       ]
     },
     {
-      "id": "src-359",
+      "id": "src-367",
       "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -55628,7 +56249,7 @@
       ]
     },
     {
-      "id": "src-358",
+      "id": "src-366",
       "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -55643,7 +56264,7 @@
       ]
     },
     {
-      "id": "src-332",
+      "id": "src-340",
       "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -55988,7 +56609,7 @@
       ]
     },
     {
-      "id": "src-345",
+      "id": "src-353",
       "title": "What we know and what we're watching (SC Media)",
       "name": "What we know and what we're watching (SC Media)",
       "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -56018,7 +56639,7 @@
       ]
     },
     {
-      "id": "src-324",
+      "id": "src-332",
       "title": "Who Controls Europe's AI Future? (Open Future)",
       "name": "Who Controls Europe's AI Future? (Open Future)",
       "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -56073,6 +56694,21 @@
       "used_by": [
         {
           "id": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-314",
+      "title": "GLM-5.2: Built for Long-Horizon Tasks",
+      "name": "Z.ai",
+      "url": "https://z.ai/blog/glm-5.2",
+      "type": "Company / vendor",
+      "date": "2026-06-16",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
           "kind": "event"
         }
       ]
@@ -56153,7 +56789,7 @@
           ]
         },
         {
-          "id": "src-361",
+          "id": "src-369",
           "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -58004,7 +58640,7 @@
       ]
     },
     {
-      "id": "source-group-32",
+      "id": "source-group-33",
       "family": "OpenAI",
       "sources": [
         {
@@ -58159,7 +58795,7 @@
           ]
         },
         {
-          "id": "src-321",
+          "id": "src-329",
           "title": "Introducing Stargate UK",
           "name": "Introducing Stargate UK",
           "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -58403,7 +59039,7 @@
           ]
         },
         {
-          "id": "src-356",
+          "id": "src-364",
           "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -58422,7 +59058,7 @@
           ]
         },
         {
-          "id": "src-348",
+          "id": "src-356",
           "title": "A small number of samples can poison LLMs (Anthropic)",
           "name": "A small number of samples can poison LLMs (Anthropic)",
           "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -58512,7 +59148,7 @@
           ]
         },
         {
-          "id": "src-351",
+          "id": "src-359",
           "title": "Anthropic awarded $200M DOD agreement",
           "name": "Anthropic awarded $200M DOD agreement",
           "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -58527,7 +59163,7 @@
           ]
         },
         {
-          "id": "src-344",
+          "id": "src-352",
           "title": "Anthropic claims met with doubt (BleepingComputer)",
           "name": "Anthropic claims met with doubt (BleepingComputer)",
           "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -58742,7 +59378,7 @@
           ]
         },
         {
-          "id": "src-330",
+          "id": "src-338",
           "title": "BIS press release: rescission",
           "name": "BIS press release: rescission",
           "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -58787,7 +59423,7 @@
           ]
         },
         {
-          "id": "src-364",
+          "id": "src-372",
           "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -58974,7 +59610,7 @@
           ]
         },
         {
-          "id": "src-318",
+          "id": "src-326",
           "title": "Microsoft and U.S. join AI forces in UAE deal",
           "name": "Microsoft and U.S. join AI forces in UAE deal",
           "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -58993,7 +59629,7 @@
           ]
         },
         {
-          "id": "src-319",
+          "id": "src-327",
           "title": "Advanced AI chips cleared for export to UAE",
           "name": "Advanced AI chips cleared for export to UAE",
           "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -59068,7 +59704,7 @@
           ]
         },
         {
-          "id": "src-358",
+          "id": "src-366",
           "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -59158,7 +59794,7 @@
           ]
         },
         {
-          "id": "src-329",
+          "id": "src-337",
           "title": "CRS R48642 PDF",
           "name": "CRS R48642 PDF",
           "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -59196,7 +59832,7 @@
           ]
         },
         {
-          "id": "src-327",
+          "id": "src-335",
           "title": "U.S. Export Controls and China (CRS R48642)",
           "name": "U.S. Export Controls and China (CRS R48642)",
           "url": "https://www.congress.gov/crs-product/R48642",
@@ -59230,7 +59866,7 @@
           ]
         },
         {
-          "id": "src-338",
+          "id": "src-346",
           "title": "H.R.3447 text (Congress.gov)",
           "name": "H.R.3447 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -59245,7 +59881,7 @@
           ]
         },
         {
-          "id": "src-340",
+          "id": "src-348",
           "title": "H.R.6875 titles (Congress.gov)",
           "name": "H.R.6875 titles (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -59260,7 +59896,7 @@
           ]
         },
         {
-          "id": "src-336",
+          "id": "src-344",
           "title": "S.3150 text (Congress.gov)",
           "name": "S.3150 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -59400,7 +60036,7 @@
           ]
         },
         {
-          "id": "src-312",
+          "id": "src-320",
           "title": "Stanford 2026 AI Index (via BigGo)",
           "name": "Stanford 2026 AI Index (via BigGo)",
           "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -59415,7 +60051,7 @@
           ]
         },
         {
-          "id": "src-311",
+          "id": "src-319",
           "title": "Stanford AI Index 2026 (via TNW)",
           "name": "Stanford AI Index 2026 (via TNW)",
           "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -59430,7 +60066,7 @@
           ]
         },
         {
-          "id": "src-307",
+          "id": "src-315",
           "title": "The 2025 AI Index Report",
           "name": "The 2025 AI Index Report",
           "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -59490,7 +60126,7 @@
       ]
     },
     {
-      "id": "source-group-41",
+      "id": "source-group-42",
       "family": "UK Government",
       "sources": [
         {
@@ -59723,7 +60359,7 @@
           ]
         },
         {
-          "id": "src-357",
+          "id": "src-365",
           "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -59985,7 +60621,7 @@
       ]
     },
     {
-      "id": "source-group-44",
+      "id": "source-group-45",
       "family": "US White House",
       "sources": [
         {
@@ -60008,7 +60644,7 @@
           ]
         },
         {
-          "id": "src-360",
+          "id": "src-368",
           "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -60104,7 +60740,7 @@
       "family": "CNBC",
       "sources": [
         {
-          "id": "src-353",
+          "id": "src-361",
           "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -60138,7 +60774,7 @@
           ]
         },
         {
-          "id": "src-308",
+          "id": "src-316",
           "title": "Tech AI spending may approach $700 billion this year",
           "name": "Tech AI spending may approach $700 billion this year",
           "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -60153,7 +60789,7 @@
           ]
         },
         {
-          "id": "src-359",
+          "id": "src-367",
           "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -60303,7 +60939,7 @@
           ]
         },
         {
-          "id": "src-346",
+          "id": "src-354",
           "title": "Big Sleep agent makes big leap (Google Cloud)",
           "name": "Big Sleep agent makes big leap (Google Cloud)",
           "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -60380,7 +61016,7 @@
           ]
         },
         {
-          "id": "src-315",
+          "id": "src-323",
           "title": "DeepSeek, Huawei, Export Controls (CSIS)",
           "name": "DeepSeek, Huawei, Export Controls (CSIS)",
           "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -60701,7 +61337,7 @@
       ]
     },
     {
-      "id": "source-group-38",
+      "id": "source-group-39",
       "family": "theregister.com",
       "sources": [
         {
@@ -60724,7 +61360,7 @@
           ]
         },
         {
-          "id": "src-362",
+          "id": "src-370",
           "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -60824,7 +61460,7 @@
       ]
     },
     {
-      "id": "source-group-52",
+      "id": "source-group-53",
       "family": "blog.google",
       "sources": [
         {
@@ -60892,11 +61528,11 @@
       ]
     },
     {
-      "id": "source-group-49",
+      "id": "source-group-50",
       "family": "darpa.mil",
       "sources": [
         {
-          "id": "src-342",
+          "id": "src-350",
           "title": "AIxCC marks pivotal inflection point (DARPA)",
           "name": "AIxCC marks pivotal inflection point (DARPA)",
           "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -60976,7 +61612,159 @@
       ]
     },
     {
-      "id": "source-group-88",
+      "id": "source-group-18",
+      "family": "github.com",
+      "sources": [
+        {
+          "id": "src-226",
+          "title": "Selective Permeability: A Behavioral-Security Metric for LLM Advisors, with Two Failure Modes of In-Context Provenance Workflows",
+          "name": "CyberOK Research / GitHub",
+          "url": "https://github.com/scadastrangelove/profgames/blob/main/aipower/selective-permeability/preprint.md",
+          "type": "Research / preprint",
+          "date": "2026-07-12",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_SELECTIVE_PERMEABILITY_PROVENANCE_FAILURES",
+              "kind": "event"
+            },
+            {
+              "id": "cogsec-14",
+              "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-227",
+          "title": "Selective Permeability reproducibility package",
+          "name": "CyberOK Research / GitHub",
+          "url": "https://github.com/scadastrangelove/profgames/tree/main/aipower/selective-permeability/aigeopol-labs",
+          "type": "Research / preprint",
+          "date": "2026-07-12",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_SELECTIVE_PERMEABILITY_PROVENANCE_FAILURES",
+              "kind": "event"
+            },
+            {
+              "id": "cogsec-14",
+              "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-313",
+          "title": "ReferenceFileSystem template processing in fsspec 2024.3.1",
+          "name": "fsspec",
+          "url": "https://github.com/fsspec/filesystem_spec/blob/2024.3.1/fsspec/implementations/reference.py#L940-L965",
+          "type": "Code / primary",
+          "date": "2024-03-27",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-308",
+          "title": "PR #3367: bump fsspec and allow-list filesystem implementations",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3367",
+          "type": "Code / primary",
+          "date": "2026-07-13",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-309",
+          "title": "PR #3368: harden worker pod security context",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3368",
+          "type": "Code / primary",
+          "date": "2026-07-13",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-310",
+          "title": "PR #3359: add IRSA to datasets-server",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3359",
+          "type": "Code / primary",
+          "date": "2026-07-14",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-311",
+          "title": "PR #3375: add MONGODB-AWS authentication support",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3375",
+          "type": "Code / primary",
+          "date": "2026-07-15",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-312",
+          "title": "PR #3372: support multiple JWT public keys for key rotation",
+          "name": "Hugging Face dataset-viewer",
+          "url": "https://github.com/huggingface/dataset-viewer/pull/3372",
+          "type": "Code / primary",
+          "date": "2026-07-16",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_SELECTIVE_PERMEABILITY_PROVENANCE_FAILURES"
+        },
+        {
+          "kind": "claim",
+          "id": "cogsec-14"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_HF_AGENTIC_INTRUSION"
+        }
+      ],
+      "types": [
+        "Code / primary",
+        "Research / preprint"
+      ]
+    },
+    {
+      "id": "source-group-89",
       "family": "government.ru",
       "sources": [
         {
@@ -61041,6 +61829,64 @@
       ],
       "types": [
         "Government / policy"
+      ]
+    },
+    {
+      "id": "source-group-28",
+      "family": "huggingface.co",
+      "sources": [
+        {
+          "id": "src-307",
+          "title": "Security incident disclosure - July 2026",
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/blog/security-incident-july-2026",
+          "type": "Company / vendor",
+          "date": "2026-07-16",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HF_AGENTIC_INTRUSION",
+              "kind": "event"
+            },
+            {
+              "id": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-298",
+          "title": "Soofi-Project/Soofi-S-Base model repository",
+          "name": "Hugging Face / Soofi Project",
+          "url": "https://huggingface.co/Soofi-Project/Soofi-S-Base",
+          "type": "Live registry",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_HF_AGENTIC_INTRUSION"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
+        }
+      ],
+      "types": [
+        "Company / vendor",
+        "Live registry"
       ]
     },
     {
@@ -61169,7 +62015,7 @@
       ]
     },
     {
-      "id": "source-group-36",
+      "id": "source-group-37",
       "family": "techradar.com",
       "sources": [
         {
@@ -61333,7 +62179,7 @@
       ]
     },
     {
-      "id": "source-group-40",
+      "id": "source-group-41",
       "family": "army.mil",
       "sources": [
         {
@@ -61371,11 +62217,11 @@
       ]
     },
     {
-      "id": "source-group-28",
+      "id": "source-group-29",
       "family": "blogs.nvidia.com",
       "sources": [
         {
-          "id": "src-326",
+          "id": "src-334",
           "title": "India Fuels Its AI Mission With NVIDIA",
           "name": "India Fuels Its AI Mission With NVIDIA",
           "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -61485,7 +62331,7 @@
       ]
     },
     {
-      "id": "source-group-42",
+      "id": "source-group-43",
       "family": "digital.library.unt.edu",
       "sources": [
         {
@@ -61668,7 +62514,7 @@
       ]
     },
     {
-      "id": "source-group-79",
+      "id": "source-group-80",
       "family": "ftc.gov",
       "sources": [
         {
@@ -61805,64 +62651,7 @@
       ]
     },
     {
-      "id": "source-group-18",
-      "family": "github.com",
-      "sources": [
-        {
-          "id": "src-226",
-          "title": "Selective Permeability: A Behavioral-Security Metric for LLM Advisors, with Two Failure Modes of In-Context Provenance Workflows",
-          "name": "CyberOK Research / GitHub",
-          "url": "https://github.com/scadastrangelove/profgames/blob/main/aipower/selective-permeability/preprint.md",
-          "type": "Research / preprint",
-          "date": "2026-07-12",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2026_SELECTIVE_PERMEABILITY_PROVENANCE_FAILURES",
-              "kind": "event"
-            },
-            {
-              "id": "cogsec-14",
-              "kind": "claim"
-            }
-          ]
-        },
-        {
-          "id": "src-227",
-          "title": "Selective Permeability reproducibility package",
-          "name": "CyberOK Research / GitHub",
-          "url": "https://github.com/scadastrangelove/profgames/tree/main/aipower/selective-permeability/aigeopol-labs",
-          "type": "Research / preprint",
-          "date": "2026-07-12",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2026_SELECTIVE_PERMEABILITY_PROVENANCE_FAILURES",
-              "kind": "event"
-            },
-            {
-              "id": "cogsec-14",
-              "kind": "claim"
-            }
-          ]
-        }
-      ],
-      "used_by": [
-        {
-          "kind": "event",
-          "id": "SIG_2026_SELECTIVE_PERMEABILITY_PROVENANCE_FAILURES"
-        },
-        {
-          "kind": "claim",
-          "id": "cogsec-14"
-        }
-      ],
-      "types": [
-        "Research / preprint"
-      ]
-    },
-    {
-      "id": "source-group-29",
+      "id": "source-group-30",
       "family": "koi.ai",
       "sources": [
         {
@@ -61900,7 +62689,7 @@
       ]
     },
     {
-      "id": "source-group-35",
+      "id": "source-group-36",
       "family": "kremlin.ru",
       "sources": [
         {
@@ -61980,7 +62769,7 @@
       "family": "letsdatascience.com",
       "sources": [
         {
-          "id": "src-316",
+          "id": "src-324",
           "title": "How China's GLM-5 Works",
           "name": "How China's GLM-5 Works",
           "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -62014,11 +62803,11 @@
       ]
     },
     {
-      "id": "source-group-33",
+      "id": "source-group-34",
       "family": "owasp.org",
       "sources": [
         {
-          "id": "src-350",
+          "id": "src-358",
           "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -62052,7 +62841,7 @@
       ]
     },
     {
-      "id": "source-group-34",
+      "id": "source-group-35",
       "family": "pentera.io",
       "sources": [
         {
@@ -62090,7 +62879,7 @@
       ]
     },
     {
-      "id": "source-group-87",
+      "id": "source-group-88",
       "family": "pib.gov.in",
       "sources": [
         {
@@ -62109,7 +62898,7 @@
           ]
         },
         {
-          "id": "src-325",
+          "id": "src-333",
           "title": "PIB: India common computing facility",
           "name": "PIB: India common computing facility",
           "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -62189,7 +62978,7 @@
       ]
     },
     {
-      "id": "source-group-30",
+      "id": "source-group-31",
       "family": "reports.nscai.gov",
       "sources": [
         {
@@ -62227,7 +63016,7 @@
       ]
     },
     {
-      "id": "source-group-31",
+      "id": "source-group-32",
       "family": "research.openanalysis.net",
       "sources": [
         {
@@ -62265,7 +63054,7 @@
       ]
     },
     {
-      "id": "source-group-78",
+      "id": "source-group-79",
       "family": "search.ftc.gov",
       "sources": [
         {
@@ -62315,7 +63104,7 @@
       ]
     },
     {
-      "id": "source-group-43",
+      "id": "source-group-44",
       "family": "sec.gov",
       "sources": [
         {
@@ -62418,7 +63207,7 @@
       ]
     },
     {
-      "id": "source-group-37",
+      "id": "source-group-38",
       "family": "tenetsecurity.ai",
       "sources": [
         {
@@ -62494,7 +63283,7 @@
       ]
     },
     {
-      "id": "source-group-39",
+      "id": "source-group-40",
       "family": "top500.org",
       "sources": [
         {
@@ -62547,7 +63336,7 @@
       ]
     },
     {
-      "id": "source-group-77",
+      "id": "source-group-78",
       "family": "US Government / GovInfo",
       "sources": [
         {
@@ -62675,7 +63464,7 @@
       ]
     },
     {
-      "id": "source-group-86",
+      "id": "source-group-87",
       "family": "ai.google.dev",
       "sources": [
         {
@@ -62705,11 +63494,11 @@
       ]
     },
     {
-      "id": "source-group-48",
+      "id": "source-group-49",
       "family": "aicyberchallenge.com",
       "sources": [
         {
-          "id": "src-347",
+          "id": "src-355",
           "title": "AIxCC finals winners (DARPA)",
           "name": "AIxCC finals winners (DARPA)",
           "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -62735,7 +63524,7 @@
       ]
     },
     {
-      "id": "source-group-47",
+      "id": "source-group-48",
       "family": "aim.security",
       "sources": [
         {
@@ -62765,7 +63554,7 @@
       ]
     },
     {
-      "id": "source-group-51",
+      "id": "source-group-52",
       "family": "Amazon / AWS",
       "sources": [
         {
@@ -62795,11 +63584,11 @@
       ]
     },
     {
-      "id": "source-group-66",
+      "id": "source-group-67",
       "family": "anderseninstitute.org",
       "sources": [
         {
-          "id": "src-334",
+          "id": "src-342",
           "title": "China Export Controls: Critical Minerals (Andersen Institute)",
           "name": "China Export Controls: Critical Minerals (Andersen Institute)",
           "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -62825,7 +63614,7 @@
       ]
     },
     {
-      "id": "source-group-72",
+      "id": "source-group-73",
       "family": "api-docs.deepseek.com",
       "sources": [
         {
@@ -62859,7 +63648,7 @@
       "family": "banking.senate.gov",
       "sources": [
         {
-          "id": "src-337",
+          "id": "src-345",
           "title": "Senate Banking GAIN AI Act release",
           "name": "Senate Banking GAIN AI Act release",
           "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -62885,7 +63674,7 @@
       ]
     },
     {
-      "id": "source-group-55",
+      "id": "source-group-56",
       "family": "bankofengland.co.uk",
       "sources": [
         {
@@ -62915,11 +63704,11 @@
       ]
     },
     {
-      "id": "source-group-57",
+      "id": "source-group-58",
       "family": "breakingdefense.com",
       "sources": [
         {
-          "id": "src-352",
+          "id": "src-360",
           "title": "Breaking Defense: $200M each for agentic AI",
           "name": "Breaking Defense: $200M each for agentic AI",
           "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -62945,7 +63734,7 @@
       ]
     },
     {
-      "id": "source-group-59",
+      "id": "source-group-60",
       "family": "Business Insider",
       "sources": [
         {
@@ -62975,7 +63764,7 @@
       ]
     },
     {
-      "id": "source-group-60",
+      "id": "source-group-61",
       "family": "byline.network",
       "sources": [
         {
@@ -63005,7 +63794,7 @@
       ]
     },
     {
-      "id": "source-group-61",
+      "id": "source-group-62",
       "family": "caixinglobal.com",
       "sources": [
         {
@@ -63065,7 +63854,7 @@
       ]
     },
     {
-      "id": "source-group-62",
+      "id": "source-group-63",
       "family": "catonetworks.com",
       "sources": [
         {
@@ -63095,7 +63884,7 @@
       ]
     },
     {
-      "id": "source-group-63",
+      "id": "source-group-64",
       "family": "censys.com",
       "sources": [
         {
@@ -63125,7 +63914,7 @@
       ]
     },
     {
-      "id": "source-group-64",
+      "id": "source-group-65",
       "family": "cerebras.ai",
       "sources": [
         {
@@ -63155,11 +63944,11 @@
       ]
     },
     {
-      "id": "source-group-93",
+      "id": "source-group-94",
       "family": "chinaselectcommittee.house.gov",
       "sources": [
         {
-          "id": "src-339",
+          "id": "src-347",
           "title": "House Select Committee: Chip Security Act passage",
           "name": "House Select Committee: Chip Security Act passage",
           "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -63215,7 +64004,7 @@
       ]
     },
     {
-      "id": "source-group-67",
+      "id": "source-group-68",
       "family": "consultant.ru",
       "sources": [
         {
@@ -63245,7 +64034,7 @@
       ]
     },
     {
-      "id": "source-group-53",
+      "id": "source-group-54",
       "family": "cyber.gouv.fr",
       "sources": [
         {
@@ -63290,11 +64079,11 @@
       ]
     },
     {
-      "id": "source-group-70",
+      "id": "source-group-71",
       "family": "cybersecuritydive.com",
       "sources": [
         {
-          "id": "src-343",
+          "id": "src-351",
           "title": "Cybersecurity Dive: DARPA touts results",
           "name": "Cybersecurity Dive: DARPA touts results",
           "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -63324,7 +64113,7 @@
       "family": "datacentremagazine.com",
       "sources": [
         {
-          "id": "src-322",
+          "id": "src-330",
           "title": "Stargate UK paused (Data Centre Magazine)",
           "name": "Stargate UK paused (Data Centre Magazine)",
           "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -63350,11 +64139,11 @@
       ]
     },
     {
-      "id": "source-group-54",
+      "id": "source-group-55",
       "family": "defensescoop.com",
       "sources": [
         {
-          "id": "src-365",
+          "id": "src-373",
           "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -63380,11 +64169,11 @@
       ]
     },
     {
-      "id": "source-group-74",
+      "id": "source-group-75",
       "family": "eib.org",
       "sources": [
         {
-          "id": "src-323",
+          "id": "src-331",
           "title": "EIB-Commission gigafactories MoU",
           "name": "EIB-Commission gigafactories MoU",
           "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -63410,7 +64199,7 @@
       ]
     },
     {
-      "id": "source-group-75",
+      "id": "source-group-76",
       "family": "elysee.fr",
       "sources": [
         {
@@ -63474,7 +64263,7 @@
       "family": "epoch.ai",
       "sources": [
         {
-          "id": "src-309",
+          "id": "src-317",
           "title": "Hyperscaler capex trend",
           "name": "Hyperscaler capex trend",
           "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -63504,7 +64293,7 @@
       "family": "finance.yahoo.com",
       "sources": [
         {
-          "id": "src-333",
+          "id": "src-341",
           "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -63530,7 +64319,7 @@
       ]
     },
     {
-      "id": "source-group-81",
+      "id": "source-group-82",
       "family": "flare.io",
       "sources": [
         {
@@ -63620,11 +64409,11 @@
       ]
     },
     {
-      "id": "source-group-91",
+      "id": "source-group-92",
       "family": "foreignaffairs.house.gov",
       "sources": [
         {
-          "id": "src-341",
+          "id": "src-349",
           "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -63650,7 +64439,7 @@
       ]
     },
     {
-      "id": "source-group-80",
+      "id": "source-group-81",
       "family": "fsb.org",
       "sources": [
         {
@@ -63680,7 +64469,7 @@
       ]
     },
     {
-      "id": "source-group-84",
+      "id": "source-group-85",
       "family": "g42.ai",
       "sources": [
         {
@@ -63710,7 +64499,7 @@
       ]
     },
     {
-      "id": "source-group-85",
+      "id": "source-group-86",
       "family": "garant.ru",
       "sources": [
         {
@@ -63740,7 +64529,7 @@
       ]
     },
     {
-      "id": "source-group-89",
+      "id": "source-group-90",
       "family": "government.nl",
       "sources": [
         {
@@ -63770,7 +64559,7 @@
       ]
     },
     {
-      "id": "source-group-73",
+      "id": "source-group-74",
       "family": "gur.gov.ua",
       "sources": [
         {
@@ -63800,7 +64589,7 @@
       ]
     },
     {
-      "id": "source-group-83",
+      "id": "source-group-84",
       "family": "gxt.fujian.gov.cn",
       "sources": [
         {
@@ -63830,7 +64619,7 @@
       ]
     },
     {
-      "id": "source-group-90",
+      "id": "source-group-91",
       "family": "habr.com",
       "sources": [
         {
@@ -63860,11 +64649,11 @@
       ]
     },
     {
-      "id": "source-group-92",
+      "id": "source-group-93",
       "family": "hoganlovells.com",
       "sources": [
         {
-          "id": "src-331",
+          "id": "src-339",
           "title": "Hogan Lovells analysis",
           "name": "Hogan Lovells analysis",
           "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -63887,36 +64676,6 @@
       ],
       "types": [
         "Secondary source"
-      ]
-    },
-    {
-      "id": "source-group-96",
-      "family": "huggingface.co",
-      "sources": [
-        {
-          "id": "src-298",
-          "title": "Soofi-Project/Soofi-S-Base model repository",
-          "name": "Hugging Face / Soofi Project",
-          "url": "https://huggingface.co/Soofi-Project/Soofi-S-Base",
-          "type": "Live registry",
-          "date": "2026-07-17",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
-              "kind": "event"
-            }
-          ]
-        }
-      ],
-      "used_by": [
-        {
-          "kind": "event",
-          "id": "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW"
-        }
-      ],
-      "types": [
-        "Live registry"
       ]
     },
     {
@@ -64025,7 +64784,7 @@
       ]
     },
     {
-      "id": "source-group-82",
+      "id": "source-group-83",
       "family": "iis.fraunhofer.de",
       "sources": [
         {
@@ -64055,11 +64814,11 @@
       ]
     },
     {
-      "id": "source-group-58",
+      "id": "source-group-59",
       "family": "interface-eu.org",
       "sources": [
         {
-          "id": "src-355",
+          "id": "src-363",
           "title": "Built for Purpose? EU AI Gigafactories (Interface)",
           "name": "Built for Purpose? EU AI Gigafactories (Interface)",
           "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -64115,7 +64874,7 @@
       ]
     },
     {
-      "id": "source-group-68",
+      "id": "source-group-69",
       "family": "investors.coreweave.com",
       "sources": [
         {
@@ -64149,7 +64908,7 @@
       "family": "kirkland.com",
       "sources": [
         {
-          "id": "src-328",
+          "id": "src-336",
           "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -64205,11 +64964,11 @@
       ]
     },
     {
-      "id": "source-group-46",
+      "id": "source-group-47",
       "family": "lawfaremedia.org",
       "sources": [
         {
-          "id": "src-363",
+          "id": "src-371",
           "title": "A Kill Switch for Frontier AI (Lawfare)",
           "name": "A Kill Switch for Frontier AI (Lawfare)",
           "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -64295,11 +65054,11 @@
       ]
     },
     {
-      "id": "source-group-71",
+      "id": "source-group-72",
       "family": "meta-intelligence.tech",
       "sources": [
         {
-          "id": "src-317",
+          "id": "src-325",
           "title": "DeepSeek V4 and R2 Deep Dive",
           "name": "DeepSeek V4 and R2 Deep Dive",
           "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -64565,7 +65324,7 @@
       ]
     },
     {
-      "id": "source-group-65",
+      "id": "source-group-66",
       "family": "news.cgtn.com",
       "sources": [
         {
@@ -64595,11 +65354,11 @@
       ]
     },
     {
-      "id": "source-group-95",
+      "id": "source-group-96",
       "family": "newsletter.semianalysis.com",
       "sources": [
         {
-          "id": "src-354",
+          "id": "src-362",
           "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -64659,7 +65418,7 @@
       "family": "NPR",
       "sources": [
         {
-          "id": "src-332",
+          "id": "src-340",
           "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -64689,7 +65448,7 @@
       "family": "openfuture.eu",
       "sources": [
         {
-          "id": "src-324",
+          "id": "src-332",
           "title": "Who Controls Europe's AI Future? (Open Future)",
           "name": "Who Controls Europe's AI Future? (Open Future)",
           "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -64809,7 +65568,7 @@
       "family": "prnewswire.com",
       "sources": [
         {
-          "id": "src-320",
+          "id": "src-328",
           "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -64910,11 +65669,11 @@
       ]
     },
     {
-      "id": "source-group-94",
+      "id": "source-group-95",
       "family": "recodechinaai.substack.com",
       "sources": [
         {
-          "id": "src-314",
+          "id": "src-322",
           "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -64940,7 +65699,7 @@
       ]
     },
     {
-      "id": "source-group-76",
+      "id": "source-group-77",
       "family": "redditinc.com",
       "sources": [
         {
@@ -64974,7 +65733,7 @@
       "family": "scworld.com",
       "sources": [
         {
-          "id": "src-345",
+          "id": "src-353",
           "title": "What we know and what we're watching (SC Media)",
           "name": "What we know and what we're watching (SC Media)",
           "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -65090,11 +65849,11 @@
       ]
     },
     {
-      "id": "source-group-56",
+      "id": "source-group-57",
       "family": "Tech Times",
       "sources": [
         {
-          "id": "src-335",
+          "id": "src-343",
           "title": "Beijing presses Washington (Tech Times)",
           "name": "Beijing presses Washington (Tech Times)",
           "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -65124,7 +65883,7 @@
       "family": "techblog.comsoc.org",
       "sources": [
         {
-          "id": "src-313",
+          "id": "src-321",
           "title": "Hyperscaler cloud share",
           "name": "Hyperscaler cloud share",
           "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -65184,7 +65943,7 @@
       "family": "the-decoder.com",
       "sources": [
         {
-          "id": "src-310",
+          "id": "src-318",
           "title": "Stargate stalls (The Information via The Decoder)",
           "name": "Stargate stalls (The Information via The Decoder)",
           "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -65210,11 +65969,11 @@
       ]
     },
     {
-      "id": "source-group-69",
+      "id": "source-group-70",
       "family": "thestar.com.my",
       "sources": [
         {
-          "id": "src-366",
+          "id": "src-374",
           "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -65240,11 +65999,11 @@
       ]
     },
     {
-      "id": "source-group-45",
+      "id": "source-group-46",
       "family": "Tom's Hardware",
       "sources": [
         {
-          "id": "src-367",
+          "id": "src-375",
           "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -65270,11 +66029,11 @@
       ]
     },
     {
-      "id": "source-group-50",
+      "id": "source-group-51",
       "family": "turing.ac.uk",
       "sources": [
         {
-          "id": "src-349",
+          "id": "src-357",
           "title": "Alan Turing Institute summary",
           "name": "Alan Turing Institute summary",
           "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -65462,6 +66221,36 @@
       ],
       "types": [
         "Press / wire"
+      ]
+    },
+    {
+      "id": "source-group-156",
+      "family": "z.ai",
+      "sources": [
+        {
+          "id": "src-314",
+          "title": "GLM-5.2: Built for Long-Horizon Tasks",
+          "name": "Z.ai",
+          "url": "https://z.ai/blog/glm-5.2",
+          "type": "Company / vendor",
+          "date": "2026-06-16",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
+        }
+      ],
+      "types": [
+        "Company / vendor"
       ]
     },
     {
@@ -66444,20 +67233,20 @@
       "arc_families": 6
     },
     "post_merge": {
-      "version": "0.22",
-      "date": "2026-07-17",
-      "evidence": 242,
+      "version": "0.23",
+      "date": "2026-07-20",
+      "evidence": 244,
       "claims": 71,
       "claim_checks": 29,
       "story_arcs": 24,
-      "story_edges": 449,
+      "story_edges": 455,
       "unclassified_geography_event_ids": [],
       "arcs_without_family": []
     }
   },
   "factcheckAudit": {
     "source_candidate_file": "ai_stack_candidate_factcheck_structural_power.json",
-    "research_date": "2026-07-17",
+    "research_date": "2026-07-20",
     "independent_adversarial_review": true,
     "anti_overfit_rule_en": "Do not promote a lab study, vendor scan, public exposure measurement, proposal or forecast into an incident, prevalence estimate, enacted law or measured outcome.",
     "counts": {
@@ -66594,6 +67383,16 @@
         "candidate_id": "CAND_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
         "decision": "merge_as_reported_find_and_patch_signal",
         "master_id": "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME"
+      },
+      {
+        "candidate_id": "CAND_2026_HF_AGENTIC_INTRUSION",
+        "decision": "merge_as_first_party_victim_agentic_intrusion",
+        "master_id": "SIG_2026_HF_AGENTIC_INTRUSION"
+      },
+      {
+        "candidate_id": "CAND_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+        "decision": "merge_as_operational_access_and_local_model_fallback",
+        "master_id": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
       }
     ],
     "corrected_overclaims": [
@@ -66621,32 +67420,35 @@
       "Naver was generally banned from Korean sovereign or defense AI after its contest exclusion.",
       "The Anthropic MOU restored Mythos access or transferred frontier-model technology to Korea.",
       "Project Canopy independently verified 990 exploitable CVEs in deployed Korean government systems.",
-      "The Naver-KAI MOU proves a deployed defense model or autonomous combat capability."
+      "The Naver-KAI MOU proves a deployed defense model or autonomous combat capability.",
+      "Hugging Face disclosed the incident on 6 July 2026.",
+      "Hugging Face proved the first fully autonomous cyberattack with no human operator.",
+      "The Hugging Face attacker used OpenAI, Anthropic, GLM or a named model.",
+      "The Hugging Face incident is attributable to JADEPUFFER or a named threat group.",
+      "The 17,000 recorded events establish 17,000 autonomous attack decisions.",
+      "Public dataset-viewer PRs are an official one-to-one postmortem or exact exploit chain.",
+      "Commercial frontier models are generally unusable for cyber defense.",
+      "GLM 5.2 or open weights are intrinsically safer or create full-stack sovereignty."
     ],
     "source_candidate_files": [
       "ai_stack_candidate_factcheck_structural_power.json",
       "ai_stack_candidate_huntio_claude_deepseek_2026.json",
       "ai_stack_candidate_waic_soofi_2026.json",
-      "ai_stack_candidate_korea_sovereignty_2026.json"
+      "ai_stack_candidate_korea_sovereignty_2026.json",
+      "ai_stack_candidate_huggingface_incident_2026.json"
     ],
     "rolling_news_review": {
-      "date": "2026-07-17",
+      "date": "2026-07-20",
       "sources": [
-        "South Korean Ministry of Science and ICT",
-        "Yonhap News Agency",
-        "Naver",
-        "Project Plasma",
-        "Byline Network",
-        "The Korea Times"
+        "Hugging Face",
+        "Hugging Face dataset-viewer",
+        "fsspec"
       ],
       "evidence_ids": [
-        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
-        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
-        "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
-        "SIG_2026_NAVER_KAI_DEFENSE_AI_MOU",
-        "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME"
+        "SIG_2026_HF_AGENTIC_INTRUSION",
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
       ],
-      "review": "Five atomic records retained. Access restriction, domestic countermeasure, continued vendor cooperation, policy eligibility, corporate MOU and self-reported operational results remain distinct."
+      "review": "Two atomic records retained: the first-party victim account of the intrusion and the separate defender-side access-control/local-model fallback. Public code changes are corroborating chronology, not an official exploit map."
     }
   },
   "actorTypeLabels": {
@@ -66720,8 +67522,8 @@
     "geographies_raw": {
       "US": 121,
       "global": 62,
+      "Global": 46,
       "China": 45,
-      "Global": 44,
       "EU": 26,
       "Russia": 21,
       "UK": 15,
@@ -66830,7 +67632,7 @@
       "Russia-linked": 1
     },
     "geographic_scopes": {
-      "Global": 106
+      "Global": 108
     },
     "actors": {
       "OpenAI": 31,
@@ -66861,6 +67663,7 @@
       "CISA": 2,
       "DeepSeek": 2,
       "European Parliament": 2,
+      "Hugging Face": 2,
       "Langflow": 2,
       "NATO": 2,
       "Naver": 2,
@@ -66906,11 +67709,13 @@
       "TikTok": 1,
       "UK Government": 1,
       "UK Home Office": 1,
+      "Unattributed threat actor": 1,
       "University of Manchester": 1,
       "Upstage": 1,
       "US DOJ": 1,
       "World Artificial Intelligence Cooperation Organization": 1,
-      "Xi Jinping": 1
+      "Xi Jinping": 1,
+      "Z.ai / GLM": 1
     },
     "actor_entities": {
       "OpenAI": 31,
@@ -66941,6 +67746,7 @@
       "CISA": 2,
       "DeepSeek": 2,
       "European Parliament": 2,
+      "Hugging Face": 2,
       "Langflow": 2,
       "NATO": 2,
       "Naver": 2,
@@ -66986,14 +67792,16 @@
       "TikTok": 1,
       "UK Government": 1,
       "UK Home Office": 1,
+      "Unattributed threat actor": 1,
       "University of Manchester": 1,
       "Upstage": 1,
       "US DOJ": 1,
       "World Artificial Intelligence Cooperation Organization": 1,
-      "Xi Jinping": 1
+      "Xi Jinping": 1,
+      "Z.ai / GLM": 1
     },
     "actor_types": {
-      "company": 114,
+      "company": 116,
       "government": 78,
       "research": 43,
       "regulator": 34,
@@ -67001,7 +67809,7 @@
       "workforce_users": 22,
       "financial_institution": 17,
       "multilateral": 8,
-      "threat_actor": 7,
+      "threat_actor": 8,
       "civil_society": 6,
       "media_rights": 5,
       "court": 2
@@ -67060,6 +67868,7 @@
       "CISA": 2,
       "DeepSeek": 2,
       "European Parliament": 2,
+      "Hugging Face": 2,
       "Langflow": 2,
       "NATO": 2,
       "Naver": 2,
@@ -67109,26 +67918,28 @@
       "TikTok": 1,
       "UK Government": 1,
       "UK Home Office": 1,
+      "Unattributed threat actor": 1,
       "University of Manchester": 1,
       "Upstage": 1,
       "US DOJ": 1,
       "World Artificial Intelligence Cooperation Organization": 1,
-      "Xi Jinping": 1
+      "Xi Jinping": 1,
+      "Z.ai / GLM": 1
     },
     "stack_layers": {
       "governance_law": 148,
-      "decision_support_cognition": 94,
-      "model_weights": 93,
-      "cloud_inference": 84,
-      "data_telemetry": 79,
+      "decision_support_cognition": 96,
+      "model_weights": 94,
+      "cloud_inference": 86,
+      "data_telemetry": 81,
       "energy_compute_chips": 71,
       "finance_rent": 56,
-      "cyber_security_patch": 50
+      "cyber_security_patch": 52
     },
     "source_types": {
       "Government / policy": 77,
       "Press / wire": 68,
-      "Company / vendor": 46,
+      "Company / vendor": 48,
       "Research / preprint": 34,
       "Primary source": 8,
       "Industry / think tank": 4,
@@ -67138,8 +67949,8 @@
     },
     "relation_types": {
       "supports": 215,
-      "supports_with_scope": 51,
-      "supports_with_caveat": 30,
+      "supports_with_scope": 54,
+      "supports_with_caveat": 31,
       "sets_up": 29,
       "qualifies": 23,
       "institutionalizes": 20,
@@ -67147,9 +67958,9 @@
       "limits": 8,
       "walks_back": 7,
       "challenges": 6,
+      "mitigates": 6,
       "refines": 6,
       "supports_arc": 6,
-      "mitigates": 5,
       "parallel": 5,
       "supports_but_limits": 5,
       "supports_counterargument": 3,
@@ -67160,24 +67971,24 @@
       "generalizes": 2,
       "reframes": 2,
       "supports_as_claim_not_fact": 2,
+      "updates": 2,
       "accelerates_governance": 1,
       "closed_by": 1,
       "produces_workaround": 1,
       "routes_around": 1,
-      "triggers_capital_and_cloud_lockin": 1,
-      "updates": 1
+      "triggers_capital_and_cloud_lockin": 1
     },
     "arcs": {
       "AUTO_CLAIMCHECK_SUPPORT": 83,
-      "ARC_CYBER_CLAIM_TO_CAVEAT": 39,
-      "ARC_SOVEREIGN_FLOW_GATING": 32,
+      "ARC_CYBER_CLAIM_TO_CAVEAT": 42,
+      "ARC_SOVEREIGN_FLOW_GATING": 33,
       "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY": 29,
       "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 24,
       "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 23,
-      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 19,
+      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 20,
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE": 18,
       "ARC_PALANTIR_DECISION_OS": 18,
-      "ARC_QUIET_ACCESS_CONTROL": 17,
+      "ARC_QUIET_ACCESS_CONTROL": 18,
       "ARC_EXPORT_CHIPS_TO_MODELS": 16,
       "ARC_2016_2021_METERED_ACCESS_FORMATION": 14,
       "ARC_2021_STATE_INSTITUTIONALIZATION": 14,
@@ -67196,9 +68007,9 @@
       "ARC_A800_H800_WORKAROUND_CLOSURE": 3
     },
     "arc_families": {
-      "ARC_FAMILY_ACCESS_CONTROL": 82,
-      "ARC_FAMILY_CYBER_COGNITION_WAR": 74,
-      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 68,
+      "ARC_FAMILY_ACCESS_CONTROL": 84,
+      "ARC_FAMILY_CYBER_COGNITION_WAR": 77,
+      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 69,
       "ARC_FAMILY_INFRASTRUCTURE_CAPITAL": 49,
       "ARC_FAMILY_DECISION_DATA_FINANCE": 45,
       "ARC_FAMILY_FORMATION_TIMELINE": 43
