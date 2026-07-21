@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "ИИ-стек как структурная власть — Combined Master Pack",
-    "version": "0.23",
+    "version": "0.24",
     "created_at": "2026-06-28",
-    "updated_at": "2026-07-20",
-    "schema_version": "ai_stack_structural_power.v0.23.0-2026-07-20",
+    "updated_at": "2026-07-21",
+    "schema_version": "ai_stack_structural_power.v0.24.0-2026-07-21",
     "display_title_ru": "ИИ-стек: четыре структуры власти на одном КПП",
     "display_title_en": "AI stack: four structures of power at one checkpoint",
     "subtitle_ru": "Карта фактов о том, как вычисления, облака, модели, данные, кибер и капитал превращаются в среду по умолчанию: доступ дозируется, зависимость закрепляется, рента собирается.",
@@ -12,6 +12,30 @@
     "source_pack": "ai_stack_storygraph_master.json",
     "method": "ProfGames-style layered organization. Merge of: (a) v0.4 operational pack (evidence/timeline/claim_checks/country_cards/cyber_pack/cognitive_security/critical_decision_use/palantir_case/weekly_memo/gaps), (b) v0.2 factcheck layer (claims with recommended_phrasing_ru/counterarguments/recommendations), (c) new v0.3 research closing the Stanford-tables and chip-license gaps and adding model-layer export-control claims.",
     "changelog": [
+      {
+        "version": "0.24",
+        "date": "2026-07-21",
+        "description": "Added Kimi K3 as a service launch with full weights and license still pending, Dean Ball's soft-law scenario with its prediction-not-recommendation clarification, and the expert-led GPT-5.6 wp2shell discovery chain. Updated four arcs, two claim checks and the cyber-autonomy thesis without turning discourse into policy or expert augmentation into autonomous offense.",
+        "added_evidence": 3,
+        "added_timeline": 3,
+        "added_claims": 0,
+        "added_claim_checks": 0,
+        "added_story_arcs": 0,
+        "added_story_edges": 9,
+        "updated_story_arcs": [
+          "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+          "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+          "ARC_QUIET_ACCESS_CONTROL",
+          "ARC_CYBER_CLAIM_TO_CAVEAT"
+        ],
+        "updated_story_nodes": [
+          "THESIS_NOT_AUTONOMOUS_OFFENSE"
+        ],
+        "updated_claim_checks": [
+          "CLM_006_MACHINE_SPEED_CYBER",
+          "CLM_013_QUIET_ACCESS_CONTROL"
+        ]
+      },
       {
         "version": "0.23",
         "date": "2026-07-20",
@@ -265,6 +289,9 @@
     },
     "approximate_pass_rate": "97% verified or partially verified",
     "key_findings": [
+      "KIMI K3 (v0.24): Moonshot launched a 2.8T-parameter Chinese frontier-model service and promised full weights for 27 July. At the 21 July cutoff, the weights, technical report and final license remained pending, so this is a concrete countermove but not yet a completed open-weight release or proof of parity.",
+      "SOFT-LAW DEBATE (v0.24): Dean Ball publicly articulated how weakly justified agency guidance could deter regulated firms from Chinese open-weight models, then clarified that he was predicting rather than endorsing the outcome. This is a mechanism signal and elite-policy dispute, not OpenAI or US policy and not evidence of backdoors.",
+      "WP2SHELL (v0.24): An expert-directed four-agent GPT-5.6 run produced a novel WordPress core RCE chain in just over ten hours; vendor fixes, two CVEs, independent reproduction and later exploitation are confirmed. The case demonstrates expert augmentation and time compression, not autonomous targeting, novice capability or a verified $500,000 market transaction.",
       "HF AGENTIC INTRUSION (v0.23): Hugging Face provides a detailed victim-side account of a malicious-dataset intrusion driven by an agent framework, but the incident date, attacker model, operator involvement, public IoCs and independent forensics remain unavailable.",
       "HF DEFENDER ACCESS ASYMMETRY (v0.23): Hosted safety filters reportedly blocked legitimate incident-response analysis, while local GLM 5.2 restored the workflow and kept sensitive data in-house. This demonstrates access policy as operational power and open weights as a conditional exit, not universal superiority or full-stack sovereignty.",
       "KOREA ACCESS SHOCK (v0.22): South Korea plans a domestic cybersecurity model by year-end after the Mythos access restriction, but the base model is unspecified and Mythos parity is a longer-term aspiration rather than the 2026 deliverable.",
@@ -923,26 +950,27 @@
       ]
     },
     "pass_rate_short": "97%",
-    "total_events": 244,
+    "total_events": 247,
     "total_claims": 71,
     "total_claim_checks": 29,
     "total_arcs": 24,
-    "total_edges": 455,
+    "total_edges": 464,
     "total_thesis_nodes": 5,
-    "source_count": 375,
+    "source_count": 389,
     "by_status": {
-      "verified": 136,
+      "verified": 137,
       "verified_as_reported": 31,
       "partially_verified": 26,
       "verified_preprint": 8,
       "reported_unconfirmed": 3,
+      "verified_as_speech_not_as_fact": 3,
       "lab_verified_no_wild_exploitation": 2,
       "partially_verified_contested": 2,
       "verified_as_announcement": 2,
       "verified_as_reported_indictment_allegation": 2,
       "verified_as_reported_with_redacted_forensics": 2,
-      "verified_as_speech_not_as_fact": 2,
       "verified_mou_not_deployment": 2,
+      "verified_preview_license_pending": 2,
       "advertisement_verified_implementation_unverified": 1,
       "controlled_real_world_and_internal_red_team_no_wild_campaign": 1,
       "controlled_real_world_validation_no_wild_campaign": 1,
@@ -964,7 +992,6 @@
       "verified_first_party_operational_account": 1,
       "verified_malicious_registry_artifacts_no_victim_prevalence": 1,
       "verified_policy_decision_technical_detail_reported": 1,
-      "verified_preview_license_pending": 1,
       "verified_program_not_outcome": 1,
       "verified_public_exposure_not_compromise": 1,
       "verified_report_with_older_data_vintage": 1,
@@ -974,11 +1001,11 @@
       "A": 115,
       "B": 75,
       "C": 28,
+      "A/B": 8,
       "D": 8,
-      "A/B": 6,
       "B/C": 4,
+      "A/C": 3,
       "A/D": 3,
-      "A/C": 2,
       "C/D": 1,
       "D_for_capability_claim_B_for_speech_event": 1,
       "D/B": 1
@@ -19004,7 +19031,8 @@
         }
       ],
       "edgeIds": [
-        "EDGE_V012_2026_LLM_CVE_PUBLIC_POC_MIGRATION_CYBER"
+        "EDGE_V012_2026_LLM_CVE_PUBLIC_POC_MIGRATION_CYBER",
+        "EDGE_WP2SHELL_LLM_CVE_CORPUS_UPDATE"
       ],
       "arcIds": [
         "ARC_CYBER_CLAIM_TO_CAVEAT"
@@ -19014,7 +19042,8 @@
       ],
       "relationTypes": [
         "key_node",
-        "supports_but_limits"
+        "supports_but_limits",
+        "updates"
       ]
     },
     {
@@ -36223,6 +36252,606 @@
         "mitigates",
         "supports_with_scope"
       ]
+    },
+    {
+      "id": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+      "kind": "event",
+      "title": "Moonshot запустила сервисы Kimi K3 и пообещала опубликовать полные веса к 27 июля",
+      "title_ru": "Moonshot запустила сервисы Kimi K3 и пообещала опубликовать полные веса к 27 июля",
+      "title_en": "Moonshot launches Kimi K3 services and promises full model weights by 27 July",
+      "date": "2026-07-16",
+      "source_date": "2026-07-16/2026-07-17",
+      "date_basis": "product_availability_and_model_announcement_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://www.kimi.com/blog/kimi-k3",
+      "source_name": "Moonshot AI / Kimi",
+      "source_type_raw": "Company / primary",
+      "source_type": "Company / vendor",
+      "primary_or_secondary": "primary",
+      "actor": "Moonshot AI, Kimi",
+      "actor_raw": "Moonshot AI, Kimi",
+      "actors_raw": [
+        "Moonshot AI",
+        "Kimi",
+        "Moonshot AI, Kimi"
+      ],
+      "actors": [
+        "Moonshot AI",
+        "Kimi"
+      ],
+      "actor_facets_legacy": [
+        "China",
+        "Moonshot AI"
+      ],
+      "actor_facets": [
+        "Moonshot AI"
+      ],
+      "actor_entities": [
+        "Moonshot AI"
+      ],
+      "actor_jurisdictions": [
+        "China"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "geography_raw": [
+        "China",
+        "Global"
+      ],
+      "geography": [
+        "China"
+      ],
+      "jurisdictions": [
+        "China"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "model_weights",
+        "cloud_inference"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "cloud_inference"
+      ],
+      "strange_structure": [
+        "production",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "production",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ5"
+      ],
+      "claim_supported": "16-17 июля 2026 года Moonshot сделала Kimi K3 доступной в продуктах Kimi и через API. Компания описывает её как разреженную MoE-модель с 2,8 трлн параметров, нативным зрением и контекстом на один миллион токенов. В собственном анонсе сказано, что общая производительность пока уступает Claude Fable 5 и GPT-5.6 Sol, хотя во внутреннем наборе тестов модель показывает frontier-level результаты. Полные веса, технический отчёт и дополнительные сведения об оценке были обещаны к 27 июля, а не опубликованы одновременно с анонсом.",
+      "claim_supported_ru": "16-17 июля 2026 года Moonshot сделала Kimi K3 доступной в продуктах Kimi и через API. Компания описывает её как разреженную MoE-модель с 2,8 трлн параметров, нативным зрением и контекстом на один миллион токенов. В собственном анонсе сказано, что общая производительность пока уступает Claude Fable 5 и GPT-5.6 Sol, хотя во внутреннем наборе тестов модель показывает frontier-level результаты. Полные веса, технический отчёт и дополнительные сведения об оценке были обещаны к 27 июля, а не опубликованы одновременно с анонсом.",
+      "claim_supported_en": "Moonshot made Kimi K3 available through Kimi products and its API on 16-17 July 2026. The company describes it as a 2.8-trillion-parameter sparse mixture-of-experts model with native vision and a one-million-token context window. Its own announcement says overall performance still trails Claude Fable 5 and GPT-5.6 Sol while reaching frontier-level results in its evaluation suite. Full model weights, a technical report and further evaluation details were promised for 27 July rather than released at announcement time.",
+      "claim_challenged": "На дату исследования 21 июля обещанные полные веса, технический отчёт и окончательная лицензия ещё не были доступны. Показатели производительности, эффективности масштабирования и автономности в основном сообщены самим разработчиком; их нельзя превращать в независимо доказанный паритет или доказательство китайского суверенитета всего стека.",
+      "claim_challenged_ru": "На дату исследования 21 июля обещанные полные веса, технический отчёт и окончательная лицензия ещё не были доступны. Показатели производительности, эффективности масштабирования и автономности в основном сообщены самим разработчиком; их нельзя превращать в независимо доказанный паритет или доказательство китайского суверенитета всего стека.",
+      "claim_challenged_en": "As of the 21 July research cutoff, the promised full weights, technical report and final license were not yet available. The performance, scaling-efficiency and autonomy examples are principally developer-reported and should not be treated as independently established parity or as proof of full-stack Chinese sovereignty.",
+      "summary": "16-17 июля 2026 года Moonshot сделала Kimi K3 доступной в продуктах Kimi и через API. Компания описывает её как разреженную MoE-модель с 2,8 трлн параметров, нативным зрением и контекстом на один миллион токенов. В собственном анонсе сказано, что общая производительность пока уступает Claude Fable 5 и GPT-5.6 Sol, хотя во внутреннем наборе тестов модель показывает frontier-level результаты. Полные веса, технический отчёт и дополнительные сведения об оценке были обещаны к 27 июля, а не опубликованы одновременно с анонсом.",
+      "summary_ru": "16-17 июля 2026 года Moonshot сделала Kimi K3 доступной в продуктах Kimi и через API. Компания описывает её как разреженную MoE-модель с 2,8 трлн параметров, нативным зрением и контекстом на один миллион токенов. В собственном анонсе сказано, что общая производительность пока уступает Claude Fable 5 и GPT-5.6 Sol, хотя во внутреннем наборе тестов модель показывает frontier-level результаты. Полные веса, технический отчёт и дополнительные сведения об оценке были обещаны к 27 июля, а не опубликованы одновременно с анонсом.",
+      "summary_en": "Moonshot made Kimi K3 available through Kimi products and its API on 16-17 July 2026. The company describes it as a 2.8-trillion-parameter sparse mixture-of-experts model with native vision and a one-million-token context window. Its own announcement says overall performance still trails Claude Fable 5 and GPT-5.6 Sol while reaching frontier-level results in its evaluation suite. Full model weights, a technical report and further evaluation details were promised for 27 July rather than released at announcement time.",
+      "notes": "На дату исследования 21 июля обещанные полные веса, технический отчёт и окончательная лицензия ещё не были доступны. Показатели производительности, эффективности масштабирования и автономности в основном сообщены самим разработчиком; их нельзя превращать в независимо доказанный паритет или доказательство китайского суверенитета всего стека.",
+      "notes_ru": "На дату исследования 21 июля обещанные полные веса, технический отчёт и окончательная лицензия ещё не были доступны. Показатели производительности, эффективности масштабирования и автономности в основном сообщены самим разработчиком; их нельзя превращать в независимо доказанный паритет или доказательство китайского суверенитета всего стека.",
+      "notes_en": "As of the 21 July research cutoff, the promised full weights, technical report and final license were not yet available. The performance, scaling-efficiency and autonomy examples are principally developer-reported and should not be treated as independently established parity or as proof of full-stack Chinese sovereignty.",
+      "safe_wording": "Говорить, что Moonshot запустила доступ к очень крупной китайской frontier-модели и анонсировала публикацию весов на 27 июля. Пока артефакты и лицензия не опубликованы, называть Kimi K3 заявленным или ожидаемым open-weight выпуском, а результаты тестов приписывать Moonshot.",
+      "safe_wording_ru": "Говорить, что Moonshot запустила доступ к очень крупной китайской frontier-модели и анонсировала публикацию весов на 27 июля. Пока артефакты и лицензия не опубликованы, называть Kimi K3 заявленным или ожидаемым open-weight выпуском, а результаты тестов приписывать Moonshot.",
+      "safe_wording_en": "Say that Moonshot launched access to a very large Chinese frontier-model service and announced an open-weight release for 27 July. Until the artifacts and license are public, call Kimi K3 an announced or pending open-weight release and attribute benchmark claims to Moonshot.",
+      "corroboration_needed": "На дату исследования 21 июля обещанные полные веса, технический отчёт и окончательная лицензия ещё не были доступны. Показатели производительности, эффективности масштабирования и автономности в основном сообщены самим разработчиком; их нельзя превращать в независимо доказанный паритет или доказательство китайского суверенитета всего стека.",
+      "corroboration_needed_ru": "На дату исследования 21 июля обещанные полные веса, технический отчёт и окончательная лицензия ещё не были доступны. Показатели производительности, эффективности масштабирования и автономности в основном сообщены самим разработчиком; их нельзя превращать в независимо доказанный паритет или доказательство китайского суверенитета всего стека.",
+      "corroboration_needed_en": "As of the 21 July research cutoff, the promised full weights, technical report and final license were not yet available. The performance, scaling-efficiency and autonomy examples are principally developer-reported and should not be treated as independently established parity or as proof of full-stack Chinese sovereignty.",
+      "caveat": "На дату исследования 21 июля обещанные полные веса, технический отчёт и окончательная лицензия ещё не были доступны. Показатели производительности, эффективности масштабирования и автономности в основном сообщены самим разработчиком; их нельзя превращать в независимо доказанный паритет или доказательство китайского суверенитета всего стека.",
+      "caveat_ru": "На дату исследования 21 июля обещанные полные веса, технический отчёт и окончательная лицензия ещё не были доступны. Показатели производительности, эффективности масштабирования и автономности в основном сообщены самим разработчиком; их нельзя превращать в независимо доказанный паритет или доказательство китайского суверенитета всего стека.",
+      "caveat_en": "As of the 21 July research cutoff, the promised full weights, technical report and final license were not yet available. The performance, scaling-efficiency and autonomy examples are principally developer-reported and should not be treated as independently established parity or as proof of full-stack Chinese sovereignty.",
+      "caveats": [
+        "Доступность сервиса и API подтверждена; публикация полных весов на дату исследования оставалась будущим обещанием.",
+        "Открытые веса не равны открытым обучающим данным, воспроизводимому обучению или неограниченной open-source лицензии.",
+        "Большинство результатов по возможностям и эффективности в материалах запуска сообщены разработчиком."
+      ],
+      "caveats_en": [
+        "Service and API availability are verified; full-weight availability was still a future commitment at the research cutoff.",
+        "Open weights are not the same as open training data, reproducible training or an unrestricted open-source license.",
+        "Most capability and efficiency results in the launch material are developer-reported."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "total_parameters_trillion": 2.8,
+        "context_tokens": 1000000,
+        "total_experts": 896,
+        "active_experts_per_token": 16,
+        "full_weights_promised_date": "2026-07-27",
+        "weights_public_at_research_cutoff": false
+      },
+      "money_status": "",
+      "confidence": "A/C",
+      "evidence_level": "A/C",
+      "status": "verified_preview_license_pending",
+      "sources": [
+        {
+          "title": "Kimi K3: Open Frontier Intelligence",
+          "name": "Moonshot AI / Kimi",
+          "url": "https://www.kimi.com/blog/kimi-k3",
+          "type": "Company / vendor",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Kimi Code What's New: Kimi K3",
+          "name": "Moonshot AI / Kimi",
+          "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+          "type": "Company / vendor",
+          "date": "2026-07-16",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_KIMI_K3_CHINA_COUNTERSTACK",
+        "EDGE_KIMI_K3_OPEN_WEIGHT_EXIT",
+        "EDGE_KIMI_K3_BALL_POLICY_DEBATE"
+      ],
+      "arcIds": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope",
+        "sets_up"
+      ]
+    },
+    {
+      "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+      "kind": "event",
+      "title": "Дин Болл описал soft-law FUD как возможный способ вытеснить китайские open-weight модели, а затем назвал это прогнозом",
+      "title_ru": "Дин Болл описал soft-law FUD как возможный способ вытеснить китайские open-weight модели, а затем назвал это прогнозом",
+      "title_en": "Dean Ball describes soft-law FUD as a possible route to deter enterprise use of Chinese open-weight models, then says it was a prediction",
+      "date": "2026-07-17",
+      "source_date": "2026-07-17/2026-07-19",
+      "date_basis": "initial_public_statement_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://x.com/deanwball/status/2078133895766114412",
+      "source_name": "Dean W. Ball",
+      "source_type_raw": "Public statement / primary",
+      "source_type": "Public statement / primary",
+      "primary_or_secondary": "primary",
+      "actor": "Dean Ball, OpenAI, US policy officials",
+      "actor_raw": "Dean Ball, OpenAI, US policy officials",
+      "actors_raw": [
+        "Dean Ball",
+        "OpenAI",
+        "US policy officials",
+        "Dean Ball, OpenAI, US policy officials"
+      ],
+      "actors": [
+        "Dean Ball",
+        "OpenAI",
+        "US policy officials"
+      ],
+      "actor_facets_legacy": [
+        "Dean Ball",
+        "OpenAI",
+        "US"
+      ],
+      "actor_facets": [
+        "Dean Ball",
+        "OpenAI"
+      ],
+      "actor_entities": [
+        "Dean Ball",
+        "OpenAI"
+      ],
+      "actor_jurisdictions": [
+        "US"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "geography_raw": [
+        "US",
+        "China"
+      ],
+      "geography": [
+        "US",
+        "China"
+      ],
+      "jurisdictions": [
+        "US",
+        "China"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "governance_law",
+        "model_weights",
+        "decision_support_cognition"
+      ],
+      "stack_layers": [
+        "governance_law",
+        "model_weights",
+        "decision_support_cognition"
+      ],
+      "strange_structure": [
+        "security",
+        "production",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "production",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ2",
+        "RQ3",
+        "RQ5"
+      ],
+      "claim_supported": "В реакции на Kimi K3 руководитель направления strategic futures OpenAI и бывший основной составитель американского AI Action Plan Дин Болл описал регуляторную неопределённость как возможный способ вытеснить китайские open-weight модели из корпоративного использования без формального запрета open source. В качестве примера он привёл soft law ведомств и слабо обоснованные предупреждения, способные заставить регулируемые компании отказаться от таких моделей. Он также назвал одним из вероятных итогов мира с доминированием открытых весов «полный ИИ-коммунизм» и антиутопическое будущее. После критики Болл заявил, что прогнозировал плохо обоснованное вытеснение, а не поддерживал его как хорошую политику.",
+      "claim_supported_ru": "В реакции на Kimi K3 руководитель направления strategic futures OpenAI и бывший основной составитель американского AI Action Plan Дин Болл описал регуляторную неопределённость как возможный способ вытеснить китайские open-weight модели из корпоративного использования без формального запрета open source. В качестве примера он привёл soft law ведомств и слабо обоснованные предупреждения, способные заставить регулируемые компании отказаться от таких моделей. Он также назвал одним из вероятных итогов мира с доминированием открытых весов «полный ИИ-коммунизм» и антиутопическое будущее. После критики Болл заявил, что прогнозировал плохо обоснованное вытеснение, а не поддерживал его как хорошую политику.",
+      "claim_supported_en": "In a reaction to Kimi K3, OpenAI head of strategic futures and former principal staff drafter of the U.S. AI Action Plan Dean Ball described regulatory uncertainty as a possible way to suppress enterprise use of Chinese open-weight models without a formal open-source ban. His example was agency soft law and weakly justified warnings that could cause regulated firms to retreat. He also called one probable open-weight-dominant outcome 'full AI communism' and a dystopian future. After public criticism, Ball said he had predicted ill-justified discouragement rather than endorsed it as good policy.",
+      "claim_challenged": "Первоначальная формулировка звучала предписывающе, но последующее уточнение Болла делает вопрос о поддержке такой политики спорным. Посты не доказывают позицию OpenAI, план правительства США, существование реального бюллетеня ФРС, наличие бэкдоров в Kimi или уже проведённую FUD-кампанию. Публичная критика со стороны американских чиновников также показывает конфликт, а не единую государственно-корпоративную стратегию.",
+      "claim_challenged_ru": "Первоначальная формулировка звучала предписывающе, но последующее уточнение Болла делает вопрос о поддержке такой политики спорным. Посты не доказывают позицию OpenAI, план правительства США, существование реального бюллетеня ФРС, наличие бэкдоров в Kimi или уже проведённую FUD-кампанию. Публичная критика со стороны американских чиновников также показывает конфликт, а не единую государственно-корпоративную стратегию.",
+      "claim_challenged_en": "The initial wording sounded prescriptive, but Ball's clarification makes his intended endorsement contested. The posts do not establish an OpenAI position, a U.S. government plan, an actual Federal Reserve bulletin, backdoors in Kimi or an implemented FUD campaign. Public criticism from U.S. officials also shows disagreement rather than a unified state-industry strategy.",
+      "summary": "В реакции на Kimi K3 руководитель направления strategic futures OpenAI и бывший основной составитель американского AI Action Plan Дин Болл описал регуляторную неопределённость как возможный способ вытеснить китайские open-weight модели из корпоративного использования без формального запрета open source. В качестве примера он привёл soft law ведомств и слабо обоснованные предупреждения, способные заставить регулируемые компании отказаться от таких моделей. Он также назвал одним из вероятных итогов мира с доминированием открытых весов «полный ИИ-коммунизм» и антиутопическое будущее. После критики Болл заявил, что прогнозировал плохо обоснованное вытеснение, а не поддерживал его как хорошую политику.",
+      "summary_ru": "В реакции на Kimi K3 руководитель направления strategic futures OpenAI и бывший основной составитель американского AI Action Plan Дин Болл описал регуляторную неопределённость как возможный способ вытеснить китайские open-weight модели из корпоративного использования без формального запрета open source. В качестве примера он привёл soft law ведомств и слабо обоснованные предупреждения, способные заставить регулируемые компании отказаться от таких моделей. Он также назвал одним из вероятных итогов мира с доминированием открытых весов «полный ИИ-коммунизм» и антиутопическое будущее. После критики Болл заявил, что прогнозировал плохо обоснованное вытеснение, а не поддерживал его как хорошую политику.",
+      "summary_en": "In a reaction to Kimi K3, OpenAI head of strategic futures and former principal staff drafter of the U.S. AI Action Plan Dean Ball described regulatory uncertainty as a possible way to suppress enterprise use of Chinese open-weight models without a formal open-source ban. His example was agency soft law and weakly justified warnings that could cause regulated firms to retreat. He also called one probable open-weight-dominant outcome 'full AI communism' and a dystopian future. After public criticism, Ball said he had predicted ill-justified discouragement rather than endorsed it as good policy.",
+      "notes": "Первоначальная формулировка звучала предписывающе, но последующее уточнение Болла делает вопрос о поддержке такой политики спорным. Посты не доказывают позицию OpenAI, план правительства США, существование реального бюллетеня ФРС, наличие бэкдоров в Kimi или уже проведённую FUD-кампанию. Публичная критика со стороны американских чиновников также показывает конфликт, а не единую государственно-корпоративную стратегию.",
+      "notes_ru": "Первоначальная формулировка звучала предписывающе, но последующее уточнение Болла делает вопрос о поддержке такой политики спорным. Посты не доказывают позицию OpenAI, план правительства США, существование реального бюллетеня ФРС, наличие бэкдоров в Kimi или уже проведённую FUD-кампанию. Публичная критика со стороны американских чиновников также показывает конфликт, а не единую государственно-корпоративную стратегию.",
+      "notes_en": "The initial wording sounded prescriptive, but Ball's clarification makes his intended endorsement contested. The posts do not establish an OpenAI position, a U.S. government plan, an actual Federal Reserve bulletin, backdoors in Kimi or an implemented FUD campaign. Public criticism from U.S. officials also shows disagreement rather than a unified state-industry strategy.",
+      "safe_wording": "Фиксировать это как публичное описание того, как soft law и регуляторная неопределённость могут работать тихим чокпойнтом. Сохранять уточнение Болла и официальную критику; не превращать сценарий в действующую политику или доказательство бэкдоров в китайских моделях.",
+      "safe_wording_ru": "Фиксировать это как публичное описание того, как soft law и регуляторная неопределённость могут работать тихим чокпойнтом. Сохранять уточнение Болла и официальную критику; не превращать сценарий в действующую политику или доказательство бэкдоров в китайских моделях.",
+      "safe_wording_en": "Record this as a public articulation of how soft law and regulatory uncertainty could operate as a quiet checkpoint. Preserve Ball's clarification and the official backlash; do not convert the scenario into implemented policy or evidence that Chinese models contain backdoors.",
+      "corroboration_needed": "Первоначальная формулировка звучала предписывающе, но последующее уточнение Болла делает вопрос о поддержке такой политики спорным. Посты не доказывают позицию OpenAI, план правительства США, существование реального бюллетеня ФРС, наличие бэкдоров в Kimi или уже проведённую FUD-кампанию. Публичная критика со стороны американских чиновников также показывает конфликт, а не единую государственно-корпоративную стратегию.",
+      "corroboration_needed_ru": "Первоначальная формулировка звучала предписывающе, но последующее уточнение Болла делает вопрос о поддержке такой политики спорным. Посты не доказывают позицию OpenAI, план правительства США, существование реального бюллетеня ФРС, наличие бэкдоров в Kimi или уже проведённую FUD-кампанию. Публичная критика со стороны американских чиновников также показывает конфликт, а не единую государственно-корпоративную стратегию.",
+      "corroboration_needed_en": "The initial wording sounded prescriptive, but Ball's clarification makes his intended endorsement contested. The posts do not establish an OpenAI position, a U.S. government plan, an actual Federal Reserve bulletin, backdoors in Kimi or an implemented FUD campaign. Public criticism from U.S. officials also shows disagreement rather than a unified state-industry strategy.",
+      "caveat": "Первоначальная формулировка звучала предписывающе, но последующее уточнение Болла делает вопрос о поддержке такой политики спорным. Посты не доказывают позицию OpenAI, план правительства США, существование реального бюллетеня ФРС, наличие бэкдоров в Kimi или уже проведённую FUD-кампанию. Публичная критика со стороны американских чиновников также показывает конфликт, а не единую государственно-корпоративную стратегию.",
+      "caveat_ru": "Первоначальная формулировка звучала предписывающе, но последующее уточнение Болла делает вопрос о поддержке такой политики спорным. Посты не доказывают позицию OpenAI, план правительства США, существование реального бюллетеня ФРС, наличие бэкдоров в Kimi или уже проведённую FUD-кампанию. Публичная критика со стороны американских чиновников также показывает конфликт, а не единую государственно-корпоративную стратегию.",
+      "caveat_en": "The initial wording sounded prescriptive, but Ball's clarification makes his intended endorsement contested. The posts do not establish an OpenAI position, a U.S. government plan, an actual Federal Reserve bulletin, backdoors in Kimi or an implemented FUD campaign. Public criticism from U.S. officials also shows disagreement rather than a unified state-industry strategy.",
+      "caveats": [
+        "Первоначальную повелительную формулировку и последующее уточнение «прогноз, а не рекомендация» нужно показывать вместе.",
+        "Болл писал в личном публичном треде; ни OpenAI, ни американское ведомство не приняли этот сценарий как политику.",
+        "Бюллетень ФРС был гипотетическим примером, а не реальным выводом.",
+        "Ранее Болл публично поддерживал лидерство США в open-source AI, поэтому сводить его позицию к общему запрету открытых моделей нельзя."
+      ],
+      "caveats_en": [
+        "The initial imperative phrasing and the later prediction-not-recommendation clarification must be displayed together.",
+        "Ball spoke in his own public thread; no OpenAI or U.S. agency policy document adopts the scenario.",
+        "The Federal Reserve bulletin was hypothetical, not a real finding.",
+        "Ball's prior published record includes support for U.S. leadership in open-source AI, complicating a blanket anti-open-source reading."
+      ],
+      "exact_quote_short": "issue soft law that creates FUD",
+      "numbers": {
+        "formal_ban_proposed": false,
+        "implemented_policy_found": false,
+        "clarification_published": true
+      },
+      "money_status": "",
+      "confidence": "A/B",
+      "evidence_level": "A/B",
+      "status": "verified_as_speech_not_as_fact",
+      "sources": [
+        {
+          "title": "Observations on Kimi K3 and regulatory risk around Chinese open-weight models",
+          "name": "Dean W. Ball",
+          "url": "https://x.com/deanwball/status/2078133895766114412",
+          "type": "Public statement / primary",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Clarification that the soft-law scenario was a prediction rather than a recommendation",
+          "name": "Dean W. Ball",
+          "url": "https://x.com/deanwball/status/2078619513575137330",
+          "type": "Public statement / primary",
+          "date": "2026-07-19",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Kimi: Threat or menace?",
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
+          "type": "Press / wire",
+          "date": "2026-07-18",
+          "primary_or_secondary": "secondary"
+        },
+        {
+          "title": "Top Pentagon official blasts OpenAI's Dean Ball",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/07/19/pentagon-openai-dean-ball-trump-ai",
+          "type": "Government / policy",
+          "date": "2026-07-19",
+          "primary_or_secondary": "secondary"
+        },
+        {
+          "title": "Writing and Media",
+          "name": "Dean W. Ball",
+          "url": "https://www.deanball.com/writing-media",
+          "type": "Author / primary",
+          "date": "2026-07-20",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_KIMI_K3_BALL_POLICY_DEBATE",
+        "EDGE_BALL_SOFT_LAW_QUIET_ACCESS",
+        "EDGE_BALL_SOFT_LAW_OPEN_WEIGHT"
+      ],
+      "arcIds": [
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_ACCESS_CONTROL",
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
+      ],
+      "relationTypes": [
+        "key_node",
+        "sets_up",
+        "supports_with_scope",
+        "qualifies"
+      ]
+    },
+    {
+      "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+      "kind": "event",
+      "title": "Экспертно управляемый прогон GPT-5.6 нашёл и построил pre-auth RCE-цепочку wp2shell в WordPress",
+      "title_ru": "Экспертно управляемый прогон GPT-5.6 нашёл и построил pre-auth RCE-цепочку wp2shell в WordPress",
+      "title_en": "Expert-led GPT-5.6 run finds and constructs the wp2shell pre-auth WordPress RCE chain",
+      "date": "2026-07-17",
+      "source_date": "2026-07-17/2026-07-20",
+      "date_basis": "vendor_patch_and_public_disclosure_date",
+      "date_status": "",
+      "year": 2026,
+      "url": "https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/",
+      "source_name": "Searchlight Cyber / Assetnote",
+      "source_type_raw": "Security research / primary",
+      "source_type": "Security research / primary",
+      "primary_or_secondary": "primary",
+      "actor": "Adam Kues, Searchlight Cyber / Assetnote, WordPress Security Team, OpenAI, VulnCheck",
+      "actor_raw": "Adam Kues, Searchlight Cyber / Assetnote, WordPress Security Team, OpenAI, VulnCheck",
+      "actors_raw": [
+        "Adam Kues",
+        "Searchlight Cyber / Assetnote",
+        "WordPress Security Team",
+        "OpenAI",
+        "VulnCheck",
+        "Adam Kues, Searchlight Cyber / Assetnote, WordPress Security Team, OpenAI, VulnCheck"
+      ],
+      "actors": [
+        "Adam Kues",
+        "Searchlight Cyber / Assetnote",
+        "WordPress Security Team",
+        "OpenAI",
+        "VulnCheck"
+      ],
+      "actor_facets_legacy": [
+        "Adam Kues",
+        "OpenAI",
+        "Searchlight Cyber / Assetnote",
+        "VulnCheck",
+        "WordPress"
+      ],
+      "actor_facets": [
+        "Adam Kues",
+        "OpenAI",
+        "Searchlight Cyber / Assetnote",
+        "VulnCheck",
+        "WordPress"
+      ],
+      "actor_entities": [
+        "Adam Kues",
+        "OpenAI",
+        "Searchlight Cyber / Assetnote",
+        "VulnCheck",
+        "WordPress"
+      ],
+      "actor_jurisdictions": [],
+      "actor_types": [
+        "company",
+        "research"
+      ],
+      "geography_raw": [
+        "Global",
+        "US",
+        "UK"
+      ],
+      "geography": [
+        "US",
+        "UK"
+      ],
+      "jurisdictions": [
+        "US",
+        "UK"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "evidence_context": [],
+      "stack_layer": [
+        "cyber_security_patch",
+        "model_weights",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "model_weights",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "security",
+        "production",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "production",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ3",
+        "RQ5"
+      ],
+      "claim_supported": "WordPress 7.0.2 и 6.9.5 закрыли цепочку из рассинхронизации маршрутов batch REST API и SQL injection, CVE-2026-63030 вместе с CVE-2026-60137, которая позволяла получить неаутентифицированное удалённое выполнение кода на затронутых стандартных установках. WordPress указал автором находки Адама Кьюса из Assetnote / Searchlight Cyber. Кьюс сообщает, что тщательно сформулированный четырёхагентный прогон GPT-5.6 Sol Ultra нашёл исходную SQL injection и построил многоступенчатую RCE-цепочку немногим более чем за десять часов. Он проверил результат на стандартной установке, а затем потратил дополнительное человеческое время на понимание и подготовку отчёта. Независимые исследователи воспроизвели цепочку; VulnCheck сообщила более чем о двух десятках публичных PoC и эксплуатации production-систем к 20 июля.",
+      "claim_supported_ru": "WordPress 7.0.2 и 6.9.5 закрыли цепочку из рассинхронизации маршрутов batch REST API и SQL injection, CVE-2026-63030 вместе с CVE-2026-60137, которая позволяла получить неаутентифицированное удалённое выполнение кода на затронутых стандартных установках. WordPress указал автором находки Адама Кьюса из Assetnote / Searchlight Cyber. Кьюс сообщает, что тщательно сформулированный четырёхагентный прогон GPT-5.6 Sol Ultra нашёл исходную SQL injection и построил многоступенчатую RCE-цепочку немногим более чем за десять часов. Он проверил результат на стандартной установке, а затем потратил дополнительное человеческое время на понимание и подготовку отчёта. Независимые исследователи воспроизвели цепочку; VulnCheck сообщила более чем о двух десятках публичных PoC и эксплуатации production-систем к 20 июля.",
+      "claim_supported_en": "WordPress 7.0.2 and 6.9.5 fixed a REST batch-route confusion and SQL-injection chain, CVE-2026-63030 plus CVE-2026-60137, that enabled unauthenticated remote code execution on affected default installations. WordPress credited Adam Kues of Assetnote / Searchlight Cyber. Kues reports that a carefully prompted four-agent GPT-5.6 Sol Ultra run found the initial SQL injection and constructed the multi-gadget RCE chain in just over ten hours. He validated the result on a stock instance, then spent additional human time understanding and reporting it. Independent researchers reproduced the chain, and VulnCheck reported more than two dozen public PoCs and production exploitation by 20 July.",
+      "claim_challenged": "Это один экспертно управляемый прогон, а не контролируемая оценка модели и не доказательство того, что результат повторит новичок. Исследователь выбрал сложную цель, предоставил исходный код и явную задачу pre-auth-to-RCE, спроектировал многоагентный поиск, отдельно запросил эскалацию, проверил результат и подготовил раскрытие. Заявленные $25 — пропорциональная стоимость подписки, а не полная стоимость исследования. Публичный актуальный источник не подтверждает, что брокер заплатил бы $500 000 именно за эту цепочку. Последующая эксплуатация доказывает операционный эффект, но не использование ИИ атакующими.",
+      "claim_challenged_ru": "Это один экспертно управляемый прогон, а не контролируемая оценка модели и не доказательство того, что результат повторит новичок. Исследователь выбрал сложную цель, предоставил исходный код и явную задачу pre-auth-to-RCE, спроектировал многоагентный поиск, отдельно запросил эскалацию, проверил результат и подготовил раскрытие. Заявленные $25 — пропорциональная стоимость подписки, а не полная стоимость исследования. Публичный актуальный источник не подтверждает, что брокер заплатил бы $500 000 именно за эту цепочку. Последующая эксплуатация доказывает операционный эффект, но не использование ИИ атакующими.",
+      "claim_challenged_en": "This is one expert-led run, not a controlled model evaluation or evidence that novices can reproduce the result. The researcher selected the hardened target, supplied source code and an explicit pre-auth-to-RCE objective, designed the multi-agent search, requested escalation, validated the output and prepared disclosure. The stated $25 is pro-rata subscription usage, not total discovery cost. No current public source verifies that a broker would have paid $500,000 for this exact chain. Later exploitation proves operational impact, not that attackers used AI.",
+      "summary": "WordPress 7.0.2 и 6.9.5 закрыли цепочку из рассинхронизации маршрутов batch REST API и SQL injection, CVE-2026-63030 вместе с CVE-2026-60137, которая позволяла получить неаутентифицированное удалённое выполнение кода на затронутых стандартных установках. WordPress указал автором находки Адама Кьюса из Assetnote / Searchlight Cyber. Кьюс сообщает, что тщательно сформулированный четырёхагентный прогон GPT-5.6 Sol Ultra нашёл исходную SQL injection и построил многоступенчатую RCE-цепочку немногим более чем за десять часов. Он проверил результат на стандартной установке, а затем потратил дополнительное человеческое время на понимание и подготовку отчёта. Независимые исследователи воспроизвели цепочку; VulnCheck сообщила более чем о двух десятках публичных PoC и эксплуатации production-систем к 20 июля.",
+      "summary_ru": "WordPress 7.0.2 и 6.9.5 закрыли цепочку из рассинхронизации маршрутов batch REST API и SQL injection, CVE-2026-63030 вместе с CVE-2026-60137, которая позволяла получить неаутентифицированное удалённое выполнение кода на затронутых стандартных установках. WordPress указал автором находки Адама Кьюса из Assetnote / Searchlight Cyber. Кьюс сообщает, что тщательно сформулированный четырёхагентный прогон GPT-5.6 Sol Ultra нашёл исходную SQL injection и построил многоступенчатую RCE-цепочку немногим более чем за десять часов. Он проверил результат на стандартной установке, а затем потратил дополнительное человеческое время на понимание и подготовку отчёта. Независимые исследователи воспроизвели цепочку; VulnCheck сообщила более чем о двух десятках публичных PoC и эксплуатации production-систем к 20 июля.",
+      "summary_en": "WordPress 7.0.2 and 6.9.5 fixed a REST batch-route confusion and SQL-injection chain, CVE-2026-63030 plus CVE-2026-60137, that enabled unauthenticated remote code execution on affected default installations. WordPress credited Adam Kues of Assetnote / Searchlight Cyber. Kues reports that a carefully prompted four-agent GPT-5.6 Sol Ultra run found the initial SQL injection and constructed the multi-gadget RCE chain in just over ten hours. He validated the result on a stock instance, then spent additional human time understanding and reporting it. Independent researchers reproduced the chain, and VulnCheck reported more than two dozen public PoCs and production exploitation by 20 July.",
+      "notes": "Это один экспертно управляемый прогон, а не контролируемая оценка модели и не доказательство того, что результат повторит новичок. Исследователь выбрал сложную цель, предоставил исходный код и явную задачу pre-auth-to-RCE, спроектировал многоагентный поиск, отдельно запросил эскалацию, проверил результат и подготовил раскрытие. Заявленные $25 — пропорциональная стоимость подписки, а не полная стоимость исследования. Публичный актуальный источник не подтверждает, что брокер заплатил бы $500 000 именно за эту цепочку. Последующая эксплуатация доказывает операционный эффект, но не использование ИИ атакующими.",
+      "notes_ru": "Это один экспертно управляемый прогон, а не контролируемая оценка модели и не доказательство того, что результат повторит новичок. Исследователь выбрал сложную цель, предоставил исходный код и явную задачу pre-auth-to-RCE, спроектировал многоагентный поиск, отдельно запросил эскалацию, проверил результат и подготовил раскрытие. Заявленные $25 — пропорциональная стоимость подписки, а не полная стоимость исследования. Публичный актуальный источник не подтверждает, что брокер заплатил бы $500 000 именно за эту цепочку. Последующая эксплуатация доказывает операционный эффект, но не использование ИИ атакующими.",
+      "notes_en": "This is one expert-led run, not a controlled model evaluation or evidence that novices can reproduce the result. The researcher selected the hardened target, supplied source code and an explicit pre-auth-to-RCE objective, designed the multi-agent search, requested escalation, validated the output and prepared disclosure. The stated $25 is pro-rata subscription usage, not total discovery cost. No current public source verifies that a broker would have paid $500,000 for this exact chain. Later exploitation proves operational impact, not that attackers used AI.",
+      "safe_wording": "Говорить, что экспертно направляемый многоагентный прогон GPT-5.6 существенно ускорил поиск и построение новой высокоопасной цепочки в WordPress Core; исправление, CVE, независимое воспроизведение и последующая эксплуатация подтверждены. Не называть это автономным выбором цели, возможностью новичка, полной стоимостью исследования в $25 или подтверждённой сделкой на $500 000.",
+      "safe_wording_ru": "Говорить, что экспертно направляемый многоагентный прогон GPT-5.6 существенно ускорил поиск и построение новой высокоопасной цепочки в WordPress Core; исправление, CVE, независимое воспроизведение и последующая эксплуатация подтверждены. Не называть это автономным выбором цели, возможностью новичка, полной стоимостью исследования в $25 или подтверждённой сделкой на $500 000.",
+      "safe_wording_en": "Say that an expert-directed GPT-5.6 multi-agent run materially compressed discovery and exploit construction for a novel high-impact WordPress core chain, with vendor patching, CVEs, independent reproduction and later exploitation. Do not call it autonomous targeting, novice capability, a complete $25 discovery cost or a verified $500,000 exploit-market transaction.",
+      "corroboration_needed": "Это один экспертно управляемый прогон, а не контролируемая оценка модели и не доказательство того, что результат повторит новичок. Исследователь выбрал сложную цель, предоставил исходный код и явную задачу pre-auth-to-RCE, спроектировал многоагентный поиск, отдельно запросил эскалацию, проверил результат и подготовил раскрытие. Заявленные $25 — пропорциональная стоимость подписки, а не полная стоимость исследования. Публичный актуальный источник не подтверждает, что брокер заплатил бы $500 000 именно за эту цепочку. Последующая эксплуатация доказывает операционный эффект, но не использование ИИ атакующими.",
+      "corroboration_needed_ru": "Это один экспертно управляемый прогон, а не контролируемая оценка модели и не доказательство того, что результат повторит новичок. Исследователь выбрал сложную цель, предоставил исходный код и явную задачу pre-auth-to-RCE, спроектировал многоагентный поиск, отдельно запросил эскалацию, проверил результат и подготовил раскрытие. Заявленные $25 — пропорциональная стоимость подписки, а не полная стоимость исследования. Публичный актуальный источник не подтверждает, что брокер заплатил бы $500 000 именно за эту цепочку. Последующая эксплуатация доказывает операционный эффект, но не использование ИИ атакующими.",
+      "corroboration_needed_en": "This is one expert-led run, not a controlled model evaluation or evidence that novices can reproduce the result. The researcher selected the hardened target, supplied source code and an explicit pre-auth-to-RCE objective, designed the multi-agent search, requested escalation, validated the output and prepared disclosure. The stated $25 is pro-rata subscription usage, not total discovery cost. No current public source verifies that a broker would have paid $500,000 for this exact chain. Later exploitation proves operational impact, not that attackers used AI.",
+      "caveat": "Это один экспертно управляемый прогон, а не контролируемая оценка модели и не доказательство того, что результат повторит новичок. Исследователь выбрал сложную цель, предоставил исходный код и явную задачу pre-auth-to-RCE, спроектировал многоагентный поиск, отдельно запросил эскалацию, проверил результат и подготовил раскрытие. Заявленные $25 — пропорциональная стоимость подписки, а не полная стоимость исследования. Публичный актуальный источник не подтверждает, что брокер заплатил бы $500 000 именно за эту цепочку. Последующая эксплуатация доказывает операционный эффект, но не использование ИИ атакующими.",
+      "caveat_ru": "Это один экспертно управляемый прогон, а не контролируемая оценка модели и не доказательство того, что результат повторит новичок. Исследователь выбрал сложную цель, предоставил исходный код и явную задачу pre-auth-to-RCE, спроектировал многоагентный поиск, отдельно запросил эскалацию, проверил результат и подготовил раскрытие. Заявленные $25 — пропорциональная стоимость подписки, а не полная стоимость исследования. Публичный актуальный источник не подтверждает, что брокер заплатил бы $500 000 именно за эту цепочку. Последующая эксплуатация доказывает операционный эффект, но не использование ИИ атакующими.",
+      "caveat_en": "This is one expert-led run, not a controlled model evaluation or evidence that novices can reproduce the result. The researcher selected the hardened target, supplied source code and an explicit pre-auth-to-RCE objective, designed the multi-agent search, requested escalation, validated the output and prepared disclosure. The stated $25 is pro-rata subscription usage, not total discovery cost. No current public source verifies that a broker would have paid $500,000 for this exact chain. Later exploitation proves operational impact, not that attackers used AI.",
+      "caveats": [
+        "Релиз WordPress и записи CVE подтверждают уязвимости и авторство исследователя; подробный процесс использования GPT-5.6 остаётся рассказом самого исследователя.",
+        "Повторных прогонов, human-only baseline или сравнения с другими моделями не опубликовано.",
+        "Исследователь отвечал за выбор цели, конструкцию запроса, проверку, интерпретацию и согласованное раскрытие.",
+        "Эксплуатация после раскрытия не означает, что атакующие использовали GPT-5.6 или другую LLM.",
+        "Исторические публичные предложения брокеров за WordPress-эксплойты не подтверждают актуальное сравнение с $500 000 в заголовке."
+      ],
+      "caveats_en": [
+        "The WordPress release and CVE records validate the vulnerabilities and credit the researcher, while the detailed GPT-5.6 workflow remains the researcher's first-person account.",
+        "No repeated-run baseline or comparison with human-only and other-model teams was published.",
+        "The researcher remained responsible for target selection, prompt design, validation, interpretation and coordinated disclosure.",
+        "Public exploitation after disclosure does not show that the attackers used GPT-5.6 or any LLM.",
+        "Historical public WordPress broker offers do not validate the headline's current $500,000 comparison."
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "reported_model_run_hours": "just_over_10",
+        "parallel_agents": 4,
+        "reported_pro_rata_subscription_cost_usd": 25,
+        "verified_current_broker_price_usd": null,
+        "public_poc_variants_by_2026_07_19": "more_than_24",
+        "production_exploitation_observed_by": "2026-07-20",
+        "cve_ids": [
+          "CVE-2026-63030",
+          "CVE-2026-60137"
+        ],
+        "fixed_versions": [
+          "7.0.2",
+          "6.9.5",
+          "6.8.6_SQLi_only"
+        ]
+      },
+      "money_status": "",
+      "confidence": "A/B",
+      "evidence_level": "A/B",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Exploit brokers pay $500,000 for a WordPress RCE. I found one with GPT5.6 Sol Ultra and $25",
+          "name": "Searchlight Cyber / Assetnote",
+          "url": "https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/",
+          "type": "Security research / primary",
+          "date": "2026-07-20",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "WordPress 7.0.2 Release",
+          "name": "WordPress",
+          "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/",
+          "type": "Vendor advisory / primary",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "CVE-2026-63030 Detail",
+          "name": "NIST National Vulnerability Database",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63030",
+          "type": "Government / policy",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "CVE-2026-60137 Detail",
+          "name": "NIST National Vulnerability Database",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60137",
+          "type": "Government / policy",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "WP2Shell Vulnerabilities: CVE-2026-60137 and CVE-2026-63030",
+          "name": "VulnCheck",
+          "url": "https://www.vulncheck.com/blog/wp2shell",
+          "type": "Security research / independent",
+          "date": "2026-07-17",
+          "primary_or_secondary": "secondary"
+        },
+        {
+          "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+          "name": "OpenAI",
+          "url": "https://openai.com/index/gpt-5-6/",
+          "type": "Company / vendor",
+          "date": "2026-07-09",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Zerodium Offering $300,000 for WordPress Exploits",
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/zerodium-offering-300000-wordpress-exploits/",
+          "type": "Press / wire",
+          "date": "2021-03-31",
+          "primary_or_secondary": "secondary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_WP2SHELL_CYBER_ARC",
+        "EDGE_WP2SHELL_CLM006",
+        "EDGE_WP2SHELL_LLM_CVE_CORPUS_UPDATE",
+        "EDGE_WP2SHELL_AUTONOMY_THESIS"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "key_node",
+        "supports_with_scope",
+        "updates",
+        "supports_but_limits"
+      ]
     }
   ],
   "claims": [
@@ -41653,23 +42282,24 @@
     },
     {
       "id": "CLM_006_MACHINE_SPEED_CYBER",
-      "claim": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
+      "claim": "Machine-speed vulnerability discovery and exploit construction are advancing: an expert-led GPT-5.6 run produced a confirmed WordPress core RCE chain, while a first-party victim report documents an agent-framework-driven intrusion. Human control and repeatable strategic scale remain unresolved.",
       "status": "partially_verified_material_update",
-      "confidence": "B",
+      "confidence": "A/B",
       "supporting_evidence": [
         "SIG_CYBER_2025_AIXCC_FINAL",
         "SIG_CYBER_2026_OSS_CRS",
-        "SIG_2026_HF_AGENTIC_INTRUSION"
+        "SIG_2026_HF_AGENTIC_INTRUSION",
+        "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
       ],
-      "safe_wording_ru": "Hugging Face дала сильный операционный сигнал: пострадавшая компания описала многоэтапное вторжение под управлением агентного фреймворка. Но без независимой форензики, публичных IoC и данных о роли оператора нельзя утверждать, что полностью автономная наступательная способность стратегического масштаба уже доказана.",
-      "what_could_break_it": "Independent forensic publication confirming the exploit chain, end-to-end autonomy and repeatable strategic-scale operation.",
-      "safe_wording_en": "Hugging Face provides a strong operational signal: the victim described a multi-stage intrusion driven by an agent framework. Without independent forensics, public IoCs or evidence on operator involvement, fully autonomous offense at strategic scale is not yet established.",
+      "safe_wording_ru": "wp2shell подтверждает, что экспертно направляемая модель может существенно ускорить поиск и построение новой опасной цепочки; исправление, CVE, независимое воспроизведение и эксплуатация реальны. Это не доказывает автономный выбор цели, возможность новичка или полную стоимость исследования в $25. Hugging Face остаётся сильным сообщением пострадавшей стороны, но без независимой форензики и измерения роли оператора.",
+      "what_could_break_it": "Repeated controlled studies comparing expert-only, novice, model-assisted and autonomous runs, plus independent forensics establishing operator involvement and repeatable real-world scale.",
+      "safe_wording_en": "wp2shell shows that an expert-directed model can materially accelerate discovery and construction of a novel high-impact chain; the patch, CVEs, independent reproduction and exploitation are real. It does not establish autonomous target selection, novice capability or a complete $25 research cost. Hugging Face remains a strong victim-side account without independent forensics or a measure of operator involvement.",
       "kind": "claimCheck",
-      "title": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
-      "title_ru": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
-      "title_en": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
-      "claim_ru": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
-      "claim_en": "Machine-speed vulnerability discovery and fix is advancing; a first-party victim report now documents an agent-framework-driven multi-stage intrusion, while the degree of human control and reliable strategic scale remain unverified.",
+      "title": "Machine-speed vulnerability discovery and exploit construction are advancing: an expert-led GPT-5.6 run produced a confirmed WordPress core RCE chain, while a first-party victim report documents an agent-framework-driven intrusion. Human control and repeatable strategic scale remain unresolved.",
+      "title_ru": "Machine-speed vulnerability discovery and exploit construction are advancing: an expert-led GPT-5.6 run produced a confirmed WordPress core RCE chain, while a first-party victim report documents an agent-framework-driven intrusion. Human control and repeatable strategic scale remain unresolved.",
+      "title_en": "Machine-speed vulnerability discovery and exploit construction are advancing: an expert-led GPT-5.6 run produced a confirmed WordPress core RCE chain, while a first-party victim report documents an agent-framework-driven intrusion. Human control and repeatable strategic scale remain unresolved.",
+      "claim_ru": "Machine-speed vulnerability discovery and exploit construction are advancing: an expert-led GPT-5.6 run produced a confirmed WordPress core RCE chain, while a first-party victim report documents an agent-framework-driven intrusion. Human control and repeatable strategic scale remain unresolved.",
+      "claim_en": "Machine-speed vulnerability discovery and exploit construction are advancing: an expert-led GPT-5.6 run produced a confirmed WordPress core RCE chain, while a first-party victim report documents an agent-framework-driven intrusion. Human control and repeatable strategic scale remain unresolved.",
       "arcIds": [
         "ARC_CYBER_CLAIM_TO_CAVEAT",
         "AUTO_CLAIMCHECK_SUPPORT",
@@ -41691,7 +42321,8 @@
         "EDGE_AUTO_SUPPORT_018",
         "EDGE_AUTO_SUPPORT_019",
         "EDGE_CA_002",
-        "EDGE_HF_AGENTIC_INTRUSION_CLM006"
+        "EDGE_HF_AGENTIC_INTRUSION_CLM006",
+        "EDGE_WP2SHELL_CLM006"
       ]
     },
     {
@@ -41932,11 +42563,12 @@
         "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE",
         "SIG_2026_OPENAI_GPT56_VETTED_PARTNERS",
         "SIG_2026_ANTHROPIC_MYTHOS_TRUSTED_ORGS",
-        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+        "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE"
       ],
-      "safe_wording_ru": "Помимо публичных запретов и экспортных правил, контроль реализуется через review, tiered access, trusted organizations, monitoring classifiers и фильтры использования. Hugging Face сообщила, что такой фильтр заблокировал легитимный анализ материалов атаки; это конкретный случай, а не измерение общей частоты отказов.",
+      "safe_wording_ru": "Помимо публичных запретов и экспортных правил, контроль реализуется через review, уровни допуска, trusted organizations, фильтры использования и регуляторную неопределённость. Hugging Face сообщила об одном реальном отказе легитимной форензике. Дин Болл описал возможное применение soft law, но затем назвал его прогнозом; это свидетельство обсуждаемого механизма, а не действующая политика.",
       "what_could_break_it": "If providers publish evidence that these controls are rarely used or merely symbolic.",
-      "safe_wording_en": "Beyond public bans and export rules, control appears through review, tiered access, trusted organizations, monitoring classifiers and usage filters. Hugging Face reported one such filter blocking legitimate attack-artifact analysis; this is a concrete case, not a prevalence estimate.",
+      "safe_wording_en": "Beyond public bans and export rules, control appears through review, access tiers, trusted organizations, usage filters and regulatory uncertainty. Hugging Face reported one real block affecting legitimate forensics. Dean Ball described possible soft-law pressure but then called it a prediction; this is evidence of an articulated mechanism, not implemented policy.",
       "kind": "claimCheck",
       "title": "Control over AI capabilities often appears as quiet access control rather than public bans.",
       "title_ru": "Control over AI capabilities often appears as quiet access control rather than public bans.",
@@ -42738,8 +43370,8 @@
         "cyber_security_patch",
         "governance_law"
       ],
-      "thesis_ru": "Ограничения США стимулируют китайские альтернативы в чипах, облаках и открытых моделях; WAICO и обещания Си добавляют институциональный и дипломатический слой. Это стратегия обхода и создания коалиций, а не доказательство технического паритета.",
-      "safe_wording_ru": "Говорить о параллельном стеке и дипломатической конкуренции под ограничениями. Речь и учреждение организации подтверждают позиционирование, но не доказывают технический паритет, уже работающую глобальную систему или исполнение обещаний.",
+      "thesis_ru": "Ограничения США стимулируют китайские альтернативы в чипах, облаках и моделях; WAICO и обещания Си добавляют дипломатический слой, а Kimi K3 — конкретный ход на уровне frontier-сервиса. Но на дату исследования полные веса, технический отчёт и лицензия Kimi ещё ожидались. Это стратегия обхода и создания коалиций, а не доказательство технического или полного стекового паритета.",
+      "safe_wording_ru": "Разделять доступ к сервису, заявленные характеристики и фактическую публикацию весов. Говорить, что Moonshot запустила Kimi K3 и обещала полные веса к 27 июля; до публикации артефактов не называть выпуск завершённым open-source релизом и не превращать собственные тесты компании в доказанный паритет.",
       "key_nodes": [
         "export-05",
         "export-06",
@@ -42753,7 +43385,8 @@
         "SIG_2025_AISI_OPEN_CLOSED_MODEL_LAG",
         "SIG_2026_BLACKWELL_DENIAL_HUAWEI_ASCEND",
         "SIG_2026_WORLD_AI_COOPERATION_ORGANIZATION_FOUNDING",
-        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE"
+        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
+        "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT"
       ],
       "counterpoints": [
         "360 capability claim disputed.",
@@ -42762,7 +43395,8 @@
         "Bernstein market-share estimates and 2026 forecasts are secondary analyst estimates.",
         "Domestic substitution does not establish performance, software or supply-chain parity.",
         "WAICO founding and Xi's pledges do not establish operational capacity, broad legitimacy or delivered technology access.",
-        "The primary speech does not name the United States or use the phrase closed club."
+        "The primary speech does not name the United States or use the phrase closed club.",
+        "Kimi K3 service access is verified, but the promised full weights, technical report and final license were not public at the 21 July cutoff."
       ],
       "family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
       "arc_kind": "case",
@@ -42771,10 +43405,11 @@
         "Bernstein market-share estimates and 2026 forecasts are secondary analyst estimates.",
         "Domestic substitution does not establish performance, software or supply-chain parity.",
         "WAICO founding and Xi's pledges do not establish operational capacity, broad legitimacy or delivered technology access.",
-        "The primary speech does not name the United States or use the phrase closed club."
+        "The primary speech does not name the United States or use the phrase closed club.",
+        "Kimi K3 service access is verified, but the promised full weights, technical report and final license were not public at the 21 July cutoff."
       ],
-      "thesis_en": "US controls have stimulated Chinese alternatives across chips, clouds and open models; WAICO and Xi's capacity-building pledge add an institutional and diplomatic layer. This is route-around and coalition-building, not proof of technical parity.",
-      "safe_wording_en": "Describe a constrained parallel stack and diplomatic competition. The speech and founding agreement verify positioning, not technical parity, an operational global system or delivery of the announced programs.",
+      "thesis_en": "US controls have stimulated Chinese alternatives across chips, clouds and models; WAICO and Xi's pledge add a diplomatic layer, while Kimi K3 is a concrete frontier-service countermove. At the research cutoff, however, its full weights, technical report and license were still pending. This is route-around and coalition-building, not proof of technical or full-stack parity.",
+      "safe_wording_en": "Separate service access, developer-reported capability and actual weight publication. Say Moonshot launched Kimi K3 and promised full weights for 27 July; until the artifacts appear, do not call the release completed open source or turn company benchmarks into established parity.",
       "kind": "arc",
       "title": "Китайский контрстек: обход, а не паритет"
     },
@@ -42784,14 +43419,14 @@
       "arc_type": "statement_walkback",
       "status": "operational_signals_with_autonomy_caveat",
       "start_date": "2025-08-08",
-      "end_date": "2026-07-16",
+      "end_date": "2026-07-20",
       "visual_lanes": [
         "cyber_security_patch",
         "model_weights",
         "governance_law"
       ],
-      "thesis_ru": "Кибервозможности и снижение порога входа растут. Hugging Face как пострадавшая сторона описала многоэтапное вторжение через вредоносный датасет: выполнение кода, доступ уровня узла, извлечение учётных данных, перемещение между кластерами и многие тысячи действий агентного фреймворка. Это сильнее лабораторной демонстрации, но без публичных индикаторов компрометации, независимого отчёта и данных о роли оператора надёжная полностью автономная наступательная способность стратегического масштаба всё ещё не установлена.",
-      "safe_wording_ru": "Разделять сообщение пострадавшей компании, независимую проверку и доказанную способность. Говорить, что Hugging Face описала вторжение под управлением агентного фреймворка; не называть его первым полностью автономным взломом и не приписывать конкретной модели. Числа Project Canopy остаются результатами самого проекта, а корейская cyber-модель пока является планом.",
+      "thesis_ru": "Кибервозможности и темп растут по обе стороны. Hugging Face как пострадавшая сторона описала многоэтапное вторжение под управлением агентного фреймворка. Кейс wp2shell добавляет другой тип сильного сигнала: экспертно направляемый прогон GPT-5.6 за немногим более десяти часов нашёл исходную SQL injection и построил новую pre-auth RCE-цепочку в WordPress; исправление, две CVE, независимое воспроизведение и последующая эксплуатация подтверждены. Но это не автономный выбор цели и не тест новичка: человек задал цель, предоставил код, спроектировал агентов, запросил эскалацию, проверил результат и оформил раскрытие. Полностью автономное наступление стратегического масштаба остаётся недоказанным.",
+      "safe_wording_ru": "Для wp2shell разделять подтверждённую уязвимость и эксплуатацию, рассказ исследователя о роли модели и недоказанные рыночные сравнения. Говорить об экспертно управляемом ускорении поиска и построения эксплойта; не называть это автономной атакой, способностью новичка, полной стоимостью $25 или подтверждённой ценой сделки $500 000. Для Hugging Face сохранять оговорки о неизвестной модели, роли оператора и отсутствии независимой форензики.",
       "key_nodes": [
         "cyber-01",
         "cyber-02",
@@ -42831,7 +43466,8 @@
         "SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME",
         "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
         "SIG_2026_HF_AGENTIC_INTRUSION",
-        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+        "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
       ],
       "counterpoints": [
         "Provider and security-vendor telemetry often lacks public raw case data.",
@@ -42847,11 +43483,13 @@
         "Project Canopy combines structural defects and vulnerabilities; its 990 count is self-reported and not a set of independently verified CVEs.",
         "Korea's year-end specialized model is not the same promise as a longer-term Mythos-class frontier model.",
         "Hugging Face disclosed no public IoCs, attacker model, exact incident date or independent forensic report; the degree of human supervision is unresolved.",
-        "The dataset-viewer patches are temporally consistent with remediation but are not an official one-to-one exploit map."
+        "The dataset-viewer patches are temporally consistent with remediation but are not an official one-to-one exploit map.",
+        "wp2shell is one expert-led run with no repeated-run, human-only or cross-model baseline; later exploitation does not show that attackers used an LLM.",
+        "The reported $25 is pro-rata subscription usage, while no current public source verifies a $500,000 broker price for this exact chain."
       ],
       "title_en": "Cyber: operational agentic signals with an autonomy caveat",
-      "thesis_en": "Cyber capability and the attacker skill floor are moving quickly. As the victim, Hugging Face described a multi-stage malicious-dataset intrusion spanning code execution, node access, credential harvesting, lateral movement and many thousands of agent-framework actions. This is stronger than a lab demonstration, but without public IoCs, independent forensics or evidence on operator involvement, reliable fully autonomous offense at strategic scale remains unestablished.",
-      "safe_wording_en": "Separate the victim company's account, independent verification and demonstrated capability. Say Hugging Face reported an intrusion driven by an agent framework; do not call it the first fully autonomous hack or identify a model. Project Canopy's counts remain self-reported, and Korea's cyber model remains a plan.",
+      "thesis_en": "Cyber capability and tempo are rising on both sides. As the victim, Hugging Face described a multi-stage intrusion driven by an agent framework. The wp2shell case adds a different strong signal: an expert-directed GPT-5.6 run found the initial SQL injection and built a novel pre-auth WordPress RCE chain in just over ten hours; the patch, two CVEs, independent reproduction and later exploitation are confirmed. But this was not autonomous target selection or a novice test: a human set the objective, supplied source, designed the agents, requested escalation, validated the result and handled disclosure. Fully autonomous strategic-scale offense remains unproven.",
+      "safe_wording_en": "For wp2shell, separate the confirmed vulnerability and exploitation, the researcher's account of the model workflow and unverified market-price comparisons. Describe expert-directed acceleration in discovery and exploit construction; do not call it an autonomous attack, novice capability, a complete $25 cost or a verified $500,000 transaction. For Hugging Face, retain the unknown-model, operator-role and independent-forensics caveats.",
       "family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
@@ -42863,7 +43501,9 @@
         "Project Canopy combines structural defects and vulnerabilities; its 990 count is self-reported and not a set of independently verified CVEs.",
         "Korea's year-end specialized model is not the same promise as a longer-term Mythos-class frontier model.",
         "Hugging Face disclosed no public IoCs, attacker model, exact incident date or independent forensic report; the degree of human supervision is unresolved.",
-        "The dataset-viewer patches are temporally consistent with remediation but are not an official one-to-one exploit map."
+        "The dataset-viewer patches are temporally consistent with remediation but are not an official one-to-one exploit map.",
+        "wp2shell is one expert-led run with no repeated-run, human-only or cross-model baseline; later exploitation does not show that attackers used an LLM.",
+        "The reported $25 is pro-rata subscription usage, while no current public source verifies a $500,000 broker price for this exact chain."
       ],
       "kind": "arc",
       "title": "Кибер: операционные признаки агентного ускорения с оговоркой об автономии"
@@ -42874,15 +43514,15 @@
       "arc_type": "governance_by_access",
       "status": "strong",
       "start_date": "2024-10-15",
-      "end_date": "2026-07-16",
+      "end_date": "2026-07-19",
       "visual_lanes": [
         "governance_law",
         "model_weights",
         "decision_support_cognition",
         "cyber_security_patch"
       ],
-      "thesis_ru": "Доступ к моделям регулируется через частные правила допуска, проверку клиентов, trusted-access режимы и фильтры использования. Корейский меморандум показывает государственный слой оценки вокруг внешнего поставщика; инцидент Hugging Face показывает обратную сторону того же механизма, когда политика коммерческого API заблокировала легитимную форензику без публичного запрета.",
-      "safe_wording_ru": "Hugging Face не назвала поставщиков и не опубликовала заблокированные запросы. Этот эпизод подтверждает реальность частного дозирования доступа, но не доказывает, что облачные защитные меры обычно мешают реагированию на инциденты.",
+      "thesis_ru": "Доступ к моделям регулируется через частные правила допуска, проверку клиентов, trusted-access режимы, фильтры использования и регуляторную неопределённость. Инцидент Hugging Face показывает действующее ограничение легитимной форензики внешним API. Реплика Дина Болла отдельно формулирует, как soft law и предупреждения ведомств могли бы вытеснять китайские модели из регулируемых отраслей без формального запрета, но он позднее назвал это прогнозом, а не рекомендацией; действующая политика не установлена.",
+      "safe_wording_ru": "Различать наблюдаемое правило доступа и гипотетический политический механизм. Hugging Face сообщила о конкретной блокировке; Болл описал возможный сценарий и затем уточнил свою позицию. Не приписывать этот сценарий OpenAI или правительству США и не считать гипотетический бюллетень ФРС реальным.",
       "key_nodes": [
         "SIG_2025_OPENAI_USAGE_POLICY_NATIONAL_SECURITY_HIGH_STAKES",
         "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS",
@@ -42901,20 +43541,23 @@
         "SIG_2024_EU_AI_ACT_ENTERS_FORCE_GPAI",
         "SIG_EU_2026_CYBER_AI_ACTION_PLAN",
         "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
-        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+        "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE"
       ],
       "counterpoints": [
         "Private governance is opaque and not public law.",
         "Need concrete examples of exemption outcomes.",
-        "One first-party incident account cannot establish the prevalence or net security effect of commercial model guardrails."
+        "One first-party incident account cannot establish the prevalence or net security effect of commercial model guardrails.",
+        "Ball spoke in a personal public thread and later described the scenario as prediction, not recommendation; public US criticism shows disagreement rather than a unified strategy."
       ],
       "family_id": "ARC_FAMILY_ACCESS_CONTROL",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Model access is governed through private eligibility rules, customer vetting, trusted-access regimes and usage filters. Korea's MOU shows a state evaluation layer around an external provider; Hugging Face shows the reverse side of the same mechanism, where commercial API policy blocked legitimate forensics without a public ban.",
-      "safe_wording_en": "Hugging Face did not name providers or publish the blocked requests. The episode demonstrates private access gating but does not show that hosted safeguards generally obstruct incident response.",
+      "thesis_en": "Model access is governed through private eligibility rules, customer vetting, trusted-access regimes, usage filters and regulatory uncertainty. Hugging Face shows an external API constraint affecting legitimate forensics. Dean Ball separately articulated how agency soft law and warnings could deter regulated firms from Chinese models without a formal ban, but later called this a prediction rather than a recommendation; no implemented policy is established.",
+      "safe_wording_en": "Separate an observed access rule from a hypothetical policy mechanism. Hugging Face reported a concrete block; Ball described a possible scenario and then clarified his position. Do not attribute the scenario to OpenAI or the US government, or treat the hypothetical Federal Reserve bulletin as real.",
       "counterpoints_en": [
-        "One first-party incident account cannot establish the prevalence or net security effect of commercial model guardrails."
+        "One first-party incident account cannot establish the prevalence or net security effect of commercial model guardrails.",
+        "Ball spoke in a personal public thread and later described the scenario as prediction, not recommendation; public US criticism shows disagreement rather than a unified strategy."
       ],
       "kind": "arc",
       "title": "Тихий контроль доступа: политики, проверенные пользователи, ASL-3"
@@ -43138,7 +43781,7 @@
       "arc_type": "thesis_stress_test",
       "status": "mixed",
       "start_date": "2024-07-12",
-      "end_date": "2026-07-16",
+      "end_date": "2026-07-19",
       "visual_lanes": [
         "model_weights",
         "energy_compute_chips",
@@ -43146,8 +43789,8 @@
         "data_telemetry",
         "governance_law"
       ],
-      "thesis_ru": "Открытые веса создают выход на уровне модельного артефакта, но не передают автоматически данные, вычисления, инструменты и темп обновлений. Корейский конкурс проверяет контроль над происхождением и обучением весов. Инцидент Hugging Face добавляет операционный тест: когда коммерческие API заблокировали форензические материалы, локальная GLM 5.2 позволила продолжить анализ и сохранить данные внутри компании, но потребовала собственной инфраструктуры и заменила одну внешнюю зависимость другой.",
-      "safe_wording_ru": "Различать доступ к весам, локальное исполнение, готовность инфраструктуры и независимость всего стека. GLM 5.2 дала Hugging Face рабочий резервный контур в одном инциденте; это не доказывает общего превосходства открытых моделей или геополитической автономии.",
+      "thesis_ru": "Открытые веса создают выход на уровне модельного артефакта, но не передают автоматически данные, вычисления, инструменты и темп обновлений. Kimi K3 показывает конкуренцию за такой выход, однако на дату исследования была доступна как сервис, а полные веса и лицензия оставались обещанием. Реплика Дина Болла показывает ещё один возможный чокпойнт — регуляторную неопределённость вокруг происхождения модели, но это был спорный прогноз, а не действующая политика. Локальная GLM 5.2 в инциденте Hugging Face остаётся более конкретным примером условного выхода из ограничений внешнего API.",
+      "safe_wording_ru": "Различать сервисный запуск, опубликованные веса, лицензию, локальное исполнение и независимость всего стека. Сценарий soft law фиксировать как публично описанный возможный механизм вместе с последующим уточнением Болла; не выдавать его за политику OpenAI, США или доказательство бэкдоров.",
       "key_nodes": [
         "openweight-01",
         "openweight-02",
@@ -43169,7 +43812,9 @@
         "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
         "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
         "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
-        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+        "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+        "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE"
       ],
       "counterpoints": [
         "DeepSeek/Ascend serving support matters.",
@@ -43178,21 +43823,23 @@
         "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open.",
         "Korea's policy allowed open-source components when weights were reset and independently trained; it did not equate all foreign open source with dependence.",
         "The base model for Korea's cybersecurity program has not been announced.",
-        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external Chinese model artifact.",
-        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external model artifact from Z.ai."
+        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external model artifact from Z.ai.",
+        "Kimi K3 full weights and final license were pending at the cutoff; open weights would still not disclose training data or reproduce the training stack.",
+        "Ball clarified that he was predicting poorly justified soft-law pressure, not recommending it; no agency adopted the hypothetical warning."
       ],
       "family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Open weights create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Korea tests control over weight provenance and training. The Hugging Face incident adds an operational test: when commercial APIs blocked forensic artifacts, local GLM 5.2 kept the analysis running and the data in-house, but required local infrastructure and replaced one external dependency with another.",
-      "safe_wording_en": "Separate weight access, local execution, infrastructure readiness and full-stack independence. GLM 5.2 gave Hugging Face an operational fallback in one incident; this does not establish general open-model superiority or geopolitical autonomy.",
+      "thesis_en": "Open weights create an exit at the model-artifact layer but do not automatically transfer data, compute, tooling or iteration speed. Kimi K3 shows competition over that exit, but at the cutoff it was available as a service while full weights and licensing remained a promise. Dean Ball's remarks articulate another possible checkpoint, regulatory uncertainty around model origin, but as a contested prediction rather than implemented policy. Hugging Face's local GLM 5.2 fallback remains the more concrete example of a conditional exit from hosted API controls.",
+      "safe_wording_en": "Separate service launch, published weights, license, local execution and full-stack independence. Record the soft-law scenario as a publicly articulated possible mechanism together with Ball's clarification; do not present it as OpenAI or US policy or as evidence of backdoors.",
       "counterpoints_en": [
         "Soofi is still a manually gated preview; its promised permissive general release is not complete.",
         "Xi's open-source language is a state position and pledge, not proof that every Chinese AI resource is open.",
         "Korea's policy allowed open-source components when weights were reset and independently trained; it did not equate all foreign open source with dependence.",
         "The base model for Korea's cybersecurity program has not been announced.",
-        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external Chinese model artifact.",
-        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external model artifact from Z.ai."
+        "Hugging Face did not publish a controlled comparison or identify the blocked commercial providers; GLM 5.2 is itself an external model artifact from Z.ai.",
+        "Kimi K3 full weights and final license were pending at the cutoff; open weights would still not disclose training data or reproduce the training stack.",
+        "Ball clarified that he was predicting poorly justified soft-law pressure, not recommending it; no agency adopted the hypothetical warning."
       ],
       "kind": "arc",
       "title": "Открытые веса: выход или новая зависимость"
@@ -51657,6 +52304,168 @@
       "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
       "kind": "edge",
       "is_auto": false
+    },
+    {
+      "id": "EDGE_KIMI_K3_CHINA_COUNTERSTACK",
+      "source": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+      "target": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+      "visual_lane": "model_weights",
+      "evidence_level": "A/C",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "Kimi K3 is a concrete model-layer countermove, with full weights and licensing still pending at the cutoff.",
+      "summary_ru": "Kimi K3 — конкретный ответный ход на уровне моделей, но полные веса и лицензия на дату исследования ещё ожидались.",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KIMI_K3_OPEN_WEIGHT_EXIT",
+      "source": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+      "target": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "visual_lane": "model_weights",
+      "evidence_level": "A/C",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "The launch shows competition over open-weight exit options, while the actual artifact and license were still future commitments.",
+      "summary_ru": "Запуск показывает конкуренцию за выход через открытые веса, хотя сам артефакт и лицензия оставались будущим обещанием.",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_KIMI_K3_BALL_POLICY_DEBATE",
+      "source": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+      "target": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "sets_up",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "visual_lane": "governance_law",
+      "evidence_level": "A/B",
+      "strength": "medium",
+      "style": "solid",
+      "summary_en": "The Kimi launch triggered a public debate over whether regulatory uncertainty could become a market-access checkpoint.",
+      "summary_ru": "Запуск Kimi вызвал публичный спор о том, может ли регуляторная неопределённость стать чокпойнтом доступа к рынку.",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_BALL_SOFT_LAW_QUIET_ACCESS",
+      "source": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+      "target": "ARC_QUIET_ACCESS_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_QUIET_ACCESS_CONTROL",
+      "visual_lane": "governance_law",
+      "evidence_level": "A/B",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "A prominent policy participant articulated soft law as a possible quiet checkpoint, then clarified that he was predicting rather than recommending it.",
+      "summary_ru": "Участник политической дискуссии сформулировал soft law как возможный тихий чокпойнт, а затем уточнил, что прогнозировал, а не рекомендовал его.",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_BALL_SOFT_LAW_OPEN_WEIGHT",
+      "source": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+      "target": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "qualifies",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "visual_lane": "governance_law",
+      "evidence_level": "A/B",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "Even locally runnable weights can face adoption constraints through compliance uncertainty, but this example is discourse rather than policy.",
+      "summary_ru": "Даже локально исполняемые веса могут столкнуться с ограничениями через комплаенс-неопределённость, но здесь зафиксирована дискуссия, а не политика.",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_WP2SHELL_CYBER_ARC",
+      "source": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "A confirmed, reproduced and exploited chain strongly supports expert-level time compression while leaving novice and autonomous capability untested.",
+      "summary_ru": "Подтверждённая, воспроизведённая и эксплуатируемая цепочка сильно поддерживает тезис об ускорении эксперта, но не проверяет новичка или автономную способность.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_WP2SHELL_CLM006",
+      "source": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+      "target": "CLM_006_MACHINE_SPEED_CYBER",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "updates",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "The case materially strengthens the evidence for AI-assisted vulnerability and exploit discovery under expert direction.",
+      "summary_ru": "Кейс существенно усиливает доказательства ИИ-ускорения поиска уязвимостей и построения эксплойта под управлением эксперта.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_WP2SHELL_LLM_CVE_CORPUS_UPDATE",
+      "source": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+      "target": "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "updates",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "A/B",
+      "strength": "medium",
+      "style": "dashed",
+      "summary_en": "A high-impact post-cutoff outlier adds explicit LLM attribution without overturning the earlier finding that attribution across CVE corpora is sparse.",
+      "summary_ru": "Сильный выброс после даты среза добавляет явную LLM-атрибуцию, но не отменяет прежний вывод о её редкости в корпусах CVE.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false
+    },
+    {
+      "id": "EDGE_WP2SHELL_AUTONOMY_THESIS",
+      "source": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+      "target": "THESIS_NOT_AUTONOMOUS_OFFENSE",
+      "source_kind": "evidence",
+      "target_kind": "synthetic_thesis",
+      "relation": "supports_but_limits",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "visual_lane": "cyber_security_patch",
+      "evidence_level": "A/B",
+      "strength": "high",
+      "style": "solid",
+      "summary_en": "The case demonstrates meaningful agentic acceleration and explicit human control at the same time.",
+      "summary_ru": "Кейс одновременно показывает существенное агентное ускорение и явный человеческий контроль.",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "kind": "edge",
+      "is_auto": false
     }
   ],
   "thesisNodes": [
@@ -51689,9 +52498,9 @@
       "id": "THESIS_NOT_AUTONOMOUS_OFFENSE",
       "kind": "synthetic_thesis",
       "label_ru": "Агентное ускорение кибератак видно; стратегическая автономия не доказана",
-      "summary_ru": "Наблюдаемы защитный поиск и устранение уязвимостей, вредоносные артефакты, быстрое развёртывание агентов и реальные журналы атак. Hugging Face как пострадавшая сторона теперь описала многоэтапное вторжение под управлением агентного фреймворка. Это сильный операционный сигнал, но без независимой форензики, публичных индикаторов компрометации и данных о роли оператора полностью автономное наступление стратегического масштаба остаётся недоказанным.",
+      "summary_ru": "Операционное ускорение видно в двух разных формах: Hugging Face описала реальное многоэтапное вторжение под управлением агентного фреймворка, а экспертно направляемый прогон GPT-5.6 построил подтверждённую WordPress RCE-цепочку, которую затем воспроизвели и начали эксплуатировать. В первом случае неизвестна роль оператора; во втором человек явно задавал цель и управлял исследованием. Это сильные свидетельства ускорения, но не доказательство надёжного полностью автономного наступления стратегического масштаба.",
       "label_en": "Agentic cyber acceleration is visible; strategic autonomy is unproven",
-      "summary_en": "Defensive find-and-fix, malicious artifacts, rapid agent deployment and real attack logs are observable. As the victim, Hugging Face now describes a multi-stage intrusion driven by an agent framework. This is a strong operational signal, but without independent forensics, public IoCs or evidence on operator involvement, fully autonomous strategic-scale offense remains unproven."
+      "summary_en": "Operational acceleration is visible in two distinct forms: Hugging Face described a real multi-stage intrusion driven by an agent framework, while an expert-directed GPT-5.6 run built a confirmed WordPress RCE chain that was then reproduced and exploited. Operator involvement is unknown in the first case and explicit in the second. These are strong acceleration signals, not proof of reliable fully autonomous strategic-scale offense."
     }
   ],
   "countries": [
@@ -52265,7 +53074,7 @@
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
     ],
-    "edge_count": 455,
+    "edge_count": 464,
     "v0_13_added_evidence": 6,
     "v0_13_added_edges": 6,
     "v0_14_added_evidence": 11,
@@ -52310,6 +53119,9 @@
     "v0_23_added_evidence": 2,
     "v0_23_added_edges": 6,
     "v0_23_added_arcs": [],
+    "v0_24_added_evidence": 3,
+    "v0_24_added_edges": 9,
+    "v0_24_added_arcs": [],
     "computed_arc_count": 24,
     "computed_arc_to_thesis_counts": {
       "ARC_EXPORT_CHIPS_TO_MODELS": 2,
@@ -53283,7 +54095,7 @@
       ]
     },
     {
-      "id": "src-369",
+      "id": "src-383",
       "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
       "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -53378,7 +54190,7 @@
       ]
     },
     {
-      "id": "src-337",
+      "id": "src-351",
       "title": "CRS R48642 PDF",
       "name": "CRS R48642 PDF",
       "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -53454,7 +54266,7 @@
       ]
     },
     {
-      "id": "src-361",
+      "id": "src-375",
       "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
       "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -53473,7 +54285,7 @@
       ]
     },
     {
-      "id": "src-323",
+      "id": "src-337",
       "title": "DeepSeek, Huawei, Export Controls (CSIS)",
       "name": "DeepSeek, Huawei, Export Controls (CSIS)",
       "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -53701,7 +54513,7 @@
       ]
     },
     {
-      "id": "src-324",
+      "id": "src-338",
       "title": "How China's GLM-5 Works",
       "name": "How China's GLM-5 Works",
       "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -53739,7 +54551,7 @@
       ]
     },
     {
-      "id": "src-334",
+      "id": "src-348",
       "title": "India Fuels Its AI Mission With NVIDIA",
       "name": "India Fuels Its AI Mission With NVIDIA",
       "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -53777,7 +54589,7 @@
       ]
     },
     {
-      "id": "src-326",
+      "id": "src-340",
       "title": "Microsoft and U.S. join AI forces in UAE deal",
       "name": "Microsoft and U.S. join AI forces in UAE deal",
       "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -53910,7 +54722,7 @@
       ]
     },
     {
-      "id": "src-358",
+      "id": "src-372",
       "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
       "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -54309,7 +55121,7 @@
       ]
     },
     {
-      "id": "src-364",
+      "id": "src-378",
       "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
       "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -54537,7 +55349,7 @@
       ]
     },
     {
-      "id": "src-335",
+      "id": "src-349",
       "title": "U.S. Export Controls and China (CRS R48642)",
       "name": "U.S. Export Controls and China (CRS R48642)",
       "url": "https://www.congress.gov/crs-product/R48642",
@@ -54689,7 +55501,7 @@
       ]
     },
     {
-      "id": "src-375",
+      "id": "src-389",
       "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
       "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -54704,7 +55516,7 @@
       ]
     },
     {
-      "id": "src-371",
+      "id": "src-385",
       "title": "A Kill Switch for Frontier AI (Lawfare)",
       "name": "A Kill Switch for Frontier AI (Lawfare)",
       "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -54719,7 +55531,7 @@
       ]
     },
     {
-      "id": "src-356",
+      "id": "src-370",
       "title": "A small number of samples can poison LLMs (Anthropic)",
       "name": "A small number of samples can poison LLMs (Anthropic)",
       "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -54734,7 +55546,7 @@
       ]
     },
     {
-      "id": "src-327",
+      "id": "src-341",
       "title": "Advanced AI chips cleared for export to UAE",
       "name": "Advanced AI chips cleared for export to UAE",
       "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -54794,7 +55606,7 @@
       ]
     },
     {
-      "id": "src-355",
+      "id": "src-369",
       "title": "AIxCC finals winners (DARPA)",
       "name": "AIxCC finals winners (DARPA)",
       "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -54809,7 +55621,7 @@
       ]
     },
     {
-      "id": "src-350",
+      "id": "src-364",
       "title": "AIxCC marks pivotal inflection point (DARPA)",
       "name": "AIxCC marks pivotal inflection point (DARPA)",
       "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -54824,7 +55636,7 @@
       ]
     },
     {
-      "id": "src-357",
+      "id": "src-371",
       "title": "Alan Turing Institute summary",
       "name": "Alan Turing Institute summary",
       "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -54974,7 +55786,7 @@
       ]
     },
     {
-      "id": "src-359",
+      "id": "src-373",
       "title": "Anthropic awarded $200M DOD agreement",
       "name": "Anthropic awarded $200M DOD agreement",
       "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -54989,7 +55801,7 @@
       ]
     },
     {
-      "id": "src-352",
+      "id": "src-366",
       "title": "Anthropic claims met with doubt (BleepingComputer)",
       "name": "Anthropic claims met with doubt (BleepingComputer)",
       "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -55019,7 +55831,7 @@
       ]
     },
     {
-      "id": "src-365",
+      "id": "src-379",
       "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
       "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -55034,7 +55846,7 @@
       ]
     },
     {
-      "id": "src-368",
+      "id": "src-382",
       "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
       "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -55094,7 +55906,7 @@
       ]
     },
     {
-      "id": "src-373",
+      "id": "src-387",
       "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
       "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -55244,6 +56056,21 @@
       ]
     },
     {
+      "id": "src-320",
+      "title": "Top Pentagon official blasts OpenAI's Dean Ball",
+      "name": "Axios",
+      "url": "https://www.axios.com/2026/07/19/pentagon-openai-dean-ball-trump-ai",
+      "type": "Government / policy",
+      "date": "2026-07-19",
+      "primary_or_secondary": "secondary",
+      "used_by": [
+        {
+          "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-52",
       "title": "Axios / Investopedia / U.S. Army release reporting",
       "name": "Axios / Investopedia / U.S. Army release reporting",
@@ -55289,7 +56116,7 @@
       ]
     },
     {
-      "id": "src-343",
+      "id": "src-357",
       "title": "Beijing presses Washington (Tech Times)",
       "name": "Beijing presses Washington (Tech Times)",
       "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -55304,7 +56131,7 @@
       ]
     },
     {
-      "id": "src-354",
+      "id": "src-368",
       "title": "Big Sleep agent makes big leap (Google Cloud)",
       "name": "Big Sleep agent makes big leap (Google Cloud)",
       "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -55319,7 +56146,7 @@
       ]
     },
     {
-      "id": "src-338",
+      "id": "src-352",
       "title": "BIS press release: rescission",
       "name": "BIS press release: rescission",
       "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -55349,7 +56176,7 @@
       ]
     },
     {
-      "id": "src-360",
+      "id": "src-374",
       "title": "Breaking Defense: $200M each for agentic AI",
       "name": "Breaking Defense: $200M each for agentic AI",
       "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -55364,7 +56191,7 @@
       ]
     },
     {
-      "id": "src-363",
+      "id": "src-377",
       "title": "Built for Purpose? EU AI Gigafactories (Interface)",
       "name": "Built for Purpose? EU AI Gigafactories (Interface)",
       "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -55484,7 +56311,7 @@
       ]
     },
     {
-      "id": "src-342",
+      "id": "src-356",
       "title": "China Export Controls: Critical Minerals (Andersen Institute)",
       "name": "China Export Controls: Critical Minerals (Andersen Institute)",
       "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -55499,7 +56326,7 @@
       ]
     },
     {
-      "id": "src-370",
+      "id": "src-384",
       "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
       "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -55544,7 +56371,7 @@
       ]
     },
     {
-      "id": "src-372",
+      "id": "src-386",
       "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
       "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -55604,7 +56431,7 @@
       ]
     },
     {
-      "id": "src-374",
+      "id": "src-388",
       "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
       "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -55619,7 +56446,7 @@
       ]
     },
     {
-      "id": "src-351",
+      "id": "src-365",
       "title": "Cybersecurity Dive: DARPA touts results",
       "name": "Cybersecurity Dive: DARPA touts results",
       "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -55679,7 +56506,52 @@
       ]
     },
     {
-      "id": "src-325",
+      "id": "src-317",
+      "title": "Observations on Kimi K3 and regulatory risk around Chinese open-weight models",
+      "name": "Dean W. Ball",
+      "url": "https://x.com/deanwball/status/2078133895766114412",
+      "type": "Public statement / primary",
+      "date": "2026-07-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-318",
+      "title": "Clarification that the soft-law scenario was a prediction rather than a recommendation",
+      "name": "Dean W. Ball",
+      "url": "https://x.com/deanwball/status/2078619513575137330",
+      "type": "Public statement / primary",
+      "date": "2026-07-19",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-321",
+      "title": "Writing and Media",
+      "name": "Dean W. Ball",
+      "url": "https://www.deanball.com/writing-media",
+      "type": "Author / primary",
+      "date": "2026-07-20",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-339",
       "title": "DeepSeek V4 and R2 Deep Dive",
       "name": "DeepSeek V4 and R2 Deep Dive",
       "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -55739,7 +56611,7 @@
       ]
     },
     {
-      "id": "src-331",
+      "id": "src-345",
       "title": "EIB-Commission gigafactories MoU",
       "name": "EIB-Commission gigafactories MoU",
       "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -56324,7 +57196,7 @@
       ]
     },
     {
-      "id": "src-346",
+      "id": "src-360",
       "title": "H.R.3447 text (Congress.gov)",
       "name": "H.R.3447 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -56339,7 +57211,7 @@
       ]
     },
     {
-      "id": "src-348",
+      "id": "src-362",
       "title": "H.R.6875 titles (Congress.gov)",
       "name": "H.R.6875 titles (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -56384,7 +57256,7 @@
       ]
     },
     {
-      "id": "src-349",
+      "id": "src-363",
       "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
       "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -56399,7 +57271,7 @@
       ]
     },
     {
-      "id": "src-339",
+      "id": "src-353",
       "title": "Hogan Lovells analysis",
       "name": "Hogan Lovells analysis",
       "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -56414,7 +57286,7 @@
       ]
     },
     {
-      "id": "src-347",
+      "id": "src-361",
       "title": "House Select Committee: Chip Security Act passage",
       "name": "House Select Committee: Chip Security Act passage",
       "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -56429,7 +57301,7 @@
       ]
     },
     {
-      "id": "src-322",
+      "id": "src-336",
       "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
       "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -56444,7 +57316,7 @@
       ]
     },
     {
-      "id": "src-362",
+      "id": "src-376",
       "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
       "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -56549,7 +57421,7 @@
       ]
     },
     {
-      "id": "src-328",
+      "id": "src-342",
       "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
       "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -56594,7 +57466,7 @@
       ]
     },
     {
-      "id": "src-317",
+      "id": "src-331",
       "title": "Hyperscaler capex trend",
       "name": "Hyperscaler capex trend",
       "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -56609,7 +57481,7 @@
       ]
     },
     {
-      "id": "src-321",
+      "id": "src-335",
       "title": "Hyperscaler cloud share",
       "name": "Hyperscaler cloud share",
       "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -56699,7 +57571,7 @@
       ]
     },
     {
-      "id": "src-329",
+      "id": "src-343",
       "title": "Introducing Stargate UK",
       "name": "Introducing Stargate UK",
       "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -56744,7 +57616,7 @@
       ]
     },
     {
-      "id": "src-336",
+      "id": "src-350",
       "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
       "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -56924,6 +57796,36 @@
       ]
     },
     {
+      "id": "src-315",
+      "title": "Kimi K3: Open Frontier Intelligence",
+      "name": "Moonshot AI / Kimi",
+      "url": "https://www.kimi.com/blog/kimi-k3",
+      "type": "Company / vendor",
+      "date": "2026-07-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-316",
+      "title": "Kimi Code What's New: Kimi K3",
+      "name": "Moonshot AI / Kimi",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+      "type": "Company / vendor",
+      "date": "2026-07-16",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-132",
       "title": "Morgan Stanley",
       "name": "Morgan Stanley",
@@ -57089,7 +57991,37 @@
       ]
     },
     {
-      "id": "src-341",
+      "id": "src-324",
+      "title": "CVE-2026-63030 Detail",
+      "name": "NIST National Vulnerability Database",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63030",
+      "type": "Government / policy",
+      "date": "2026-07-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-325",
+      "title": "CVE-2026-60137 Detail",
+      "name": "NIST National Vulnerability Database",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60137",
+      "type": "Government / policy",
+      "date": "2026-07-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-355",
       "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
       "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -57224,6 +58156,21 @@
       ]
     },
     {
+      "id": "src-327",
+      "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+      "name": "OpenAI",
+      "url": "https://openai.com/index/gpt-5-6/",
+      "type": "Company / vendor",
+      "date": "2026-07-09",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-109",
       "title": "OpenAI Selects Oracle Cloud Infrastructure to Extend Microsoft Azure AI Platform",
       "name": "OpenAI Selects Oracle Cloud Infrastructure to Extend Microsoft Azure AI Platform",
@@ -57284,7 +58231,7 @@
       ]
     },
     {
-      "id": "src-333",
+      "id": "src-347",
       "title": "PIB: India common computing facility",
       "name": "PIB: India common computing facility",
       "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -57824,7 +58771,7 @@
       ]
     },
     {
-      "id": "src-344",
+      "id": "src-358",
       "title": "S.3150 text (Congress.gov)",
       "name": "S.3150 text (Congress.gov)",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -57839,7 +58786,37 @@
       ]
     },
     {
-      "id": "src-345",
+      "id": "src-322",
+      "title": "Exploit brokers pay $500,000 for a WordPress RCE. I found one with GPT5.6 Sol Ultra and $25",
+      "name": "Searchlight Cyber / Assetnote",
+      "url": "https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/",
+      "type": "Security research / primary",
+      "date": "2026-07-20",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-328",
+      "title": "Zerodium Offering $300,000 for WordPress Exploits",
+      "name": "SecurityWeek",
+      "url": "https://www.securityweek.com/zerodium-offering-300000-wordpress-exploits/",
+      "type": "Press / wire",
+      "date": "2021-03-31",
+      "primary_or_secondary": "secondary",
+      "used_by": [
+        {
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-359",
       "title": "Senate Banking GAIN AI Act release",
       "name": "Senate Banking GAIN AI Act release",
       "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -57944,7 +58921,7 @@
       ]
     },
     {
-      "id": "src-320",
+      "id": "src-334",
       "title": "Stanford 2026 AI Index (via BigGo)",
       "name": "Stanford 2026 AI Index (via BigGo)",
       "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -57959,7 +58936,7 @@
       ]
     },
     {
-      "id": "src-319",
+      "id": "src-333",
       "title": "Stanford AI Index 2026 (via TNW)",
       "name": "Stanford AI Index 2026 (via TNW)",
       "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -57974,7 +58951,7 @@
       ]
     },
     {
-      "id": "src-318",
+      "id": "src-332",
       "title": "Stargate stalls (The Information via The Decoder)",
       "name": "Stargate stalls (The Information via The Decoder)",
       "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -57989,7 +58966,7 @@
       ]
     },
     {
-      "id": "src-330",
+      "id": "src-344",
       "title": "Stargate UK paused (Data Centre Magazine)",
       "name": "Stargate UK paused (Data Centre Magazine)",
       "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -58064,7 +59041,7 @@
       ]
     },
     {
-      "id": "src-316",
+      "id": "src-330",
       "title": "Tech AI spending may approach $700 billion this year",
       "name": "Tech AI spending may approach $700 billion this year",
       "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -58094,6 +59071,21 @@
       ]
     },
     {
+      "id": "src-319",
+      "title": "Kimi: Threat or menace?",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
+      "type": "Press / wire",
+      "date": "2026-07-18",
+      "primary_or_secondary": "secondary",
+      "used_by": [
+        {
+          "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-53",
       "title": "TechRadar / FT / UK reporting",
       "name": "TechRadar / FT / UK reporting",
@@ -58109,7 +59101,7 @@
       ]
     },
     {
-      "id": "src-315",
+      "id": "src-329",
       "title": "The 2025 AI Index Report",
       "name": "The 2025 AI Index Report",
       "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -58259,7 +59251,7 @@
       ]
     },
     {
-      "id": "src-367",
+      "id": "src-381",
       "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
       "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -58274,7 +59266,7 @@
       ]
     },
     {
-      "id": "src-366",
+      "id": "src-380",
       "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
       "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -58289,7 +59281,7 @@
       ]
     },
     {
-      "id": "src-340",
+      "id": "src-354",
       "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
       "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -58604,6 +59596,21 @@
       ]
     },
     {
+      "id": "src-326",
+      "title": "WP2Shell Vulnerabilities: CVE-2026-60137 and CVE-2026-63030",
+      "name": "VulnCheck",
+      "url": "https://www.vulncheck.com/blog/wp2shell",
+      "type": "Security research / independent",
+      "date": "2026-07-17",
+      "primary_or_secondary": "secondary",
+      "used_by": [
+        {
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
       "id": "src-51",
       "title": "Washington Post",
       "name": "Washington Post",
@@ -58634,7 +59641,7 @@
       ]
     },
     {
-      "id": "src-353",
+      "id": "src-367",
       "title": "What we know and what we're watching (SC Media)",
       "name": "What we know and what we're watching (SC Media)",
       "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -58664,7 +59671,7 @@
       ]
     },
     {
-      "id": "src-332",
+      "id": "src-346",
       "title": "Who Controls Europe's AI Future? (Open Future)",
       "name": "Who Controls Europe's AI Future? (Open Future)",
       "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -58704,6 +59711,21 @@
       "used_by": [
         {
           "id": "SIG_2025_PALANTIR_ICE_IMMIGRATIONOS",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "src-323",
+      "title": "WordPress 7.0.2 Release",
+      "name": "WordPress",
+      "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/",
+      "type": "Vendor advisory / primary",
+      "date": "2026-07-17",
+      "primary_or_secondary": "primary",
+      "used_by": [
+        {
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
           "kind": "event"
         }
       ]
@@ -58814,7 +59836,7 @@
           ]
         },
         {
-          "id": "src-369",
+          "id": "src-383",
           "title": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "name": "China's 360 says it has developed tools to match Anthropic's Mythos (Reuters)",
           "url": "https://www.yahoo.com/news/world/articles/china-360-says-developed-tools-121315251.html",
@@ -60820,7 +61842,7 @@
           ]
         },
         {
-          "id": "src-329",
+          "id": "src-343",
           "title": "Introducing Stargate UK",
           "name": "Introducing Stargate UK",
           "url": "https://openai.com/index/introducing-stargate-uk/",
@@ -60905,6 +61927,21 @@
           "used_by": [
             {
               "id": "SIG_2021_OPENAI_API_NO_WAITLIST",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-327",
+          "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+          "name": "OpenAI",
+          "url": "https://openai.com/index/gpt-5-6/",
+          "type": "Company / vendor",
+          "date": "2026-07-09",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
               "kind": "event"
             }
           ]
@@ -61007,6 +62044,10 @@
         },
         {
           "kind": "event",
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
+        },
+        {
+          "kind": "event",
           "id": "SIG_2024_OPENAI_ORACLE_OCI_CAPACITY"
         },
         {
@@ -61064,7 +62105,7 @@
           ]
         },
         {
-          "id": "src-364",
+          "id": "src-378",
           "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "name": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
           "url": "https://www.anthropic.com/news/fable-mythos-access",
@@ -61083,7 +62124,7 @@
           ]
         },
         {
-          "id": "src-356",
+          "id": "src-370",
           "title": "A small number of samples can poison LLMs (Anthropic)",
           "name": "A small number of samples can poison LLMs (Anthropic)",
           "url": "https://www.anthropic.com/research/small-samples-poison",
@@ -61173,7 +62214,7 @@
           ]
         },
         {
-          "id": "src-359",
+          "id": "src-373",
           "title": "Anthropic awarded $200M DOD agreement",
           "name": "Anthropic awarded $200M DOD agreement",
           "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
@@ -61188,7 +62229,7 @@
           ]
         },
         {
-          "id": "src-352",
+          "id": "src-366",
           "title": "Anthropic claims met with doubt (BleepingComputer)",
           "name": "Anthropic claims met with doubt (BleepingComputer)",
           "url": "https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/",
@@ -61403,7 +62444,7 @@
           ]
         },
         {
-          "id": "src-338",
+          "id": "src-352",
           "title": "BIS press release: rescission",
           "name": "BIS press release: rescission",
           "url": "https://www.bis.gov/press-release/department-commerce-rescinds-biden-era-artificial-intelligence-diffusion-rule-strengthens-chip-related",
@@ -61448,7 +62489,7 @@
           ]
         },
         {
-          "id": "src-372",
+          "id": "src-386",
           "title": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "name": "Commerce Restricted Access to Anthropic's Models: What Comes Next? (CSIS)",
           "url": "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
@@ -61635,7 +62676,7 @@
           ]
         },
         {
-          "id": "src-326",
+          "id": "src-340",
           "title": "Microsoft and U.S. join AI forces in UAE deal",
           "name": "Microsoft and U.S. join AI forces in UAE deal",
           "url": "https://www.axios.com/2024/04/17/microsoft-ai-uae-g42-china",
@@ -61654,7 +62695,7 @@
           ]
         },
         {
-          "id": "src-327",
+          "id": "src-341",
           "title": "Advanced AI chips cleared for export to UAE",
           "name": "Advanced AI chips cleared for export to UAE",
           "url": "https://www.axios.com/2024/12/07/us-uae-microsoft-g42-ai-chips",
@@ -61699,6 +62740,21 @@
           ]
         },
         {
+          "id": "src-320",
+          "title": "Top Pentagon official blasts OpenAI's Dean Ball",
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/07/19/pentagon-openai-dean-ball-trump-ai",
+          "type": "Government / policy",
+          "date": "2026-07-19",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+              "kind": "event"
+            }
+          ]
+        },
+        {
           "id": "src-52",
           "title": "Axios / Investopedia / U.S. Army release reporting",
           "name": "Axios / Investopedia / U.S. Army release reporting",
@@ -61729,7 +62785,7 @@
           ]
         },
         {
-          "id": "src-366",
+          "id": "src-380",
           "title": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "name": "Trump admin blocks foreign access to Anthropic's most powerful AI (Axios)",
           "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
@@ -61779,6 +62835,10 @@
         },
         {
           "kind": "event",
+          "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE"
+        },
+        {
+          "kind": "event",
           "id": "SIG_2024_PALANTIR_TITAN_ARMY"
         },
         {
@@ -61791,6 +62851,7 @@
         }
       ],
       "types": [
+        "Government / policy",
         "Press / wire",
         "Secondary source"
       ]
@@ -61819,7 +62880,7 @@
           ]
         },
         {
-          "id": "src-337",
+          "id": "src-351",
           "title": "CRS R48642 PDF",
           "name": "CRS R48642 PDF",
           "url": "https://www.congress.gov/crs_external_products/R/PDF/R48642/R48642.5.pdf",
@@ -61857,7 +62918,7 @@
           ]
         },
         {
-          "id": "src-335",
+          "id": "src-349",
           "title": "U.S. Export Controls and China (CRS R48642)",
           "name": "U.S. Export Controls and China (CRS R48642)",
           "url": "https://www.congress.gov/crs-product/R48642",
@@ -61891,7 +62952,7 @@
           ]
         },
         {
-          "id": "src-346",
+          "id": "src-360",
           "title": "H.R.3447 text (Congress.gov)",
           "name": "H.R.3447 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/3447/text",
@@ -61906,7 +62967,7 @@
           ]
         },
         {
-          "id": "src-348",
+          "id": "src-362",
           "title": "H.R.6875 titles (Congress.gov)",
           "name": "H.R.6875 titles (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/house-bill/6875/titles",
@@ -61921,7 +62982,7 @@
           ]
         },
         {
-          "id": "src-344",
+          "id": "src-358",
           "title": "S.3150 text (Congress.gov)",
           "name": "S.3150 text (Congress.gov)",
           "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150/text",
@@ -62061,7 +63122,7 @@
           ]
         },
         {
-          "id": "src-320",
+          "id": "src-334",
           "title": "Stanford 2026 AI Index (via BigGo)",
           "name": "Stanford 2026 AI Index (via BigGo)",
           "url": "https://finance.biggo.com/news/59Y2lJ0BrdTHlKtCX__S",
@@ -62076,7 +63137,7 @@
           ]
         },
         {
-          "id": "src-319",
+          "id": "src-333",
           "title": "Stanford AI Index 2026 (via TNW)",
           "name": "Stanford AI Index 2026 (via TNW)",
           "url": "https://thenextweb.com/news/stanford-ai-index-2026-china-us-performance-gap",
@@ -62091,7 +63152,7 @@
           ]
         },
         {
-          "id": "src-315",
+          "id": "src-329",
           "title": "The 2025 AI Index Report",
           "name": "The 2025 AI Index Report",
           "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
@@ -62384,7 +63445,7 @@
           ]
         },
         {
-          "id": "src-365",
+          "id": "src-379",
           "title": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "name": "Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5 (Bloomberg)",
           "url": "https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
@@ -62539,6 +63600,124 @@
       ]
     },
     {
+      "id": "source-group-5",
+      "family": "NIST",
+      "sources": [
+        {
+          "id": "src-86",
+          "title": "NIST",
+          "name": "NIST",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "type": "Government / policy",
+          "date": "2023-01-26",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2023_NIST_AI_RMF_1_0",
+              "kind": "event"
+            },
+            {
+              "id": "timeline-01",
+              "kind": "claim"
+            },
+            {
+              "id": "governance-01",
+              "kind": "claim"
+            }
+          ]
+        },
+        {
+          "id": "src-178",
+          "title": "CVE-2025-32711",
+          "name": "NIST National Vulnerability Database",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32711",
+          "type": "Government / policy",
+          "date": "2025-06-11",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2025_ECHOLEAK_CVE_32711",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-324",
+          "title": "CVE-2026-63030 Detail",
+          "name": "NIST National Vulnerability Database",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63030",
+          "type": "Government / policy",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-325",
+          "title": "CVE-2026-60137 Detail",
+          "name": "NIST National Vulnerability Database",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60137",
+          "type": "Government / policy",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-186",
+          "title": "CVE-2025-3248 Detail",
+          "name": "U.S. National Vulnerability Database",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3248",
+          "type": "Government / policy",
+          "date": "2025-04-11",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_LANGFLOW_REPEATED_KEV_EXPLOITATION",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2023_NIST_AI_RMF_1_0"
+        },
+        {
+          "kind": "claim",
+          "id": "timeline-01"
+        },
+        {
+          "kind": "claim",
+          "id": "governance-01"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2025_ECHOLEAK_CVE_32711"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_LANGFLOW_REPEATED_KEV_EXPLOITATION"
+        }
+      ],
+      "types": [
+        "Government / policy"
+      ]
+    },
+    {
       "id": "source-group-21",
       "family": "US DOJ",
       "sources": [
@@ -62669,7 +63848,7 @@
           ]
         },
         {
-          "id": "src-368",
+          "id": "src-382",
           "title": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "name": "Anthropic's Mythos Recall and the White House's Missing AI Safety Playbook (TechPolicy.Press)",
           "url": "https://www.techpolicy.press/anthropics-mythos-recall-and-the-white-houses-missing-ai-safety-playbook/",
@@ -62765,7 +63944,7 @@
       "family": "CNBC",
       "sources": [
         {
-          "id": "src-361",
+          "id": "src-375",
           "title": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "name": "DeepSeek V4 (CNBC, recaps R1 impact)",
           "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
@@ -62799,7 +63978,7 @@
           ]
         },
         {
-          "id": "src-316",
+          "id": "src-330",
           "title": "Tech AI spending may approach $700 billion this year",
           "name": "Tech AI spending may approach $700 billion this year",
           "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
@@ -62814,7 +63993,7 @@
           ]
         },
         {
-          "id": "src-367",
+          "id": "src-381",
           "title": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "name": "Trump admin allows Anthropic to release Mythos AI to some companies, agencies (CNBC)",
           "url": "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
@@ -62857,90 +64036,6 @@
       ]
     },
     {
-      "id": "source-group-5",
-      "family": "NIST",
-      "sources": [
-        {
-          "id": "src-86",
-          "title": "NIST",
-          "name": "NIST",
-          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-          "type": "Government / policy",
-          "date": "2023-01-26",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2023_NIST_AI_RMF_1_0",
-              "kind": "event"
-            },
-            {
-              "id": "timeline-01",
-              "kind": "claim"
-            },
-            {
-              "id": "governance-01",
-              "kind": "claim"
-            }
-          ]
-        },
-        {
-          "id": "src-178",
-          "title": "CVE-2025-32711",
-          "name": "NIST National Vulnerability Database",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32711",
-          "type": "Government / policy",
-          "date": "2025-06-11",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2025_ECHOLEAK_CVE_32711",
-              "kind": "event"
-            }
-          ]
-        },
-        {
-          "id": "src-186",
-          "title": "CVE-2025-3248 Detail",
-          "name": "U.S. National Vulnerability Database",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3248",
-          "type": "Government / policy",
-          "date": "2025-04-11",
-          "primary_or_secondary": "primary",
-          "used_by": [
-            {
-              "id": "SIG_2026_LANGFLOW_REPEATED_KEV_EXPLOITATION",
-              "kind": "event"
-            }
-          ]
-        }
-      ],
-      "used_by": [
-        {
-          "kind": "event",
-          "id": "SIG_2023_NIST_AI_RMF_1_0"
-        },
-        {
-          "kind": "claim",
-          "id": "timeline-01"
-        },
-        {
-          "kind": "claim",
-          "id": "governance-01"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2025_ECHOLEAK_CVE_32711"
-        },
-        {
-          "kind": "event",
-          "id": "SIG_2026_LANGFLOW_REPEATED_KEV_EXPLOITATION"
-        }
-      ],
-      "types": [
-        "Government / policy"
-      ]
-    },
-    {
       "id": "source-group-26",
       "family": "cloud.google.com",
       "sources": [
@@ -62964,7 +64059,7 @@
           ]
         },
         {
-          "id": "src-354",
+          "id": "src-368",
           "title": "Big Sleep agent makes big leap (Google Cloud)",
           "name": "Big Sleep agent makes big leap (Google Cloud)",
           "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-big-sleep-agent-makes-big-leap",
@@ -63041,7 +64136,7 @@
           ]
         },
         {
-          "id": "src-323",
+          "id": "src-337",
           "title": "DeepSeek, Huawei, Export Controls (CSIS)",
           "name": "DeepSeek, Huawei, Export Controls (CSIS)",
           "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race",
@@ -63084,7 +64179,7 @@
       ]
     },
     {
-      "id": "source-group-109",
+      "id": "source-group-111",
       "family": "Microsoft",
       "sources": [
         {
@@ -63186,7 +64281,7 @@
       ]
     },
     {
-      "id": "source-group-131",
+      "id": "source-group-134",
       "family": "rg.ru",
       "sources": [
         {
@@ -63274,7 +64369,7 @@
       ]
     },
     {
-      "id": "source-group-141",
+      "id": "source-group-146",
       "family": "The Guardian",
       "sources": [
         {
@@ -63385,7 +64480,7 @@
           ]
         },
         {
-          "id": "src-370",
+          "id": "src-384",
           "title": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "name": "Chinese cybersecurity company claims a better-than-Mythos bug finder (The Register)",
           "url": "https://www.theregister.com/security/2026/06/26/chinese-cybersecurity-company-claims-its-built-a-better-than-mythos-bug-finder/",
@@ -63557,7 +64652,7 @@
       "family": "darpa.mil",
       "sources": [
         {
-          "id": "src-350",
+          "id": "src-364",
           "title": "AIxCC marks pivotal inflection point (DARPA)",
           "name": "AIxCC marks pivotal inflection point (DARPA)",
           "url": "https://www.darpa.mil/news/2025/aixcc-results",
@@ -63789,7 +64884,7 @@
       ]
     },
     {
-      "id": "source-group-89",
+      "id": "source-group-91",
       "family": "government.ru",
       "sources": [
         {
@@ -63915,7 +65010,7 @@
       ]
     },
     {
-      "id": "source-group-135",
+      "id": "source-group-140",
       "family": "msit.go.kr",
       "sources": [
         {
@@ -64097,7 +65192,7 @@
       ]
     },
     {
-      "id": "source-group-103",
+      "id": "source-group-105",
       "family": "ai.meta.com",
       "sources": [
         {
@@ -64246,7 +65341,7 @@
       "family": "blogs.nvidia.com",
       "sources": [
         {
-          "id": "src-334",
+          "id": "src-348",
           "title": "India Fuels Its AI Mission With NVIDIA",
           "name": "India Fuels Its AI Mission With NVIDIA",
           "url": "https://blogs.nvidia.com/blog/india-ai-mission-infrastructure-models/",
@@ -64490,7 +65585,7 @@
       ]
     },
     {
-      "id": "source-group-148",
+      "id": "source-group-153",
       "family": "files.gao.gov",
       "sources": [
         {
@@ -64539,7 +65634,7 @@
       ]
     },
     {
-      "id": "source-group-80",
+      "id": "source-group-82",
       "family": "ftc.gov",
       "sources": [
         {
@@ -64589,7 +65684,7 @@
       ]
     },
     {
-      "id": "source-group-147",
+      "id": "source-group-152",
       "family": "gao.gov",
       "sources": [
         {
@@ -64794,7 +65889,7 @@
       "family": "letsdatascience.com",
       "sources": [
         {
-          "id": "src-324",
+          "id": "src-338",
           "title": "How China's GLM-5 Works",
           "name": "How China's GLM-5 Works",
           "url": "https://letsdatascience.com/blog/china-trained-frontier-ai-model-glm-5-without-nvidia",
@@ -64832,7 +65927,7 @@
       "family": "owasp.org",
       "sources": [
         {
-          "id": "src-358",
+          "id": "src-372",
           "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "name": "OWASP Top 10 for LLM Applications 2025 (PDF)",
           "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf",
@@ -64904,7 +65999,7 @@
       ]
     },
     {
-      "id": "source-group-88",
+      "id": "source-group-90",
       "family": "pib.gov.in",
       "sources": [
         {
@@ -64923,7 +66018,7 @@
           ]
         },
         {
-          "id": "src-333",
+          "id": "src-347",
           "title": "PIB: India common computing facility",
           "name": "PIB: India common computing facility",
           "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2097709",
@@ -64954,7 +66049,7 @@
       ]
     },
     {
-      "id": "source-group-123",
+      "id": "source-group-126",
       "family": "publication.pravo.gov.ru",
       "sources": [
         {
@@ -65079,7 +66174,7 @@
       ]
     },
     {
-      "id": "source-group-79",
+      "id": "source-group-81",
       "family": "search.ftc.gov",
       "sources": [
         {
@@ -65167,7 +66262,7 @@
       ]
     },
     {
-      "id": "source-group-138",
+      "id": "source-group-143",
       "family": "sysdig.com",
       "sources": [
         {
@@ -65229,6 +66324,55 @@
       "types": [
         "Company / vendor",
         "Research / preprint"
+      ]
+    },
+    {
+      "id": "source-group-145",
+      "family": "techcrunch.com",
+      "sources": [
+        {
+          "id": "src-190",
+          "title": "The first AI-run ransomware attack still needed a human",
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/06/the-first-ai-run-ransomware-attack-still-needed-a-human/",
+          "type": "Press / wire",
+          "date": "2026-07-06",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_JADEPUFFER_AGENTIC_EXTORTION",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-319",
+          "title": "Kimi: Threat or menace?",
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
+          "type": "Press / wire",
+          "date": "2026-07-18",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_JADEPUFFER_AGENTIC_EXTORTION"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE"
+        }
+      ],
+      "types": [
+        "Press / wire"
       ]
     },
     {
@@ -65361,7 +66505,7 @@
       ]
     },
     {
-      "id": "source-group-78",
+      "id": "source-group-80",
       "family": "US Government / GovInfo",
       "sources": [
         {
@@ -65410,7 +66554,7 @@
       ]
     },
     {
-      "id": "source-group-124",
+      "id": "source-group-127",
       "family": "x.ai",
       "sources": [
         {
@@ -65459,7 +66603,7 @@
       ]
     },
     {
-      "id": "source-group-130",
+      "id": "source-group-133",
       "family": "agentsofchaos.baulab.info",
       "sources": [
         {
@@ -65489,7 +66633,7 @@
       ]
     },
     {
-      "id": "source-group-87",
+      "id": "source-group-89",
       "family": "ai.google.dev",
       "sources": [
         {
@@ -65523,7 +66667,7 @@
       "family": "aicyberchallenge.com",
       "sources": [
         {
-          "id": "src-355",
+          "id": "src-369",
           "title": "AIxCC finals winners (DARPA)",
           "name": "AIxCC finals winners (DARPA)",
           "url": "https://aicyberchallenge.com/finals-winners-announcement/",
@@ -65613,7 +66757,7 @@
       "family": "anderseninstitute.org",
       "sources": [
         {
-          "id": "src-342",
+          "id": "src-356",
           "title": "China Export Controls: Critical Minerals (Andersen Institute)",
           "name": "China Export Controls: Critical Minerals (Andersen Institute)",
           "url": "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
@@ -65639,7 +66783,7 @@
       ]
     },
     {
-      "id": "source-group-73",
+      "id": "source-group-75",
       "family": "api-docs.deepseek.com",
       "sources": [
         {
@@ -65669,11 +66813,11 @@
       ]
     },
     {
-      "id": "source-group-133",
+      "id": "source-group-138",
       "family": "banking.senate.gov",
       "sources": [
         {
-          "id": "src-345",
+          "id": "src-359",
           "title": "Senate Banking GAIN AI Act release",
           "name": "Senate Banking GAIN AI Act release",
           "url": "https://www.banking.senate.gov/newsroom/minority/banks-warren-cotton-schumer-mccormick-coons-introduce-landmark-bipartisan-gain-ai-act-to-maintain-us-position-as-worlds-leader-in-critical-artificial-intelligence-chips",
@@ -65733,7 +66877,7 @@
       "family": "breakingdefense.com",
       "sources": [
         {
-          "id": "src-360",
+          "id": "src-374",
           "title": "Breaking Defense: $200M each for agentic AI",
           "name": "Breaking Defense: $200M each for agentic AI",
           "url": "https://breakingdefense.com/2025/07/anthropic-google-and-xai-win-200m-each-from-pentagon-ai-chief-for-agentic-ai/",
@@ -65849,7 +66993,7 @@
       ]
     },
     {
-      "id": "source-group-146",
+      "id": "source-group-151",
       "family": "cases.justia.com",
       "sources": [
         {
@@ -65969,11 +67113,11 @@
       ]
     },
     {
-      "id": "source-group-94",
+      "id": "source-group-96",
       "family": "chinaselectcommittee.house.gov",
       "sources": [
         {
-          "id": "src-347",
+          "id": "src-361",
           "title": "House Select Committee: Chip Security Act passage",
           "name": "House Select Committee: Chip Security Act passage",
           "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act",
@@ -65999,7 +67143,7 @@
       ]
     },
     {
-      "id": "source-group-145",
+      "id": "source-group-150",
       "family": "cisa.gov",
       "sources": [
         {
@@ -66108,7 +67252,7 @@
       "family": "cybersecuritydive.com",
       "sources": [
         {
-          "id": "src-351",
+          "id": "src-365",
           "title": "Cybersecurity Dive: DARPA touts results",
           "name": "Cybersecurity Dive: DARPA touts results",
           "url": "https://www.cybersecuritydive.com/news/darpa-ai-cyber-challenge-winners-def-con/757252/",
@@ -66134,11 +67278,11 @@
       ]
     },
     {
-      "id": "source-group-137",
+      "id": "source-group-142",
       "family": "datacentremagazine.com",
       "sources": [
         {
-          "id": "src-330",
+          "id": "src-344",
           "title": "Stargate UK paused (Data Centre Magazine)",
           "name": "Stargate UK paused (Data Centre Magazine)",
           "url": "https://datacentremagazine.com/news/stargate-uk-why-is-openai-halting-ai-data-centre-project",
@@ -66164,11 +67308,41 @@
       ]
     },
     {
+      "id": "source-group-73",
+      "family": "deanball.com",
+      "sources": [
+        {
+          "id": "src-321",
+          "title": "Writing and Media",
+          "name": "Dean W. Ball",
+          "url": "https://www.deanball.com/writing-media",
+          "type": "Author / primary",
+          "date": "2026-07-20",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE"
+        }
+      ],
+      "types": [
+        "Author / primary"
+      ]
+    },
+    {
       "id": "source-group-55",
       "family": "defensescoop.com",
       "sources": [
         {
-          "id": "src-373",
+          "id": "src-387",
           "title": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "name": "Army plans big shakeup; $10B Palantir deal (DefenseScoop)",
           "url": "https://defensescoop.com/2025/07/31/army-palantir-software-enterprise-agreement-10-billion/",
@@ -66194,11 +67368,11 @@
       ]
     },
     {
-      "id": "source-group-75",
+      "id": "source-group-77",
       "family": "eib.org",
       "sources": [
         {
-          "id": "src-331",
+          "id": "src-345",
           "title": "EIB-Commission gigafactories MoU",
           "name": "EIB-Commission gigafactories MoU",
           "url": "https://www.eib.org/en/press/all/2025-491-eib-group-and-european-commission-join-forces-to-finance-ai-gigafactories",
@@ -66224,7 +67398,7 @@
       ]
     },
     {
-      "id": "source-group-76",
+      "id": "source-group-78",
       "family": "elysee.fr",
       "sources": [
         {
@@ -66254,7 +67428,7 @@
       ]
     },
     {
-      "id": "source-group-155",
+      "id": "source-group-162",
       "family": "en.yna.co.kr",
       "sources": [
         {
@@ -66284,11 +67458,11 @@
       ]
     },
     {
-      "id": "source-group-100",
+      "id": "source-group-102",
       "family": "epoch.ai",
       "sources": [
         {
-          "id": "src-317",
+          "id": "src-331",
           "title": "Hyperscaler capex trend",
           "name": "Hyperscaler capex trend",
           "url": "https://epoch.ai/data-insights/hyperscaler-capex-trend",
@@ -66314,11 +67488,11 @@
       ]
     },
     {
-      "id": "source-group-122",
+      "id": "source-group-125",
       "family": "finance.yahoo.com",
       "sources": [
         {
-          "id": "src-341",
+          "id": "src-355",
           "title": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "name": "Nvidia hasn't finalized 15% deal (Yahoo/Nvidia CFO)",
           "url": "https://finance.yahoo.com/news/nvidia-still-hasnt-finalized-deal-to-kick-15-of-h20-china-chip-sales-back-to-the-us-government-230229161.html",
@@ -66344,7 +67518,7 @@
       ]
     },
     {
-      "id": "source-group-82",
+      "id": "source-group-84",
       "family": "flare.io",
       "sources": [
         {
@@ -66374,7 +67548,7 @@
       ]
     },
     {
-      "id": "source-group-118",
+      "id": "source-group-121",
       "family": "flk.npc.gov.cn",
       "sources": [
         {
@@ -66404,7 +67578,7 @@
       ]
     },
     {
-      "id": "source-group-111",
+      "id": "source-group-113",
       "family": "fmprc.gov.cn",
       "sources": [
         {
@@ -66434,11 +67608,11 @@
       ]
     },
     {
-      "id": "source-group-92",
+      "id": "source-group-94",
       "family": "foreignaffairs.house.gov",
       "sources": [
         {
-          "id": "src-349",
+          "id": "src-363",
           "title": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "name": "HFAC: Chairman Mast introduces AI OVERWATCH Act",
           "url": "https://foreignaffairs.house.gov/news/press-releases/chairman-mast-introduces-ai-overwatch-act-to-secure-america-s-technological-dominance",
@@ -66464,7 +67638,7 @@
       ]
     },
     {
-      "id": "source-group-81",
+      "id": "source-group-83",
       "family": "fsb.org",
       "sources": [
         {
@@ -66494,7 +67668,7 @@
       ]
     },
     {
-      "id": "source-group-85",
+      "id": "source-group-87",
       "family": "g42.ai",
       "sources": [
         {
@@ -66524,7 +67698,7 @@
       ]
     },
     {
-      "id": "source-group-86",
+      "id": "source-group-88",
       "family": "garant.ru",
       "sources": [
         {
@@ -66554,7 +67728,7 @@
       ]
     },
     {
-      "id": "source-group-90",
+      "id": "source-group-92",
       "family": "government.nl",
       "sources": [
         {
@@ -66584,7 +67758,7 @@
       ]
     },
     {
-      "id": "source-group-74",
+      "id": "source-group-76",
       "family": "gur.gov.ua",
       "sources": [
         {
@@ -66614,7 +67788,7 @@
       ]
     },
     {
-      "id": "source-group-84",
+      "id": "source-group-86",
       "family": "gxt.fujian.gov.cn",
       "sources": [
         {
@@ -66644,7 +67818,7 @@
       ]
     },
     {
-      "id": "source-group-91",
+      "id": "source-group-93",
       "family": "habr.com",
       "sources": [
         {
@@ -66674,11 +67848,11 @@
       ]
     },
     {
-      "id": "source-group-93",
+      "id": "source-group-95",
       "family": "hoganlovells.com",
       "sources": [
         {
-          "id": "src-339",
+          "id": "src-353",
           "title": "Hogan Lovells analysis",
           "name": "Hogan Lovells analysis",
           "url": "https://www.hoganlovells.com/en/publications/bis-announces-rescission-of-bidenera-ai-diffusion-rule-and-issues-guidance",
@@ -66704,7 +67878,7 @@
       ]
     },
     {
-      "id": "source-group-98",
+      "id": "source-group-100",
       "family": "hunt.io",
       "sources": [
         {
@@ -66734,7 +67908,7 @@
       ]
     },
     {
-      "id": "source-group-99",
+      "id": "source-group-101",
       "family": "Huntress",
       "sources": [
         {
@@ -66764,7 +67938,7 @@
       ]
     },
     {
-      "id": "source-group-102",
+      "id": "source-group-104",
       "family": "iea.org",
       "sources": [
         {
@@ -66809,7 +67983,7 @@
       ]
     },
     {
-      "id": "source-group-83",
+      "id": "source-group-85",
       "family": "iis.fraunhofer.de",
       "sources": [
         {
@@ -66843,7 +68017,7 @@
       "family": "interface-eu.org",
       "sources": [
         {
-          "id": "src-363",
+          "id": "src-377",
           "title": "Built for Purpose? EU AI Gigafactories (Interface)",
           "name": "Built for Purpose? EU AI Gigafactories (Interface)",
           "url": "https://www.interface-eu.org/publications/ai-gigafactories",
@@ -66869,7 +68043,7 @@
       ]
     },
     {
-      "id": "source-group-120",
+      "id": "source-group-123",
       "family": "investopedia.com",
       "sources": [
         {
@@ -66929,11 +68103,56 @@
       ]
     },
     {
-      "id": "source-group-105",
+      "id": "source-group-115",
+      "family": "kimi.com",
+      "sources": [
+        {
+          "id": "src-315",
+          "title": "Kimi K3: Open Frontier Intelligence",
+          "name": "Moonshot AI / Kimi",
+          "url": "https://www.kimi.com/blog/kimi-k3",
+          "type": "Company / vendor",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-316",
+          "title": "Kimi Code What's New: Kimi K3",
+          "name": "Moonshot AI / Kimi",
+          "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+          "type": "Company / vendor",
+          "date": "2026-07-16",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT"
+        }
+      ],
+      "types": [
+        "Company / vendor"
+      ]
+    },
+    {
+      "id": "source-group-107",
       "family": "kirkland.com",
       "sources": [
         {
-          "id": "src-336",
+          "id": "src-350",
           "title": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "name": "Kirkland & Ellis: BIS Rescission of AI Diffusion Framework",
           "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/bis-rescission-of-the-biden-administration",
@@ -66959,7 +68178,7 @@
       ]
     },
     {
-      "id": "source-group-142",
+      "id": "source-group-147",
       "family": "koreatimes.co.kr",
       "sources": [
         {
@@ -66993,7 +68212,7 @@
       "family": "lawfaremedia.org",
       "sources": [
         {
-          "id": "src-371",
+          "id": "src-385",
           "title": "A Kill Switch for Frontier AI (Lawfare)",
           "name": "A Kill Switch for Frontier AI (Lawfare)",
           "url": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai",
@@ -67019,7 +68238,7 @@
       ]
     },
     {
-      "id": "source-group-106",
+      "id": "source-group-108",
       "family": "marketwatch.com",
       "sources": [
         {
@@ -67049,7 +68268,7 @@
       ]
     },
     {
-      "id": "source-group-107",
+      "id": "source-group-109",
       "family": "McKinsey",
       "sources": [
         {
@@ -67079,11 +68298,11 @@
       ]
     },
     {
-      "id": "source-group-72",
+      "id": "source-group-74",
       "family": "meta-intelligence.tech",
       "sources": [
         {
-          "id": "src-325",
+          "id": "src-339",
           "title": "DeepSeek V4 and R2 Deep Dive",
           "name": "DeepSeek V4 and R2 Deep Dive",
           "url": "https://www.meta-intelligence.tech/en/insight-deepseek-v4-r2",
@@ -67109,7 +68328,7 @@
       ]
     },
     {
-      "id": "source-group-104",
+      "id": "source-group-106",
       "family": "meti.go.jp",
       "sources": [
         {
@@ -67139,7 +68358,7 @@
       ]
     },
     {
-      "id": "source-group-112",
+      "id": "source-group-114",
       "family": "mfa.gov.cn",
       "sources": [
         {
@@ -67169,7 +68388,7 @@
       ]
     },
     {
-      "id": "source-group-110",
+      "id": "source-group-112",
       "family": "mod.gov.ua",
       "sources": [
         {
@@ -67199,7 +68418,7 @@
       ]
     },
     {
-      "id": "source-group-113",
+      "id": "source-group-116",
       "family": "Morgan Stanley",
       "sources": [
         {
@@ -67229,7 +68448,7 @@
       ]
     },
     {
-      "id": "source-group-114",
+      "id": "source-group-117",
       "family": "mubadala.com",
       "sources": [
         {
@@ -67259,7 +68478,7 @@
       ]
     },
     {
-      "id": "source-group-119",
+      "id": "source-group-122",
       "family": "nato.int",
       "sources": [
         {
@@ -67289,7 +68508,7 @@
       ]
     },
     {
-      "id": "source-group-121",
+      "id": "source-group-124",
       "family": "navercorp.com",
       "sources": [
         {
@@ -67319,7 +68538,7 @@
       ]
     },
     {
-      "id": "source-group-115",
+      "id": "source-group-118",
       "family": "nber.org",
       "sources": [
         {
@@ -67379,11 +68598,11 @@
       ]
     },
     {
-      "id": "source-group-96",
+      "id": "source-group-98",
       "family": "newsletter.semianalysis.com",
       "sources": [
         {
-          "id": "src-362",
+          "id": "src-376",
           "title": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "name": "Huawei Ascend Production Ramp (SemiAnalysis)",
           "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
@@ -67409,7 +68628,7 @@
       ]
     },
     {
-      "id": "source-group-117",
+      "id": "source-group-120",
       "family": "npc.gov.cn",
       "sources": [
         {
@@ -67439,11 +68658,11 @@
       ]
     },
     {
-      "id": "source-group-144",
+      "id": "source-group-149",
       "family": "NPR",
       "sources": [
         {
-          "id": "src-340",
+          "id": "src-354",
           "title": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "name": "Trump says Nvidia will hand the U.S. 15% (NPR)",
           "url": "https://www.npr.org/2025/08/11/nx-s1-5498689/trump-nvidia-h20-chip-sales-china",
@@ -67469,11 +68688,11 @@
       ]
     },
     {
-      "id": "source-group-153",
+      "id": "source-group-159",
       "family": "openfuture.eu",
       "sources": [
         {
-          "id": "src-332",
+          "id": "src-346",
           "title": "Who Controls Europe's AI Future? (Open Future)",
           "name": "Who Controls Europe's AI Future? (Open Future)",
           "url": "https://openfuture.eu/blog/who-controls-europes-ai-future/",
@@ -67499,7 +68718,7 @@
       ]
     },
     {
-      "id": "source-group-125",
+      "id": "source-group-128",
       "family": "opensource.org",
       "sources": [
         {
@@ -67529,7 +68748,7 @@
       ]
     },
     {
-      "id": "source-group-127",
+      "id": "source-group-130",
       "family": "pm.gc.ca",
       "sources": [
         {
@@ -67559,7 +68778,7 @@
       ]
     },
     {
-      "id": "source-group-126",
+      "id": "source-group-129",
       "family": "PoC-in-GitHub",
       "sources": [
         {
@@ -67589,11 +68808,11 @@
       ]
     },
     {
-      "id": "source-group-97",
+      "id": "source-group-99",
       "family": "prnewswire.com",
       "sources": [
         {
-          "id": "src-328",
+          "id": "src-342",
           "title": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "name": "HUMAIN Expands Strategic Partnership with NVIDIA",
           "url": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
@@ -67619,7 +68838,7 @@
       ]
     },
     {
-      "id": "source-group-128",
+      "id": "source-group-131",
       "family": "project-plasma.org",
       "sources": [
         {
@@ -67649,7 +68868,7 @@
       ]
     },
     {
-      "id": "source-group-129",
+      "id": "source-group-132",
       "family": "rand.org",
       "sources": [
         {
@@ -67694,11 +68913,11 @@
       ]
     },
     {
-      "id": "source-group-95",
+      "id": "source-group-97",
       "family": "recodechinaai.substack.com",
       "sources": [
         {
-          "id": "src-322",
+          "id": "src-336",
           "title": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "name": "How Huawei Trains DeepSeek-R1-Class LLMs",
           "url": "https://recodechinaai.substack.com/p/how-huawei-trains-deepseek-r1-class",
@@ -67724,7 +68943,7 @@
       ]
     },
     {
-      "id": "source-group-77",
+      "id": "source-group-79",
       "family": "redditinc.com",
       "sources": [
         {
@@ -67754,11 +68973,11 @@
       ]
     },
     {
-      "id": "source-group-152",
+      "id": "source-group-158",
       "family": "scworld.com",
       "sources": [
         {
-          "id": "src-353",
+          "id": "src-367",
           "title": "What we know and what we're watching (SC Media)",
           "name": "What we know and what we're watching (SC Media)",
           "url": "https://www.scworld.com/perspective/anthropics-ai-disclosure-what-we-know-and-what-were-watching-for",
@@ -67784,7 +69003,67 @@
       ]
     },
     {
-      "id": "source-group-139",
+      "id": "source-group-137",
+      "family": "securityweek.com",
+      "sources": [
+        {
+          "id": "src-328",
+          "title": "Zerodium Offering $300,000 for WordPress Exploits",
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/zerodium-offering-300000-wordpress-exploits/",
+          "type": "Press / wire",
+          "date": "2021-03-31",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
+        }
+      ],
+      "types": [
+        "Press / wire"
+      ]
+    },
+    {
+      "id": "source-group-136",
+      "family": "slcyber.io",
+      "sources": [
+        {
+          "id": "src-322",
+          "title": "Exploit brokers pay $500,000 for a WordPress RCE. I found one with GPT5.6 Sol Ultra and $25",
+          "name": "Searchlight Cyber / Assetnote",
+          "url": "https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/",
+          "type": "Security research / primary",
+          "date": "2026-07-20",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
+        }
+      ],
+      "types": [
+        "Security research / primary"
+      ]
+    },
+    {
+      "id": "source-group-144",
       "family": "so-ups.ru",
       "sources": [
         {
@@ -67814,7 +69093,7 @@
       ]
     },
     {
-      "id": "source-group-134",
+      "id": "source-group-139",
       "family": "soofi.info",
       "sources": [
         {
@@ -67844,7 +69123,7 @@
       ]
     },
     {
-      "id": "source-group-132",
+      "id": "source-group-135",
       "family": "storage.consultant.ru",
       "sources": [
         {
@@ -67878,7 +69157,7 @@
       "family": "Tech Times",
       "sources": [
         {
-          "id": "src-343",
+          "id": "src-357",
           "title": "Beijing presses Washington (Tech Times)",
           "name": "Beijing presses Washington (Tech Times)",
           "url": "https://www.techtimes.com/articles/317037/20260522/beijing-presses-washington-honor-summit-deal-nvidia-qualcomm-probe-status-stays-unresolved.htm",
@@ -67904,11 +69183,11 @@
       ]
     },
     {
-      "id": "source-group-101",
+      "id": "source-group-103",
       "family": "techblog.comsoc.org",
       "sources": [
         {
-          "id": "src-321",
+          "id": "src-335",
           "title": "Hyperscaler cloud share",
           "name": "Hyperscaler cloud share",
           "url": "https://techblog.comsoc.org/2025/12/22/hyperscaler-capex-600-bn-in-2026-a-36-increase-over-2025-while-global-spending-on-cloud-infrastructure-services-skyrockets/",
@@ -67934,41 +69213,11 @@
       ]
     },
     {
-      "id": "source-group-140",
-      "family": "techcrunch.com",
-      "sources": [
-        {
-          "id": "src-190",
-          "title": "The first AI-run ransomware attack still needed a human",
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/06/the-first-ai-run-ransomware-attack-still-needed-a-human/",
-          "type": "Press / wire",
-          "date": "2026-07-06",
-          "primary_or_secondary": "secondary",
-          "used_by": [
-            {
-              "id": "SIG_2026_JADEPUFFER_AGENTIC_EXTORTION",
-              "kind": "event"
-            }
-          ]
-        }
-      ],
-      "used_by": [
-        {
-          "kind": "event",
-          "id": "SIG_2026_JADEPUFFER_AGENTIC_EXTORTION"
-        }
-      ],
-      "types": [
-        "Press / wire"
-      ]
-    },
-    {
-      "id": "source-group-136",
+      "id": "source-group-141",
       "family": "the-decoder.com",
       "sources": [
         {
-          "id": "src-318",
+          "id": "src-332",
           "title": "Stargate stalls (The Information via The Decoder)",
           "name": "Stargate stalls (The Information via The Decoder)",
           "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
@@ -67998,7 +69247,7 @@
       "family": "thestar.com.my",
       "sources": [
         {
-          "id": "src-374",
+          "id": "src-388",
           "title": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "name": "Customs Dept seizes 72 servers with AI chips worth RM53mil (The Star)",
           "url": "https://www.thestar.com.my/news/nation/2026/06/26/customs-dept-seizes-72-servers-with-ai-chips-worth-rm53mil",
@@ -68028,7 +69277,7 @@
       "family": "Tom's Hardware",
       "sources": [
         {
-          "id": "src-375",
+          "id": "src-389",
           "title": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "name": "75+ data-center build-outs worth $130B blocked in early 2026 (Tom's Hardware / Data Center Watch)",
           "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/more-than-75-data-center-build-outs-worth-usd130-billion-have-been-successfully-blocked-in-the-first-four-months-of-2026-bipartisan-opposition-mounts-nationwide-over-fears-of-soaring-power-and-water-costs",
@@ -68058,7 +69307,7 @@
       "family": "turing.ac.uk",
       "sources": [
         {
-          "id": "src-357",
+          "id": "src-371",
           "title": "Alan Turing Institute summary",
           "name": "Alan Turing Institute summary",
           "url": "https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-data-poisoning-we-thought",
@@ -68084,7 +69333,7 @@
       ]
     },
     {
-      "id": "source-group-149",
+      "id": "source-group-154",
       "family": "unit42.paloaltonetworks.com",
       "sources": [
         {
@@ -68114,7 +69363,7 @@
       ]
     },
     {
-      "id": "source-group-143",
+      "id": "source-group-148",
       "family": "US Treasury",
       "sources": [
         {
@@ -68159,7 +69408,7 @@
       ]
     },
     {
-      "id": "source-group-150",
+      "id": "source-group-155",
       "family": "verizon.com",
       "sources": [
         {
@@ -68189,7 +69438,37 @@
       ]
     },
     {
-      "id": "source-group-151",
+      "id": "source-group-156",
+      "family": "vulncheck.com",
+      "sources": [
+        {
+          "id": "src-326",
+          "title": "WP2Shell Vulnerabilities: CVE-2026-60137 and CVE-2026-63030",
+          "name": "VulnCheck",
+          "url": "https://www.vulncheck.com/blog/wp2shell",
+          "type": "Security research / independent",
+          "date": "2026-07-17",
+          "primary_or_secondary": "secondary",
+          "used_by": [
+            {
+              "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
+        }
+      ],
+      "types": [
+        "Security research / independent"
+      ]
+    },
+    {
+      "id": "source-group-157",
       "family": "Washington Post",
       "sources": [
         {
@@ -68219,7 +69498,7 @@
       ]
     },
     {
-      "id": "source-group-154",
+      "id": "source-group-160",
       "family": "Wired",
       "sources": [
         {
@@ -68249,7 +69528,82 @@
       ]
     },
     {
-      "id": "source-group-156",
+      "id": "source-group-161",
+      "family": "wordpress.org",
+      "sources": [
+        {
+          "id": "src-323",
+          "title": "WordPress 7.0.2 Release",
+          "name": "WordPress",
+          "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/",
+          "type": "Vendor advisory / primary",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
+        }
+      ],
+      "types": [
+        "Vendor advisory / primary"
+      ]
+    },
+    {
+      "id": "source-group-72",
+      "family": "x.com",
+      "sources": [
+        {
+          "id": "src-317",
+          "title": "Observations on Kimi K3 and regulatory risk around Chinese open-weight models",
+          "name": "Dean W. Ball",
+          "url": "https://x.com/deanwball/status/2078133895766114412",
+          "type": "Public statement / primary",
+          "date": "2026-07-17",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "id": "src-318",
+          "title": "Clarification that the soft-law scenario was a prediction rather than a recommendation",
+          "name": "Dean W. Ball",
+          "url": "https://x.com/deanwball/status/2078619513575137330",
+          "type": "Public statement / primary",
+          "date": "2026-07-19",
+          "primary_or_secondary": "primary",
+          "used_by": [
+            {
+              "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+              "kind": "event"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "kind": "event",
+          "id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE"
+        }
+      ],
+      "types": [
+        "Public statement / primary"
+      ]
+    },
+    {
+      "id": "source-group-163",
       "family": "z.ai",
       "sources": [
         {
@@ -68279,7 +69633,7 @@
       ]
     },
     {
-      "id": "source-group-116",
+      "id": "source-group-119",
       "family": "zfxxgk.ndrc.gov.cn",
       "sources": [
         {
@@ -68309,7 +69663,7 @@
       ]
     },
     {
-      "id": "source-group-108",
+      "id": "source-group-110",
       "family": "zona.media",
       "sources": [
         {
@@ -69346,20 +70700,20 @@
       "arc_families": 6
     },
     "post_merge": {
-      "version": "0.23",
-      "date": "2026-07-20",
-      "evidence": 244,
+      "version": "0.24",
+      "date": "2026-07-21",
+      "evidence": 247,
       "claims": 71,
       "claim_checks": 29,
       "story_arcs": 24,
-      "story_edges": 455,
+      "story_edges": 464,
       "unclassified_geography_event_ids": [],
       "arcs_without_family": []
     }
   },
   "factcheckAudit": {
     "source_candidate_file": "ai_stack_candidate_factcheck_structural_power.json",
-    "research_date": "2026-07-20",
+    "research_date": "2026-07-21",
     "independent_adversarial_review": true,
     "anti_overfit_rule_en": "Do not promote a lab study, vendor scan, public exposure measurement, proposal or forecast into an incident, prevalence estimate, enacted law or measured outcome.",
     "anti_overfit_rule_ru": "Не превращать лабораторное исследование, vendor scan, измерение публичной экспозиции, проект или прогноз в инцидент, prevalence, действующий закон или измеренный итог.",
@@ -69507,6 +70861,21 @@
         "candidate_id": "CAND_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
         "decision": "merge_as_operational_access_and_local_model_fallback",
         "master_id": "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
+      },
+      {
+        "candidate_id": "CAND_2026_KIMI_K3_WEIGHTS_PENDING",
+        "decision": "merge_as_model_access_event_with_weights_pending",
+        "master_id": "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT"
+      },
+      {
+        "candidate_id": "CAND_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+        "decision": "merge_as_contested_elite_statement_not_policy",
+        "master_id": "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE"
+      },
+      {
+        "candidate_id": "CAND_2026_GPT56_WP2SHELL_EXPERT_LED_RCE",
+        "decision": "merge_as_high_quality_expert_led_discovery_outlier",
+        "master_id": "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
       }
     ],
     "corrected_overclaims": [
@@ -69542,27 +70911,43 @@
       "The 17,000 recorded events establish 17,000 autonomous attack decisions.",
       "Public dataset-viewer PRs are an official one-to-one postmortem or exact exploit chain.",
       "Commercial frontier models are generally unusable for cyber defense.",
-      "GLM 5.2 or open weights are intrinsically safer or create full-stack sovereignty."
+      "GLM 5.2 or open weights are intrinsically safer or create full-stack sovereignty.",
+      "Kimi K3 full weights, technical report and final license were already public on 16-17 July 2026.",
+      "Kimi K3 independently proves parity with the leading US frontier models or Chinese full-stack sovereignty.",
+      "Dean Ball announced OpenAI or US government policy to spread FUD about Chinese models.",
+      "A Federal Reserve bulletin found backdoors in Kimi or another Chinese model.",
+      "The wp2shell chain was autonomously targeted and discovered without expert direction.",
+      "A novice can reproduce wp2shell with vague prompts.",
+      "The complete wp2shell research cost was $25 or a broker offered $500,000 for this exact chain.",
+      "Production exploitation of wp2shell proves that attackers used GPT-5.6 or another LLM."
     ],
     "source_candidate_files": [
       "ai_stack_candidate_factcheck_structural_power.json",
       "ai_stack_candidate_huntio_claude_deepseek_2026.json",
       "ai_stack_candidate_waic_soofi_2026.json",
       "ai_stack_candidate_korea_sovereignty_2026.json",
-      "ai_stack_candidate_huggingface_incident_2026.json"
+      "ai_stack_candidate_huggingface_incident_2026.json",
+      "ai_stack_candidate_kimi_ball_wp2shell_2026.json"
     ],
     "rolling_news_review": {
-      "date": "2026-07-20",
+      "date": "2026-07-21",
       "sources": [
-        "Hugging Face",
-        "Hugging Face dataset-viewer",
-        "fsspec"
+        "Moonshot AI / Kimi",
+        "Dean W. Ball",
+        "TechCrunch",
+        "Axios",
+        "Searchlight Cyber / Assetnote",
+        "WordPress",
+        "NVD",
+        "VulnCheck",
+        "OpenAI"
       ],
       "evidence_ids": [
-        "SIG_2026_HF_AGENTIC_INTRUSION",
-        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY"
+        "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+        "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
+        "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE"
       ],
-      "review": "Two atomic records retained: the first-party victim account of the intrusion and the separate defender-side access-control/local-model fallback. Public code changes are corroborating chronology, not an official exploit map."
+      "review": "Three atomic records retained. Kimi is a verified service launch with an open-weight commitment still pending. Ball is retained as a contested public articulation of a possible control mechanism, not policy. wp2shell is retained as a high-quality expert-led discovery outlier with confirmed operational impact and explicit human direction."
     }
   },
   "actorTypeLabels": {
@@ -69617,11 +71002,11 @@
   },
   "counts": {
     "geographies": {
-      "US": 124,
-      "China": 46,
+      "US": 126,
+      "China": 48,
       "EU": 26,
       "Russia": 21,
-      "UK": 15,
+      "UK": 16,
       "South Korea": 6,
       "Hong Kong": 5,
       "UAE": 5,
@@ -69646,13 +71031,13 @@
       "Israel": 1
     },
     "geographies_raw": {
-      "US": 121,
+      "US": 123,
       "global": 62,
-      "Global": 46,
-      "China": 45,
+      "Global": 48,
+      "China": 47,
       "EU": 26,
       "Russia": 21,
-      "UK": 15,
+      "UK": 16,
       "South Korea": 6,
       "Hong Kong": 5,
       "UAE": 5,
@@ -69705,11 +71090,11 @@
       "Western Europe": 1
     },
     "jurisdictions": {
-      "US": 124,
-      "China": 46,
+      "US": 126,
+      "China": 48,
       "EU": 26,
       "Russia": 21,
-      "UK": 15,
+      "UK": 16,
       "South Korea": 6,
       "Hong Kong": 5,
       "UAE": 5,
@@ -69758,10 +71143,10 @@
       "Russia-linked": 1
     },
     "geographic_scopes": {
-      "Global": 108
+      "Global": 110
     },
     "actors": {
-      "OpenAI": 31,
+      "OpenAI": 33,
       "Anthropic": 21,
       "Microsoft": 16,
       "European Commission": 13,
@@ -69798,6 +71183,7 @@
       "UK AI Security Institute": 2,
       "UK Competition and Markets Authority": 2,
       "Yandex": 2,
+      "Adam Kues": 1,
       "Agents of Chaos research team": 1,
       "ANSSI": 1,
       "Associated Press": 1,
@@ -69806,6 +71192,7 @@
       "CFIUS": 1,
       "Cisco": 1,
       "Cursor": 1,
+      "Dean Ball": 1,
       "Deutsche Telekom": 1,
       "ENISA": 1,
       "EU AI Office": 1,
@@ -69817,6 +71204,7 @@
       "Hunt.io": 1,
       "Korea Aerospace Industries": 1,
       "LG AI Research": 1,
+      "Moonshot AI": 1,
       "Mozilla": 1,
       "NC AI": 1,
       "Nebius": 1,
@@ -69826,6 +71214,7 @@
       "Project Canopy": 1,
       "Project Plasma": 1,
       "Reddit": 1,
+      "Searchlight Cyber / Assetnote": 1,
       "SK Telecom": 1,
       "Soofi Project": 1,
       "South Korean AI Safety Institute": 1,
@@ -69839,12 +71228,14 @@
       "University of Manchester": 1,
       "Upstage": 1,
       "US DOJ": 1,
+      "VulnCheck": 1,
+      "WordPress": 1,
       "World Artificial Intelligence Cooperation Organization": 1,
       "Xi Jinping": 1,
       "Z.ai / GLM": 1
     },
     "actor_entities": {
-      "OpenAI": 31,
+      "OpenAI": 33,
       "Anthropic": 21,
       "Microsoft": 16,
       "European Commission": 13,
@@ -69881,6 +71272,7 @@
       "UK AI Security Institute": 2,
       "UK Competition and Markets Authority": 2,
       "Yandex": 2,
+      "Adam Kues": 1,
       "Agents of Chaos research team": 1,
       "ANSSI": 1,
       "Associated Press": 1,
@@ -69889,6 +71281,7 @@
       "CFIUS": 1,
       "Cisco": 1,
       "Cursor": 1,
+      "Dean Ball": 1,
       "Deutsche Telekom": 1,
       "ENISA": 1,
       "EU AI Office": 1,
@@ -69900,6 +71293,7 @@
       "Hunt.io": 1,
       "Korea Aerospace Industries": 1,
       "LG AI Research": 1,
+      "Moonshot AI": 1,
       "Mozilla": 1,
       "NC AI": 1,
       "Nebius": 1,
@@ -69909,6 +71303,7 @@
       "Project Canopy": 1,
       "Project Plasma": 1,
       "Reddit": 1,
+      "Searchlight Cyber / Assetnote": 1,
       "SK Telecom": 1,
       "Soofi Project": 1,
       "South Korean AI Safety Institute": 1,
@@ -69922,14 +71317,16 @@
       "University of Manchester": 1,
       "Upstage": 1,
       "US DOJ": 1,
+      "VulnCheck": 1,
+      "WordPress": 1,
       "World Artificial Intelligence Cooperation Organization": 1,
       "Xi Jinping": 1,
       "Z.ai / GLM": 1
     },
     "actor_types": {
-      "company": 116,
+      "company": 119,
       "government": 78,
-      "research": 43,
+      "research": 44,
       "regulator": 34,
       "military_security": 23,
       "workforce_users": 22,
@@ -69941,8 +71338,8 @@
       "court": 2
     },
     "actor_jurisdictions": {
-      "US": 76,
-      "China": 27,
+      "US": 77,
+      "China": 28,
       "EU": 16,
       "Russia": 16,
       "UK": 12,
@@ -69955,10 +71352,10 @@
       "Taiwan": 1
     },
     "actor_facets_legacy": {
-      "US": 76,
-      "OpenAI": 31,
+      "US": 77,
+      "OpenAI": 33,
+      "China": 28,
       "Research teams": 28,
-      "China": 27,
       "Anthropic": 21,
       "EU": 16,
       "Microsoft": 16,
@@ -70004,6 +71401,7 @@
       "UK AI Security Institute": 2,
       "UK Competition and Markets Authority": 2,
       "Yandex": 2,
+      "Adam Kues": 1,
       "Agents of Chaos research team": 1,
       "ANSSI": 1,
       "Associated Press": 1,
@@ -70012,6 +71410,7 @@
       "CFIUS": 1,
       "Cisco": 1,
       "Cursor": 1,
+      "Dean Ball": 1,
       "Deutsche Telekom": 1,
       "ENISA": 1,
       "EU AI Office": 1,
@@ -70025,6 +71424,7 @@
       "Korea Aerospace Industries": 1,
       "LG AI Research": 1,
       "Malaysia": 1,
+      "Moonshot AI": 1,
       "Mozilla": 1,
       "NC AI": 1,
       "Nebius": 1,
@@ -70034,6 +71434,7 @@
       "Project Canopy": 1,
       "Project Plasma": 1,
       "Reddit": 1,
+      "Searchlight Cyber / Assetnote": 1,
       "SK Telecom": 1,
       "Soofi Project": 1,
       "South Korean AI Safety Institute": 1,
@@ -70048,37 +71449,41 @@
       "University of Manchester": 1,
       "Upstage": 1,
       "US DOJ": 1,
+      "VulnCheck": 1,
+      "WordPress": 1,
       "World Artificial Intelligence Cooperation Organization": 1,
       "Xi Jinping": 1,
       "Z.ai / GLM": 1
     },
     "stack_layers": {
-      "governance_law": 148,
-      "decision_support_cognition": 96,
-      "model_weights": 94,
-      "cloud_inference": 86,
+      "governance_law": 150,
+      "decision_support_cognition": 97,
+      "model_weights": 97,
+      "cloud_inference": 87,
       "data_telemetry": 81,
       "energy_compute_chips": 71,
       "finance_rent": 56,
-      "cyber_security_patch": 52
+      "cyber_security_patch": 53
     },
     "source_types": {
       "Government / policy": 77,
       "Press / wire": 68,
-      "Company / vendor": 48,
+      "Company / vendor": 49,
       "Research / preprint": 34,
       "Primary source": 8,
       "Industry / think tank": 4,
       "Court / legal": 2,
       "Investigative reporting": 2,
-      "Civil society / project": 1
+      "Civil society / project": 1,
+      "Public statement / primary": 1,
+      "Security research / primary": 1
     },
     "relation_types": {
       "supports": 215,
-      "supports_with_scope": 54,
+      "supports_with_scope": 58,
       "supports_with_caveat": 31,
-      "sets_up": 29,
-      "qualifies": 23,
+      "sets_up": 30,
+      "qualifies": 24,
       "institutionalizes": 20,
       "develops_into": 9,
       "limits": 8,
@@ -70087,8 +71492,9 @@
       "mitigates": 6,
       "refines": 6,
       "supports_arc": 6,
+      "supports_but_limits": 6,
       "parallel": 5,
-      "supports_but_limits": 5,
+      "updates": 4,
       "supports_counterargument": 3,
       "supports_mechanism": 3,
       "challenges_overclaim": 2,
@@ -70097,7 +71503,6 @@
       "generalizes": 2,
       "reframes": 2,
       "supports_as_claim_not_fact": 2,
-      "updates": 2,
       "accelerates_governance": 1,
       "closed_by": 1,
       "produces_workaround": 1,
@@ -70106,19 +71511,19 @@
     },
     "arcs": {
       "AUTO_CLAIMCHECK_SUPPORT": 83,
-      "ARC_CYBER_CLAIM_TO_CAVEAT": 42,
+      "ARC_CYBER_CLAIM_TO_CAVEAT": 46,
       "ARC_SOVEREIGN_FLOW_GATING": 33,
       "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY": 29,
       "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 24,
       "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 23,
-      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 20,
+      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 23,
+      "ARC_QUIET_ACCESS_CONTROL": 19,
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE": 18,
       "ARC_PALANTIR_DECISION_OS": 18,
-      "ARC_QUIET_ACCESS_CONTROL": 18,
       "ARC_EXPORT_CHIPS_TO_MODELS": 16,
       "ARC_2016_2021_METERED_ACCESS_FORMATION": 14,
       "ARC_2021_STATE_INSTITUTIONALIZATION": 14,
-      "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 12,
+      "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 13,
       "ARC_WAR_DATA_FLYWHEEL": 11,
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION": 10,
       "ARC_2022_2023_FORMATION_PHASE": 9,
@@ -70133,9 +71538,9 @@
       "ARC_A800_H800_WORKAROUND_CLOSURE": 3
     },
     "arc_families": {
-      "ARC_FAMILY_ACCESS_CONTROL": 84,
-      "ARC_FAMILY_CYBER_COGNITION_WAR": 77,
-      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 69,
+      "ARC_FAMILY_ACCESS_CONTROL": 85,
+      "ARC_FAMILY_CYBER_COGNITION_WAR": 81,
+      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 73,
       "ARC_FAMILY_INFRASTRUCTURE_CAPITAL": 49,
       "ARC_FAMILY_DECISION_DATA_FINANCE": 45,
       "ARC_FAMILY_FORMATION_TIMELINE": 43
