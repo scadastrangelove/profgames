@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "Игры в профессию — Independent Fact-Check Pack",
-    "version": "2.2",
-    "fact_check_date": "2026-06-15",
-    "data_relevance_date": "2026-06",
+    "version": "2.5",
+    "fact_check_date": "2026-07-23",
+    "data_relevance_date": "2026-07",
     "passes": [
       {
         "id": "russia",
@@ -49,6 +49,11 @@
         "id": "b-russia-ai-security",
         "name": "Russian AI security governance — MLSecOps and shadow AI",
         "approach": "survey-anchored: AI adoption/control gap, external-model governance and MLSecOps maturity"
+      },
+      {
+        "id": "post_march_2026_update",
+        "name": "Post-March 2026 updates — labor, education, skill formation, workforce policy and governance",
+        "approach": "targeted verification of primary reports, official guidance, peer-reviewed papers, working papers, employer surveys and corporate disclosures"
       }
     ],
     "evidence_levels": {
@@ -65,6 +70,40 @@
       "not_found": "claim could not be located in any source"
     },
     "changelog": [
+      {
+        "version": "2.5",
+        "date": "2026-07-23",
+        "description": "July 2026 update after a post-March search: Challenger AI-cited layoff tracker, Gallup workplace adoption, Anthropic Economic Index survey/cadences, OECD skills and education governance papers, Claude for Teachers, GenAI.mil institutional adoption, arXiv career-exposure preprint and finance apprenticeship-pressure reporting.",
+        "added_claims": 10,
+        "updated_passes": [
+          "post_march_2026_update",
+          "ai_research",
+          "regulators_corporate"
+        ]
+      },
+      {
+        "version": "2.4",
+        "date": "2026-06-16",
+        "description": "Second labor/education/governance update: Anthropic coding-skill RCT, NBER firm data, Harvard seniority-biased GenAI working paper, Berkeley/Science undergrad AI-use study, Strada employer survey, VNIi Truda Russian labor-risk estimate, California AI-workforce executive order and Block AI-efficiency workforce reduction.",
+        "added_claims": 8,
+        "updated_passes": [
+          "post_march_2026_update",
+          "b-russia-it",
+          "ai_research",
+          "regulators_corporate"
+        ]
+      },
+      {
+        "version": "2.3",
+        "date": "2026-06-15",
+        "description": "Post-March-2026 update: PwC 2026 AI Jobs Barometer, NY Fed vacancy counter-signal, Microsoft Work Trend Index 2026, Snap restructuring, education assessment governance, JAMA ambient scribe workflow evidence, EU AI Act high-risk consultation and AI-code-debt preprint.",
+        "added_claims": 9,
+        "updated_passes": [
+          "post_march_2026_update",
+          "ai_research",
+          "regulators_corporate"
+        ]
+      },
       {
         "version": "2.2",
         "date": "2026-06-15",
@@ -101,14 +140,14 @@
   },
   "summary": {
     "stats": {
-      "total_claims": 68,
-      "verified": 41,
+      "total_claims": 95,
+      "verified": 68,
       "partially_verified": 18,
       "needs_correction": 6,
       "not_verified": 3,
       "not_found": 0
     },
-    "approximate_pass_rate": "87%",
+    "approximate_pass_rate": "91%",
     "key_findings": [
       "Most priority claims pass primary-source verification",
       "Russian regulatory documents and migration figures are well-sourced via official channels (pravo.gov.ru, MVD, Mintsifry)",
@@ -131,7 +170,26 @@
       "Russian IT wage dynamics are polarizing: aggregate growth slowed to ~4.1% YoY while AI/ML, cybersecurity, DevOps/SRE and senior roles remain expensive.",
       "Positive Technologies is useful as a quiet-restructuring case, but not as an AI-causality case; do not code it as AI replacement.",
       "Global RationalFX layoff figures are useful as frame only: first six weeks / early-2026 estimate, not official labor statistics and not a January-only value.",
-      "K2/Kaspersky 2026 AI-security survey adds a Russian governance-gap signal: AI is already operationally useful, but external-model control and MLSecOps maturity lag behind adoption."
+      "K2/Kaspersky 2026 AI-security survey adds a Russian governance-gap signal: AI is already operationally useful, but external-model control and MLSecOps maturity lag behind adoption.",
+      "Post-March-2026 update (v2.3): PwC 2026 suggests AI-exposed sectors combine stronger productivity/wage/job-growth signals with a harder, seniorized entry gate; use as polarization, not causal proof.",
+      "NY Fed / Lightcast (May 2026) is a necessary counter-signal: vacancy data do not yet show a broad ChatGPT-driven hiring collapse or clean junior/senior divergence.",
+      "Education and assessment governance hardened in 2026: Ofqual treats coursework AI integrity as a leadership/control issue, while Cornell/Science argues for assessment redesign rather than detector-only enforcement.",
+      "Healthcare workflow signal: JAMA 2026 ambient-scribe evidence points to documentation compression and visit-volume changes, but professional verification and liability remain with clinicians.",
+      "Software-work signal: the March 2026 AI-code-debt preprint strengthens the workslop/review-burden mechanism; keep evidence level C until peer review or replication.",
+      "EU AI Act implementation is moving into high-risk classification guidance; employment, education/training and worker-management gates should be treated as regulatory translator points.",
+      "Post-March-2026 update (v2.4): Anthropic/arXiv coding-skill RCT adds direct evidence that AI-assisted task completion can impair the skill needed for oversight when users delegate unfamiliar work.",
+      "NBER w34836 is a moderation signal: 69% of firms in a four-country executive survey use AI, but nine-in-ten report no own-firm employment/productivity impact so far; executives expect larger effects over the next three years.",
+      "Harvard/SSRN seniority-biased GenAI paper strengthens the entry-gate mechanism: in adopter firms, junior employment weakens relative to senior roles, apparently through slower junior hiring.",
+      "Strada 2026 is the main counter-signal to a simple junior-collapse narrative: employers more often expect AI to increase entry-level hiring, while making entry work more analytical/judgment-heavy.",
+      "ВНИИ труда / Коммерсантъ gives a Russian white-collar exposure estimate: about 7.5% of regional employment potentially affected, with higher risks for служащие and specialists.",
+      "California Newsom EO turns AI workforce disruption into an explicit state-planning object; Block adds a clearer corporate AI-efficiency layoff narrative, but remains evidence level C.",
+      "Post-March-2026 update (v2.5): Challenger June 2026 makes AI the leading stated reason in US job-cut announcements for the fourth consecutive month: 101,743 AI-cited cuts in H1 2026, about 23% of all announced cuts.",
+      "Gallup Q1 2026 shows workplace AI use crossing a mainstream threshold in the US: 50% of employed adults use AI at least occasionally, but only 13% daily and 28% frequently.",
+      "Anthropic Economic Index survey/cadences add a perception-and-delegation layer: heavy AI users often report productivity gains and higher exposure anxiety, especially around early-career workers and junior colleagues.",
+      "OECD July 2026 turns AI skills and higher-education governance into system-level policy objects; OECD/EC June 2026 frames AI literacy as a general K-12 competence.",
+      "Claude for Teachers and GenAI.mil show institutional platformization: AI moves into teacher workflow and public-sector work infrastructure, not just individual ad hoc use.",
+      "Finance now has a strong apprenticeship-pressure signal: Bloomberg/Fortune report junior analyst intake compression and targeted AI use cases in banking, but evidence remains press/industry narrative rather than administrative outcomes.",
+      "The July 2026 career-choice preprint is a useful “AI-un-exposed” routing counterpoint: lower exposure can coexist with high wages in healthcare practice and complement-heavy roles."
     ]
   },
   "claims": [
@@ -2867,6 +2925,984 @@
         "Use as a professional-boundary signal: MLSecOps / AI security engineering is emerging, but standardization is incomplete."
       ],
       "recommended_phrasing": "MLSecOps в России пока не стал массовой нормой: 46% респондентов не знакомы с подходом, 40% знают его поверхностно, 14% хорошо понимают принципы; зрелая практика есть только у 7% компаний с собственной AI-разработкой. Это сигнал появления новой профессиональной границы, а не доказательство массовой зрелости."
+    },
+    {
+      "id": "ai-23",
+      "pass": "post_march_2026_update",
+      "topic": "PwC 2026 Global AI Jobs Barometer — AI exposure, wages and seniorized entry-level demand",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "PwC releases 2026 Global AI Jobs Barometer",
+          "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html",
+          "type": "primary",
+          "date": "2026-06-03"
+        },
+        {
+          "title": "PwC 2026 Global AI Jobs Barometer report",
+          "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/2026/report.pdf",
+          "type": "primary_pdf",
+          "date": "2026-06"
+        }
+      ],
+      "date_relevant": "2026-06",
+      "claim": "PwC’s 2026 Global AI Jobs Barometer reports that AI-exposed industries show faster productivity growth and stronger labor-market outcomes than less-exposed industries: revenue per employee grew 35% in more AI-exposed sectors while less-exposed sectors fell 10%; jobs grew 52% in more-exposed sectors vs 36% in less-exposed sectors; wages grew 24% vs 17%; workers with AI skills commanded a 62% wage premium; and entry-level jobs increasingly require seniorized expectations, with junior roles in AI-exposed occupations about seven times more likely to require skills usually expected of experienced workers.",
+      "caveats": [
+        "PwC analysis is correlational and based on job ads, sector financial data and exposure categories; do not present as causal proof that AI created jobs or wage growth.",
+        "The “seven times” seniorization claim is an employer-demand / vacancy-language signal, not a direct measure of actual worker competence.",
+        "Use as global labor-market evidence; country-level effects can diverge strongly."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "PwC 2026: AI-exposed sectors are not simply shrinking. They show stronger productivity, wage and job-growth signals, while the entry gate hardens: AI-exposed junior roles are much more likely to ask for senior-like skills. Use this as a labor-market polarization / seniorization signal, not as causal proof of AI job creation.",
+      "geographic_scope": "global",
+      "keywords": [
+        "pwc",
+        "ai-jobs-barometer-2026",
+        "wage-premium",
+        "seniorization",
+        "job-postings",
+        "productivity"
+      ]
+    },
+    {
+      "id": "ai-24",
+      "pass": "post_march_2026_update",
+      "topic": "New York Fed / Liberty Street Economics — AI and job postings, May 2026",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Do Job Postings Show Early Labor Market Effects of AI?",
+          "url": "https://libertystreeteconomics.newyorkfed.org/2026/05/do-job-postings-show-early-labor-market-effects-of-ai/",
+          "type": "primary_analysis",
+          "date": "2026-05-14"
+        }
+      ],
+      "date_relevant": "2021-2026",
+      "claim": "A May 2026 New York Fed Liberty Street Economics analysis of Lightcast job postings finds no sharp, occupation-wide decline in job postings that can be cleanly attributed to ChatGPT-style AI. The authors report that occupations with stronger AI exposure did not show distinct posting trends relative to other occupations, and that junior/senior and flexible/non-flexible comparisons did not produce a clear AI-specific pattern. Their interpretation is cautious: early posting data do not yet show broad AI-driven hiring contraction, even though task exposure and firm-level effects may still be emerging.",
+      "caveats": [
+        "Job postings measure labor demand, not hires, layoffs or wages.",
+        "The analysis can miss firm-level substitution, internal redeployment, and sector-specific shocks that do not appear as broad posting declines.",
+        "Use as counterweight to strong-displacement claims, not as proof that AI has no labor-market effect."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "NY Fed/Lightcast (May 2026) is an important counter-signal: by vacancy data alone, a broad ChatGPT-driven hiring collapse is not visible yet. This should temper claims about immediate mass displacement while preserving the narrower entry-level and task-exposure evidence.",
+      "geographic_scope": "us",
+      "keywords": [
+        "new-york-fed",
+        "lightcast",
+        "job-postings",
+        "ai-exposure",
+        "counterevidence",
+        "labor-demand"
+      ]
+    },
+    {
+      "id": "ai-25",
+      "pass": "post_march_2026_update",
+      "topic": "Microsoft 2026 Work Trend Index — Frontier Firm and human-agent work redesign",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "sources": [
+        {
+          "title": "2026 Work Trend Index: Agents, Human Agency, and the Opportunity for Every Organization",
+          "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+          "type": "primary_corporate_survey",
+          "date": "2026-04-23"
+        }
+      ],
+      "date_relevant": "2026-04",
+      "claim": "Microsoft’s 2026 Work Trend Index frames the next work model as a “Frontier Firm”: teams composed of employees plus AI agents. The report says it is based on a large multinational worker sample, Microsoft 365 telemetry and LinkedIn data, and emphasizes that organizational redesign, not tool access alone, predicts AI impact. It introduces “Frontier Professionals” as early adopters who delegate work to agents and spend more time on judgment, strategy and orchestration.",
+      "caveats": [
+        "Corporate/vendor report; useful as enterprise-practice signal, not independent causal labor evidence.",
+        "Telemetry and survey claims should not be merged with employment counts or layoff causality.",
+        "Strongest use is conceptual and organizational: new division of labor between worker, manager and AI agent."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Microsoft WTI 2026 is best coded as an organizational-design signal: the frontier is not “one person with a chatbot”, but teams where humans allocate, supervise and verify agent work. For ProfGames this moves competence from doing the task to routing, judgment and responsibility.",
+      "geographic_scope": "global",
+      "keywords": [
+        "microsoft",
+        "work-trend-index-2026",
+        "frontier-firm",
+        "ai-agents",
+        "human-agency",
+        "organization-design"
+      ]
+    },
+    {
+      "id": "corp-31",
+      "pass": "post_march_2026_update",
+      "topic": "Snap 2026 operating restructuring under AI-era product focus",
+      "status": "verified",
+      "evidence_level": "A/B",
+      "sources": [
+        {
+          "title": "Snap Inc. outlines new operating structure to accelerate focus on core products and long-term growth",
+          "url": "https://investor.snap.com/news/news-details/2026/Snap-Inc.-Outlines-New-Operating-Structure-to-Accelerate-Focus-on-Core-Products-and-Long-Term-Growth/default.aspx",
+          "type": "primary_company_release",
+          "date": "2026-04-15"
+        },
+        {
+          "title": "Snap to cut about 1,000 jobs as part of restructuring",
+          "url": "https://www.theguardian.com/technology/2026/apr/15/snapchat-snap-cut-jobs-ai",
+          "type": "secondary",
+          "date": "2026-04-15"
+        }
+      ],
+      "date_relevant": "2026-04",
+      "claim": "Snap announced a new operating structure in April 2026 with workforce reductions reported at about 1,000 employees. The company framed the change around sharpening product focus, efficiency and long-term growth in a product environment heavily shaped by AI. Secondary reporting tied the restructuring to AI-era product and code-generation changes, but direct one-for-one AI replacement should not be asserted from the company release alone.",
+      "caveats": [
+        "Primary company release confirms restructuring, but exact AI-causality is partly media/analyst framing.",
+        "Use as AI-era product-organization restructuring, not as proof that each eliminated role was replaced by AI.",
+        "If citing exact headcount numbers, prefer company filing / investor release over media summaries."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Snap 2026 is an AI-era restructuring signal: product focus and efficiency narrow the organization, while AI changes the work surface. Do not overclaim direct AI replacement unless citing a specific executive statement or filing.",
+      "geographic_scope": "us/global",
+      "keywords": [
+        "snap",
+        "restructuring",
+        "ai-era-organization",
+        "layoffs",
+        "product-focus"
+      ]
+    },
+    {
+      "id": "edu-31",
+      "pass": "post_march_2026_update",
+      "topic": "Cornell / Science 2026 — widespread AI misuse pushes assessment redesign",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Generative AI use and misuse call for assessment reform",
+          "url": "https://www.science.org/doi/10.1126/science.aec5115",
+          "type": "peer_reviewed_commentary",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Widespread AI misuse means higher ed must rethink assessment",
+          "url": "https://news.cornell.edu/stories/2026/05/widespread-ai-misuse-means-higher-ed-must-rethink-assessment",
+          "type": "university_release",
+          "date": "2026-05-01"
+        }
+      ],
+      "date_relevant": "2026-05",
+      "claim": "A Science article by Cornell-linked researchers argues that widespread generative-AI misuse in higher education requires assessment reform rather than reliance on detection. The Cornell release summarizes the authors’ position: AI misuse has become common enough that universities must redesign assessment around authentic, process-aware and supervised forms rather than treating AI use as a purely individual misconduct problem.",
+      "caveats": [
+        "Science article is primarily assessment-policy synthesis/commentary, not a new administrative count of cheating cases.",
+        "Use alongside Guardian/Turnitin/Ofqual facts for empirical and policy anchors.",
+        "Do not infer one global cheating rate from this article."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Cornell/Science 2026 supports the “detector failure → assessment redesign” arc: the institutional response is not just catching AI text, but changing what counts as evidence of learning.",
+      "geographic_scope": "global/higher-education",
+      "keywords": [
+        "education",
+        "assessment-reform",
+        "ai-misuse",
+        "academic-integrity",
+        "provenance"
+      ]
+    },
+    {
+      "id": "edu-32",
+      "pass": "post_march_2026_update",
+      "topic": "Ofqual 2026 AI coursework integrity resources",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Senior leadership team briefing pack: AI and coursework integrity",
+          "url": "https://www.gov.uk/government/publications/ai-in-coursework-resources-for-schools/senior-leadership-team-briefing-pack-ai-and-coursework-integrity-accessible",
+          "type": "official_guidance",
+          "date": "2026-03-04"
+        }
+      ],
+      "date_relevant": "2026-03",
+      "claim": "Ofqual published AI and coursework integrity resources in March 2026 for schools in England. The guidance explicitly treats generative AI as an assessment-integrity and governance issue: leaders are expected to set policy, communicate expectations, support teachers, and design controls for coursework rather than relying only on detection after submission.",
+      "caveats": [
+        "Official guidance for England; do not generalize mechanically to Ireland/Scotland/Wales or universities.",
+        "It is a governance signal, not an empirical claim about prevalence of AI misuse.",
+        "Best used as evidence that assessment authorities are moving from ad hoc detection to institutional controls."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Ofqual 2026 makes the coursework problem administrative: AI integrity is now a school-leadership and assessment-design obligation, not only a teacher’s suspicion about a submitted essay.",
+      "geographic_scope": "England",
+      "keywords": [
+        "ofqual",
+        "coursework-integrity",
+        "school-governance",
+        "assessment",
+        "ai-detection"
+      ]
+    },
+    {
+      "id": "med-31",
+      "pass": "post_march_2026_update",
+      "topic": "JAMA 2026 — ambient AI scribe changes clinician time and visit volume",
+      "status": "verified",
+      "evidence_level": "A/B",
+      "sources": [
+        {
+          "title": "Changes in Clinician Time Expenditure and Visit Quantity Associated With Ambient Artificial Intelligence Scribe Technology",
+          "url": "https://jamanetwork.com/journals/jama/article-abstract/2847319",
+          "type": "peer_reviewed",
+          "date": "2026-04-13"
+        }
+      ],
+      "date_relevant": "2026-04",
+      "claim": "A JAMA study published in April 2026 reports that ambient AI scribe adoption was associated with reduced after-hours documentation time and increased visit quantity. The abstract reports reduced “pajama time” by 15.4 minutes per 8 scheduled patient hours and higher visit quantity, including increases reported for primary care and specialist visits. This is a workflow-productivity signal, not a claim that AI replaces clinicians.",
+      "caveats": [
+        "Study design and setting matter; use the exact association language unless randomized/causal claims are warranted by the full paper.",
+        "Ambient scribes shift documentation work and supervision burden; they do not eliminate the clinician’s responsibility for note accuracy.",
+        "Use with the NHS/GMC bridge material as a clinical-workflow signal, not as evidence about training-place bottlenecks."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Ambient AI scribes are best coded as documentation-workflow compression: clinicians may spend less after-hours time on notes and see more visits, but the liability and verification layer remains with the professional.",
+      "geographic_scope": "us/healthcare",
+      "keywords": [
+        "jama",
+        "ambient-ai-scribe",
+        "clinical-documentation",
+        "clinician-workflow",
+        "productivity"
+      ]
+    },
+    {
+      "id": "reg-31",
+      "pass": "post_march_2026_update",
+      "topic": "European Commission 2026 draft guidelines on high-risk AI systems",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Guidelines on high-risk AI systems: consultation on the implementation of the classification rules",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems",
+          "type": "official_consultation",
+          "date": "2026-06-06"
+        }
+      ],
+      "date_relevant": "2026-06",
+      "claim": "The European Commission opened consultation in June 2026 on draft guidelines for high-risk AI system classification under the AI Act. The guidance is relevant to professional reproduction because employment, worker management, access to education/training and vocational pathways are among the AI Act areas where classification determines governance duties, documentation and oversight obligations.",
+      "caveats": [
+        "Draft/consultation status; do not cite as final binding interpretation until guidelines are adopted.",
+        "High-risk classification is use-case specific; not every AI tool used by an employer or school is automatically high-risk.",
+        "Use as a regulatory-translation signal: professional gates are being reclassified by function and risk."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "EU AI Act implementation is moving from abstract principles to classification work: whether a tool sits at the gate to education, work or worker management determines the compliance burden.",
+      "geographic_scope": "eu",
+      "keywords": [
+        "eu-ai-act",
+        "high-risk-ai",
+        "employment",
+        "education",
+        "worker-management",
+        "regulation"
+      ]
+    },
+    {
+      "id": "dev-31",
+      "pass": "post_march_2026_update",
+      "topic": "arXiv 2026 — Debt Behind the AI Boom in generated pull requests",
+      "status": "verified",
+      "evidence_level": "C",
+      "sources": [
+        {
+          "title": "The Debt Behind the AI Boom: Measuring the True Cost of AI-Generated Code Pull Requests",
+          "url": "https://arxiv.org/abs/2603.28592",
+          "type": "preprint",
+          "date": "2026-03-30"
+        }
+      ],
+      "date_relevant": "2026-03",
+      "claim": "The March 2026 arXiv preprint “The Debt Behind the AI Boom” analyzes 1,134 tasks and roughly 250,000 generated pull requests across multiple AI agents in JavaScript/TypeScript repositories. It reports that many generated PRs pass automated checks, but manual review still finds extensive required fixes; reported issue categories include broken functionality, async problems, security weaknesses and inconsistent behavior. This strengthens the “workslop / review burden / technical debt” signal for software work.",
+      "caveats": [
+        "Preprint, not peer-reviewed; evidence level remains C until replicated or published.",
+        "Benchmark setting and language/ecosystem scope limit generalization to all software engineering.",
+        "Use as a technical-debt and review-burden signal, not as a universal defect-rate estimate."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "The 2026 AI-code-debt preprint is useful as a workslop mechanism: passing automated tests is not the same as producing maintainable professional code; review and repair costs move to senior engineers/maintainers.",
+      "geographic_scope": "global/software",
+      "keywords": [
+        "software-engineering",
+        "ai-generated-code",
+        "pull-requests",
+        "technical-debt",
+        "workslop",
+        "review-burden"
+      ]
+    },
+    {
+      "id": "dev-32",
+      "pass": "post_march_2026_update",
+      "topic": "Anthropic/arXiv 2026 — AI assistance and coding skill formation",
+      "status": "verified",
+      "evidence_level": "A/B",
+      "sources": [
+        {
+          "title": "How AI assistance impacts the formation of coding skills",
+          "url": "https://www.anthropic.com/research/AI-assistance-coding-skills",
+          "type": "company_research_summary",
+          "date": "2026-01-29"
+        },
+        {
+          "title": "How AI Impacts Skill Formation",
+          "url": "https://arxiv.org/abs/2601.20245",
+          "type": "preprint_rct",
+          "date": "2026-02-03"
+        }
+      ],
+      "date_relevant": "2026-02",
+      "claim": "Anthropic-affiliated randomized experiments on developers learning a new asynchronous Python library report that AI assistance reduced later evaluation performance by about 17 percentage points / two grade points (Cohen's d=0.738, p=0.010), with no statistically significant average acceleration in completion time. The useful claim is not 'AI makes programmers worse' but 'delegating unfamiliar work to AI can compress task completion without forming the debugging/code-reading skill needed for oversight.'",
+      "caveats": [
+        "Preprint / company-affiliated research; treat as high-signal RCT evidence but not yet peer-reviewed.",
+        "The setting is a controlled new-library learning task, not all programming work.",
+        "The paper distinguishes interaction patterns: cognitively engaged AI use can preserve learning better than full delegation."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "AI coding assistance is not automatically a shortcut to competence: in a randomized new-library task it hurt conceptual understanding, code reading and debugging, while engaged explanatory use was less damaging.",
+      "geographic_scope": "global/software",
+      "keywords": [
+        "anthropic",
+        "coding",
+        "skill-formation",
+        "rct",
+        "debugging",
+        "ai-assistance",
+        "junior-squeeze"
+      ]
+    },
+    {
+      "id": "ai-26",
+      "pass": "post_march_2026_update",
+      "topic": "NBER w34836 — firm data on AI adoption and expected job effects",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Firm Data on AI (NBER Working Paper 34836)",
+          "url": "https://www.nber.org/papers/w34836",
+          "type": "working_paper_survey",
+          "date": "2026-03"
+        },
+        {
+          "title": "PDF: Firm Data on AI",
+          "url": "https://www.nber.org/system/files/working_papers/w34836/w34836.pdf",
+          "type": "working_paper_pdf",
+          "date": "2026-03"
+        }
+      ],
+      "date_relevant": "2026-03",
+      "claim": "NBER Working Paper 34836 surveys nearly 6,000 senior executives at firms in the US, UK, Germany and Australia. It reports that 69% of firms actively use AI, but nine-in-ten executives report no own-firm employment or productivity impact over the past three years. Looking three years ahead, executives expect average own-firm productivity +1.4%, output +0.8% and employment -0.7%; US employees instead expect employment +0.5%, marking an expectations gap.",
+      "caveats": [
+        "Working paper, not peer-reviewed NBER journal publication.",
+        "Forward-looking figures are executive expectations, not measured realized effects.",
+        "Use as a counterweight to sensational layoff narratives: wide adoption can coexist with small reported near-term firm effects."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "The NBER firm survey is a moderation signal: AI adoption is broad, but most executives still report little realized own-firm employment/productivity effect, while expecting larger effects over the next three years.",
+      "geographic_scope": "global/labor",
+      "keywords": [
+        "nber",
+        "firm-data-on-ai",
+        "executive-survey",
+        "employment-expectations",
+        "productivity",
+        "jobs"
+      ]
+    },
+    {
+      "id": "ai-27",
+      "pass": "post_march_2026_update",
+      "topic": "Harvard/SSRN 2025 — GenAI as seniority-biased technological change",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "sources": [
+        {
+          "title": "Generative AI as Seniority-Biased Technological Change: Evidence from U.S. Résumé and Job Posting Data",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5425555",
+          "type": "working_paper",
+          "date": "2025-10-06"
+        },
+        {
+          "title": "PDF mirror: ssrn-5425555",
+          "url": "https://www.rivista.ai/wp-content/uploads/2025/10/ssrn-5425555.pdf",
+          "type": "working_paper_pdf_mirror",
+          "date": "2025-10-06"
+        }
+      ],
+      "date_relevant": "2025-10",
+      "claim": "A Harvard working paper by Seyed M. Hosseini and Guy Lichtinger uses US résumé and job-posting data covering roughly 62 million workers and 285,000 firms (2015-2025). It identifies GenAI-adopting firms through postings for dedicated GenAI integrator roles and reports that junior employment in adopting firms fell relative to controls from 2023Q1, with estimates around -7.7% after six quarters and roughly -10% in a triple-difference design, while senior employment continued to rise. The reported mechanism is slower junior hiring, not higher separations.",
+      "caveats": [
+        "Working paper; not peer-reviewed and not a direct causal census of all AI adoption.",
+        "Adoption proxy captures firms posting GenAI integrator roles and misses silent/individual tool use.",
+        "Keep alongside NY Fed / Lightcast counter-signal: one dataset finds seniority-biased effects among adopters, while broader vacancies do not yet show a universal collapse."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Use the Harvard/SSRN paper as an entry-gate mechanism: in firms with observable GenAI integration, junior employment/hiring weakens relative to senior roles, suggesting seniority-biased technological change rather than a uniform jobs crash.",
+      "geographic_scope": "us/labor",
+      "keywords": [
+        "harvard",
+        "ssrn",
+        "seniority-biased",
+        "junior-hiring",
+        "genai-integrator",
+        "job-postings",
+        "resume-data"
+      ]
+    },
+    {
+      "id": "edu-33",
+      "pass": "post_march_2026_update",
+      "topic": "Berkeley/Science 2026 — largest undergrad AI-use study and assessment reform",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "The largest study of AI use by undergrads is in, revealing disparities in access and in cheating",
+          "url": "https://news.berkeley.edu/2026/05/21/the-largest-study-of-ai-use-by-undergrads-is-in-revealing-disparities-in-access-and-in-cheating/",
+          "type": "university_research_release",
+          "date": "2026-05-21"
+        },
+        {
+          "title": "Generative AI use and misuse call for assessment reform in higher education",
+          "url": "https://www.science.org/doi/10.1126/science.aec5115",
+          "type": "peer_reviewed_policy_forum",
+          "date": "2026-05-21"
+        }
+      ],
+      "date_relevant": "2026-05",
+      "claim": "Berkeley's 2026 release for the Science article describes a very large undergraduate AI-use study and emphasizes both unequal access/use patterns and cheating/misuse pressure. It reinforces the claim that higher education cannot treat AI as a detector-only problem: assessment design, transparent use rules and process-aware evaluation become part of credential integrity.",
+      "caveats": [
+        "The Berkeley page was partially inaccessible from the local browser because of Cloudflare, but the Science DOI and metadata are verified.",
+        "Use the Berkeley release for framing/access/misuse context; use the Science article for the formal assessment-reform claim.",
+        "Avoid quoting exact prevalence numbers unless taken directly from the Science article/report tables."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "The Berkeley/Science node is an education-provenance signal: widespread undergraduate AI use and misuse move the problem from individual cheating cases to assessment architecture and equitable access.",
+      "geographic_scope": "us/education",
+      "keywords": [
+        "berkeley",
+        "science",
+        "undergraduates",
+        "ai-use",
+        "cheating",
+        "assessment-reform",
+        "access-disparity"
+      ]
+    },
+    {
+      "id": "ai-28",
+      "pass": "post_march_2026_update",
+      "topic": "Strada 2026 — employer survey on entry-level hiring in the AI era",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
+          "url": "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
+          "type": "survey_report",
+          "date": "2026-05"
+        },
+        {
+          "title": "PDF: Entry-Level Hiring in the AI Era",
+          "url": "https://cdn.prod.website-files.com/6777c52f82e5471a3732ea25/6a0c949112a573adb34f071e_Strada_EntryLevelHiringAIEraReport_May_2026.pdf",
+          "type": "survey_report_pdf",
+          "date": "2026-05"
+        }
+      ],
+      "date_relevant": "2026-05",
+      "claim": "Strada Institute surveyed nearly 1,500 executives and senior talent leaders. Among employers that had at least explored AI and hire entry-level employees, 46% reported AI increased entry-level hiring volume in 2025 versus 13% reporting a decrease; for 2026, 46% expected a positive impact and 17% a negative impact. The report also says AI shifts entry-level work away from routine/admin tasks toward analytical and judgment responsibilities, and that critical thinking/communication rank above AI literacy for entry-level hires.",
+      "caveats": [
+        "Employer survey, not administrative hiring outcomes.",
+        "The positive aggregate result hides segmentation: some firms use AI to automate routine entry tasks and reduce entry hiring.",
+        "Use as a counter-signal to 'entry-level is dead', not as proof that junior squeeze is false."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Strada is the clean counter-signal: many employers expect AI to raise rather than reduce entry-level hiring, but the content of entry-level work becomes less routine and more judgment/analysis-heavy.",
+      "geographic_scope": "us/labor",
+      "keywords": [
+        "strada",
+        "entry-level-hiring",
+        "employer-survey",
+        "ai-literacy",
+        "critical-thinking",
+        "junior-squeeze"
+      ]
+    },
+    {
+      "id": "ru-19",
+      "pass": "post_march_2026_update",
+      "topic": "ВНИИ труда / Коммерсантъ 2026 — оценка рабочих мест под риском ИИ",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "sources": [
+        {
+          "title": "ИИ планирует увольнения: эксперты подсчитали возможные потери рынка труда от внедрения ИИ-технологий",
+          "url": "https://www.kommersant.ru/doc/8672260",
+          "type": "press_reporting_on_institute_study",
+          "date": "2026-05-19"
+        }
+      ],
+      "date_relevant": "2026-05",
+      "claim": "Коммерсантъ сообщает о исследовании ФГБУ ВНИИ труда, представленного 18 мая 2026 года: в среднем около 7,5% работников в регионах РФ могут в ближайшие годы остаться без прежней работы из-за внедрения ИИ. По пересказу статьи, наивысшие критические риски замещения трудовых обязанностей названы для служащих (82%), специалистов среднего уровня (64%) и специалистов высшего уровня (60%); для неквалифицированных рабочих риск ниже (37%).",
+      "caveats": [
+        "Публично доступна журналистская статья, а не полный методический отчёт ВНИИ труда; уровень B/C, не A.",
+        "Формулировка 'останутся без прежней работы' не равна автоматическому чистому росту безработицы: возможны переходы, переобучение и изменение задач.",
+        "Использовать как российский прогноз риска/структурной экспозиции, а не как подтверждённое сокращение уже произошедших рабочих мест."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "По пересказу Коммерсанта, ВНИИ труда оценивает потенциально затронутую ИИ долю рабочих мест в регионах РФ примерно в 7,5%, причём риск выше для служащих и специалистов, а не только для низкоквалифицированного труда.",
+      "geographic_scope": "russia/labor",
+      "keywords": [
+        "внии-труда",
+        "коммерсантъ",
+        "россия",
+        "рынок-труда",
+        "ии",
+        "рабочие-места",
+        "white-collar"
+      ]
+    },
+    {
+      "id": "reg-32",
+      "pass": "post_march_2026_update",
+      "topic": "California / Newsom 2026 — AI workforce disruption executive order",
+      "status": "verified",
+      "evidence_level": "A/B",
+      "sources": [
+        {
+          "title": "Governor Newsom signs first-of-its-kind executive order to prepare workers and businesses for potential AI disruption",
+          "url": "https://www.gov.ca.gov/2026/05/21/governor-newsom-signs-first-of-its-kind-executive-order-to-prepare-workers-and-businesses-for-potential-ai-disruption/",
+          "type": "official_press_release",
+          "date": "2026-05-21"
+        },
+        {
+          "title": "Executive Order N-6-26 PDF",
+          "url": "https://www.gov.ca.gov/wp-content/uploads/2026/05/5.21.26-AI-Workforce-EO-FINAL-SIGNED.pdf",
+          "type": "official_order_pdf",
+          "date": "2026-05-21"
+        }
+      ],
+      "date_relevant": "2026-05",
+      "claim": "California Governor Gavin Newsom signed Executive Order N-6-26 on 21 May 2026 to prepare workers and businesses for potential AI disruption. The order directs state labor/workforce agencies to analyze AI impacts on employment and recommend ways to help workers and businesses adapt, making workforce disruption an explicit state-level governance object rather than a purely corporate HR issue.",
+      "caveats": [
+        "The official website/PDF was intermittently slow from the local environment; the official URL and search snippets verify the order and framing.",
+        "This is a planning/governance signal, not evidence of realized layoffs.",
+        "Use as 'long state' anticipatory capacity: measuring and preparing for labor disruption before it is administratively visible."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "California's AI workforce executive order is a governance signal: the state treats AI labor disruption as something to measure, plan for and route through workforce institutions, not merely as private firm optimization.",
+      "geographic_scope": "us/california",
+      "keywords": [
+        "california",
+        "newsom",
+        "executive-order",
+        "ai-workforce",
+        "labor-disruption",
+        "long-state"
+      ]
+    },
+    {
+      "id": "corp-32",
+      "pass": "post_march_2026_update",
+      "topic": "Block 2026 — AI-linked workforce reduction under Jack Dorsey",
+      "status": "verified",
+      "evidence_level": "C",
+      "sources": [
+        {
+          "title": "Jack Dorsey to cut 4,000 jobs due to AI advances at Square parent Block",
+          "url": "https://www.theguardian.com/technology/2026/feb/27/block-ai-layoffs-jack-dorsey",
+          "type": "press_reporting",
+          "date": "2026-02-27"
+        },
+        {
+          "title": "Block's fourth-quarter profit rises, announces over 4,000 job cuts",
+          "url": "https://www.reuters.com/business/blocks-fourth-quarter-profit-rises-announces-over-4000-job-cuts-2026-02-26/",
+          "type": "press_reporting_restricted",
+          "date": "2026-02-26"
+        }
+      ],
+      "date_relevant": "2026-02",
+      "claim": "Reporting on Block's February 2026 announcement says the Square/Cash App parent planned to cut more than 4,000 jobs / about 40% of its workforce, with Jack Dorsey explicitly tying the smaller team to AI/intelligence tools and saying a significantly smaller team can do more with the tools Block is building. This is one of the clearer corporate AI-efficiency layoff narratives, but still company narrative rather than independent measurement of task substitution.",
+      "caveats": [
+        "Primary corporate letter/filing should be preferred if later mirrored publicly; current accessible source is press reporting with Reuters restricted locally.",
+        "Do not infer one-for-one AI replacement for every eliminated role.",
+        "Code as corporate narrative/evidence level C unless a filing provides exact workforce and restructuring numbers."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Block is a sharp AI-efficiency corporate narrative: management linked a much smaller workforce to compounding intelligence-tool capability, but the causal mapping from AI to each cut role remains unverified.",
+      "geographic_scope": "us/technology",
+      "keywords": [
+        "block",
+        "jack-dorsey",
+        "ai-layoffs",
+        "corporate-narrative",
+        "workforce-reduction",
+        "square",
+        "cash-app"
+      ]
+    },
+    {
+      "id": "ai-29",
+      "pass": "post_march_2026_update",
+      "topic": "Challenger June 2026 — AI becomes the leading stated reason for US job-cut announcements",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Challenger Report: June Layoffs Cool to 45,849, Down 53% From May; AI Leads Reasons for Fourth Consecutive Month",
+          "url": "https://www.challengergray.com/blog/challenger-report-june-layoffs-cool-to-45849-down-53-from-may-ai-leads-reasons-for-fourth-consecutive-month/",
+          "type": "outplacement_layoff_tracker",
+          "date": "2026-07-01"
+        },
+        {
+          "title": "June 2026 Challenger Report PDF",
+          "url": "https://www.challengergray.com/wp-content/uploads/2026/07/Challenger-Report-June2600986996.pdf",
+          "type": "outplacement_layoff_tracker_pdf",
+          "date": "2026-07-01"
+        },
+        {
+          "title": "May 2026 Challenger Report PDF",
+          "url": "https://www.challengergray.com/wp-content/uploads/2026/06/Challenger-Report-May-2026.pdf",
+          "type": "outplacement_layoff_tracker_pdf",
+          "date": "2026-06-04"
+        }
+      ],
+      "date_relevant": "2026-07",
+      "claim": "Challenger, Gray & Christmas reported that US-based employers announced 45,849 job cuts in June 2026 and 443,604 through the first half of 2026. Artificial Intelligence was the leading stated reason for job cuts for the fourth consecutive month: 14,029 announced cuts in June, 101,743 year-to-date, about 23% of all first-half cuts. The May report had recorded 38,579 AI-cited cuts, 40% of May cuts, and 87,714 year-to-date through May.",
+      "caveats": [
+        "Challenger tracks announced job-cut plans by stated employer reason, not realized layoffs or independently measured task substitution.",
+        "AI can be cited as a restructuring narrative or allocation label; do not infer that every listed role was technically replaced by an AI system.",
+        "Use as a corporate-labor-market signal that AI has become an explicit layoff category, not as a causal administrative dataset."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "By mid-2026, Challenger data show AI as the leading stated reason in US job-cut announcements for several months, but this is employer-cited layoff taxonomy rather than causal proof of substitution.",
+      "geographic_scope": "us/labor",
+      "keywords": [
+        "challenger",
+        "layoffs",
+        "ai-job-cuts",
+        "technology",
+        "job-cut-announcements",
+        "corporate-restructuring"
+      ]
+    },
+    {
+      "id": "ai-30",
+      "pass": "post_march_2026_update",
+      "topic": "Gallup Q1 2026 — half of US employees use AI at work at least occasionally",
+      "status": "verified",
+      "evidence_level": "B",
+      "sources": [
+        {
+          "title": "Rising AI Adoption Spurs Workforce Changes",
+          "url": "https://www.gallup.com/workplace/704225/rising-adoption-spurs-workforce-changes.aspx",
+          "type": "probability_panel_survey",
+          "date": "2026-04-12"
+        }
+      ],
+      "date_relevant": "2026-04",
+      "claim": "Gallup reported that in Q1 2026, for the first time in its measurement, half of employed American adults used AI in their role at least a few times a year. 13% reported daily use and 28% reported use a few times a week or more. Among AI users, leaders were more likely than individual contributors to report an extremely positive productivity impact (21% vs 13%). The survey ran February 4-19, 2026 among 23,717 employed US adults.",
+      "caveats": [
+        "Self-reported workplace use, not direct productivity measurement.",
+        "The result is US-only and includes occasional use; daily/frequent use is much lower than the headline half.",
+        "Leadership advantage may reflect task mix, autonomy and selection rather than AI alone."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Gallup is an adoption-floor signal: AI use at work has become mainstream in the US, but frequent use and productivity gains are uneven and skew toward leaders and certain work types.",
+      "geographic_scope": "us/labor",
+      "keywords": [
+        "gallup",
+        "workplace-ai",
+        "adoption",
+        "productivity",
+        "leaders",
+        "us-workers"
+      ]
+    },
+    {
+      "id": "ai-31",
+      "pass": "post_march_2026_update",
+      "topic": "Anthropic Economic Index Survey/Cadences 2026 — exposure anxiety, junior concern and delegation cadence",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "sources": [
+        {
+          "title": "What 81,000 people told us about the economics of AI",
+          "url": "https://www.anthropic.com/research/81k-economics",
+          "type": "corporate_research_survey",
+          "date": "2026-04-22"
+        },
+        {
+          "title": "Anthropic Economic Index report: Cadences",
+          "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+          "type": "corporate_research_usage_and_survey_report",
+          "date": "2026-06-26"
+        }
+      ],
+      "date_relevant": "2026-06",
+      "claim": "Anthropic reported an 81,000-user survey connecting Claude usage to economic perceptions: respondents in more AI-exposed roles had greater concern about AI-driven job displacement, early-career respondents were more concerned than senior workers, and respondents reporting the largest speedups also expressed higher displacement concern. In the June Cadences report, close to 6 in 10 respondents chose a higher AI-capability band for the next year than for today, over one third expected AI to handle most or nearly all of their work tasks in 12 months, and over one third put the probability of a junior colleague losing a job in the next year above 60%.",
+      "caveats": [
+        "Anthropic survey respondents are Claude users, not a representative labor-force sample.",
+        "The report links self-reported perceptions and privacy-preserving usage patterns; it does not measure actual future job loss.",
+        "Useful for perceived exposure, delegation cadence and junior-risk expectations; pair with NY Fed/NBER counter-signals for realized labor outcomes."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Anthropic adds a perception-and-usage signal: heavy AI users often feel more productive and more exposed, with particular anxiety around junior colleagues and early-career workers.",
+      "geographic_scope": "global/ai-users",
+      "keywords": [
+        "anthropic",
+        "economic-index",
+        "claude",
+        "early-career",
+        "junior-risk",
+        "automation-share",
+        "delegation"
+      ]
+    },
+    {
+      "id": "ai-32",
+      "pass": "post_march_2026_update",
+      "topic": "OECD Skills in the AI Age 2026 — skill transition as policy problem",
+      "status": "verified",
+      "evidence_level": "A/B",
+      "sources": [
+        {
+          "title": "Skills in the AI age",
+          "url": "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en.html",
+          "type": "official_oecd_policy_paper",
+          "date": "2026-07-08",
+          "doi": "10.1787/972bd15e-en"
+        }
+      ],
+      "date_relevant": "2026-07",
+      "claim": "OECD published the 36-page policy paper “Skills in the AI age” on 8 July 2026. The abstract frames AI as a general-purpose technology that may enhance productivity, growth and job creation, but also create displacement if the transition is poorly managed. It states that AI employment effects differ across sectors, regions, cities and skill levels, and that adapting requires new skills aligned with evolving labor-market demands, with policymakers playing an essential role.",
+      "caveats": [
+        "Policy paper, not a single causal labor-market estimate.",
+        "Use for institutional framing of skills and transition management, not for exact displacement counts.",
+        "Country and occupation-specific impacts require separate sources."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "OECD treats AI labor disruption as a managed skills-transition problem: the risk is not only replacement, but uneven adaptation capacity across sectors, places and skill levels.",
+      "geographic_scope": "oecd/global",
+      "keywords": [
+        "oecd",
+        "skills",
+        "ai-age",
+        "future-of-work",
+        "policy",
+        "reskilling"
+      ]
+    },
+    {
+      "id": "edu-34",
+      "pass": "post_march_2026_update",
+      "topic": "OECD 2026 — system-level policy responses for GenAI in higher education",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Policies supporting responsible and systematic GenAI adoption in higher education",
+          "url": "https://www.oecd.org/en/publications/policies-supporting-responsible-and-systematic-genai-adoption-in-higher-education_c4e5621f-en.html",
+          "type": "official_oecd_policy_paper",
+          "date": "2026-07-17",
+          "doi": "10.1787/c4e5621f-en"
+        }
+      ],
+      "date_relevant": "2026-07",
+      "claim": "OECD published Education Spotlight No. 23 on 17 July 2026, describing how GenAI affects higher education across learning support, teaching and assessment, skills and knowledge, research, and administration. The abstract highlights risks around data protection, academic integrity, equity, reliability of generated content, and impact on student knowledge and skills, and identifies five areas of emerging system-level policy response.",
+      "caveats": [
+        "This is a governance/policy synthesis, not a measurement of learning outcomes.",
+        "Use as evidence that higher education is moving from ad hoc AI rules toward system-level adoption policy.",
+        "The five policy areas should be quoted from the PDF if used verbatim."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "OECD’s July 2026 higher-education spotlight confirms that GenAI governance is moving from individual misconduct to system-level policy: assessment, data, equity, reliability and skill formation are now one problem.",
+      "geographic_scope": "oecd/higher-education",
+      "keywords": [
+        "oecd",
+        "higher-education",
+        "genai",
+        "academic-integrity",
+        "assessment",
+        "data-protection",
+        "equity"
+      ]
+    },
+    {
+      "id": "edu-35",
+      "pass": "post_march_2026_update",
+      "topic": "OECD/European Commission 2026 — AI Literacy Framework for primary and secondary education",
+      "status": "verified",
+      "evidence_level": "A",
+      "sources": [
+        {
+          "title": "Empowering Learners for the Age of AI: An AI Literacy Framework for Primary and Secondary Education",
+          "url": "https://www.oecd.org/en/publications/empowering-learners-for-the-age-of-ai_65cd27d4-en.html",
+          "type": "official_oecd_ec_report",
+          "date": "2026-06-18",
+          "doi": "10.1787/65cd27d4-en"
+        }
+      ],
+      "date_relevant": "2026-06",
+      "claim": "OECD and the European Commission published a 64-page AI Literacy Framework for primary and secondary education on 18 June 2026. The report defines AI literacy as knowledge, skills and attitudes that help learners understand how AI systems work, critically evaluate outputs, and use AI ethically and creatively; it establishes a common framework for desired learner outcomes inside and outside school.",
+      "caveats": [
+        "Framework/guidance, not an outcome evaluation.",
+        "Use as long-state/institutional response to AI-native education, not proof of successful implementation.",
+        "Local curriculum adoption will vary by country and system."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "The OECD/EC AI literacy framework is a long-state signal: school systems are beginning to define AI competence as a general civic and professional literacy, not a specialist programming skill.",
+      "geographic_scope": "oecd/eu/k12",
+      "keywords": [
+        "oecd",
+        "european-commission",
+        "ai-literacy",
+        "k12",
+        "primary-secondary",
+        "curriculum",
+        "provenance"
+      ]
+    },
+    {
+      "id": "edu-36",
+      "pass": "post_march_2026_update",
+      "topic": "Anthropic Claude for Teachers 2026 — platformization of K-12 teacher workflow",
+      "status": "verified",
+      "evidence_level": "C",
+      "sources": [
+        {
+          "title": "Introducing Claude for Teachers",
+          "url": "https://www.anthropic.com/news/claude-for-teachers",
+          "type": "corporate_product_announcement",
+          "date": "2026-07-14"
+        }
+      ],
+      "date_relevant": "2026-07",
+      "claim": "Anthropic introduced Claude for Teachers on 14 July 2026, offering verified US K-12 educators free premium Claude access, a library of teaching skills, and a direct connection to evidence-based curricula mapped to academic standards in all 50 states. The product is free for individual educators who sign up by 30 June 2027 for a full year, with a school/district offering announced as forthcoming.",
+      "caveats": [
+        "Corporate product announcement; do not treat as independent evidence of improved learning outcomes.",
+        "Useful as a platformization signal: teacher planning, standards mapping and instructional scaffolding become AI-mediated workflow.",
+        "US K-12 only at launch."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Claude for Teachers is a corporate-platform signal: AI vendors are moving from student cheating discourse into teacher workflow, standards mapping and lesson-design infrastructure.",
+      "geographic_scope": "us/k12",
+      "keywords": [
+        "anthropic",
+        "claude-for-teachers",
+        "k12",
+        "teacher-workflow",
+        "lesson-planning",
+        "curriculum-platform"
+      ]
+    },
+    {
+      "id": "gov-01",
+      "pass": "post_march_2026_update",
+      "topic": "GenAI.mil 2026 — DoD internal AI marketplace reaches mass institutional use",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "sources": [
+        {
+          "title": "GenAI.mil records almost 1.7M users, plans new model additions",
+          "url": "https://www.nextgov.com/artificial-intelligence/2026/07/genaimil-records-almost-17m-users-plans-new-model-additions/414568/",
+          "type": "specialized_press_reporting_named_official",
+          "date": "2026-07-01"
+        }
+      ],
+      "date_relevant": "2026-07",
+      "claim": "Nextgov/FCW reported on 1 July 2026 that Cameron Stanley, the DoD chief digital and artificial intelligence officer, said GenAI.mil had reached a record almost 1.7 million users and more than 100,000 custom agents. The report also says the DoD planned to add more models and move GenAI.mil to higher classification levels, while already hosting capabilities from multiple major vendors at Impact Level 6 and 7.",
+      "caveats": [
+        "Specialized press report quoting a named official, not an independently audited usage release.",
+        "“Users” may include registered or active platform users depending on DoD definition; avoid converting to daily active users unless sourced from a specific statement.",
+        "Use as institutional adoption / public-sector workflow signal, not employment impact evidence."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "GenAI.mil is a public-sector adoption signal: a large state employer is normalizing internal AI marketplaces and custom agents as work infrastructure, not merely experimenting at the edge.",
+      "geographic_scope": "us/government/defense",
+      "keywords": [
+        "genai.mil",
+        "dod",
+        "government-ai",
+        "custom-agents",
+        "public-sector",
+        "institutional-adoption"
+      ]
+    },
+    {
+      "id": "ai-33",
+      "pass": "post_march_2026_update",
+      "topic": "arXiv 2026 — career choice under heterogeneous AI exposure",
+      "status": "verified",
+      "evidence_level": "C",
+      "sources": [
+        {
+          "title": "Helping People Choose Careers in the Age of AI",
+          "url": "https://arxiv.org/abs/2607.15506",
+          "type": "preprint",
+          "date": "2026-07-16",
+          "doi": "10.48550/arXiv.2607.15506"
+        }
+      ],
+      "date_relevant": "2026-07",
+      "claim": "Steele and Cruz (arXiv, submitted 16 July 2026) compare six projections of occupational AI exposure, propose a model using 2025 query data from Anthropic and OpenAI, and report marked heterogeneity across models. Their abstract says post-2020 models tend to show positive relationships among AI exposure, salaries and occupational complexity; jobs in healthcare practice show the strongest balance of higher pay with lower AI exposure; and high-Claude-use jobs where AI acts as a complement rather than substitute are modestly higher-paying.",
+      "caveats": [
+        "Preprint, not peer reviewed.",
+        "Exposure estimates depend heavily on model assumptions and usage norms; the paper itself emphasizes heterogeneity.",
+        "Use as a career-routing/exposure-map signal, not as definitive forecast of safe occupations."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "The July 2026 career-choice preprint strengthens the “AI-un-exposed is not simply low-skill” point: some high-pay professional fields, especially healthcare practice, may combine lower AI exposure with strong wages.",
+      "geographic_scope": "us/labor/research",
+      "keywords": [
+        "arxiv",
+        "career-choice",
+        "ai-exposure",
+        "healthcare-practice",
+        "occupations",
+        "routing"
+      ]
+    },
+    {
+      "id": "fin-01",
+      "pass": "post_march_2026_update",
+      "topic": "Bloomberg/Fortune 2026 — banking AI pressure on junior analyst apprenticeship ladder",
+      "status": "verified",
+      "evidence_level": "B/C",
+      "sources": [
+        {
+          "title": "Banks lay groundwork for mass workforce cuts as AI takes hold",
+          "url": "https://fortune.com/2026/06/07/banks-mass-workforce-cuts-ai-entry-level-jobs-junior-analysts/",
+          "type": "press_reporting_bloomberg_republished",
+          "date": "2026-06-07"
+        }
+      ],
+      "date_relevant": "2026-06",
+      "claim": "Bloomberg reporting republished by Fortune on 7 June 2026 frames banking and finance as an apprenticeship-ladder risk zone. It reports executive statements that some jobs will be eliminated or no longer required as AI is implemented, describes AI-powered screening in early finance hiring, and cites Debasish Patnaik of McKinsey QuantumBlack saying banks are cutting junior analyst classes by as much as two-thirds while sourcing roughly 62% of AI talent from those same cohorts. The article also notes targeted use cases including customer service, transaction and trade monitoring, wealth-management avatars and AI call summarization.",
+      "caveats": [
+        "Press reporting with consultant and executive statements; not administrative payroll data.",
+        "Use as a finance-sector apprenticeship-pressure signal, not as proof of realized mass cuts across all banks.",
+        "The “as much as two-thirds” figure is about junior analyst classes in some banking contexts, not all entry-level finance jobs."
+      ],
+      "corrections": [],
+      "recommended_phrasing": "Banking is a clean ProfGames case: AI pressure appears first at the apprenticeship interface — screening, junior analyst intake, customer-service/monitoring workflows — while senior judgment remains rhetorically protected.",
+      "geographic_scope": "global/finance",
+      "keywords": [
+        "banking",
+        "finance",
+        "junior-analysts",
+        "apprenticeship",
+        "ai-screening",
+        "workflow-automation",
+        "mckinsey-quantumblack"
+      ]
     }
   ],
   "gaps": [
