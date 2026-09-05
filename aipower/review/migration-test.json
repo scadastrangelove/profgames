@@ -1,0 +1,14 @@
+{
+  "base_commit": "156e39a21b5a523092ccb2975e5aa38f489f52b6",
+  "ru": {
+    "baseline_checksum_verified": true,
+    "canonical_target_checksum_verified": true,
+    "structural_equality": true
+  },
+  "en": {
+    "baseline_checksum_verified": true,
+    "canonical_target_checksum_verified": true,
+    "structural_equality": true
+  },
+  "note": "JSON object key order is not semantically significant; serialized byte order can differ."
+}

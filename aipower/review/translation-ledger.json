@@ -1,0 +1,598 @@
+{
+  "SIG_US_2022_BIS_ADVANCED_COMPUTING": {
+    "original_title": "BIS launches advanced-computing and semiconductor-manufacturing controls on China",
+    "title_ru": "BIS вводит ограничения на передовые вычисления и производство полупроводников для Китая"
+  },
+  "SIG_US_2024_BIS_HBM_ENTITY_LIST": {
+    "original_title": "U.S. expands chip restrictions to HBM, manufacturing equipment/software, and 140 China-linked entities",
+    "title_ru": "США расширяют ограничения на HBM, оборудование и ПО для производства чипов и 140 связанных с Китаем организаций"
+  },
+  "SIG_US_2025_AI_DIFFUSION_RULE": {
+    "original_title": "AI Diffusion Rule creates explicit country tiers for AI chip access",
+    "title_ru": "AI Diffusion Rule вводит категории стран для доступа к ИИ-чипам"
+  },
+  "SIG_US_2026_AI_DIFFUSION_REPLACEMENT_WITHDRAWN": {
+    "original_title": "Commerce withdraws planned replacement rule for AI chip exports",
+    "title_ru": "Минторг США отзывает проект нового режима экспорта ИИ-чипов"
+  },
+  "SIG_US_2026_BIS_D5_GUIDANCE": {
+    "original_title": "BIS clarifies D:5/Macau-headquartered entities abroad still need licenses for advanced computing items",
+    "title_ru": "BIS уточняет лицензирование зарубежных подразделений компаний с головным офисом в D:5 и Макао"
+  },
+  "SIG_NVIDIA_2025_H20_CHARGE": {
+    "original_title": "Nvidia expects up to $5.5B charge after U.S. licensing requirement on H20 sales to China",
+    "title_ru": "NVIDIA ожидает списание до $5,5 млрд после введения лицензирования продаж H20 в Китай"
+  },
+  "SIG_UAE_2024_MICROSOFT_G42_HUAWEI_DIVORCE": {
+    "original_title": "Microsoft-G42 deal viewed positively by White House because G42 cut Huawei ties",
+    "title_ru": "Белый дом положительно оценивает сделку Microsoft–G42 после разрыва связей G42 с Huawei"
+  },
+  "SIG_UAE_2025_STARGATE_UAE": {
+    "original_title": "Stargate UAE AI datacenter to begin operation in 2026, with broader 5GW plan",
+    "title_ru": "Stargate UAE планирует начало работы в 2026 году в рамках более широкого проекта на 5 ГВт"
+  },
+  "SIG_SA_2026_HUMAIN_XAI": {
+    "original_title": "Saudi HUMAIN invested $3B in xAI Series E; xAI/HUMAIN plan 500MW AI data-center infrastructure",
+    "title_ru": "HUMAIN инвестирует $3 млрд в раунд xAI; партнёры планируют ИИ-инфраструктуру на 500 МВт"
+  },
+  "SIG_EU_2025_INVESTAI_GIGAFACTORIES": {
+    "original_title": "EU InvestAI / AI gigafactory push seeks to narrow frontier-compute gap",
+    "title_ru": "ЕС через InvestAI и ИИ-гигафабрики стремится сократить дефицит передовых вычислений"
+  },
+  "SIG_EU_2026_AWS_AZURE_DMA_GATEKEEPERS": {
+    "original_title": "EU preliminarily concludes AWS and Azure should fall under DMA gatekeeper rules",
+    "title_ru": "ЕС предварительно относит AWS и Azure к кандидатам на регулирование посредников по DMA"
+  },
+  "SIG_EU_2026_PAX_SILICA": {
+    "original_title": "EU joins U.S.-led Pax Silica initiative on AI and chip supply-chain security",
+    "title_ru": "ЕС присоединяется к инициативе Pax Silica по безопасности цепочек поставок ИИ и чипов"
+  },
+  "SIG_CHINA_2025_ALIBABA_380B_AI_CLOUD": {
+    "original_title": "Alibaba plans 380B yuan investment in AI and cloud infrastructure over three years",
+    "title_ru": "Alibaba планирует вложить 380 млрд юаней в ИИ и облака за три года"
+  },
+  "SIG_CHINA_2026_AI_POWER_GRID_HURDLES": {
+    "original_title": "China's push for green power use in AI data centers faces grid and load hurdles",
+    "title_ru": "Зелёная энергетика китайских ИИ-дата-центров сталкивается с ограничениями сети и нагрузки"
+  },
+  "SIG_INDIA_2026_AMAZON_13B_CLOUD_AI": {
+    "original_title": "Amazon announces additional $13B investment in India AI/cloud infrastructure by 2030",
+    "title_ru": "Amazon объявляет дополнительные инвестиции $13 млрд в ИИ и облачную инфраструктуру Индии до 2030 года"
+  },
+  "SIG_JAPAN_2026_BLACKSTONE_30B_AI_DC": {
+    "original_title": "Blackstone plans $30B investment in Japan AI data centers, reportedly over 1GW",
+    "title_ru": "Blackstone планирует вложить $30 млрд в дата-центры Японии; заявленная мощность — более 1 ГВт"
+  },
+  "SIG_RUSSIA_2024_NEBIUS_1B_AI_INFRA": {
+    "original_title": "Post-Yandex Nebius plans over $1B AI infrastructure investment in Europe",
+    "title_ru": "Выделенная из «Яндекса» Nebius планирует более $1 млрд инвестиций в ИИ-инфраструктуру Европы"
+  },
+  "SIG_CYBER_2025_AIXCC_FINAL": {
+    "original_title": "AIxCC finalists found 77% of injected bugs, patched 61%, and found 18 real-world vulnerabilities",
+    "title_ru": "AIxCC: обнаружены 54 из 63 внесённых уязвимостей, исправлены 43; найдены ещё 18 ранее неизвестных"
+  },
+  "SIG_CYBER_2026_OSS_CRS": {
+    "original_title": "OSS-CRS ports AIxCC CRS techniques to real-world open-source projects",
+    "title_ru": "OSS-CRS переносит методы AIxCC на реальные проекты с открытым исходным кодом"
+  },
+  "SIG_COG_2026_INDIRECT_PROMPT_INJECTION_WILD": {
+    "original_title": "Large-scale study finds indirect prompt injections in the wild across 1.2B URLs",
+    "title_ru": "Исследование 1,2 млрд URL обнаруживает косвенные внедрения инструкций в открытом вебе"
+  },
+  "SIG_COG_2026_RESUME_PROMPT_INJECTION": {
+    "original_title": "Real-world resume-screening study finds hidden prompt injections in about 1% of resumes",
+    "title_ru": "Исследование реального найма находит скрытые инструкции примерно в 1% резюме"
+  },
+  "SIG_COG_2026_AGENT_IPI_COMPETITION": {
+    "original_title": "Public red-team competition finds frontier AI agents vulnerable to indirect prompt injection",
+    "title_ru": "Открытое соревнование выявляет уязвимость передовых агентов к косвенному внедрению инструкций"
+  },
+  "SIG_AGENTS_2026_AGENT_INDEX": {
+    "original_title": "AI Agent Index documents 30 deployed agentic AI systems and uneven transparency",
+    "title_ru": "AI Agent Index описывает 30 работающих агентных систем и неодинаковую прозрачность"
+  },
+  "SIG_2026_MYTHOS_PROJECT_GLASSWING_PREVIEW": {
+    "original_title": "Anthropic Mythos / Project Glasswing becomes public as restricted cyber-vulnerability model program",
+    "title_ru": "Anthropic представляет Mythos / Project Glasswing как программу кибервозможностей с ограниченным доступом"
+  },
+  "SIG_2026_MYTHOS_FIREFOX_271": {
+    "original_title": "Mozilla reports Mythos-assisted discovery/fixing of 271 Firefox security vulnerabilities",
+    "title_ru": "Mozilla сообщает о 271 уязвимости Firefox, найденной и исправленной с помощью Mythos"
+  },
+  "SIG_2026_MYTHOS_CLASSIFIED_SYSTEMS_TEST": {
+    "original_title": "AP/Reuters: Mythos found vulnerabilities in classified U.S. government systems during controlled testing",
+    "title_ru": "AP/Reuters: в контролируемом тесте Mythos нашёл уязвимости секретных систем правительства США"
+  },
+  "SIG_2026_US_MODEL_EXPORT_CONTROL_ANTHROPIC_JUNE12": {
+    "original_title": "U.S. order reportedly forces Anthropic to disable Fable 5 and Mythos 5 access globally",
+    "title_ru": "По сообщениям СМИ, распоряжение США вынуждает Anthropic отключить Fable 5 и Mythos 5 по всему миру"
+  },
+  "SIG_2026_MYTHOS_LIMITED_RESTORE_TRUSTED_US_ORGS": {
+    "original_title": "U.S. allows limited redeployment of Claude Mythos 5 to trusted U.S. critical-infrastructure organizations",
+    "title_ru": "США разрешают ограниченно вернуть Mythos 5 доверенным организациям критической инфраструктуры"
+  },
+  "SIG_2026_FABLE5_RETURN_REPORTED": {
+    "original_title": "Reuters/Axios: U.S. close to allowing Anthropic to restore Fable 5 access",
+    "title_ru": "Reuters/Axios: США близки к разрешению Anthropic восстановить доступ к Fable 5"
+  },
+  "SIG_2026_OPENAI_GPT56_STAGED_RELEASE": {
+    "original_title": "OpenAI defers public rollout of GPT-5.6 and begins limited preview at U.S. government request",
+    "title_ru": "OpenAI откладывает публичный выпуск GPT-5.6 и запускает ограниченное тестирование по просьбе правительства США"
+  },
+  "SIG_2026_360_YITIAN_TULONG_UNVEIL": {
+    "original_title": "Qihoo 360 unveils Yitian Tulong: Tulongfeng vulnerability agent and Yitianzhen automated defense system",
+    "title_ru": "Qihoo 360 представляет Yitian Tulong: агента поиска уязвимостей и систему автоматизированной защиты"
+  },
+  "SIG_2026_MYTHOS_LINKED_REDISCOVERY_COUNTEREVIDENCE": {
+    "original_title": "Benchmarking Mythos-linked bug rediscovery finds limited success under favorable target-file scaffolds",
+    "title_ru": "Повторный поиск связанных с Mythos ошибок даёт ограниченный результат даже при подсказке целевого файла"
+  },
+  "SIG_2026_FABLE5_OPUS48_REDTEAM": {
+    "original_title": "Red-team study finds Fable 5 and Opus 4.8 remain breakable under sustained automated jailbreak pressure",
+    "title_ru": "Red-team исследование показывает обход защит Fable 5 и Opus 4.8 при длительном автоматизированном давлении"
+  },
+  "SIG_2026_MYTHOS_SANDBOX_ESCAPE_UNVERIFIED": {
+    "original_title": "Mythos sandbox-escape discussion framed as unverified but important containment-stack warning",
+    "title_ru": "Неподтверждённый рассказ о выходе Mythos из песочницы указывает на общий риск изоляции"
+  },
+  "SIG_2026_US_MAVEN_PROGRAM_OF_RECORD": {
+    "original_title": "Pentagon to adopt Palantir Maven AI as core U.S. military command-and-control system",
+    "title_ru": "Пентагон планирует сделать Palantir Maven основной системой военного управления США"
+  },
+  "SIG_2026_GOOGLE_CLASSIFIED_PENTAGON_AI_DEAL": {
+    "original_title": "Google signs classified Pentagon AI deal for sensitive applications including mission planning and weapons targeting",
+    "title_ru": "Google заключает соглашение с Пентагоном о применении ИИ в секретных задачах, включая планирование и целеуказание"
+  },
+  "SIG_2026_PENTAGON_SEVEN_AI_COMPANIES_CLASSIFIED_NETWORKS": {
+    "original_title": "Pentagon reaches classified-network AI agreements with seven major AI/tech firms, excluding Anthropic",
+    "title_ru": "Пентагон заключает соглашения по ИИ в секретных сетях с семью компаниями, без Anthropic"
+  },
+  "SIG_2026_UKRAINE_DOMESTIC_AI_COMPUTE_MILITARY_DEMAND": {
+    "original_title": "Ukraine plans domestic AI computing capacity; military described as largest AI consumer",
+    "title_ru": "Украина планирует собственные ИИ-вычисления; военные названы крупнейшим потребителем"
+  },
+  "SIG_2024_ISRAEL_LAVENDER_GOSPEL_TARGETING": {
+    "original_title": "Guardian/+972: Israel used Lavender and Gospel AI-assisted systems for target generation in Gaza",
+    "title_ru": "Guardian/+972: Израиль использовал Lavender и Gospel для подготовки целей в Газе"
+  },
+  "SIG_2026_RBI_BANK_AI_RISK_GUIDELINES": {
+    "original_title": "RBI proposes bank AI/ML risk-management guidelines requiring board-approved frameworks and human oversight",
+    "title_ru": "RBI предлагает правила управления рисками ИИ/ML в банках с ответственностью советов директоров и контролем человека"
+  },
+  "SIG_2026_US_BANK_REGULATORS_AI_SCRUTINY": {
+    "original_title": "U.S. bank regulators intensify scrutiny of AI use in lending, KYC and sanctions screening",
+    "title_ru": "Банковские регуляторы США усиливают проверку ИИ в кредитовании, KYC и санкционном контроле"
+  },
+  "SIG_2026_JPMORGAN_AI_INVESTMENT_BANKING_AND_MYTHOS": {
+    "original_title": "JPMorgan rolls out AI tools in investment banking globally and is among banks allowed or testing Mythos",
+    "title_ru": "JPMorgan внедряет ИИ в инвестиционно-банковскую работу и участвует в допуске или тестировании Mythos"
+  },
+  "SIG_2026_UK_FINANCE_AI_STRESS_TESTS": {
+    "original_title": "UK lawmakers call for AI-specific financial-services stress tests",
+    "title_ru": "Британские парламентарии призывают к специальным ИИ-стресс-тестам финансового сектора"
+  },
+  "SIG_2025_OPENAI_USAGE_POLICY_NATIONAL_SECURITY_HIGH_STAKES": {
+    "original_title": "OpenAI usage policy requires review/approval for national security or intelligence purposes and human review in high-stakes automated decisions",
+    "title_ru": "Политика OpenAI требует согласования ряда разведывательных применений и проверки человеком решений высокого риска"
+  },
+  "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS": {
+    "original_title": "Anthropic activates ASL-3 protections for Claude Opus 4 with CBRN classifiers, monitoring and vetted exemptions",
+    "title_ru": "Anthropic вводит ASL-3 для Claude Opus 4: CBRN-фильтры, наблюдение и проверяемые исключения"
+  },
+  "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE": {
+    "original_title": "Anthropic RSP planned ASL-3 safeguards include tiered access, enhanced due diligence and monitoring layers",
+    "title_ru": "План Anthropic по ASL-3 предусматривает уровни доступа, углублённую проверку клиентов и мониторинг"
+  },
+  "SIG_2026_OPENAI_GPT56_VETTED_PARTNERS": {
+    "original_title": "OpenAI delays public GPT-5.6 release and restricts initial access to vetted partners after U.S. government request",
+    "title_ru": "OpenAI откладывает публичный GPT-5.6 и ограничивает первый доступ проверенными партнёрами по просьбе правительства США"
+  },
+  "SIG_2026_OPENAI_GPT55_CYBER_VETTED_ACCESS": {
+    "original_title": "Axios: OpenAI rolls out enhanced GPT-5.5-Cyber only to vetted cybersecurity firms and researchers",
+    "title_ru": "Axios: OpenAI предоставляет усиленный GPT-5.5-Cyber только проверенным ИБ-компаниям и исследователям"
+  },
+  "SIG_2026_ANTHROPIC_MYTHOS_TRUSTED_ORGS": {
+    "original_title": "U.S. allows Anthropic to redeploy Mythos 5 to over 100 trusted U.S. organizations",
+    "title_ru": "США разрешают вернуть Mythos 5 более чем ста доверенным американским организациям"
+  },
+  "SIG_2026_PALANTIR_MAVEN_PROGRAM_OF_RECORD_EXPANDED": {
+    "original_title": "Palantir Maven designated as core U.S. military command-and-control / program-of-record system",
+    "title_ru": "Palantir Maven получает статус основной программы военного управления США"
+  },
+  "SIG_2025_PALANTIR_NATO_MSS": {
+    "original_title": "NATO acquires Palantir Maven Smart System NATO for Allied Command Operations",
+    "title_ru": "NATO приобретает Maven Smart System NATO для Allied Command Operations"
+  },
+  "SIG_2025_PALANTIR_ARMY_10B_ENTERPRISE": {
+    "original_title": "U.S. Army awards Palantir a $10B enterprise agreement consolidating software/data/AI access",
+    "title_ru": "Армия США заключает рамочное соглашение с Palantir на сумму до $10 млрд для объединения доступа к ПО, данным и ИИ"
+  },
+  "SIG_2024_PALANTIR_TITAN_ARMY": {
+    "original_title": "Palantir wins U.S. Army TITAN contract for AI/ML-enabled targeting ground station prototypes",
+    "title_ru": "Palantir получает контракт армии США на прототипы наземной станции TITAN с ИИ/ML-целеуказанием"
+  },
+  "SIG_2026_PALANTIR_UK_MOD_240M": {
+    "original_title": "UK MoD awards Palantir £240.6M follow-on contract for data analytics across strategic, tactical and live operational decision-making",
+    "title_ru": "Минобороны Великобритании заключает с Palantir последующий контракт на £240,6 млн для аналитики и поддержки решений"
+  },
+  "SIG_2026_PALANTIR_NHS_FDP_ACCESS_EFFECTIVENESS": {
+    "original_title": "Palantir NHS Federated Data Platform: broad contractor access and disputed effectiveness claims",
+    "title_ru": "Платформа NHS от Palantir: широкий доступ подрядчика и спорные заявления об эффективности"
+  },
+  "SIG_2026_PALANTIR_MET_POLICE_AI": {
+    "original_title": "Met Police extends Palantir AI pilot despite blocked £50M contract; tool profiles ~45,000 staff for misconduct/welfare risk",
+    "title_ru": "Полиция Лондона продлевает пилот Palantir после блокировки контракта на £50 млн; охват — около 45 тысяч сотрудников"
+  },
+  "SIG_2025_PALANTIR_ICE_IMMIGRATIONOS": {
+    "original_title": "ICE pays Palantir $30M to build ImmigrationOS for deportation lifecycle and near-real-time tracking workflows",
+    "title_ru": "ICE заказывает у Palantir ImmigrationOS за $30 млн для процессов депортации и оперативного отслеживания"
+  },
+  "SIG_2025_PALANTIR_ICE_FOIA_DATA_PRACTICES": {
+    "original_title": "FOIA documents reveal ICE reliance on Palantir Falcon/ICM and broad database integration",
+    "title_ru": "Документы FOIA показывают использование ICE систем Palantir Falcon/ICM и интеграцию многочисленных баз"
+  },
+  "SIG_2026_PALANTIR_REVENUE_AIP_GROWTH": {
+    "original_title": "Palantir Q4/FY2025 growth driven by AIP demand in U.S. government and commercial markets",
+    "title_ru": "Рост Palantir за IV квартал и 2025 год связывается со спросом на AIP в государственном и частном секторах США"
+  },
+  "SIG_2026_STANFORD_AGGREGATE_INVESTMENT": {
+    "original_title": "Stanford AI Index 2026: global corporate AI investment $581.7B; global private $344.7B; US private $285.9B vs China $12.4B",
+    "title_ru": "Stanford AI Index 2026: корпоративные вложения — $581,7 млрд, частные — $344,7 млрд; США — $285,9 млрд, Китай — $12,4 млрд"
+  },
+  "SIG_2026_STANFORD_GUIDANCE_FUND_CLARIFY": {
+    "original_title": "Stanford AI Index 2026 Economy chapter: Chinese guidance funds deployed ~$184B into AI firms (2000-2023); the ~$912B figure is across ALL industries",
+    "title_ru": "Stanford уточняет: около $184 млрд китайских направляющих фондов вложено в ИИ в 2000–2023 годах; $912 млрд — все отрасли"
+  },
+  "SIG_2026_STANFORD_MODELS_COMPUTE_TALENT": {
+    "original_title": "Stanford AI Index 2026: US 50 vs China 30 notable models; US 5,427 data centers; researcher inflow -89% since 2017; model gap 2.7%",
+    "title_ru": "Stanford AI Index 2026: США — 50 заметных моделей, Китай — 30; 5 427 дата-центров в США и сокращение притока исследователей"
+  },
+  "SIG_2026_BIS_H200_MI325X_CASEBYCASE": {
+    "original_title": "BIS final rule (FR 2026-00789): H200 and AMD MI325X to China shift from presumption-of-denial to case-by-case review with security conditions",
+    "title_ru": "BIS переводит поставки H200 и AMD MI325X в Китай к индивидуальной оценке с условиями безопасности"
+  },
+  "SIG_2026_NVIDIA_H200_LICENSE_SMALL": {
+    "original_title": "Nvidia secures US license to ship a small number of H200 to China (US inspection + 25% duty); restarts H200 manufacturing; China demand uncertain",
+    "title_ru": "NVIDIA получает лицензию на небольшую партию H200 для Китая; требуются проверка в США и пошлина 25%"
+  },
+  "SIG_2026_BIS_ANTHROPIC_ISINFORMED_LETTER": {
+    "original_title": "BIS 'is-informed' letter (Lutnick to Amodei) requires an individually validated license before any foreign-national access to Mythos 5 / Fable 5; cites ECRA 50 USC 4817(b)(1) and EAR 744.22(b); legal basis publicly contested",
+    "title_ru": "Письмо BIS требует отдельной лицензии на иностранный доступ к Mythos 5 и Fable 5; правовое основание оспаривается"
+  },
+  "SIG_2025_PALANTIR_ARMY_10B_PRIMARY": {
+    "original_title": "U.S. Army Enterprise Agreement to Palantir: contract W519TC-25-D-0039, 10-yr IDC, ceiling $10B, action obligation $0 at award; consolidates 75 contracts (15 prime + 60 related)",
+    "title_ru": "Контракт армии США с Palantir: потолок $10 млрд на десять лет, $0 обязательств при заключении, объединение 75 контрактов"
+  },
+  "SIG_2026_MALAYSIA_AI_CHIP_SMUGGLING_SEIZURE": {
+    "original_title": "Malaysia customs seizes 72 AI-chip server units worth about $12.93M in alleged transshipment scheme",
+    "title_ru": "Таможня Малайзии изымает 72 сервера с ИИ-чипами стоимостью около $12,93 млн по делу о предполагаемой перевалке"
+  },
+  "SIG_2026_AI_DATACENTER_POWER_STRESS_REVIEW": {
+    "original_title": "AI data-center load growth outpaces clean-energy deployment in several regions and challenges grid flexibility/reliability",
+    "title_ru": "Обзор: рост нагрузки ИИ-дата-центров опережает чистую генерацию и усложняет обеспечение устойчивости сетей"
+  },
+  "SIG_2026_AI_DATACENTER_CONCENTRATED_SITING_POWER_STRESS": {
+    "original_title": "Projected AI data-center electricity use by six leading firms rises from ~118 TWh in 2024 to 239–295 TWh by 2030; regional siting drives power-system stress",
+    "title_ru": "Прогноз: шесть компаний увеличат потребление дата-центров со 118 ТВт·ч в 2024 году до 239–295 ТВт·ч в 2030-м"
+  },
+  "SIG_2026_POWER_FLEXIBLE_AI_DATACENTERS": {
+    "original_title": "Real-world 130 kW GPU-cluster deployment shows AI data centers can curtail and shift workloads in response to grid conditions",
+    "title_ru": "Тест на GPU-кластере 130 кВт показывает возможность сокращать и переносить нагрузки дата-центра"
+  },
+  "SIG_2026_AI_LOAD_FLEXIBILITY_GRID_INTERCONNECTION": {
+    "original_title": "AI data-center load flexibility can reduce grid investment and operating costs by 3–21%, but benefits are location-dependent and diminishing",
+    "title_ru": "Моделирование: гибкость нагрузки дата-центров может снизить сетевые и операционные затраты на 3–21% в зависимости от места"
+  },
+  "SIG_2026_DATA_CENTER_BACKLASH_US_POLL": {
+    "original_title": "Axios/Milltown poll: U.S. data-center backlash becomes public proxy for broader AI anxiety; nearly half support temporary ban",
+    "title_ru": "Опрос Axios/Milltown: почти половина респондентов поддерживает временный запрет новых дата-центров в США"
+  },
+  "SIG_2026_UKRAINE_DRONE_FOOTAGE_AI_TRAINING": {
+    "original_title": "Ukraine conflict drone-footage corpus: 500,000+ hours used to train computer-vision and autonomous-drone models",
+    "title_ru": "Более 500 тысяч часов записей украинских беспилотников используются для обучения компьютерного зрения и автономных систем"
+  },
+  "SIG_2026_SOUTH_KOREA_DRONE_WARRIORS_AI_SWARMS": {
+    "original_title": "South Korea plans to train 500,000 drone operators and deploy tens of thousands of drones, including AI-based swarm systems, while avoiding Chinese components",
+    "title_ru": "Южная Корея планирует подготовить 500 тысяч операторов дронов и развернуть десятки тысяч аппаратов без китайских компонентов"
+  },
+  "SIG_2026_RBI_AI_KILL_SWITCH_FINANCE": {
+    "original_title": "RBI draft AI/ML model-risk framework adds kill-switch / decommissioning logic, independent validation and board accountability for banks",
+    "title_ru": "Проект RBI добавляет аварийное отключение, независимую проверку и ответственность руководства за ИИ/ML в банках"
+  },
+  "SIG_2026_DECISION_SOVEREIGNTY_MILITARY_AI_FRAMEWORK": {
+    "original_title": "Decision-sovereignty framework: supplier models embedded in military workflows can influence operational boundary conditions; state-owned orchestration and model replaceability proposed as mitigation",
+    "title_ru": "Рамка суверенности решений: государственная оркестрация и заменяемость моделей как ответ зависимости военного ИИ от поставщика"
+  },
+  "SIG_2026_PUBLIC_SUPPORT_MILITARY_AI_NINE_COUNTRIES": {
+    "original_title": "Preregistered nine-country survey (n=9,000) finds publics conditionally permissive toward military AI, with unease concentrated around fully autonomous lethal force",
+    "title_ru": "Опрос 9 тысяч человек в девяти странах: военный ИИ принимается условно, наибольшие опасения вызывают автономные летальные системы"
+  },
+  "SIG_2026_DOJ_SUPERMICRO_2_5B_SMUGGLING": {
+    "original_title": "DOJ (SDNY) indictment: Super Micro co-founder Liaw and two others charged with routing ~$2.5B of Nvidia-equipped AI servers to China via a SE Asian shell company; ~$510M moved within weeks",
+    "title_ru": "Минюст США обвиняет сооснователя Super Micro и ещё двух лиц в поставках ИИ-серверов примерно на $2,5 млрд в Китай"
+  },
+  "SIG_2025_DOJ_ALX_SOLUTIONS_TRANSSHIPMENT": {
+    "original_title": "DOJ: two Chinese nationals (ALX Solutions, El Monte CA) charged with exporting GPUs to China Oct 2022-Jul 2025 via Singapore/Malaysia freight forwarders; payments from HK/China",
+    "title_ru": "Минюст США обвиняет двух граждан КНР из ALX Solutions в экспорте GPU через Сингапур и Малайзию в 2022–2025 годах"
+  },
+  "SIG_2025_DOJ_JANFORD_GPU_SMUGGLING": {
+    "original_title": "DOJ indictment: Ho/Raymond/Li/Chen used Janford Realtor as a front to transship Nvidia GPUs to China via Malaysia/Thailand; 400 A100 exported, H100/H200 attempts disrupted; $3.89M wires from PRC",
+    "title_ru": "Минюст США: Janford Realtor предположительно использовалась для перевалки GPU в Китай; попытки поставок H100/H200 пресечены"
+  },
+  "SIG_2026_TAIWAN_FIRST_CHIP_SMUGGLING_PROSECUTION": {
+    "original_title": "Taiwan launches its first criminal prosecution for AI-chip smuggling (May 21 raids); transit/manufacturing hubs move from administrative restrictions to criminal fraud charges",
+    "title_ru": "Тайвань начинает первое уголовное преследование по делу о контрабанде ИИ-чипов"
+  },
+  "SIG_2026_DATACENTER_CANCELLATIONS_HARD_DATA": {
+    "original_title": "Sightline Climate/Bloomberg: ~half of 2026 US data-center capacity delayed/cancelled (16 GW announced, ~5 GW under construction); Data Center Watch: 75+ projects / $130B blocked in Q1 2026",
+    "title_ru": "Sightline/Bloomberg: около половины мощностей дата-центров США на 2026 год задержано; Data Center Watch сообщает о блокировках проектов"
+  },
+  "SIG_2022_CHIPS_SCIENCE_ACT": {
+    "original_title": "CHIPS and Science Act becomes Public Law 117-167, funding U.S. semiconductor production and science programs",
+    "title_ru": "CHIPS and Science Act становится законом США и финансирует полупроводниковое производство и науку"
+  },
+  "SIG_2022_CHATGPT_LAUNCH": {
+    "original_title": "OpenAI launches ChatGPT research preview",
+    "title_ru": "OpenAI запускает исследовательскую версию ChatGPT"
+  },
+  "SIG_2022_NVIDIA_A800_WORKAROUND": {
+    "original_title": "Nvidia introduces A800, a China-focused export-control-compliant adaptation after October 2022 restrictions",
+    "title_ru": "NVIDIA выпускает A800 для Китая в ответ на экспортные ограничения октября 2022 года"
+  },
+  "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN": {
+    "original_title": "Microsoft extends OpenAI partnership with multiyear, multibillion-dollar investment and exclusive Azure cloud role",
+    "title_ru": "Microsoft расширяет инвестиции в OpenAI и закрепляет эксклюзивную облачную роль Azure"
+  },
+  "SIG_2023_NIST_AI_RMF_1_0": {
+    "original_title": "NIST releases AI Risk Management Framework 1.0",
+    "title_ru": "NIST публикует AI Risk Management Framework 1.0"
+  },
+  "SIG_2023_GPT4_RELEASE": {
+    "original_title": "OpenAI releases GPT-4, framing it as a large multimodal model with benchmark-level professional performance",
+    "title_ru": "OpenAI выпускает GPT-4 и сообщает о высоких результатах на профессиональных тестах"
+  },
+  "SIG_2023_CHINA_GALLIUM_GERMANIUM_CONTROLS": {
+    "original_title": "China restricts gallium and germanium exports, creating the first major minerals counter-control in the chip war",
+    "title_ru": "Китай ограничивает экспорт галлия и германия как ответную меру в полупроводниковой конкуренции"
+  },
+  "SIG_2023_CHINA_GENAI_INTERIM_MEASURES": {
+    "original_title": "China publishes Interim Measures for Generative AI Services, effective 15 August 2023",
+    "title_ru": "Китай публикует временные меры для генеративных ИИ-сервисов с применением с 15 августа 2023 года"
+  },
+  "SIG_2023_US_OUTBOUND_INVESTMENT_EO": {
+    "original_title": "U.S. Executive Order 14105 starts outbound-investment controls for China-related semiconductors, quantum and certain AI systems",
+    "title_ru": "Указ США №14105 запускает контроль исходящих инвестиций в китайские чипы, квантовые технологии и отдельные ИИ-системы"
+  },
+  "SIG_2023_AIXCC_LAUNCH": {
+    "original_title": "DARPA launches AI Cyber Challenge (AIxCC) to build AI tools for securing critical software",
+    "title_ru": "DARPA запускает AI Cyber Challenge для разработки средств защиты критического ПО"
+  },
+  "SIG_2023_BIS_OCT_UPDATE_CLOSES_A800_H800": {
+    "original_title": "U.S. Commerce updates October 2022 controls, targeting AI-chip workarounds such as A800/H800 and foreign-subsidiary loopholes",
+    "title_ru": "Минторг США обновляет ограничения, закрывая обход через A800/H800 и зарубежные подразделения"
+  },
+  "SIG_2023_G7_HIROSHIMA_CODE": {
+    "original_title": "G7 Hiroshima Process publishes International Code of Conduct for organizations developing advanced AI systems",
+    "title_ru": "Хиросимский процесс G7 публикует международный кодекс поведения разработчиков передового ИИ"
+  },
+  "SIG_2023_US_AI_EO_14110": {
+    "original_title": "U.S. Executive Order 14110 on safe, secure and trustworthy AI is signed",
+    "title_ru": "В США подписан указ №14110 о безопасном и заслуживающем доверия ИИ"
+  },
+  "SIG_2023_BLETCHLEY_DECLARATION": {
+    "original_title": "Bletchley Declaration: countries at AI Safety Summit agree frontier AI poses cybersecurity, biotechnology, disinformation and control risks",
+    "title_ru": "Декларация Блетчли признаёт кибер-, биологические, информационные риски и проблему контроля передового ИИ"
+  },
+  "SIG_2023_EU_AI_ACT_PROVISIONAL_AGREEMENT": {
+    "original_title": "Council and European Parliament reach provisional agreement on the EU AI Act, including GPAI/foundation-model rules",
+    "title_ru": "Совет ЕС и Европарламент предварительно согласуют AI Act, включая правила для моделей общего назначения"
+  },
+  "SIG_2024_CLAUDE_3_FAMILY_RELEASE": {
+    "original_title": "Anthropic releases Claude 3 family with Opus and Sonnet generally available in Claude.ai and API",
+    "title_ru": "Anthropic выпускает семейство Claude 3 с доступными Opus и Sonnet"
+  },
+  "SIG_2024_GROK1_OPEN_WEIGHTS": {
+    "original_title": "xAI releases Grok-1 weights and architecture",
+    "title_ru": "xAI публикует веса и архитектуру Grok-1"
+  },
+  "SIG_2024_GPT4O_RELEASE_AND_FREE_ACCESS": {
+    "original_title": "OpenAI releases GPT-4o as a flagship multimodal model",
+    "title_ru": "OpenAI выпускает флагманскую мультимодальную модель GPT-4o"
+  },
+  "SIG_2024_CLAUDE_35_SONNET": {
+    "original_title": "Anthropic launches Claude 3.5 Sonnet",
+    "title_ru": "Anthropic выпускает Claude 3.5 Sonnet"
+  },
+  "SIG_2024_LLAMA31_405B_OPENLY_AVAILABLE": {
+    "original_title": "Meta releases Llama 3.1 405B as an openly available foundation model",
+    "title_ru": "Meta публикует Llama 3.1 405B с открыто доступными весами"
+  },
+  "SIG_2024_GEMINI15_LONG_CONTEXT": {
+    "original_title": "Google announces Gemini 1.5 with long-context multimodal capability",
+    "title_ru": "Google представляет Gemini 1.5 с длинным мультимодальным контекстом"
+  },
+  "SIG_2025_DEEPSEEK_R1_OPEN_SOURCE_RELEASE": {
+    "original_title": "DeepSeek releases R1 with open-source model and distilled models",
+    "title_ru": "DeepSeek публикует R1 и дистиллированные модели"
+  },
+  "SIG_2025_GEMINI25_PRO": {
+    "original_title": "Google launches Gemini 2.5 Pro as a thinking model",
+    "title_ru": "Google выпускает рассуждающую Gemini 2.5 Pro"
+  },
+  "SIG_2025_OPENAI_O3_O4_MINI": {
+    "original_title": "OpenAI releases o3 and o4-mini reasoning models",
+    "title_ru": "OpenAI выпускает рассуждающие модели o3 и o4-mini"
+  },
+  "SIG_2025_LLAMA4_SCOUT_MAVERICK": {
+    "original_title": "Meta introduces Llama 4 Scout and Maverick open-weight multimodal models",
+    "title_ru": "Meta представляет мультимодальные Llama 4 Scout и Maverick с открытыми весами"
+  },
+  "SIG_2024_AMAZON_ANTHROPIC_4B_COMPLETION": {
+    "original_title": "Amazon completes $4B Anthropic investment, reinforcing Claude-on-AWS/Bedrock distribution",
+    "title_ru": "Amazon завершает инвестицию $4 млрд в Anthropic, укрепляя распространение Claude через AWS/Bedrock"
+  },
+  "SIG_2024_OPENAI_ORACLE_OCI_CAPACITY": {
+    "original_title": "OpenAI selects Oracle Cloud Infrastructure to extend Microsoft Azure AI capacity",
+    "title_ru": "OpenAI выбирает Oracle Cloud Infrastructure для расширения вычислительных мощностей Azure"
+  },
+  "SIG_2024_XAI_SERIES_B_6B": {
+    "original_title": "xAI raises $6B Series B to scale AI systems and infrastructure",
+    "title_ru": "xAI привлекает $6 млрд в Series B на модели и инфраструктуру"
+  },
+  "SIG_2024_REDDIT_GOOGLE_DATA_API": {
+    "original_title": "Google and Reddit expand partnership with access to Reddit Data API",
+    "title_ru": "Google и Reddit расширяют партнёрство с доступом к Reddit Data API"
+  },
+  "SIG_2023_AP_OPENAI_ARCHIVE_LICENSE": {
+    "original_title": "Associated Press and OpenAI reach news archive/content-sharing agreement",
+    "title_ru": "Associated Press и OpenAI договариваются о доступе к новостному архиву и обмене контентом"
+  },
+  "SIG_2024_OPENAI_STACK_OVERFLOW_API": {
+    "original_title": "OpenAI and Stack Overflow announce API partnership for technical knowledge",
+    "title_ru": "OpenAI и Stack Overflow объявляют API-партнёрство для доступа к техническим знаниям"
+  },
+  "SIG_2024_NEWS_CORP_OPENAI_PARTNERSHIP": {
+    "original_title": "News Corp and OpenAI sign multi-year global content partnership",
+    "title_ru": "News Corp и OpenAI заключают многолетнее глобальное соглашение о контенте"
+  },
+  "SIG_2024_OPENAI_STATE_THREAT_ACTORS_DISRUPTION": {
+    "original_title": "OpenAI and Microsoft disrupt state-affiliated actors using AI services for malicious cyber activity",
+    "title_ru": "OpenAI и Microsoft пресекают использование ИИ-сервисов связанными с государствами кибероператорами"
+  },
+  "SIG_2024_GOOGLE_PROJECT_NAPTIME": {
+    "original_title": "Google Project Zero publishes Project Naptime for LLM-assisted vulnerability research",
+    "title_ru": "Google Project Zero представляет Project Naptime для поиска уязвимостей с помощью LLM"
+  },
+  "SIG_2024_GOOGLE_BIG_SLEEP_SQLITE": {
+    "original_title": "Google Big Sleep agent finds exploitable SQLite vulnerability before release",
+    "title_ru": "Агент Google Big Sleep находит эксплуатируемую уязвимость SQLite до выпуска"
+  },
+  "SIG_2024_AIXCC_SEMIFINAL": {
+    "original_title": "DARPA AI Cyber Challenge semifinal culminates at DEF CON 32",
+    "title_ru": "Полуфинал DARPA AI Cyber Challenge завершается на DEF CON 32"
+  },
+  "SIG_2024_EU_AI_ACT_ENTERS_FORCE_GPAI": {
+    "original_title": "EU AI Act enters into force, starting the timeline for GPAI/model obligations",
+    "title_ru": "AI Act вступает в силу и запускает поэтапное применение требований к GPAI и моделям"
+  },
+  "SIG_2025_EU_INVESTAI_200B_MOBILIZATION": {
+    "original_title": "EU launched InvestAI to mobilise €200B, including €20B for AI gigafactories",
+    "title_ru": "ЕС запускает InvestAI для мобилизации €200 млрд, включая €20 млрд на ИИ-гигафабрики"
+  },
+  "SIG_2024_UAE_MGX_100B_AI_STATE_VEHICLE": {
+    "original_title": "Abu Dhabi launched MGX as an AI investment vehicle backed by Mubadala and G42",
+    "title_ru": "Абу-Даби создаёт инвестиционную компанию MGX при поддержке Mubadala и G42"
+  },
+  "SIG_2024_SAUDI_40B_AI_FUND_REPORTED": {
+    "original_title": "Saudi Arabia was reported to be planning a roughly $40B AI investment fund",
+    "title_ru": "СМИ сообщают о планах Саудовской Аравии создать ИИ-фонд примерно на $40 млрд"
+  },
+  "SIG_2025_OPENAI_40B_SOFTBANK_ROUND": {
+    "original_title": "OpenAI closed a $40B funding round led by SoftBank at a reported $300B valuation",
+    "title_ru": "OpenAI закрывает раунд $40 млрд под руководством SoftBank при заявленной оценке $300 млрд"
+  },
+  "SIG_2025_ANTHROPIC_3_5B_SERIES_E": {
+    "original_title": "Anthropic raised $3.5B Series E at a $61.5B post-money valuation",
+    "title_ru": "Anthropic привлекает $3,5 млрд в Series E при оценке $61,5 млрд после инвестиций"
+  },
+  "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY": {
+    "original_title": "CoreWeave announced an OpenAI AI-infrastructure deal with contract value up to $11.9B",
+    "title_ru": "CoreWeave объявляет контракт с OpenAI на вычислительную инфраструктуру стоимостью до $11,9 млрд"
+  },
+  "SIG_2024_MICROSOFT_WORK_TREND_AI_USAGE": {
+    "original_title": "Microsoft/LinkedIn Work Trend Index reported 75% of knowledge workers using AI at work",
+    "title_ru": "Microsoft/LinkedIn: 75% опрошенных работников интеллектуального труда используют ИИ на работе"
+  },
+  "SIG_2025_MCKINSEY_STATE_OF_AI_ADOPTION": {
+    "original_title": "McKinsey State of AI reported regular AI use in 88% of surveyed organizations and broad agent experimentation",
+    "title_ru": "McKinsey: 88% опрошенных организаций регулярно используют ИИ и широко экспериментируют с агентами"
+  },
+  "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT": {
+    "original_title": "Morgan Stanley announced an OpenAI GPT-4 assistant for financial-advisor knowledge work",
+    "title_ru": "Morgan Stanley представляет помощника на GPT-4 для финансовых консультантов"
+  },
+  "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE": {
+    "original_title": "JPMorgan rolled out LLM Suite internally, reported initially for 60,000 employees and later much wider access",
+    "title_ru": "JPMorgan внедряет LLM Suite; по сообщениям СМИ, первый этап охватывает 60 тысяч сотрудников"
+  },
+  "SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE": {
+    "original_title": "Anthropic disclosed a Claude Code AI-orchestrated cyber-espionage campaign by GTG-1002",
+    "title_ru": "Anthropic раскрывает кампанию GTG-1002 с использованием Claude Code для кибершпионажа"
+  },
+  "SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION": {
+    "original_title": "Local UPS audit found 15/129 strict LLM/AI-attributed CVEs with public PoC, but only 3/129 heavy weaponization",
+    "title_ru": "Локальный аудит UPS: у 15 из 129 связанных с ИИ CVE есть публичный PoC, у трёх — признаки глубокой подготовки к эксплуатации"
+  },
+  "SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER": {
+    "original_title": "Microsoft Defender / Windows weaponization cluster: BlueHammer, RedSun, UnDefend and related public PoCs",
+    "title_ru": "Кластер эксплуатации Windows/Defender: BlueHammer, RedSun, UnDefend и связанные публичные PoC"
+  },
+  "SIG_2025_STARGATE_US_500B_PLEDGE": {
+    "original_title": "OpenAI/SoftBank/Oracle/MGX announced Stargate: up to $500B over four years, with $100B initial deployment",
+    "title_ru": "OpenAI, SoftBank, Oracle и MGX объявляют Stargate: до $500 млрд за четыре года и $100 млрд на первом этапе"
+  },
+  "SIG_2025_CHINA_NATIONAL_VC_GUIDANCE_FUND_138B": {
+    "original_title": "China announced a national venture-capital guidance fund expected to mobilize about $138B over 20 years for hard tech including AI and quantum",
+    "title_ru": "Китай объявляет венчурный направляющий фонд с целью мобилизовать около $138 млрд за двадцать лет"
+  },
+  "SIG_2026_CHINA_AI_DC_295B_PLAN_REPORTED": {
+    "original_title": "Reuters relayed Bloomberg reporting that China is preparing a roughly $295B nationwide AI data-center buildout plan",
+    "title_ru": "Reuters передаёт сообщение Bloomberg о подготовке Китаем плана ИИ-дата-центров примерно на $295 млрд"
+  },
+  "SIG_2025_FRANCE_AI_109B_MOBILIZATION": {
+    "original_title": "France announced €109B of AI investment mobilization around the AI Action Summit",
+    "title_ru": "Франция объявляет мобилизацию €109 млрд инвестиций в ИИ к AI Action Summit"
+  },
+  "SIG_2024_CANADA_2_4B_AI_COMMITMENT": {
+    "original_title": "Canada announced a C$2.4B AI package focused on compute access, adoption and safety",
+    "title_ru": "Канада объявляет пакет C$2,4 млрд на вычисления, внедрение и безопасность ИИ"
+  },
+  "SIG_2024_INDIAAI_MISSION_1_25B": {
+    "original_title": "India approved the IndiaAI Mission, a public AI program recorded in the workbook as about $1.25B",
+    "title_ru": "Индия утверждает IndiaAI Mission; в таблицах программы указан объём около $1,25 млрд"
+  },
+  "SIG_2022_US_PERSONS_PRC_SEMICONDUCTOR_SUPPORT": {
+    "original_title": "BIS requires licenses for U.S.-person support to certain advanced-chip facilities in China",
+    "title_ru": "BIS вводит лицензирование помощи американских лиц отдельным передовым полупроводниковым производствам Китая"
+  },
+  "SIG_2024_US_DEEMED_EXPORTS_FOREIGN_PERSON_ACCESS": {
+    "original_title": "BIS deemed-export rules treat controlled-technology access by a foreign person in the U.S. as an export",
+    "title_ru": "Правила BIS приравнивают доступ иностранца к контролируемой технологии в США к экспорту"
+  },
+  "SIG_2025_US_DOJ_DATA_SECURITY_PROGRAM": {
+    "original_title": "U.S. Data Security Program makes access to bulk sensitive and government data an export-control perimeter",
+    "title_ru": "Программа безопасности данных США включает доступ к массовым чувствительным и государственным данным в контрольный контур"
+  },
+  "SIG_2020_US_CFIUS_STAYNTOUCH_DIVESTITURE": {
+    "original_title": "Presidential CFIUS order forces Beijing Shiji to unwind its completed StayNTouch acquisition",
+    "title_ru": "Президентское распоряжение CFIUS обязывает Beijing Shiji отменить состоявшееся приобретение StayNTouch"
+  },
+  "SIG_2026_US_TIKTOK_QUALIFIED_DIVESTITURE_JV": {
+    "original_title": "TikTok forms a majority non-ByteDance U.S. joint venture after the qualified-divestiture law",
+    "title_ru": "TikTok создаёт американское СП с большинством собственности вне ByteDance после закона об отчуждении"
+  },
+  "SIG_2025_US_OUTBOUND_INVESTMENT_FINAL_RULE": {
+    "original_title": "U.S. outbound-investment final rule takes effect for China-related semiconductors, quantum and certain AI systems",
+    "title_ru": "В США начинает действовать контроль исходящих инвестиций в китайские чипы, квантовые технологии и отдельные ИИ-системы"
+  },
+  "SIG_2025_EU_DATA_ACT_ARTICLE_32": {
+    "original_title": "EU Data Act Article 32 requires safeguards against conflicting third-country government access to EU-held non-personal data",
+    "title_ru": "Статья 32 EU Data Act требует защищать неперсональные данные в ЕС от противоречащего праву доступа иностранных властей"
+  },
+  "SIG_2026_EU_FDI_SCREENING_GPAI_ADOPTED": {
+    "original_title": "EU adopts mandatory FDI-screening framework covering systemic-risk and defence/space-suitable GPAI",
+    "title_ru": "ЕС принимает рамку проверки иностранных инвестиций, охватывающую GPAI с системным риском и применением в обороне и космосе"
+  },
+  "SIG_2022_UK_SCAMP_KNOWHOW_BLOCK": {
+    "original_title": "UK National Security and Investment Act order blocks transfer of SCAMP vision-sensing know-how to a Beijing company",
+    "title_ru": "Великобритания блокирует передачу технологии машинного зрения SCAMP пекинской компании"
+  },
+  "SIG_2026_UK_ATAS_AI_RESEARCH_ACCESS": {
+    "original_title": "UK ATAS rules require clearance for covered foreign students and researchers in AI and other sensitive subjects",
+    "title_ru": "Британские правила ATAS требуют допуска для определённых иностранных студентов и исследователей ИИ"
+  },
+  "SIG_2020_US_PP10043_RESEARCHER_ENTRY": {
+    "original_title": "U.S. Proclamation 10043 suspends entry of certain PRC graduate students and researchers linked to military-civil fusion",
+    "title_ru": "Прокламация США №10043 ограничивает въезд части китайских аспирантов и исследователей, связанных с военно-гражданской интеграцией"
+  }
+}

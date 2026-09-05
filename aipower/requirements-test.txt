@@ -1,0 +1,2 @@
+# Tested with the Playwright installed in this environment; use a compatible Chromium.
+playwright>=1.50,<2
