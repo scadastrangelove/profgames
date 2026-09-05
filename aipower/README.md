@@ -13,8 +13,8 @@ Site URL after GitHub Pages deploy:
 | File | Description |
 | --- | --- |
 | [`index.html`](index.html) | Small entry page for the AI Power package. |
-| [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, timeline, stack heatmap, fact catalog, claim checks and source index. |
-| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Self-contained Russian interactive atlas generated from the same v0.27 storygraph line. |
+| [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, linked 2025–2026 cyber map, timeline, stack heatmap, fact catalog, claim checks and source index. |
+| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Russian atlas generated from the same v0.27 storygraph line, including the same cyber capability, incident, assurance and governance view. |
 | [`ai_power_storygraph_en.json`](ai_power_storygraph_en.json) | Machine-readable English storygraph used by the atlas. |
 | [`ai_power_storygraph_ru.json`](ai_power_storygraph_ru.json) | Russian v0.27 master storygraph with facts, claims, edges, sources and graph diagnostics. |
 | [`preprint_release/`](preprint_release/) | **Machine-Speed Cyber and Poisoned Cognition: A Layer-Dependent Game-Theoretic Framework, with Empirical Probes** — HTML, PDF, Markdown source, figures, bibliography and the P1 red-team evidence bundle. |
@@ -45,6 +45,7 @@ Two preprints are published alongside the atlas:
 - `557` story edges
 - `435` sources
 - `0` hanging arcs after connectivity checks
+- `4554` cross-references checked, `0` unresolved and `0` endpoint-kind mismatches
 
 ## Frame
 

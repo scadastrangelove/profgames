@@ -11898,6 +11898,7 @@
         "ARC_FAMILY_FORMATION_TIMELINE"
       ],
       "relationTypes": [
+        "key_node",
         "sets_up"
       ]
     },
@@ -12022,6 +12023,7 @@
         "ARC_FAMILY_FORMATION_TIMELINE"
       ],
       "relationTypes": [
+        "key_node",
         "triggers_capital_and_cloud_lockin"
       ]
     },
@@ -12138,9 +12140,11 @@
         "EDGE_2022_2023_003"
       ],
       "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE",
         "ARC_A800_H800_WORKAROUND_CLOSURE"
       ],
       "arcFamilyIds": [
+        "ARC_FAMILY_FORMATION_TIMELINE",
         "ARC_FAMILY_ACCESS_CONTROL"
       ],
       "relationTypes": [
@@ -12271,12 +12275,12 @@
         "EDGE_2022_2023_004"
       ],
       "arcIds": [
-        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
-        "ARC_2022_2023_FORMATION_PHASE"
+        "ARC_2022_2023_FORMATION_PHASE",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
       ],
       "arcFamilyIds": [
-        "ARC_FAMILY_INFRASTRUCTURE_CAPITAL",
-        "ARC_FAMILY_FORMATION_TIMELINE"
+        "ARC_FAMILY_FORMATION_TIMELINE",
+        "ARC_FAMILY_INFRASTRUCTURE_CAPITAL"
       ],
       "relationTypes": [
         "key_node",
@@ -12396,6 +12400,7 @@
         "EDGE_2022_2023_008"
       ],
       "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE",
         "ARC_2023_GOVERNANCE_SHOCK"
       ],
       "arcFamilyIds": [
@@ -12519,12 +12524,14 @@
         "EDGE_2022_2023_005"
       ],
       "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE",
         "ARC_2023_GOVERNANCE_SHOCK"
       ],
       "arcFamilyIds": [
         "ARC_FAMILY_FORMATION_TIMELINE"
       ],
       "relationTypes": [
+        "key_node",
         "accelerates_governance"
       ]
     },
@@ -12655,6 +12662,7 @@
         "ARC_FAMILY_FORMATION_TIMELINE"
       ],
       "relationTypes": [
+        "key_node",
         "early_countermeasure"
       ]
     },
@@ -12768,6 +12776,7 @@
         "EDGE_2022_2023_009"
       ],
       "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE",
         "ARC_2023_GOVERNANCE_SHOCK"
       ],
       "arcFamilyIds": [
@@ -12898,9 +12907,15 @@
         }
       ],
       "edgeIds": [],
-      "arcIds": [],
-      "arcFamilyIds": [],
-      "relationTypes": []
+      "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_FORMATION_TIMELINE"
+      ],
+      "relationTypes": [
+        "key_node"
+      ]
     },
     {
       "id": "SIG_2023_AIXCC_LAUNCH",
@@ -13024,6 +13039,7 @@
         "ARC_FAMILY_FORMATION_TIMELINE"
       ],
       "relationTypes": [
+        "key_node",
         "sets_up"
       ]
     },
@@ -13141,9 +13157,11 @@
         "EDGE_2022_2023_003"
       ],
       "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE",
         "ARC_A800_H800_WORKAROUND_CLOSURE"
       ],
       "arcFamilyIds": [
+        "ARC_FAMILY_FORMATION_TIMELINE",
         "ARC_FAMILY_ACCESS_CONTROL"
       ],
       "relationTypes": [
@@ -13262,6 +13280,7 @@
       ],
       "edgeIds": [],
       "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE",
         "ARC_2023_GOVERNANCE_SHOCK"
       ],
       "arcFamilyIds": [
@@ -13382,6 +13401,7 @@
         "EDGE_2022_2023_005"
       ],
       "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE",
         "ARC_2023_GOVERNANCE_SHOCK"
       ],
       "arcFamilyIds": [
@@ -13513,6 +13533,7 @@
         "EDGE_2022_2023_010"
       ],
       "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE",
         "ARC_2023_GOVERNANCE_SHOCK"
       ],
       "arcFamilyIds": [
@@ -13636,6 +13657,7 @@
       ],
       "edgeIds": [],
       "arcIds": [
+        "ARC_2022_2023_FORMATION_PHASE",
         "ARC_2023_GOVERNANCE_SHOCK"
       ],
       "arcFamilyIds": [
@@ -46755,21 +46777,21 @@
         "cyber_security_patch"
       ],
       "key_nodes": [
-        "TL_2022_CHIPS_ACT",
-        "TL_2022_NVIDIA_A800",
-        "TL_2022_CHATGPT",
-        "TL_2023_MICROSOFT_OPENAI",
-        "TL_2023_NIST_AI_RMF",
-        "TL_2023_GPT4",
-        "TL_2023_CHINA_GALLIUM_GERMANIUM",
-        "TL_2023_CHINA_GENAI_MEASURES",
-        "TL_2023_US_OUTBOUND_INVESTMENT_EO",
-        "TL_2023_AIXCC_LAUNCH",
-        "TL_2023_BIS_OCT_UPDATE",
-        "TL_2023_G7_HIROSHIMA_CODE",
-        "TL_2023_US_AI_EO_14110",
-        "TL_2023_BLETCHLEY_DECLARATION",
-        "TL_2023_EU_AI_ACT_DEAL",
+        "SIG_2022_CHIPS_SCIENCE_ACT",
+        "SIG_2022_NVIDIA_A800_WORKAROUND",
+        "SIG_2022_CHATGPT_LAUNCH",
+        "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN",
+        "SIG_2023_NIST_AI_RMF_1_0",
+        "SIG_2023_GPT4_RELEASE",
+        "SIG_2023_CHINA_GALLIUM_GERMANIUM_CONTROLS",
+        "SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+        "SIG_2023_US_OUTBOUND_INVESTMENT_EO",
+        "SIG_2023_AIXCC_LAUNCH",
+        "SIG_2023_BIS_OCT_UPDATE_CLOSES_A800_H800",
+        "SIG_2023_G7_HIROSHIMA_CODE",
+        "SIG_2023_US_AI_EO_14110",
+        "SIG_2023_BLETCHLEY_DECLARATION",
+        "SIG_2023_EU_AI_ACT_PROVISIONAL_AGREEMENT",
         "SIG_2023_US_CHIPS_GUARDRAILS_CLAWBACK",
         "SIG_2023_JAPAN_SEMICON_EQUIPMENT_23_ITEMS",
         "SIG_2023_UAE_JAIS_US_OPERATED_COMPUTE",
@@ -58007,6 +58029,36 @@
       "description": "Trace the Russian perimeter from data localization and managed networks to model status, shared compute and decision-support, together with dependence on Nvidia, prospective Chinese chips, open weights and imported edge electronics."
     }
   ],
+  "referenceIntegrity": {
+    "valid": true,
+    "checked_references": 4554,
+    "checked_by_field": {
+      "arc.key_nodes": 413,
+      "arc.family_id": 25,
+      "edge.source": 557,
+      "edge.target": 557,
+      "edge.arc_id": 557,
+      "edge.arc_family_id": 469,
+      "claim.supporting_evidence": 4,
+      "claim_check.supporting_evidence": 152,
+      "counterargument.evidence": 7,
+      "country.strongest_supporting_evidence": 15,
+      "country.strongest_counter_evidence": 4,
+      "recipe.recommended_filters.hide_arc_ids": 2,
+      "recipe.recommended_arc_ids": 22,
+      "event.arcIds": 427,
+      "event.edgeIds": 464,
+      "claim.arcIds": 52,
+      "claim.edgeIds": 67,
+      "claimCheck.arcIds": 57,
+      "claimCheck.edgeIds": 152,
+      "source.used_by": 551
+    },
+    "unresolved_count": 0,
+    "unresolved": [],
+    "kind_mismatch_count": 0,
+    "kind_mismatches": []
+  },
   "connectivity": {
     "thesis_ids": [
       "THESIS_CORE",
