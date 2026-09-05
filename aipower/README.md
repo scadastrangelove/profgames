@@ -1,91 +1,84 @@
-# AI Power Atlas
+# AI Power Atlas — v0.30
 
-Publication package for **AI stack: four structures of power at one checkpoint**.
+**Редакционная и техническая коррекция v0.29; срез фактов — 5 сентября 2026 года.**
+База: `scadastrangelove/profgames`, коммит `156e39a21b5a523092ccb2975e5aa38f489f52b6`.
 
-A fact map of how compute, clouds, models, data, cyber and capital become the default environment: access is metered, dependency is locked in, and rent is collected.
+Выпуск сохраняет 321 факт, 71 тезис, 30 проверок тезисов, 25 сюжетных арок, 672 связи и 496 уникальных URL источников. Это исправление представления и классификации существующего набора, не очередное расширение новостной базы.
 
-Site URL after GitHub Pages deploy:
+## Готовые страницы и данные
 
-<https://scadastrangelove.github.io/profgames/aipower/>
+- `ai-power-atlas-ru.html` — самостоятельная русская страница.
+- `ai-power-atlas.html` — самостоятельная английская страница.
+- `ai_power_storygraph_ru.json`, `ai_power_storygraph_en.json` — канонические данные.
+- `index.html` — страница входа.
+- `CHANGELOG.md` — изменения и границы проверки.
+- `SCHEMA_v030.md` — новые поля и правила их применения.
 
-## Artifacts
+HTML включает данные, CSS и JavaScript. Для просмотра не нужны API, сервер приложений, внешние библиотеки или сетевые запросы. Браузер может открывать страницу как файл; при ограничениях локальных файлов используйте любой статический HTTP-сервер. Пакет проверяется локальной загрузкой HTML в Chromium; опубликованная GitHub Pages проверяется отдельно после слияния.
 
-| File | Description |
-| --- | --- |
-| [`index.html`](index.html) | Small entry page for the AI Power package. |
-| [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, five-domain 2025–2026 cyber-resilience map, timeline, stack heatmap, fact catalog, claim checks and source index. |
-| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Russian atlas generated from the same v0.29 storygraph line, including the same five-domain cyber-resilience view. |
-| [`ai_power_storygraph_en.json`](ai_power_storygraph_en.json) | Machine-readable English storygraph used by the atlas. |
-| [`ai_power_storygraph_ru.json`](ai_power_storygraph_ru.json) | Russian v0.29 master storygraph with facts, claims, edges, sources and graph diagnostics. |
-| [`preprint_release/`](preprint_release/) | **Machine-Speed Cyber and Poisoned Cognition: A Layer-Dependent Game-Theoretic Framework, with Empirical Probes** — HTML, PDF, Markdown source, figures, bibliography and the P1 red-team evidence bundle. |
-| [`selective-permeability/`](selective-permeability/) | **Selective Permeability: A Behavioral-Security Metric for LLM Advisors, with Two Failure Modes of In-Context Provenance Workflows** — preprint (HTML/PDF/Markdown), figures F1–F9 (F9 = model × attack panorama), reproducible harness, and EN/RU write-ups. |
+## Установка в существующий репозиторий
 
-## Preprints
+Архив — **наложение каталога `aipower/`**, а не полный клон репозитория. Скопируйте его содержимое поверх одноимённого каталога, проверьте изменения и закоммитьте. Не удаляйте существующие `preprint_release/` и `selective-permeability/`: они не менялись и в этот архив не включены. Материалы P1/P2 по-прежнему должны находиться по прежним относительным путям.
 
-Two preprints are published alongside the atlas:
+Никаких записей в GitHub или автоматического развёртывания при подготовке этого пакета не выполнялось.
 
-**P1 — *Machine-Speed Cyber and Poisoned Cognition*** (framework + probes):
-- [`preprint_release/preprint.html`](preprint_release/preprint.html) — browser-readable self-contained version;
-- [`preprint_release/preprint.pdf`](preprint_release/preprint.pdf) — paginated PDF;
-- [`preprint_release/preprint.md`](preprint_release/preprint.md) — Markdown source;
-- [`preprint_release/p1-redteam-release/`](preprint_release/p1-redteam-release/) — reproducibility bundle for the P1 red-team experiments.
+## Сборка и проверка
 
-**P2 — *Selective Permeability*** (behavioral-security metric + credential/provenance attacks):
-- [`selective-permeability/preprint.md`](selective-permeability/preprint.md) — the preprint;
-- [`selective-permeability/figures/F9_susceptibility_matrix.png`](selective-permeability/figures/F9_susceptibility_matrix.png) — the model × attack panorama;
-- [`selective-permeability/blog/`](selective-permeability/blog/) — plain-language EN/RU write-ups;
-- [`selective-permeability/aigeopol-labs/`](selective-permeability/aigeopol-labs/) — reproducible harness + data.
+Python 3.10+; для сборки и проверки данных достаточно стандартной библиотеки:
 
-## Current Counts
+```bash
+cd aipower
+python3 scripts/build.py
+python3 scripts/validate.py
+```
 
-- `321` facts
-- `71` claims
-- `30` claim checks
-- `25` exact story arcs in `6` analytical families
-- `672` story edges
-- `496` sources
-- `97` facts classified in the five-domain cyber-resilience view
-- `0` hanging arcs after connectivity checks
-- `5409` cross-references checked, `0` unresolved and `0` endpoint-kind mismatches
+Канонический текст хранится в JSON. Шаблоны и скрипты из `src/` занимаются представлением. Изменение JSON требует повторной сборки HTML. Чтобы после изменения ссылок пересчитать служебные счётчики:
 
-## Frame
+```bash
+python3 scripts/validate.py --refresh-metadata --skip-html
+python3 scripts/build.py
+python3 scripts/validate.py
+```
 
-The atlas does **not** argue that any single actor has total control over AI.
-It maps structural power across the stack:
+Регрессии интерфейса требуют Playwright и Chromium:
 
-- energy, compute and chips;
-- cloud and inference capacity;
-- frontier models, open weights and vetted access;
-- data licensing and telemetry;
-- cyber vulnerability discovery and patching;
-- decision-support and cognitive-security layers;
-- governance, law, finance and rent.
+```bash
+python3 -m pip install -r requirements-test.txt
+python3 tests/browser_test.py --chromium /usr/bin/chromium
+```
 
-## Classifier Model
+Скрипт проверяет обе языковые версии, все восемь вкладок, размеры 1440×1100 и 390×844, тематические фильтры, страны и акторов, 97 карточек классификации и восстановление URL-состояния в новом документе. Путь к Chromium можно заменить. Тест не обращается к модельным API и не запускает экспериментальные пакеты P1/P2.
 
-The release keeps legacy labels for auditability while separating fields used by the interface:
+## Аудит и миграция
 
-- `geography_raw` preserves every source label; `jurisdictions`, `regions`, `locations`, `institutional_scopes`, `geo_context` and `geographic_scopes` drive distinct filters;
-- `actor_raw`, `actors_raw` and `actor_facets_legacy` preserve the old representation; `actor_entities`, `actor_types` and `actor_jurisdictions` remove joined labels and role/country collisions;
-- every exact arc id is retained; `family_id` groups the 25 arcs into 6 analytical families, while `arc_kind=phase` marks chronology-first arcs.
+`review/baseline_*.json` — исходный v0.29. `review/migration_*.json` — JSON Patch с SHA-256 исходного файла и канонического содержимого результата. Порядок ключей после применения может отличаться; данные совпадают. `review/changes_*.json` — удобные для анализа изменения полей. `review/cyber-classification-ledger.json` и `review/translation-ledger.json` — журналы редакционного пересмотра, **не отдельные источники сборки**.
 
-The embedded `classifierAudit` records before/after counts and SHA-256 checks over fact ids, claim ids, exact arc ids, complete edge signatures and source URLs.
+Воспроизведение миграции на точном исходном файле:
 
-The safe wording rule is simple: present contested or partial evidence as contested or partial. Do not turn model releases, cloud contracts or vendor claims into stronger geopolitical claims than the source can support.
+```bash
+python3 scripts/migrate_v029.py --input review --baseline-names --output /tmp/aipower-v030-json
+```
 
-## Cyber-resilience framework
+Для иной версии входного JSON миграция остановится по несовпадению SHA-256. Патч не должен применяться к изменившемуся `main` вслепую. При дальнейших правках заново экспортируйте журнал:
 
-The 2025–2026 cyber view separates five governance domains: secure development and operation; model cyber-capability governance; national AI-assisted defence; sector and systemic resilience; and decision and structural security. Independent tags show whether AI is the protected system, a defensive tool or an attack enabler, while a separate marker identifies agents holding delegated authority. Legal force is encoded independently, so binding rules, supervisory positions, proposals, provider policies, research and observed incidents are not presented as equivalent.
+```bash
+python3 scripts/export_audit.py
+```
 
-The five domains are an analytical structure used by this atlas, not a single adopted standard. ASAMM v0.5.1 is cited as an independent community draft proposed as an OWASP SAMM companion, not as an approved OWASP release.
+Проверенные результаты находятся в `review/validation.json` и `review/browser-results.json`; рядом сохранены финальные скриншоты. Контрольные суммы файлов — `SHA256SUMS`.
 
-## Provenance
+## Главные отличия
 
-This package was generated from the v0.29 master storygraph built during the AIgeopol research pass.
-Merged the 2026 research delta: 34 new events, six deduplicated updates, and a five-domain cyber framework with AI roles, legal force and evidence type.
+1. Все 97 киберкарточек имеют раздельные тип документа/события, нормативную силу, стадию и сферу применения. Старые смешанные метки сохранены только в `classification_legacy_v029`.
+2. Роли ИИ и делегирование разделены. Нормативное требование ограничивать агента не выдаётся за наблюдение автономных действий. Выборка «Ключевые» — 44 явно выбранные редакционные опоры, не рейтинг по степени связности.
+3. 233 связи «факт — сюжет» переименованы в `part_of_arc`. Они не являются голосами за тезис. Четыре встречных/условных механизма показаны отдельно в `mechanism_effects`.
+4. Армения, Пакистан, Cloudflare и другие конкретные акторы доступны фильтрам. Канонические фасеты сводят `Nvidia` к `NVIDIA`, а `US DOJ` к `US Department of Justice`; исходные написания остаются в raw/legacy-полях. 16 старых неконкретных обозначений вынесены в явную очередь уточнения и отдельную выборку; они не выдуманы и не скрыты.
+5. Исправлены результат AIxCC и соответствующий тезис `cyber-01`. История Kimi разделяет июльский анонс и наблюдение доступности весов на 5 сентября; дата первого выпуска не установлена.
+6. Удалён общий процент «97%». Статусы 71 тезиса показаны отдельно от счётчиков событий. Переведены 149 оставшихся полностью английских заголовков событий; цитаты, названия источников и часть старого технического текста сохранены.
+7. Карта поднята выше, длинные объяснения сворачиваются. У записи есть ссылка; фильтры и открытая карточка сохраняются в URL. В мобильной версии киберкарта превращается в последовательность карточек без горизонтального переполнения страницы.
 
-Public JSON filenames are intentionally versionless. The current version remains inside `meta.version` and the changelog, while the URLs stay stable across rebuilds.
+## Границы достоверности
 
-## Reuse
+Пересмотр классификации выполнен по текстам и оговоркам существующих карточек. Дополнительно проверены официальные материалы DARPA AIxCC, California DOJ SB 53, Еврокомиссии, Mozilla и лицензия Kimi K3. Это **не новая независимая проверка всех 496 источников**. Процент истинности атласа не рассчитывается. Структурная целостность и успешный браузерный тест не доказывают причинность редакционных связей.
 
-The JSON files are intended for agents and researchers. Keep stable ids when extending them, and preserve source URLs, confidence levels, statuses and caveats.
+Пятидоменная киберрамка — авторская аналитическая схема, не принятый стандарт и не шкала зрелости. Ссылка на ASAMM оставлена внутри первого домена с обозначением независимого draft.

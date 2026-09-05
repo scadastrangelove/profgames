@@ -1,0 +1,18 @@
+{
+  "python": "3.14.7",
+  "playwright": "1.58.0",
+  "chromium_executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome 152.0.7977.76",
+  "browser_document_mode": "set_content: standalone in-memory HTML",
+  "viewports": [
+    [
+      1440,
+      1100
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "external_requests": 0,
+  "publication_scope": "Pre-publication local verification; GitHub Pages is checked separately after merge."
+}
