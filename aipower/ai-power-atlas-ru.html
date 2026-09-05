@@ -131,6 +131,73 @@ svg{display:block}
 .event-dot:hover,.timeline-dot:hover{stroke:var(--ink);stroke-width:2}
 .story-year{font:9px var(--mono);fill:var(--faint)}
 .story-grid{stroke:var(--line-soft);stroke-width:1}
+.cyber-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:start}
+.cyber-kpis{display:grid;grid-template-columns:repeat(4,minmax(92px,1fr));gap:7px;min-width:420px}
+.cyber-kpi{border:1px solid var(--line-soft);background:var(--paper);border-radius:6px;padding:8px;min-width:0}
+.cyber-kpi b{display:block;font:600 20px/1 var(--sans)}
+.cyber-kpi span{display:block;margin-top:6px;font:10px/1.25 var(--sans);color:var(--muted);overflow-wrap:anywhere}
+.cyber-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 10px}
+.segmented{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:7px;background:rgba(255,255,255,.72);padding:2px;gap:2px}
+.segmented button{border:0;border-radius:5px;background:transparent;color:var(--muted);padding:6px 9px;font-size:12px;cursor:pointer}
+.segmented button.active{background:var(--ink);color:white}
+.cyber-controls .select{min-width:190px}
+.cyber-legend{display:flex;flex-wrap:wrap;gap:10px 14px;margin:0 0 10px;color:var(--muted);font-size:11px}
+.cyber-legend span{display:inline-flex;align-items:center;gap:6px}
+.cyber-swatch{width:10px;height:10px;border-radius:2px;background:var(--slate)}
+.cyber-swatch.capability{background:var(--violet)}
+.cyber-swatch.incident{background:var(--red)}
+.cyber-swatch.assurance{background:var(--blue)}
+.cyber-swatch.governance{background:var(--green)}
+.cyber-line-key{width:24px;height:0;border-top:2px solid var(--slate)}
+.cyber-scroll{overflow:auto;border:1px solid var(--line);border-radius:8px;background:#fbfaf6}
+.cyber-board{position:relative;min-width:1160px}
+.cyber-links{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;overflow:visible}
+.cyber-link{fill:none;stroke-width:2.2;opacity:.34;stroke-linecap:round}
+.cyber-link.is-active{opacity:.95;stroke-width:3.2}
+.cyber-link.is-dimmed{opacity:.05}
+.cyber-grid{position:relative;z-index:2}
+.cyber-period-row,.cyber-lane-row{display:grid;grid-template-columns:168px repeat(3,minmax(300px,1fr))}
+.cyber-period-row{position:sticky;top:0;z-index:5;background:#f0ede4;border-bottom:1px solid var(--line)}
+.cyber-corner,.cyber-period{padding:9px 10px;font:600 11px/1.2 var(--sans);text-transform:uppercase;color:var(--slate)}
+.cyber-corner{position:sticky;left:0;z-index:6;background:#f0ede4}
+.cyber-period{border-left:1px solid var(--line-soft)}
+.cyber-period small{display:block;margin-top:4px;font:10px/1.25 var(--mono);text-transform:none;color:var(--faint)}
+.cyber-lane-row{border-bottom:1px solid var(--line-soft)}
+.cyber-lane-row:last-child{border-bottom:0}
+.cyber-lane-label{position:sticky;left:0;z-index:4;padding:13px 11px;background:#f8f6f0;border-right:1px solid var(--line-soft)}
+.cyber-lane-label b{display:block;font-size:12px;line-height:1.25}
+.cyber-lane-label span{display:block;margin-top:5px;font:10px/1.25 var(--mono);color:var(--faint)}
+.cyber-cell{min-height:154px;padding:9px;border-left:1px solid var(--line-soft);background:rgba(255,255,255,.24)}
+.cyber-event-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;align-content:start}
+.cyber-event{position:relative;z-index:3;min-height:88px;border:1px solid var(--line);border-left:4px solid var(--slate);border-radius:6px;background:var(--paper);padding:8px;cursor:pointer;transition:border-color .15s ease,box-shadow .15s ease,opacity .15s ease}
+.cyber-event:hover,.cyber-event.is-active{border-color:rgba(23,23,23,.48);box-shadow:0 6px 18px rgba(32,38,46,.09)}
+.cyber-event.is-connected{box-shadow:0 0 0 2px rgba(54,95,157,.14)}
+.cyber-event.is-dimmed{opacity:.3}
+.cyber-event[data-cyber-lane="capability"]{border-left-color:var(--violet)}
+.cyber-event[data-cyber-lane="incident"]{border-left-color:var(--red)}
+.cyber-event[data-cyber-lane="assurance"]{border-left-color:var(--blue)}
+.cyber-event[data-cyber-lane="governance"]{border-left-color:var(--green)}
+.cyber-event.is-future{border-style:dashed}
+.cyber-event-head{display:flex;justify-content:space-between;gap:6px;align-items:center;font:10px/1.2 var(--mono);color:var(--faint)}
+.cyber-event-title{margin-top:6px;font:600 11.5px/1.3 var(--sans);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cyber-event-meta{display:flex;gap:4px;flex-wrap:wrap;margin-top:7px;color:var(--faint);font:9.5px/1.2 var(--mono)}
+.cyber-empty{color:var(--faint);font:11px/1.35 var(--sans);padding:8px}
+.cyber-thread-list{display:grid;gap:8px}
+.cyber-thread{display:grid;grid-template-columns:minmax(180px,260px) minmax(0,1fr);gap:10px;align-items:center;border-top:1px solid var(--line-soft);padding-top:8px}
+.cyber-thread:first-child{border-top:0;padding-top:0}
+.cyber-thread-title b{display:block;font-size:12px;line-height:1.3}
+.cyber-thread-title span{font:10px/1.25 var(--mono);color:var(--faint)}
+.cyber-thread-track{display:flex;align-items:center;gap:5px;overflow:auto;padding:2px 0 5px}
+.cyber-thread-event{flex:0 0 170px;border:1px solid var(--line);border-radius:6px;background:white;padding:7px;text-align:left;cursor:pointer;color:var(--ink)}
+.cyber-thread-event time{display:block;font:9px/1.2 var(--mono);color:var(--faint);margin-bottom:4px}
+.cyber-thread-event span{display:block;font:10.5px/1.25 var(--sans)}
+.cyber-thread-arrow{flex:0 0 auto;color:var(--faint);font:14px/1 var(--mono)}
+.cyber-edge-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.cyber-edge-item{border:1px solid var(--line);border-radius:7px;background:var(--paper);padding:10px;cursor:pointer;min-width:0}
+.cyber-edge-item:hover{border-color:rgba(54,95,157,.45)}
+.cyber-edge-path{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:7px;align-items:center;margin-top:6px;font-size:11px;line-height:1.3}
+.cyber-edge-path i{font-style:normal;color:var(--faint);font-family:var(--mono)}
+.cyber-method{margin-top:9px;color:var(--muted);font-size:11px}
 .event-dot.A,.timeline-dot.A,.tag.A{fill:var(--green);background:var(--paper-green);color:var(--green)}
 .event-dot.B,.timeline-dot.B,.tag.B{fill:var(--blue);background:var(--paper-blue);color:var(--blue)}
 .event-dot.C,.timeline-dot.C,.tag.C{fill:var(--amber);background:var(--paper-amber);color:var(--amber)}
@@ -223,6 +290,11 @@ footer code{overflow-wrap:anywhere;word-break:break-word}
   .filter-primary{grid-template-columns:1fr}
   .story-svg{min-width:1040px}
   .capital-item b{font-size:17px}
+  .cyber-head{grid-template-columns:1fr}
+  .cyber-kpis{grid-template-columns:repeat(2,minmax(0,1fr));min-width:0}
+  .cyber-controls .select{width:100%;min-width:0}
+  .cyber-edge-list{grid-template-columns:1fr}
+  .cyber-thread{grid-template-columns:1fr}
 }
 @media(max-width:520px){
   .shell{max-width:390px;margin:0}
@@ -285,6 +357,57 @@ footer code{overflow-wrap:anywhere;word-break:break-word}
             <select class="select" id="relation-select" aria-label="Фильтр по типу связи"></select>
           </div>
           <div class="svg-frame"><svg class="story-svg" id="story-svg" viewBox="0 0 1180 780" preserveAspectRatio="xMinYMin meet"></svg></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-cyber">
+        <div class="section">
+          <div class="cyber-head">
+            <div>
+              <h2>Киберконтур 2025–2026</h2>
+              <p class="lede">Как рост кибервозможностей и агентной поверхности атаки проходит через оценку, операционную защиту, право и надзор.</p>
+            </div>
+            <div class="cyber-kpis" id="cyber-kpis"></div>
+          </div>
+          <div class="cyber-controls">
+            <div class="segmented" id="cyber-mode" aria-label="Плотность киберкарты">
+              <button type="button" class="active" data-cyber-mode="core">Ключевые</button>
+              <button type="button" data-cyber-mode="all">Все факты</button>
+            </div>
+            <div class="segmented" id="cyber-lanes" aria-label="Дорожка киберкарты">
+              <button type="button" class="active" data-cyber-lane="">Все дорожки</button>
+              <button type="button" data-cyber-lane="capability">Возможности</button>
+              <button type="button" data-cyber-lane="incident">Атаки</button>
+              <button type="button" data-cyber-lane="assurance">Защита</button>
+              <button type="button" data-cyber-lane="governance">Регулирование</button>
+            </div>
+            <select class="select" id="cyber-jurisdiction" aria-label="Юрисдикция киберкарты"></select>
+            <button class="ghost-btn active" id="cyber-links-toggle" type="button">Прямые связи</button>
+          </div>
+          <div class="cyber-legend">
+            <span><i class="cyber-swatch capability"></i>кибервозможности</span>
+            <span><i class="cyber-swatch incident"></i>атаки и поверхность</span>
+            <span><i class="cyber-swatch assurance"></i>защита и устойчивость</span>
+            <span><i class="cyber-swatch governance"></i>право и надзор</span>
+            <span><i class="cyber-line-key"></i>явная связь в storygraph</span>
+          </div>
+          <div class="cyber-scroll">
+            <div class="cyber-board" id="cyber-board">
+              <svg class="cyber-links" id="cyber-links" aria-hidden="true"></svg>
+              <div class="cyber-grid" id="cyber-grid"></div>
+            </div>
+          </div>
+          <p class="cyber-method">Дорожка задаёт основную роль факта только в этой визуализации. Сплошная линия означает явное event-to-event ребро; общая сюжетная дуга показана ниже и сама по себе не доказывает причинность.</p>
+        </div>
+        <div class="section">
+          <h2>Сюжетные цепочки</h2>
+          <p class="lede">Те же события, собранные по точным дугам: capability, attack surface, runtime controls, finance и sovereign perimeter.</p>
+          <div class="cyber-thread-list" id="cyber-threads"></div>
+        </div>
+        <div class="section">
+          <h2>Прямые связи между событиями</h2>
+          <p class="lede">Только явно записанные в JSON переходы, обновления и уточнения между двумя датированными фактами.</p>
+          <div class="cyber-edge-list" id="cyber-edge-list"></div>
         </div>
       </section>
 
@@ -433,6 +556,16 @@ var catalogState = {
   q:'', jurisdiction:'', actor:'', family:'', lane:'', arc:'', relation:'', confidence:'', status:'',
   region:'', location:'', institution:'', geoContext:'', geoScope:'', actorType:'', actorJurisdiction:'', source:''
 };
+var cyberState = { mode:'core', lane:'', jurisdiction:'', showLinks:true };
+var cyberRenderedEvents = [];
+var cyberThreadArcIds = [
+  'ARC_CYBER_CLAIM_TO_CAVEAT',
+  'ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK',
+  'ARC_COGSEC_LAB_TO_WILD_TO_STATE',
+  'ARC_QUIET_ACCESS_CONTROL',
+  'ARC_FINANCE_GOVERNED_SHUTDOWN',
+  'ARC_RUSSIA_SELECTIVE_SOVEREIGNTY'
+];
 var detailHistory = [];
 var currentDetail = null;
 
@@ -1023,6 +1156,7 @@ function initHeader(){
 function initNav(){
   var tabs = [
     ['story','Карта'],
+    ['cyber','Киберконтур 2025–2026'],
     ['timeline','Хронология'],
     ['catalog','Факты'],
     ['stack','Стек'],
@@ -1036,6 +1170,295 @@ function initNav(){
   document.querySelectorAll('#nav button').forEach(function(button){
     button.addEventListener('click', function(){
       switchTab(button.dataset.tab);
+    });
+  });
+}
+
+function cyberArray(value){
+  return Array.isArray(value) ? value : (value ? [value] : []);
+}
+function cyberIncludes(text, terms){
+  return terms.some(function(term){ return text.indexOf(term) !== -1; });
+}
+function cyberFocusEvents(){
+  return EV.filter(function(event){
+    var date = String(event.date || '');
+    return date >= '2025-01-01' && date <= '2026-12-31' && cyberArray(event.stack_layer).indexOf('cyber_security_patch') !== -1;
+  }).sort(function(a, b){
+    return String(a.date || '').localeCompare(String(b.date || '')) || a.id.localeCompare(b.id);
+  });
+}
+function cyberLane(event){
+  var overrides = {
+    SIG_CYBER_2025_AIXCC_FINAL:'capability',
+    SIG_2025_AISI_CYBER_CAPABILITY_AND_LIMITS:'capability',
+    SIG_CYBER_2026_OSS_CRS:'capability',
+    SIG_2026_MYTHOS_PROJECT_GLASSWING_PREVIEW:'capability',
+    SIG_2026_MYTHOS_FIREFOX_271:'capability',
+    SIG_2026_MYTHOS_LINKED_REDISCOVERY_COUNTEREVIDENCE:'capability',
+    SIG_2026_JPMORGAN_AI_INVESTMENT_BANKING_AND_MYTHOS:'capability',
+    SIG_2026_OPENAI_GPT55_CYBER_VETTED_ACCESS:'capability',
+    SIG_2026_360_YITIAN_TULONG_UNVEIL:'capability',
+    SIG_2026_360_ZHOU_HABR_STRATEGIC_SPEECH:'capability',
+    SIG_2026_MYTHOS_CLASSIFIED_SYSTEMS_TEST:'capability',
+    SIG_2026_RAND_NOVICE_CYBER_AGENT_UPLIFT:'capability',
+    SIG_2026_ANTHROPIC_MYTHOS_TRUSTED_ORGS:'capability',
+    SIG_2026_MYTHOS_LIMITED_RESTORE_TRUSTED_US_ORGS:'capability',
+    SIG_2026_KOREA_PROJECT_CANOPY_EGOVFRAME:'capability',
+    SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL:'capability',
+    SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE:'capability',
+    SIG_2025_ECHOLEAK_CVE_32711:'incident',
+    SIG_2025_CLAUDE_ORCHESTRATED_ESPIONAGE:'incident',
+    SIG_2026_OPENCLAW_PUBLIC_EXPOSURE:'incident',
+    SIG_2026_AGENTS_OF_CHAOS_OPENCLAW_REDTEAM:'incident',
+    SIG_COG_2026_AGENT_IPI_COMPETITION:'incident',
+    SIG_2026_MYTHOS_SANDBOX_ESCAPE_UNVERIFIED:'incident',
+    SIG_2026_ANTHROPIC_AI_MISUSE_ATTACK_MAP:'incident',
+    SIG_2026_MALICIOUS_AGENT_SKILLS_IN_THE_WILD:'incident',
+    SIG_2026_OALABS_AUTHORIZATION_PRETEXT_INTRUSIONS:'incident',
+    SIG_2026_AGENTJACKING_SENTRY_TELEMETRY:'incident',
+    SIG_2026_LLM_CVE_PUBLIC_POC_MIGRATION:'incident',
+    SIG_2026_WINDOWS_DEFENDER_WEAPONIZATION_CLUSTER:'incident',
+    SIG_2026_AGENT_TRUST_BIDIRECTIONAL_PHISHING:'incident',
+    SIG_2026_JADEPUFFER_AGENTIC_EXTORTION:'incident',
+    SIG_2026_LANGFLOW_REPEATED_KEV_EXPLOITATION:'incident',
+    SIG_2026_MYCELIUM_UNDERGROUND_OFFER:'incident',
+    SIG_2026_FRIENDLY_FIRE_DEFENSIVE_AGENT_RCE:'incident',
+    SIG_2026_HALLUSQUATTING_RESOURCE_CAPTURE:'incident',
+    SIG_2026_SELECTIVE_PERMEABILITY_PROVENANCE_FAILURES:'incident',
+    SIG_2026_HUNT_CLAUDE_DEEPSEEK_INTRUSION:'incident',
+    SIG_2026_HF_AGENTIC_INTRUSION:'incident',
+    SIG_2026_OPENAI_LONG_HORIZON_SANDBOX_WARNING:'incident',
+    SIG_2026_OPENAI_HF_EVAL_CONTAINMENT_ESCAPE:'incident',
+    SIG_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS:'incident',
+    SIG_NATO_2026_ALLIANCE_DIGITAL_STRATEGY:'assurance',
+    SIG_2026_UK_CYBER_SHIELD_BLUEPRINT:'assurance',
+    SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU:'assurance',
+    SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY:'assurance',
+    SIG_2026_US_GOLD_EAGLE_LAUNCH:'assurance',
+    SIG_2026_CA_AI_CYBER_DEFENSE_PROGRAM:'assurance',
+    SIG_EU_2026_CYBER_AI_ACTION_PLAN:'governance',
+    SIG_2026_NIST_AI_DATACENTER_SECURITY_DRAFT:'governance'
+  };
+  if (overrides[event.id]) return overrides[event.id];
+  var text = [event.id, event.status].join(' ').toLowerCase().replace(/_/g, ' ');
+  if (cyberIncludes(text, ['intrusion','attack','exploit','malicious','phishing','poison','botnet','compromise','extortion','espionage','prompt injection','sandbox escape','containment escape','public exposure','credential theft','incident report'])) return 'incident';
+  if (cyberIncludes(text, ['law','effective','binding','enacted','regulation','regulator','supervis','standard','framework','guidance','guide','policy','order117','rfi','consultation','oversight','reporting scheduled','procurement','export control','government baseline','government program'])) return 'governance';
+  if (cyberIncludes(text, ['forensic','resilien','assurance','defense program','cyber shield','controls','logging','recovery','patch cycle'])) return 'assurance';
+  return 'capability';
+}
+function cyberLaneMeta(id){
+  return ({
+    capability:{label:'Кибервозможности',note:'поиск, проверка и применение уязвимостей'},
+    incident:{label:'Атаки и поверхность',note:'эксплуатация, инъекции и выход из контура'},
+    assurance:{label:'Защита и устойчивость',note:'изоляция, форензика, восстановление и патчинг'},
+    governance:{label:'Право и надзор',note:'обязательные нормы, стандарты и надзор'}
+  })[id];
+}
+function cyberPeriod(event){
+  var date = String(event.date || '');
+  if (date.slice(0, 4) === '2025') return 'y2025';
+  var month = Number(date.slice(5, 7)) || 1;
+  return month <= 6 ? 'h1' : 'h2';
+}
+function cyberDirectEdges(events){
+  var ids = new Set((events || []).map(function(event){ return event.id; }));
+  return EDGES.filter(function(edge){
+    return byEvent[edge.source] && byEvent[edge.target] && ids.has(edge.source) && ids.has(edge.target) && !edge.is_auto && !String(edge.id || '').startsWith('AUTO_');
+  });
+}
+function cyberExplicitDegree(eventId, events){
+  return cyberDirectEdges(events).filter(function(edge){ return edge.source === eventId || edge.target === eventId; }).length;
+}
+function cyberScore(event, allEvents){
+  var confidence = String(event.confidence || '').toUpperCase();
+  var status = String(event.status || '').toLowerCase();
+  var score = confidence.indexOf('A') === 0 ? 7 : (confidence.indexOf('B') !== -1 ? 4 : (confidence.indexOf('C') !== -1 ? 2 : 0));
+  if (status.indexOf('primary') !== -1 || status === 'verified') score += 4;
+  if (status.indexOf('binding') !== -1 || status.indexOf('supervisory') !== -1 || status.indexOf('effective') !== -1) score += 2;
+  score += Math.min(2, Math.max(0, cyberArray(event.stack_layer).length - 1));
+  score += cyberThreadArcIds.filter(function(id){ return cyberArray(event.arcIds).indexOf(id) !== -1; }).length * 2;
+  score += cyberExplicitDegree(event.id, allEvents) * 5;
+  if (String(event.date || '').slice(0, 4) === '2025') score += 10;
+  return score;
+}
+function cyberCoreIds(events){
+  var ids = new Set(events.filter(function(event){ return String(event.date || '').slice(0, 4) === '2025'; }).map(function(event){ return event.id; }));
+  ['capability','incident','assurance','governance'].forEach(function(lane){
+    ['h1','h2'].forEach(function(period){
+      events.filter(function(event){ return cyberLane(event) === lane && cyberPeriod(event) === period; })
+        .sort(function(a, b){ return cyberScore(b, events) - cyberScore(a, events) || String(a.date).localeCompare(String(b.date)); })
+        .slice(0, 4).forEach(function(event){ ids.add(event.id); });
+    });
+  });
+  cyberDirectEdges(events).forEach(function(edge){ ids.add(edge.source); ids.add(edge.target); });
+  return ids;
+}
+function cyberJurisdictionLabel(value){
+  return value || 'Без юрисдикции';
+}
+function initCyberControls(){
+  var allEvents = cyberFocusEvents();
+  var jurisdictions = uniq(allEvents.reduce(function(values, event){ return values.concat(cyberArray(event.jurisdictions)); }, [])).sort();
+  var select = document.getElementById('cyber-jurisdiction');
+  if (!select) return;
+  select.innerHTML = '<option value="">Все юрисдикции</option>' + jurisdictions.map(function(value){
+    return '<option value="' + esc(value) + '">' + esc(cyberJurisdictionLabel(value)) + '</option>';
+  }).join('');
+  document.querySelectorAll('[data-cyber-mode]').forEach(function(button){
+    button.addEventListener('click', function(){
+      cyberState.mode = button.dataset.cyberMode;
+      document.querySelectorAll('[data-cyber-mode]').forEach(function(item){ item.classList.toggle('active', item === button); });
+      renderCyber();
+    });
+  });
+  document.querySelectorAll('[data-cyber-lane]').forEach(function(button){
+    button.addEventListener('click', function(){
+      cyberState.lane = button.dataset.cyberLane;
+      document.querySelectorAll('[data-cyber-lane]').forEach(function(item){ item.classList.toggle('active', item === button); });
+      renderCyber();
+    });
+  });
+  select.addEventListener('change', function(){ cyberState.jurisdiction = select.value; renderCyber(); });
+  document.getElementById('cyber-links-toggle').addEventListener('click', function(){
+    cyberState.showLinks = !cyberState.showLinks;
+    this.classList.toggle('active', cyberState.showLinks);
+    this.textContent = cyberState.showLinks ? 'Прямые связи' : 'Связи скрыты';
+    this.setAttribute('aria-pressed', cyberState.showLinks ? 'true' : 'false');
+    drawCyberLinks();
+  });
+  window.addEventListener('resize', function(){
+    if (document.getElementById('view-cyber').classList.contains('active')) drawCyberLinks();
+  });
+}
+function cyberEventCard(event){
+  var lane = cyberLane(event);
+  var future = String(event.date || '') > String(D.meta.updated_at || D.meta.created_at || '9999-12-31');
+  var jurisdictions = cyberArray(event.jurisdictions);
+  return '<article class="cyber-event ' + (future ? 'is-future' : '') + '" data-kind="event" data-id="' + esc(event.id) + '" data-cyber-lane="' + lane + '">' +
+    '<div class="cyber-event-head"><time>' + esc(dateValue(event.date)) + '</time><b>' + esc(confidenceClass(event.confidence) || '?') + '</b></div>' +
+    '<div class="cyber-event-title">' + esc(event.title) + '</div>' +
+    '<div class="cyber-event-meta"><span>' + esc(truncate(statusLabelRu(event.status), 24)) + '</span>' +
+    (jurisdictions.length ? '<span>· ' + esc(jurisdictions.slice(0, 2).join(' / ')) + '</span>' : '') +
+    (future ? '<span>· вступит позже</span>' : '') + '</div></article>';
+}
+function renderCyber(){
+  var allEvents = cyberFocusEvents();
+  var coreIds = cyberCoreIds(allEvents);
+  var events = allEvents.filter(function(event){
+    if (cyberState.mode === 'core' && !coreIds.has(event.id)) return false;
+    if (cyberState.lane && cyberLane(event) !== cyberState.lane) return false;
+    if (cyberState.jurisdiction && cyberArray(event.jurisdictions).indexOf(cyberState.jurisdiction) === -1) return false;
+    return true;
+  });
+  cyberRenderedEvents = events;
+  var periods = [
+    {id:'y2025',label:'2025',note:'формирование операционных сигналов'},
+    {id:'h1',label:'2026 · январь–июнь',note:'институционализация и рост возможностей'},
+    {id:'h2',label:'2026 · июль–декабрь',note:'инциденты, надзор и runtime-контроли'}
+  ];
+  var lanes = ['capability','incident','assurance','governance'];
+  var html = '<div class="cyber-period-row"><div class="cyber-corner">роль факта</div>' + periods.map(function(period){
+    var count = events.filter(function(event){ return cyberPeriod(event) === period.id; }).length;
+    return '<div class="cyber-period">' + esc(period.label) + '<small>' + count + ' · ' + esc(period.note) + '</small></div>';
+  }).join('') + '</div>';
+  lanes.forEach(function(lane){
+    var meta = cyberLaneMeta(lane);
+    html += '<div class="cyber-lane-row"><div class="cyber-lane-label"><b>' + esc(meta.label) + '</b><span>' + esc(meta.note) + '</span></div>';
+    periods.forEach(function(period){
+      var cellEvents = events.filter(function(event){ return cyberLane(event) === lane && cyberPeriod(event) === period.id; });
+      html += '<div class="cyber-cell"><div class="cyber-event-grid">' + (cellEvents.length ? cellEvents.map(cyberEventCard).join('') : '<div class="cyber-empty">Нет фактов в текущем срезе</div>') + '</div></div>';
+    });
+    html += '</div>';
+  });
+  var grid = document.getElementById('cyber-grid');
+  if (!grid) return;
+  grid.innerHTML = html;
+  var directEdges = cyberDirectEdges(events);
+  var jurisdictions = uniq(events.reduce(function(values, event){ return values.concat(cyberArray(event.jurisdictions)); }, []));
+  document.getElementById('cyber-kpis').innerHTML = [
+    [events.length, 'фактов видно'],
+    [allEvents.length, 'фактов в контуре'],
+    [directEdges.length, 'явных event-to-event связей'],
+    [jurisdictions.length, 'юрисдикций в срезе']
+  ].map(function(item){ return '<div class="cyber-kpi"><b>' + esc(item[0]) + '</b><span>' + esc(item[1]) + '</span></div>'; }).join('');
+  bindClickable(grid);
+  bindCyberHover(grid, directEdges);
+  renderCyberThreads(events);
+  renderCyberEdgeList(events);
+  requestAnimationFrame(drawCyberLinks);
+}
+function renderCyberThreads(events){
+  var rows = cyberThreadArcIds.map(function(arcId){
+    var items = events.filter(function(event){ return cyberArray(event.arcIds).indexOf(arcId) !== -1; })
+      .sort(function(a, b){ return String(a.date || '').localeCompare(String(b.date || '')); });
+    return {arcId:arcId,items:items};
+  }).filter(function(row){ return row.items.length > 1 && byArc[row.arcId]; });
+  var root = document.getElementById('cyber-threads');
+  root.innerHTML = rows.length ? rows.map(function(row){
+    var track = row.items.map(function(event, index){
+      return (index ? '<span class="cyber-thread-arrow">→</span>' : '') + '<button type="button" class="cyber-thread-event" data-kind="event" data-id="' + esc(event.id) + '"><time>' + esc(dateValue(event.date)) + '</time><span>' + esc(truncate(event.title, 68)) + '</span></button>';
+    }).join('');
+    return '<div class="cyber-thread"><div class="cyber-thread-title"><b>' + esc(arcTitleRu(row.arcId)) + '</b><span>' + row.items.length + ' фактов · общая арка, не доказанная причинная цепь</span></div><div class="cyber-thread-track">' + track + '</div></div>';
+  }).join('') : '<div class="cyber-empty">В текущем срезе нет общей арки минимум для двух фактов.</div>';
+  bindClickable(root);
+}
+function renderCyberEdgeList(events){
+  var edges = cyberDirectEdges(events);
+  var root = document.getElementById('cyber-edge-list');
+  root.innerHTML = edges.length ? edges.map(function(edge){
+    return '<article class="cyber-edge-item" data-kind="edge" data-id="' + esc(edge.id) + '"><div class="id">' + esc(edge.relation) + ' · ' + esc(edge.id) + '</div><div class="cyber-edge-path"><span>' + esc(truncate(itemTitle(edge.source), 54)) + '</span><i>→</i><span>' + esc(truncate(itemTitle(edge.target), 54)) + '</span></div><p class="small" style="margin-top:7px">' + esc(edge.summary_ru || edge.summary || '') + '</p></article>';
+  }).join('') : '<div class="cyber-empty">В текущем срезе нет явных event-to-event рёбер. Общие механизмы показаны выше отдельно.</div>';
+  bindClickable(root);
+}
+function drawCyberLinks(){
+  var svg = document.getElementById('cyber-links');
+  var board = document.getElementById('cyber-board');
+  if (!svg || !board) return;
+  if (!cyberState.showLinks){ svg.innerHTML = ''; return; }
+  var boardRect = board.getBoundingClientRect();
+  if (!boardRect.width || !boardRect.height) return;
+  var cards = Array.from(board.querySelectorAll('.cyber-event'));
+  var cardById = {};
+  cards.forEach(function(card){ cardById[card.dataset.id] = card; });
+  var edges = cyberDirectEdges(cyberRenderedEvents).filter(function(edge){ return cardById[edge.source] && cardById[edge.target]; });
+  svg.setAttribute('viewBox', '0 0 ' + boardRect.width + ' ' + boardRect.height);
+  svg.setAttribute('width', boardRect.width);
+  svg.setAttribute('height', boardRect.height);
+  svg.innerHTML = edges.map(function(edge){
+    var sourceRect = cardById[edge.source].getBoundingClientRect();
+    var targetRect = cardById[edge.target].getBoundingClientRect();
+    var sx = sourceRect.left - boardRect.left + sourceRect.width / 2;
+    var sy = sourceRect.top - boardRect.top + sourceRect.height / 2;
+    var tx = targetRect.left - boardRect.left + targetRect.width / 2;
+    var ty = targetRect.top - boardRect.top + targetRect.height / 2;
+    var bend = Math.max(34, Math.abs(tx - sx) * .45);
+    var c1x = sx + (tx >= sx ? bend : -bend);
+    var c2x = tx - (tx >= sx ? bend : -bend);
+    return '<path class="cyber-link" data-edge-id="' + esc(edge.id) + '" d="M' + sx.toFixed(1) + ',' + sy.toFixed(1) + ' C' + c1x.toFixed(1) + ',' + sy.toFixed(1) + ' ' + c2x.toFixed(1) + ',' + ty.toFixed(1) + ' ' + tx.toFixed(1) + ',' + ty.toFixed(1) + '" stroke="' + esc(relationColor(edge.relation)) + '"' + (edge.style === 'dashed' ? ' stroke-dasharray="6 5"' : '') + '/>';
+  }).join('');
+}
+function bindCyberHover(root, edges){
+  var cards = Array.from(root.querySelectorAll('.cyber-event'));
+  cards.forEach(function(card){
+    card.addEventListener('mouseenter', function(){
+      var related = edges.filter(function(edge){ return edge.source === card.dataset.id || edge.target === card.dataset.id; });
+      var connected = new Set();
+      related.forEach(function(edge){ connected.add(edge.source); connected.add(edge.target); });
+      cards.forEach(function(item){
+        item.classList.toggle('is-active', item === card);
+        item.classList.toggle('is-connected', item !== card && connected.has(item.dataset.id));
+        item.classList.toggle('is-dimmed', related.length > 0 && !connected.has(item.dataset.id));
+      });
+      document.querySelectorAll('#cyber-links [data-edge-id]').forEach(function(path){
+        var active = related.some(function(edge){ return edge.id === path.dataset.edgeId; });
+        path.classList.toggle('is-active', active);
+        path.classList.toggle('is-dimmed', related.length > 0 && !active);
+      });
+    });
+    card.addEventListener('mouseleave', function(){
+      cards.forEach(function(item){ item.classList.remove('is-active','is-connected','is-dimmed'); });
+      document.querySelectorAll('#cyber-links [data-edge-id]').forEach(function(path){ path.classList.remove('is-active','is-dimmed'); });
     });
   });
 }
@@ -1751,6 +2174,7 @@ function switchTab(tabId){
   if (!document.getElementById('view-' + tabId)) return;
   document.querySelectorAll('#nav button').forEach(function(item){ item.classList.toggle('active', item.dataset.tab === tabId); });
   document.querySelectorAll('.view').forEach(function(item){ item.classList.toggle('active', item.id === 'view-' + tabId); });
+  if (tabId === 'cyber') renderCyber();
 }
 function bindDetailActions(root){
   root.querySelectorAll('[data-filter-layer]').forEach(function(button){
@@ -1806,6 +2230,8 @@ initGraphControls();
 renderStoryMap();
 renderRecipes();
 renderTimeline();
+initCyberControls();
+renderCyber();
 initCatalogFilters();
 renderCatalog();
 renderStack();
