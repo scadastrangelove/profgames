@@ -14,9 +14,9 @@ Site URL after GitHub Pages deploy:
 | --- | --- |
 | [`index.html`](index.html) | Small entry page for the AI Power package. |
 | [`ai-power-atlas.html`](ai-power-atlas.html) | Self-contained English interactive atlas: overview, story map, linked 2025–2026 cyber map, timeline, stack heatmap, fact catalog, claim checks and source index. |
-| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Russian atlas generated from the same v0.27 storygraph line, including the same cyber capability, incident, assurance and governance view. |
+| [`ai-power-atlas-ru.html`](ai-power-atlas-ru.html) | Russian atlas generated from the same v0.28 storygraph line, including the same cyber capability, incident, assurance and governance view. |
 | [`ai_power_storygraph_en.json`](ai_power_storygraph_en.json) | Machine-readable English storygraph used by the atlas. |
-| [`ai_power_storygraph_ru.json`](ai_power_storygraph_ru.json) | Russian v0.27 master storygraph with facts, claims, edges, sources and graph diagnostics. |
+| [`ai_power_storygraph_ru.json`](ai_power_storygraph_ru.json) | Russian v0.28 master storygraph with facts, claims, edges, sources and graph diagnostics. |
 | [`preprint_release/`](preprint_release/) | **Machine-Speed Cyber and Poisoned Cognition: A Layer-Dependent Game-Theoretic Framework, with Empirical Probes** — HTML, PDF, Markdown source, figures, bibliography and the P1 red-team evidence bundle. |
 | [`selective-permeability/`](selective-permeability/) | **Selective Permeability: A Behavioral-Security Metric for LLM Advisors, with Two Failure Modes of In-Context Provenance Workflows** — preprint (HTML/PDF/Markdown), figures F1–F9 (F9 = model × attack panorama), reproducible harness, and EN/RU write-ups. |
 
@@ -38,14 +38,14 @@ Two preprints are published alongside the atlas:
 
 ## Current Counts
 
-- `280` facts
+- `287` facts
 - `71` claims
 - `30` claim checks
 - `25` exact story arcs in `6` analytical families
-- `557` story edges
-- `435` sources
+- `584` story edges
+- `447` sources
 - `0` hanging arcs after connectivity checks
-- `4554` cross-references checked, `0` unresolved and `0` endpoint-kind mismatches
+- `4749` cross-references checked, `0` unresolved and `0` endpoint-kind mismatches
 
 ## Frame
 
@@ -74,8 +74,8 @@ The safe wording rule is simple: present contested or partial evidence as contes
 
 ## Provenance
 
-This package was generated from the v0.27 master storygraph built during the AIgeopol research pass.
-Added a primary-source pass on state regulation and public assurance of AI cyber resilience: 30 facts across China, the United States, South Korea, Singapore, Russia, Five Eyes, the UK, Japan, Canada, the EU, Australia and the FSB; one cross-jurisdiction assurance-stack arc; one claim check; and explicit distinctions among binding, supervisory, voluntary, draft and future-effective measures. A second sweep added the AISI evaluation incident, NCSC interim runtime controls and the EU GPAI enforcement checkpoint with agent-scope guidance.
+This package was generated from the v0.28 master storygraph built during the AIgeopol research pass.
+Added seven late-July/August cyber-resilience signals: Anthropic's three real-world evaluation incidents, Oracle's AI-assisted record patch release, rust-in-peace disclosure results, OpenAI's frontier-training pause, Rapid7's patch-cycle compression measurements, Bill Gates's institutional agenda and the 100-plus-signatory collective cyber-defense letter. Preserved source limits: vendor self-reports are not independent audits, patch-volume growth is not attributed wholesale to LLMs, and essays or letters are not law. The existing Zhou Hongyi Habr record was localized and retained rather than duplicated.
 
 Public JSON filenames are intentionally versionless. The current version remains inside `meta.version` and the changelog, while the URLs stay stable across rebuilds.
 
