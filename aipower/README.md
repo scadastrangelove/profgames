@@ -45,6 +45,7 @@ Two preprints are published alongside the atlas:
 - `557` story edges
 - `435` sources
 - `0` hanging arcs after connectivity checks
+- `4554` cross-references checked, `0` unresolved and `0` endpoint-kind mismatches
 
 ## Frame
 
