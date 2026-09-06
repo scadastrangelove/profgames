@@ -15,10 +15,10 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 1813.275146484375,
-        "behavior_section_1440": 440.9938659667969,
-        "cyber_first_card_390": 4471.82470703125,
-        "behavior_section_390": 731.276123046875,
+        "cyber_first_card_1440": 2151.0419921875,
+        "behavior_section_1440": 440.99444580078125,
+        "cyber_first_card_390": 4976.55615234375,
+        "behavior_section_390": 731.7750244140625,
         "map_top": 615.515625
       },
       "page_widths": {
@@ -55,9 +55,9 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 1722.921875,
+        "cyber_first_card_1440": 2048.5,
         "behavior_section_1440": 429.625,
-        "cyber_first_card_390": 4203.6875,
+        "cyber_first_card_390": 4650.609375,
         "behavior_section_390": 677.015625,
         "map_top": 527.453125
       },
@@ -124,6 +124,13 @@
     "ru: SB53 binding",
     "ru: curated Mozilla and SB53",
     "ru: five behavior dependency stages",
+    "ru: concealment view has four authored stages",
+    "ru: concealment view selects 18 classified records",
+    "ru: concealment track reaches permalink",
+    "ru: concealment track remains four stages on mobile",
+    "ru: concealment track has no mobile page overflow",
+    "ru: successor-state mechanism exposes Opus future note",
+    "ru: concealment metadata visible",
     "ru: external-state mechanism exposes wiki incident",
     "ru: behavior state reaches permalink",
     "ru: behavior metadata drawer",
@@ -146,7 +153,7 @@
     "ru: Kimi observation visible",
     "ru: counterargument opens",
     "ru: gap opens",
-    "ru: all 119 governance drawers render",
+    "ru: all 131 governance drawers render",
     "ru: no external requests",
     "ru: no page errors",
     "en: eight views",
@@ -190,6 +197,13 @@
     "en: SB53 binding",
     "en: curated Mozilla and SB53",
     "en: five behavior dependency stages",
+    "en: concealment view has four authored stages",
+    "en: concealment view selects 18 classified records",
+    "en: concealment track reaches permalink",
+    "en: concealment track remains four stages on mobile",
+    "en: concealment track has no mobile page overflow",
+    "en: successor-state mechanism exposes Opus future note",
+    "en: concealment metadata visible",
     "en: external-state mechanism exposes wiki incident",
     "en: behavior state reaches permalink",
     "en: behavior metadata drawer",
@@ -212,10 +226,10 @@
     "en: Kimi observation visible",
     "en: counterargument opens",
     "en: gap opens",
-    "en: all 119 governance drawers render",
+    "en: all 131 governance drawers render",
     "en: no external requests",
     "en: no page errors"
   ],
   "passed": true,
-  "assertions": 132
+  "assertions": 146
 }

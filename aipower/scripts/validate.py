@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v0.31 references, data contracts, legacy preservation and embedded-data parity.
+"""Validate v0.32 references, data contracts, legacy preservation and embedded-data parity.
 No third-party dependencies. --refresh-metadata updates counts only; assertions always run.
 """
 from pathlib import Path
@@ -57,8 +57,9 @@ def referenced_source_urls(d):
    if collection=='events' and node.get('url'):urls.add(node['url'])
  return urls
 def validate(root=ROOT,refresh=False,skip_html=False):
- report={'version':'0.31','base_commit':'581366b644da1eb8188a7da7ede82e4bdca78c9c','languages':{},'tests':[]};data={}
+ report={'version':'0.32','base_commit':'77f4b188844e4f844ff22f95c12377dc0f857887','languages':{},'tests':[]};data={}
  candidate_ids={x['id'] for x in json.loads((root/'review/v031-agent-behavior/candidates.json').read_text())['new_event_candidates']}
+ concealment_ids={x['id'] for x in json.loads((root/'review/agent-concealment-persistence/candidates.json').read_text())['events']}
  def ok(name,condition):
   if not condition:raise AssertionError(name)
   report['tests'].append(name)
@@ -75,10 +76,11 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   dates={e['id']:e['date'] for e in d['events']}
   ok(lang+': original event dates preserved',all(dates.get(e['id'])==e['date'] for e in b['events']))
   ev={e['id']:e for e in d['events']};cyber=[e for e in d['events'] if e.get('primary_domain_id')]
-  ok(lang+': exact v0.31 collection counts',len(d['events'])==343 and len(d['claims'])==72 and len(d['arcs'])==25 and len(d['edges'])==706 and len(d['sourceIndex'])==520)
-  ok(lang+': exactly 119 reviewed cyber facts',len(cyber)==119)
-  ok(lang+': exactly 60 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==60)
+  ok(lang+': exact v0.32 collection counts',len(d['events'])==355 and len(d['claims'])==72 and len(d['arcs'])==25 and len(d['edges'])==738 and len(d['sourceIndex'])==532)
+  ok(lang+': exactly 131 reviewed cyber facts',len(cyber)==131)
+  ok(lang+': exactly 72 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==72)
   ok(lang+': all 22 candidate records present',candidate_ids<={e['id'] for e in d['events']} and len(candidate_ids)==22)
+  ok(lang+': all 12 concealment records present',concealment_ids<={e['id'] for e in d['events']} and len(concealment_ids)==12)
   vocab={k:{x['id'] for x in d['cyberFramework'][k]} for k in ['domains','roles','artifact_kinds','normative_forces','implementation_stages','delegated_authority_states']}
   for e in cyber:
    ok(lang+': valid classification '+e['id'],e['primary_domain_id'] in e['cyber_domain_ids'] and set(e['cyber_domain_ids'])<=vocab['domains'] and set(e['cyber_role_ids'])<=vocab['roles'] and e['artifact_kind'] in vocab['artifact_kinds'] and e['normative_force'] in vocab['normative_forces'] and e['implementation_stage'] in vocab['implementation_stages'] and e['delegated_authority'] in vocab['delegated_authority_states'] and e['editorial_priority'] in [1,2,3] and bool(e.get('scope_'+lang)))
@@ -104,8 +106,10 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   ok(lang+': unresolved actors exposed, not guessed',len(unresolved)==16 and all(e.get('actor_unclassified') for e in unresolved))
   aix=ev['SIG_CYBER_2025_AIXCC_FINAL'];ok(lang+': AIxCC 54/63 and 43/63',aix['numbers']['injected_bugs']==63 and aix['numbers']['synthetic_vulnerabilities_found']==54 and aix['numbers']['synthetic_vulnerabilities_patched']==43)
   kimi=ev['SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT'];ok(lang+': Kimi dates separated',kimi['date']=='2026-07-16' and kimi['current_state']['observed_at']=='2026-09-05' and kimi['current_state']['event_date'] is None and kimi['current_state']['weights_public'] is True)
-  behavior_vocab={k:{x['id'] for x in d['cyberFramework'][k]} for k in ['subdomains','behavioral_mechanisms','behavioral_statuses','evidence_contexts','agent_population_scopes','shared_writable_states','oversight_targets','motivation_bases']}
-  ok(lang+': two domain-five subdomains and five mechanism groups',len(behavior_vocab['subdomains'])==2 and len(d['cyberFramework']['behavior_groups'])==5 and len(behavior_vocab['behavioral_mechanisms'])==11)
+  behavior_vocab={k:{x['id'] for x in d['cyberFramework'][k]} for k in ['subdomains','behavioral_mechanisms','behavioral_statuses','evidence_contexts','agent_population_scopes','shared_writable_states','oversight_targets','motivation_bases','behavior_tracks','behavior_origins','concealment_targets','persistence_media','goal_sources']}
+  ok(lang+': two domain-five subdomains and five mechanism groups',len(behavior_vocab['subdomains'])==2 and len(d['cyberFramework']['behavior_groups'])==5 and len(behavior_vocab['behavioral_mechanisms'])==16)
+  track=d['cyberFramework']['behavior_tracks'][0]
+  ok(lang+': concealment track has four authored stages',track['id']=='BEH_TRACK_CONCEALMENT_PERSISTENCE' and len(track['stages'])==4)
   for event_id in candidate_ids:
    event=ev[event_id]
    ok(lang+': complete agent-behaviour classification '+event_id,
@@ -117,11 +121,21 @@ def validate(root=ROOT,refresh=False,skip_html=False):
       event['shared_writable_state'] in behavior_vocab['shared_writable_states'] and
       bool(set(event['oversight_target'])<=behavior_vocab['oversight_targets']) and
       event['motivation_basis'] in behavior_vocab['motivation_bases'] and bool(event['evidence_method']))
+  for event_id in concealment_ids:
+   event=ev[event_id]
+   ok(lang+': complete concealment classification '+event_id,
+      event['behavior_origin'] in behavior_vocab['behavior_origins'] and
+      bool(set(event['concealment_targets'])<=behavior_vocab['concealment_targets']) and
+      bool(set(event['persistence_media'])<=behavior_vocab['persistence_media']) and
+      event['goal_source'] in behavior_vocab['goal_sources'] and
+      set(event['behavior_track_ids'])=={'BEH_TRACK_CONCEALMENT_PERSISTENCE'})
+  track_events=[event for event in d['events'] if 'BEH_TRACK_CONCEALMENT_PERSISTENCE' in event.get('behavior_track_ids',[])]
+  ok(lang+': concealment track combines 12 new and 6 comparison records',len(track_events)==18 and concealment_ids<={event['id'] for event in track_events})
   ok(lang+': wiki point uses first verified write date',ev['SIG_2026_OPENAI_EXTERNAL_WIKI_SHARED_STATE']['date']=='2026-05-24')
   ok(lang+': shutdown study uses arXiv v1 date',ev['SIG_2026_SHUTDOWN_RESISTANCE_INCOMPLETE_TASKS']['date']=='2025-09-13')
   behavior_claim=next(c for c in d['claims'] if c['id']=='CLM_AGENT_BEHAVIOR_CAPABILITY_PROPENSITY_INCIDENCE')
-  ok(lang+': calibrated behaviour claim remains partial',behavior_claim['status']=='partially_verified' and len(behavior_claim['qualifying_evidence'])==4)
-  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==255)
+  ok(lang+': calibrated behaviour claim remains partial',behavior_claim['status']=='partially_verified' and len(behavior_claim['qualifying_evidence'])==6)
+  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==267)
   ok(lang+': relation definitions complete',set(x['relation'] for x in d['edges'])<=set(d['relationTypes']))
   ok(lang+': exact claim denominators',d['summary']['claim_status_counts']=={'verified':49,'partially_verified':21,'disputed':2} and 'pass_rate_short' not in d['summary'])
   if lang=='ru':ok('ru: every event headline localised',all(re.search('[А-Яа-яЁё]',e['title']) for e in d['events']))
@@ -129,10 +143,10 @@ def validate(root=ROOT,refresh=False,skip_html=False):
    html=(root/('ai-power-atlas-ru.html' if lang=='ru' else 'ai-power-atlas.html')).read_text()
    m=re.search(r'<script\b[^>]*\bid="DATA"[^>]*>(.*?)</script>',html,re.S);ok(lang+': embedded JSON exact',m is not None and json.loads(m.group(1))==d)
    ok(lang+': retired scoring removed','function cyberScore(' not in html)
-   ok(lang+': behaviour layer compiled','id="behavior-map"' in html and 'function renderBehaviorLayer(' in html and 'class="block behavior-metadata"' in html)
+   ok(lang+': behaviour layer compiled','id="behavior-map"' in html and 'id="behavior-tracks"' in html and 'function renderBehaviorLayer(' in html and 'class="block behavior-metadata"' in html)
   report['languages'][lang]={'references':result['checked_references'],'events':len(ev),'cyber_facts':len(cyber),'curated_core':sum(e['editorial_priority']==1 for e in cyber),'thematic_edges':sum(x['relation']=='part_of_arc' for x in d['edges']),'unresolved_actor_labels':len(unresolved),'sources':len(urls)}
  r,e=data['ru'],data['en'];ok('RU/EN edge signature parity',[(x['id'],x['source'],x['target'],x['relation']) for x in r['edges']]==[(x['id'],x['source'],x['target'],x['relation']) for x in e['edges']])
- keys=['artifact_kind','normative_force','implementation_stage','primary_domain_id','cyber_domain_ids','cyber_role_ids','delegated_authority','editorial_priority','jurisdictions','actor_entities','cyber_subdomain_ids','behavioral_mechanism_ids','behavioral_status','evidence_context','evidence_method','agent_population_scope','shared_writable_state','oversight_target','motivation_basis']
+ keys=['artifact_kind','normative_force','implementation_stage','primary_domain_id','cyber_domain_ids','cyber_role_ids','delegated_authority','editorial_priority','jurisdictions','actor_entities','cyber_subdomain_ids','behavioral_mechanism_ids','behavioral_status','evidence_context','evidence_method','agent_population_scope','shared_writable_state','oversight_target','motivation_basis','behavior_track_ids','behavior_origin','concealment_targets','persistence_media','goal_source']
  ok('RU/EN classification parity',all(all(a.get(k)==b.get(k) for k in keys) for a,b in zip(r['events'],e['events'])))
  report['passed']=True;report['assertions']=len(report['tests']);(root/'review/validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  print(json.dumps({k:v for k,v in report.items() if k!='tests'},ensure_ascii=False,indent=2));return report

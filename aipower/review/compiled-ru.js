@@ -1419,11 +1419,11 @@ function hideTip(){
   document.getElementById('tooltip').classList.remove('show');
 }
 
-/* v0.31 shared presentation and navigation. No semantic overrides of the JSON. */
+/* v0.32 shared presentation and navigation. No semantic overrides of the JSON. */
 var atlasRestoring = true;
 var atlasReturnFocus = null;
 var atlasReady = false;
-var behaviorState = { subdomain:'all', mechanism:'' };
+var behaviorState = { subdomain:'all', track:'', mechanism:'' };
 function tx(ru,en){ return ATLAS_RU ? ru : en; }
 function alist(x){ return Array.isArray(x) ? x : (x == null ? [] : [x]); }
 function lf(x,key){ return x && (x[key+'_'+(ATLAS_RU?'ru':'en')] || x[key] || '') || ''; }
@@ -1459,7 +1459,7 @@ function initCyberControls(){
  ['jurisdiction','domain','force','stage','authority'].forEach(function(k){document.getElementById('cyber-'+k).onchange=function(){cyberState[k]=this.value;renderCyber();};});
  document.getElementById('cyber-principal-toggle').onclick=function(){cyberState.principalOnly=!cyberState.principalOnly;renderCyber();};
  document.getElementById('cyber-links-toggle').onclick=function(){cyberState.showLinks=!cyberState.showLinks;renderCyber();};
- var reset=document.getElementById('cyber-reset');if(reset)reset.onclick=function(){Object.assign(cyberState,{mode:'core',role:'',jurisdiction:'',domain:'',force:'',stage:'',authority:'',principalOnly:false,showLinks:true});Object.assign(behaviorState,{subdomain:'all',mechanism:''});renderCyber();};
+ var reset=document.getElementById('cyber-reset');if(reset)reset.onclick=function(){Object.assign(cyberState,{mode:'core',role:'',jurisdiction:'',domain:'',force:'',stage:'',authority:'',principalOnly:false,showLinks:true});Object.assign(behaviorState,{subdomain:'all',track:'',mechanism:''});renderCyber();};
  var note=document.getElementById('cyber-framework-note');if(note)note.textContent=lf(CYBER_FRAMEWORK,'summary');
  var method=document.getElementById('cyber-method');if(method)method.textContent=lf(CYBER_FRAMEWORK,'method_note');
  window.addEventListener('resize',function(){if(document.getElementById('view-cyber').classList.contains('active'))drawCyberLinks();});
@@ -1489,22 +1489,31 @@ function atlasEvidenceContextLabel(id){return ATLAS_RU?evidenceContextLabelRu(id
 function behaviorEvents(events){
  return events.filter(function(e){
   if(!alist(e.behavioral_mechanism_ids).length)return false;
-  return behaviorState.subdomain==='all'||alist(e.cyber_subdomain_ids).includes(behaviorState.subdomain);
+  if(behaviorState.subdomain!=='all'&&!alist(e.cyber_subdomain_ids).includes(behaviorState.subdomain))return false;
+  return !behaviorState.track||alist(e.behavior_track_ids).includes(behaviorState.track);
  });
 }
 function behaviorEvidenceCard(e){
  var statuses=alist(e.behavioral_status).map(function(id){var m=behaviorMeta('behavioral_statuses',id);return'<span class="behavior-evidence-chip status-'+esc(id)+'">'+esc(m?lf(m,'label'):String(id).replace(/_/g,' '))+'</span>';}).join('');
  var contexts=alist(e.evidence_context).map(function(id){var m=behaviorMeta('evidence_contexts',id);return m?lf(m,'label'):atlasEvidenceContextLabel(id);}).filter(Boolean).join(' · ');
- return '<article class="behavior-evidence-card" role="button" tabindex="0" data-kind="event" data-id="'+esc(e.id)+'"><div class="behavior-evidence-head"><time>'+esc(e.date)+'</time><span>'+esc(e.evidence_level||e.confidence||'')+'</span></div><h4>'+esc(e.title)+'</h4><div class="behavior-evidence-tags">'+(statuses||'<span class="behavior-evidence-chip">'+tx('Контекстная запись','Context record')+'</span>')+'</div>'+(contexts?'<p>'+esc(contexts)+'</p>':'')+'</article>';
+ var origin=e.behavior_origin?vocab('behavior_origins',e.behavior_origin):'';
+ var media=alist(e.persistence_media).map(function(id){return vocab('persistence_media',id);}).filter(Boolean).join(' · ');
+ var facets=[origin,media].filter(Boolean).join(' / ');
+ return '<article class="behavior-evidence-card" role="button" tabindex="0" data-kind="event" data-id="'+esc(e.id)+'"><div class="behavior-evidence-head"><time>'+esc(e.date)+'</time><span>'+esc(e.evidence_level||e.confidence||'')+'</span></div><h4>'+esc(e.title)+'</h4><div class="behavior-evidence-tags">'+(statuses||'<span class="behavior-evidence-chip">'+tx('Контекстная запись','Context record')+'</span>')+'</div>'+(contexts?'<p>'+esc(contexts)+'</p>':'')+(facets?'<p class="behavior-evidence-facets">'+esc(facets)+'</p>':'')+'</article>';
 }
 function renderBehaviorLayer(events,allCyber){
- var root=document.getElementById('behavior-map'),list=document.getElementById('behavior-evidence-list'),controls=document.getElementById('behavior-subdomains');
- if(!root||!list||!controls)return;
- var subdomains=alist(CYBER_FRAMEWORK.subdomains),groups=alist(CYBER_FRAMEWORK.behavior_groups),mechanisms=alist(CYBER_FRAMEWORK.behavioral_mechanisms);
+ var root=document.getElementById('behavior-map'),list=document.getElementById('behavior-evidence-list'),controls=document.getElementById('behavior-subdomains'),trackControls=document.getElementById('behavior-tracks');
+ if(!root||!list||!controls||!trackControls)return;
+ var subdomains=alist(CYBER_FRAMEWORK.subdomains),groups=alist(CYBER_FRAMEWORK.behavior_groups),mechanisms=alist(CYBER_FRAMEWORK.behavioral_mechanisms),tracks=alist(CYBER_FRAMEWORK.behavior_tracks);
+ var activeTrack=tracks.find(function(x){return x.id===behaviorState.track;})||null;
  var eligible=behaviorEvents(events),allEligible=behaviorEvents(allCyber);
  controls.innerHTML=[{id:'all',label:tx('5A + 5B','5A + 5B')}].concat(subdomains.map(function(x){return{id:x.id,label:lf(x,'short')};})).map(function(x){return'<button type="button" data-behavior-subdomain="'+esc(x.id)+'" class="'+(behaviorState.subdomain===x.id?'active':'')+'" aria-pressed="'+(behaviorState.subdomain===x.id)+'">'+esc(x.label)+'</button>';}).join('');
  controls.querySelectorAll('[data-behavior-subdomain]').forEach(function(button){button.onclick=function(){behaviorState.subdomain=button.dataset.behaviorSubdomain;behaviorState.mechanism='';renderBehaviorLayer(cyberRenderedEvents,cyberFocusEvents());writeAtlasHash();};});
- root.innerHTML=groups.map(function(group,index){
+ trackControls.innerHTML=[{id:'',label:tx('Вся модель','Full model')}].concat(tracks.map(function(x){return{id:x.id,label:lf(x,'short')||lf(x,'label')};})).map(function(x){return'<button type="button" data-behavior-track="'+esc(x.id)+'" class="'+(behaviorState.track===x.id?'active':'')+'" aria-pressed="'+(behaviorState.track===x.id)+'">'+esc(x.label)+'</button>';}).join('');
+ trackControls.querySelectorAll('[data-behavior-track]').forEach(function(button){button.onclick=function(){behaviorState.track=button.dataset.behaviorTrack;behaviorState.mechanism='';renderBehaviorLayer(cyberRenderedEvents,cyberFocusEvents());writeAtlasHash();};});
+ var displayGroups=activeTrack?alist(activeTrack.stages):groups;
+ root.classList.toggle('is-track',!!activeTrack);
+ root.innerHTML=displayGroups.map(function(group,index){
   var groupMechanisms=alist(group.mechanism_ids).map(function(id){return mechanisms.find(function(m){return m.id===id;});}).filter(Boolean).filter(function(m){return behaviorState.subdomain==='all'||alist(m.subdomain_ids).includes(behaviorState.subdomain);});
   var rows=groupMechanisms.map(function(m){var count=eligible.filter(function(e){return alist(e.behavioral_mechanism_ids).includes(m.id);}).length;return'<button type="button" class="behavior-mechanism '+(behaviorState.mechanism===m.id?'active':'')+'" data-behavior-mechanism="'+esc(m.id)+'" '+(count?'':'disabled')+'><span>'+esc(lf(m,'label'))+'</span><b>'+count+'</b></button>';}).join('');
   return'<section class="behavior-stage" data-stage="'+(index+1)+'"><div class="behavior-stage-index">0'+(index+1)+'</div><h3>'+esc(lf(group,'label').replace(/^\d+\s*·\s*/,''))+'</h3><p>'+esc(lf(group,'description'))+'</p><div class="behavior-mechanisms">'+(rows||'<span class="behavior-stage-empty">'+tx('Нет механизмов в масштабе','No mechanisms at this scale')+'</span>')+'</div></section>';
@@ -1517,6 +1526,7 @@ function renderBehaviorLayer(events,allCyber){
  var count=document.getElementById('behavior-evidence-count');if(count)count.textContent=total?tx('Показано ','Showing ')+shown.length+tx(' из ',' of ')+total:tx('Нет записей в текущей выборке','No records in the current selection');
  list.innerHTML=shown.length?shown.map(behaviorEvidenceCard).join(''):'<div class="atlas-notice">'+tx('Для этого сочетания фильтров нет размеченных наблюдений.','No classified observations match this combination of filters.')+'</div>';
  bindAtlasCards(list);
+ var trackNote=document.getElementById('behavior-track-note');if(trackNote)trackNote.textContent=activeTrack?lf(activeTrack,'description'):tx('Базовый вид связывает пять зон контроля; специализированная дорожка перестраивает карту по одному исследовательскому вопросу.','The base view links five control zones; a specialised track reorganises the map around one research question.');
  var claim=byClaim[CYBER_FRAMEWORK.behavior_claim_id],claimRoot=document.getElementById('behavior-claim');
  if(claimRoot&&claim){claimRoot.dataset.kind='claim';claimRoot.dataset.id=claim.id;claimRoot.innerHTML='<div><span class="behavior-claim-label">'+tx('Калиброванный тезис','Calibrated claim')+'</span><h3>'+esc(lf(claim,'title'))+'</h3><p>'+esc(lf(claim,'claim'))+'</p></div><span class="behavior-claim-status">'+esc(atlasStatusLabel(claim.status))+'</span>';bindAtlasCards(claimRoot);}
  var summary=document.getElementById('behavior-selection-summary');if(summary)summary.textContent=eligible.length+'/'+allEligible.length+' '+tx('размеченных записей в текущей кибервыборке','classified records in the current cyber selection');
@@ -1585,7 +1595,12 @@ function metadataBlock(e){
    [tx('Популяция агентов','Agent population'),valueLabels('agent_population_scopes',e.agent_population_scope)],
    [tx('Общая записываемая среда','Shared writable state'),valueLabels('shared_writable_states',e.shared_writable_state)],
    [tx('Цель контроля','Oversight target'),valueLabels('oversight_targets',e.oversight_target)],
-   [tx('Основание вывода о мотивации','Basis for motive inference'),valueLabels('motivation_bases',e.motivation_basis)]
+   [tx('Основание вывода о мотивации','Basis for motive inference'),valueLabels('motivation_bases',e.motivation_basis)],
+   [tx('Исследовательская дорожка','Research track'),valueLabels('behavior_tracks',e.behavior_track_ids)],
+   [tx('Происхождение поведения','Behaviour origin'),valueLabels('behavior_origins',e.behavior_origin)],
+   [tx('Перед кем скрывается','Concealment target'),valueLabels('concealment_targets',e.concealment_targets)],
+   [tx('Носитель преемственности','Persistence medium'),valueLabels('persistence_media',e.persistence_media)],
+   [tx('Источник цели','Objective source'),valueLabels('goal_sources',e.goal_source)]
   ].filter(function(row){return row[1];});
   html+='<section class="block behavior-metadata"><h3>'+tx('Поведение, контроль и автономия','Behaviour, control and autonomy')+'</h3><dl class="behavior-metadata-grid">'+rows.map(function(row){return'<div><dt>'+esc(row[0])+'</dt><dd>'+esc(row[1])+'</dd></div>';}).join('')+'</dl>'+(e.evidence_method?'<p class="small"><b>'+tx('Метод: ','Method: ')+'</b>'+esc(String(e.evidence_method).replace(/_/g,' '))+'</p>':'')+'</section>';
  }
