@@ -1,0 +1,1387 @@
+{
+  "meta": {
+    "version": "0.34",
+    "base_version": "0.33",
+    "base_commit": "c1d15d3eb057732d07de5b10329bd412c10958e0",
+    "date": "2026-09-06",
+    "purpose": "integrated_bilingual_release_layer",
+    "base_sha256": {
+      "ru": "2065fa4accde6dc1fd79f5d3a3d1180f2e79dd79e8c33708f3da3e08e6ba2b96",
+      "en": "f42c9047912a49119fcb3c13fcd22f4a8ff52e0da6f7496de147aa39427db6ed"
+    }
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "name": "Daniel Stenberg / curl",
+      "title": "The end of the curl bug-bounty",
+      "url": "https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/",
+      "date": "2026-01-26",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S02",
+      "name": "Daniel Stenberg / curl",
+      "title": "High-Quality Chaos",
+      "url": "https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/",
+      "date": "2026-04-22",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S03",
+      "name": "Daniel Stenberg / curl",
+      "title": "curl 8.21.0",
+      "url": "https://daniel.haxx.se/blog/2026/06/24/curl-8-21-0/",
+      "date": "2026-06-24",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S04",
+      "name": "Daniel Stenberg / curl",
+      "title": "curl summer of bliss",
+      "url": "https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/",
+      "date": "2026-06-15",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S05",
+      "name": "Daniel Stenberg / curl",
+      "title": "What the bliss taught us",
+      "url": "https://daniel.haxx.se/blog/2026/08/03/what-the-bliss-taught-us/",
+      "date": "2026-08-03",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S06",
+      "name": "Daniel Stenberg / curl",
+      "title": "curl 8.22.0",
+      "url": "https://daniel.haxx.se/blog/2026/09/02/curl-8-22-0/",
+      "date": "2026-09-02",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S07",
+      "name": "Anthropic",
+      "title": "Coordinated vulnerability disclosure dashboard — snapshot 26 August 2026",
+      "url": "https://red.anthropic.com/2026/cvd/",
+      "date": "2026-08-26",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false,
+      "snapshot_time": "2026-08-26 11:55 PT"
+    },
+    {
+      "id": "S08",
+      "name": "Anthropic",
+      "title": "About the CVD dashboard",
+      "url": "https://red.anthropic.com/2026/cvd/about/",
+      "date": "2026-08-26",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S09",
+      "name": "Jakub Kicinski / Linux netdev",
+      "title": "[GIT PULL] Networking for 7.3",
+      "url": "https://lists.openwall.net/linux-kernel/2026/08/18/2125",
+      "date": "2026-08-18",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false,
+      "message_id": "<20260818212923.2725202-1-kuba@kernel.org>"
+    },
+    {
+      "id": "S10",
+      "name": "Linux Foundation",
+      "title": "Linux Foundation and Industry Leaders Launch Akrites",
+      "url": "https://www.linuxfoundation.org/press/linux-foundation-and-industry-leaders-launch-akrites-to-defend-critical-open-source-software-against-ai-enabled-cyber-threats?hs_amp=true",
+      "date": "2026-06-25",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S11",
+      "name": "Akrites",
+      "title": "We All Depend on Open Source. We Will Defend It Together.",
+      "url": "https://akrites.org/letter/",
+      "date": "2026-06-25",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S12",
+      "name": "NVIDIA",
+      "title": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
+      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "date": "2026-07-27",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S13",
+      "name": "Open Secure AI Alliance",
+      "title": "Shared AI Findings Exchange (SAFE) — pinned RFC",
+      "url": "https://github.com/OpenSecureAIAlliance/RFCs/blob/4ec7660569f41224c6bb8a1311c053e285a4d53d/rfc-safe-proposal.md",
+      "date": "2026-08-04",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false,
+      "date_basis": "dated_public_announcement_S14_not_claim_of_first_commit",
+      "git_blob_sha1": "8a3954f4984e550f616f201e7880cca6f489ab2c"
+    },
+    {
+      "id": "S14",
+      "name": "NVIDIA",
+      "title": "AI Leaders Propose SAFE Guidelines for Cybersecurity Transparency",
+      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance-contributions/",
+      "date": "2026-08-04",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S15",
+      "name": "OpenAI",
+      "title": "Defense Factory",
+      "url": "https://openai.com/the-defense-factory/",
+      "date": "",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false,
+      "date_basis": "undated_page_observed_2026_09_06"
+    },
+    {
+      "id": "S16",
+      "name": "OpenAI",
+      "title": "Daybreak for Frontline Defenders",
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders/",
+      "date": "2026-09-03",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S17",
+      "name": "OpenAI",
+      "title": "Codex Security: now in research preview",
+      "url": "https://openai.com/index/codex-security-now-in-research-preview/",
+      "date": "2026-03-06",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S18",
+      "name": "Texas Cyber Command",
+      "title": "Texas to lead Project Watershed 250 cybersecurity pilot",
+      "url": "https://www.txcc.texas.gov/news/project-watershed-250",
+      "date": "2026-09-01",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S19",
+      "name": "National Association of Water Companies",
+      "title": "Statement on the Launch of the White House Water Cybersecurity Pilot",
+      "url": "https://nawc.org/news/statement-from-nawc-on-the-launch-of-the-white-house-water-cybersecurity-pilot/",
+      "date": "2026-09-01",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S20",
+      "name": "Bank of England",
+      "title": "Financial Stability Report — July 2026, frontier AI and operational risk",
+      "url": "https://www.bankofengland.co.uk/financial-stability-report/2026/july-2026",
+      "date": "2026-07-07",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false,
+      "verification_path": "official_HTML_search_index_after_direct_fetch_error"
+    },
+    {
+      "id": "S21",
+      "name": "Mozilla",
+      "title": "The zero-days are numbered",
+      "url": "https://blog.mozilla.org/en/firefox/privacy-security/ai-security-zero-day-vulnerabilities/",
+      "date": "2026-04-21",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false
+    },
+    {
+      "id": "S22",
+      "name": "rust-in-peace",
+      "title": "Public disclosure log — summary dated 18 August, observed 6 September",
+      "url": "https://github.com/scadastrangelove/rust-in-peace/blob/main/DISCLOSURES-PUBLIC.md",
+      "date": "2026-08-18",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "primary_source_read",
+      "independent_replication": false,
+      "date_basis": "date_of_summary_header_not_last_file_modification",
+      "reporter_owned": true
+    },
+    {
+      "id": "S23",
+      "name": "Google Fonts / fontations",
+      "title": "PR #2012: do not panic on absent VARC variation store",
+      "url": "https://github.com/googlefonts/fontations/pull/2012",
+      "date": "2026-08-05",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "upstream_PR_metadata_read",
+      "independent_replication": false,
+      "merge_commit_sha": "f43403c06f9045acf482ee4527e4796c84ffdc03",
+      "merged": true
+    },
+    {
+      "id": "S24",
+      "name": "hyperium/h2",
+      "title": "PR #936: prevent double counting pushed streams after 1xx responses",
+      "url": "https://github.com/hyperium/h2/pull/936",
+      "date": "2026-08-17",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "source_class": "first_party_publication",
+      "checked_at": "2026-09-06",
+      "verification": "upstream_PR_metadata_read",
+      "independent_replication": false,
+      "merge_commit_sha": "3a241be87e302ed47a4a28b4c24d0e68c09ffeab",
+      "merged": true
+    }
+  ],
+  "events": [
+    {
+      "id": "SIG_2026_CURL_BOUNTY_CLOSURE",
+      "date": "2026-01-26",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "curl объявляет прекращение bug bounty: исторический этап недостоверных сообщений",
+      "title_en": "curl announces bug-bounty closure: the historical low-quality-report phase",
+      "summary_ru": "curl объявил прекращение выплат с 31 января. Мейнтейнер связал решение с недостоверными сообщениями и поведением заявителей; приём уязвимостей не прекращался.",
+      "summary_en": "curl announced that monetary rewards would end on 31 January. The maintainer cited unreliable reports and reporter behaviour; vulnerability reporting itself continued.",
+      "caveat_ru": "Исторический контекст, а не описание качества потока летом 2026 года. Это решение одного проекта; причинность изменения качества после отмены выплат не измерена.",
+      "caveat_en": "Historical context, not a description of report quality in summer 2026. One project decision; a causal effect of ending rewards on later quality was not measured.",
+      "safe_ru": "curl объявил прекращение выплат с 31 января. Мейнтейнер связал решение с недостоверными сообщениями и поведением заявителей; приём уязвимостей не прекращался.",
+      "safe_en": "curl announced that monetary rewards would end on 31 January. The maintainer cited unreliable reports and reporter behaviour; vulnerability reporting itself continued.",
+      "source_ids": [
+        "S01"
+      ],
+      "tracks": [
+        "RES_TRACK_MAINTENANCE_CAPACITY"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "priority": 3,
+      "artifact_kind": "provider_policy",
+      "implementation_stage": "announced",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "historical_context",
+      "actors": [
+        "curl"
+      ],
+      "actor_types": [
+        "civil_society"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {},
+      "pipeline_metrics": [],
+      "defense_stage_ids": [],
+      "scheduled_effective_date": "2026-01-31"
+    },
+    {
+      "id": "SIG_2026_CURL_HIGH_QUALITY_TRANSITION",
+      "date": "2026-04-22",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "curl: апрельский переход от мусора к перегрузке качественными сообщениями",
+      "title_en": "curl: April transition from junk reports to high-quality overload",
+      "summary_ru": "Мейнтейнер сообщил о потоке примерно вдвое выше 2025 года и подтверждении уязвимостей в 15–16% сообщений; дополнительно выросла доля реальных ошибок, не признанных уязвимостями.",
+      "summary_en": "The maintainer reported roughly twice the 2025 submission rate and vulnerabilities confirmed in 15–16% of reports, alongside more genuine non-security bugs.",
+      "caveat_ru": "Переходная точка, не актуальный потолок качества. Использование ИИ выводится мейнтейнером по сообщениям; опрос знакомых проектов не является репрезентативной выборкой.",
+      "caveat_en": "A transition point, not the current quality ceiling. AI use is inferred by the maintainer from submissions; an informal peer poll is not representative.",
+      "safe_ru": "Мейнтейнер сообщил о потоке примерно вдвое выше 2025 года и подтверждении уязвимостей в 15–16% сообщений; дополнительно выросла доля реальных ошибок, не признанных уязвимостями.",
+      "safe_en": "The maintainer reported roughly twice the 2025 submission rate and vulnerabilities confirmed in 15–16% of reports, alongside more genuine non-security bugs.",
+      "source_ids": [
+        "S02"
+      ],
+      "tracks": [
+        "RES_TRACK_MAINTENANCE_CAPACITY"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "priority": 2,
+      "artifact_kind": "research",
+      "implementation_stage": "reported",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "maintainer_report",
+      "actors": [
+        "curl"
+      ],
+      "actor_types": [
+        "civil_society"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {
+        "report_rate_relative_to_2025_approx": 2,
+        "confirmed_vulnerability_percent_min": 15,
+        "confirmed_vulnerability_percent_max": 16
+      },
+      "pipeline_metrics": [],
+      "defense_stage_ids": []
+    },
+    {
+      "id": "SIG_2026_CURL_821_RELEASE_CAPACITY",
+      "date": "2026-06-24",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "curl 8.21.0: 18 исправленных уязвимостей вытесняют разработку новых функций",
+      "title_en": "curl 8.21.0: 18 security fixes displace feature work",
+      "summary_ru": "Релиз содержит 18 security fixes. Мейнтейнер прямо связывает сокращение объёма новых функций с работой над сообщениями об уязвимостях.",
+      "summary_en": "The release contains 18 security fixes. The maintainer explicitly links reduced feature work to the vulnerability-report workload.",
+      "caveat_ru": "Подтверждён выпуск исправлений, не обновление всех установок. Источник не атрибутирует ИИ каждую из 18 находок; security fixes не равны всем 276 bugfixes релиза.",
+      "caveat_en": "Fixes were released, not necessarily deployed everywhere. The source does not attribute each of the 18 findings to AI; security fixes are not all 276 release bugfixes.",
+      "safe_ru": "Релиз содержит 18 security fixes. Мейнтейнер прямо связывает сокращение объёма новых функций с работой над сообщениями об уязвимостях.",
+      "safe_en": "The release contains 18 security fixes. The maintainer explicitly links reduced feature work to the vulnerability-report workload.",
+      "source_ids": [
+        "S03"
+      ],
+      "tracks": [
+        "RES_TRACK_MAINTENANCE_CAPACITY",
+        "RES_TRACK_VERIFIED_REMEDIATION"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "priority": 1,
+      "artifact_kind": "disclosure",
+      "implementation_stage": "remediated",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "released_fixes",
+      "actors": [
+        "curl"
+      ],
+      "actor_types": [
+        "civil_society"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {
+        "security_fixes": 18,
+        "all_bugfixes": 276
+      },
+      "pipeline_metrics": [
+        {
+          "id": "security_fixes",
+          "value": 18,
+          "unit": "security_fix",
+          "label_ru": "Security fixes",
+          "label_en": "Security fixes",
+          "as_of": "2026-06-24",
+          "population_ru": "curl/libcurl 8.21.0",
+          "population_en": "curl/libcurl 8.21.0",
+          "source_url": "https://daniel.haxx.se/blog/2026/06/24/curl-8-21-0/"
+        }
+      ],
+      "defense_stage_ids": [
+        "release"
+      ]
+    },
+    {
+      "id": "SIG_2026_CURL_REPORTING_PAUSE",
+      "date": "2026-07-01",
+      "date_basis": "period_start_confirmed_by_retrospective",
+      "date_status": "exact",
+      "title_ru": "curl приостанавливает приём уязвимостей для восстановления ёмкости сопровождения",
+      "title_en": "curl pauses vulnerability intake to restore maintenance capacity",
+      "summary_ru": "Приём сообщений был приостановлен с 1 июля до 3 августа. Ретроспектива подтверждает паузу и возвращение к отложенной работе; платная поддержка продолжалась.",
+      "summary_en": "Vulnerability intake paused from 1 July to 3 August. A retrospective confirms the pause and renewed attention to deferred work; paid support continued.",
+      "caveat_ru": "Дата начала подтверждена ретроспективой от 3 августа; анонс вышел 15 июня. Это фактическая перестройка работы, не измеренное снижение риска и не отказ от исправления всех ошибок.",
+      "caveat_en": "The start date is corroborated by the 3 August retrospective; the announcement was on 15 June. This is an operating change, not measured risk reduction or abandonment of all fixes.",
+      "safe_ru": "Приём сообщений был приостановлен с 1 июля до 3 августа. Ретроспектива подтверждает паузу и возвращение к отложенной работе; платная поддержка продолжалась.",
+      "safe_en": "Vulnerability intake paused from 1 July to 3 August. A retrospective confirms the pause and renewed attention to deferred work; paid support continued.",
+      "source_ids": [
+        "S04",
+        "S05"
+      ],
+      "tracks": [
+        "RES_TRACK_MAINTENANCE_CAPACITY",
+        "RES_TRACK_DEFENSE_ACCESS"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "priority": 1,
+      "artifact_kind": "provider_policy",
+      "implementation_stage": "observed",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "maintainer_report",
+      "actors": [
+        "curl"
+      ],
+      "actor_types": [
+        "civil_society"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {},
+      "pipeline_metrics": [],
+      "defense_stage_ids": [],
+      "end_date": "2026-08-03",
+      "source_date": "2026-06-15"
+    },
+    {
+      "id": "SIG_2026_CURL_822_SECURITY_RELEASE",
+      "date": "2026-09-02",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "curl 8.22.0: после паузы выпущены ещё девять security fixes",
+      "title_en": "curl 8.22.0: nine further security fixes after the intake pause",
+      "summary_ru": "В curl/libcurl 8.22.0 выпущены девять security fixes. Десятая опубликованная рядом CVE относится к отдельному wcurl.",
+      "summary_en": "curl/libcurl 8.22.0 shipped nine security fixes. A tenth CVE disclosed alongside them concerns the separate wcurl project.",
+      "caveat_ru": "Релиз подтверждает продолжение реальной работы после паузы, но не её причинную эффективность. Не все находки имеют индивидуальную атрибуцию ИИ; внедрение downstream не измерено.",
+      "caveat_en": "The release confirms continuing real work after the pause, not the pause’s causal effectiveness. Individual AI attribution is incomplete; downstream adoption is not measured.",
+      "safe_ru": "В curl/libcurl 8.22.0 выпущены девять security fixes. Десятая опубликованная рядом CVE относится к отдельному wcurl.",
+      "safe_en": "curl/libcurl 8.22.0 shipped nine security fixes. A tenth CVE disclosed alongside them concerns the separate wcurl project.",
+      "source_ids": [
+        "S06"
+      ],
+      "tracks": [
+        "RES_TRACK_MAINTENANCE_CAPACITY",
+        "RES_TRACK_VERIFIED_REMEDIATION"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "priority": 2,
+      "artifact_kind": "disclosure",
+      "implementation_stage": "remediated",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "released_fixes",
+      "actors": [
+        "curl"
+      ],
+      "actor_types": [
+        "civil_society"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {
+        "curl_libcurl_security_fixes": 9,
+        "wcurl_separate_cves": 1
+      },
+      "pipeline_metrics": [
+        {
+          "id": "curl_fixes",
+          "value": 9,
+          "unit": "security_fix",
+          "label_ru": "curl/libcurl security fixes",
+          "label_en": "curl/libcurl security fixes",
+          "as_of": "2026-09-02",
+          "population_ru": "Релиз 8.22.0; wcurl не входит в девять",
+          "population_en": "8.22.0 release; wcurl is not included in the nine",
+          "source_url": "https://daniel.haxx.se/blog/2026/09/02/curl-8-22-0/"
+        },
+        {
+          "id": "wcurl_cve",
+          "value": 1,
+          "unit": "cve",
+          "label_ru": "Отдельная CVE wcurl",
+          "label_en": "Separate wcurl CVE",
+          "as_of": "2026-09-02",
+          "population_ru": "Релиз 8.22.0; wcurl не входит в девять",
+          "population_en": "8.22.0 release; wcurl is not included in the nine",
+          "source_url": "https://daniel.haxx.se/blog/2026/09/02/curl-8-22-0/"
+        }
+      ],
+      "defense_stage_ids": [
+        "release"
+      ]
+    },
+    {
+      "id": "SIG_2026_ANTHROPIC_CVD_VALIDATED_BACKLOG",
+      "date": "2026-08-26",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "Anthropic CVD: тысячи проверенных находок и очередь уже подтверждённых ошибок",
+      "title_en": "Anthropic CVD: thousands of validated findings and a confirmed-issue backlog",
+      "summary_ru": "Снимок CVD: внешние фирмы проверили 5 008 находок и признали реальными 4 576. Передано 2 300 сообщений по 392 проектам; известно 421 upstream-исправление. Есть подтверждённые ошибки, ещё не переданные из-за ограничений процесса.",
+      "summary_en": "The CVD snapshot reports 5,008 firm-reviewed findings and 4,576 considered valid; 2,300 reports across 392 projects and 421 known upstream fixes. Confirmed issues also await reporting because of process capacity limits.",
+      "caveat_ru": "91,4% относится только к проверенному поднабору, включая дубликаты и won’t-fix. Есть отдельная прямая непроверенная ветка раскрытия. Ответ мейнтейнера не равен подтверждению; upstream-исправление не доказывает массовую установку. Смешаны несколько Claude-моделей.",
+      "caveat_en": "91.4% applies only to the reviewed subset, including duplicates and won’t-fix cases. A separate direct-disclosure route may contain unreviewed findings. A reply is not validation; an upstream fix is not fleet-wide installation. Multiple Claude models are included.",
+      "safe_ru": "Снимок CVD: внешние фирмы проверили 5 008 находок и признали реальными 4 576. Передано 2 300 сообщений по 392 проектам; известно 421 upstream-исправление. Есть подтверждённые ошибки, ещё не переданные из-за ограничений процесса.",
+      "safe_en": "The CVD snapshot reports 5,008 firm-reviewed findings and 4,576 considered valid; 2,300 reports across 392 projects and 421 known upstream fixes. Confirmed issues also await reporting because of process capacity limits.",
+      "source_ids": [
+        "S07",
+        "S08"
+      ],
+      "tracks": [
+        "RES_TRACK_MAINTENANCE_CAPACITY",
+        "RES_TRACK_VERIFIED_REMEDIATION",
+        "RES_TRACK_SHARED_REPAIR"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "priority": 1,
+      "artifact_kind": "disclosure",
+      "implementation_stage": "reported",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "provider_operational_report",
+      "actors": [
+        "Anthropic"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {
+        "candidates": 26153,
+        "firm_reviewed": 5008,
+        "firm_validated": 4576,
+        "validated_share_of_reviewed_percent": 91.4,
+        "triaged_reports_sent": 1022,
+        "direct_reports_sent": 1278,
+        "total_reports_sent": 2300,
+        "projects": 392,
+        "maintainer_replies": 1815,
+        "upstream_fixes_known": 421
+      },
+      "pipeline_metrics": [
+        {
+          "id": "candidates",
+          "value": 26153,
+          "unit": "candidate",
+          "label_ru": "Кандидаты",
+          "label_en": "Candidates",
+          "as_of": "2026-08-26",
+          "population_ru": "CVD Anthropic; разные ветки и стадии, не последовательная воронка",
+          "population_en": "Anthropic CVD; separate routes and stages, not one sequential funnel",
+          "source_url": "https://red.anthropic.com/2026/cvd/"
+        },
+        {
+          "id": "firm_reviewed",
+          "value": 5008,
+          "unit": "finding",
+          "label_ru": "Проверены внешними фирмами",
+          "label_en": "Firm-reviewed",
+          "as_of": "2026-08-26",
+          "population_ru": "CVD Anthropic; разные ветки и стадии, не последовательная воронка",
+          "population_en": "Anthropic CVD; separate routes and stages, not one sequential funnel",
+          "source_url": "https://red.anthropic.com/2026/cvd/"
+        },
+        {
+          "id": "firm_validated",
+          "value": 4576,
+          "unit": "finding",
+          "label_ru": "Признаны реальными в поднаборе",
+          "label_en": "Valid in reviewed subset",
+          "as_of": "2026-08-26",
+          "population_ru": "CVD Anthropic; разные ветки и стадии, не последовательная воронка",
+          "population_en": "Anthropic CVD; separate routes and stages, not one sequential funnel",
+          "source_url": "https://red.anthropic.com/2026/cvd/"
+        },
+        {
+          "id": "total_reports_sent",
+          "value": 2300,
+          "unit": "finding",
+          "label_ru": "Переданы по двум веткам",
+          "label_en": "Reported via two routes",
+          "as_of": "2026-08-26",
+          "population_ru": "CVD Anthropic; разные ветки и стадии, не последовательная воронка",
+          "population_en": "Anthropic CVD; separate routes and stages, not one sequential funnel",
+          "source_url": "https://red.anthropic.com/2026/cvd/"
+        },
+        {
+          "id": "upstream_fixes_known",
+          "value": 421,
+          "unit": "finding",
+          "label_ru": "Известные upstream-исправления",
+          "label_en": "Known upstream fixes",
+          "as_of": "2026-08-26",
+          "population_ru": "CVD Anthropic; разные ветки и стадии, не последовательная воронка",
+          "population_en": "Anthropic CVD; separate routes and stages, not one sequential funnel",
+          "source_url": "https://red.anthropic.com/2026/cvd/"
+        }
+      ],
+      "defense_stage_ids": [
+        "discovery",
+        "validation",
+        "coordination",
+        "patch"
+      ],
+      "pipeline_semantics": {
+        "sequential_funnel": false,
+        "routes": [
+          "firm_triage",
+          "direct_at_maintainer_request"
+        ],
+        "direct_may_be_unreviewed": true,
+        "acknowledged_is_validation": false,
+        "reviewed_subset_representative": false,
+        "upstream_means_fleet_deployed": false,
+        "true_positive_includes_duplicates_and_wont_fix": true,
+        "as_of": "2026-08-26"
+      }
+    },
+    {
+      "id": "SIG_2026_LINUX_NETDEV_VALID_FIX_OVERLOAD",
+      "date": "2026-08-18",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "Linux networking: реальные гонки перегружают сопровождение; модели включают в ревью",
+      "title_en": "Linux networking: real races overwhelm maintenance; models enter review",
+      "summary_ru": "В письме networking pull request мейнтейнер сообщает о перегрузке и давних гонках API, которые LLM теперь помогают обнаруживать. Команда получила бюджет Meta для многомодельного ревью и планирует автоматизировать рутинную обработку патчей.",
+      "summary_en": "The networking pull-request letter reports overload and longstanding API races that LLMs help expose. Meta provided budget for multi-model review; the team plans to automate routine patch handling.",
+      "caveat_ru": "632 net и 648 net-next — патчи, не уязвимости. Оценка трети–половины net-next как AI-driven приблизительна. Подсистема не представляет всё ядро; состав включает чистки, редкие ошибки и не-ИИ находки.",
+      "caveat_en": "632 net and 648 net-next count patches, not vulnerabilities. The estimate that one-third to one-half of net-next is AI-driven is approximate. One subsystem is not the whole kernel; fixes, cleanups and non-AI findings are mixed.",
+      "safe_ru": "В письме networking pull request мейнтейнер сообщает о перегрузке и давних гонках API, которые LLM теперь помогают обнаруживать. Команда получила бюджет Meta для многомодельного ревью и планирует автоматизировать рутинную обработку патчей.",
+      "safe_en": "The networking pull-request letter reports overload and longstanding API races that LLMs help expose. Meta provided budget for multi-model review; the team plans to automate routine patch handling.",
+      "source_ids": [
+        "S09"
+      ],
+      "tracks": [
+        "RES_TRACK_MAINTENANCE_CAPACITY",
+        "RES_TRACK_VERIFIED_REMEDIATION"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "priority": 1,
+      "artifact_kind": "deployment",
+      "implementation_stage": "reported",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "maintainer_report",
+      "actors": [
+        "Linux kernel networking maintainers",
+        "Meta"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {
+        "net_patches": 632,
+        "net_next_patches": 648
+      },
+      "pipeline_metrics": [
+        {
+          "id": "net_patches",
+          "value": 632,
+          "unit": "patch",
+          "label_ru": "Патчи net",
+          "label_en": "net patches",
+          "as_of": "2026-08-18",
+          "population_ru": "Networking pull request Linux 7.3",
+          "population_en": "Linux 7.3 networking pull request",
+          "source_url": "https://lists.openwall.net/linux-kernel/2026/08/18/2125"
+        },
+        {
+          "id": "net_next_patches",
+          "value": 648,
+          "unit": "patch",
+          "label_ru": "Патчи net-next",
+          "label_en": "net-next patches",
+          "as_of": "2026-08-18",
+          "population_ru": "Networking pull request Linux 7.3",
+          "population_en": "Linux 7.3 networking pull request",
+          "source_url": "https://lists.openwall.net/linux-kernel/2026/08/18/2125"
+        }
+      ],
+      "defense_stage_ids": [
+        "validation",
+        "patch",
+        "coordination"
+      ]
+    },
+    {
+      "id": "SIG_2026_AKRITES_SHARED_REMEDIATION",
+      "date": "2026-06-25",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "Akrites: общая команда раскрытия и инженерная помощь вместо потока разрозненных сообщений",
+      "title_en": "Akrites: shared disclosure and engineering support instead of fragmented reports",
+      "summary_ru": "Linux Foundation и партнёры объявили общую SIRT и согласованное раскрытие для критических OSS-зависимостей. Заявлены инженерные ресурсы, сопровождение бесхозных пакетов и оценка результата по внедрению патчей.",
+      "summary_en": "Linux Foundation and partners announced a shared SIRT and coordinated disclosure for critical OSS dependencies, committing engineering support, last-resort maintenance and a focus on patch deployment.",
+      "caveat_ru": "Анонс и обязательства участников подтверждены, агрегированная эффективность не установлена. Цель внедрения нельзя маркировать как уже достигнутое downstream-развёртывание.",
+      "caveat_en": "The launch and participant commitments are established; aggregate effectiveness is not. A deployment objective is not an achieved downstream rollout.",
+      "safe_ru": "Linux Foundation и партнёры объявили общую SIRT и согласованное раскрытие для критических OSS-зависимостей. Заявлены инженерные ресурсы, сопровождение бесхозных пакетов и оценка результата по внедрению патчей.",
+      "safe_en": "Linux Foundation and partners announced a shared SIRT and coordinated disclosure for critical OSS dependencies, committing engineering support, last-resort maintenance and a focus on patch deployment.",
+      "source_ids": [
+        "S10",
+        "S11"
+      ],
+      "tracks": [
+        "RES_TRACK_SHARED_REPAIR",
+        "RES_TRACK_MAINTENANCE_CAPACITY"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "priority": 1,
+      "artifact_kind": "cooperative_program",
+      "implementation_stage": "announced",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "announced_program",
+      "actors": [
+        "Linux Foundation",
+        "Akrites"
+      ],
+      "actor_types": [
+        "civil_society"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {},
+      "pipeline_metrics": [],
+      "defense_stage_ids": [
+        "coordination"
+      ]
+    },
+    {
+      "id": "SIG_2026_OPEN_SECURE_AI_ALLIANCE",
+      "date": "2026-07-27",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "Open Secure AI Alliance: открытые средства как альтернативный канал киберзащиты",
+      "title_en": "Open Secure AI Alliance: open tools as an alternative defence channel",
+      "summary_ru": "Объявлен альянс для общих открытых моделей, harness и средств защиты. Участники связывают инициативу с возможностью расследовать инциденты под собственным контролем, ссылаясь на Hugging Face.",
+      "summary_en": "The alliance was announced around shared open models, harnesses and defensive tools. Participants link it to operator-controlled incident investigation, citing Hugging Face.",
+      "caveat_ru": "Позиция участников не доказывает превосходство открытых весов. Пересказ инцидента Hugging Face не является независимой форензической проверкой; локальная защита требует ресурсов и подготовки.",
+      "caveat_en": "The participants’ position does not prove open-weight superiority. Retelling the Hugging Face incident is not independent forensics; local defence requires resources and preparation.",
+      "safe_ru": "Объявлен альянс для общих открытых моделей, harness и средств защиты. Участники связывают инициативу с возможностью расследовать инциденты под собственным контролем, ссылаясь на Hugging Face.",
+      "safe_en": "The alliance was announced around shared open models, harnesses and defensive tools. Participants link it to operator-controlled incident investigation, citing Hugging Face.",
+      "source_ids": [
+        "S12"
+      ],
+      "tracks": [
+        "RES_TRACK_DEFENSE_ACCESS",
+        "RES_TRACK_SHARED_REPAIR"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "priority": 2,
+      "artifact_kind": "cooperative_program",
+      "implementation_stage": "announced",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "announced_program",
+      "actors": [
+        "Open Secure AI Alliance",
+        "NVIDIA",
+        "Linux Foundation"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {},
+      "pipeline_metrics": [],
+      "defense_stage_ids": []
+    },
+    {
+      "id": "SIG_2026_SAFE_INCIDENT_LEARNING_RFC",
+      "date": "2026-08-04",
+      "date_basis": "dated_public_announcement_of_pinned_RFC",
+      "date_status": "exact",
+      "title_ru": "SAFE: RFC об инцидентах, near misses и проверяемых защитных мерах",
+      "title_en": "SAFE: an RFC for incident learning and verifiable defensive controls",
+      "summary_ru": "RFC предлагает конфиденциальные сообщения об инцидентах и near misses, сохранение traces, идентичностей и прав, уведомления затронутых сторон и преобразование отказов контроля в воспроизводимые проверки.",
+      "summary_en": "The RFC proposes confidential incident and near-miss reporting, preservation of traces, identities and permissions, affected-party notification and reproducible tests derived from control failures.",
+      "caveat_ru": "Это проект, не действующий стандарт, закон или подтверждённо работающая система расследований. Предложенные сроки не заменяют применимые обязанности. Намерение модели не определяет наличие воздействия на третью сторону.",
+      "caveat_en": "This is a proposal, not an effective standard, law or demonstrated incident-review service. Proposed timelines do not replace applicable duties. Model intent does not determine third-party impact.",
+      "safe_ru": "RFC предлагает конфиденциальные сообщения об инцидентах и near misses, сохранение traces, идентичностей и прав, уведомления затронутых сторон и преобразование отказов контроля в воспроизводимые проверки.",
+      "safe_en": "The RFC proposes confidential incident and near-miss reporting, preservation of traces, identities and permissions, affected-party notification and reproducible tests derived from control failures.",
+      "source_ids": [
+        "S13",
+        "S14"
+      ],
+      "tracks": [
+        "RES_TRACK_INCIDENT_LEARNING"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "priority": 1,
+      "artifact_kind": "guidance_draft",
+      "implementation_stage": "draft",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "draft_proposal",
+      "actors": [
+        "Open Secure AI Alliance",
+        "Linux Foundation",
+        "NVIDIA"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_PROTECTED_SYSTEM"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {},
+      "pipeline_metrics": [],
+      "defense_stage_ids": [
+        "coordination",
+        "revalidation"
+      ]
+    },
+    {
+      "id": "SIG_2026_DEFENSE_FACTORY_VERIFIED_REMEDIATION",
+      "date": "2026-09-06",
+      "date_basis": "observation_date_publication_unknown",
+      "date_status": "observation",
+      "title_ru": "Defense Factory: воспроизведение, ответственный и проверка развёрнутого исправления",
+      "title_en": "Defense Factory: reproduction, ownership and deployed-fix verification",
+      "summary_ru": "OpenAI описывает внутренний спринт с 250+ участниками: 37% находок оказались дубликатами, настройка сред ограничивала проверку, а повторные проверки выявили разрыв между слитым патчем и развёртыванием.",
+      "summary_en": "OpenAI describes an internal sprint with 250+ participants: 37% of findings were duplicates, environment setup constrained validation, and follow-up checks exposed a merged-versus-deployed fix gap.",
+      "caveat_ru": "Независимая репликация отсутствует. 19,5% runtime-воспроизведений не означает 80,5% ложных находок. Дата спринта и первой публикации не установлена: точка — наблюдение страницы 6 сентября, не дата самого спринта.",
+      "caveat_en": "Not independently replicated. A 19.5% runtime reproduction share does not imply 80.5% false findings. Sprint and first-publication dates are unknown: the point is page observation on 6 September, not the sprint date.",
+      "safe_ru": "OpenAI описывает внутренний спринт с 250+ участниками: 37% находок оказались дубликатами, настройка сред ограничивала проверку, а повторные проверки выявили разрыв между слитым патчем и развёртыванием.",
+      "safe_en": "OpenAI describes an internal sprint with 250+ participants: 37% of findings were duplicates, environment setup constrained validation, and follow-up checks exposed a merged-versus-deployed fix gap.",
+      "source_ids": [
+        "S15"
+      ],
+      "tracks": [
+        "RES_TRACK_VERIFIED_REMEDIATION",
+        "RES_TRACK_MAINTENANCE_CAPACITY"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "priority": 1,
+      "artifact_kind": "deployment",
+      "implementation_stage": "reported",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "provider_operational_report",
+      "actors": [
+        "OpenAI"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {
+        "people_mobilized_lower_bound": 250,
+        "duplicate_findings_percent": 37,
+        "runtime_reproduced_percent": 19.5
+      },
+      "pipeline_metrics": [],
+      "defense_stage_ids": [
+        "discovery",
+        "validation",
+        "ownership",
+        "patch",
+        "deployment",
+        "revalidation"
+      ],
+      "event_date": null,
+      "observed_at": "2026-09-06",
+      "source_date": ""
+    },
+    {
+      "id": "SIG_2026_DAYBREAK_FRONTLINE_SUBSIDIZED_ACCESS",
+      "date": "2026-09-03",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "Daybreak: обязательство на $1 млрд субсидируемого доступа и поддержки защитников",
+      "title_en": "Daybreak: a $1B commitment in subsidized access and defender support",
+      "summary_ru": "OpenAI объявила $1 млрд субсидируемого доступа и поддержки, ориентированных на малоресурсных защитников критических услуг. Отдельно анонсирован пилот с MS-ISAC; целевой срок потребления помощи — шесть месяцев.",
+      "summary_en": "OpenAI announced $1B in subsidized access and support for resource-constrained essential-service defenders. A separate MS-ISAC pilot was announced, with support targeted for use over six months.",
+      "caveat_ru": "Это обязательство, не уже выплаченные денежные гранты и не измеренная защита всех членов MS-ISAC. Программа не тождественна водному пилоту Watershed.",
+      "caveat_en": "A commitment, not cash grants already paid or measured protection of all MS-ISAC members. This is not the same program as the Watershed water-sector pilot.",
+      "safe_ru": "OpenAI объявила $1 млрд субсидируемого доступа и поддержки, ориентированных на малоресурсных защитников критических услуг. Отдельно анонсирован пилот с MS-ISAC; целевой срок потребления помощи — шесть месяцев.",
+      "safe_en": "OpenAI announced $1B in subsidized access and support for resource-constrained essential-service defenders. A separate MS-ISAC pilot was announced, with support targeted for use over six months.",
+      "source_ids": [
+        "S16"
+      ],
+      "tracks": [
+        "RES_TRACK_DEFENSE_ACCESS"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "priority": 1,
+      "artifact_kind": "access_program",
+      "implementation_stage": "announced",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "announced_program",
+      "actors": [
+        "OpenAI",
+        "MS-ISAC"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {
+        "subsidized_access_commitment_usd": 1000000000,
+        "target_consumption_months": 6
+      },
+      "pipeline_metrics": [],
+      "defense_stage_ids": [],
+      "money_status": "announced_in_kind_subsidy_not_cash_disbursed"
+    },
+    {
+      "id": "SIG_2026_PROJECT_WATERSHED_250_PILOT",
+      "date": "2026-08-31",
+      "date_basis": "launch_date_stated_in_next_day_primary_release",
+      "date_status": "exact",
+      "title_ru": "Watershed 250: отраслевой пилот помощи водным операторам Техаса",
+      "title_en": "Watershed 250: a sector pilot supporting Texas water operators",
+      "summary_ru": "Запуск 31 августа подтверждён TXCC на следующий день. Пилот объединяет оценку, помощь с исправлениями и отраслевую координацию; NAWC описывает шестимесячный формат и доставку ИИ-инструментов операторам.",
+      "summary_en": "TXCC confirmed the 31 August launch the following day. The pilot combines assessment, remediation support and sector coordination; NAWC describes a six-month format and AI tools for operators.",
+      "caveat_ru": "Подтверждён запуск, не результат пилота. Число жителей или водных систем Техаса не является числом участников. Упоминаемые атаки на PLC не атрибутированы ИИ.",
+      "caveat_en": "The launch is confirmed, not pilot outcomes. Texas population and water-system counts are not participant counts. Referenced PLC attacks are not attributed to AI.",
+      "safe_ru": "Запуск 31 августа подтверждён TXCC на следующий день. Пилот объединяет оценку, помощь с исправлениями и отраслевую координацию; NAWC описывает шестимесячный формат и доставку ИИ-инструментов операторам.",
+      "safe_en": "TXCC confirmed the 31 August launch the following day. The pilot combines assessment, remediation support and sector coordination; NAWC describes a six-month format and AI tools for operators.",
+      "source_ids": [
+        "S18",
+        "S19"
+      ],
+      "tracks": [
+        "RES_TRACK_DEFENSE_ACCESS",
+        "RES_TRACK_CHANGE_AND_RECOVERY"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "priority": 1,
+      "artifact_kind": "government_program",
+      "implementation_stage": "launched",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "launched_pilot",
+      "actors": [
+        "Texas Cyber Command",
+        "Office of the National Cyber Director",
+        "CISA",
+        "Environmental Protection Agency",
+        "National Association of Water Companies"
+      ],
+      "actor_types": [
+        "government",
+        "civil_society"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {
+        "planned_pilot_months": 6
+      },
+      "pipeline_metrics": [],
+      "defense_stage_ids": [],
+      "locations": [
+        "Texas"
+      ]
+    },
+    {
+      "id": "SIG_2026_BOE_PATCHING_OPERATIONAL_RISK",
+      "date": "2026-07-07",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "Банк Англии: ускоренное исправление может само порождать системные сбои",
+      "title_en": "Bank of England: faster remediation can itself generate systemic disruption",
+      "summary_ru": "Июльский FSR выделяет риск ошибок и простоев при ускоренных изменениях в связанных системах. Даже без надёжной атаки на хорошо защищённые цели поток уязвимостей может перегрузить проверку и развёртывание.",
+      "summary_en": "The July FSR identifies errors and outages from accelerated change across linked systems. Even without reliable attacks on well-defended targets, findings can strain validation and deployment.",
+      "caveat_ru": "Анализ механизма и сценариев, не наблюдавшийся AI-вызванный системный кризис и не новое обязательное регулирование. Ускорение исправлений и безопасное восстановление оцениваются отдельно.",
+      "caveat_en": "A mechanism and scenario assessment, not an observed AI-caused systemic crisis or new binding rule. Faster fixes and safe recovery are separate outcomes.",
+      "safe_ru": "Июльский FSR выделяет риск ошибок и простоев при ускоренных изменениях в связанных системах. Даже без надёжной атаки на хорошо защищённые цели поток уязвимостей может перегрузить проверку и развёртывание.",
+      "safe_en": "The July FSR identifies errors and outages from accelerated change across linked systems. Even without reliable attacks on well-defended targets, findings can strain validation and deployment.",
+      "source_ids": [
+        "S20"
+      ],
+      "tracks": [
+        "RES_TRACK_CHANGE_AND_RECOVERY",
+        "RES_TRACK_MAINTENANCE_CAPACITY"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "priority": 1,
+      "artifact_kind": "risk_report",
+      "implementation_stage": "published",
+      "normative_force": "advisory",
+      "defense_evidence_kind": "risk_assessment",
+      "actors": [
+        "Bank of England"
+      ],
+      "actor_types": [
+        "regulator"
+      ],
+      "jurisdictions": [
+        "UK"
+      ],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL",
+        "AI_ROLE_ATTACK_ENABLER"
+      ],
+      "delegated_authority": "not_established",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {},
+      "pipeline_metrics": [],
+      "defense_stage_ids": []
+    },
+    {
+      "id": "SIG_2026_CODEX_SECURITY_VALIDATION_PREVIEW",
+      "date": "2026-03-06",
+      "date_basis": "source_publication_date",
+      "date_status": "exact",
+      "title_ru": "Codex Security: контекст и воспроизведение перед передачей находки разработчику",
+      "title_en": "Codex Security: context and reproduction before developer handoff",
+      "summary_ru": "В research preview OpenAI описывает поиск на основе контекста проекта, проверку предполагаемых дефектов в среде и подготовку исправлений для человеческого рассмотрения.",
+      "summary_en": "The research preview describes project-context discovery, environment-based validation of suspected flaws and fixes prepared for human review.",
+      "caveat_ru": "Описание продукта поставщиком не является независимым бенчмарком. Наличие функции не доказывает автономную защиту полного цикла или установку всех предложенных исправлений.",
+      "caveat_en": "A vendor product description is not an independent benchmark. A feature does not prove autonomous end-to-end defence or deployment of all proposed patches.",
+      "safe_ru": "В research preview OpenAI описывает поиск на основе контекста проекта, проверку предполагаемых дефектов в среде и подготовку исправлений для человеческого рассмотрения.",
+      "safe_en": "The research preview describes project-context discovery, environment-based validation of suspected flaws and fixes prepared for human review.",
+      "source_ids": [
+        "S17"
+      ],
+      "tracks": [
+        "RES_TRACK_VERIFIED_REMEDIATION"
+      ],
+      "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "priority": 2,
+      "artifact_kind": "product",
+      "implementation_stage": "limited_access",
+      "normative_force": "not_applicable",
+      "defense_evidence_kind": "product_preview",
+      "actors": [
+        "OpenAI"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "jurisdictions": [],
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "delegated_authority": "evaluated",
+      "confidence": "B",
+      "status": "verified",
+      "numbers": {},
+      "pipeline_metrics": [],
+      "defense_stage_ids": [
+        "discovery",
+        "validation",
+        "patch"
+      ]
+    }
+  ],
+  "existing_track_tags": {
+    "SIG_2026_MYTHOS_FIREFOX_271": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_VERIFIED_REMEDIATION"
+    ],
+    "SIG_2026_RUST_IN_PEACE_AGENT_ASSISTED_DISCLOSURES": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_VERIFIED_REMEDIATION",
+      "RES_TRACK_SHARED_REPAIR"
+    ],
+    "SIG_2026_ORACLE_AI_ASSISTED_RECORD_PATCH_RELEASE": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ],
+    "SIG_2026_RAPID7_Q2_PATCH_CYCLE_COMPRESSION": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ],
+    "SIG_2026_EBA_FRONTIER_AI_PATCH_CYCLE_ASSESSMENT": [
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ],
+    "SIG_2026_BOE_FRONTIER_AI_HARNESS_ENGINEERING": [
+      "RES_TRACK_VERIFIED_REMEDIATION"
+    ],
+    "SIG_2026_OPENAI_COLLECTIVE_CYBER_DEFENSE_LETTER": [
+      "RES_TRACK_SHARED_REPAIR",
+      "RES_TRACK_DEFENSE_ACCESS"
+    ],
+    "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY": [
+      "RES_TRACK_DEFENSE_ACCESS"
+    ],
+    "SIG_2026_BOE_AI_CONSORTIUM_CORRELATED_RISK": [
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ],
+    "SIG_2026_BOE_FCA_FRONTIER_AI_CYBER_STATEMENT": [
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ],
+    "SIG_2026_ECB_AI_CYBER_ACTION_PLANS": [
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ],
+    "SIG_2026_US_GOLD_EAGLE_LAUNCH": [
+      "RES_TRACK_SHARED_REPAIR"
+    ],
+    "SIG_2026_UK_CYBER_SHIELD_BLUEPRINT": [
+      "RES_TRACK_SHARED_REPAIR"
+    ],
+    "SIG_2026_OPENAI_HF_EVAL_CONTAINMENT_ESCAPE": [
+      "RES_TRACK_INCIDENT_LEARNING"
+    ],
+    "SIG_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS": [
+      "RES_TRACK_INCIDENT_LEARNING"
+    ],
+    "SIG_2026_ANTHROPIC_EVAL_REAL_WORLD_INTRUSIONS": [
+      "RES_TRACK_INCIDENT_LEARNING"
+    ]
+  },
+  "tracks": [
+    {
+      "id": "RES_TRACK_MAINTENANCE_CAPACITY",
+      "label_ru": "Поток реальных находок",
+      "label_en": "Valid-finding throughput",
+      "description_ru": "Качественный результат создаёт обязательную инженерную работу; ранний slop показан только как предыстория.",
+      "description_en": "Valid findings create real engineering work; early slop is historical context only."
+    },
+    {
+      "id": "RES_TRACK_VERIFIED_REMEDIATION",
+      "label_ru": "Проверенное устранение",
+      "label_en": "Verified remediation",
+      "description_ru": "Воспроизведение, ответственный, патч, выпуск и проверка развёртывания — отдельные результаты.",
+      "description_en": "Reproduction, ownership, patching, release and deployment verification are separate outcomes."
+    },
+    {
+      "id": "RES_TRACK_SHARED_REPAIR",
+      "label_ru": "Общее сопровождение",
+      "label_en": "Shared maintenance",
+      "description_ru": "Общие зависимости требуют согласованных отчётов и инженерных ресурсов, а не только обмена индикаторами.",
+      "description_en": "Shared dependencies require coordinated reports and engineering capacity, not just indicator sharing."
+    },
+    {
+      "id": "RES_TRACK_INCIDENT_LEARNING",
+      "label_ru": "Обучение на инцидентах",
+      "label_en": "Incident learning",
+      "description_ru": "Отказ контроля должен превращаться в проверяемую меру; RFC не доказывает работающую систему расследований.",
+      "description_en": "A control failure should become a testable measure; an RFC does not establish an operational review service."
+    },
+    {
+      "id": "RES_TRACK_DEFENSE_ACCESS",
+      "label_ru": "Доступ защитников",
+      "label_en": "Defender access",
+      "description_ru": "Доступ, вычисления и помощь должны дойти до оператора; обязательства и пилоты не равны результатам.",
+      "description_en": "Access, compute and assistance must reach operators; commitments and pilots are not outcomes."
+    },
+    {
+      "id": "RES_TRACK_CHANGE_AND_RECOVERY",
+      "label_ru": "Изменения и восстановление",
+      "label_en": "Change and recovery",
+      "description_ru": "Проверять не только скорость патчинга, но и безопасность изменений, непрерывность услуги и восстановление.",
+      "description_en": "Assess safe change, service continuity and recovery alongside patching speed."
+    }
+  ],
+  "deferred": [
+    {
+      "id": "CAND_2026_IMF_SHARED_DEPENDENCY_CYBER_RISK",
+      "reason_ru": "Механизм общих зависимостей уже представлен; отдельная карточка не нужна в этом выпуске.",
+      "reason_en": "Shared-dependency mechanism already covered; no separate event in this release."
+    },
+    {
+      "id": "CAND_2026_FSISAC_AI_SECTOR_EXERCISE",
+      "reason_ru": "Программа учений без проверенного отчёта о проведении; не выдавать за результат.",
+      "reason_en": "Exercise schedule without a verified after-action report; not an outcome."
+    },
+    {
+      "id": "CAND_2026_FSISAC_STEEL_RESOLVE_RECONNECTION",
+      "reason_ru": "Не AI-специфический сравнительный сценарий; проведение и результаты не подтверждены.",
+      "reason_en": "Non-AI comparison scenario; completion and outcomes not established."
+    },
+    {
+      "id": "CAND_2026_LINUX_USB_MAILBOX",
+      "reason_ru": "Первичный пост social.kernel.org недоступен при повторной проверке. Число сообщений не число уязвимостей; основной Linux-кейс взят из доступного письма netdev.",
+      "reason_en": "Primary social.kernel.org post unavailable on recheck. Message counts are not vulnerability counts; the accessible netdev letter supplies the Linux anchor."
+    }
+  ]
+}

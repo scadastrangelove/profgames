@@ -316,10 +316,11 @@ function _legacyOpenDetail(k,id,options){ options=options||{}; if(currentDetail 
 
 function bindDetailActions(root){ if(!root) return; root.querySelectorAll('[data-filter-layer]').forEach(function(button){ button.onclick=function(ev){ ev.stopPropagation(); factState.layer=button.dataset.filterLayer; document.getElementById('filter-layer').value=factState.layer; renderFacts(); closeDetail(); switchTab('facts'); }; }); }
 
-/* v0.33 shared presentation and navigation. No semantic overrides of the JSON. */
+/* v0.34 shared presentation and navigation. No semantic overrides of the JSON. */
 var atlasRestoring = true;
 var atlasReturnFocus = null;
 var atlasReady = false;
+var resilienceState = { track:'RES_TRACK_MAINTENANCE_CAPACITY', open:false };
 var behaviorState = { subdomain:'all', track:'', mechanism:'' };
 function tx(ru,en){ return ATLAS_RU ? ru : en; }
 function alist(x){ return Array.isArray(x) ? x : (x == null ? [] : [x]); }
@@ -356,7 +357,7 @@ function initCyberControls(){
  ['jurisdiction','domain','force','stage','authority'].forEach(function(k){document.getElementById('cyber-'+k).onchange=function(){cyberState[k]=this.value;renderCyber();};});
  document.getElementById('cyber-principal-toggle').onclick=function(){cyberState.principalOnly=!cyberState.principalOnly;renderCyber();};
  document.getElementById('cyber-links-toggle').onclick=function(){cyberState.showLinks=!cyberState.showLinks;renderCyber();};
- var reset=document.getElementById('cyber-reset');if(reset)reset.onclick=function(){Object.assign(cyberState,{mode:'core',role:'',jurisdiction:'',domain:'',force:'',stage:'',authority:'',principalOnly:false,showLinks:true});Object.assign(behaviorState,{subdomain:'all',track:'',mechanism:''});renderCyber();};
+ var reset=document.getElementById('cyber-reset');if(reset)reset.onclick=function(){Object.assign(cyberState,{mode:'core',role:'',jurisdiction:'',domain:'',force:'',stage:'',authority:'',principalOnly:false,showLinks:true});Object.assign(behaviorState,{subdomain:'all',track:'',mechanism:''});Object.assign(resilienceState,{track:'RES_TRACK_MAINTENANCE_CAPACITY',open:false});renderCyber();};
  var note=document.getElementById('cyber-framework-note');if(note)note.textContent=lf(CYBER_FRAMEWORK,'summary');
  var method=document.getElementById('cyber-method');if(method)method.textContent=lf(CYBER_FRAMEWORK,'method_note');
  window.addEventListener('resize',function(){if(document.getElementById('view-cyber').classList.contains('active'))drawCyberLinks();});
@@ -369,7 +370,7 @@ function syncCyberControls(){
  var l=document.getElementById('cyber-links-toggle');l.classList.toggle('active',!!cyberState.showLinks);l.setAttribute('aria-pressed',!!cyberState.showLinks);l.textContent=cyberState.showLinks?tx('Прямые связи','Direct links'):tx('Связи скрыты','Links hidden');
 }
 function cyberEventCard(e){
- var future=String(e.date||'')>'2026-09-05';
+ var future=String(e.date||'')>String(D.meta.updated_at||'2026-09-06');
  var roles=alist(e.cyber_role_ids).map(function(id){return'<span class="cyber-role '+cyberRoleClass(id)+'">'+esc(lf(cyberRoleMeta(id),'short')||lf(cyberRoleMeta(id),'label'))+'</span>';}).join('');
  var authority={observed:tx('доступ: наблюдался','access: observed'),evaluated:tx('доступ: тест','access: evaluated'),control_requirement:tx('требования к правам','authority controls')}[e.delegated_authority];
  if(authority)roles+='<span class="cyber-role principal">'+esc(authority)+'</span>';
@@ -442,7 +443,7 @@ function renderCyber(){
   return true;
  });
  cyberRenderedEvents=events;syncCyberControls();
- var periods=[{id:'y2025',label:'2025'},{id:'h1',label:tx('2026 · январь–июнь','2026 · January–June')},{id:'h2',label:tx('2026 · июль–5 сентября / будущие сроки','2026 · July–5 September / future deadlines')}];
+ var periods=[{id:'y2025',label:'2025'},{id:'h1',label:tx('2026 · январь–июнь','2026 · January–June')},{id:'h2',label:tx('2026 · июль–6 сентября / будущие сроки','2026 · July–6 September / future deadlines')}];
  var html='<div class="cyber-period-row"><div class="cyber-corner">'+tx('Основной домен','Primary domain')+'</div>'+periods.map(function(p){return'<div class="cyber-period">'+esc(p.label)+'<small>'+events.filter(function(e){return cyberPeriod(e)===p.id;}).length+' '+tx('записей','records')+'</small></div>';}).join('')+'</div>';
  cyberDomains().forEach(function(d){
   if(events.length && !events.some(function(e){return e.primary_domain_id===d.id;}))return;
@@ -454,7 +455,7 @@ function renderCyber(){
  var grid=document.getElementById('cyber-grid');grid.innerHTML=html;
  var edges=cyberDirectEdges(events);
  document.getElementById('cyber-kpis').innerHTML=[[events.length+'/'+all.length,tx('записей видно','records shown')],[edges.length,tx('явных связей между событиями','explicit event links')]].map(function(x){return'<div class="cyber-kpi"><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join('');
- bindAtlasCards(grid);bindCyberHover(grid,edges);renderBehaviorLayer(events,all);renderCyberThreads(events);renderCyberEdgeList(events);requestAnimationFrame(drawCyberLinks);writeAtlasHash();
+ bindAtlasCards(grid);bindCyberHover(grid,edges);renderBehaviorLayer(events,all);renderResilienceLayer(events,all);renderCyberThreads(events);renderCyberEdgeList(events);requestAnimationFrame(drawCyberLinks);writeAtlasHash();
 }
 function renderAtlasStats(){
  document.getElementById('stats').innerHTML=[[EV.length,tx('фактов','facts')],[CLAIMS.length,tx('тезисов','claims')],[ARCS.length,tx('сюжетов','story arcs')],[SOURCES.length,tx('URL источников','source URLs')]].map(function(x){return'<div class="stat"><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join('');
@@ -501,7 +502,8 @@ function metadataBlock(e){
   ].filter(function(row){return row[1];});
   html+='<section class="block behavior-metadata"><h3>'+tx('Поведение, контроль и автономия','Behaviour, control and autonomy')+'</h3><dl class="behavior-metadata-grid">'+rows.map(function(row){return'<div><dt>'+esc(row[0])+'</dt><dd>'+esc(row[1])+'</dd></div>';}).join('')+'</dl>'+(e.evidence_method?'<p class="small"><b>'+tx('Метод: ','Method: ')+'</b>'+esc(String(e.evidence_method).replace(/_/g,' '))+'</p>':'')+'</section>';
  }
- if(e.current_state){var s=e.current_state;html+='<section class="block state-card"><h3>'+tx('Наблюдение состояния · ','State observed · ')+esc(s.observed_at)+'</h3><p>'+esc(lf(s,'summary'))+'</p><p class="small">'+tx('Дата анонса: ','Announcement date: ')+esc(e.date)+'. '+tx('Дата первого выпуска весов не установлена. Наблюдение не переносится на июльскую точку.','First weight-release date is not established. This observation does not backdate availability to July.')+'</p></section>';}
+ if(e.current_state){var st=e.current_state;var note=lf(st,'date_note')||(e.id==='SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT'?tx('Дата первого выпуска весов не установлена. Наблюдение не переносится на июльскую точку.','First weight-release date is not established. This observation does not backdate availability to July.'):tx('Наблюдение не меняет дату исходного события.','The observation does not change the original event date.'));html+='<section class="block state-card"><h3>'+tx('Наблюдение состояния · ','State observed · ')+esc(st.observed_at)+'</h3><p>'+esc(lf(st,'summary'))+'</p><p class="small">'+tx('Исходная запись: ','Original record: ')+esc(e.date)+'. '+esc(note)+'</p></section>';}
+ html+=resilienceMetadata(e);
  if(alist(e.mechanism_effects).length)html+='<section class="block effect-card"><h3>'+tx('Эффект на конкретный механизм','Effect on a specific mechanism')+'</h3>'+e.mechanism_effects.map(function(x){return'<p><b>'+esc(relationLabel(x.direction))+' · '+esc(x.actor)+'</b></p><p>'+esc(lf(x,'interpretation'))+'</p>';}).join('')+'<p class="small">'+tx('Редакционная интерпретация, не измеренный причинный эффект.','Editorial interpretation, not a measured causal effect.')+'</p></section>';
  if(e.actor_classification_status==='review_required')html+='<section class="block atlas-notice"><h3>'+tx('Актор требует уточнения','Actor needs review')+'</h3><p>'+esc(alist(e.actor_unclassified).join(' · '))+'</p><p>'+tx('Исходная метка сохранена и доступна поиском и фильтром «Не разобраны». Организация не угадана автоматически.','The raw label is searchable and included in the unresolved filter. No organisation was guessed.')+'</p></section>';
  return html;
@@ -527,15 +529,15 @@ function activeFacts(){return ATLAS_RU?catalogState:factState;}
 function writeAtlasHash(){
  if(atlasRestoring||!atlasReady)return;
  var p=new URLSearchParams(),view=document.querySelector('.view.active');p.set('tab',view?view.id.slice(5):tx('story','overview'));
- [['c.',cyberState],['b.',behaviorState],['f.',activeFacts()],['g.',graphState]].forEach(function(pair){Object.keys(pair[1]).sort().forEach(function(k){var v=pair[1][k];if(v!==''&&v!=null)p.set(pair[0]+k,String(v));});});
+ [['c.',cyberState],['b.',behaviorState],['r.',resilienceState],['f.',activeFacts()],['g.',graphState]].forEach(function(pair){Object.keys(pair[1]).sort().forEach(function(k){var v=pair[1][k];if(v!==''&&v!=null)p.set(pair[0]+k,String(v));});});
  if(currentDetail){p.set('kind',currentDetail.kind||currentDetail.k);p.set('id',currentDetail.id);if((currentDetail.kind||currentDetail.k)==='event')p.set('event',currentDetail.id);}
  var hash='#'+p.toString();if(location.hash!==hash){try{history.replaceState(null,'',hash);}catch(e){/* embedding sandboxes may prohibit history */}}
- document.querySelectorAll('a[data-language-link]').forEach(function(a){a.hash=hash;});
+ document.querySelectorAll('a[data-language-link]').forEach(function(a){a.setAttribute('href',(a.getAttribute('href')||'').split('#')[0]+hash);});
 }
 function restoreAtlasHash(){
  atlasRestoring=true;
  var raw=location.hash.slice(1),p=new URLSearchParams(raw.includes('=')?raw:''),tab=p.get('tab')||(raw&&!raw.includes('=')?raw:'');
- [['c.',cyberState],['b.',behaviorState],['f.',activeFacts()],['g.',graphState]].forEach(function(pair){Object.keys(pair[1]).forEach(function(k){if(!p.has(pair[0]+k))return;var v=p.get(pair[0]+k);pair[1][k]=typeof pair[1][k]==='boolean'?v==='true':v;});});
+ [['c.',cyberState],['b.',behaviorState],['r.',resilienceState],['f.',activeFacts()],['g.',graphState]].forEach(function(pair){Object.keys(pair[1]).forEach(function(k){if(!p.has(pair[0]+k))return;var v=p.get(pair[0]+k);pair[1][k]=typeof pair[1][k]==='boolean'?v==='true':v;});});
  var map=filterMap(),f=activeFacts();Object.keys(map).forEach(function(id){var n=document.getElementById(id);if(n)n.value=f[map[id]]||'';});
  var search=document.getElementById('search');if(search)search.value=f.q||'';
  ['family','arc','relation'].forEach(function(k){var n=document.getElementById(k+'-select');if(n)n.value=graphState[k]||'';});
@@ -557,6 +559,42 @@ function initAtlasReview(){
  document.addEventListener('change',function(){setTimeout(writeAtlasHash,0);});document.addEventListener('input',function(e){if(e.target.id==='search')setTimeout(writeAtlasHash,0);});document.addEventListener('click',function(e){if(e.target.closest('button'))setTimeout(writeAtlasHash,0);});
  document.addEventListener('keydown',function(e){if(e.key!=='Tab'||!currentDetail)return;var nodes=Array.from(modal.querySelectorAll('button:not([disabled]),a[href],input,[tabindex="0"]')).filter(function(n){return n.getClientRects().length;});if(!nodes.length)return;var first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}});
  window.addEventListener('hashchange',restoreAtlasHash);atlasReady=true;restoreAtlasHash();
+}
+
+
+function resMeta(group,id){return alist(CYBER_FRAMEWORK[group]).find(function(x){return x.id===id;});}
+function renderResilienceLayer(events,all){
+ var box=document.getElementById('resilience-section');if(!box)return;
+ var tracks=alist(CYBER_FRAMEWORK.resilience_tracks);
+ if(!tracks.some(function(t){return t.id===resilienceState.track;}))resilienceState.track=tracks.length?tracks[0].id:'';
+ var selected=tracks.find(function(t){return t.id===resilienceState.track;});
+ var tagged=events.filter(function(e){return alist(e.resilience_track_ids).length;});
+ var shown=tagged.filter(function(e){return alist(e.resilience_track_ids).includes(resilienceState.track);}).sort(function(a,b){return (a.editorial_priority||2)-(b.editorial_priority||2)||String(b.date).localeCompare(String(a.date));});
+ box.open=!!resilienceState.open;
+ var count=document.getElementById('resilience-count');count.textContent=tagged.length+' / '+all.filter(function(e){return alist(e.resilience_track_ids).length;}).length;
+ document.getElementById('resilience-note').textContent=lf(CYBER_FRAMEWORK,'resilience_note');
+ document.getElementById('resilience-tracks').innerHTML=tracks.map(function(t){var n=tagged.filter(function(e){return alist(e.resilience_track_ids).includes(t.id);}).length;return '<button type="button" class="resilience-track'+(resilienceState.track===t.id?' active':'')+'" data-resilience-track="'+esc(t.id)+'" aria-pressed="'+String(resilienceState.track===t.id)+'"><b>'+esc(lf(t,'label'))+'</b><span>'+n+' '+tx('записей','records')+'</span></button>';}).join('');
+ document.getElementById('resilience-tracks').querySelectorAll('[data-resilience-track]').forEach(function(n){n.onclick=function(){resilienceState.track=n.dataset.resilienceTrack;resilienceState.open=true;renderResilienceLayer(cyberRenderedEvents,cyberFocusEvents());writeAtlasHash();};});
+ document.getElementById('resilience-description').textContent=selected?lf(selected,'description'):'';
+ var claim=CYBER_FRAMEWORK.resilience_claim_id;
+ document.getElementById('resilience-claim').innerHTML='<button type="button" class="resilience-claim" data-kind="claim" data-id="'+esc(claim)+'">'+tx('Тезис: поток реальных находок и ёмкость сопровождения','Claim: valid-finding throughput and maintenance capacity')+'</button>';
+ var cards=document.getElementById('resilience-events');
+ cards.innerHTML=shown.length?shown.map(function(e){var m=resMeta('defense_evidence_kinds',e.defense_evidence_kind);return '<article class="resilience-evidence-card" data-kind="event" data-id="'+esc(e.id)+'"><div class="resilience-card-meta"><time>'+esc(e.date)+'</time><span>'+esc(m?lf(m,'label'):tx('Ранее проверенная запись','Previously reviewed record'))+'</span></div><h4>'+esc(e.title)+'</h4><p>'+esc(lf(e,'summary'))+'</p><small>'+esc(vocab('implementation_stages',e.implementation_stage))+(e.current_state?' · '+tx('обновлено наблюдением ','state observed ')+esc(e.current_state.observed_at):'')+(e.editorial_priority===3?' · '+tx('предыстория','historical context'):'')+(e.date_basis==='observation_date_publication_unknown'?' · '+tx('дата наблюдения','observation date'):'')+'</small></article>';}).join(''):'<p class="atlas-notice">'+tx('В этой дорожке нет совпадений с верхними фильтрами.','This track has no matches under the current filters.')+'</p>';
+ box.ontoggle=function(){if(resilienceState.open!==box.open){resilienceState.open=box.open;writeAtlasHash();}};
+ bindAtlasCards(cards);bindAtlasCards(document.getElementById('resilience-claim'));
+}
+function resilienceMetadata(e){
+ if(!alist(e.resilience_track_ids).length)return '';
+ var tracks=alist(e.resilience_track_ids).map(function(id){var m=resMeta('resilience_tracks',id);return m?lf(m,'label'):id;});
+ var m=resMeta('defense_evidence_kinds',e.defense_evidence_kind);
+ var h='<section class="block resilience-metadata"><h3>'+tx('Защитный цикл и устойчивость','Defensive lifecycle and resilience')+'</h3><p>'+esc(tracks.join(' · '))+'</p>';
+ if(m)h+='<p><b>'+tx('Тип свидетельства: ','Evidence kind: ')+'</b>'+esc(lf(m,'label'))+'</p>';
+ if(alist(e.defense_stage_ids).length){h+='<p><b>'+tx('Предмет свидетельства: ','Evidence concerns: ')+'</b>'+esc(e.defense_stage_ids.map(function(id){var st=resMeta('defense_stages',id);return st?lf(st,'label'):id;}).join(' · '))+'</p><p class="small">'+tx('Теги этапов не означают, что все результаты уже достигнуты; читайте стадию, сферу и ограничения.','Stage tags do not mean every outcome has been achieved; read implementation stage, scope and limitations.')+'</p>';}
+ if(e.date_basis==='observation_date_publication_unknown')h+='<p class="atlas-notice">'+tx('6 сентября — дата наблюдения страницы. Дата спринта и первой публикации не установлена.','6 September is the page-observation date. The sprint and first-publication dates are not established.')+'</p>';
+ if(e.pipeline_semantics&&e.pipeline_semantics.sequential_funnel===false)h+='<p class="atlas-notice">'+tx('Не последовательная воронка: проверенная ветка и прямая передача мейнтейнерам различаются. 91,4% — только проверенный поднабор; ответы мейнтейнеров не равны подтверждениям, upstream не равен установке.','Not a sequential funnel: the reviewed route differs from direct maintainer disclosure. 91.4% applies only to the reviewed subset; replies are not validation, and upstream fixes are not deployment.')+'</p>';
+ if(alist(e.pipeline_metrics).length)h+='<div class="resilience-metrics">'+e.pipeline_metrics.map(function(v){return '<div class="resilience-metric"><strong>'+esc(v.value)+'</strong><b>'+esc(lf(v,'label'))+'</b><small>'+esc(v.as_of)+' · '+esc(v.unit)+'</small><p>'+esc(lf(v,'population'))+'</p><a href="'+esc(v.source_url)+'" target="_blank" rel="noopener">'+tx('Источник','Source')+'</a></div>';}).join('')+'</div>';
+ h+='<p class="small">'+tx('Проверенная находка ≠ принятый патч ≠ выпуск ≠ установка ≠ восстановленная услуга.','Validated finding ≠ accepted patch ≠ release ≠ deployment ≠ restored service.')+'</p></section>';
+ return h;
 }
 
 document.getElementById('detail-back').onclick=function(){ var previous=detailHistory.pop(); if(previous) openDetail(previous.k,previous.id,{replace:true}); };

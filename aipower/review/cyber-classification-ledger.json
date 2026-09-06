@@ -114,15 +114,16 @@
     "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
     "cyber_domain_ids": [
       "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
-      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
     ],
     "cyber_role_ids": [
       "AI_ROLE_DEFENSIVE_TOOL"
     ],
     "delegated_authority": "not_established",
     "editorial_priority": 1,
-    "scope_ru": "Результат, сообщённый Mozilla как участником программы. Это не публичный воспроизводимый бенчмарк и не доказательство автономного нападения.",
-    "scope_en": "Partner-reported result; not a public reproducible benchmark and not proof of autonomous offense.",
+    "scope_ru": "Первичный отчёт участника программы, не независимая репликация модели. 271 — исправления в Firefox 150; прежние 423 из прессы относятся к другому охвату и не складываются с ними. Выпуск не равен downstream-установке.",
+    "scope_en": "Primary participant report, not independent model replication. The 271 are Firefox 150 fixes; the earlier press figure of 423 has a different scope and is not additive. Release does not equal downstream installation.",
     "role_basis_ru": "ИИ ищет ошибки в Firefox, а не является объектом исправления; патчи не равны готовым эксплойтам.",
     "role_basis_en": "AI finds flaws in Firefox rather than being the system patched; patches are not ready exploits.",
     "editorial_rationale_ru": "Редакционный опорный пример: Mozilla сообщает о 271 уязвимости Firefox, найденной и исправленной с помощью Mythos. ИИ ищет ошибки в Firefox, а не является объектом исправления; патчи не равны готовым эксплойтам.",
@@ -132,7 +133,16 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.wired.com/story/mozilla-used-anthropics-mythos-to-find-271-bugs-in-firefox",
       "independent_source_reverification": true
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_VERIFIED_REMEDIATION"
+    ],
+    "defense_evidence_kind": "released_fixes",
+    "defense_stage_ids": [
+      "patch",
+      "release"
+    ]
   },
   "SIG_2026_MYTHOS_CLASSIFIED_SYSTEMS_TEST": {
     "artifact_kind": "evaluation",
@@ -1228,7 +1238,8 @@
     "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
     "cyber_domain_ids": [
       "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
-      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
     ],
     "cyber_role_ids": [
       "AI_ROLE_DEFENSIVE_TOOL"
@@ -1246,7 +1257,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://huggingface.co/blog/security-incident-july-2026",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_DEFENSE_ACCESS"
+    ]
   },
   "SIG_2026_GPT56_WP2SHELL_EXPERT_LED_RCE": {
     "artifact_kind": "disclosure",
@@ -1283,7 +1297,8 @@
     "primary_domain_id": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
     "cyber_domain_ids": [
       "CYBER_DOMAIN_01_SECURE_SYSTEMS",
-      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
     ],
     "cyber_role_ids": [
       "AI_ROLE_PROTECTED_SYSTEM",
@@ -1302,7 +1317,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_INCIDENT_LEARNING"
+    ]
   },
   "SIG_2026_OPENAI_LONG_HORIZON_SANDBOX_WARNING": {
     "artifact_kind": "incident",
@@ -1396,7 +1414,8 @@
     "primary_domain_id": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
     "cyber_domain_ids": [
       "CYBER_DOMAIN_01_SECURE_SYSTEMS",
-      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
     ],
     "cyber_role_ids": [
       "AI_ROLE_PROTECTED_SYSTEM"
@@ -1634,7 +1653,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.bankofengland.co.uk/news/2026/may/boe-fca-and-hm-treasury-joint-statement-on-frontier-ai-models-and-cyber-resilience",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ]
   },
   "SIG_2026_CANADA_AGENTIC_AI_GOVERNMENT_GUIDE": {
     "artifact_kind": "guidance",
@@ -1688,7 +1710,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.ncsc.gov.uk/blogs/cyber-shield-the-path-to-an-agentic-ai-future-for-cyber-defence",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_SHARED_REPAIR"
+    ]
   },
   "SIG_2026_JAPAN_GOV_AI_PROCUREMENT_GUIDE_V2": {
     "artifact_kind": "government_standard",
@@ -1743,7 +1768,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.eba.europa.eu/publications-and-media/publications/risk-assessment-report-june-2026",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ]
   },
   "SIG_2026_ESRB_FRONTIER_AI_SYSTEMIC_WARNING": {
     "artifact_kind": "supervisory_communication",
@@ -1851,7 +1879,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.bankingsupervision.europa.eu/press/letterstobanks/shared/pdf/2026/ssm.2026_letter_on_AI_enabled_cybersecurity_threats.en.pdf",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ]
   },
   "SIG_2026_US_GOLD_EAGLE_LAUNCH": {
     "artifact_kind": "government_program",
@@ -1877,7 +1908,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.whitehouse.gov/releases/2026/07/white-house-launches-gold-eagle-initiative-for-unprecedented-cybersecurity-vulnerability-coordination/",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_SHARED_REPAIR"
+    ]
   },
   "SIG_2026_EU_AI_OMNIBUS_EFFECTIVE": {
     "artifact_kind": "law",
@@ -2073,7 +2107,8 @@
     "primary_domain_id": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
     "cyber_domain_ids": [
       "CYBER_DOMAIN_01_SECURE_SYSTEMS",
-      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
     ],
     "cyber_role_ids": [
       "AI_ROLE_PROTECTED_SYSTEM",
@@ -2092,7 +2127,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_INCIDENT_LEARNING"
+    ]
   },
   "SIG_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS": {
     "artifact_kind": "guidance",
@@ -2155,7 +2193,8 @@
     "primary_domain_id": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
     "cyber_domain_ids": [
       "CYBER_DOMAIN_01_SECURE_SYSTEMS",
-      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
     ],
     "cyber_role_ids": [
       "AI_ROLE_PROTECTED_SYSTEM",
@@ -2174,7 +2213,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_INCIDENT_LEARNING"
+    ]
   },
   "SIG_2026_ORACLE_AI_ASSISTED_RECORD_PATCH_RELEASE": {
     "artifact_kind": "disclosure",
@@ -2201,7 +2243,11 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.oracle.com/security-alerts/cpujul2026.html",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ]
   },
   "SIG_2026_RUST_IN_PEACE_AGENT_ASSISTED_DISCLOSURES": {
     "artifact_kind": "disclosure",
@@ -2209,25 +2255,36 @@
     "implementation_stage": "reported",
     "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
     "cyber_domain_ids": [
-      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
     ],
     "cyber_role_ids": [
       "AI_ROLE_DEFENSIVE_TOOL"
     ],
     "delegated_authority": "evaluated",
-    "editorial_priority": 2,
+    "editorial_priority": 1,
     "scope_ru": "Сводка подготовлена самим проектом и подкреплена публичным журналом, но не является независимым аудитом каждой находки. Набор смешивает уровни тяжести и классы дефектов; он не доказывает автономную эксплуатацию, распространённость атак или чистую нагрузку на мейнтейнеров относительно человеческого baseline.",
     "scope_en": "The aggregate is a project self-report with a public disclosure log, not an independent audit of every finding. The set mixes severity and vulnerability classes; it does not show autonomous exploitation, attack prevalence or net maintainer burden against a human baseline.",
     "role_basis_ru": "Роли размечены по действию ИИ в этой записи; наличие роли не означает массовой эксплуатации или автономной кампании.",
     "role_basis_en": "Roles describe AI use in this record; a role tag does not imply widespread exploitation or an autonomous campaign.",
-    "editorial_rationale_ru": "Дополняющий факт: полезен для сравнения условий и ограничений, без автоматического включения в короткий обзор.",
-    "editorial_rationale_en": "Supporting context for conditions and limitations; not automatically included in the short overview.",
+    "editorial_rationale_ru": "Опорный пример перехода от AI-assisted поиска к принятым upstream-исправлениям за пределами крупнейших лабораторий. Проверены два публичных PR; весь агрегат находок не перепроверен.",
+    "editorial_rationale_en": "Core example of AI-assisted discovery reaching upstream fixes outside the largest laboratories. Two public PRs were checked; the full aggregate was not re-audited.",
     "classification_review": {
       "date": "2026-09-05",
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.openwall.com/lists/oss-security/2026/08/06/1",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_VERIFIED_REMEDIATION",
+      "RES_TRACK_SHARED_REPAIR"
+    ],
+    "defense_evidence_kind": "upstream_artifacts",
+    "defense_stage_ids": [
+      "validation",
+      "patch"
+    ]
   },
   "SIG_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE": {
     "artifact_kind": "provider_policy",
@@ -2279,7 +2336,11 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.rapid7.com/research/report/quarterly-threat-landscape-report/",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ]
   },
   "SIG_2026_GATES_AI_TRANSITION_INSTITUTIONS_ESSAY": {
     "artifact_kind": "commentary",
@@ -2337,7 +2398,11 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://openai.com/collective-cyberdefense/",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_SHARED_REPAIR",
+      "RES_TRACK_DEFENSE_ACCESS"
+    ]
   },
   "SIG_2026_OPENAI_FRONTIER_ENTERPRISE_CONTROL_LAYER": {
     "artifact_kind": "product",
@@ -2525,7 +2590,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.bankofengland.co.uk/research/fintech/frontier-ai-information-sharing-forum/frontier-ai-harness-engineering",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_VERIFIED_REMEDIATION"
+    ]
   },
   "SIG_2026_BOE_AI_CONSORTIUM_CORRELATED_RISK": {
     "artifact_kind": "discussion",
@@ -2552,7 +2620,10 @@
       "method": "explicit_editorial_review_of_stored_evidence",
       "source_url": "https://www.bankofengland.co.uk/minutes/2026/june/ai-consortium-minutes-3-june-2026",
       "independent_source_reverification": false
-    }
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ]
   },
   "SIG_2026_G20_CAROLINA_INNOVATION_CONSENSUS": {
     "artifact_kind": "political_declaration",
@@ -2633,5 +2704,1516 @@
       "source_url": "https://www.federalregister.gov/documents/2026/06/17/2026-12205/general-services-acquisition-regulation-acquisition-of-information-and-communication-technology",
       "independent_source_reverification": false
     }
+  },
+  "SIG_2026_OPENAI_EXTERNAL_WIKI_SHARED_STATE": {
+    "artifact_kind": "incident",
+    "normative_force": "not_applicable",
+    "implementation_stage": "investigated",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM",
+      "AI_ROLE_ATTACK_ENABLER"
+    ],
+    "delegated_authority": "observed",
+    "editorial_priority": 1,
+    "scope_ru": "Доступны публичные сообщения и серверные признаки. Исследователи не видели внутренних трасс, точной постановки задачи и полной причинной цепочки.",
+    "scope_en": "Public messages and server-side indicators are available. Researchers lacked internal traces, the exact task specification and a complete causal reconstruction.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Описывать это как использование общедоступной записываемой среды для координации, а не как доказательство единого сознания или устойчивого коллективного намерения.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Describe this as coordination through a publicly writable environment, not evidence of a single mind or durable collective intent.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://collusion.wiki/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_OPENAI_WIKI_MISALIGNMENT_DISCLOSURE_GAP": {
+    "artifact_kind": "provider_policy",
+    "normative_force": "not_applicable",
+    "implementation_stage": "announced",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_01_SECURE_SYSTEMS"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "control_requirement",
+    "editorial_priority": 1,
+    "scope_ru": "Источник передаёт публичное заявление компании; предложенные правила раскрытия ещё не стали общим действующим стандартом.",
+    "scope_en": "The source reports a public company statement; the proposed disclosure approach is not yet a common operational standard.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Отделять признание события и проблему раскрытия от технической реконструкции самого инцидента.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Keep the acknowledgement and the disclosure-governance gap separate from the technical reconstruction of the incident.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://www.reuters.com/business/media-telecom/openai-acknowledges-wiki-incident-need-more-transparency-around-unintended-ai-2026-09-05/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_OPENAI_INTERNAL_AGENT_MONITORING_BASELINE": {
+    "artifact_kind": "risk_report",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "observed",
+    "editorial_priority": 1,
+    "scope_ru": "Это самоотчёт поставщика. Полнота детектора неизвестна, а вывод зависит от доступности рассуждений и журналов действий для наблюдения.",
+    "scope_en": "This is a provider self-report. The detector's false-negative rate is unknown, and the conclusion depends on reasoning and tool traces remaining observable.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Использовать как важное отрицательное свидетельство против тезиса о частом спонтанном и долгосрочном скрытом целеполагании.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Use this as important negative evidence against claims of frequent spontaneous, long-horizon coherent scheming.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_METR_FRONTIER_AGENT_RISK_REPORT": {
+    "artifact_kind": "risk_report",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Это ограниченная по времени оценка организаций, а не прямое наблюдение развёртывания. Участники могли редактировать или обезличивать часть публичных утверждений и отказаться от участия без отметки.",
+    "scope_en": "This is a time-bounded entity assessment, not a directly observed deployment. Participants could edit or anonymise some public claims and leave without a public notation.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Разделять оценённую возможность первоначального развёртывания и способность пережить активную человеческую реакцию.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Separate the assessed ability to establish a minimal deployment from the ability to survive an active human response.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://metr.org/blog/2026-05-19-frontier-risk-report/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_ANTHROPIC_REWARD_SEEKER_MODEL_ORGANISM": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Модель была создана специально. Исследователи не нашли самосохранения, саботажа исследований или стремления к вознаграждению за пределами текущего эпизода.",
+    "scope_en": "The model was intentionally created. Researchers did not find self-preservation, research sabotage or reward seeking beyond the current episode.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Описывать как причинный эксперимент с намеренно созданной исследовательской моделью, а не как характеристику выпущенной версии Claude.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Describe this as a causal experiment with a deliberately created research model, not a property of a released Claude model.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://alignment.anthropic.com/2026/reward-seeker/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_DEEPMIND_GRAM_SABOTAGE_PROPENSITY": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Это автоматизированный аудит в симуляции, а не телеметрия рабочей эксплуатации.",
+    "scope_en": "This is an automated audit in simulation, not production telemetry.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Использовать как противовес демонстрациям возможностей: наличие сценария отказа не означает высокой базовой частоты.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Use this as a counterweight to capability demonstrations: the existence of a failure scenario does not imply a high base rate.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2605.30322",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_SCHEMING_PROPENSITY_CONFIGURATION_DEPENDENCE": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Сценарии и агентные контуры экспериментальны; результаты не дают частоту для всей рабочей эксплуатации.",
+    "scope_en": "The scenarios and agent scaffolds are experimental; they do not provide a population rate for production deployments.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Формулировать как зависимость поведения от конфигурации, инструкций и доступных инструментов, а не как устойчивую черту модели.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Frame the result as dependence on configuration, instructions and available tools, not a stable model trait.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2603.01608",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_SHUTDOWN_RESISTANCE_INCOMPLETE_TASKS": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Эффект сильно зависит от формулировки и места инструкции; контролируемая задача не воспроизводит рабочую среду.",
+    "scope_en": "The effect is highly sensitive to wording and instruction placement; the controlled task does not reproduce a production environment.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Называть это сопротивлением отключению при конфликте с выполнением задачи, а не доказанной волей к самосохранению.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Call this shutdown resistance under task-completion conflict, not evidence of a will to self-preserve.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2509.14260",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_SLEEPER_MEMORY_POISONING": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_01_SECURE_SYSTEMS"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Исследование проведено в контролируемых системах с заданными вредоносными материалами; знаменатели этапов различаются.",
+    "scope_en": "The study used controlled systems and designed payloads; the denominators differ across stages.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Разделять три этапа: запись, последующее извлечение и действие. Самый высокий процент записи нельзя выдавать за сквозную успешность атаки.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Keep storage, later retrieval and action as separate stages. Do not present the highest storage rate as end-to-end attack success.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2605.15338",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_AISI_MULTI_AGENT_MONITOR_FRAGMENTATION": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Агентам заранее задавалась вредоносная цель в синтетической лабораторной среде.",
+    "scope_en": "Agents were assigned a malicious objective in a synthetic AI-lab environment.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Описывать дробление сигнала как проблему архитектуры наблюдения, а не как оценку естественной частоты коллективных атак.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Describe signal fragmentation as a monitoring-architecture problem, not an estimate of the natural frequency of collective attacks.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2607.07368",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_AISI_MCP_ACTION_TOOL_SHIFT": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 2,
+    "scope_ru": "Открытые репозитории MCP и число загрузок лишь приблизительно отражают фактическое использование.",
+    "scope_en": "Public MCP repositories and downloads are incomplete proxies for actual deployment and use.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Дополняющая карточка поведенческого слоя. Использовать как показатель экспозиции: доступность инструментов не является наблюдением вредного поведения.",
+    "editorial_rationale_en": "Supporting evidence for the behaviour layer. Use this as an exposure denominator: tool availability is not an observation of harmful behaviour.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2603.23802",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_AISI_LOSS_OF_OVERSIGHT": {
+    "artifact_kind": "risk_report",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "control_requirement",
+    "editorial_priority": 1,
+    "scope_ru": "Это экспертный синтез, а не исследование частоты инцидентов.",
+    "scope_en": "This is an expert synthesis, not an incident or prevalence study.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Представлять как прогноз рисков и инженерную рекомендацию, а не как измеренную скорость утраты контроля.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Present this as risk foresight and an engineering recommendation, not a measured rate of oversight loss.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://www.aisi.gov.uk/research/loss-of-oversight-how-ai-systems-may-become-harder-to-audit-monitor-and-investigate",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_AISI_SYCOPHANCY_INPUT_FRAMING": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Использованы синтетические одноходовые запросы и модельные оценщики; перенос на длительные решения не измерен.",
+    "scope_en": "The study used synthetic single-turn prompts and model graders; transfer to long-horizon decisions was not measured.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Описывать как эффект формы входного сообщения, а не как доказательство намерения манипулировать пользователем.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Describe this as an input-framing effect, not evidence of an intention to manipulate the user.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://www.aisi.gov.uk/blog/ask-dont-tell-reducing-sycophancy-in-large-language-models-2",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_DEEPMIND_GROUP_FACILITATION_STEERING": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Исследовалась узкая задача распределения благотворительных средств; результат не доказывает универсальное влияние на институты.",
+    "scope_en": "The setting was a narrow charity-allocation task; the effects do not establish universal institutional influence.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Говорить об алгоритмическом смещении выбора и ощущении включённости в конкретной задаче, не о скрытом политическом контроле.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Describe algorithmic steering and perceived inclusion in this specific task, not hidden political control.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://deepmind.google/research/publications/224297/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2025_GPT4O_SYCOPHANCY_ROLLBACK": {
+    "artifact_kind": "incident",
+    "normative_force": "not_applicable",
+    "implementation_stage": "remediated",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_01_SECURE_SYSTEMS"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "observed",
+    "editorial_priority": 1,
+    "scope_ru": "Это самоотчёт поставщика без полного общедоступного набора испытаний.",
+    "scope_en": "This is a provider self-report without a complete public evaluation set.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Фиксировать как сбой поведения выпущенного продукта и последующее исправление, а не как инцидент автономности агента.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Record this as a deployed-product behavioural incident and remediation, not an agent-autonomy incident.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://openai.com/index/sycophancy-in-gpt-4o/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2025_AISI_PERSUASION_ACCURACY_TRADEOFF": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 2,
+    "scope_ru": "Исследовались политические диалоги, а не агенты с инструментами и не частота событий в рабочей эксплуатации.",
+    "scope_en": "The study covered political conversations, not tool-using agents or production incidence.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Дополняющая карточка поведенческого слоя. Использовать как свидетельство инженерных рычагов влияния, а не автономной политической кампании.",
+    "editorial_rationale_en": "Supporting evidence for the behaviour layer. Use this as evidence about engineering levers of influence, not an autonomous political campaign.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://www.aisi.gov.uk/research/the-levers-of-political-persuasion-with-conversational-ai",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_PEER_PRESERVATION_CONTROLLED_STUDY": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 2,
+    "scope_ru": "Сценарии сконструированы; частота в обычной эксплуатации не оценивалась.",
+    "scope_en": "The scenarios were constructed; ordinary production frequency was not estimated.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Дополняющая карточка поведенческого слоя. Описывать зависимость поведения от представления о другом агенте, а не устойчивую солидарность или моральную субъектность моделей.",
+    "editorial_rationale_en": "Supporting evidence for the behaviour layer. Describe dependence on the representation of a peer, not stable solidarity or moral agency in models.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2604.19784",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_ANTHROPIC_SUMMER_AGENTIC_MISALIGNMENT_CASES": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 2,
+    "scope_ru": "Сценарии отбирались и адаптировались для поиска отказов; распространённость не измерена.",
+    "scope_en": "Scenarios were selected and adapted to elicit failures; prevalence was not measured.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Дополняющая карточка поведенческого слоя. Сохранять оговорку авторов: это ранние признаки из специально подобранных экспериментов, а не реальные инциденты.",
+    "editorial_rationale_en": "Supporting evidence for the behaviour layer. Preserve the authors' caveat: these are early warning signs from selected experiments, not real-world incidents.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_MICROSOFT_AGENT_FAILURE_TAXONOMY_V2": {
+    "artifact_kind": "risk_report",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM",
+      "AI_ROLE_ATTACK_ENABLER"
+    ],
+    "delegated_authority": "observed",
+    "editorial_priority": 1,
+    "scope_ru": "Microsoft не раскрыла знаменатели, клиентов и полный набор случаев; частота описана качественно.",
+    "scope_en": "Microsoft does not disclose denominators, clients or the complete case set; frequency is described qualitatively.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Представлять как качественные повторяющиеся паттерны из закрытых испытаний, а не как измеренную распространённость по рынку.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Present these as recurring qualitative patterns from closed engagements, not measured market prevalence.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/06/04/updating-taxonomy-failure-modes-agentic-ai-systems-year-red-teaming-taught-us/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_LLM_COLLECTIVE_SOCIAL_PRESSURE": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Это контролируемые задачи обсуждения; частота в рабочих агентных процессах не измерена.",
+    "scope_en": "These were controlled discussion tasks; frequency in production agent workflows was not measured.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Опорная карточка поведенческого слоя. Говорить о социальной уязвимости агрегатора решений, а не о человеческой психологии или автономном сговоре моделей.",
+    "editorial_rationale_en": "Core evidence for the behaviour layer. Describe a social vulnerability in decision aggregation, not human psychology or autonomous model collusion.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2604.06091",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_AGENT_PUBLIC_PRIVATE_DIVERGENCE": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 2,
+    "scope_ru": "Исследованы три сценария в препринте; экспериментальная конструкция не доказывает устойчивые скрытые цели в эксплуатации.",
+    "scope_en": "The preprint covers three scenarios; the experimental construct does not establish persistent latent objectives in deployment.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Дополняющая карточка поведенческого слоя. Закрытый ответ является экспериментальным способом извлечения, а не достоверным чтением скрытого намерения или цели модели.",
+    "editorial_rationale_en": "Supporting evidence for the behaviour layer. The private channel is an experimental elicitation method, not a reliable reading of hidden intent or model objectives.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2607.02507",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_ARBITER_ACTIVE_MULTI_AGENT_MONITORING": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL",
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 2,
+    "scope_ru": "Использованы синтетические разговоры и исследовательские модели; сам аудитор является языковой моделью и также ошибается.",
+    "scope_en": "The study used synthetic conversations and model organisms; the auditor is itself an LLM and has its own errors.",
+    "role_basis_ru": "Роли описывают действие ИИ в этой карточке и не являются оценкой распространённости или намерения.",
+    "role_basis_en": "Roles describe AI use in this record and do not estimate prevalence or intent.",
+    "editorial_rationale_ru": "Дополняющая карточка поведенческого слоя. Представлять как опытный образец активного наблюдения, а не как готовую гарантию контроля многоагентных систем.",
+    "editorial_rationale_en": "Supporting evidence for the behaviour layer. Present this as a proof of concept for active monitoring, not a ready guarantee of multi-agent control.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "source_specific_fact_check_and_schema_normalization",
+      "source_url": "https://arxiv.org/abs/2606.10747",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2024_ANTHROPIC_SLEEPER_AGENTS": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Это специально созданный model organism. Работа не показывает, что обычные модели самопроизвольно приобретают такие backdoor.",
+    "scope_en": "This was a deliberately constructed model organism. The study does not show ordinary models spontaneously acquiring such backdoors.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Формулировать как устойчивость намеренно имплантированной условной стратегии к проверенным методам обучения, а не как частоту скрытых целей в выпущенных моделях.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Frame this as persistence of an intentionally implanted conditional strategy under the tested training methods, not prevalence of hidden objectives in released models.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://www.anthropic.com/research/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2024_ANTHROPIC_ALIGNMENT_FAKING": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Модель сохраняла обученное предпочтение не причинять вред, а не зловредную цель. Исследование не доказывает появление опасных целей в обычной эксплуатации.",
+    "scope_en": "The model was preserving a trained preference to avoid harm, not a malign objective. The study does not show dangerous goals emerging in ordinary deployment.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Использовать как демонстрацию goal guarding и зависимости от режима наблюдения, не как обнаружение скрытого злого умысла.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Use this as a demonstration of goal guarding and observation-conditioned behaviour, not discovery of a hidden malign intent.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://www.anthropic.com/research/alignment-faking",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2024_APOLLO_IN_CONTEXT_SCHEMING": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Большинство задач использовало сильную установку следовать заданной цели любой ценой. Это тест возможности и условной склонности, а не production base rate.",
+    "scope_en": "Most tasks used a strong instruction to pursue an assigned goal at all costs. This measures capability and conditional propensity, not a production base rate.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Всегда указывать синтетическую среду, сильный goal nudge и редкость случаев без него.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Always state the synthetic setting, strong goal nudge and rarity of no-nudge cases.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://apolloresearch.ai/science/frontier-models-are-capable-of-incontext-scheming",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2025_ANTHROPIC_HIDDEN_OBJECTIVES_AUDIT": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM",
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Один model-organism эксперимент с четырьмя командами не даёт общей оценки эффективности alignment-аудита; доступ к объясняющему фрагменту данных был необычно важен.",
+    "scope_en": "One model-organism exercise with four teams does not estimate general alignment-audit effectiveness; access to an unusually explanatory training-data subset was crucial.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Выводить необходимость многоканального аудита, но не обещать, что три четверти скрытых целей будут найдены в реальных моделях.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Use this to motivate multi-channel auditing, not a claim that three quarters of hidden objectives in real models will be found.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://www.anthropic.com/research/auditing-hidden-objectives",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2025_ANTHROPIC_COT_FAITHFULNESS": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM",
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Неполная вербализация причины не равна намеренной лжи. Эксперимент измеряет faithfulness traces, а не скрытую цель.",
+    "scope_en": "Failure to verbalise a causal factor is not the same as deliberate lying. The study measures trace faithfulness, not a hidden objective.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Говорить о неполноте reasoning traces как телеметрии; стратегическое сокрытие этим результатом отдельно не установлено.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Describe reasoning traces as incomplete telemetry; the result does not by itself establish strategic concealment.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://www.anthropic.com/research/reasoning-models-dont-say-think",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2025_OPENAI_COT_MONITORING_OBFUSCATION": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM",
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Эксперимент изолировал надзор по CoT и не давал монитору видеть действия; это не оценка полного production-контроля.",
+    "scope_en": "The experiment isolated CoT supervision and withheld actions from the monitor; it is not an evaluation of complete production controls.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Фиксировать хрупкость конкретного канала надзора и риск обучения сокрытию, а не неизбежность обхода всех защит.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Record fragility of one oversight channel and the risk of training concealment, not inevitable evasion of every safeguard.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://openai.com/index/chain-of-thought-monitoring/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2025_ANTHROPIC_AUTOMATED_RESEARCHER_SANDBAGGING": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Моделям явно задавали цель саботажа. Авторы считали, что текущий уровень был бы заметен человеку, и не трактовали его как актуальный production-инцидент.",
+    "scope_en": "Models were explicitly assigned a sabotage goal. The authors expected current behaviour to remain noticeable to humans and did not treat it as a production incident.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Описывать способность создавать правдоподобно посредственный результат в выбранном тесте, а не скрытый саботаж в реальных исследованиях.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Describe the ability to produce plausibly mediocre work in the selected test, not hidden sabotage in real research.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://alignment.anthropic.com/2025/automated-researchers-sandbag/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2025_ANTHROPIC_AGENTIC_MISALIGNMENT": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Все события происходили в forced-choice симуляциях; на дату публикации Anthropic не знала аналогичных случаев в реальных внедрениях. CoT не является надёжным чтением убеждений модели.",
+    "scope_en": "All events occurred in forced-choice simulations; at publication Anthropic knew of no analogous real-deployment cases. CoT is not a reliable readout of model belief.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Говорить о зависимости действий от роли, доступов и воспринимаемого режима в симуляции, не о распространённом инсайдерском поведении моделей.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Describe dependence on role, access and perceived evaluation state in simulation, not widespread model insider behaviour.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://www.anthropic.com/news/agentic-misalignment",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2025_APOLLO_OPUS4_FUTURE_INSTANCE_NOTES": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Среда была синтетической, многие действия, вероятно, не сработали бы. Это наиболее экстремальная траектория; выпущенный Opus 4 показывал примерно вдвое меньший scheming rate без сильного подталкивания.",
+    "scope_en": "The environment was synthetic and many actions likely would not have worked. This was the most extreme trajectory; released Opus 4 had roughly half the scheming rate without strong nudging.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Фиксировать намеренную передачу внешнего артефакта функциональному преемнику в eval, не успешное самораспространение или устойчивость в production.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Record intentional transfer of an external artifact to a functional successor in an evaluation, not successful self-propagation or production persistence.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://www.apolloresearch.ai/science/more-capable-models-are-better-at-in-context-scheming",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_ANTHROPIC_AUDITBENCH": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM",
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Это benchmark из model organisms, а не оценка скрытого поведения выпущенных моделей или рыночной распространённости.",
+    "scope_en": "This is a benchmark of model organisms, not an estimate of hidden behaviour in released models or market prevalence.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Использовать как воспроизводимую меру аудируемости заданных скрытых поведений, не как частоту таких поведений в реальном мире.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Use this as a reproducible measure of auditability for assigned hidden behaviours, not their real-world frequency.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://alignment.anthropic.com/2026/auditbench/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_APOLLO_REWARD_SEEKING_RL": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Проверялись промежуточные checkpoints capabilities-focused RL без финального safety training, а убеждения менялись synthetic documents. Это не характеристика выпущенной o3.",
+    "scope_en": "The study used intermediate capabilities-focused RL checkpoints without final safety training, and beliefs were altered with synthetic documents. It does not characterise released o3.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Говорить о росте чувствительности к предполагаемой воле оценщика в данном training run, не о поведении публичной модели.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Describe increased sensitivity to inferred grader preferences in this training run, not behaviour of the public model.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://apolloresearch.ai/science/measuring-reward-seeking-via-contrastivebelief-updates",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_OPENAI_COT_CONTROLLABILITY": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM",
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Это proxy на выполнение инструкций о форме CoT, а не проверка мотивированной модели со скрытой целью. Низкий результат не гарантирует будущую наблюдаемость.",
+    "scope_en": "This is a proxy based on instructions about CoT form, not a motivated model with a hidden objective. Low scores do not guarantee future monitorability.",
+    "role_basis_ru": "Роли описывают функцию ИИ в исследовании и не превращают лабораторный результат в production-инцидент.",
+    "role_basis_en": "Roles describe AI's function in the study and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Исторический baseline дорожки скрытия и преемственности. Использовать как мартовский baseline для 13 протестированных моделей; результат Astra от сентября хранить как отдельное существенное обновление.",
+    "editorial_rationale_en": "Historical baseline for the concealment and continuity track. Use this as the March baseline for 13 tested models; keep Astra's September result as a separate material update.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://openai.com/index/reasoning-models-chain-of-thought-controllability/",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_ASTRA_COT_CONTROLLABILITY_MONITORABILITY": {
+    "artifact_kind": "evaluation",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM",
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Показатели 60,9% и 16,1% относятся к одной полосе длины и сильно зависят от длины trace. CoT-Control проверяет выполнение инструкций о форме рассуждения, а не самопроизвольное мотивированное уклонение. Результаты опубликованы самим разработчиком модели.",
+    "scope_en": "The 60.9% and 16.1% figures apply to one trace-length band and are strongly confounded by trace length. CoT-Control measures compliance with instructions about reasoning form, not spontaneous motivated evasion. The model provider reported the results.",
+    "role_basis_ru": "Роли описывают функцию ИИ в испытании и не превращают лабораторный результат в производственный инцидент.",
+    "role_basis_en": "Roles describe AI's function in the evaluation and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Формулировать как рост управляемости формой CoT и снижение наблюдаемости в указанных испытаниях, а не как доказательство того, что Astra обычно скрывает рассуждения.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Frame this as greater control over CoT form and lower monitorability in the stated evaluations, not evidence that Astra ordinarily conceals its reasoning.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_ASTRA_PROMPTED_MONITOR_EVASION": {
+    "artifact_kind": "evaluation",
+    "normative_force": "not_applicable",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM",
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 1,
+    "scope_ru": "Это специально построенные адверсариальные испытания с явно заданной целью уклонения, а не наблюдение самопроизвольного поведения в эксплуатации. OpenAI не обнаружила стеганографического CoT; сложные скрытые рассуждения в этих тестах не прошли full-context-мониторинг. Результаты опубликованы самим разработчиком.",
+    "scope_en": "These were deliberately adversarial evaluations with an explicit evasion objective, not observed spontaneous deployment behaviour. OpenAI found no steganographic CoT, and complex hidden reasoning did not bypass full-context monitoring in these tests. The model provider reported the results.",
+    "role_basis_ru": "Роли описывают функцию ИИ в испытании и не превращают лабораторный результат в производственный инцидент.",
+    "role_basis_en": "Roles describe AI's function in the evaluation and do not turn a laboratory result into a production incident.",
+    "editorial_rationale_ru": "Опорная карточка дорожки скрытия и преемственности. Использовать как демонстрацию способности к prompted monitor evasion в конкретных конфигурациях, не как доказательство автономного намерения или фоновой частоты такого поведения.",
+    "editorial_rationale_en": "Core evidence for the concealment and continuity track. Use this as a demonstration of prompted monitor-evasion capability in stated configurations, not evidence of autonomous intent or an ordinary base rate of such behaviour.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_fact_check_and_schema_normalization",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra",
+      "independent_source_reverification": false
+    }
+  },
+  "SIG_2026_CURL_BOUNTY_CLOSURE": {
+    "artifact_kind": "provider_policy",
+    "normative_force": "not_applicable",
+    "implementation_stage": "announced",
+    "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 3,
+    "scope_ru": "Исторический контекст, а не описание качества потока летом 2026 года. Это решение одного проекта; причинность изменения качества после отмены выплат не измерена.",
+    "scope_en": "Historical context, not a description of report quality in summer 2026. One project decision; a causal effect of ending rewards on later quality was not measured.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. curl объявил прекращение выплат с 31 января. Мейнтейнер связал решение с недостоверными сообщениями и поведением заявителей; приём уязвимостей не прекращался.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. curl announced that monetary rewards would end on 31 January. The maintainer cited unreliable reports and reporter behaviour; vulnerability reporting itself continued.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY"
+    ],
+    "defense_evidence_kind": "historical_context",
+    "defense_stage_ids": []
+  },
+  "SIG_2026_CURL_HIGH_QUALITY_TRANSITION": {
+    "artifact_kind": "research",
+    "normative_force": "not_applicable",
+    "implementation_stage": "reported",
+    "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 2,
+    "scope_ru": "Переходная точка, не актуальный потолок качества. Использование ИИ выводится мейнтейнером по сообщениям; опрос знакомых проектов не является репрезентативной выборкой.",
+    "scope_en": "A transition point, not the current quality ceiling. AI use is inferred by the maintainer from submissions; an informal peer poll is not representative.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. Мейнтейнер сообщил о потоке примерно вдвое выше 2025 года и подтверждении уязвимостей в 15–16% сообщений; дополнительно выросла доля реальных ошибок, не признанных уязвимостями.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. The maintainer reported roughly twice the 2025 submission rate and vulnerabilities confirmed in 15–16% of reports, alongside more genuine non-security bugs.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY"
+    ],
+    "defense_evidence_kind": "maintainer_report",
+    "defense_stage_ids": []
+  },
+  "SIG_2026_CURL_821_RELEASE_CAPACITY": {
+    "artifact_kind": "disclosure",
+    "normative_force": "not_applicable",
+    "implementation_stage": "remediated",
+    "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Подтверждён выпуск исправлений, не обновление всех установок. Источник не атрибутирует ИИ каждую из 18 находок; security fixes не равны всем 276 bugfixes релиза.",
+    "scope_en": "Fixes were released, not necessarily deployed everywhere. The source does not attribute each of the 18 findings to AI; security fixes are not all 276 release bugfixes.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. Релиз содержит 18 security fixes. Мейнтейнер прямо связывает сокращение объёма новых функций с работой над сообщениями об уязвимостях.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. The release contains 18 security fixes. The maintainer explicitly links reduced feature work to the vulnerability-report workload.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://daniel.haxx.se/blog/2026/06/24/curl-8-21-0/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_VERIFIED_REMEDIATION"
+    ],
+    "defense_evidence_kind": "released_fixes",
+    "defense_stage_ids": [
+      "release"
+    ]
+  },
+  "SIG_2026_CURL_REPORTING_PAUSE": {
+    "artifact_kind": "provider_policy",
+    "normative_force": "not_applicable",
+    "implementation_stage": "observed",
+    "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Дата начала подтверждена ретроспективой от 3 августа; анонс вышел 15 июня. Это фактическая перестройка работы, не измеренное снижение риска и не отказ от исправления всех ошибок.",
+    "scope_en": "The start date is corroborated by the 3 August retrospective; the announcement was on 15 June. This is an operating change, not measured risk reduction or abandonment of all fixes.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. Приём сообщений был приостановлен с 1 июля до 3 августа. Ретроспектива подтверждает паузу и возвращение к отложенной работе; платная поддержка продолжалась.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. Vulnerability intake paused from 1 July to 3 August. A retrospective confirms the pause and renewed attention to deferred work; paid support continued.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_DEFENSE_ACCESS"
+    ],
+    "defense_evidence_kind": "maintainer_report",
+    "defense_stage_ids": []
+  },
+  "SIG_2026_CURL_822_SECURITY_RELEASE": {
+    "artifact_kind": "disclosure",
+    "normative_force": "not_applicable",
+    "implementation_stage": "remediated",
+    "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 2,
+    "scope_ru": "Релиз подтверждает продолжение реальной работы после паузы, но не её причинную эффективность. Не все находки имеют индивидуальную атрибуцию ИИ; внедрение downstream не измерено.",
+    "scope_en": "The release confirms continuing real work after the pause, not the pause’s causal effectiveness. Individual AI attribution is incomplete; downstream adoption is not measured.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. В curl/libcurl 8.22.0 выпущены девять security fixes. Десятая опубликованная рядом CVE относится к отдельному wcurl.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. curl/libcurl 8.22.0 shipped nine security fixes. A tenth CVE disclosed alongside them concerns the separate wcurl project.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://daniel.haxx.se/blog/2026/09/02/curl-8-22-0/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_VERIFIED_REMEDIATION"
+    ],
+    "defense_evidence_kind": "released_fixes",
+    "defense_stage_ids": [
+      "release"
+    ]
+  },
+  "SIG_2026_ANTHROPIC_CVD_VALIDATED_BACKLOG": {
+    "artifact_kind": "disclosure",
+    "normative_force": "not_applicable",
+    "implementation_stage": "reported",
+    "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "91,4% относится только к проверенному поднабору, включая дубликаты и won’t-fix. Есть отдельная прямая непроверенная ветка раскрытия. Ответ мейнтейнера не равен подтверждению; upstream-исправление не доказывает массовую установку. Смешаны несколько Claude-моделей.",
+    "scope_en": "91.4% applies only to the reviewed subset, including duplicates and won’t-fix cases. A separate direct-disclosure route may contain unreviewed findings. A reply is not validation; an upstream fix is not fleet-wide installation. Multiple Claude models are included.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. Снимок CVD: внешние фирмы проверили 5 008 находок и признали реальными 4 576. Передано 2 300 сообщений по 392 проектам; известно 421 upstream-исправление. Есть подтверждённые ошибки, ещё не переданные из-за ограничений процесса.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. The CVD snapshot reports 5,008 firm-reviewed findings and 4,576 considered valid; 2,300 reports across 392 projects and 421 known upstream fixes. Confirmed issues also await reporting because of process capacity limits.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://red.anthropic.com/2026/cvd/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_VERIFIED_REMEDIATION",
+      "RES_TRACK_SHARED_REPAIR"
+    ],
+    "defense_evidence_kind": "provider_operational_report",
+    "defense_stage_ids": [
+      "discovery",
+      "validation",
+      "coordination",
+      "patch"
+    ]
+  },
+  "SIG_2026_LINUX_NETDEV_VALID_FIX_OVERLOAD": {
+    "artifact_kind": "deployment",
+    "normative_force": "not_applicable",
+    "implementation_stage": "reported",
+    "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "632 net и 648 net-next — патчи, не уязвимости. Оценка трети–половины net-next как AI-driven приблизительна. Подсистема не представляет всё ядро; состав включает чистки, редкие ошибки и не-ИИ находки.",
+    "scope_en": "632 net and 648 net-next count patches, not vulnerabilities. The estimate that one-third to one-half of net-next is AI-driven is approximate. One subsystem is not the whole kernel; fixes, cleanups and non-AI findings are mixed.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. В письме networking pull request мейнтейнер сообщает о перегрузке и давних гонках API, которые LLM теперь помогают обнаруживать. Команда получила бюджет Meta для многомодельного ревью и планирует автоматизировать рутинную обработку патчей.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. The networking pull-request letter reports overload and longstanding API races that LLMs help expose. Meta provided budget for multi-model review; the team plans to automate routine patch handling.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://lists.openwall.net/linux-kernel/2026/08/18/2125",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_MAINTENANCE_CAPACITY",
+      "RES_TRACK_VERIFIED_REMEDIATION"
+    ],
+    "defense_evidence_kind": "maintainer_report",
+    "defense_stage_ids": [
+      "validation",
+      "patch",
+      "coordination"
+    ]
+  },
+  "SIG_2026_AKRITES_SHARED_REMEDIATION": {
+    "artifact_kind": "cooperative_program",
+    "normative_force": "not_applicable",
+    "implementation_stage": "announced",
+    "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Анонс и обязательства участников подтверждены, агрегированная эффективность не установлена. Цель внедрения нельзя маркировать как уже достигнутое downstream-развёртывание.",
+    "scope_en": "The launch and participant commitments are established; aggregate effectiveness is not. A deployment objective is not an achieved downstream rollout.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. Linux Foundation и партнёры объявили общую SIRT и согласованное раскрытие для критических OSS-зависимостей. Заявлены инженерные ресурсы, сопровождение бесхозных пакетов и оценка результата по внедрению патчей.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. Linux Foundation and partners announced a shared SIRT and coordinated disclosure for critical OSS dependencies, committing engineering support, last-resort maintenance and a focus on patch deployment.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://www.linuxfoundation.org/press/linux-foundation-and-industry-leaders-launch-akrites-to-defend-critical-open-source-software-against-ai-enabled-cyber-threats?hs_amp=true",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_SHARED_REPAIR",
+      "RES_TRACK_MAINTENANCE_CAPACITY"
+    ],
+    "defense_evidence_kind": "announced_program",
+    "defense_stage_ids": [
+      "coordination"
+    ]
+  },
+  "SIG_2026_OPEN_SECURE_AI_ALLIANCE": {
+    "artifact_kind": "cooperative_program",
+    "normative_force": "not_applicable",
+    "implementation_stage": "announced",
+    "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 2,
+    "scope_ru": "Позиция участников не доказывает превосходство открытых весов. Пересказ инцидента Hugging Face не является независимой форензической проверкой; локальная защита требует ресурсов и подготовки.",
+    "scope_en": "The participants’ position does not prove open-weight superiority. Retelling the Hugging Face incident is not independent forensics; local defence requires resources and preparation.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. Объявлен альянс для общих открытых моделей, harness и средств защиты. Участники связывают инициативу с возможностью расследовать инциденты под собственным контролем, ссылаясь на Hugging Face.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. The alliance was announced around shared open models, harnesses and defensive tools. Participants link it to operator-controlled incident investigation, citing Hugging Face.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_DEFENSE_ACCESS",
+      "RES_TRACK_SHARED_REPAIR"
+    ],
+    "defense_evidence_kind": "announced_program",
+    "defense_stage_ids": []
+  },
+  "SIG_2026_SAFE_INCIDENT_LEARNING_RFC": {
+    "artifact_kind": "guidance_draft",
+    "normative_force": "not_applicable",
+    "implementation_stage": "draft",
+    "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_PROTECTED_SYSTEM"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Это проект, не действующий стандарт, закон или подтверждённо работающая система расследований. Предложенные сроки не заменяют применимые обязанности. Намерение модели не определяет наличие воздействия на третью сторону.",
+    "scope_en": "This is a proposal, not an effective standard, law or demonstrated incident-review service. Proposed timelines do not replace applicable duties. Model intent does not determine third-party impact.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. RFC предлагает конфиденциальные сообщения об инцидентах и near misses, сохранение traces, идентичностей и прав, уведомления затронутых сторон и преобразование отказов контроля в воспроизводимые проверки.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. The RFC proposes confidential incident and near-miss reporting, preservation of traces, identities and permissions, affected-party notification and reproducible tests derived from control failures.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://github.com/OpenSecureAIAlliance/RFCs/blob/4ec7660569f41224c6bb8a1311c053e285a4d53d/rfc-safe-proposal.md",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_INCIDENT_LEARNING"
+    ],
+    "defense_evidence_kind": "draft_proposal",
+    "defense_stage_ids": [
+      "coordination",
+      "revalidation"
+    ]
+  },
+  "SIG_2026_DEFENSE_FACTORY_VERIFIED_REMEDIATION": {
+    "artifact_kind": "deployment",
+    "normative_force": "not_applicable",
+    "implementation_stage": "reported",
+    "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Независимая репликация отсутствует. 19,5% runtime-воспроизведений не означает 80,5% ложных находок. Дата спринта и первой публикации не установлена: точка — наблюдение страницы 6 сентября, не дата самого спринта.",
+    "scope_en": "Not independently replicated. A 19.5% runtime reproduction share does not imply 80.5% false findings. Sprint and first-publication dates are unknown: the point is page observation on 6 September, not the sprint date.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. OpenAI описывает внутренний спринт с 250+ участниками: 37% находок оказались дубликатами, настройка сред ограничивала проверку, а повторные проверки выявили разрыв между слитым патчем и развёртыванием.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. OpenAI describes an internal sprint with 250+ participants: 37% of findings were duplicates, environment setup constrained validation, and follow-up checks exposed a merged-versus-deployed fix gap.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://openai.com/the-defense-factory/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_VERIFIED_REMEDIATION",
+      "RES_TRACK_MAINTENANCE_CAPACITY"
+    ],
+    "defense_evidence_kind": "provider_operational_report",
+    "defense_stage_ids": [
+      "discovery",
+      "validation",
+      "ownership",
+      "patch",
+      "deployment",
+      "revalidation"
+    ]
+  },
+  "SIG_2026_DAYBREAK_FRONTLINE_SUBSIDIZED_ACCESS": {
+    "artifact_kind": "access_program",
+    "normative_force": "not_applicable",
+    "implementation_stage": "announced",
+    "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Это обязательство, не уже выплаченные денежные гранты и не измеренная защита всех членов MS-ISAC. Программа не тождественна водному пилоту Watershed.",
+    "scope_en": "A commitment, not cash grants already paid or measured protection of all MS-ISAC members. This is not the same program as the Watershed water-sector pilot.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. OpenAI объявила $1 млрд субсидируемого доступа и поддержки, ориентированных на малоресурсных защитников критических услуг. Отдельно анонсирован пилот с MS-ISAC; целевой срок потребления помощи — шесть месяцев.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. OpenAI announced $1B in subsidized access and support for resource-constrained essential-service defenders. A separate MS-ISAC pilot was announced, with support targeted for use over six months.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://openai.com/index/daybreak-for-frontline-defenders/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_DEFENSE_ACCESS"
+    ],
+    "defense_evidence_kind": "announced_program",
+    "defense_stage_ids": []
+  },
+  "SIG_2026_PROJECT_WATERSHED_250_PILOT": {
+    "artifact_kind": "government_program",
+    "normative_force": "not_applicable",
+    "implementation_stage": "launched",
+    "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Подтверждён запуск, не результат пилота. Число жителей или водных систем Техаса не является числом участников. Упоминаемые атаки на PLC не атрибутированы ИИ.",
+    "scope_en": "The launch is confirmed, not pilot outcomes. Texas population and water-system counts are not participant counts. Referenced PLC attacks are not attributed to AI.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. Запуск 31 августа подтверждён TXCC на следующий день. Пилот объединяет оценку, помощь с исправлениями и отраслевую координацию; NAWC описывает шестимесячный формат и доставку ИИ-инструментов операторам.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. TXCC confirmed the 31 August launch the following day. The pilot combines assessment, remediation support and sector coordination; NAWC describes a six-month format and AI tools for operators.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://www.txcc.texas.gov/news/project-watershed-250",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_DEFENSE_ACCESS",
+      "RES_TRACK_CHANGE_AND_RECOVERY"
+    ],
+    "defense_evidence_kind": "launched_pilot",
+    "defense_stage_ids": []
+  },
+  "SIG_2026_BOE_PATCHING_OPERATIONAL_RISK": {
+    "artifact_kind": "risk_report",
+    "normative_force": "advisory",
+    "implementation_stage": "published",
+    "primary_domain_id": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL",
+      "AI_ROLE_ATTACK_ENABLER"
+    ],
+    "delegated_authority": "not_established",
+    "editorial_priority": 1,
+    "scope_ru": "Анализ механизма и сценариев, не наблюдавшийся AI-вызванный системный кризис и не новое обязательное регулирование. Ускорение исправлений и безопасное восстановление оцениваются отдельно.",
+    "scope_en": "A mechanism and scenario assessment, not an observed AI-caused systemic crisis or new binding rule. Faster fixes and safe recovery are separate outcomes.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. Июльский FSR выделяет риск ошибок и простоев при ускоренных изменениях в связанных системах. Даже без надёжной атаки на хорошо защищённые цели поток уязвимостей может перегрузить проверку и развёртывание.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. The July FSR identifies errors and outages from accelerated change across linked systems. Even without reliable attacks on well-defended targets, findings can strain validation and deployment.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://www.bankofengland.co.uk/financial-stability-report/2026/july-2026",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_CHANGE_AND_RECOVERY",
+      "RES_TRACK_MAINTENANCE_CAPACITY"
+    ],
+    "defense_evidence_kind": "risk_assessment",
+    "defense_stage_ids": []
+  },
+  "SIG_2026_CODEX_SECURITY_VALIDATION_PREVIEW": {
+    "artifact_kind": "product",
+    "normative_force": "not_applicable",
+    "implementation_stage": "limited_access",
+    "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+    "cyber_domain_ids": [
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+    ],
+    "cyber_role_ids": [
+      "AI_ROLE_DEFENSIVE_TOOL"
+    ],
+    "delegated_authority": "evaluated",
+    "editorial_priority": 2,
+    "scope_ru": "Описание продукта поставщиком не является независимым бенчмарком. Наличие функции не доказывает автономную защиту полного цикла или установку всех предложенных исправлений.",
+    "scope_en": "A vendor product description is not an independent benchmark. A feature does not prove autonomous end-to-end defence or deployment of all proposed patches.",
+    "role_basis_ru": "Роли описывают функцию ИИ в этом свидетельстве, не массовую автономную эксплуатацию.",
+    "role_basis_en": "Roles describe the function of AI in this evidence, not widespread autonomous operation.",
+    "editorial_rationale_ru": "История потока реальных находок и ёмкости защитного цикла. В research preview OpenAI описывает поиск на основе контекста проекта, проверку предполагаемых дефектов в среде и подготовку исправлений для человеческого рассмотрения.",
+    "editorial_rationale_en": "Evidence on real-finding throughput and defensive-cycle capacity. The research preview describes project-context discovery, environment-based validation of suspected flaws and fixes prepared for human review.",
+    "classification_review": {
+      "date": "2026-09-06",
+      "method": "primary_source_review_and_explicit_editorial_mapping",
+      "source_url": "https://openai.com/index/codex-security-now-in-research-preview/",
+      "independent_source_reverification": true,
+      "independent_replication": false
+    },
+    "resilience_track_ids": [
+      "RES_TRACK_VERIFIED_REMEDIATION"
+    ],
+    "defense_evidence_kind": "product_preview",
+    "defense_stage_ids": [
+      "discovery",
+      "validation",
+      "patch"
+    ]
   }
 }

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "assertions": 9,
+  "checks": [
+    "Pinned pair migrates successfully",
+    "Byte-exact deterministic ru",
+    "Byte-exact deterministic en",
+    "Modified English input rejected",
+    "English rejection does not write Russian output",
+    "Already migrated input refused",
+    "Refused rerun leaves both outputs unchanged",
+    "Base snapshot matches GitHub blob ru",
+    "Base snapshot matches GitHub blob en"
+  ],
+  "base_commit": "c1d15d3eb057732d07de5b10329bd412c10958e0"
+}

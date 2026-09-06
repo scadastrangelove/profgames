@@ -1,0 +1,22 @@
+[
+  {
+    "id": "CAND_2026_IMF_SHARED_DEPENDENCY_CYBER_RISK",
+    "reason_ru": "Механизм общих зависимостей уже представлен; отдельная карточка не нужна в этом выпуске.",
+    "reason_en": "Shared-dependency mechanism already covered; no separate event in this release."
+  },
+  {
+    "id": "CAND_2026_FSISAC_AI_SECTOR_EXERCISE",
+    "reason_ru": "Программа учений без проверенного отчёта о проведении; не выдавать за результат.",
+    "reason_en": "Exercise schedule without a verified after-action report; not an outcome."
+  },
+  {
+    "id": "CAND_2026_FSISAC_STEEL_RESOLVE_RECONNECTION",
+    "reason_ru": "Не AI-специфический сравнительный сценарий; проведение и результаты не подтверждены.",
+    "reason_en": "Non-AI comparison scenario; completion and outcomes not established."
+  },
+  {
+    "id": "CAND_2026_LINUX_USB_MAILBOX",
+    "reason_ru": "Первичный пост social.kernel.org недоступен при повторной проверке. Число сообщений не число уязвимостей; основной Linux-кейс взят из доступного письма netdev.",
+    "reason_en": "Primary social.kernel.org post unavailable on recheck. Message counts are not vulnerability counts; the accessible netdev letter supplies the Linux anchor."
+  }
+]
