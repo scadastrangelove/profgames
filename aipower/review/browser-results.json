@@ -15,11 +15,11 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2151.0419921875,
-        "behavior_section_1440": 440.99444580078125,
-        "cyber_first_card_390": 4976.55615234375,
-        "behavior_section_390": 731.7750244140625,
-        "map_top": 615.515625
+        "cyber_first_card_1440": 2178.86328125,
+        "behavior_section_1440": 440.046875,
+        "cyber_first_card_390": 5169.9404296875,
+        "behavior_section_390": 731.7764892578125,
+        "map_top": 634.359375
       },
       "page_widths": {
         "story:1440": 1440,
@@ -55,9 +55,9 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2048.5,
+        "cyber_first_card_1440": 2077.703125,
         "behavior_section_1440": 429.625,
-        "cyber_first_card_390": 4650.609375,
+        "cyber_first_card_390": 4802.0625,
         "behavior_section_390": 677.015625,
         "map_top": 527.453125
       },
@@ -125,7 +125,9 @@
     "ru: curated Mozilla and SB53",
     "ru: five behavior dependency stages",
     "ru: concealment view has four authored stages",
-    "ru: concealment view selects 18 classified records",
+    "ru: concealment view selects 20 classified records",
+    "ru: Astra controllability card is visible",
+    "ru: Astra prompted-evasion card is visible",
     "ru: concealment track reaches permalink",
     "ru: concealment track remains four stages on mobile",
     "ru: concealment track has no mobile page overflow",
@@ -153,7 +155,7 @@
     "ru: Kimi observation visible",
     "ru: counterargument opens",
     "ru: gap opens",
-    "ru: all 131 governance drawers render",
+    "ru: all 133 governance drawers render",
     "ru: no external requests",
     "ru: no page errors",
     "en: eight views",
@@ -198,7 +200,9 @@
     "en: curated Mozilla and SB53",
     "en: five behavior dependency stages",
     "en: concealment view has four authored stages",
-    "en: concealment view selects 18 classified records",
+    "en: concealment view selects 20 classified records",
+    "en: Astra controllability card is visible",
+    "en: Astra prompted-evasion card is visible",
     "en: concealment track reaches permalink",
     "en: concealment track remains four stages on mobile",
     "en: concealment track has no mobile page overflow",
@@ -226,10 +230,10 @@
     "en: Kimi observation visible",
     "en: counterargument opens",
     "en: gap opens",
-    "en: all 131 governance drawers render",
+    "en: all 133 governance drawers render",
     "en: no external requests",
     "en: no page errors"
   ],
   "passed": true,
-  "assertions": 146
+  "assertions": 150
 }

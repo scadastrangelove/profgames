@@ -1419,7 +1419,7 @@ function hideTip(){
   document.getElementById('tooltip').classList.remove('show');
 }
 
-/* v0.32 shared presentation and navigation. No semantic overrides of the JSON. */
+/* v0.33 shared presentation and navigation. No semantic overrides of the JSON. */
 var atlasRestoring = true;
 var atlasReturnFocus = null;
 var atlasReady = false;

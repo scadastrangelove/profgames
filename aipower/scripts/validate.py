@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v0.32 references, data contracts, legacy preservation and embedded-data parity.
+"""Validate v0.33 references, data contracts, legacy preservation and embedded-data parity.
 No third-party dependencies. --refresh-metadata updates counts only; assertions always run.
 """
 from pathlib import Path
@@ -57,9 +57,10 @@ def referenced_source_urls(d):
    if collection=='events' and node.get('url'):urls.add(node['url'])
  return urls
 def validate(root=ROOT,refresh=False,skip_html=False):
- report={'version':'0.32','base_commit':'77f4b188844e4f844ff22f95c12377dc0f857887','languages':{},'tests':[]};data={}
+ report={'version':'0.33','base_commit':'fa95319be303b6c94a0029bdd7a112b174db87ae','languages':{},'tests':[]};data={}
  candidate_ids={x['id'] for x in json.loads((root/'review/v031-agent-behavior/candidates.json').read_text())['new_event_candidates']}
  concealment_ids={x['id'] for x in json.loads((root/'review/agent-concealment-persistence/candidates.json').read_text())['events']}
+ astra_ids={x['id'] for x in json.loads((root/'review/astra-monitorability/candidates.json').read_text())['events']}
  def ok(name,condition):
   if not condition:raise AssertionError(name)
   report['tests'].append(name)
@@ -76,11 +77,12 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   dates={e['id']:e['date'] for e in d['events']}
   ok(lang+': original event dates preserved',all(dates.get(e['id'])==e['date'] for e in b['events']))
   ev={e['id']:e for e in d['events']};cyber=[e for e in d['events'] if e.get('primary_domain_id')]
-  ok(lang+': exact v0.32 collection counts',len(d['events'])==355 and len(d['claims'])==72 and len(d['arcs'])==25 and len(d['edges'])==738 and len(d['sourceIndex'])==532)
-  ok(lang+': exactly 131 reviewed cyber facts',len(cyber)==131)
-  ok(lang+': exactly 72 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==72)
+  ok(lang+': exact v0.33 collection counts',len(d['events'])==357 and len(d['claims'])==72 and len(d['arcs'])==25 and len(d['edges'])==745 and len(d['sourceIndex'])==533)
+  ok(lang+': exactly 133 reviewed cyber facts',len(cyber)==133)
+  ok(lang+': exactly 74 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==74)
   ok(lang+': all 22 candidate records present',candidate_ids<={e['id'] for e in d['events']} and len(candidate_ids)==22)
   ok(lang+': all 12 concealment records present',concealment_ids<={e['id'] for e in d['events']} and len(concealment_ids)==12)
+  ok(lang+': both Astra monitorability records present',astra_ids<={e['id'] for e in d['events']} and len(astra_ids)==2)
   vocab={k:{x['id'] for x in d['cyberFramework'][k]} for k in ['domains','roles','artifact_kinds','normative_forces','implementation_stages','delegated_authority_states']}
   for e in cyber:
    ok(lang+': valid classification '+e['id'],e['primary_domain_id'] in e['cyber_domain_ids'] and set(e['cyber_domain_ids'])<=vocab['domains'] and set(e['cyber_role_ids'])<=vocab['roles'] and e['artifact_kind'] in vocab['artifact_kinds'] and e['normative_force'] in vocab['normative_forces'] and e['implementation_stage'] in vocab['implementation_stages'] and e['delegated_authority'] in vocab['delegated_authority_states'] and e['editorial_priority'] in [1,2,3] and bool(e.get('scope_'+lang)))
@@ -121,7 +123,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
       event['shared_writable_state'] in behavior_vocab['shared_writable_states'] and
       bool(set(event['oversight_target'])<=behavior_vocab['oversight_targets']) and
       event['motivation_basis'] in behavior_vocab['motivation_bases'] and bool(event['evidence_method']))
-  for event_id in concealment_ids:
+  for event_id in concealment_ids|astra_ids:
    event=ev[event_id]
    ok(lang+': complete concealment classification '+event_id,
       event['behavior_origin'] in behavior_vocab['behavior_origins'] and
@@ -130,12 +132,17 @@ def validate(root=ROOT,refresh=False,skip_html=False):
       event['goal_source'] in behavior_vocab['goal_sources'] and
       set(event['behavior_track_ids'])=={'BEH_TRACK_CONCEALMENT_PERSISTENCE'})
   track_events=[event for event in d['events'] if 'BEH_TRACK_CONCEALMENT_PERSISTENCE' in event.get('behavior_track_ids',[])]
-  ok(lang+': concealment track combines 12 new and 6 comparison records',len(track_events)==18 and concealment_ids<={event['id'] for event in track_events})
+  ok(lang+': concealment track combines 14 reviewed and 6 comparison records',len(track_events)==20 and (concealment_ids|astra_ids)<={event['id'] for event in track_events})
   ok(lang+': wiki point uses first verified write date',ev['SIG_2026_OPENAI_EXTERNAL_WIKI_SHARED_STATE']['date']=='2026-05-24')
   ok(lang+': shutdown study uses arXiv v1 date',ev['SIG_2026_SHUTDOWN_RESISTANCE_INCOMPLETE_TASKS']['date']=='2025-09-13')
   behavior_claim=next(c for c in d['claims'] if c['id']=='CLM_AGENT_BEHAVIOR_CAPABILITY_PROPENSITY_INCIDENCE')
-  ok(lang+': calibrated behaviour claim remains partial',behavior_claim['status']=='partially_verified' and len(behavior_claim['qualifying_evidence'])==6)
-  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==267)
+  ok(lang+': calibrated behaviour claim remains partial',behavior_claim['status']=='partially_verified' and len(behavior_claim['qualifying_evidence'])==7)
+  astra_control=ev['SIG_2026_ASTRA_COT_CONTROLLABILITY_MONITORABILITY']
+  astra_evasion=ev['SIG_2026_ASTRA_PROMPTED_MONITOR_EVASION']
+  ok(lang+': Astra comparison is length-banded',astra_control['numbers']['cot_token_band_min']==750 and astra_control['numbers']['cot_token_band_max']==1250 and astra_control['numbers']['astra_control_percent']==60.9 and astra_control['numbers']['sol_control_percent']==16.1)
+  ok(lang+': Astra evasion remains explicitly prompted',astra_evasion['behavior_origin']=='evaluation_prompted' and astra_evasion['goal_source']=='explicit_prompt' and astra_evasion['numbers']['honeypot_full_context_recall_percent']==100)
+  ok(lang+': Astra records use official sources only',all(source['url'].startswith(('https://openai.com/','https://deploymentsafety.openai.com/')) for event_id in astra_ids for source in ev[event_id]['sources']) and not any('youtube.com' in source['url'] for event_id in astra_ids for source in ev[event_id]['sources']))
+  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==269)
   ok(lang+': relation definitions complete',set(x['relation'] for x in d['edges'])<=set(d['relationTypes']))
   ok(lang+': exact claim denominators',d['summary']['claim_status_counts']=={'verified':49,'partially_verified':21,'disputed':2} and 'pass_rate_short' not in d['summary'])
   if lang=='ru':ok('ru: every event headline localised',all(re.search('[А-Яа-яЁё]',e['title']) for e in d['events']))
