@@ -189,13 +189,13 @@ function statusShortRu(value){
   if (value === 'reported_findings_independent_validation_pending') return 'Результаты проекта';
   if (String(value).indexOf('verified') === 0) return 'Подтверждено';
   if (String(value).indexOf('partially_verified') === 0) return 'Частично';
-  if (String(value).indexOf('controlled_') === 0) return 'Controlled';
+  if (String(value).indexOf('controlled_') === 0) return 'Контролируемая проверка';
   if (value === 'reproducible_poc_no_wild_exploitation') return 'PoC';
-  if (value === 'lab_verified_no_wild_exploitation') return 'Lab';
-  if (value === 'reproducible_self_authored_preprint_synthetic') return 'Self-authored';
+  if (value === 'lab_verified_no_wild_exploitation') return 'Лабораторная проверка';
+  if (value === 'reproducible_self_authored_preprint_synthetic') return 'Авторский препринт';
   if (value === 'advertisement_verified_implementation_unverified') return 'Реклама';
   if (String(value).indexOf('disputed') === 0) return 'Спорно';
-  if (value === 'reported_unconfirmed') return 'Reported';
+  if (value === 'reported_unconfirmed') return 'Сообщается, не подтверждено';
   return relationLabel(value);
 }
 function dateBasisLabelRu(value){
@@ -276,13 +276,13 @@ function moneyStatusLabelRu(value){
 function evidenceContextLabelRu(value){
   return ({
     community_registries:'Каталоги сообщества',
-    controlled_real_world_targets:'Controlled real-world targets',
+    controlled_real_world_targets:'Контролируемые реальные цели',
     laboratory:'Лаборатория',
     'nine-country sample':'Выборка из девяти стран',
     public_registries:'Публичные реестры',
     synthetic_evaluation:'Синтетическая оценка',
     underground_market:'Теневой рынок',
-    undisclosed_red_team_client:'Нераскрытый red-team client',
+    undisclosed_red_team_client:'Нераскрытый заказчик проверки',
     undisclosed_victim:'Нераскрытая жертва',
     undisclosed_victims:'Нераскрытые жертвы'
   })[value] || relationLabel(value);

@@ -1,0 +1,2 @@
+review/v031-agent-behavior/*.csv whitespace=cr-at-eol
+review/v031-agent-behavior/research-notes.md whitespace=-trailing-space

@@ -15,8 +15,10 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 479.3125,
-        "cyber_first_card_390": 786.5,
+        "cyber_first_card_1440": 1722.921875,
+        "behavior_section_1440": 429.625,
+        "cyber_first_card_390": 4203.6875,
+        "behavior_section_390": 677.015625,
         "map_top": 527.453125
       },
       "page_widths": {
@@ -74,13 +76,18 @@
     "en: no page overflow claims 390",
     "en: active view sources 390",
     "en: no page overflow sources 390",
-    "en: mobile first cyber card within 850px",
+    "en: mobile behavior layer starts within 850px",
     "en: map above 900px",
     "en: Mozilla in defence",
     "en: GTG in attack",
     "en: only binding cards",
     "en: SB53 binding",
     "en: curated Mozilla and SB53",
+    "en: five behavior dependency stages",
+    "en: external-state mechanism exposes wiki incident",
+    "en: behavior state reaches permalink",
+    "en: behavior metadata drawer",
+    "en: structural-autonomy scale has records",
     "en: country facet Armenia",
     "en: country facet Pakistan",
     "en: Cloudflare facet",
@@ -99,10 +106,10 @@
     "en: Kimi observation visible",
     "en: counterargument opens",
     "en: gap opens",
-    "en: all 97 governance drawers render",
+    "en: all 119 governance drawers render",
     "en: no external requests",
     "en: no page errors"
   ],
   "passed": true,
-  "assertions": 61
+  "assertions": 66
 }
