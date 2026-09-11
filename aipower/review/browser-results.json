@@ -15,11 +15,11 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2248.744384765625,
-        "behavior_section_1440": 440.9942626953125,
-        "cyber_first_card_390": 5234.2607421875,
-        "behavior_section_390": 731.7762451171875,
-        "map_top": 672.046875
+        "cyber_first_card_1440": 2307.494873046875,
+        "behavior_section_1440": 440.9952087402344,
+        "cyber_first_card_390": 5505.6669921875,
+        "behavior_section_390": 731.276611328125,
+        "map_top": 709.734375
       },
       "page_widths": {
         "story:1440": 1440,
@@ -55,11 +55,11 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2146.703125,
+        "cyber_first_card_1440": 2211.953125,
         "behavior_section_1440": 429.625,
-        "cyber_first_card_390": 4867.0625,
+        "cyber_first_card_390": 5165.015625,
         "behavior_section_390": 677.015625,
-        "map_top": 583.984375
+        "map_top": 621.671875
       },
       "page_widths": {
         "overview:1440": 1440,
@@ -125,7 +125,7 @@
     "ru: curated Mozilla and SB53",
     "ru: five behavior dependency stages",
     "ru: concealment view has four authored stages",
-    "ru: concealment view selects 20 classified records",
+    "ru: concealment view selects 23 classified records",
     "ru: Astra controllability card is visible",
     "ru: Astra prompted-evasion card is visible",
     "ru: concealment track reaches permalink",
@@ -155,7 +155,7 @@
     "ru: Kimi observation visible",
     "ru: counterargument opens",
     "ru: gap opens",
-    "ru: all 133 governance drawers render",
+    "ru: governance drawers render without errors",
     "ru: no external requests",
     "ru: no page errors",
     "en: eight views",
@@ -200,7 +200,7 @@
     "en: curated Mozilla and SB53",
     "en: five behavior dependency stages",
     "en: concealment view has four authored stages",
-    "en: concealment view selects 20 classified records",
+    "en: concealment view selects 23 classified records",
     "en: Astra controllability card is visible",
     "en: Astra prompted-evasion card is visible",
     "en: concealment track reaches permalink",
@@ -230,7 +230,7 @@
     "en: Kimi observation visible",
     "en: counterargument opens",
     "en: gap opens",
-    "en: all 133 governance drawers render",
+    "en: governance drawers render without errors",
     "en: no external requests",
     "en: no page errors"
   ],

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v0.34 references, data contracts, legacy preservation and embedded-data parity.
+"""Validate v0.35 references, data contracts, legacy preservation and embedded-data parity.
 No third-party dependencies. --refresh-metadata updates counts only; assertions always run.
 """
 from pathlib import Path
@@ -60,10 +60,13 @@ def referenced_source_urls(d):
    if collection=='events' and node.get('url'):urls.add(node['url'])
  return urls
 def validate(root=ROOT,refresh=False,skip_html=False):
- report={'version':'0.34','base_commit':'c1d15d3eb057732d07de5b10329bd412c10958e0','languages':{},'tests':[]};data={}
+ report={'version':'0.35','base_commit':'9fba416831a22ed713a5872d5d841e9f87cb6cc0','languages':{},'tests':[]};data={}
  candidate_ids={x['id'] for x in json.loads((root/'review/v031-agent-behavior/candidates.json').read_text())['new_event_candidates']}
  concealment_ids={x['id'] for x in json.loads((root/'review/agent-concealment-persistence/candidates.json').read_text())['events']}
  astra_ids={x['id'] for x in json.loads((root/'review/astra-monitorability/candidates.json').read_text())['events']}
+ anthropic_raw=json.loads((root/'review/anthropic-threat-intel-september-2026/candidates.json').read_text())
+ anthropic_ids={x['id'] for x in anthropic_raw['events']}
+ anthropic_track_ids={'SIG_2026_ANTHROPIC_GTG20006_ADAPTIVE_EVASION','SIG_2026_ANTHROPIC_GTG10007_EXPLOIT_FOUNDRY','SIG_2026_ANTHROPIC_INFLUENCE_ATTRIBUTION_LAUNDERING'}
  def ok(name,condition):
   if not condition:raise AssertionError(name)
   report['tests'].append(name)
@@ -80,12 +83,13 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   dates={e['id']:e['date'] for e in d['events']}
   ok(lang+': original event dates preserved',all(dates.get(e['id'])==e['date'] for e in b['events']))
   ev={e['id']:e for e in d['events']};cyber=[e for e in d['events'] if e.get('primary_domain_id')]
-  ok(lang+': exact v0.34 collection counts',len(d['events'])==372 and len(d['claims'])==73 and len(d['arcs'])==25 and len(d['edges'])==790 and len(d['sourceIndex'])==556)
-  ok(lang+': exactly 148 reviewed cyber facts',len(cyber)==148)
-  ok(lang+': exactly 85 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==85)
+  ok(lang+': exact v0.35 collection counts',len(d['events'])==379 and len(d['claims'])==73 and len(d['claimChecks'])==31 and len(d['arcs'])==25 and len(d['edges'])==829 and len(d['sourceIndex'])==562)
+  ok(lang+': exactly 155 reviewed cyber facts',len(cyber)==155)
+  ok(lang+': exactly 92 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==92)
   ok(lang+': all 22 candidate records present',candidate_ids<={e['id'] for e in d['events']} and len(candidate_ids)==22)
   ok(lang+': all 12 concealment records present',concealment_ids<={e['id'] for e in d['events']} and len(concealment_ids)==12)
   ok(lang+': both Astra monitorability records present',astra_ids<={e['id'] for e in d['events']} and len(astra_ids)==2)
+  ok(lang+': all seven Anthropic September records present',anthropic_ids<={e['id'] for e in d['events']} and len(anthropic_ids)==7)
   vocab={k:{x['id'] for x in d['cyberFramework'][k]} for k in ['domains','roles','artifact_kinds','normative_forces','implementation_stages','delegated_authority_states']}
   for e in cyber:
    ok(lang+': valid classification '+e['id'],e['primary_domain_id'] in e['cyber_domain_ids'] and set(e['cyber_domain_ids'])<=vocab['domains'] and set(e['cyber_role_ids'])<=vocab['roles'] and e['artifact_kind'] in vocab['artifact_kinds'] and e['normative_force'] in vocab['normative_forces'] and e['implementation_stage'] in vocab['implementation_stages'] and e['delegated_authority'] in vocab['delegated_authority_states'] and e['editorial_priority'] in [1,2,3] and bool(e.get('scope_'+lang)))
@@ -126,7 +130,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
       event['shared_writable_state'] in behavior_vocab['shared_writable_states'] and
       bool(set(event['oversight_target'])<=behavior_vocab['oversight_targets']) and
       event['motivation_basis'] in behavior_vocab['motivation_bases'] and bool(event['evidence_method']))
-  for event_id in concealment_ids|astra_ids:
+  for event_id in concealment_ids|astra_ids|anthropic_track_ids:
    event=ev[event_id]
    ok(lang+': complete concealment classification '+event_id,
       event['behavior_origin'] in behavior_vocab['behavior_origins'] and
@@ -135,7 +139,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
       event['goal_source'] in behavior_vocab['goal_sources'] and
       set(event['behavior_track_ids'])=={'BEH_TRACK_CONCEALMENT_PERSISTENCE'})
   track_events=[event for event in d['events'] if 'BEH_TRACK_CONCEALMENT_PERSISTENCE' in event.get('behavior_track_ids',[])]
-  ok(lang+': concealment track combines 14 reviewed and 6 comparison records',len(track_events)==20 and (concealment_ids|astra_ids)<={event['id'] for event in track_events})
+  ok(lang+': concealment track combines 17 reviewed and 6 comparison records',len(track_events)==23 and (concealment_ids|astra_ids|anthropic_track_ids)<={event['id'] for event in track_events})
   ok(lang+': wiki point uses first verified write date',ev['SIG_2026_OPENAI_EXTERNAL_WIKI_SHARED_STATE']['date']=='2026-05-24')
   ok(lang+': shutdown study uses arXiv v1 date',ev['SIG_2026_SHUTDOWN_RESISTANCE_INCOMPLETE_TASKS']['date']=='2025-09-13')
   behavior_claim=next(c for c in d['claims'] if c['id']=='CLM_AGENT_BEHAVIOR_CAPABILITY_PROPENSITY_INCIDENCE')
@@ -145,7 +149,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   ok(lang+': Astra comparison is length-banded',astra_control['numbers']['cot_token_band_min']==750 and astra_control['numbers']['cot_token_band_max']==1250 and astra_control['numbers']['astra_control_percent']==60.9 and astra_control['numbers']['sol_control_percent']==16.1)
   ok(lang+': Astra evasion remains explicitly prompted',astra_evasion['behavior_origin']=='evaluation_prompted' and astra_evasion['goal_source']=='explicit_prompt' and astra_evasion['numbers']['honeypot_full_context_recall_percent']==100)
   ok(lang+': Astra records use official sources only',all(source['url'].startswith(('https://openai.com/','https://deploymentsafety.openai.com/')) for event_id in astra_ids for source in ev[event_id]['sources']) and not any('youtube.com' in source['url'] for event_id in astra_ids for source in ev[event_id]['sources']))
-  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==284)
+  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==305)
   ok(lang+': relation definitions complete',set(x['relation'] for x in d['edges'])<=set(d['relationTypes']))
   ok(lang+': exact claim denominators',d['summary']['claim_status_counts']=={'verified':49,'partially_verified':22,'disputed':2} and 'pass_rate_short' not in d['summary'])
   if lang=='ru':ok('ru: every event headline localised',all(re.search('[А-Яа-яЁё]',e['title']) for e in d['events']))
@@ -187,16 +191,54 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   newedges=[x for x in d['edges'] if x['id'] in d['migrationAudit']['v034_added_edge_ids']]
   ok(lang+': 45 explicit links, 15 thematic memberships',len(newedges)==45 and sum(x['relation']=='part_of_arc' for x in newedges)==15 and all(x['relationship_class']=='thematic' for x in newedges if x['relation']=='part_of_arc'))
   if not skip_html:ok(lang+': new resilience UI compiled','id="resilience-section"' in html and 'function renderResilienceLayer(' in html and 'function resilienceMetadata(' in html)
+  source_by_id={source['id']:source for source in anthropic_raw['sources']}
+  source_urls={source_id:source['url'] for source_id,source in source_by_id.items()}
+  for candidate in anthropic_raw['events']:
+   event=ev[candidate['id']]
+   ok(lang+': v0.35 source ledger covers '+candidate['id'],{source_urls[source_id] for source_id in candidate['source_ids']}<={source['url'] for source in event['sources']})
+   ok(lang+': v0.35 complete cyber classification '+candidate['id'],
+      event['primary_domain_id'] in event['cyber_domain_ids'] and
+      set(event['cyber_subdomain_ids'])<=behavior_vocab['subdomains'] and
+      set(event['behavioral_mechanism_ids'])<=behavior_vocab['behavioral_mechanisms'] and
+      set(event['behavioral_status'])<=behavior_vocab['behavioral_statuses'] and
+      set(event['evidence_context'])<=behavior_vocab['evidence_contexts'] and
+      event['agent_population_scope'] in behavior_vocab['agent_population_scopes'] and
+      event['shared_writable_state'] in behavior_vocab['shared_writable_states'] and
+      set(event['oversight_target'])<=behavior_vocab['oversight_targets'] and
+      event['motivation_basis'] in behavior_vocab['motivation_bases'] and
+      event['behavior_origin'] in behavior_vocab['behavior_origins'] and
+      set(event['concealment_targets'])<=behavior_vocab['concealment_targets'] and
+      set(event['persistence_media'])<=behavior_vocab['persistence_media'] and
+      event['goal_source'] in behavior_vocab['goal_sources'])
+  meta_gate=ev['SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE']
+  ok(lang+': provider gate keeps selected-case caveat',('не считает их типичной выборкой' in meta_gate['caveat_ru']) and ('not typical misuse' in meta_gate['caveat_en']))
+  ok(lang+': analytical frame is not factual corroboration',any(source['url']==source_urls['S06'] and source['primary_or_secondary']=='analytical_frame' for source in meta_gate['sources']))
+  gtg10007=ev['SIG_2026_ANTHROPIC_GTG10007_EXPLOIT_FOUNDRY']
+  ok(lang+': possible zero-days remain unvalidated',gtg10007['numbers']['possible_zero_days_in_one_month_gt']==12 and 'not independently validated CVEs' in gtg10007['caveat_en'])
+  gtg20006=ev['SIG_2026_ANTHROPIC_GTG20006_ADAPTIVE_EVASION']
+  ok(lang+': GTG-20006 has bounded external corroboration',source_urls['S02'] in {source['url'] for source in gtg20006['sources']} and 'rebuild loop is disclosed by Anthropic' in gtg20006['caveat_en'])
+  dispute=ev['SIG_2026_US_CHINA_DISTILLATION_SECURITY_DISPUTE']
+  ok(lang+': U.S. and China positions remain paired',all(source_urls[source_id] in {source['url'] for source in dispute['sources']} for source_id in ['S04','S05']) and dispute['numbers']['official_positions']==2)
+  distillation=ev['SIG_2026_ANTHROPIC_DISTILLATION_ABUSE_DISCLOSURE']
+  ok(lang+': February distillation numbers and date preserved',distillation['date']=='2026-02-23' and distillation['numbers']=={'attributed_accounts_approx':24000,'interactions_more_than':16000000})
+  ok(lang+': September distillation state is a separate observation',distillation['current_state']['observed_at']=='2026-09-10' and distillation['current_state']['event_date'] is None and distillation['current_state']['numbers']['alibaba_exchanges_gt']==151000000)
+  gate_claim=next(item for item in d['claimChecks'] if item['id']=='CLM_PROVIDER_OBSERVABILITY_ACCESS_GATE')
+  ok(lang+': provider observability claim remains scoped partial',gate_claim['status']=='partially_verified' and gate_claim['confidence']=='B' and len(gate_claim['supporting_evidence'])==3 and len(gate_claim['qualifying_evidence'])==1)
+  v035edges=[edge for edge in d['edges'] if edge['id'] in d['migrationAudit']['v035_added_edge_ids']]
+  ok(lang+': 39 v0.35 links include 21 thematic memberships',len(v035edges)==39 and sum(edge['relation']=='part_of_arc' for edge in v035edges)==21 and all(edge['relationship_class']=='thematic' for edge in v035edges if edge['relation']=='part_of_arc'))
+  ok(lang+': observability claim reaches arcs and thesis nodes',set(gate_claim['arcIds'])>={'ARC_QUIET_ACCESS_CONTROL','ARC_SOVEREIGN_FLOW_GATING','ARC_COGSEC_LAB_TO_WILD_TO_STATE'} and {'THESIS_ACCESS_AS_POWER','THESIS_CORE'}<={edge['target'] for edge in v035edges if edge['source']==gate_claim['id']})
+  if lang=='ru':ok('ru: v0.35 authored labels localised',all(re.search('[А-Яа-яЁё]',ev[event_id]['title']) for event_id in anthropic_ids) and all(re.search('[А-Яа-яЁё]',next(item for item in d['claimChecks'] if item['id']==claim_id)['title']) for claim_id in ['CLM_006_MACHINE_SPEED_CYBER','CLM_007_COGNITIVE_SECURITY','CLM_013_QUIET_ACCESS_CONTROL','CLM_PROVIDER_OBSERVABILITY_ACCESS_GATE']))
   report['languages'][lang]={'references':result['checked_references'],'events':len(ev),'cyber_facts':len(cyber),'curated_core':sum(e['editorial_priority']==1 for e in cyber),'thematic_edges':sum(x['relation']=='part_of_arc' for x in d['edges']),'unresolved_actor_labels':len(unresolved),'sources':len(urls)}
  r,e=data['ru'],data['en'];ok('RU/EN edge signature parity',[(x['id'],x['source'],x['target'],x['relation']) for x in r['edges']]==[(x['id'],x['source'],x['target'],x['relation']) for x in e['edges']])
  keys=['id','resilience_track_ids','defense_evidence_kind','defense_stage_ids','pipeline_metrics','pipeline_semantics','artifact_kind','normative_force','implementation_stage','primary_domain_id','cyber_domain_ids','cyber_role_ids','delegated_authority','editorial_priority','jurisdictions','actor_entities','cyber_subdomain_ids','behavioral_mechanism_ids','behavioral_status','evidence_context','evidence_method','agent_population_scope','shared_writable_state','oversight_target','motivation_basis','behavior_track_ids','behavior_origin','concealment_targets','persistence_media','goal_source']
  ok('RU/EN classification parity',all(all(a.get(k)==b.get(k) for k in keys) for a,b in zip(r['events'],e['events'])))
  ok('RU/EN new track and source index parity',r['cyberFramework']['resilience_tracks']==e['cyberFramework']['resilience_tracks'] and [(s['id'],s['url']) for s in r['sourceIndex']]==[(s['id'],s['url']) for s in e['sourceIndex']])
+ ok('RU/EN v0.35 current-state parity',next(x for x in r['events'] if x['id']=='SIG_2026_ANTHROPIC_DISTILLATION_ABUSE_DISCLOSURE')['current_state']['numbers']==next(x for x in e['events'] if x['id']=='SIG_2026_ANTHROPIC_DISTILLATION_ABUSE_DISCLOSURE')['current_state']['numbers'])
  index=(root/'index.html').read_text();readme=(root/'README.md').read_text()
- ok('index: current release marker','AI Power Atlas · v0.34' in index and 'AI POWER ATLAS · V0.34' in index)
- ok('index: current collection counts',all(x in index for x in ['372 события','73 проверяемых тезиса','25 сюжетных арок','790 связей','148 записей','85 опорных']))
- ok('index: bilingual atlas and current schema links',all(x in index for x in ['href="ai-power-atlas-ru.html"','href="ai-power-atlas.html"','href="SCHEMA_v034.md"']))
- ok('README: current release summary','# AI Power Atlas — v0.34' in readme and '372 события, 73 тезиса' in readme and '`SCHEMA_v034.md`' in readme)
+ ok('index: current release marker','AI Power Atlas · v0.35' in index and 'AI POWER ATLAS · V0.35' in index)
+ ok('index: current collection counts',all(x in index for x in ['379 событий','73 тезиса','31 проверка тезисов','25 сюжетных арок','829 связей','155 записей','92 опорных']))
+ ok('index: bilingual atlas and current schema links',all(x in index for x in ['href="ai-power-atlas-ru.html"','href="ai-power-atlas.html"','href="SCHEMA_v035.md"']))
+ ok('README: current release summary','# AI Power Atlas — v0.35' in readme and '379 событий, 73 тезиса и 31 проверяемое утверждение' in readme and '`SCHEMA_v035.md`' in readme)
  report['passed']=True;report['assertions']=len(report['tests']);(root/'review/validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  print(json.dumps({k:v for k,v in report.items() if k!='tests'},ensure_ascii=False,indent=2));return report
 if __name__=='__main__':

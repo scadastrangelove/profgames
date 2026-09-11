@@ -316,7 +316,7 @@ function _legacyOpenDetail(k,id,options){ options=options||{}; if(currentDetail 
 
 function bindDetailActions(root){ if(!root) return; root.querySelectorAll('[data-filter-layer]').forEach(function(button){ button.onclick=function(ev){ ev.stopPropagation(); factState.layer=button.dataset.filterLayer; document.getElementById('filter-layer').value=factState.layer; renderFacts(); closeDetail(); switchTab('facts'); }; }); }
 
-/* v0.34 shared presentation and navigation. No semantic overrides of the JSON. */
+/* v0.35 shared presentation and navigation. No semantic overrides of the JSON. */
 var atlasRestoring = true;
 var atlasReturnFocus = null;
 var atlasReady = false;

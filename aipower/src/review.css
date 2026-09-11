@@ -31,7 +31,7 @@
  .side{min-width:0!important}.side .sidebar-help{display:none}.side .nav{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;gap:5px;padding-bottom:5px;width:100%;min-width:0}.side .nav button{flex:0 0 auto!important;width:auto!important;max-width:190px;padding:8px 10px!important;font-size:11px;white-space:nowrap}.layout{gap:10px!important}
 }
 
-/* v0.34: evidence-to-resilience reading layer, separate from the five domains. */
+/* v0.35: evidence-to-resilience reading layer, separate from the five domains. */
 .resilience-section{margin:16px 0;border:1px solid var(--line);border-radius:10px;background:var(--panel,transparent);min-width:0}
 .resilience-section>summary{padding:15px 18px;cursor:pointer;font-size:15px;line-height:1.4}
 .resilience-section>summary>span{float:right;color:var(--muted);font:12px var(--mono);padding:3px 0 0 12px}

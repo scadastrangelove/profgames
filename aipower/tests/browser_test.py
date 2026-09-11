@@ -49,7 +49,7 @@ def run(root,executable,only=None):
    pg.locator('.behavior-section').screenshot(path=str(root/'review'/f'{lang}-behavior-1440.png'))
    pg.locator('[data-behavior-track="BEH_TRACK_CONCEALMENT_PERSISTENCE"]').click()
    ok(lang+': concealment view has four authored stages',pg.locator('.behavior-stage').count()==4)
-   ok(lang+': concealment view selects 20 classified records',pg.evaluate('behaviorEvents(cyberRenderedEvents).length')==20)
+   ok(lang+': concealment view selects 23 classified records',pg.evaluate('behaviorEvents(cyberRenderedEvents).length')==23)
    ok(lang+': Astra controllability card is visible',pg.locator('.behavior-evidence-card[data-id="SIG_2026_ASTRA_COT_CONTROLLABILITY_MONITORABILITY"]').count()==1)
    ok(lang+': Astra prompted-evasion card is visible',pg.locator('.behavior-evidence-card[data-id="SIG_2026_ASTRA_PROMPTED_MONITOR_EVASION"]').count()==1)
    ok(lang+': concealment track reaches permalink','b.track=BEH_TRACK_CONCEALMENT_PERSISTENCE' in pg.url)
@@ -107,7 +107,7 @@ def run(root,executable,only=None):
     pg.evaluate('(pair)=>openDetail(pair[0],window[pair[1]][0].id)',[kind,var]);ok(lang+': '+kind+' opens',pg.locator('#detail').inner_text().strip()!='');pg.evaluate('closeDetail()')
    # Render every reviewed card, checking that shared metadata stays total.
    pg.evaluate("cyberFocusEvents().forEach(e=>{openDetail('event',e.id,{replace:true});if(!document.querySelector('#detail .governance-card'))throw new Error('missing governance '+e.id)});closeDetail()")
-   ok(lang+': all 133 governance drawers render',not errs)
+   ok(lang+': governance drawers render without errors',not errs)
    ok(lang+': no external requests',not requests)
    ok(lang+': no page errors',not errs)
    report['languages'][lang]={'tabs':tabs,'errors':errs,'external_requests':requests,'positions':heights,'page_widths':widths,'fresh_permalink_errors':fresherrs}
