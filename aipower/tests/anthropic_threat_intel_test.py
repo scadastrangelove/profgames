@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline browser checks for the v0.35 Anthropic threat-intelligence layer."""
+"""Offline browser checks that the v0.35 Anthropic layer survives the current atlas."""
 from pathlib import Path
 import argparse
 import json
@@ -44,10 +44,10 @@ def run(root: Path, executable: str):
             page.on("request", lambda request, bucket=requests: bucket.append(request.url))
             page.set_content((root / filename).read_text(), wait_until="load")
 
-            ok(lang + ": v0.35 data loaded", page.evaluate("D.meta.version") == "0.35")
+            ok(lang + ": current data loaded", page.evaluate("D.meta.version") == "0.36")
             ok(
-                lang + ": v0.35 counts loaded",
-                page.evaluate("[EV.length,CHECKS.length,EDGES.length,SOURCES.length]") == [379, 31, 829, 562],
+                lang + ": current counts loaded",
+                page.evaluate("[EV.length,CHECKS.length,EDGES.length,SOURCES.length]") == [384, 32, 864, 570],
             )
 
             page.evaluate("switchTab('story')")
@@ -103,7 +103,7 @@ def run(root: Path, executable: str):
             for width, height in [(1440, 1100), (390, 844)]:
                 page.set_viewport_size({"width": width, "height": height})
                 page.evaluate("switchTab('cyber')")
-                ok(lang + ": no v0.35 page overflow " + str(width), page.evaluate("document.documentElement.scrollWidth") <= width)
+                ok(lang + ": no current page overflow " + str(width), page.evaluate("document.documentElement.scrollWidth") <= width)
 
             ok(lang + ": no JavaScript errors", not errors)
             ok(lang + ": no external requests", not requests)

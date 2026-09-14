@@ -1,0 +1,45 @@
+{
+  "mode": "local HTML injection; no network",
+  "checks": [
+    "ru: v0.36 data loaded",
+    "ru: v0.36 counts loaded",
+    "ru: pacing event reaches story graph SIG_2026_DOW_AI_STRATEGY_SPEED_WINS",
+    "ru: pacing event reaches story graph SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
+    "ru: pacing event reaches story graph SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
+    "ru: pacing event reaches story graph SIG_2026_FRONTIER_LAB_PACING_ENDORSEMENTS",
+    "ru: pacing event reaches story graph SIG_2026_TRUMP_REJECTS_FRONTIER_PACING",
+    "ru: pacing arc opens",
+    "ru: scoped pacing claim opens",
+    "ru: proposal and forecast caveat visible",
+    "ru: no v0.36 page overflow 1440",
+    "ru: no v0.36 page overflow 390",
+    "ru: no JavaScript errors",
+    "ru: no external requests",
+    "en: v0.36 data loaded",
+    "en: v0.36 counts loaded",
+    "en: pacing event reaches story graph SIG_2026_DOW_AI_STRATEGY_SPEED_WINS",
+    "en: pacing event reaches story graph SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
+    "en: pacing event reaches story graph SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
+    "en: pacing event reaches story graph SIG_2026_FRONTIER_LAB_PACING_ENDORSEMENTS",
+    "en: pacing event reaches story graph SIG_2026_TRUMP_REJECTS_FRONTIER_PACING",
+    "en: pacing arc opens",
+    "en: scoped pacing claim opens",
+    "en: proposal and forecast caveat visible",
+    "en: no v0.36 page overflow 1440",
+    "en: no v0.36 page overflow 390",
+    "en: no JavaScript errors",
+    "en: no external requests"
+  ],
+  "languages": {
+    "ru": {
+      "errors": [],
+      "external_requests": []
+    },
+    "en": {
+      "errors": [],
+      "external_requests": []
+    }
+  },
+  "passed": true,
+  "assertions": 28
+}
