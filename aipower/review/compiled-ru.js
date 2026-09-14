@@ -33,7 +33,7 @@ var relationColors = {
   generalizes:'#365f9d', institutionalizes:'#107052', reframes:'#6b4aa2', supports_arc:'#107052',
   key_node:'#46535f',part_of_arc:'#747c85',weakens:'#a66f13'
 };
-var graphState = { showAuto:false, preset:'', family:'', arc:'', relation:'' };
+var graphState = { showAuto:false, scope:'core', preset:'', family:'', arc:'', relation:'' };
 var catalogState = {
   q:'', jurisdiction:'', actor:'', family:'', lane:'', arc:'', relation:'', confidence:'', status:'',
   region:'', location:'', institution:'', geoContext:'', geoScope:'', actorType:'', actorJurisdiction:'', source:''
@@ -553,9 +553,9 @@ function initHeader(){
     D.summary.total_claims + ' ' + ruPlural(D.summary.total_claims, 'тезис', 'тезиса', 'тезисов'),
     D.summary.total_edges + ' ' + ruPlural(D.summary.total_edges, 'связь', 'связи', 'связей')
   ].filter(Boolean).map(function(item){ return '<span class="pill">' + esc(item) + '</span>'; }).join('');
-  document.getElementById('edge-hint').textContent = 'Точки — датированные факты. Линии справа — связи дуг с опорными тезисами; автоматические и тонкие связи включаются отдельно.';
+  document.getElementById('edge-hint').textContent = 'Семейства объединяют механизмы. Кейсы, подмеханизмы и оговорки скрыты по умолчанию; точки всегда стоят по дате события.';
   document.getElementById('story-lede').textContent =
-    'Точки — факты, расположенные на общей шкале по дате события. Цветная полоса показывает временной охват дуги, линии справа — её связи с опорными тезисами. Claims, caveats и служебные связи не изображаются как события.';
+    'Шесть семейств задают верхний уровень чтения. Внутри показаны самостоятельные механизмы; кейсы, подмеханизмы и уточнения раскрываются отдельно. Цветная полоса и точки следуют дате события, линии справа связывают механизм с опорными тезисами.';
 }
 
 function initNav(){
@@ -859,14 +859,23 @@ function optionList(values, label, selected, format){
 
 function initGraphControls(){
   document.getElementById('family-select').innerHTML = optionList(FAMILIES.map(function(family){ return family.id; }), 'Семейство: все', '', familyTitleRu);
-  document.getElementById('arc-select').innerHTML = '<option value="">Дуга: все</option>' + ARCS.map(function(arc){
-    return '<option value="' + esc(arc.id) + '">' + esc(truncate(familyTitleRu(arc.family_id) + ' · ' + arcTitleRu(arc), 72)) + '</option>';
+  document.getElementById('arc-select').innerHTML = '<option value="">Точный сюжет: все</option>' + FAMILIES.slice().sort(function(a,b){ return (a.display_order || 99) - (b.display_order || 99); }).map(function(family){
+    var options = ARCS.filter(function(arc){ return arc.family_id === family.id; }).sort(function(a,b){ return (a.display_order || 999) - (b.display_order || 999); }).map(function(arc){
+      return '<option value="' + esc(arc.id) + '">' + esc(arcRoleLabel(arc) + ' · ' + truncate(arcTitleRu(arc), 62)) + '</option>';
+    }).join('');
+    return '<optgroup label="' + esc(familyTitleRu(family)) + '">' + options + '</optgroup>';
   }).join('');
   document.getElementById('relation-select').innerHTML = optionList(Object.keys(D.relationTypes || {}).sort(), 'Тип связи: все', '', relationLabel);
   document.getElementById('toggle-auto').addEventListener('click', function(){
     graphState.showAuto = !graphState.showAuto;
     this.classList.toggle('active', graphState.showAuto);
     this.textContent = graphState.showAuto ? 'Скрыть авто-связи' : 'Показать авто-связи';
+    renderStoryMap();
+  });
+  document.getElementById('toggle-arc-levels').addEventListener('click', function(){
+    graphState.scope = graphState.scope === 'all' ? 'core' : 'all';
+    this.classList.toggle('active', graphState.scope === 'all');
+    this.textContent = graphState.scope === 'all' ? 'Скрыть кейсы и уточнения' : 'Показать кейсы и уточнения';
     renderStoryMap();
   });
   document.getElementById('family-select').addEventListener('change', function(){ graphState.preset = ''; graphState.family = this.value; graphState.arc = ''; document.getElementById('arc-select').value = ''; renderStoryMap(); renderRecipes(); });
@@ -876,8 +885,7 @@ function initGraphControls(){
 
 function renderStoryMap(){
   var svg = document.getElementById('story-svg');
-  var rowH = 72;
-  var top = 92;
+  var top = 62;
   var labelX = 28;
   var bandStartX = 480;
   var bandEndX = 1000;
@@ -885,38 +893,72 @@ function renderStoryMap(){
   var thesisX = 1138;
   var widthAll = 1400;
   var visibleArcs = graphArcs();
+  var familyIds = hierarchyFamilyIds(visibleArcs);
+  var rows = [];
+  familyIds.forEach(function(familyId){
+    var family = byFamily[familyId];
+    if (!family) return;
+    rows.push({ type:'family', family:family });
+    visibleArcs.filter(function(arc){ return arc.family_id === familyId; }).forEach(function(arc){ rows.push({ type:'arc', arc:arc }); });
+  });
+  var cursor = top;
+  var arcY = {};
+  rows.forEach(function(row){
+    if (row.type === 'family') { row.top = cursor; row.y = cursor + 19; cursor += 43; }
+    else { row.top = cursor; row.y = cursor + 30; arcY[row.arc.id] = row.y; cursor += 62; }
+  });
   var thesisBottom = THESIS.length ? 150 + (THESIS.length - 1) * 124 + 58 : 0;
-  var height = Math.max(620, top + visibleArcs.length * rowH + 76, thesisBottom);
+  var height = Math.max(620, cursor + 34, thesisBottom);
   var visibleEdges = graphEdges();
   var thesisEdges = displayedThesisEdges(visibleEdges);
   var bounds = storyBounds();
   document.getElementById('edge-count').textContent = 'дуга→тезис: ' + thesisEdges.length + ' · граф: ' + visibleEdges.length + ' / ' + EDGES.length;
+  var hierarchySummary = document.getElementById('story-hierarchy-summary');
+  if (hierarchySummary) hierarchySummary.textContent = hierarchySummaryText();
   var thesisY = {};
   THESIS.forEach(function(node, index){
     thesisY[node.id] = 150 + index * 124;
   });
   svg.setAttribute('viewBox', '0 0 ' + widthAll + ' ' + height);
   var out = '<rect width="' + widthAll + '" height="' + height + '" fill="transparent"/>';
-  out += '<text x="' + labelX + '" y="30" class="svg-label">сюжетные дуги</text><text x="' + bandStartX + '" y="30" class="svg-label">факты по дате события</text><text x="' + thesisX + '" y="30" class="svg-label">опорные тезисы</text>';
+  out += '<text x="' + labelX + '" y="30" class="svg-label">семейства и механизмы</text><text x="' + bandStartX + '" y="30" class="svg-label">факты по дате события</text><text x="' + thesisX + '" y="30" class="svg-label">опорные тезисы</text>';
   for (var year = bounds.min; year <= bounds.max; year += 1) {
     var yearX = storyDateX(String(year) + '-01-01', bounds.min, bounds.max, bandStartX, bandEndX);
     out += '<line class="story-grid" x1="' + yearX.toFixed(1) + '" y1="48" x2="' + yearX.toFixed(1) + '" y2="' + (height - 36) + '"/>';
     out += '<text class="story-year" x="' + (yearX + 4).toFixed(1) + '" y="44">' + year + '</text>';
   }
   out += '<line class="story-grid" x1="' + bandEndX + '" y1="48" x2="' + bandEndX + '" y2="' + (height - 36) + '"/>';
-  visibleArcs.forEach(function(arc, index){
-    var y = top + index * rowH;
+  rows.forEach(function(row, index){
+    if (row.type === 'family') {
+      var family = row.family;
+      var familyArcs = visibleArcs.filter(function(arc){ return arc.family_id === family.id; });
+      var allFamilyArcs = ARCS.filter(function(arc){ return arc.family_id === family.id; });
+      var hiddenCount = Math.max(0, allFamilyArcs.length - familyArcs.length);
+      var familyMeta = familyArcs.length + ' показано' + (hiddenCount ? ' · ' + hiddenCount + ' скрыто' : '');
+      if (family.id === 'ARC_FAMILY_FORMATION_TIMELINE' && !familyArcs.length) familyMeta = allFamilyArcs.length + ' временные линзы · нажмите, чтобы открыть';
+      out += '<g class="family-row" data-family-filter="' + esc(family.id) + '" tabindex="0" role="button">';
+      out += '<rect x="18" y="' + row.top + '" width="' + (widthAll - 42) + '" height="34" rx="6" fill="' + familyColor(family.id) + '" opacity=".09"/>';
+      out += '<rect x="18" y="' + row.top + '" width="5" height="34" rx="2" fill="' + familyColor(family.id) + '"/>';
+      out += '<text x="' + labelX + '" y="' + (row.y + 2) + '" class="family-title">' + esc(truncate(familyTitleRu(family), 54)) + '</text>';
+      out += '<text x="' + bandStartX + '" y="' + (row.y + 2) + '" class="family-sub">' + esc(familyMeta) + '</text></g>';
+      return;
+    }
+    var arc = row.arc;
+    var y = row.y;
     var facts = factsForArc(arc);
     var firstFact = facts[0];
     var lastFact = facts[facts.length - 1];
     var firstX = firstFact ? storyDateX(firstFact.date, bounds.min, bounds.max, bandStartX, bandEndX) : bandStartX;
     var lastX = lastFact ? storyDateX(lastFact.date, bounds.min, bounds.max, bandStartX, bandEndX) : bandStartX;
     var range = firstFact && lastFact ? String(firstFact.date).slice(0, 4) + '–' + String(lastFact.date).slice(0, 4) : 'без даты';
-    var color = arcColor(arc.id);
-    out += '<g class="arc-row" data-kind="arc" data-id="' + esc(arc.id) + '">';
-    out += '<rect x="18" y="' + (y - 30) + '" width="' + (widthAll - 42) + '" height="58" rx="8" fill="' + (index % 2 ? 'rgba(255,255,255,.26)' : 'rgba(255,255,255,.48)') + '"/>';
-    out += '<text x="' + labelX + '" y="' + (y - 7) + '" class="arc-title">' + esc(truncate(arcTitleRu(arc), 50)) + '</text>';
-    out += '<text x="' + labelX + '" y="' + (y + 13) + '" class="arc-sub">' + esc(familyTitleRu(arc.family_id)) + ' · ' + facts.length + ' ' + ruPlural(facts.length, 'факт', 'факта', 'фактов') + ' · ' + range + '</text>';
+    var color = familyColor(arc.family_id);
+    var nested = Boolean(arc.parent_arc_id) || arc.display_role !== 'mechanism';
+    var titleX = labelX + (nested ? 22 : 0);
+    out += '<g class="arc-row ' + (nested ? 'is-nested' : 'is-root') + '" data-kind="arc" data-id="' + esc(arc.id) + '">';
+    out += '<rect x="18" y="' + (y - 28) + '" width="' + (widthAll - 42) + '" height="56" rx="7" fill="' + (index % 2 ? 'rgba(255,255,255,.26)' : 'rgba(255,255,255,.48)') + '"/>';
+    if (nested) out += '<path class="hierarchy-branch" d="M' + (labelX + 7) + ',' + (y - 21) + ' V' + (y - 7) + ' H' + (titleX - 5) + '" stroke="' + color + '"/>';
+    out += '<text x="' + titleX + '" y="' + (y - 7) + '" class="arc-title">' + esc(truncate(arcTitleRu(arc), nested ? 45 : 50)) + '</text>';
+    out += '<text x="' + titleX + '" y="' + (y + 13) + '" class="arc-sub">' + esc(arcRoleLabel(arc)) + ' · ' + facts.length + ' ' + ruPlural(facts.length, 'факт', 'факта', 'фактов') + ' · ' + range + '</text>';
     if (facts.length) out += '<rect class="arc-band" x="' + firstX.toFixed(1) + '" y="' + (y - 20) + '" width="' + Math.max(8, lastX - firstX).toFixed(1) + '" height="40" rx="8" fill="' + color + '" opacity=".14"/>';
     out += '</g>';
     var levelEnds = [-Infinity, -Infinity, -Infinity, -Infinity, -Infinity];
@@ -940,9 +982,9 @@ function renderStoryMap(){
     out += '</g>';
   });
   thesisEdges.forEach(function(edge){
-    var arcIndex = visibleArcs.findIndex(function(arc){ return arc.id === edge.arc_id; });
-    if (arcIndex < 0) return;
-    var y1 = top + arcIndex * rowH - 8;
+    var y1 = arcY[edgeArcId(edge)];
+    if (y1 == null) return;
+    y1 -= 8;
     var thesisId = byThesis[edge.target] ? edge.target : edge.source;
     var y2 = thesisY[thesisId] || 120;
     var color = edgeArcColor(edge);
@@ -952,6 +994,20 @@ function renderStoryMap(){
   svg.innerHTML = out;
   bindClickable(svg);
   bindSvgTooltips(svg);
+  svg.querySelectorAll('[data-family-filter]').forEach(function(node){
+    var activate = function(){
+      graphState.preset = '';
+      graphState.arc = '';
+      graphState.family = graphState.family === node.dataset.familyFilter ? '' : node.dataset.familyFilter;
+      document.getElementById('family-select').value = graphState.family;
+      document.getElementById('arc-select').value = '';
+      renderStoryMap();
+      renderRecipes();
+      writeAtlasHash();
+    };
+    node.addEventListener('click', activate);
+    node.addEventListener('keydown', function(event){ if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); activate(); } });
+  });
 }
 
 function renderRecipes(){
@@ -1219,6 +1275,12 @@ function arcList(ids){
   if (!ids || !ids.length) return '';
   return '<div class="block"><h4>Сюжетные дуги</h4>' + ids.map(function(id){ return detailLink(id); }).join(' ') + '</div>';
 }
+function primaryArcBlock(event){
+  if (!event.story_primary_arc_id) return '';
+  return '<div class="block"><h4>Маршрут чтения</h4><p class="small">Основной сюжет используется только для размещения карточки и не сильнее остальных доказательных связей.</p>' +
+    detailLink(event.story_primary_arc_id) +
+    ((event.story_secondary_arc_ids || []).length ? '<details><summary>Другие тематические сюжеты (' + event.story_secondary_arc_ids.length + ')</summary><div class="block">' + event.story_secondary_arc_ids.map(detailLink).join(' ') + '</div></details>' : '') + '</div>';
+}
 function distinctDetailBlock(seen, value, title, cls){
   var text = String(value || '').trim();
   if (!text || seen.indexOf(text) !== -1) return '';
@@ -1248,13 +1310,16 @@ function renderEventDetail(event){
     taxonomyTagBlock('Масштаб', event.geographic_scopes) +
     '<div class="block"><h4>Акторы</h4><div class="tags">' + tags(event.actor_entities) + tags((event.actor_types || []).map(actorTypeLabelRu)) + '</div></div>' +
     '<div class="block"><h4>Стек и структуры</h4><div class="tags">' + stackTags(event.stack_layer) + tags((event.strange_structure || []).map(structureLabelRu)) + tags(event.research_question) + '</div></div>' +
-    numberBlock(event.numbers) + arcList(event.arcIds) + edgeList(event.edgeIds) + sourceBlock(event);
+    numberBlock(event.numbers) + primaryArcBlock(event) + (event.story_primary_arc_id ? '' : arcList(event.arcIds)) + edgeList(event.edgeIds) + sourceBlock(event);
 }
 function renderArcDetail(arc){
   var arcEdges = EDGES.filter(function(edge){ return edge.arc_id === arc.id; });
   var facts = factsForArc(arc);
+  var children = ARCS.filter(function(item){ return item.parent_arc_id === arc.id; }).sort(function(a,b){ return (a.display_order || 999) - (b.display_order || 999); });
   return '<h2 id="detail-title">' + esc(arcTitleRu(arc)) + '</h2><div class="id">' + esc(arc.id) + '</div>' +
-    '<div class="tags">' + tag(familyTitleRu(arc.family_id)) + tag(arc.arc_kind) + tag(arc.arc_type) + tag(arc.status) + tag(arc.start_date) + tag(arc.end_date) + tags(arc.visual_lanes) + '</div>' +
+    '<div class="tags">' + tag(familyTitleRu(arc.family_id)) + tag(arcRoleLabel(arc)) + tag(arc.arc_type) + tag(arc.status) + tag(arc.start_date) + tag(arc.end_date) + tags(arc.visual_lanes) + '</div>' +
+    (arc.parent_arc_id ? '<div class="block hierarchy-detail"><h4>Родительский сюжет</h4>' + detailLink(arc.parent_arc_id) + '</div>' : '') +
+    (children.length ? '<div class="block hierarchy-detail"><h4>Вложенные сюжеты</h4>' + children.map(function(item){ return detailLink(item.id); }).join(' ') + '</div>' : '') +
     '<div class="block quote"><h4>Тезис дуги</h4><p>' + esc(arc.thesis_ru || '') + '</p></div>' +
     (arc.safe_wording_ru ? '<div class="block caveat"><h4>Границы вывода</h4><p>' + esc(ruSafeWording('arc', arc.id, arc.safe_wording_ru)) + '</p></div>' : '') +
     '<div class="block"><h4>Факты дуги по времени</h4>' + facts.map(function(event){ return detailLink(event.id); }).join(' ') + '</div>' +
@@ -1419,7 +1484,7 @@ function hideTip(){
   document.getElementById('tooltip').classList.remove('show');
 }
 
-/* v0.37 shared presentation and navigation. No semantic overrides of the JSON. */
+/* v0.38 shared presentation, navigation and story-hierarchy helpers. */
 var atlasRestoring = true;
 var atlasReturnFocus = null;
 var atlasReady = false;
@@ -1430,6 +1495,72 @@ function alist(x){ return Array.isArray(x) ? x : (x == null ? [] : [x]); }
 function lf(x,key){ return x && (x[key+'_'+(ATLAS_RU?'ru':'en')] || x[key] || '') || ''; }
 function vocab(group,id){ var x=alist(CYBER_FRAMEWORK[group]).find(function(v){return v.id===id;}); return x?lf(x,'label'):String(id||''); }
 function relationLabel(id){var label=(D.relationLabels||{})[id];return label?label[ATLAS_RU?'ru':'en']:String(id||'').replace(/_/g,' ');}
+function arcRoleLabel(arcOrRole){
+ var role=typeof arcOrRole==='string'?arcOrRole:(arcOrRole&&arcOrRole.display_role)||'mechanism';
+ var item=alist((D.arcHierarchy||{}).role_definitions).find(function(x){return x.id===role;});
+ return item?lf(item,'label'):String(role).replace(/_/g,' ');
+}
+function familyColor(id){
+ return ({ARC_FAMILY_ACCESS_CONTROL:'#365f9d',ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY:'#107052',ARC_FAMILY_CYBER_COGNITION_WAR:'#a1412b',ARC_FAMILY_INFRASTRUCTURE_CAPITAL:'#a66f13',ARC_FAMILY_DECISION_DATA_FINANCE:'#24727a',ARC_FAMILY_FORMATION_TIMELINE:'#6b4aa2'})[id]||'#46535f';
+}
+function arcColor(id){return familyColor(byArc[id]&&byArc[id].family_id);}
+function isTimelineArc(arc){return ['timeline_lens','timeline_marker'].includes((arc&&arc.display_role)||'')||arc&&arc.arc_kind==='phase';}
+function hierarchyFamilyIds(arcs){
+ var order=alist((D.arcHierarchy||{}).family_order);
+ if(graphState.arc&&byArc[graphState.arc])return[byArc[graphState.arc].family_id];
+ if(graphState.family)return[graphState.family];
+ if(graphState.preset)return order.filter(function(id){return arcs.some(function(arc){return arc.family_id===id;});});
+ return order.length?order:FAMILIES.slice().sort(function(a,b){return(a.display_order||99)-(b.display_order||99);}).map(function(f){return f.id;});
+}
+function graphArcs(){
+ var preset=alist(D.recipes).find(function(item){return item.id===graphState.preset;});
+ var allowed=preset&&preset.recommended_arc_ids?preset.recommended_arc_ids:null;
+ var hidden=alist(preset&&preset.recommended_filters&&preset.recommended_filters.hide_arc_ids);
+ return ARCS.filter(function(arc){
+  if(graphState.arc)return arc.id===graphState.arc;
+  if(graphState.family&&arc.family_id!==graphState.family)return false;
+  if(allowed&&allowed.indexOf(arc.id)===-1)return false;
+  if(hidden.indexOf(arc.id)!==-1)return false;
+  if(graphState.preset)return true;
+  if(graphState.family==='ARC_FAMILY_FORMATION_TIMELINE')return isTimelineArc(arc);
+  if(isTimelineArc(arc))return false;
+  if(graphState.scope!=='all'&&arc.default_visible===false)return false;
+  return true;
+ }).sort(function(a,b){
+  var af=byFamily[a.family_id],bf=byFamily[b.family_id];
+  return ((af&&af.display_order)||99)-((bf&&bf.display_order)||99)||(a.display_order||999)-(b.display_order||999)||a.id.localeCompare(b.id);
+ });
+}
+function graphEdges(){
+ var preset=alist(D.recipes).find(function(item){return item.id===graphState.preset;});
+ var allowedRelations=preset&&preset.recommended_relations?preset.recommended_relations:null;
+ var filters=(preset&&preset.recommended_filters)||{};
+ var allowedStyles=filters.edge_styles||null,minStrength=filters.min_strength?strengthRank(filters.min_strength):0;
+ var visible=new Set(graphArcs().map(function(arc){return arc.id;}));
+ return EDGES.filter(function(edge){
+  var isDefault=!edge.is_auto&&edge.style!=='thin'&&!String(edge.id||'').startsWith('AUTO_');
+  if(!graphState.showAuto&&!isDefault)return false;
+  if(!byArc[edge.arc_id]||!visible.has(edge.arc_id))return false;
+  if(graphState.relation&&edge.relation!==graphState.relation)return false;
+  if(allowedRelations&&allowedRelations.indexOf(edge.relation)===-1)return false;
+  if(allowedStyles&&allowedStyles.indexOf(edge.style)===-1)return false;
+  if(minStrength&&strengthRank(edge.strength)<minStrength)return false;
+  return true;
+ });
+}
+function hierarchySummaryText(){
+ var h=(D.summary||{}).arc_hierarchy||{};
+ return tx(
+  (h.families||FAMILIES.length)+' семейств · '+(h.core_mechanisms||0)+' основных механизмов · '+(h.nested_cases_and_qualifiers||0)+' вложенных кейсов и уточнений · '+(h.timeline_records||0)+' временные линзы',
+  (h.families||FAMILIES.length)+' families · '+(h.core_mechanisms||0)+' core mechanisms · '+(h.nested_cases_and_qualifiers||0)+' nested cases and qualifiers · '+(h.timeline_records||0)+' timeline lenses'
+ );
+}
+function syncGraphControls(){
+ var scope=document.getElementById('toggle-arc-levels');
+ if(scope){scope.classList.toggle('active',graphState.scope==='all');scope.textContent=graphState.scope==='all'?tx('Скрыть кейсы и уточнения','Hide cases and qualifiers'):tx('Показать кейсы и уточнения','Show cases and qualifiers');}
+ var auto=document.getElementById('toggle-auto');
+ if(auto){auto.classList.toggle('active',!!graphState.showAuto);auto.textContent=graphState.showAuto?tx('Скрыть авто-связи','Hide auto/thin links'):tx('Показать авто-связи','Show auto/thin links');}
+}
 function cyberFocusEvents(){ return EV.filter(function(e){return !!e.primary_domain_id && alist(e.cyber_domain_ids).length>0;}).sort(function(a,b){return String(a.date).localeCompare(String(b.date))||a.id.localeCompare(b.id);}); }
 function cyberDomains(){return alist(CYBER_FRAMEWORK.domains);}
 function cyberDomain(e){return e.primary_domain_id;}
@@ -1561,7 +1692,8 @@ function renderCyber(){
  bindAtlasCards(grid);bindCyberHover(grid,edges);renderBehaviorLayer(events,all);renderResilienceLayer(events,all);renderCyberThreads(events);renderCyberEdgeList(events);requestAnimationFrame(drawCyberLinks);writeAtlasHash();
 }
 function renderAtlasStats(){
- document.getElementById('stats').innerHTML=[[EV.length,tx('фактов','facts')],[CLAIMS.length,tx('тезисов','claims')],[ARCS.length,tx('сюжетов','story arcs')],[SOURCES.length,tx('URL источников','source URLs')]].map(function(x){return'<div class="stat"><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join('');
+ var hierarchy=(D.summary||{}).arc_hierarchy||{};
+ document.getElementById('stats').innerHTML=[[EV.length,tx('фактов','facts')],[CLAIMS.length,tx('тезисов','claims')],[(hierarchy.core_mechanisms||ARCS.length)+' / '+ARCS.length,tx('основных / всех сюжетов','core / all story records')],[SOURCES.length,tx('URL источников','source URLs')]].map(function(x){return'<div class="stat"><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join('');
  var s=D.summary.claim_status_counts||{};
  var n=document.getElementById('claim-status-summary');if(n)n.textContent=tx('Статусы '+CLAIMS.length+' тезиса: '+(s.verified||0)+' подтверждены · '+(s.partially_verified||0)+' частично · '+(s.disputed||0)+' спорны. Это не показатель точности всех событий.', 'Status of the '+CLAIMS.length+' claims only: '+(s.verified||0)+' verified · '+(s.partially_verified||0)+' partial · '+(s.disputed||0)+' disputed. Not an accuracy score for all events.');
  var rail=document.getElementById('correction-rail');if(rail)rail.innerHTML=alist((D.presentation||{}).corrections).map(function(x){return'<p class="small">'+esc(x)+'</p>';}).join('');
@@ -1644,6 +1776,7 @@ function restoreAtlasHash(){
  var map=filterMap(),f=activeFacts();Object.keys(map).forEach(function(id){var n=document.getElementById(id);if(n)n.value=f[map[id]]||'';});
  var search=document.getElementById('search');if(search)search.value=f.q||'';
  ['family','arc','relation'].forEach(function(k){var n=document.getElementById(k+'-select');if(n)n.value=graphState[k]||'';});
+ syncGraphControls();
  syncCyberControls();if(ATLAS_RU){renderCatalog();renderStoryMap();}else{renderFacts();renderStory('story-svg');renderStory('overview-svg');}
  renderCyber();
  if(tab==='facts'&&ATLAS_RU)tab='catalog';if(tab==='catalog'&&!ATLAS_RU)tab='facts';if(tab==='overview'&&ATLAS_RU)tab='story';

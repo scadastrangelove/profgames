@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline browser checks for the v0.37 global pacing/access comparison."""
+"""Offline browser checks that the v0.37 global pacing/access comparison survives v0.39."""
 from pathlib import Path
 import argparse
 import json
@@ -40,8 +40,8 @@ def run(root: Path, executable: str):
             page.on("request", lambda request, bucket=requests: bucket.append(request.url))
             page.set_content((root / filename).read_text(), wait_until="load")
 
-            ok(lang + ": v0.37 data loaded", page.evaluate("D.meta.version") == "0.37")
-            ok(lang + ": v0.37 counts loaded", page.evaluate("[EV.length,CHECKS.length,ARCS.length,EDGES.length,SOURCES.length]") == [387, 32, 26, 895, 575])
+            ok(lang + ": v0.39 data loaded", page.evaluate("D.meta.version") == "0.39")
+            ok(lang + ": v0.39 counts loaded", page.evaluate("[EV.length,CHECKS.length,ARCS.length,EDGES.length,SOURCES.length]") == [394, 32, 26, 941, 583])
             page.evaluate("switchTab('story')")
             for event_id in EVENT_IDS + REUSED_IDS:
                 ok(lang + ": global event reaches story graph " + event_id, page.locator(f'.event-dot[data-id="{event_id}"]').count() >= 1)
@@ -73,7 +73,7 @@ def run(root: Path, executable: str):
             for width, height in [(1440, 1100), (390, 844)]:
                 page.set_viewport_size({"width": width, "height": height})
                 page.evaluate("switchTab('story')")
-                ok(lang + ": no v0.37 page overflow " + str(width), page.evaluate("document.documentElement.scrollWidth") <= width)
+                ok(lang + ": no v0.39 page overflow " + str(width), page.evaluate("document.documentElement.scrollWidth") <= width)
 
             ok(lang + ": no JavaScript errors", not errors)
             ok(lang + ": no external requests", not requests)

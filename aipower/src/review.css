@@ -54,3 +54,8 @@
 .resilience-metric strong{font:22px/1.3 var(--mono);color:var(--amber)}.resilience-metric b{font-size:12px;line-height:1.5}
 .resilience-metric small,.resilience-metric p,.resilience-metric a{font-size:11px;line-height:1.5;overflow-wrap:anywhere}.resilience-metric p{margin:2px 0}
 @media(max-width:600px){.resilience-tracks{grid-template-columns:repeat(2,minmax(0,1fr))}.resilience-events{grid-template-columns:1fr}.resilience-content{padding:0 12px 14px}.resilience-track{padding:10px}.resilience-section>summary{padding:13px 12px}.resilience-metrics{grid-template-columns:1fr}}
+.hierarchy-summary{margin:0 0 10px;padding:8px 10px;border-left:3px solid var(--blue);background:rgba(54,95,157,.06);color:var(--muted);font:11px/1.45 var(--sans)}
+.family-row{cursor:pointer;outline:none}.family-row:hover rect:first-child,.family-row:focus-visible rect:first-child{opacity:.16}.family-row:focus-visible rect:first-child{stroke:var(--ink);stroke-width:1}
+.family-title{font:650 12px/1 var(--sans);fill:var(--slate)}.family-sub{font:10px/1 var(--mono);fill:var(--faint)}
+.arc-row.is-nested .arc-title{font-size:12px}.arc-row.is-nested .arc-sub{font-size:9.5px}.hierarchy-branch{fill:none;stroke-width:1.3;opacity:.72}
+@media(max-width:820px){.hierarchy-summary{font-size:10.5px}.family-title{font-size:11px}.family-sub{font-size:9px}}

@@ -33,7 +33,7 @@ var relationColors = {
   generalizes:'#365f9d', institutionalizes:'#107052', reframes:'#6b4aa2', supports_arc:'#107052',
   key_node:'#46535f',part_of_arc:'#747c85',weakens:'#a66f13'
 };
-var graphState = { showAuto:false, preset:'', family:'', arc:'', relation:'' };
+var graphState = { showAuto:false, scope:'core', preset:'', family:'', arc:'', relation:'' };
 var catalogState = {
   q:'', jurisdiction:'', actor:'', family:'', lane:'', arc:'', relation:'', confidence:'', status:'',
   region:'', location:'', institution:'', geoContext:'', geoScope:'', actorType:'', actorJurisdiction:'', source:''
@@ -553,9 +553,9 @@ function initHeader(){
     D.summary.total_claims + ' ' + ruPlural(D.summary.total_claims, 'тезис', 'тезиса', 'тезисов'),
     D.summary.total_edges + ' ' + ruPlural(D.summary.total_edges, 'связь', 'связи', 'связей')
   ].filter(Boolean).map(function(item){ return '<span class="pill">' + esc(item) + '</span>'; }).join('');
-  document.getElementById('edge-hint').textContent = 'Точки — датированные факты. Линии справа — связи дуг с опорными тезисами; автоматические и тонкие связи включаются отдельно.';
+  document.getElementById('edge-hint').textContent = 'Семейства объединяют механизмы. Кейсы, подмеханизмы и оговорки скрыты по умолчанию; точки всегда стоят по дате события.';
   document.getElementById('story-lede').textContent =
-    'Точки — факты, расположенные на общей шкале по дате события. Цветная полоса показывает временной охват дуги, линии справа — её связи с опорными тезисами. Claims, caveats и служебные связи не изображаются как события.';
+    'Шесть семейств задают верхний уровень чтения. Внутри показаны самостоятельные механизмы; кейсы, подмеханизмы и уточнения раскрываются отдельно. Цветная полоса и точки следуют дате события, линии справа связывают механизм с опорными тезисами.';
 }
 
 function initNav(){
@@ -859,14 +859,23 @@ function optionList(values, label, selected, format){
 
 function initGraphControls(){
   document.getElementById('family-select').innerHTML = optionList(FAMILIES.map(function(family){ return family.id; }), 'Семейство: все', '', familyTitleRu);
-  document.getElementById('arc-select').innerHTML = '<option value="">Дуга: все</option>' + ARCS.map(function(arc){
-    return '<option value="' + esc(arc.id) + '">' + esc(truncate(familyTitleRu(arc.family_id) + ' · ' + arcTitleRu(arc), 72)) + '</option>';
+  document.getElementById('arc-select').innerHTML = '<option value="">Точный сюжет: все</option>' + FAMILIES.slice().sort(function(a,b){ return (a.display_order || 99) - (b.display_order || 99); }).map(function(family){
+    var options = ARCS.filter(function(arc){ return arc.family_id === family.id; }).sort(function(a,b){ return (a.display_order || 999) - (b.display_order || 999); }).map(function(arc){
+      return '<option value="' + esc(arc.id) + '">' + esc(arcRoleLabel(arc) + ' · ' + truncate(arcTitleRu(arc), 62)) + '</option>';
+    }).join('');
+    return '<optgroup label="' + esc(familyTitleRu(family)) + '">' + options + '</optgroup>';
   }).join('');
   document.getElementById('relation-select').innerHTML = optionList(Object.keys(D.relationTypes || {}).sort(), 'Тип связи: все', '', relationLabel);
   document.getElementById('toggle-auto').addEventListener('click', function(){
     graphState.showAuto = !graphState.showAuto;
     this.classList.toggle('active', graphState.showAuto);
     this.textContent = graphState.showAuto ? 'Скрыть авто-связи' : 'Показать авто-связи';
+    renderStoryMap();
+  });
+  document.getElementById('toggle-arc-levels').addEventListener('click', function(){
+    graphState.scope = graphState.scope === 'all' ? 'core' : 'all';
+    this.classList.toggle('active', graphState.scope === 'all');
+    this.textContent = graphState.scope === 'all' ? 'Скрыть кейсы и уточнения' : 'Показать кейсы и уточнения';
     renderStoryMap();
   });
   document.getElementById('family-select').addEventListener('change', function(){ graphState.preset = ''; graphState.family = this.value; graphState.arc = ''; document.getElementById('arc-select').value = ''; renderStoryMap(); renderRecipes(); });
@@ -876,8 +885,7 @@ function initGraphControls(){
 
 function renderStoryMap(){
   var svg = document.getElementById('story-svg');
-  var rowH = 72;
-  var top = 92;
+  var top = 62;
   var labelX = 28;
   var bandStartX = 480;
   var bandEndX = 1000;
@@ -885,38 +893,72 @@ function renderStoryMap(){
   var thesisX = 1138;
   var widthAll = 1400;
   var visibleArcs = graphArcs();
+  var familyIds = hierarchyFamilyIds(visibleArcs);
+  var rows = [];
+  familyIds.forEach(function(familyId){
+    var family = byFamily[familyId];
+    if (!family) return;
+    rows.push({ type:'family', family:family });
+    visibleArcs.filter(function(arc){ return arc.family_id === familyId; }).forEach(function(arc){ rows.push({ type:'arc', arc:arc }); });
+  });
+  var cursor = top;
+  var arcY = {};
+  rows.forEach(function(row){
+    if (row.type === 'family') { row.top = cursor; row.y = cursor + 19; cursor += 43; }
+    else { row.top = cursor; row.y = cursor + 30; arcY[row.arc.id] = row.y; cursor += 62; }
+  });
   var thesisBottom = THESIS.length ? 150 + (THESIS.length - 1) * 124 + 58 : 0;
-  var height = Math.max(620, top + visibleArcs.length * rowH + 76, thesisBottom);
+  var height = Math.max(620, cursor + 34, thesisBottom);
   var visibleEdges = graphEdges();
   var thesisEdges = displayedThesisEdges(visibleEdges);
   var bounds = storyBounds();
   document.getElementById('edge-count').textContent = 'дуга→тезис: ' + thesisEdges.length + ' · граф: ' + visibleEdges.length + ' / ' + EDGES.length;
+  var hierarchySummary = document.getElementById('story-hierarchy-summary');
+  if (hierarchySummary) hierarchySummary.textContent = hierarchySummaryText();
   var thesisY = {};
   THESIS.forEach(function(node, index){
     thesisY[node.id] = 150 + index * 124;
   });
   svg.setAttribute('viewBox', '0 0 ' + widthAll + ' ' + height);
   var out = '<rect width="' + widthAll + '" height="' + height + '" fill="transparent"/>';
-  out += '<text x="' + labelX + '" y="30" class="svg-label">сюжетные дуги</text><text x="' + bandStartX + '" y="30" class="svg-label">факты по дате события</text><text x="' + thesisX + '" y="30" class="svg-label">опорные тезисы</text>';
+  out += '<text x="' + labelX + '" y="30" class="svg-label">семейства и механизмы</text><text x="' + bandStartX + '" y="30" class="svg-label">факты по дате события</text><text x="' + thesisX + '" y="30" class="svg-label">опорные тезисы</text>';
   for (var year = bounds.min; year <= bounds.max; year += 1) {
     var yearX = storyDateX(String(year) + '-01-01', bounds.min, bounds.max, bandStartX, bandEndX);
     out += '<line class="story-grid" x1="' + yearX.toFixed(1) + '" y1="48" x2="' + yearX.toFixed(1) + '" y2="' + (height - 36) + '"/>';
     out += '<text class="story-year" x="' + (yearX + 4).toFixed(1) + '" y="44">' + year + '</text>';
   }
   out += '<line class="story-grid" x1="' + bandEndX + '" y1="48" x2="' + bandEndX + '" y2="' + (height - 36) + '"/>';
-  visibleArcs.forEach(function(arc, index){
-    var y = top + index * rowH;
+  rows.forEach(function(row, index){
+    if (row.type === 'family') {
+      var family = row.family;
+      var familyArcs = visibleArcs.filter(function(arc){ return arc.family_id === family.id; });
+      var allFamilyArcs = ARCS.filter(function(arc){ return arc.family_id === family.id; });
+      var hiddenCount = Math.max(0, allFamilyArcs.length - familyArcs.length);
+      var familyMeta = familyArcs.length + ' показано' + (hiddenCount ? ' · ' + hiddenCount + ' скрыто' : '');
+      if (family.id === 'ARC_FAMILY_FORMATION_TIMELINE' && !familyArcs.length) familyMeta = allFamilyArcs.length + ' временные линзы · нажмите, чтобы открыть';
+      out += '<g class="family-row" data-family-filter="' + esc(family.id) + '" tabindex="0" role="button">';
+      out += '<rect x="18" y="' + row.top + '" width="' + (widthAll - 42) + '" height="34" rx="6" fill="' + familyColor(family.id) + '" opacity=".09"/>';
+      out += '<rect x="18" y="' + row.top + '" width="5" height="34" rx="2" fill="' + familyColor(family.id) + '"/>';
+      out += '<text x="' + labelX + '" y="' + (row.y + 2) + '" class="family-title">' + esc(truncate(familyTitleRu(family), 54)) + '</text>';
+      out += '<text x="' + bandStartX + '" y="' + (row.y + 2) + '" class="family-sub">' + esc(familyMeta) + '</text></g>';
+      return;
+    }
+    var arc = row.arc;
+    var y = row.y;
     var facts = factsForArc(arc);
     var firstFact = facts[0];
     var lastFact = facts[facts.length - 1];
     var firstX = firstFact ? storyDateX(firstFact.date, bounds.min, bounds.max, bandStartX, bandEndX) : bandStartX;
     var lastX = lastFact ? storyDateX(lastFact.date, bounds.min, bounds.max, bandStartX, bandEndX) : bandStartX;
     var range = firstFact && lastFact ? String(firstFact.date).slice(0, 4) + '–' + String(lastFact.date).slice(0, 4) : 'без даты';
-    var color = arcColor(arc.id);
-    out += '<g class="arc-row" data-kind="arc" data-id="' + esc(arc.id) + '">';
-    out += '<rect x="18" y="' + (y - 30) + '" width="' + (widthAll - 42) + '" height="58" rx="8" fill="' + (index % 2 ? 'rgba(255,255,255,.26)' : 'rgba(255,255,255,.48)') + '"/>';
-    out += '<text x="' + labelX + '" y="' + (y - 7) + '" class="arc-title">' + esc(truncate(arcTitleRu(arc), 50)) + '</text>';
-    out += '<text x="' + labelX + '" y="' + (y + 13) + '" class="arc-sub">' + esc(familyTitleRu(arc.family_id)) + ' · ' + facts.length + ' ' + ruPlural(facts.length, 'факт', 'факта', 'фактов') + ' · ' + range + '</text>';
+    var color = familyColor(arc.family_id);
+    var nested = Boolean(arc.parent_arc_id) || arc.display_role !== 'mechanism';
+    var titleX = labelX + (nested ? 22 : 0);
+    out += '<g class="arc-row ' + (nested ? 'is-nested' : 'is-root') + '" data-kind="arc" data-id="' + esc(arc.id) + '">';
+    out += '<rect x="18" y="' + (y - 28) + '" width="' + (widthAll - 42) + '" height="56" rx="7" fill="' + (index % 2 ? 'rgba(255,255,255,.26)' : 'rgba(255,255,255,.48)') + '"/>';
+    if (nested) out += '<path class="hierarchy-branch" d="M' + (labelX + 7) + ',' + (y - 21) + ' V' + (y - 7) + ' H' + (titleX - 5) + '" stroke="' + color + '"/>';
+    out += '<text x="' + titleX + '" y="' + (y - 7) + '" class="arc-title">' + esc(truncate(arcTitleRu(arc), nested ? 45 : 50)) + '</text>';
+    out += '<text x="' + titleX + '" y="' + (y + 13) + '" class="arc-sub">' + esc(arcRoleLabel(arc)) + ' · ' + facts.length + ' ' + ruPlural(facts.length, 'факт', 'факта', 'фактов') + ' · ' + range + '</text>';
     if (facts.length) out += '<rect class="arc-band" x="' + firstX.toFixed(1) + '" y="' + (y - 20) + '" width="' + Math.max(8, lastX - firstX).toFixed(1) + '" height="40" rx="8" fill="' + color + '" opacity=".14"/>';
     out += '</g>';
     var levelEnds = [-Infinity, -Infinity, -Infinity, -Infinity, -Infinity];
@@ -940,9 +982,9 @@ function renderStoryMap(){
     out += '</g>';
   });
   thesisEdges.forEach(function(edge){
-    var arcIndex = visibleArcs.findIndex(function(arc){ return arc.id === edge.arc_id; });
-    if (arcIndex < 0) return;
-    var y1 = top + arcIndex * rowH - 8;
+    var y1 = arcY[edgeArcId(edge)];
+    if (y1 == null) return;
+    y1 -= 8;
     var thesisId = byThesis[edge.target] ? edge.target : edge.source;
     var y2 = thesisY[thesisId] || 120;
     var color = edgeArcColor(edge);
@@ -952,6 +994,20 @@ function renderStoryMap(){
   svg.innerHTML = out;
   bindClickable(svg);
   bindSvgTooltips(svg);
+  svg.querySelectorAll('[data-family-filter]').forEach(function(node){
+    var activate = function(){
+      graphState.preset = '';
+      graphState.arc = '';
+      graphState.family = graphState.family === node.dataset.familyFilter ? '' : node.dataset.familyFilter;
+      document.getElementById('family-select').value = graphState.family;
+      document.getElementById('arc-select').value = '';
+      renderStoryMap();
+      renderRecipes();
+      writeAtlasHash();
+    };
+    node.addEventListener('click', activate);
+    node.addEventListener('keydown', function(event){ if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); activate(); } });
+  });
 }
 
 function renderRecipes(){
@@ -1219,6 +1275,12 @@ function arcList(ids){
   if (!ids || !ids.length) return '';
   return '<div class="block"><h4>Сюжетные дуги</h4>' + ids.map(function(id){ return detailLink(id); }).join(' ') + '</div>';
 }
+function primaryArcBlock(event){
+  if (!event.story_primary_arc_id) return '';
+  return '<div class="block"><h4>Маршрут чтения</h4><p class="small">Основной сюжет используется только для размещения карточки и не сильнее остальных доказательных связей.</p>' +
+    detailLink(event.story_primary_arc_id) +
+    ((event.story_secondary_arc_ids || []).length ? '<details><summary>Другие тематические сюжеты (' + event.story_secondary_arc_ids.length + ')</summary><div class="block">' + event.story_secondary_arc_ids.map(detailLink).join(' ') + '</div></details>' : '') + '</div>';
+}
 function distinctDetailBlock(seen, value, title, cls){
   var text = String(value || '').trim();
   if (!text || seen.indexOf(text) !== -1) return '';
@@ -1248,13 +1310,16 @@ function renderEventDetail(event){
     taxonomyTagBlock('Масштаб', event.geographic_scopes) +
     '<div class="block"><h4>Акторы</h4><div class="tags">' + tags(event.actor_entities) + tags((event.actor_types || []).map(actorTypeLabelRu)) + '</div></div>' +
     '<div class="block"><h4>Стек и структуры</h4><div class="tags">' + stackTags(event.stack_layer) + tags((event.strange_structure || []).map(structureLabelRu)) + tags(event.research_question) + '</div></div>' +
-    numberBlock(event.numbers) + arcList(event.arcIds) + edgeList(event.edgeIds) + sourceBlock(event);
+    numberBlock(event.numbers) + primaryArcBlock(event) + (event.story_primary_arc_id ? '' : arcList(event.arcIds)) + edgeList(event.edgeIds) + sourceBlock(event);
 }
 function renderArcDetail(arc){
   var arcEdges = EDGES.filter(function(edge){ return edge.arc_id === arc.id; });
   var facts = factsForArc(arc);
+  var children = ARCS.filter(function(item){ return item.parent_arc_id === arc.id; }).sort(function(a,b){ return (a.display_order || 999) - (b.display_order || 999); });
   return '<h2 id="detail-title">' + esc(arcTitleRu(arc)) + '</h2><div class="id">' + esc(arc.id) + '</div>' +
-    '<div class="tags">' + tag(familyTitleRu(arc.family_id)) + tag(arc.arc_kind) + tag(arc.arc_type) + tag(arc.status) + tag(arc.start_date) + tag(arc.end_date) + tags(arc.visual_lanes) + '</div>' +
+    '<div class="tags">' + tag(familyTitleRu(arc.family_id)) + tag(arcRoleLabel(arc)) + tag(arc.arc_type) + tag(arc.status) + tag(arc.start_date) + tag(arc.end_date) + tags(arc.visual_lanes) + '</div>' +
+    (arc.parent_arc_id ? '<div class="block hierarchy-detail"><h4>Родительский сюжет</h4>' + detailLink(arc.parent_arc_id) + '</div>' : '') +
+    (children.length ? '<div class="block hierarchy-detail"><h4>Вложенные сюжеты</h4>' + children.map(function(item){ return detailLink(item.id); }).join(' ') + '</div>' : '') +
     '<div class="block quote"><h4>Тезис дуги</h4><p>' + esc(arc.thesis_ru || '') + '</p></div>' +
     (arc.safe_wording_ru ? '<div class="block caveat"><h4>Границы вывода</h4><p>' + esc(ruSafeWording('arc', arc.id, arc.safe_wording_ru)) + '</p></div>' : '') +
     '<div class="block"><h4>Факты дуги по времени</h4>' + facts.map(function(event){ return detailLink(event.id); }).join(' ') + '</div>' +

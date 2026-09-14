@@ -1,4 +1,4 @@
-/* v0.37 shared presentation and navigation. No semantic overrides of the JSON. */
+/* v0.38 shared presentation, navigation and story-hierarchy helpers. */
 var atlasRestoring = true;
 var atlasReturnFocus = null;
 var atlasReady = false;
@@ -9,6 +9,72 @@ function alist(x){ return Array.isArray(x) ? x : (x == null ? [] : [x]); }
 function lf(x,key){ return x && (x[key+'_'+(ATLAS_RU?'ru':'en')] || x[key] || '') || ''; }
 function vocab(group,id){ var x=alist(CYBER_FRAMEWORK[group]).find(function(v){return v.id===id;}); return x?lf(x,'label'):String(id||''); }
 function relationLabel(id){var label=(D.relationLabels||{})[id];return label?label[ATLAS_RU?'ru':'en']:String(id||'').replace(/_/g,' ');}
+function arcRoleLabel(arcOrRole){
+ var role=typeof arcOrRole==='string'?arcOrRole:(arcOrRole&&arcOrRole.display_role)||'mechanism';
+ var item=alist((D.arcHierarchy||{}).role_definitions).find(function(x){return x.id===role;});
+ return item?lf(item,'label'):String(role).replace(/_/g,' ');
+}
+function familyColor(id){
+ return ({ARC_FAMILY_ACCESS_CONTROL:'#365f9d',ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY:'#107052',ARC_FAMILY_CYBER_COGNITION_WAR:'#a1412b',ARC_FAMILY_INFRASTRUCTURE_CAPITAL:'#a66f13',ARC_FAMILY_DECISION_DATA_FINANCE:'#24727a',ARC_FAMILY_FORMATION_TIMELINE:'#6b4aa2'})[id]||'#46535f';
+}
+function arcColor(id){return familyColor(byArc[id]&&byArc[id].family_id);}
+function isTimelineArc(arc){return ['timeline_lens','timeline_marker'].includes((arc&&arc.display_role)||'')||arc&&arc.arc_kind==='phase';}
+function hierarchyFamilyIds(arcs){
+ var order=alist((D.arcHierarchy||{}).family_order);
+ if(graphState.arc&&byArc[graphState.arc])return[byArc[graphState.arc].family_id];
+ if(graphState.family)return[graphState.family];
+ if(graphState.preset)return order.filter(function(id){return arcs.some(function(arc){return arc.family_id===id;});});
+ return order.length?order:FAMILIES.slice().sort(function(a,b){return(a.display_order||99)-(b.display_order||99);}).map(function(f){return f.id;});
+}
+function graphArcs(){
+ var preset=alist(D.recipes).find(function(item){return item.id===graphState.preset;});
+ var allowed=preset&&preset.recommended_arc_ids?preset.recommended_arc_ids:null;
+ var hidden=alist(preset&&preset.recommended_filters&&preset.recommended_filters.hide_arc_ids);
+ return ARCS.filter(function(arc){
+  if(graphState.arc)return arc.id===graphState.arc;
+  if(graphState.family&&arc.family_id!==graphState.family)return false;
+  if(allowed&&allowed.indexOf(arc.id)===-1)return false;
+  if(hidden.indexOf(arc.id)!==-1)return false;
+  if(graphState.preset)return true;
+  if(graphState.family==='ARC_FAMILY_FORMATION_TIMELINE')return isTimelineArc(arc);
+  if(isTimelineArc(arc))return false;
+  if(graphState.scope!=='all'&&arc.default_visible===false)return false;
+  return true;
+ }).sort(function(a,b){
+  var af=byFamily[a.family_id],bf=byFamily[b.family_id];
+  return ((af&&af.display_order)||99)-((bf&&bf.display_order)||99)||(a.display_order||999)-(b.display_order||999)||a.id.localeCompare(b.id);
+ });
+}
+function graphEdges(){
+ var preset=alist(D.recipes).find(function(item){return item.id===graphState.preset;});
+ var allowedRelations=preset&&preset.recommended_relations?preset.recommended_relations:null;
+ var filters=(preset&&preset.recommended_filters)||{};
+ var allowedStyles=filters.edge_styles||null,minStrength=filters.min_strength?strengthRank(filters.min_strength):0;
+ var visible=new Set(graphArcs().map(function(arc){return arc.id;}));
+ return EDGES.filter(function(edge){
+  var isDefault=!edge.is_auto&&edge.style!=='thin'&&!String(edge.id||'').startsWith('AUTO_');
+  if(!graphState.showAuto&&!isDefault)return false;
+  if(!byArc[edge.arc_id]||!visible.has(edge.arc_id))return false;
+  if(graphState.relation&&edge.relation!==graphState.relation)return false;
+  if(allowedRelations&&allowedRelations.indexOf(edge.relation)===-1)return false;
+  if(allowedStyles&&allowedStyles.indexOf(edge.style)===-1)return false;
+  if(minStrength&&strengthRank(edge.strength)<minStrength)return false;
+  return true;
+ });
+}
+function hierarchySummaryText(){
+ var h=(D.summary||{}).arc_hierarchy||{};
+ return tx(
+  (h.families||FAMILIES.length)+' семейств · '+(h.core_mechanisms||0)+' основных механизмов · '+(h.nested_cases_and_qualifiers||0)+' вложенных кейсов и уточнений · '+(h.timeline_records||0)+' временные линзы',
+  (h.families||FAMILIES.length)+' families · '+(h.core_mechanisms||0)+' core mechanisms · '+(h.nested_cases_and_qualifiers||0)+' nested cases and qualifiers · '+(h.timeline_records||0)+' timeline lenses'
+ );
+}
+function syncGraphControls(){
+ var scope=document.getElementById('toggle-arc-levels');
+ if(scope){scope.classList.toggle('active',graphState.scope==='all');scope.textContent=graphState.scope==='all'?tx('Скрыть кейсы и уточнения','Hide cases and qualifiers'):tx('Показать кейсы и уточнения','Show cases and qualifiers');}
+ var auto=document.getElementById('toggle-auto');
+ if(auto){auto.classList.toggle('active',!!graphState.showAuto);auto.textContent=graphState.showAuto?tx('Скрыть авто-связи','Hide auto/thin links'):tx('Показать авто-связи','Show auto/thin links');}
+}
 function cyberFocusEvents(){ return EV.filter(function(e){return !!e.primary_domain_id && alist(e.cyber_domain_ids).length>0;}).sort(function(a,b){return String(a.date).localeCompare(String(b.date))||a.id.localeCompare(b.id);}); }
 function cyberDomains(){return alist(CYBER_FRAMEWORK.domains);}
 function cyberDomain(e){return e.primary_domain_id;}
@@ -140,7 +206,8 @@ function renderCyber(){
  bindAtlasCards(grid);bindCyberHover(grid,edges);renderBehaviorLayer(events,all);renderResilienceLayer(events,all);renderCyberThreads(events);renderCyberEdgeList(events);requestAnimationFrame(drawCyberLinks);writeAtlasHash();
 }
 function renderAtlasStats(){
- document.getElementById('stats').innerHTML=[[EV.length,tx('фактов','facts')],[CLAIMS.length,tx('тезисов','claims')],[ARCS.length,tx('сюжетов','story arcs')],[SOURCES.length,tx('URL источников','source URLs')]].map(function(x){return'<div class="stat"><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join('');
+ var hierarchy=(D.summary||{}).arc_hierarchy||{};
+ document.getElementById('stats').innerHTML=[[EV.length,tx('фактов','facts')],[CLAIMS.length,tx('тезисов','claims')],[(hierarchy.core_mechanisms||ARCS.length)+' / '+ARCS.length,tx('основных / всех сюжетов','core / all story records')],[SOURCES.length,tx('URL источников','source URLs')]].map(function(x){return'<div class="stat"><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join('');
  var s=D.summary.claim_status_counts||{};
  var n=document.getElementById('claim-status-summary');if(n)n.textContent=tx('Статусы '+CLAIMS.length+' тезиса: '+(s.verified||0)+' подтверждены · '+(s.partially_verified||0)+' частично · '+(s.disputed||0)+' спорны. Это не показатель точности всех событий.', 'Status of the '+CLAIMS.length+' claims only: '+(s.verified||0)+' verified · '+(s.partially_verified||0)+' partial · '+(s.disputed||0)+' disputed. Not an accuracy score for all events.');
  var rail=document.getElementById('correction-rail');if(rail)rail.innerHTML=alist((D.presentation||{}).corrections).map(function(x){return'<p class="small">'+esc(x)+'</p>';}).join('');
@@ -223,6 +290,7 @@ function restoreAtlasHash(){
  var map=filterMap(),f=activeFacts();Object.keys(map).forEach(function(id){var n=document.getElementById(id);if(n)n.value=f[map[id]]||'';});
  var search=document.getElementById('search');if(search)search.value=f.q||'';
  ['family','arc','relation'].forEach(function(k){var n=document.getElementById(k+'-select');if(n)n.value=graphState[k]||'';});
+ syncGraphControls();
  syncCyberControls();if(ATLAS_RU){renderCatalog();renderStoryMap();}else{renderFacts();renderStory('story-svg');renderStory('overview-svg');}
  renderCyber();
  if(tab==='facts'&&ATLAS_RU)tab='catalog';if(tab==='catalog'&&!ATLAS_RU)tab='facts';if(tab==='overview'&&ATLAS_RU)tab='story';

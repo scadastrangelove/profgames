@@ -15,11 +15,11 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2307.493408203125,
-        "behavior_section_1440": 440.9949951171875,
-        "cyber_first_card_390": 5506.16552734375,
-        "behavior_section_390": 731.7749633789062,
-        "map_top": 690.890625
+        "cyber_first_card_1440": 2307.495849609375,
+        "behavior_section_1440": 441.49591064453125,
+        "cyber_first_card_390": 5506.1669921875,
+        "behavior_section_390": 731.276611328125,
+        "map_top": 800.078125
       },
       "page_widths": {
         "story:1440": 1440,
@@ -118,6 +118,19 @@
     "ru: no page overflow sources 390",
     "ru: mobile behavior layer starts within 850px",
     "ru: map above 900px",
+    "ru: six story families visible",
+    "ru: mechanism-first view shows 13 arcs",
+    "ru: story graph excludes virtual service arcs",
+    "ru: formation records hidden in mechanism view",
+    "ru: expanded view shows 22 non-timeline arcs",
+    "ru: nested stories have hierarchy branches",
+    "ru: exact case remains directly addressable",
+    "ru: exact case limits graph edges",
+    "ru: case drawer links to parent mechanism",
+    "ru: formation family exposes four timeline records",
+    "ru: formation family limits graph edges",
+    "ru: phase record is directly selectable",
+    "ru: fact drawer explains primary reading route",
     "ru: Mozilla in defence",
     "ru: GTG in attack",
     "ru: only binding cards",
@@ -193,6 +206,19 @@
     "en: no page overflow sources 390",
     "en: mobile behavior layer starts within 850px",
     "en: map above 900px",
+    "en: six story families visible",
+    "en: mechanism-first view shows 13 arcs",
+    "en: story graph excludes virtual service arcs",
+    "en: formation records hidden in mechanism view",
+    "en: expanded view shows 22 non-timeline arcs",
+    "en: nested stories have hierarchy branches",
+    "en: exact case remains directly addressable",
+    "en: exact case limits graph edges",
+    "en: case drawer links to parent mechanism",
+    "en: formation family exposes four timeline records",
+    "en: formation family limits graph edges",
+    "en: phase record is directly selectable",
+    "en: fact drawer explains primary reading route",
     "en: Mozilla in defence",
     "en: GTG in attack",
     "en: only binding cards",
@@ -235,5 +261,5 @@
     "en: no page errors"
   ],
   "passed": true,
-  "assertions": 150
+  "assertions": 176
 }
