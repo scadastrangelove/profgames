@@ -1,0 +1,51 @@
+{
+  "mode": "local HTML injection; no network",
+  "checks": [
+    "ru: v0.37 data loaded",
+    "ru: v0.37 counts loaded",
+    "ru: global event reaches story graph SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+    "ru: global event reaches story graph SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+    "ru: global event reaches story graph SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+    "ru: global event reaches story graph SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+    "ru: global event reaches story graph SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
+    "ru: global event reaches story graph SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+    "ru: global comparison visible in pacing arc",
+    "ru: scoped event detail SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+    "ru: scoped event detail SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+    "ru: scoped event detail SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+    "ru: claim remains comparative and bounded",
+    "ru: no v0.37 page overflow 1440",
+    "ru: no v0.37 page overflow 390",
+    "ru: no JavaScript errors",
+    "ru: no external requests",
+    "en: v0.37 data loaded",
+    "en: v0.37 counts loaded",
+    "en: global event reaches story graph SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+    "en: global event reaches story graph SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+    "en: global event reaches story graph SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+    "en: global event reaches story graph SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+    "en: global event reaches story graph SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
+    "en: global event reaches story graph SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+    "en: global comparison visible in pacing arc",
+    "en: scoped event detail SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+    "en: scoped event detail SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+    "en: scoped event detail SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+    "en: claim remains comparative and bounded",
+    "en: no v0.37 page overflow 1440",
+    "en: no v0.37 page overflow 390",
+    "en: no JavaScript errors",
+    "en: no external requests"
+  ],
+  "languages": {
+    "ru": {
+      "errors": [],
+      "external_requests": []
+    },
+    "en": {
+      "errors": [],
+      "external_requests": []
+    }
+  },
+  "passed": true,
+  "assertions": 34
+}

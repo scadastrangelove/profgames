@@ -1,0 +1,21 @@
+{
+  "tested_at": "2026-09-14",
+  "base_commit": "50fc436b616bb36e253cb97e6db013716bd67689",
+  "base_version": "0.36",
+  "output_version": "0.37",
+  "byte_for_byte_reproduction": true,
+  "outputs": {
+    "ru": {
+      "sha256": "ed8a710c12002e82d0415fe1620f2954b576323776365b8a6cac99650dc7d320",
+      "events": 387,
+      "edges": 895,
+      "sources": 575
+    },
+    "en": {
+      "sha256": "ad1e39f2c3ab41cbdf708f3aa5ba6a58b3a9d2796be81b3321bc369997a23741",
+      "events": 387,
+      "edges": 895,
+      "sources": 575
+    }
+  }
+}

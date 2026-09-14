@@ -1,4 +1,4 @@
-/* v0.36 shared presentation and navigation. No semantic overrides of the JSON. */
+/* v0.37 shared presentation and navigation. No semantic overrides of the JSON. */
 var atlasRestoring = true;
 var atlasReturnFocus = null;
 var atlasReady = false;

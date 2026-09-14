@@ -1,15 +1,29 @@
 {
   "meta": {
     "title": "AI stack: four structures of power at one checkpoint",
-    "version": "0.36",
+    "version": "0.37",
     "created_at": "2026-06-28",
     "updated_at": "2026-09-14",
-    "schema_version": "ai_stack_structural_power.v0.36.0-2026-09-14",
+    "schema_version": "ai_stack_structural_power.v0.37.0-2026-09-14",
     "display_title_en": "AI stack: four structures of power at one checkpoint",
     "subtitle_en": "A fact map of how compute, clouds, models, data, cyber and capital become the default environment: access is metered, dependency is locked in, and rent is collected.",
     "source_pack": "ai_power_storygraph_en.json",
     "method": "ProfGames-style layered organization. Merge of: (a) v0.4 operational pack (evidence/timeline/claim_checks/country_cards/cyber_pack/cognitive_security/critical_decision_use/palantir_case/weekly_memo/gaps), (b) v0.2 factcheck layer (claims with recommended_phrasing_ru/counterarguments/recommendations), (c) new v0.3 research closing the Stanford-tables and chip-license gaps and adding model-layer export-control claims.",
     "changelog": [
+      {
+        "version": "0.37",
+        "date": "2026-09-14",
+        "description": "Global comparison of voluntary thresholds, pre-release evaluator access, market and service gates, and sovereign continuity programmes.",
+        "added_evidence": 3,
+        "added_claims": 0,
+        "added_claim_checks": 0,
+        "added_story_arcs": 0,
+        "added_story_edges": 31,
+        "updated_claim_checks": [
+          "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+        ]
+      },
       {
         "version": "0.36",
         "date": "2026-09-14",
@@ -529,6 +543,7 @@
       "not_found": 0
     },
     "key_findings": [
+      "REGIME COMPARISON (v0.37): checkpoints exist beyond the United States, but govern different objects—development and deployment, pre-release evaluation, market access, service filing or supply continuity. This is not one global slowdown regime.",
       "PACE AND CONTINUITY (v0.36): laboratories asserted authority to slow training and release, while the state asserted speed, replaceability and protection against unilateral shutdown. The opposing mechanisms are established, not one common regime or a final winner.",
       "OBSERVABILITY AND ACCESS GATING (v0.35): Anthropic's report shows hosted infrastructure as a node of partial observability and access revocation. This extends beyond cyber incidents: flow control, state surveillance, influence operations and the U.S.-China distillation dispute converge on one infrastructure mechanism.",
       "DEFENSIVE CAPACITY (v0.34): validated findings already strain maintenance in selected major projects. Validation, patching, release, deployment and recovery are separate; assistance announcements are not evidence of effectiveness.",
@@ -1062,19 +1077,19 @@
         "EU GenAI4EU"
       ]
     },
-    "total_evidence_items": 384,
-    "total_timeline_items": 384,
+    "total_evidence_items": 387,
+    "total_timeline_items": 387,
     "total_story_arcs": 26,
-    "total_story_edges": 864,
+    "total_story_edges": 895,
     "cyber_framework_version": "2.2",
-    "cyber_framework_event_count": 160,
-    "total_events": 384,
+    "cyber_framework_event_count": 163,
+    "total_events": 387,
     "total_claims": 73,
     "total_claim_checks": 32,
     "total_arcs": 26,
-    "total_edges": 864,
+    "total_edges": 895,
     "total_thesis_nodes": 5,
-    "source_count": 570,
+    "source_count": 575,
     "by_status": {
       "verified": 137,
       "partially_verified": 28,
@@ -15117,7 +15132,9 @@
       "legal_update_en": "",
       "independent_review_summary_en": "",
       "dedupe_note_en": "",
-      "research_updates": [],
+      "research_updates": [
+        "global-pacing-access-regimes"
+      ],
       "sources": [
         {
           "title": "Cyberspace Administration of China",
@@ -15129,17 +15146,25 @@
         }
       ],
       "edgeIds": [
-        "EDGE_2022_2023_009"
+        "EDGE_2022_2023_009",
+        "EDGE_V037_GLOBAL_012",
+        "EDGE_V037_GLOBAL_020",
+        "EDGE_V037_GLOBAL_025"
       ],
       "arcIds": [
         "ARC_2022_2023_FORMATION_PHASE",
-        "ARC_2023_GOVERNANCE_SHOCK"
+        "ARC_2023_GOVERNANCE_SHOCK",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
       ],
       "arcFamilyIds": [
-        "ARC_FAMILY_FORMATION_TIMELINE"
+        "ARC_FAMILY_FORMATION_TIMELINE",
+        "ARC_FAMILY_ACCESS_CONTROL"
       ],
       "relationTypes": [
-        "supports"
+        "supports",
+        "part_of_arc",
+        "supports_with_scope",
+        "institutionalizes"
       ],
       "title_ru": "Китай публикует временные меры для генеративных ИИ-сервисов с применением с 15 августа 2023 года",
       "actor_unclassified": [],
@@ -38444,7 +38469,9 @@
       "legal_update_en": "",
       "independent_review_summary_en": "",
       "dedupe_note_en": "",
-      "research_updates": [],
+      "research_updates": [
+        "global-pacing-access-regimes"
+      ],
       "sources": [
         {
           "title": "S. Korea to launch sovereign cybersecurity AI this year: science minister",
@@ -38466,13 +38493,17 @@
       "edgeIds": [
         "EDGE_KOREA_CYBER_MODEL_CYBER_ARC",
         "EDGE_KOREA_CYBER_MODEL_EXPORT_COUNTERMOVE",
-        "EDGE_KOREA_CYBER_MODEL_OPEN_WEIGHT"
+        "EDGE_KOREA_CYBER_MODEL_OPEN_WEIGHT",
+        "EDGE_V037_GLOBAL_016",
+        "EDGE_V037_GLOBAL_024",
+        "EDGE_V037_GLOBAL_030"
       ],
       "arcIds": [
         "ARC_EXPORT_CHIPS_TO_MODELS",
         "ARC_CYBER_CLAIM_TO_CAVEAT",
         "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
-        "ARC_SOVEREIGN_FLOW_GATING"
+        "ARC_SOVEREIGN_FLOW_GATING",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
       ],
       "arcFamilyIds": [
         "ARC_FAMILY_ACCESS_CONTROL",
@@ -38482,7 +38513,9 @@
       "relationTypes": [
         "sets_up",
         "countermove",
-        "part_of_arc"
+        "part_of_arc",
+        "supports_with_scope",
+        "context_for"
       ],
       "classification_legacy_v029": {
         "cyber_domain_ids": [
@@ -38875,7 +38908,9 @@
       "legal_update_en": "",
       "independent_review_summary_en": "",
       "dedupe_note_en": "",
-      "research_updates": [],
+      "research_updates": [
+        "global-pacing-access-regimes"
+      ],
       "sources": [
         {
           "title": "Phase 1 Evaluation Results Released for Sovereign AI Foundation Model Project",
@@ -38896,11 +38931,15 @@
       ],
       "edgeIds": [
         "EDGE_KOREA_NAVER_EXCLUSION_OPEN_WEIGHT",
-        "EDGE_KOREA_NAVER_EXCLUSION_SOVEREIGN_FLOW"
+        "EDGE_KOREA_NAVER_EXCLUSION_SOVEREIGN_FLOW",
+        "EDGE_V037_GLOBAL_015",
+        "EDGE_V037_GLOBAL_023",
+        "EDGE_V037_GLOBAL_030"
       ],
       "arcIds": [
         "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
-        "ARC_SOVEREIGN_FLOW_GATING"
+        "ARC_SOVEREIGN_FLOW_GATING",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
       ],
       "arcFamilyIds": [
         "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
@@ -38908,7 +38947,10 @@
       ],
       "relationTypes": [
         "refines",
-        "institutionalizes"
+        "institutionalizes",
+        "part_of_arc",
+        "supports_with_scope",
+        "context_for"
       ],
       "actor_unclassified": [],
       "actor_classification_status": "resolved",
@@ -43133,7 +43175,9 @@
       "legal_update_en": "",
       "independent_review_summary_en": "",
       "dedupe_note_en": "",
-      "research_updates": [],
+      "research_updates": [
+        "global-pacing-access-regimes"
+      ],
       "sources": [
         {
           "title": "Opinions on promoting innovative development and standardized governance of AI agents",
@@ -43147,19 +43191,25 @@
       "edgeIds": [
         "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
         "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_QUIET_ACCESS_CONTROL_supports_with_scope",
-        "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_SOVEREIGN_FLOW_GATING_supports_with_scope"
+        "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_SOVEREIGN_FLOW_GATING_supports_with_scope",
+        "EDGE_V037_GLOBAL_013",
+        "EDGE_V037_GLOBAL_021",
+        "EDGE_V037_GLOBAL_031"
       ],
       "arcIds": [
         "ARC_QUIET_ACCESS_CONTROL",
         "ARC_SOVEREIGN_FLOW_GATING",
-        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
       ],
       "arcFamilyIds": [
         "ARC_FAMILY_ACCESS_CONTROL",
         "ARC_FAMILY_CYBER_COGNITION_WAR"
       ],
       "relationTypes": [
-        "part_of_arc"
+        "part_of_arc",
+        "supports_with_scope",
+        "parallel"
       ],
       "classification_legacy_v029": {
         "cyber_domain_ids": [
@@ -47215,7 +47265,9 @@
       "legal_update_en": "",
       "independent_review_summary_en": "",
       "dedupe_note_en": "",
-      "research_updates": [],
+      "research_updates": [
+        "global-pacing-access-regimes"
+      ],
       "sources": [
         {
           "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
@@ -47246,12 +47298,16 @@
         "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
         "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_QUIET_ACCESS_CONTROL_supports",
         "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_SOVEREIGN_FLOW_GATING_supports",
-        "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope"
+        "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+        "EDGE_V037_GLOBAL_014",
+        "EDGE_V037_GLOBAL_022",
+        "EDGE_V037_GLOBAL_029"
       ],
       "arcIds": [
         "ARC_QUIET_ACCESS_CONTROL",
         "ARC_SOVEREIGN_FLOW_GATING",
-        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
       ],
       "arcFamilyIds": [
         "ARC_FAMILY_ACCESS_CONTROL",
@@ -47259,7 +47315,8 @@
       ],
       "relationTypes": [
         "part_of_arc",
-        "supports_with_scope"
+        "supports_with_scope",
+        "parallel"
       ],
       "classification_legacy_v029": {
         "cyber_domain_ids": [
@@ -67740,7 +67797,10 @@
         "EDGE_V036_PACING_032",
         "EDGE_V036_PACING_033",
         "EDGE_V036_PACING_034",
-        "EDGE_V036_PACING_035"
+        "EDGE_V036_PACING_035",
+        "EDGE_V037_GLOBAL_027",
+        "EDGE_V037_GLOBAL_028",
+        "EDGE_V037_GLOBAL_029"
       ],
       "arcIds": [
         "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
@@ -67759,7 +67819,8 @@
         "develops_into",
         "countermove",
         "challenges",
-        "qualifies"
+        "qualifies",
+        "parallel"
       ],
       "research_updates": [
         "frontier-pacing-september-2026"
@@ -68313,6 +68374,704 @@
       "editorial_rationale_ru": "Карточка отделяет обязательное предписание, предложение, публичное обещание или риторику от данных об исполнении. Использовать заявление как публичное выражение доктрины ускорения и президентского контроля. Не приписывать посту новую юридическую силу и не смешивать его с NSPM-11.",
       "editorial_rationale_en": "The record separates a binding directive, proposal, public commitment or rhetoric from implementation evidence. Use the statement as public evidence of an acceleration and presidential-control doctrine. Do not give the post new legal force or conflate it with NSPM-11.",
       "editorial_rationale": "The record separates a binding directive, proposal, public commitment or rhetoric from implementation evidence. Use the statement as public evidence of an acceleration and presidential-control doctrine. Do not give the post new legal force or conflate it with NSPM-11."
+    },
+    {
+      "id": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+      "kind": "event",
+      "date": "2024-05-21",
+      "year": 2024,
+      "source_date": "2024-05-21",
+      "date_basis": "publication_date",
+      "date_status": "exact",
+      "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+      "source_name": "UK Department for Science, Innovation and Technology",
+      "source_type_raw": "multilateral voluntary commitments",
+      "source_type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "actor": "UK Government, South Korean Ministry of Science and ICT",
+      "actor_raw": "UK Government, South Korean Ministry of Science and ICT",
+      "actors_raw": [
+        "UK Government",
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actors": [
+        "UK Government",
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_facets_legacy": [
+        "UK Government",
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_facets": [
+        "UK Government",
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_entities": [
+        "UK Government",
+        "South Korean Ministry of Science and ICT"
+      ],
+      "actor_types": [
+        "government",
+        "regulator"
+      ],
+      "actor_jurisdictions": [
+        "UK",
+        "South Korea"
+      ],
+      "geography_raw": [
+        "UK",
+        "South Korea"
+      ],
+      "geography": [
+        "UK",
+        "South Korea"
+      ],
+      "jurisdictions": [
+        "UK",
+        "South Korea"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "International"
+      ],
+      "geography_unclassified": [],
+      "actor_unclassified": [],
+      "actor_classification_status": "resolved",
+      "geography_classification_status": "resolved",
+      "evidence_context": [
+        "governance_document"
+      ],
+      "evidence_method": "primary_commitment_text_with_later_scientific_synthesis",
+      "stack_layer": [
+        "governance_law",
+        "model_weights",
+        "cyber_security_patch",
+        "data_telemetry"
+      ],
+      "stack_layers": [
+        "governance_law",
+        "model_weights",
+        "cyber_security_patch",
+        "data_telemetry"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge",
+        "production"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge",
+        "production"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ5"
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "initial_signatories": 16,
+        "later_additional_signatories": 4,
+        "listed_signatories_after_update": 20
+      },
+      "money_status": "",
+      "confidence": "A/B",
+      "evidence_level": "A/B",
+      "status": "verified_voluntary_commitments_implementation_uneven",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "cyber_subdomain_ids": [],
+      "cyber_role_ids": [
+        "AI_ROLE_PROTECTED_SYSTEM",
+        "AI_ROLE_ATTACK_ENABLER"
+      ],
+      "cyber_access_principal": false,
+      "primary_domain_id": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "artifact_kind": "policy_framework",
+      "normative_force": "advisory",
+      "implementation_stage": "adopted",
+      "delegated_authority": "control_requirement",
+      "editorial_priority": 1,
+      "sources": [
+        {
+          "title": "Frontier AI Safety Commitments, AI Seoul Summit 2024",
+          "name": "UK Department for Science, Innovation and Technology",
+          "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+          "date": "2024-05-21",
+          "type": "Government / policy",
+          "source_class": "multilateral voluntary commitments",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "International AI Safety Report 2026",
+          "name": "International AI Safety Report",
+          "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+          "date": "2026-02-03",
+          "type": "Research / technical",
+          "source_class": "international scientific synthesis",
+          "primary_or_secondary": "secondary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V037_GLOBAL_001",
+        "EDGE_V037_GLOBAL_002",
+        "EDGE_V037_GLOBAL_003",
+        "EDGE_V037_GLOBAL_017",
+        "EDGE_V037_GLOBAL_026",
+        "EDGE_V037_GLOBAL_027"
+      ],
+      "arcIds": [
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_ACCESS_CONTROL",
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "part_of_arc",
+        "supports_with_scope",
+        "context_for",
+        "precedes_and_qualifies"
+      ],
+      "research_updates": [
+        "global-pacing-access-regimes"
+      ],
+      "classification_review": {
+        "date": "2026-09-14",
+        "method": "primary_commitment_text_with_later_scientific_synthesis",
+        "independent_source_reverification": true,
+        "independent_replication": false
+      },
+      "governance_scale": "multilateral_voluntary_provider_commitment",
+      "behavioral_mechanism_ids": [],
+      "behavioral_status": [
+        "policy_response"
+      ],
+      "agent_population_scope": "not_applicable",
+      "shared_writable_state": "unknown",
+      "oversight_target": [
+        "institutional_process"
+      ],
+      "motivation_basis": "no_motivation_claim",
+      "behavior_track_ids": [],
+      "behavior_origin": "not_applicable",
+      "concealment_targets": [
+        "none"
+      ],
+      "persistence_media": [
+        "not_established"
+      ],
+      "goal_source": "not_applicable",
+      "candidate_evidence_tier": "primary_source_reviewed",
+      "title_ru": "Сеульские обязательства связали пороги риска с решением разрабатывать и выпускать передовые модели",
+      "title_en": "Seoul commitments link risk thresholds to decisions to develop and deploy frontier models",
+      "title": "Seoul commitments link risk thresholds to decisions to develop and deploy frontier models",
+      "summary_ru": "Шестнадцать разработчиков передовых моделей первоначально согласились публиковать рамки оценки риска, задавать пороги недопустимого риска и до выпуска оценивать модели в течение их жизненного цикла. В предельном случае участники обязались не разрабатывать или не выпускать модель, если риски нельзя удержать ниже порога. К февралю 2025 года к списку добавились ещё четыре организации.",
+      "summary_en": "Sixteen frontier-model developers initially agreed to publish risk frameworks, define intolerable-risk thresholds and assess models through their lifecycle before deployment. In the extreme, signatories committed not to develop or deploy a model if risks could not be kept below the thresholds. Four more organisations were added by February 2025.",
+      "summary": "Sixteen frontier-model developers initially agreed to publish risk frameworks, define intolerable-risk thresholds and assess models through their lifecycle before deployment. In the extreme, signatories committed not to develop or deploy a model if risks could not be kept below the thresholds. Four more organisations were added by February 2025.",
+      "claim_supported_ru": "Шестнадцать разработчиков передовых моделей первоначально согласились публиковать рамки оценки риска, задавать пороги недопустимого риска и до выпуска оценивать модели в течение их жизненного цикла. В предельном случае участники обязались не разрабатывать или не выпускать модель, если риски нельзя удержать ниже порога. К февралю 2025 года к списку добавились ещё четыре организации.",
+      "claim_supported_en": "Sixteen frontier-model developers initially agreed to publish risk frameworks, define intolerable-risk thresholds and assess models through their lifecycle before deployment. In the extreme, signatories committed not to develop or deploy a model if risks could not be kept below the thresholds. Four more organisations were added by February 2025.",
+      "claim_supported": "Sixteen frontier-model developers initially agreed to publish risk frameworks, define intolerable-risk thresholds and assess models through their lifecycle before deployment. In the extreme, signatories committed not to develop or deploy a model if risks could not be kept below the thresholds. Four more organisations were added by February 2025.",
+      "notes_ru": "Обязательства добровольные и допускают разные корпоративные рамки. Международный доклад 2026 года отмечает заметные различия между ними и нехватку публичных данных о соблюдении. Это не единый график обучения и не государственная лицензия на выпуск.",
+      "notes_en": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "notes": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "caveat_ru": "Обязательства добровольные и допускают разные корпоративные рамки. Международный доклад 2026 года отмечает заметные различия между ними и нехватку публичных данных о соблюдении. Это не единый график обучения и не государственная лицензия на выпуск.",
+      "caveat_en": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "caveat": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "corroboration_needed_ru": "Обязательства добровольные и допускают разные корпоративные рамки. Международный доклад 2026 года отмечает заметные различия между ними и нехватку публичных данных о соблюдении. Это не единый график обучения и не государственная лицензия на выпуск.",
+      "corroboration_needed_en": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "corroboration_needed": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "claim_challenged_ru": "Обязательства добровольные и допускают разные корпоративные рамки. Международный доклад 2026 года отмечает заметные различия между ними и нехватку публичных данных о соблюдении. Это не единый график обучения и не государственная лицензия на выпуск.",
+      "claim_challenged_en": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "claim_challenged": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "scope_ru": "Обязательства добровольные и допускают разные корпоративные рамки. Международный доклад 2026 года отмечает заметные различия между ними и нехватку публичных данных о соблюдении. Это не единый график обучения и не государственная лицензия на выпуск.",
+      "scope_en": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "scope": "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence.",
+      "caveats_ru": [
+        "Обязательства добровольные и допускают разные корпоративные рамки. Международный доклад 2026 года отмечает заметные различия между ними и нехватку публичных данных о соблюдении. Это не единый график обучения и не государственная лицензия на выпуск."
+      ],
+      "caveats_en": [
+        "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence."
+      ],
+      "caveats": [
+        "The commitments are voluntary and permit different company frameworks. The 2026 international report notes substantial variation and limited public evidence of compliance. They are neither a common training schedule nor a government release licence."
+      ],
+      "safe_wording_ru": "Говорить о добровольном механизме порогов и возможного отказа от разработки или выпуска, а не о международном моратории или доказанном замедлении отрасли.",
+      "safe_wording_en": "Describe a voluntary threshold mechanism that can culminate in a decision not to develop or deploy, not an international moratorium or a verified industry slowdown.",
+      "safe_wording": "Describe a voluntary threshold mechanism that can culminate in a decision not to develop or deploy, not an international moratorium or a verified industry slowdown.",
+      "role_basis_ru": "Роли описывают место ИИ в документе или споре и не приписывают модели самостоятельную волю.",
+      "role_basis_en": "Roles describe AI's place in the document or dispute and do not attribute independent intent to a model.",
+      "role_basis": "Roles describe AI's place in the document or dispute and do not attribute independent intent to a model.",
+      "editorial_rationale_ru": "Карточка отделяет обязательное предписание, предложение, публичное обещание или риторику от данных об исполнении. Говорить о добровольном механизме порогов и возможного отказа от разработки или выпуска, а не о международном моратории или доказанном замедлении отрасли.",
+      "editorial_rationale_en": "The record separates a binding directive, proposal, public commitment or rhetoric from implementation evidence. Describe a voluntary threshold mechanism that can culminate in a decision not to develop or deploy, not an international moratorium or a verified industry slowdown.",
+      "editorial_rationale": "The record separates a binding directive, proposal, public commitment or rhetoric from implementation evidence. Describe a voluntary threshold mechanism that can culminate in a decision not to develop or deploy, not an international moratorium or a verified industry slowdown."
+    },
+    {
+      "id": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+      "kind": "event",
+      "date": "2024-10-24",
+      "year": 2024,
+      "source_date": "2024-10-24",
+      "date_basis": "first_party_disclosure_date",
+      "date_status": "exact_publication_date_describing_prior_tests",
+      "url": "https://www.aisi.gov.uk/blog/early-lessons-from-evaluating-frontier-ai-systems",
+      "source_name": "UK AI Security Institute",
+      "source_type_raw": "first-party evaluation-method disclosure",
+      "source_type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "actor": "UK AI Security Institute, UK Department for Science, Innovation and Technology",
+      "actor_raw": "UK AI Security Institute, UK Department for Science, Innovation and Technology",
+      "actors_raw": [
+        "UK AI Security Institute",
+        "UK Department for Science, Innovation and Technology"
+      ],
+      "actors": [
+        "UK AI Security Institute",
+        "UK Department for Science, Innovation and Technology"
+      ],
+      "actor_facets_legacy": [
+        "UK AI Security Institute",
+        "UK Department for Science, Innovation and Technology"
+      ],
+      "actor_facets": [
+        "UK AI Security Institute",
+        "UK Department for Science, Innovation and Technology"
+      ],
+      "actor_entities": [
+        "UK AI Security Institute",
+        "UK Department for Science, Innovation and Technology"
+      ],
+      "actor_types": [
+        "government",
+        "research"
+      ],
+      "actor_jurisdictions": [
+        "UK"
+      ],
+      "geography_raw": [
+        "UK"
+      ],
+      "geography": [
+        "UK"
+      ],
+      "jurisdictions": [
+        "UK"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "National"
+      ],
+      "geography_unclassified": [],
+      "actor_unclassified": [],
+      "actor_classification_status": "resolved",
+      "geography_classification_status": "resolved",
+      "evidence_context": [
+        "evaluation",
+        "governance_document"
+      ],
+      "evidence_method": "two_first_party_government_disclosures",
+      "stack_layer": [
+        "governance_law",
+        "model_weights",
+        "data_telemetry",
+        "cyber_security_patch"
+      ],
+      "stack_layers": [
+        "governance_law",
+        "model_weights",
+        "data_telemetry",
+        "cyber_security_patch"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ5"
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "predeployment_tests_disclosed_minimum": 2,
+        "frontier_systems_evaluated_by_2025_more_than": 30
+      },
+      "money_status": "",
+      "confidence": "A",
+      "evidence_level": "A",
+      "status": "verified_predeployment_access_no_general_veto_power",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+        "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+      ],
+      "cyber_subdomain_ids": [],
+      "cyber_role_ids": [
+        "AI_ROLE_PROTECTED_SYSTEM"
+      ],
+      "cyber_access_principal": false,
+      "primary_domain_id": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "artifact_kind": "evaluation",
+      "normative_force": "not_applicable",
+      "implementation_stage": "observed",
+      "delegated_authority": "evaluated",
+      "editorial_priority": 1,
+      "sources": [
+        {
+          "title": "Early lessons from evaluating frontier AI systems",
+          "name": "UK AI Security Institute",
+          "url": "https://www.aisi.gov.uk/blog/early-lessons-from-evaluating-frontier-ai-systems",
+          "date": "2024-10-24",
+          "type": "Government / policy",
+          "source_class": "first-party evaluation-method disclosure",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "AISI Frontier AI Trends Report 2025",
+          "name": "UK AI Security Institute",
+          "url": "https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025",
+          "date": "2025-12-18",
+          "type": "Research / technical",
+          "source_class": "government research report",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V037_GLOBAL_004",
+        "EDGE_V037_GLOBAL_005",
+        "EDGE_V037_GLOBAL_006",
+        "EDGE_V037_GLOBAL_007",
+        "EDGE_V037_GLOBAL_018",
+        "EDGE_V037_GLOBAL_026",
+        "EDGE_V037_GLOBAL_028"
+      ],
+      "arcIds": [
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_CYBER_CLAIM_TO_CAVEAT"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_ACCESS_CONTROL",
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "part_of_arc",
+        "supports_with_scope",
+        "context_for",
+        "precedes_and_qualifies"
+      ],
+      "research_updates": [
+        "global-pacing-access-regimes"
+      ],
+      "classification_review": {
+        "date": "2026-09-14",
+        "method": "two_first_party_government_disclosures",
+        "independent_source_reverification": true,
+        "independent_replication": false
+      },
+      "governance_scale": "national_evaluator_provider_collaboration",
+      "behavioral_mechanism_ids": [],
+      "behavioral_status": [
+        "policy_response"
+      ],
+      "agent_population_scope": "not_applicable",
+      "shared_writable_state": "unknown",
+      "oversight_target": [
+        "institutional_process"
+      ],
+      "motivation_basis": "no_motivation_claim",
+      "behavior_track_ids": [],
+      "behavior_origin": "not_applicable",
+      "concealment_targets": [
+        "none"
+      ],
+      "persistence_media": [
+        "not_established"
+      ],
+      "goal_source": "not_applicable",
+      "candidate_evidence_tier": "primary_source_reviewed",
+      "title_ru": "Британский AISI раскрыл дорелизные испытания и доступ к непубличным контрольным точкам моделей",
+      "title_en": "UK AISI discloses pre-deployment testing and access to non-public model checkpoints",
+      "title": "UK AISI discloses pre-deployment testing and access to non-public model checkpoints",
+      "summary_ru": "Британский Институт безопасности ИИ сообщил, что уже провёл несколько дорелизных испытаний совместно с разработчиками. Позднейший отчёт уточнил: институт получает API-доступ к контрольным точкам, иногда до публичного выпуска и с иными защитными настройками, чем у конечного продукта. Так государственный оценщик получает ограниченную видимость в закрытый цикл модели до её выхода.",
+      "summary_en": "The UK AI Security Institute said it had already conducted several pre-deployment tests with developers. A later report specified that AISI receives API access to checkpoints, in some cases before public release and with safeguards different from the deployed product. This gives a state evaluator bounded visibility into a closed model cycle before release.",
+      "summary": "The UK AI Security Institute said it had already conducted several pre-deployment tests with developers. A later report specified that AISI receives API access to checkpoints, in some cases before public release and with safeguards different from the deployed product. This gives a state evaluator bounded visibility into a closed model cycle before release.",
+      "claim_supported_ru": "Британский Институт безопасности ИИ сообщил, что уже провёл несколько дорелизных испытаний совместно с разработчиками. Позднейший отчёт уточнил: институт получает API-доступ к контрольным точкам, иногда до публичного выпуска и с иными защитными настройками, чем у конечного продукта. Так государственный оценщик получает ограниченную видимость в закрытый цикл модели до её выхода.",
+      "claim_supported_en": "The UK AI Security Institute said it had already conducted several pre-deployment tests with developers. A later report specified that AISI receives API access to checkpoints, in some cases before public release and with safeguards different from the deployed product. This gives a state evaluator bounded visibility into a closed model cycle before release.",
+      "claim_supported": "The UK AI Security Institute said it had already conducted several pre-deployment tests with developers. A later report specified that AISI receives API access to checkpoints, in some cases before public release and with safeguards different from the deployed product. This gives a state evaluator bounded visibility into a closed model cycle before release.",
+      "notes_ru": "Доступ предоставляется в рамках сотрудничества с компаниями и не равен общему праву государства задержать выпуск. AISI прямо называл науку оценок незрелой и не считал отдельную проверку сертификацией безопасности модели.",
+      "notes_en": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "notes": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "caveat_ru": "Доступ предоставляется в рамках сотрудничества с компаниями и не равен общему праву государства задержать выпуск. AISI прямо называл науку оценок незрелой и не считал отдельную проверку сертификацией безопасности модели.",
+      "caveat_en": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "caveat": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "corroboration_needed_ru": "Доступ предоставляется в рамках сотрудничества с компаниями и не равен общему праву государства задержать выпуск. AISI прямо называл науку оценок незрелой и не считал отдельную проверку сертификацией безопасности модели.",
+      "corroboration_needed_en": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "corroboration_needed": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "claim_challenged_ru": "Доступ предоставляется в рамках сотрудничества с компаниями и не равен общему праву государства задержать выпуск. AISI прямо называл науку оценок незрелой и не считал отдельную проверку сертификацией безопасности модели.",
+      "claim_challenged_en": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "claim_challenged": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "scope_ru": "Доступ предоставляется в рамках сотрудничества с компаниями и не равен общему праву государства задержать выпуск. AISI прямо называл науку оценок незрелой и не считал отдельную проверку сертификацией безопасности модели.",
+      "scope_en": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "scope": "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe.",
+      "caveats_ru": [
+        "Доступ предоставляется в рамках сотрудничества с компаниями и не равен общему праву государства задержать выпуск. AISI прямо называл науку оценок незрелой и не считал отдельную проверку сертификацией безопасности модели."
+      ],
+      "caveats_en": [
+        "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe."
+      ],
+      "caveats": [
+        "Access is provided through collaboration with companies and is not a general state power to delay release. AISI described evaluation science as immature and did not treat an individual test as certification that a model is safe."
+      ],
+      "safe_wording_ru": "Фиксировать дорелизную наблюдаемость и доступ к контрольным точкам, но не приписывать AISI обязательное лицензирование или право вето, которых источники не устанавливают.",
+      "safe_wording_en": "Record pre-deployment observability and checkpoint access, but do not attribute a licensing or veto power that the sources do not establish.",
+      "safe_wording": "Record pre-deployment observability and checkpoint access, but do not attribute a licensing or veto power that the sources do not establish.",
+      "role_basis_ru": "Роли описывают место ИИ в документе или споре и не приписывают модели самостоятельную волю.",
+      "role_basis_en": "Roles describe AI's place in the document or dispute and do not attribute independent intent to a model.",
+      "role_basis": "Roles describe AI's place in the document or dispute and do not attribute independent intent to a model.",
+      "editorial_rationale_ru": "Карточка отделяет обязательное предписание, предложение, публичное обещание или риторику от данных об исполнении. Фиксировать дорелизную наблюдаемость и доступ к контрольным точкам, но не приписывать AISI обязательное лицензирование или право вето, которых источники не устанавливают.",
+      "editorial_rationale_en": "The record separates a binding directive, proposal, public commitment or rhetoric from implementation evidence. Record pre-deployment observability and checkpoint access, but do not attribute a licensing or veto power that the sources do not establish.",
+      "editorial_rationale": "The record separates a binding directive, proposal, public commitment or rhetoric from implementation evidence. Record pre-deployment observability and checkpoint access, but do not attribute a licensing or veto power that the sources do not establish."
+    },
+    {
+      "id": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+      "kind": "event",
+      "date": "2026-05-13",
+      "year": 2026,
+      "source_date": "2026-05-13",
+      "date_basis": "official_notice_date_with_counts_through_2026_04_30",
+      "date_status": "exact_publication_date_bounded_reporting_period",
+      "url": "https://www.cac.gov.cn/2026-05/13/c_1780413225190669.htm",
+      "source_name": "Cyberspace Administration of China",
+      "source_type_raw": "official implementation notice",
+      "source_type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "actor": "Cyberspace Administration of China",
+      "actor_raw": "Cyberspace Administration of China",
+      "actors_raw": [
+        "Cyberspace Administration of China"
+      ],
+      "actors": [
+        "Cyberspace Administration of China"
+      ],
+      "actor_facets_legacy": [
+        "Cyberspace Administration of China"
+      ],
+      "actor_facets": [
+        "Cyberspace Administration of China"
+      ],
+      "actor_entities": [
+        "Cyberspace Administration of China"
+      ],
+      "actor_types": [
+        "government",
+        "regulator"
+      ],
+      "actor_jurisdictions": [
+        "China"
+      ],
+      "geography_raw": [
+        "China"
+      ],
+      "geography": [
+        "China"
+      ],
+      "jurisdictions": [
+        "China"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "National"
+      ],
+      "geography_unclassified": [],
+      "actor_unclassified": [],
+      "actor_classification_status": "resolved",
+      "geography_classification_status": "resolved",
+      "evidence_context": [
+        "governance_document"
+      ],
+      "evidence_method": "primary_regulator_implementation_notice",
+      "stack_layer": [
+        "governance_law",
+        "model_weights",
+        "data_telemetry",
+        "cloud_inference"
+      ],
+      "stack_layers": [
+        "governance_law",
+        "model_weights",
+        "data_telemetry",
+        "cloud_inference"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge",
+        "production"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge",
+        "production"
+      ],
+      "research_question": [
+        "RQ1",
+        "RQ2",
+        "RQ5"
+      ],
+      "exact_quote_short": "",
+      "numbers": {
+        "new_services_march_april_2026": 72,
+        "new_apps_features_march_april_2026": 49,
+        "cumulative_services_by_2026_04_30": 868,
+        "cumulative_apps_features_by_2026_04_30": 530
+      },
+      "money_status": "",
+      "confidence": "A/B",
+      "evidence_level": "A/B",
+      "status": "verified_official_implementation_counts_no_independent_service_audit",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+      ],
+      "cyber_subdomain_ids": [],
+      "cyber_role_ids": [
+        "AI_ROLE_PROTECTED_SYSTEM"
+      ],
+      "cyber_access_principal": false,
+      "primary_domain_id": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "artifact_kind": "regulatory_rule",
+      "normative_force": "binding",
+      "implementation_stage": "effective",
+      "delegated_authority": "control_requirement",
+      "editorial_priority": 1,
+      "sources": [
+        {
+          "title": "Generative AI service filing information announcement (March-April 2026)",
+          "name": "Cyberspace Administration of China",
+          "url": "https://www.cac.gov.cn/2026-05/13/c_1780413225190669.htm",
+          "date": "2026-05-13",
+          "type": "Government / policy",
+          "source_class": "official implementation notice",
+          "primary_or_secondary": "primary"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V037_GLOBAL_008",
+        "EDGE_V037_GLOBAL_009",
+        "EDGE_V037_GLOBAL_010",
+        "EDGE_V037_GLOBAL_011",
+        "EDGE_V037_GLOBAL_019",
+        "EDGE_V037_GLOBAL_025",
+        "EDGE_V037_GLOBAL_031"
+      ],
+      "arcIds": [
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+        "ARC_SOVEREIGN_FLOW_GATING",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_ACCESS_CONTROL",
+        "ARC_FAMILY_CYBER_COGNITION_WAR",
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
+      ],
+      "relationTypes": [
+        "part_of_arc",
+        "supports_with_scope",
+        "institutionalizes",
+        "parallel"
+      ],
+      "research_updates": [
+        "global-pacing-access-regimes"
+      ],
+      "classification_review": {
+        "date": "2026-09-14",
+        "method": "primary_regulator_implementation_notice",
+        "independent_source_reverification": false,
+        "independent_replication": false
+      },
+      "governance_scale": "national_public_service_filing_regime",
+      "behavioral_mechanism_ids": [],
+      "behavioral_status": [
+        "policy_response"
+      ],
+      "agent_population_scope": "not_applicable",
+      "shared_writable_state": "unknown",
+      "oversight_target": [
+        "institutional_process"
+      ],
+      "motivation_basis": "no_motivation_claim",
+      "behavior_track_ids": [],
+      "behavior_origin": "not_applicable",
+      "concealment_targets": [
+        "none"
+      ],
+      "persistence_media": [
+        "not_established"
+      ],
+      "goal_source": "not_applicable",
+      "candidate_evidence_tier": "primary_source_reviewed",
+      "title_ru": "Китай сообщил о 868 зарегистрированных генеративных ИИ-сервисах и 530 приложениях к апрелю 2026 года",
+      "title_en": "China reports 868 filed generative-AI services and 530 registered applications by April 2026",
+      "title": "China reports 868 filed generative-AI services and 530 registered applications by April 2026",
+      "summary_ru": "Государственная канцелярия интернет-информации КНР сообщила, что за март и апрель 2026 года регистрацию прошли 72 новых генеративных ИИ-сервиса, а 49 приложений или функций были внесены в отдельный реестр. К 30 апреля накопительный итог достиг 868 сервисов и 530 приложений или функций. Публикация показывает массовое применение режима допуска публичных сервисов, введённого временными мерами 2023 года.",
+      "summary_en": "China's Cyberspace Administration reported that 72 new generative-AI services completed filing in March and April 2026, while 49 applications or features entered a separate registration channel. By 30 April, cumulative totals had reached 868 services and 530 applications or features. The notice shows large-scale operation of the public-service gate created by the 2023 Interim Measures.",
+      "summary": "China's Cyberspace Administration reported that 72 new generative-AI services completed filing in March and April 2026, while 49 applications or features entered a separate registration channel. By 30 April, cumulative totals had reached 868 services and 530 applications or features. The notice shows large-scale operation of the public-service gate created by the 2023 Interim Measures.",
+      "claim_supported_ru": "Государственная канцелярия интернет-информации КНР сообщила, что за март и апрель 2026 года регистрацию прошли 72 новых генеративных ИИ-сервиса, а 49 приложений или функций были внесены в отдельный реестр. К 30 апреля накопительный итог достиг 868 сервисов и 530 приложений или функций. Публикация показывает массовое применение режима допуска публичных сервисов, введённого временными мерами 2023 года.",
+      "claim_supported_en": "China's Cyberspace Administration reported that 72 new generative-AI services completed filing in March and April 2026, while 49 applications or features entered a separate registration channel. By 30 April, cumulative totals had reached 868 services and 530 applications or features. The notice shows large-scale operation of the public-service gate created by the 2023 Interim Measures.",
+      "claim_supported": "China's Cyberspace Administration reported that 72 new generative-AI services completed filing in March and April 2026, while 49 applications or features entered a separate registration channel. By 30 April, cumulative totals had reached 868 services and 530 applications or features. The notice shows large-scale operation of the public-service gate created by the 2023 Interim Measures.",
+      "notes_ru": "Статистика подтверждает регистрацию, а не независимую оценку качества, безопасности или соблюдения правил каждым сервисом. Режим относится к предоставлению услуг населению и не устанавливает общий контроль темпа обучения передовых моделей.",
+      "notes_en": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "notes": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "caveat_ru": "Статистика подтверждает регистрацию, а не независимую оценку качества, безопасности или соблюдения правил каждым сервисом. Режим относится к предоставлению услуг населению и не устанавливает общий контроль темпа обучения передовых моделей.",
+      "caveat_en": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "caveat": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "corroboration_needed_ru": "Статистика подтверждает регистрацию, а не независимую оценку качества, безопасности или соблюдения правил каждым сервисом. Режим относится к предоставлению услуг населению и не устанавливает общий контроль темпа обучения передовых моделей.",
+      "corroboration_needed_en": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "corroboration_needed": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "claim_challenged_ru": "Статистика подтверждает регистрацию, а не независимую оценку качества, безопасности или соблюдения правил каждым сервисом. Режим относится к предоставлению услуг населению и не устанавливает общий контроль темпа обучения передовых моделей.",
+      "claim_challenged_en": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "claim_challenged": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "scope_ru": "Статистика подтверждает регистрацию, а не независимую оценку качества, безопасности или соблюдения правил каждым сервисом. Режим относится к предоставлению услуг населению и не устанавливает общий контроль темпа обучения передовых моделей.",
+      "scope_en": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "scope": "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace.",
+      "caveats_ru": [
+        "Статистика подтверждает регистрацию, а не независимую оценку качества, безопасности или соблюдения правил каждым сервисом. Режим относится к предоставлению услуг населению и не устанавливает общий контроль темпа обучения передовых моделей."
+      ],
+      "caveats_en": [
+        "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace."
+      ],
+      "caveats": [
+        "The figures establish filing, not independent verification of every service's quality, security or compliance. The regime governs public-facing services and does not establish general control over frontier-model training pace."
+      ],
+      "safe_wording_ru": "Описывать это как реально работающую контрольную точку допуска публичных сервисов. Не превращать реестр в доказательство полного контроля над разработкой моделей.",
+      "safe_wording_en": "Describe an operating gate for public-facing services. Do not turn the registry into evidence of complete control over model development.",
+      "safe_wording": "Describe an operating gate for public-facing services. Do not turn the registry into evidence of complete control over model development.",
+      "role_basis_ru": "Роли описывают место ИИ в документе или споре и не приписывают модели самостоятельную волю.",
+      "role_basis_en": "Roles describe AI's place in the document or dispute and do not attribute independent intent to a model.",
+      "role_basis": "Roles describe AI's place in the document or dispute and do not attribute independent intent to a model.",
+      "editorial_rationale_ru": "Карточка отделяет обязательное предписание, предложение, публичное обещание или риторику от данных об исполнении. Описывать это как реально работающую контрольную точку допуска публичных сервисов. Не превращать реестр в доказательство полного контроля над разработкой моделей.",
+      "editorial_rationale_en": "The record separates a binding directive, proposal, public commitment or rhetoric from implementation evidence. Describe an operating gate for public-facing services. Do not turn the registry into evidence of complete control over model development.",
+      "editorial_rationale": "The record separates a binding directive, proposal, public commitment or rhetoric from implementation evidence. Describe an operating gate for public-facing services. Do not turn the registry into evidence of complete control over model development."
     }
   ],
   "claims": [
@@ -74803,8 +75562,8 @@
     },
     {
       "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
-      "claim": "In 2026, measures across jurisdictions covered developers, weights, agent authority, runtimes, infrastructure, remediation and recovery. NSPM-11 adds continuity of mission access, while Amodei's proposal adds capability checkpoints and permanently embedded external evaluators. This is a heterogeneous mix of operative requirements and proposals, not one global regime.",
-      "claim_en": "In 2026, measures across jurisdictions covered developers, weights, agent authority, runtimes, infrastructure, remediation and recovery. NSPM-11 adds continuity of mission access, while Amodei's proposal adds capability checkpoints and permanently embedded external evaluators. This is a heterogeneous mix of operative requirements and proposals, not one global regime.",
+      "claim": "AI cyber resilience combines secure development, capability testing, national defence, sector recovery and decision protection. The comparative layer adds pre-release evaluator access, deployment thresholds, mandatory gates for public services and continuity of mission access. These are complementary mechanisms of different legal force, not one standard.",
+      "claim_en": "AI cyber resilience combines secure development, capability testing, national defence, sector recovery and decision protection. The comparative layer adds pre-release evaluator access, deployment thresholds, mandatory gates for public services and continuity of mission access. These are complementary mechanisms of different legal force, not one standard.",
       "status": "verified_with_jurisdictional_and_implementation_caveats",
       "confidence": "A/B",
       "supporting_evidence": [
@@ -74839,9 +75598,12 @@
         "SIG_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS",
         "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
         "SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
-        "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL"
+        "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
+        "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE"
       ],
-      "safe_wording_en": "Separate binding requirements, supervisory positions, internal policies and proposals. A component's presence in the stack does not establish implementation or effectiveness.",
+      "safe_wording_en": "Show the full control stack while separately labelling law, administrative practice, voluntary commitment, evaluation and programme. The existence of a mechanism does not establish effectiveness.",
       "what_could_break_it": "Evidence that the programs and controls remain largely unimplemented, are repealed before taking effect, or fail to change deployment, incident-response and recovery practices.",
       "kind": "claimCheck",
       "title": "Public AI cyber resilience extends beyond model evaluation to pacing, independent oversight and continuity of access",
@@ -74867,21 +75629,21 @@
         "EDGE_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
         "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope"
       ],
-      "safe_wording": "Separate binding requirements, supervisory positions, internal policies and proposals. A component's presence in the stack does not establish implementation or effectiveness.",
+      "safe_wording": "Show the full control stack while separately labelling law, administrative practice, voluntary commitment, evaluation and programme. The existence of a mechanism does not establish effectiveness.",
       "title_ru": "Государственная киберустойчивость ИИ охватывает не только оценку модели, но и темп, независимый контроль и непрерывность доступа",
-      "claim_ru": "В 2026 году меры разных юрисдикций охватили разработчиков, веса, полномочия агентов, среды исполнения, инфраструктуру, исправление и восстановление. NSPM-11 добавляет непрерывность критичного доступа, а предложение Амодеи — контрольные точки возможностей и постоянно встроенных внешних оценщиков. Это неоднородный набор действующих требований и предложений, а не единый мировой режим.",
-      "safe_wording_ru": "Разделять обязательные требования, надзорные позиции, внутренние политики и предложения. Наличие элемента в стеке не доказывает его внедрение или эффективность.",
-      "recommended_phrasing_ru": "Разделять обязательные требования, надзорные позиции, внутренние политики и предложения. Наличие элемента в стеке не доказывает его внедрение или эффективность.",
-      "recommended_phrasing_en": "Separate binding requirements, supervisory positions, internal policies and proposals. A component's presence in the stack does not establish implementation or effectiveness.",
-      "recommended_phrasing": "Separate binding requirements, supervisory positions, internal policies and proposals. A component's presence in the stack does not establish implementation or effectiveness.",
+      "claim_ru": "Киберустойчивость ИИ складывается из безопасной разработки, испытаний возможностей, национальной защиты, отраслевого восстановления и защиты решений. Сравнительный слой добавляет дорелизный доступ оценщиков, пороги выпуска, обязательный допуск публичных сервисов и непрерывность критичного доступа. Это набор взаимодополняющих механизмов разной нормативной силы, а не единый стандарт.",
+      "safe_wording_ru": "Показывать полный стек контролей, но отдельно маркировать закон, административную практику, добровольное обязательство, испытание и программу. Наличие механизма не доказывает его эффективность.",
+      "recommended_phrasing_ru": "Показывать полный стек контролей, но отдельно маркировать закон, административную практику, добровольное обязательство, испытание и программу. Наличие механизма не доказывает его эффективность.",
+      "recommended_phrasing_en": "Show the full control stack while separately labelling law, administrative practice, voluntary commitment, evaluation and programme. The existence of a mechanism does not establish effectiveness.",
+      "recommended_phrasing": "Show the full control stack while separately labelling law, administrative practice, voluntary commitment, evaluation and programme. The existence of a mechanism does not establish effectiveness.",
       "caveats_ru": [
-        "Разделять обязательные требования, надзорные позиции, внутренние политики и предложения. Наличие элемента в стеке не доказывает его внедрение или эффективность."
+        "Показывать полный стек контролей, но отдельно маркировать закон, административную практику, добровольное обязательство, испытание и программу. Наличие механизма не доказывает его эффективность."
       ],
       "caveats_en": [
-        "Separate binding requirements, supervisory positions, internal policies and proposals. A component's presence in the stack does not establish implementation or effectiveness."
+        "Show the full control stack while separately labelling law, administrative practice, voluntary commitment, evaluation and programme. The existence of a mechanism does not establish effectiveness."
       ],
       "caveats": [
-        "Separate binding requirements, supervisory positions, internal policies and proposals. A component's presence in the stack does not establish implementation or effectiveness."
+        "Show the full control stack while separately labelling law, administrative practice, voluntary commitment, evaluation and programme. The existence of a mechanism does not establish effectiveness."
       ],
       "sources": [
         {
@@ -74901,10 +75663,56 @@
           "type": "Public statement / primary",
           "source_class": "first-party policy proposal",
           "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Frontier AI Safety Commitments, AI Seoul Summit 2024",
+          "name": "UK Department for Science, Innovation and Technology",
+          "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+          "date": "2024-05-21",
+          "type": "Government / policy",
+          "source_class": "multilateral voluntary commitments",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "International AI Safety Report 2026",
+          "name": "International AI Safety Report",
+          "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+          "date": "2026-02-03",
+          "type": "Research / technical",
+          "source_class": "international scientific synthesis",
+          "primary_or_secondary": "secondary"
+        },
+        {
+          "title": "Early lessons from evaluating frontier AI systems",
+          "name": "UK AI Security Institute",
+          "url": "https://www.aisi.gov.uk/blog/early-lessons-from-evaluating-frontier-ai-systems",
+          "date": "2024-10-24",
+          "type": "Government / policy",
+          "source_class": "first-party evaluation-method disclosure",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "AISI Frontier AI Trends Report 2025",
+          "name": "UK AI Security Institute",
+          "url": "https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025",
+          "date": "2025-12-18",
+          "type": "Research / technical",
+          "source_class": "government research report",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Generative AI service filing information announcement (March-April 2026)",
+          "name": "Cyberspace Administration of China",
+          "url": "https://www.cac.gov.cn/2026-05/13/c_1780413225190669.htm",
+          "date": "2026-05-13",
+          "type": "Government / policy",
+          "source_class": "official implementation notice",
+          "primary_or_secondary": "primary"
         }
       ],
       "research_updates": [
-        "frontier-pacing-september-2026"
+        "frontier-pacing-september-2026",
+        "global-pacing-access-regimes"
       ]
     },
     {
@@ -75022,15 +75830,23 @@
         "SIG_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE",
         "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
         "SIG_2026_FRONTIER_LAB_PACING_ENDORSEMENTS",
-        "SIG_2026_TRUMP_REJECTS_FRONTIER_PACING"
+        "SIG_2026_TRUMP_REJECTS_FRONTIER_PACING",
+        "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+        "SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+        "SIG_2026_CN_AGENT_GOVERNANCE_OPINIONS",
+        "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
+        "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
       ],
       "qualifying_evidence": [
         "export-14"
       ],
-      "what_could_break_it_ru": "Данные об исполнении 30-дневного цикла Пентагона и NSPM-11, тексты реальных закупочных условий, отчёты встроенных оценщиков и измерения фактического темпа обучения могут усилить или ослабить вывод. Судебные решения могут дополнительно ограничить исполнительные полномочия.",
-      "what_could_break_it_en": "Implementation data for the Pentagon's 30-day cadence and NSPM-11, actual procurement clauses, reports from embedded evaluators, and measured training cadence could strengthen or weaken the claim. Further judicial decisions may constrain executive authority.",
-      "what_could_break_it": "Implementation data for the Pentagon's 30-day cadence and NSPM-11, actual procurement clauses, reports from embedded evaluators, and measured training cadence could strengthen or weaken the claim. Further judicial decisions may constrain executive authority.",
-      "date_relevant": "2026",
+      "what_could_break_it_ru": "Данные о фактическом соблюдении корпоративных порогов, влиянии оценок на сроки выпуска, применении полномочий ЕС, качестве китайского реестра и результатах корейских программ могут усилить или ослабить сравнительный вывод.",
+      "what_could_break_it_en": "Evidence on compliance with company thresholds, evaluation effects on release timing, use of EU powers, the quality of China's registry and outcomes of Korean programmes could strengthen or weaken the comparison.",
+      "what_could_break_it": "Evidence on compliance with company thresholds, evaluation effects on release timing, use of EU powers, the quality of China's registry and outcomes of Korean programmes could strengthen or weaken the comparison.",
+      "date_relevant": "2023-2026",
       "stack_layer": [
         "governance_law",
         "model_weights",
@@ -75044,6 +75860,10 @@
       ],
       "geography": [
         "US",
+        "UK",
+        "EU",
+        "China",
+        "South Korea",
         "Global"
       ],
       "keywords": [
@@ -75052,7 +75872,11 @@
         "checkpoints",
         "continuity",
         "reverse chokepoint",
-        "structural power"
+        "structural power",
+        "release gate",
+        "filing",
+        "pre-deployment evaluation",
+        "sovereign model"
       ],
       "sources": [
         {
@@ -75099,6 +75923,51 @@
           "type": "Press / wire",
           "source_class": "wire report quoting presidential statements",
           "primary_or_secondary": "secondary"
+        },
+        {
+          "title": "Frontier AI Safety Commitments, AI Seoul Summit 2024",
+          "name": "UK Department for Science, Innovation and Technology",
+          "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+          "date": "2024-05-21",
+          "type": "Government / policy",
+          "source_class": "multilateral voluntary commitments",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "International AI Safety Report 2026",
+          "name": "International AI Safety Report",
+          "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+          "date": "2026-02-03",
+          "type": "Research / technical",
+          "source_class": "international scientific synthesis",
+          "primary_or_secondary": "secondary"
+        },
+        {
+          "title": "Early lessons from evaluating frontier AI systems",
+          "name": "UK AI Security Institute",
+          "url": "https://www.aisi.gov.uk/blog/early-lessons-from-evaluating-frontier-ai-systems",
+          "date": "2024-10-24",
+          "type": "Government / policy",
+          "source_class": "first-party evaluation-method disclosure",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "AISI Frontier AI Trends Report 2025",
+          "name": "UK AI Security Institute",
+          "url": "https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025",
+          "date": "2025-12-18",
+          "type": "Research / technical",
+          "source_class": "government research report",
+          "primary_or_secondary": "primary"
+        },
+        {
+          "title": "Generative AI service filing information announcement (March-April 2026)",
+          "name": "Cyberspace Administration of China",
+          "url": "https://www.cac.gov.cn/2026-05/13/c_1780413225190669.htm",
+          "date": "2026-05-13",
+          "type": "Government / policy",
+          "source_class": "official implementation notice",
+          "primary_or_secondary": "primary"
         }
       ],
       "arcIds": [
@@ -75118,7 +75987,15 @@
         "EDGE_V036_PACING_025",
         "EDGE_V036_PACING_026",
         "EDGE_V036_PACING_027",
-        "EDGE_V036_PACING_028"
+        "EDGE_V036_PACING_028",
+        "EDGE_V037_GLOBAL_017",
+        "EDGE_V037_GLOBAL_018",
+        "EDGE_V037_GLOBAL_019",
+        "EDGE_V037_GLOBAL_020",
+        "EDGE_V037_GLOBAL_021",
+        "EDGE_V037_GLOBAL_022",
+        "EDGE_V037_GLOBAL_023",
+        "EDGE_V037_GLOBAL_024"
       ],
       "relationTypes": [
         "supports_with_scope",
@@ -75126,26 +76003,29 @@
         "qualifies",
         "supports_arc"
       ],
-      "title_ru": "Власть над передовым ИИ включает право задавать темп и гарантировать доступ",
-      "title_en": "Power over frontier AI includes authority over development tempo and continuity of access",
-      "title": "Power over frontier AI includes authority over development tempo and continuity of access",
-      "claim_ru": "В 2026 году контроль над передовым ИИ проявился как спор двух встречных полномочий: лаборатории способны приостанавливать обучение и предлагать контрольные точки выпуска, а государство требует скорости, заменяемости поставщика и невозможности одностороннего отключения систем национальной безопасности. Это подтверждено отдельными решениями и документами, но общего режима управления темпом пока нет.",
-      "claim_en": "In 2026, control over frontier AI emerged as a contest between two opposing authorities: laboratories can pause training and propose release checkpoints, while the state demands speed, supplier replaceability and protection against unilateral shutdown of national-security systems. Separate decisions and directives establish the mechanisms, but no common pacing regime exists.",
-      "claim": "In 2026, control over frontier AI emerged as a contest between two opposing authorities: laboratories can pause training and propose release checkpoints, while the state demands speed, supplier replaceability and protection against unilateral shutdown of national-security systems. Separate decisions and directives establish the mechanisms, but no common pacing regime exists.",
-      "safe_wording_ru": "Не «лаборатории решили остановить ИИ» и не «государство получило полный контроль», а «две стороны предъявили встречные притязания на темп, выпуск и непрерывность доступа; часть этих притязаний закреплена в обязательных документах, часть остаётся предложениями и риторикой».",
-      "safe_wording_en": "Not 'the labs decided to stop AI' or 'the state gained total control,' but 'the two sides asserted competing authority over tempo, release and continuity; some claims are embedded in binding directives while others remain proposals or rhetoric.'",
-      "safe_wording": "Not 'the labs decided to stop AI' or 'the state gained total control,' but 'the two sides asserted competing authority over tempo, release and continuity; some claims are embedded in binding directives while others remain proposals or rhetoric.'",
-      "recommended_phrasing_ru": "Не «лаборатории решили остановить ИИ» и не «государство получило полный контроль», а «две стороны предъявили встречные притязания на темп, выпуск и непрерывность доступа; часть этих притязаний закреплена в обязательных документах, часть остаётся предложениями и риторикой».",
-      "recommended_phrasing_en": "Not 'the labs decided to stop AI' or 'the state gained total control,' but 'the two sides asserted competing authority over tempo, release and continuity; some claims are embedded in binding directives while others remain proposals or rhetoric.'",
-      "recommended_phrasing": "Not 'the labs decided to stop AI' or 'the state gained total control,' but 'the two sides asserted competing authority over tempo, release and continuity; some claims are embedded in binding directives while others remain proposals or rhetoric.'",
+      "title_ru": "Власть над передовым ИИ включает темп, допуск, наблюдаемость и непрерывность",
+      "title_en": "Power over frontier AI includes pace, release, observability and continuity",
+      "title": "Power over frontier AI includes pace, release, observability and continuity",
+      "claim_ru": "В разных юрисдикциях контроль над передовым ИИ проявляется как набор разных полномочий: лаборатория может приостановить обучение, добровольная рамка — связать порог риска с разработкой или выпуском, государственный оценщик — получить дорелизный доступ, регулятор — требовать регистрацию или оценку перед публичным доступом, а заказчик — добиваться заменяемости и непрерывности. Документы и административная практика подтверждают эти механизмы, но не единый мировой режим и не измеренное глобальное замедление.",
+      "claim_en": "Across jurisdictions, control over advanced AI appears through different powers: a laboratory can pause training, a voluntary framework can link a risk threshold to development or deployment, a state evaluator can receive pre-release access, a regulator can require filing or evaluation before public access, and a customer can demand replaceability and continuity. Documents and administrative practice establish these mechanisms, not one global regime or a measured worldwide slowdown.",
+      "claim": "Across jurisdictions, control over advanced AI appears through different powers: a laboratory can pause training, a voluntary framework can link a risk threshold to development or deployment, a state evaluator can receive pre-release access, a regulator can require filing or evaluation before public access, and a customer can demand replaceability and continuity. Documents and administrative practice establish these mechanisms, not one global regime or a measured worldwide slowdown.",
+      "safe_wording_ru": "Говорить о сходной логике контрольных точек при разной правовой силе и разных объектах контроля. Не называть это международным соглашением о замедлении или полным государственным контролем над моделями.",
+      "safe_wording_en": "Describe a shared checkpoint logic with different legal force and control objects. Do not call it an international slowdown agreement or complete state control over models.",
+      "safe_wording": "Describe a shared checkpoint logic with different legal force and control objects. Do not call it an international slowdown agreement or complete state control over models.",
+      "recommended_phrasing_ru": "Говорить о сходной логике контрольных точек при разной правовой силе и разных объектах контроля. Не называть это международным соглашением о замедлении или полным государственным контролем над моделями.",
+      "recommended_phrasing_en": "Describe a shared checkpoint logic with different legal force and control objects. Do not call it an international slowdown agreement or complete state control over models.",
+      "recommended_phrasing": "Describe a shared checkpoint logic with different legal force and control objects. Do not call it an international slowdown agreement or complete state control over models.",
       "caveats_ru": [
-        "Не «лаборатории решили остановить ИИ» и не «государство получило полный контроль», а «две стороны предъявили встречные притязания на темп, выпуск и непрерывность доступа; часть этих притязаний закреплена в обязательных документах, часть остаётся предложениями и риторикой»."
+        "Говорить о сходной логике контрольных точек при разной правовой силе и разных объектах контроля. Не называть это международным соглашением о замедлении или полным государственным контролем над моделями."
       ],
       "caveats_en": [
-        "Not 'the labs decided to stop AI' or 'the state gained total control,' but 'the two sides asserted competing authority over tempo, release and continuity; some claims are embedded in binding directives while others remain proposals or rhetoric.'"
+        "Describe a shared checkpoint logic with different legal force and control objects. Do not call it an international slowdown agreement or complete state control over models."
       ],
       "caveats": [
-        "Not 'the labs decided to stop AI' or 'the state gained total control,' but 'the two sides asserted competing authority over tempo, release and continuity; some claims are embedded in binding directives while others remain proposals or rhetoric.'"
+        "Describe a shared checkpoint logic with different legal force and control objects. Do not call it an international slowdown agreement or complete state control over models."
+      ],
+      "research_updates": [
+        "global-pacing-access-regimes"
       ]
     }
   ],
@@ -75359,7 +76239,8 @@
         "SIG_2026_BYTEDANCE_29_6B_SYNDICATED_LOAN",
         "SIG_2026_HUAWEI_ATLAS950_PHYSICAL_DEMONSTRATION",
         "SIG_2026_ANTHROPIC_DISTILLATION_ABUSE_DISCLOSURE",
-        "SIG_2026_US_CHINA_DISTILLATION_SECURITY_DISPUTE"
+        "SIG_2026_US_CHINA_DISTILLATION_SECURITY_DISPUTE",
+        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE"
       ],
       "counterpoints": [
         "A physical demonstration and vendor metrics do not establish price, energy or software parity.",
@@ -75374,15 +76255,16 @@
         "Kimi K3 weights are available, but large model-as-a-service providers face a separate licence condition.",
         "Industrial and diplomatic strategy does not equal full supply-chain independence."
       ],
-      "thesis_en": "US restrictions stimulate Chinese alternatives across chips, systems, clouds and models. A physical Atlas 950 and published Kimi K3 weights provide more concrete signals, but do not establish price, energy or full-stack parity.",
-      "safe_wording_en": "Separate a physical demonstration, service access, published weights, licence conditions and independent benchmarks. Describe route-around capacity, not proven full parity.",
+      "thesis_en": "China's counter-stack combines routes around external constraints with domestic access control. Open weights and domestic infrastructure expand an alternative route, while mandatory filing of public generative-AI services shows that the route remains inside a national checkpoint.",
+      "safe_wording_en": "Describe the external route-around and domestic gate together without treating filing counts as a security audit.",
       "kind": "arc",
       "title": "China counter-stack: routing around, not parity",
       "title_en": "China counter-stack: routing around, not parity",
-      "thesis": "US restrictions stimulate Chinese alternatives across chips, systems, clouds and models. A physical Atlas 950 and published Kimi K3 weights provide more concrete signals, but do not establish price, energy or full-stack parity.",
-      "safe_wording": "Separate a physical demonstration, service access, published weights, licence conditions and independent benchmarks. Describe route-around capacity, not proven full parity.",
+      "thesis": "China's counter-stack combines routes around external constraints with domestic access control. Open weights and domestic infrastructure expand an alternative route, while mandatory filing of public generative-AI services shows that the route remains inside a national checkpoint.",
+      "safe_wording": "Describe the external route-around and domestic gate together without treating filing counts as a security audit.",
       "edgeIds": [
-        "EDGE_V035_ANTHROPIC_018"
+        "EDGE_V035_ANTHROPIC_018",
+        "EDGE_V037_GLOBAL_011"
       ],
       "relationTypes": [
         "part_of_arc"
@@ -75392,13 +76274,15 @@
       ],
       "arcFamilyIds": [
         "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
-      ]
+      ],
+      "thesis_ru": "Китайский контрстек сочетает обход внешних ограничений с внутренним контролем допуска. Открытые веса и собственная инфраструктура расширяют альтернативный маршрут, тогда как обязательная регистрация публичных генеративных сервисов показывает, что этот маршрут остаётся внутри национальной контрольной точки.",
+      "safe_wording_ru": "Описывать одновременно внешний маршрут обхода и внутренний режим допуска, не выдавая число регистраций за аудит безопасности."
     },
     {
       "id": "ARC_CYBER_CLAIM_TO_CAVEAT",
       "arc_type": "statement_walkback",
       "status": "operational_signals_with_autonomy_caveat",
-      "start_date": "2025-08-08",
+      "start_date": "2024-10-24",
       "end_date": "2026-09-10",
       "visual_lanes": [
         "cyber_security_patch",
@@ -75466,7 +76350,8 @@
         "SIG_2026_ANTHROPIC_FABLE_MYTHOS51_SAFEGUARD_SPLIT",
         "SIG_2026_ANTHROPIC_GTG20006_ADAPTIVE_EVASION",
         "SIG_2026_ANTHROPIC_GTG10007_EXPLOIT_FOUNDRY",
-        "SIG_2026_ANTHROPIC_GTG50014_CREDENTIAL_SUPPLY_CHAIN"
+        "SIG_2026_ANTHROPIC_GTG50014_CREDENTIAL_SUPPLY_CHAIN",
+        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS"
       ],
       "counterpoints": [
         "The independent Hugging Face investigation strengthens incident evidence but concerns research configurations with reduced safeguards.",
@@ -75503,7 +76388,8 @@
       "edgeIds": [
         "EDGE_V035_ANTHROPIC_005",
         "EDGE_V035_ANTHROPIC_007",
-        "EDGE_V035_ANTHROPIC_009"
+        "EDGE_V035_ANTHROPIC_009",
+        "EDGE_V037_GLOBAL_007"
       ],
       "relationTypes": [
         "part_of_arc"
@@ -75519,7 +76405,7 @@
       "id": "ARC_QUIET_ACCESS_CONTROL",
       "arc_type": "governance_by_access",
       "status": "strong",
-      "start_date": "2024-10-15",
+      "start_date": "2024-05-21",
       "end_date": "2026-09-12",
       "visual_lanes": [
         "governance_law",
@@ -75579,7 +76465,9 @@
         "CLM_PROVIDER_OBSERVABILITY_ACCESS_GATE",
         "SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
         "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
-        "SIG_2026_FRONTIER_LAB_PACING_ENDORSEMENTS"
+        "SIG_2026_FRONTIER_LAB_PACING_ENDORSEMENTS",
+        "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS"
       ],
       "counterpoints": [
         "One first-party incident account cannot establish the prevalence or net security effect of commercial model guardrails.",
@@ -75594,8 +76482,8 @@
       "family_id": "ARC_FAMILY_ACCESS_CONTROL",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "Control operates through customer review, access tiers, request logs, account revocation, release checkpoints and external-evaluator access. NSPM-11 adds a countervailing constraint: in the national-security enterprise, a supplier should not unilaterally disable an adopted system. This is a contest over access authority, not evidence that either side has complete visibility.",
-      "safe_wording_en": "Distinguish supplier control over a service, state procurement authority and self-regulatory proposals; they are different sources of power.",
+      "thesis_en": "Quiet control operates through customer review, access tiers, logs, account revocation, release thresholds and evaluator access. The Seoul commitments define a voluntary threshold, UK AISI receives bounded pre-release access, and the EU and China use different binding access gates. These mechanisms provide different visibility and do not add up to one all-seeing regulator.",
+      "safe_wording_en": "Separate a voluntary threshold, contractual evaluator access and a binding regulatory gate; each observes and controls a different part of the lifecycle.",
       "counterpoints_en": [
         "One first-party incident account cannot establish the prevalence or net security effect of commercial model guardrails.",
         "Ball spoke in a personal public thread and later described the scenario as prediction, not recommendation; public US criticism shows disagreement rather than a unified strategy.",
@@ -75609,14 +76497,14 @@
       "kind": "arc",
       "title": "Quiet access control: policy gates, vetted users, ASL",
       "title_en": "Quiet access control: policy gates, vetted users, ASL",
-      "thesis": "Control operates through customer review, access tiers, request logs, account revocation, release checkpoints and external-evaluator access. NSPM-11 adds a countervailing constraint: in the national-security enterprise, a supplier should not unilaterally disable an adopted system. This is a contest over access authority, not evidence that either side has complete visibility.",
-      "safe_wording": "Distinguish supplier control over a service, state procurement authority and self-regulatory proposals; they are different sources of power.",
+      "thesis": "Quiet control operates through customer review, access tiers, logs, account revocation, release thresholds and evaluator access. The Seoul commitments define a voluntary threshold, UK AISI receives bounded pre-release access, and the EU and China use different binding access gates. These mechanisms provide different visibility and do not add up to one all-seeing regulator.",
+      "safe_wording": "Separate a voluntary threshold, contractual evaluator access and a binding regulatory gate; each observes and controls a different part of the lifecycle.",
       "v034_thesis": {
         "ru": "Access control operates through contracts, ownership clauses, trusted access, different safeguard configurations of one model, agent identity and research-environment boundaries. Cursor, Astra, Fable/Mythos, Agent 365 and EFS show several private architectures of that control.",
         "en": "Access control operates through contracts, ownership clauses, trusted access, different safeguard configurations of one model, agent identity and research-environment boundaries. Cursor, Astra, Fable/Mythos, Agent 365 and EFS show several private architectures of that control."
       },
-      "thesis_ru": "Контроль действует через проверку клиентов, уровни допуска, журналы запросов, отзыв аккаунтов, контрольные точки выпуска и доступ внешних оценщиков. NSPM-11 добавляет встречное ограничение: в контуре национальной безопасности поставщик не должен единолично отключать уже используемую систему. Это спор о том, кто управляет доступом, а не доказательство полной видимости одной стороны.",
-      "safe_wording_ru": "Различать контроль поставщика над сервисом, государственные закупочные полномочия и предложения саморегулирования; это разные источники власти.",
+      "thesis_ru": "Тихий контроль действует через проверку клиентов, уровни допуска, журналы, отзыв аккаунтов, пороги выпуска и доступ оценщиков. Сеульские обязательства формулируют добровольный порог, британский AISI получает ограниченный доступ до выпуска, а ЕС и Китай используют разные обязательные контуры допуска. Эти механизмы дают разную видимость и не складываются в одного всевидящего регулятора.",
+      "safe_wording_ru": "Разделять добровольный порог, договорный доступ оценщика и обязательный регуляторный допуск; каждый видит и контролирует разную часть цикла.",
       "edgeIds": [
         "EDGE_V035_ANTHROPIC_001",
         "EDGE_V035_ANTHROPIC_011",
@@ -75625,7 +76513,9 @@
         "EDGE_V035_ANTHROPIC_033",
         "EDGE_V036_PACING_008",
         "EDGE_V036_PACING_011",
-        "EDGE_V036_PACING_015"
+        "EDGE_V036_PACING_015",
+        "EDGE_V037_GLOBAL_002",
+        "EDGE_V037_GLOBAL_005"
       ],
       "relationTypes": [
         "part_of_arc",
@@ -76566,7 +77456,8 @@
         "SIG_2026_DOW_AI_STRATEGY_SPEED_WINS",
         "SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
         "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
-        "SIG_2026_TRUMP_REJECTS_FRONTIER_PACING"
+        "SIG_2026_TRUMP_REJECTS_FRONTIER_PACING",
+        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE"
       ],
       "counterpoints": [
         "CADA was a Commission proposal on the research date, not enacted law.",
@@ -76579,8 +77470,8 @@
       "family_id": "ARC_FAMILY_ACCESS_CONTROL",
       "arc_kind": "mechanism",
       "parent_arc_id": "",
-      "thesis_en": "States and providers contest chip and model supply, legitimate access to outputs, development pace and continuity of an adopted system. Amodei's proposal relies on export controls to preserve a U.S. lead, while NSPM-11 limits the supplier's reverse leverage over the state. The opposing control mechanisms are established, not one coherent regime or a final balance of power.",
-      "safe_wording_en": "Do not reduce opposing constraints to complete state or corporate control; scope, implementation and judicial limits differ.",
+      "thesis_en": "Sovereign flow control covers not only chips, data and capital but also service release, checkpoint visibility and continuity of access. The EU governs market availability, China operates a mandatory registry for public services, Korea uses provenance criteria and domestic models, and the United States combines export controls with procurement replaceability.",
+      "safe_wording_en": "Do not call different national mechanisms one regime or conflate service filing with control over model training.",
       "counterpoints_en": [
         "CADA was a Commission proposal on the research date, not enacted law.",
         "AWS sovereign-cloud properties are vendor claims pending workload-specific external qualification.",
@@ -76592,14 +77483,14 @@
       "kind": "arc",
       "title": "Sovereign flow controls: data, technology, capital and people",
       "title_en": "Sovereign flow controls: data, technology, capital and people",
-      "thesis": "States and providers contest chip and model supply, legitimate access to outputs, development pace and continuity of an adopted system. Amodei's proposal relies on export controls to preserve a U.S. lead, while NSPM-11 limits the supplier's reverse leverage over the state. The opposing control mechanisms are established, not one coherent regime or a final balance of power.",
-      "safe_wording": "Do not reduce opposing constraints to complete state or corporate control; scope, implementation and judicial limits differ.",
+      "thesis": "Sovereign flow control covers not only chips, data and capital but also service release, checkpoint visibility and continuity of access. The EU governs market availability, China operates a mandatory registry for public services, Korea uses provenance criteria and domestic models, and the United States combines export controls with procurement replaceability.",
+      "safe_wording": "Do not call different national mechanisms one regime or conflate service filing with control over model training.",
       "v034_thesis": {
         "ru": "Sovereign control reaches data, licenses, weight provenance, access tiers, model evaluation, capital and interfaces. Korea shows state-level selective interdependence, while Hugging Face adds an organizational example: local execution kept attack logs and credentials inside the infrastructure when the external access channel became unusable.",
         "en": "Sovereign control reaches data, licenses, weight provenance, access tiers, model evaluation, capital and interfaces. Korea shows state-level selective interdependence, while Hugging Face adds an organizational example: local execution kept attack logs and credentials inside the infrastructure when the external access channel became unusable."
       },
-      "thesis_ru": "Государства и провайдеры оспаривают поставку чипов и моделей, допустимый доступ к выходам, темп разработки и непрерывность уже принятой системы. Предложение Амодеи опирается на экспортные ограничения ради сохранения преимущества США, тогда как NSPM-11 ограничивает обратный рычаг поставщика над государством. Подтверждены встречные механизмы контроля, но не единый режим и не окончательный баланс сил.",
-      "safe_wording_ru": "Не сводить встречные ограничения к полному контролю государства или компании; сфера действия, исполнение и судебные пределы различаются.",
+      "thesis_ru": "Суверенный контроль потоков охватывает не только чипы, данные и капитал, но и выпуск сервиса, видимость контрольной точки и непрерывность доступа. ЕС регулирует доступность на рынке, Китай ведёт обязательный реестр публичных сервисов, Корея использует критерии происхождения и собственные модели, а США соединяют экспортные ограничения с закупочной заменяемостью.",
+      "safe_wording_ru": "Не называть разные национальные механизмы единым режимом и не путать регистрацию сервиса с контролем обучения модели.",
       "edgeIds": [
         "EDGE_V035_ANTHROPIC_002",
         "EDGE_V035_ANTHROPIC_014",
@@ -76608,7 +77499,8 @@
         "EDGE_V036_PACING_004",
         "EDGE_V036_PACING_007",
         "EDGE_V036_PACING_013",
-        "EDGE_V036_PACING_017"
+        "EDGE_V036_PACING_017",
+        "EDGE_V037_GLOBAL_009"
       ],
       "relationTypes": [
         "part_of_arc",
@@ -76772,7 +77664,7 @@
       "id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
       "title_en": "AI cyber resilience: from model controls to an assurance stack",
       "arc_type": "cross_jurisdiction_governance_mechanism",
-      "start_date": "2026-01-01",
+      "start_date": "2024-05-21",
       "end_date": "2026-09-12",
       "key_nodes": [
         "SIG_2026_CN_CYBERSECURITY_LAW_AI_AMENDMENT_EFFECTIVE",
@@ -76840,7 +77732,10 @@
         "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE",
         "SIG_2026_ANTHROPIC_GTG50014_CREDENTIAL_SUPPLY_CHAIN",
         "SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
-        "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL"
+        "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
+        "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE"
       ],
       "visual_lanes": [
         "governance_law",
@@ -76853,8 +77748,8 @@
         "finance_rent"
       ],
       "status": "verified_mixed_legal_force_and_implementation",
-      "thesis_en": "AI cyber resilience includes development, testing, remediation, recovery, use monitoring, capability pacing and continuity of mission access. NSPM-11 establishes part of this for the national-security enterprise; Amodei's framework proposes checkpoints and permanently embedded external evaluators. Operative rules and proposals must remain distinct.",
-      "safe_wording_en": "Separate binding directions and observed implementation from voluntary commitments and proposals for a future regime.",
+      "thesis_en": "AI cyber resilience includes secure development, capability evaluation, defence, sector recovery and decision security. The comparative layer adds further checkpoints: voluntary development and deployment thresholds, pre-release evaluator access, mandatory evaluation or filing for public services, and continuity of mission access.",
+      "safe_wording_en": "Distinguish a control's existence, binding force, implementation and measured effectiveness.",
       "counterpoints": [
         "The five domains are an atlas framework, not one adopted standard.",
         "ASAMM v0.5.1 is an independent community draft proposed as an OWASP SAMM companion, not an approved OWASP release.",
@@ -76872,8 +77767,8 @@
       "parent_arc_id": "",
       "kind": "arc",
       "title": "AI cyber resilience: from model controls to an assurance stack",
-      "thesis": "AI cyber resilience includes development, testing, remediation, recovery, use monitoring, capability pacing and continuity of mission access. NSPM-11 establishes part of this for the national-security enterprise; Amodei's framework proposes checkpoints and permanently embedded external evaluators. Operative rules and proposals must remain distinct.",
-      "safe_wording": "Separate binding directions and observed implementation from voluntary commitments and proposals for a future regime.",
+      "thesis": "AI cyber resilience includes secure development, capability evaluation, defence, sector recovery and decision security. The comparative layer adds further checkpoints: voluntary development and deployment thresholds, pre-release evaluator access, mandatory evaluation or filing for public services, and continuity of mission access.",
+      "safe_wording": "Distinguish a control's existence, binding force, implementation and measured effectiveness.",
       "edgeIds": [
         "EDGE_V034_RESILIENCE_001",
         "EDGE_V034_RESILIENCE_002",
@@ -76894,7 +77789,10 @@
         "EDGE_V035_ANTHROPIC_004",
         "EDGE_V035_ANTHROPIC_012",
         "EDGE_V036_PACING_009",
-        "EDGE_V036_PACING_012"
+        "EDGE_V036_PACING_012",
+        "EDGE_V037_GLOBAL_003",
+        "EDGE_V037_GLOBAL_006",
+        "EDGE_V037_GLOBAL_010"
       ],
       "relationTypes": [
         "part_of_arc",
@@ -76906,7 +77804,7 @@
       "arcFamilyIds": [
         "ARC_FAMILY_CYBER_COGNITION_WAR"
       ],
-      "thesis_ru": "Киберустойчивость ИИ включает разработку, испытания, исправление, восстановление, наблюдение за использованием, контроль темпа возможностей и непрерывность критичного доступа. NSPM-11 закрепляет часть требований для национальной безопасности; схема Амодеи предлагает контрольные точки и постоянно встроенных внешних оценщиков. Действующие нормы и предложения должны оставаться раздельными.",
+      "thesis_ru": "Киберустойчивость ИИ включает безопасную разработку, оценку возможностей, защиту, отраслевое восстановление и безопасность решений. Сравнительный слой показывает дополнительные контрольные точки: добровольные пороги разработки и выпуска, дорелизный доступ оценщика, обязательную оценку или регистрацию публичного сервиса и непрерывность критичного доступа.",
       "resilience_track_ids": [
         "RES_TRACK_MAINTENANCE_CAPACITY",
         "RES_TRACK_VERIFIED_REMEDIATION",
@@ -76921,14 +77819,14 @@
         "ru": "Киберустойчивость ИИ включает безопасность систем, управление кибервозможностями, защитный цикл и межорганизационную координацию, отраслевую устойчивость и защиту решений и зависимостей. Реальные находки создают нагрузку после фильтра недостоверных сообщений: требуется довести результат до проверенного устранения, не нарушив критическую услугу. Доступ, право действовать и операционная ёмкость — отдельные ограничения.",
         "en": "AI cyber resilience includes secure systems, capability governance, the defensive lifecycle and cross-organization coordination, sector resilience, and security of decisions and dependencies. Valid findings create work after invalid reports are filtered: results must reach verified remediation without disrupting essential services. Access, authority and operational capacity are separate constraints."
       },
-      "safe_wording_ru": "Отделять обязательные предписания и наблюдаемое исполнение от добровольных обещаний и проектов будущего режима."
+      "safe_wording_ru": "Различать существование элемента контроля, его обязательность, применение и измеренную эффективность."
     },
     {
       "id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
       "kind": "arc",
       "arc_type": "tempo_and_access_governance",
-      "status": "verified_mixed_binding_policy_proposal_and_rhetoric",
-      "start_date": "2026-01-09",
+      "status": "verified_mixed_voluntary_binding_evaluation_procurement_and_rhetoric",
+      "start_date": "2023-07-13",
       "end_date": "2026-09-14",
       "visual_lanes": [
         "governance_law",
@@ -76938,9 +77836,17 @@
         "cloud_inference"
       ],
       "key_nodes": [
+        "SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+        "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
         "SIG_2026_DOW_AI_STRATEGY_SPEED_WINS",
+        "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+        "SIG_2026_CN_AGENT_GOVERNANCE_OPINIONS",
+        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
         "SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
         "export-13",
+        "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+        "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
         "SIG_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE",
         "export-14",
         "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
@@ -76957,7 +77863,15 @@
         "EDGE_V036_PACING_010",
         "EDGE_V036_PACING_014",
         "EDGE_V036_PACING_016",
-        "EDGE_V036_PACING_025"
+        "EDGE_V036_PACING_025",
+        "EDGE_V037_GLOBAL_001",
+        "EDGE_V037_GLOBAL_004",
+        "EDGE_V037_GLOBAL_008",
+        "EDGE_V037_GLOBAL_012",
+        "EDGE_V037_GLOBAL_013",
+        "EDGE_V037_GLOBAL_014",
+        "EDGE_V037_GLOBAL_015",
+        "EDGE_V037_GLOBAL_016"
       ],
       "arcIds": [
         "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
@@ -76969,38 +77883,38 @@
         "part_of_arc",
         "supports_arc"
       ],
-      "title_ru": "Темп и непрерывность доступа к передовым моделям",
-      "title_en": "Frontier-model pacing and continuity of access",
-      "title": "Frontier-model pacing and continuity of access",
-      "thesis_ru": "Темп развития стал самостоятельным объектом структурной власти. Лаборатории могут задерживать обучение и выпуск, а государство через закупки и директивы требует скорости, заменяемости и непрерывности доступа. Внешние оценщики создают внутренний контур наблюдения, контрольные точки ограничивают выпуск, а NSPM-11 ограничивает обратную способность поставщика перекрыть государству уже используемую систему.",
-      "thesis_en": "Development tempo has become an object of structural power in its own right. Laboratories can delay training and release, while the state uses procurement and directives to demand speed, replaceability and continuity. Embedded evaluators create an inward observability layer, release checkpoints constrain deployment, and NSPM-11 constrains the supplier's reverse ability to cut the state off from an adopted system.",
-      "thesis": "Development tempo has become an object of structural power in its own right. Laboratories can delay training and release, while the state uses procurement and directives to demand speed, replaceability and continuity. Embedded evaluators create an inward observability layer, release checkpoints constrain deployment, and NSPM-11 constrains the supplier's reverse ability to cut the state off from an adopted system.",
-      "safe_wording_ru": "Разделять подтверждённую паузу OpenAI, обязательные директивы, добровольные обещания аудита и политическую риторику. Их совместная дуга показывает конфликт полномочий, но не доказывает единый картельный график или полный государственный контроль.",
-      "safe_wording_en": "Separate OpenAI's observed pause, binding directives, voluntary audit promises and political rhetoric. Together they show a contest over authority, not a common cartel schedule or complete state control.",
-      "safe_wording": "Separate OpenAI's observed pause, binding directives, voluntary audit promises and political rhetoric. Together they show a contest over authority, not a common cartel schedule or complete state control.",
+      "title_ru": "Темп, допуск и непрерывность доступа к передовым моделям",
+      "title_en": "Frontier-model pacing, release gates and continuity of access",
+      "title": "Frontier-model pacing, release gates and continuity of access",
+      "thesis_ru": "За пределами США контроль над передовым ИИ также строится вокруг контрольных точек, но они устроены по-разному. Сеульские обязательства задают добровольные пороги разработки и выпуска; британский AISI получает ограниченную дорелизную видимость; ЕС располагает законными полномочиями оценки и ограничения доступности; Китай применяет регистрацию публичных сервисов; Корея развивает собственные модели и критерии происхождения. Американский спор о скорости и праве лаборатории на паузу является одной версией более общего конфликта за темп, допуск и непрерывность.",
+      "thesis_en": "Outside the United States, control over advanced AI also takes the form of checkpoints, but the mechanisms differ. The Seoul commitments set voluntary development and deployment thresholds; UK AISI receives bounded pre-release visibility; the EU has statutory evaluation and availability-restriction powers; China operates a filing gate for public services; and Korea pursues domestic models and provenance criteria. The U.S. dispute over speed and a laboratory's ability to pause is one version of a broader contest over pace, release and continuity.",
+      "thesis": "Outside the United States, control over advanced AI also takes the form of checkpoints, but the mechanisms differ. The Seoul commitments set voluntary development and deployment thresholds; UK AISI receives bounded pre-release visibility; the EU has statutory evaluation and availability-restriction powers; China operates a filing gate for public services; and Korea pursues domestic models and provenance criteria. The U.S. dispute over speed and a laboratory's ability to pause is one version of a broader contest over pace, release and continuity.",
+      "safe_wording_ru": "Различать добровольные обязательства, сотрудничество с оценщиком, обязательный допуск на рынок, регистрацию публичного сервиса и закупочную политику. Их общая тема — контрольная точка; правовая сила, объект контроля и наблюдаемое исполнение различаются.",
+      "safe_wording_en": "Distinguish voluntary commitments, evaluator collaboration, binding market access, public-service filing and procurement policy. Their common feature is a checkpoint; legal force, control object and observed implementation differ.",
+      "safe_wording": "Distinguish voluntary commitments, evaluator collaboration, binding market access, public-service filing and procurement policy. Their common feature is a checkpoint; legal force, control object and observed implementation differ.",
       "counterpoints_ru": [
-        "Амодеи предлагает замедление прироста возможностей, а не прекращение обучения.",
-        "Публичная поддержка руководителей лабораторий не доказывает согласованного изменения циклов обучения.",
-        "Стратегия Пентагона и NSPM-11 относятся к национальной безопасности, а не ко всему рынку.",
-        "Высказывания Трампа не являются самостоятельным нормативным актом.",
-        "Решение по статусу Anthropic как риска цепочки поставок показывает судебные пределы исполнительной власти.",
-        "Схема Амодеи сама опирается на экспортные ограничения и сохранение преимущества США, а не на нейтральный глобальный мораторий."
+        "Сеульские обязательства не создали общего графика обучения и допускают разные корпоративные рамки.",
+        "Дорелизный доступ AISI не равен общему праву государства задерживать выпуск.",
+        "Китайский реестр охватывает публичные сервисы, а не весь цикл обучения модели.",
+        "Полномочия ЕС действуют в пределах AI Act и не образуют мирового режима.",
+        "Корейские программы уменьшают зависимость от поставщика, но сами по себе не замедляют фронтир.",
+        "Предложение Амодеи и поддержка руководителей лабораторий не доказывают согласованного изменения темпа."
       ],
       "counterpoints_en": [
-        "Amodei proposes slower capability gains, not an end to model training.",
-        "Public support from laboratory leaders does not establish coordinated changes to training runs.",
-        "The Pentagon strategy and NSPM-11 govern the national-security enterprise, not the whole market.",
-        "Trump's statements are not a standalone legal instrument.",
-        "The ruling on Anthropic's supply-chain-risk designation shows judicial limits on executive power.",
-        "Amodei's framework itself relies on export controls and preservation of the U.S. lead, not a neutral global moratorium."
+        "The Seoul commitments did not create a common training schedule and allow different company frameworks.",
+        "AISI's pre-release access is not a general state power to delay deployment.",
+        "China's registry governs public-facing services, not the whole model-training lifecycle.",
+        "EU powers operate within the AI Act and do not constitute a global regime.",
+        "Korean programmes reduce supplier dependency but do not by themselves slow the frontier.",
+        "Amodei's proposal and executive endorsements do not establish a coordinated pace change."
       ],
       "counterpoints": [
-        "Amodei proposes slower capability gains, not an end to model training.",
-        "Public support from laboratory leaders does not establish coordinated changes to training runs.",
-        "The Pentagon strategy and NSPM-11 govern the national-security enterprise, not the whole market.",
-        "Trump's statements are not a standalone legal instrument.",
-        "The ruling on Anthropic's supply-chain-risk designation shows judicial limits on executive power.",
-        "Amodei's framework itself relies on export controls and preservation of the U.S. lead, not a neutral global moratorium."
+        "The Seoul commitments did not create a common training schedule and allow different company frameworks.",
+        "AISI's pre-release access is not a general state power to delay deployment.",
+        "China's registry governs public-facing services, not the whole model-training lifecycle.",
+        "EU powers operate within the AI Act and do not constitute a global regime.",
+        "Korean programmes reduce supplier dependency but do not by themselves slow the frontier.",
+        "Amodei's proposal and executive endorsements do not establish a coordinated pace change."
       ]
     }
   ],
@@ -93697,6 +94611,595 @@
       "kind": "edge",
       "is_auto": false,
       "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_001",
+      "source": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+      "target": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_002",
+      "source": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+      "target": "ARC_QUIET_ACCESS_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_QUIET_ACCESS_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_003",
+      "source": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+      "target": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_004",
+      "source": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+      "target": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_005",
+      "source": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+      "target": "ARC_QUIET_ACCESS_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_QUIET_ACCESS_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_006",
+      "source": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+      "target": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_007",
+      "source": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_008",
+      "source": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+      "target": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_009",
+      "source": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+      "target": "ARC_SOVEREIGN_FLOW_GATING",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_SOVEREIGN_FLOW_GATING",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_010",
+      "source": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+      "target": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_011",
+      "source": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+      "target": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность; связь не доказывает всю сюжетную дугу.",
+      "summary_en": "Thematic membership; the link does not prove the whole story arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_012",
+      "source": "SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+      "target": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Существующий факт включён в сравнительную дугу; связь не приравнивает национальные режимы.",
+      "summary_en": "The existing fact joins the comparative arc; the link does not equate national regimes.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_013",
+      "source": "SIG_2026_CN_AGENT_GOVERNANCE_OPINIONS",
+      "target": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Существующий факт включён в сравнительную дугу; связь не приравнивает национальные режимы.",
+      "summary_en": "The existing fact joins the comparative arc; the link does not equate national regimes.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_014",
+      "source": "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
+      "target": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Существующий факт включён в сравнительную дугу; связь не приравнивает национальные режимы.",
+      "summary_en": "The existing fact joins the comparative arc; the link does not equate national regimes.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_015",
+      "source": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+      "target": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Существующий факт включён в сравнительную дугу; связь не приравнивает национальные режимы.",
+      "summary_en": "The existing fact joins the comparative arc; the link does not equate national regimes.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_016",
+      "source": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+      "target": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "dashed",
+      "summary_ru": "Существующий факт включён в сравнительную дугу; связь не приравнивает национальные режимы.",
+      "summary_en": "The existing fact joins the comparative arc; the link does not equate national regimes.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_017",
+      "source": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+      "target": "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Поддерживает сравнительный тезис только в пределах указанной правовой силы и объекта контроля.",
+      "summary_en": "Supports the comparative claim only within the stated legal force and control object.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_018",
+      "source": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+      "target": "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Поддерживает сравнительный тезис только в пределах указанной правовой силы и объекта контроля.",
+      "summary_en": "Supports the comparative claim only within the stated legal force and control object.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_019",
+      "source": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+      "target": "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Поддерживает сравнительный тезис только в пределах указанной правовой силы и объекта контроля.",
+      "summary_en": "Supports the comparative claim only within the stated legal force and control object.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_020",
+      "source": "SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+      "target": "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Поддерживает сравнительный тезис только в пределах указанной правовой силы и объекта контроля.",
+      "summary_en": "Supports the comparative claim only within the stated legal force and control object.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_021",
+      "source": "SIG_2026_CN_AGENT_GOVERNANCE_OPINIONS",
+      "target": "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Поддерживает сравнительный тезис только в пределах указанной правовой силы и объекта контроля.",
+      "summary_en": "Supports the comparative claim only within the stated legal force and control object.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_022",
+      "source": "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
+      "target": "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Поддерживает сравнительный тезис только в пределах указанной правовой силы и объекта контроля.",
+      "summary_en": "Supports the comparative claim only within the stated legal force and control object.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_023",
+      "source": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+      "target": "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Поддерживает сравнительный тезис только в пределах указанной правовой силы и объекта контроля.",
+      "summary_en": "Supports the comparative claim only within the stated legal force and control object.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_024",
+      "source": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+      "target": "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Поддерживает сравнительный тезис только в пределах указанной правовой силы и объекта контроля.",
+      "summary_en": "Supports the comparative claim only within the stated legal force and control object.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_025",
+      "source": "SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+      "target": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "institutionalizes",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Административная статистика показывает применение режима регистрации, созданного временными мерами 2023 года.",
+      "summary_en": "Administrative counts show operation of the filing regime created by the 2023 Interim Measures.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_026",
+      "source": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+      "target": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "context_for",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Многосторонние обязательства создают контекст для дорелизной оценки, но не доказывают причинность конкретного доступа AISI.",
+      "summary_en": "The multilateral commitments provide context for pre-release evaluation but do not establish that they caused AISI's access.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_027",
+      "source": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+      "target": "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "precedes_and_qualifies",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Добровольные пороги существовали до предложения Амодеи и ограничивают тезис о полной новизне идеи.",
+      "summary_en": "Voluntary thresholds predated Amodei's proposal and qualify claims that the idea was wholly new.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_028",
+      "source": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+      "target": "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "precedes_and_qualifies",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Государственный оценщик уже получал дорелизный доступ, хотя Амодеи предлагает более постоянную и глубокую модель присутствия.",
+      "summary_en": "A state evaluator already received pre-release access, although Amodei proposes a more continuous and deeply embedded model.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_029",
+      "source": "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
+      "target": "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "parallel",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Полномочия ЕС дают обязательный контур оценки и ограничения доступности, параллельный корпоративному предложению, но не тождественный ему.",
+      "summary_en": "EU powers create a binding evaluation and availability gate parallel to, but distinct from, the company proposal.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_030",
+      "source": "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+      "target": "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "context_for",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Критерии происхождения и контроля весов создают контекст для программы собственной кибермодели без доказательства прямой причинности.",
+      "summary_en": "Weight provenance and control criteria provide context for the domestic cyber-model programme without establishing direct causation.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V037_GLOBAL_031",
+      "source": "SIG_2026_CN_AGENT_GOVERNANCE_OPINIONS",
+      "target": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "parallel",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "A/B",
+      "visual_lane": "governance_law",
+      "style": "solid",
+      "summary_ru": "Политика жизненного цикла агентов и действующий реестр сервисов показывают соседние, но самостоятельные контуры китайского регулирования.",
+      "summary_en": "Agent lifecycle policy and the operating service registry show adjacent but separate Chinese governance channels.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
     }
   ],
   "thesisNodes": [
@@ -94317,38 +95820,38 @@
   ],
   "referenceIntegrity": {
     "valid": true,
-    "checked_references": 7544,
+    "checked_references": 7796,
     "checked_by_field": {
-      "arc.key_nodes": 604,
+      "arc.key_nodes": 620,
       "arc.family_id": 26,
-      "edge.source": 864,
-      "edge.target": 864,
-      "edge.arc_id": 864,
-      "edge.arc_family_id": 776,
+      "edge.source": 895,
+      "edge.target": 895,
+      "edge.arc_id": 895,
+      "edge.arc_family_id": 807,
       "claim.supporting_evidence": 30,
       "claim.qualifying_evidence": 10,
-      "claim_check.supporting_evidence": 177,
+      "claim_check.supporting_evidence": 188,
       "counterargument.evidence": 7,
       "country.strongest_supporting_evidence": 15,
       "country.strongest_counter_evidence": 4,
       "recipe.recommended_filters.hide_arc_ids": 2,
       "recipe.recommended_arc_ids": 22,
-      "event.arcIds": 621,
-      "event.arcFamilyIds": 464,
-      "event.edgeIds": 815,
+      "event.arcIds": 637,
+      "event.arcFamilyIds": 472,
+      "event.edgeIds": 853,
       "claim.arcIds": 55,
       "claim.arcFamilyIds": 50,
       "claim.edgeIds": 104,
       "claimCheck.arcIds": 61,
-      "claimCheck.edgeIds": 185,
+      "claimCheck.edgeIds": 193,
       "claimCheck.arcFamilyIds": 28,
       "arc.arcIds": 12,
       "arc.arcFamilyIds": 12,
-      "arc.edgeIds": 95,
+      "arc.edgeIds": 111,
       "thesis.arcIds": 6,
       "thesis.arcFamilyIds": 4,
       "thesis.edgeIds": 6,
-      "source.used_by": 712,
+      "source.used_by": 727,
       "resilience_track.event_ids": 48,
       "resilience.claim": 1
     },
@@ -94406,7 +95909,7 @@
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
     ],
-    "edge_count": 864,
+    "edge_count": 895,
     "v0_13_added_evidence": 6,
     "v0_13_added_edges": 6,
     "v0_14_added_evidence": 11,
@@ -94469,7 +95972,7 @@
     "v0_28_added_edges": 27,
     "v0_28_added_arcs": [],
     "story_arcs": 25,
-    "story_edges": 864,
+    "story_edges": 895,
     "last_recomputed": "2026-09-14",
     "note": "Generator recomputes reference integrity and arc-to-thesis connectivity.",
     "computed_arc_count": 25,
@@ -94547,6 +96050,15 @@
       "ARC_PALANTIR_DECISION_OS",
       "ARC_QUIET_ACCESS_CONTROL",
       "ARC_SOVEREIGN_FLOW_GATING"
+    ],
+    "v0_37_added_evidence": 3,
+    "v0_37_added_edges": 31,
+    "v0_37_updated_arcs": [
+      "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "ARC_QUIET_ACCESS_CONTROL",
+      "ARC_SOVEREIGN_FLOW_GATING",
+      "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"
     ]
   },
   "visualLanes": [
@@ -104211,6 +105723,126 @@
           "kind": "event"
         }
       ]
+    },
+    {
+      "title": "International AI Safety Report 2026",
+      "name": "International AI Safety Report",
+      "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+      "date": "2026-02-03",
+      "type": "Research / technical",
+      "source_class": "international scientific synthesis",
+      "primary_or_secondary": "secondary",
+      "id": "src-571",
+      "used_by": [
+        {
+          "id": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        },
+        {
+          "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "kind": "claimCheck"
+        }
+      ]
+    },
+    {
+      "title": "Early lessons from evaluating frontier AI systems",
+      "name": "UK AI Security Institute",
+      "url": "https://www.aisi.gov.uk/blog/early-lessons-from-evaluating-frontier-ai-systems",
+      "date": "2024-10-24",
+      "type": "Government / policy",
+      "source_class": "first-party evaluation-method disclosure",
+      "primary_or_secondary": "primary",
+      "id": "src-572",
+      "used_by": [
+        {
+          "id": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        },
+        {
+          "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "kind": "claimCheck"
+        }
+      ]
+    },
+    {
+      "title": "AISI Frontier AI Trends Report 2025",
+      "name": "UK AI Security Institute",
+      "url": "https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025",
+      "date": "2025-12-18",
+      "type": "Research / technical",
+      "source_class": "government research report",
+      "primary_or_secondary": "primary",
+      "id": "src-573",
+      "used_by": [
+        {
+          "id": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        },
+        {
+          "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "kind": "claimCheck"
+        }
+      ]
+    },
+    {
+      "title": "Generative AI service filing information announcement (March-April 2026)",
+      "name": "Cyberspace Administration of China",
+      "url": "https://www.cac.gov.cn/2026-05/13/c_1780413225190669.htm",
+      "date": "2026-05-13",
+      "type": "Government / policy",
+      "source_class": "official implementation notice",
+      "primary_or_secondary": "primary",
+      "id": "src-574",
+      "used_by": [
+        {
+          "id": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        },
+        {
+          "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "kind": "claimCheck"
+        }
+      ]
+    },
+    {
+      "title": "Frontier AI Safety Commitments, AI Seoul Summit 2024",
+      "name": "UK Department for Science, Innovation and Technology",
+      "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+      "date": "2024-05-21",
+      "type": "Government / policy",
+      "source_class": "multilateral voluntary commitments",
+      "primary_or_secondary": "primary",
+      "id": "src-575",
+      "used_by": [
+        {
+          "id": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        },
+        {
+          "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "kind": "claimCheck"
+        }
+      ]
     }
   ],
   "sourceGroups": [
@@ -104652,6 +106284,54 @@
               "kind": "event"
             }
           ]
+        },
+        {
+          "title": "Early lessons from evaluating frontier AI systems",
+          "name": "UK AI Security Institute",
+          "url": "https://www.aisi.gov.uk/blog/early-lessons-from-evaluating-frontier-ai-systems",
+          "date": "2024-10-24",
+          "type": "Government / policy",
+          "source_class": "first-party evaluation-method disclosure",
+          "primary_or_secondary": "primary",
+          "id": "src-572",
+          "used_by": [
+            {
+              "id": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+              "kind": "event"
+            },
+            {
+              "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+              "kind": "claimCheck"
+            },
+            {
+              "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+              "kind": "claimCheck"
+            }
+          ]
+        },
+        {
+          "title": "AISI Frontier AI Trends Report 2025",
+          "name": "UK AI Security Institute",
+          "url": "https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025",
+          "date": "2025-12-18",
+          "type": "Research / technical",
+          "source_class": "government research report",
+          "primary_or_secondary": "primary",
+          "id": "src-573",
+          "used_by": [
+            {
+              "id": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+              "kind": "event"
+            },
+            {
+              "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+              "kind": "claimCheck"
+            },
+            {
+              "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+              "kind": "claimCheck"
+            }
+          ]
         }
       ],
       "used_by": [
@@ -104678,10 +106358,23 @@
         {
           "id": "SIG_2025_AISI_PERSUASION_ACCURACY_TRADEOFF",
           "kind": "event"
+        },
+        {
+          "id": "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        },
+        {
+          "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "kind": "claimCheck"
         }
       ],
       "types": [
-        "Government / policy"
+        "Government / policy",
+        "Research / technical"
       ]
     },
     {
@@ -107729,6 +109422,30 @@
               "kind": "event"
             }
           ]
+        },
+        {
+          "title": "Generative AI service filing information announcement (March-April 2026)",
+          "name": "Cyberspace Administration of China",
+          "url": "https://www.cac.gov.cn/2026-05/13/c_1780413225190669.htm",
+          "date": "2026-05-13",
+          "type": "Government / policy",
+          "source_class": "official implementation notice",
+          "primary_or_secondary": "primary",
+          "id": "src-574",
+          "used_by": [
+            {
+              "id": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+              "kind": "event"
+            },
+            {
+              "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+              "kind": "claimCheck"
+            },
+            {
+              "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+              "kind": "claimCheck"
+            }
+          ]
         }
       ],
       "used_by": [
@@ -107747,6 +109464,18 @@
         {
           "id": "SIG_2026_CN_CYBERSECURITY_LAW_AI_AMENDMENT_EFFECTIVE",
           "kind": "event"
+        },
+        {
+          "id": "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        },
+        {
+          "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "kind": "claimCheck"
         }
       ],
       "types": [
@@ -111393,6 +113122,30 @@
               "kind": "event"
             }
           ]
+        },
+        {
+          "title": "Frontier AI Safety Commitments, AI Seoul Summit 2024",
+          "name": "UK Department for Science, Innovation and Technology",
+          "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+          "date": "2024-05-21",
+          "type": "Government / policy",
+          "source_class": "multilateral voluntary commitments",
+          "primary_or_secondary": "primary",
+          "id": "src-575",
+          "used_by": [
+            {
+              "id": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+              "kind": "event"
+            },
+            {
+              "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+              "kind": "claimCheck"
+            },
+            {
+              "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+              "kind": "claimCheck"
+            }
+          ]
         }
       ],
       "used_by": [
@@ -111423,6 +113176,18 @@
         {
           "id": "SIG_2026_UK_ATAS_AI_RESEARCH_ACCESS",
           "kind": "event"
+        },
+        {
+          "id": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        },
+        {
+          "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "kind": "claimCheck"
         }
       ],
       "types": [
@@ -112245,6 +114010,53 @@
       ],
       "types": [
         "Background / tertiary"
+      ]
+    },
+    {
+      "id": "source-group-282",
+      "family": "internationalaisafetyreport.org",
+      "sources": [
+        {
+          "title": "International AI Safety Report 2026",
+          "name": "International AI Safety Report",
+          "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+          "date": "2026-02-03",
+          "type": "Research / technical",
+          "source_class": "international scientific synthesis",
+          "primary_or_secondary": "secondary",
+          "id": "src-571",
+          "used_by": [
+            {
+              "id": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+              "kind": "event"
+            },
+            {
+              "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+              "kind": "claimCheck"
+            },
+            {
+              "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+              "kind": "claimCheck"
+            }
+          ]
+        }
+      ],
+      "used_by": [
+        {
+          "id": "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        },
+        {
+          "id": "CLM_031_FRONTIER_PACING_AUTHORITY",
+          "kind": "claimCheck"
+        }
+      ],
+      "types": [
+        "Research / technical"
       ]
     },
     {
@@ -121827,6 +123639,14 @@
       "binding_documents": 2,
       "implemented_common_pacing_regime": false,
       "note": "Binding directives, a company proposal, differentiated industry endorsements and presidential rhetoric remain separate evidence types."
+    },
+    "v037_scope": {
+      "date": "2026-09-14",
+      "accepted_records": 3,
+      "source_records": 5,
+      "deferred_records": 2,
+      "implemented_common_pacing_regime": false,
+      "note": "Voluntary commitments, evaluator access, binding market powers, service filing and sovereignty programmes remain separate evidence types."
     }
   },
   "actorTypeLabels": {
@@ -121870,7 +123690,7 @@
   "counts": {
     "geographies": {
       "US": 202,
-      "China": 59,
+      "China": 60,
       "Macau": 3,
       "UAE": 5,
       "Japan": 5,
@@ -121882,9 +123702,9 @@
       "Iran": 5,
       "Ukraine": 7,
       "Israel": 1,
-      "UK": 33,
+      "UK": 35,
       "Malaysia": 4,
-      "South Korea": 7,
+      "South Korea": 8,
       "North Korea": 3,
       "Germany": 3,
       "Singapore": 4,
@@ -121901,7 +123721,7 @@
     },
     "geographies_raw": {
       "US": 199,
-      "China": 58,
+      "China": 59,
       "global": 62,
       "Macau": 3,
       "UAE": 5,
@@ -121918,7 +123738,7 @@
       "Ukraine": 7,
       "Israel": 1,
       "Gaza": 1,
-      "UK": 33,
+      "UK": 35,
       "NATO": 4,
       "London": 1,
       "china": 1,
@@ -121929,7 +123749,7 @@
       "North America": 1,
       "Western Europe": 1,
       "Asia-Pacific": 1,
-      "South Korea": 7,
+      "South Korea": 8,
       "North Korea": 3,
       "Germany": 3,
       "nine-country sample": 1,
@@ -121966,7 +123786,7 @@
     },
     "jurisdictions": {
       "US": 202,
-      "China": 59,
+      "China": 60,
       "Macau": 3,
       "UAE": 5,
       "Japan": 5,
@@ -121978,9 +123798,9 @@
       "Iran": 5,
       "Ukraine": 7,
       "Israel": 1,
-      "UK": 33,
+      "UK": 35,
       "Malaysia": 4,
-      "South Korea": 7,
+      "South Korea": 8,
       "North Korea": 3,
       "Germany": 3,
       "Singapore": 4,
@@ -122026,7 +123846,8 @@
     },
     "geographic_scopes": {
       "Global": 180,
-      "National": 5
+      "National": 7,
+      "International": 1
     },
     "actors": {
       "US Commerce / BIS": 17,
@@ -122083,7 +123904,7 @@
       "Data Center Watch": 1,
       "US Congress": 1,
       "NIST": 4,
-      "Cyberspace Administration of China": 3,
+      "Cyberspace Administration of China": 4,
       "Executive Office of the President": 1,
       "European Parliament": 2,
       "Meta": 6,
@@ -122105,7 +123926,7 @@
       "ByteDance": 2,
       "TikTok": 1,
       "European Union": 3,
-      "UK Government": 1,
+      "UK Government": 2,
       "University of Manchester": 1,
       "UK Home Office": 1,
       "US President": 1,
@@ -122117,7 +123938,7 @@
       "Ministry of Defence of Ukraine": 2,
       "DELTA": 1,
       "CISA": 5,
-      "UK AI Security Institute": 8,
+      "UK AI Security Institute": 9,
       "Langflow": 2,
       "Claude Code": 7,
       "OpenAI Codex": 3,
@@ -122157,7 +123978,7 @@
       "Fraunhofer": 1,
       "German AI Association": 1,
       "Soofi Project": 1,
-      "South Korean Ministry of Science and ICT": 4,
+      "South Korean Ministry of Science and ICT": 5,
       "South Korean AI Safety Institute": 1,
       "LG AI Research": 1,
       "Naver": 2,
@@ -122188,7 +124009,7 @@
       "UK National Cyber Security Centre": 3,
       "HM Treasury": 1,
       "GCHQ": 2,
-      "UK Department for Science, Innovation and Technology": 1,
+      "UK Department for Science, Innovation and Technology": 2,
       "Digital Agency of Japan": 1,
       "European Banking Authority": 2,
       "European Systemic Risk Board": 1,
@@ -122302,7 +124123,7 @@
       "Data Center Watch": 1,
       "US Congress": 1,
       "NIST": 4,
-      "Cyberspace Administration of China": 3,
+      "Cyberspace Administration of China": 4,
       "Executive Office of the President": 1,
       "European Parliament": 2,
       "Meta": 6,
@@ -122324,7 +124145,7 @@
       "ByteDance": 2,
       "TikTok": 1,
       "European Union": 3,
-      "UK Government": 1,
+      "UK Government": 2,
       "University of Manchester": 1,
       "UK Home Office": 1,
       "US President": 1,
@@ -122336,7 +124157,7 @@
       "Ministry of Defence of Ukraine": 2,
       "DELTA": 1,
       "CISA": 5,
-      "UK AI Security Institute": 8,
+      "UK AI Security Institute": 9,
       "Langflow": 2,
       "Claude Code": 7,
       "OpenAI Codex": 3,
@@ -122376,7 +124197,7 @@
       "Fraunhofer": 1,
       "German AI Association": 1,
       "Soofi Project": 1,
-      "South Korean Ministry of Science and ICT": 4,
+      "South Korean Ministry of Science and ICT": 5,
       "South Korean AI Safety Institute": 1,
       "LG AI Research": 1,
       "Naver": 2,
@@ -122407,7 +124228,7 @@
       "UK National Cyber Security Centre": 3,
       "HM Treasury": 1,
       "GCHQ": 2,
-      "UK Department for Science, Innovation and Technology": 1,
+      "UK Department for Science, Innovation and Technology": 2,
       "Digital Agency of Japan": 1,
       "European Banking Authority": 2,
       "European Systemic Risk Board": 1,
@@ -122467,12 +124288,12 @@
       "Donald Trump": 1
     },
     "actor_types": {
-      "government": 111,
-      "regulator": 61,
+      "government": 114,
+      "regulator": 63,
       "company": 189,
       "financial_institution": 27,
       "military_security": 31,
-      "research": 80,
+      "research": 81,
       "civil_society": 13,
       "workforce_users": 26,
       "multilateral": 9,
@@ -122487,14 +124308,14 @@
       "US": 132,
       "Saudi Arabia": 3,
       "EU": 23,
-      "China": 37,
+      "China": 38,
       "India": 5,
       "Russia": 18,
       "Ukraine": 6,
       "Israel": 1,
-      "UK": 31,
+      "UK": 33,
       "Malaysia": 1,
-      "South Korea": 5,
+      "South Korea": 6,
       "Taiwan": 1,
       "Canada": 3,
       "Singapore": 1,
@@ -122564,12 +124385,12 @@
       "CFIUS": 1,
       "ByteDance": 2,
       "TikTok": 1,
-      "UK Government": 1,
+      "UK Government": 2,
       "University of Manchester": 1,
       "UK Home Office": 1,
       "UK Competition and Markets Authority": 3,
       "CISA": 5,
-      "UK AI Security Institute": 8,
+      "UK AI Security Institute": 9,
       "Langflow": 2,
       "Claude Code": 7,
       "OpenAI Codex": 3,
@@ -122595,7 +124416,7 @@
       "Fraunhofer": 1,
       "German AI Association": 1,
       "Soofi Project": 1,
-      "South Korean Ministry of Science and ICT": 4,
+      "South Korean Ministry of Science and ICT": 5,
       "South Korean AI Safety Institute": 1,
       "LG AI Research": 1,
       "Naver": 2,
@@ -122614,7 +124435,7 @@
       "VulnCheck": 1,
       "WordPress": 1,
       "Perplexity": 1,
-      "Cyberspace Administration of China": 2,
+      "Cyberspace Administration of China": 3,
       "California Department of Justice": 1,
       "California Government": 2,
       "IMDA": 1,
@@ -122630,7 +124451,7 @@
       "UK National Cyber Security Centre": 3,
       "HM Treasury": 1,
       "GCHQ": 2,
-      "UK Department for Science, Innovation and Technology": 1,
+      "UK Department for Science, Innovation and Technology": 2,
       "Digital Agency of Japan": 1,
       "Japan": 1,
       "European Banking Authority": 2,
@@ -122682,17 +124503,17 @@
       "Donald Trump": 1
     },
     "stack_layers": {
-      "governance_law": 208,
+      "governance_law": 211,
       "energy_compute_chips": 86,
-      "cloud_inference": 120,
+      "cloud_inference": 121,
       "finance_rent": 81,
-      "data_telemetry": 126,
-      "model_weights": 127,
+      "data_telemetry": 129,
+      "model_weights": 130,
       "decision_support_cognition": 176,
-      "cyber_security_patch": 152
+      "cyber_security_patch": 154
     },
     "source_types": {
-      "Government / policy": 118,
+      "Government / policy": 121,
       "Press / wire": 70,
       "Research / preprint": 63,
       "Primary source": 24,
@@ -122717,11 +124538,11 @@
       "qualifies": 35,
       "supports_counterargument": 2,
       "mitigates": 6,
-      "parallel": 18,
+      "parallel": 20,
       "countermove": 3,
       "supports_as_claim_not_fact": 4,
       "challenges": 7,
-      "supports_with_scope": 93,
+      "supports_with_scope": 101,
       "challenges_overclaim": 2,
       "supports_but_limits": 10,
       "develops_into": 17,
@@ -122736,12 +124557,12 @@
       "triggers_capital_and_cloud_lockin": 1,
       "accelerates_governance": 2,
       "early_countermeasure": 2,
-      "part_of_arc": 322,
-      "institutionalizes": 22,
+      "part_of_arc": 338,
+      "institutionalizes": 23,
       "routes_around": 1,
       "materially_updates": 2,
-      "context_for": 14,
-      "precedes_and_qualifies": 2,
+      "context_for": 16,
+      "precedes_and_qualifies": 4,
       "updated_by": 10,
       "supports_with_legal_caveat": 1
     },
@@ -122750,9 +124571,9 @@
       "ARC_TOLL_AND_THROTTLE": 10,
       "ARC_CONTROL_LEAKS_BUT_POLICES": 7,
       "ARC_GULF_CONDITIONAL_SOVEREIGNTY": 10,
-      "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 17,
-      "ARC_CYBER_CLAIM_TO_CAVEAT": 82,
-      "ARC_QUIET_ACCESS_CONTROL": 64,
+      "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 18,
+      "ARC_CYBER_CLAIM_TO_CAVEAT": 83,
+      "ARC_QUIET_ACCESS_CONTROL": 66,
       "ARC_PALANTIR_DECISION_OS": 24,
       "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 107,
       "ARC_ENERGY_GRID_POLITICS": 13,
@@ -122768,17 +124589,17 @@
       "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN": 40,
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE": 30,
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION": 16,
-      "ARC_SOVEREIGN_FLOW_GATING": 52,
+      "ARC_SOVEREIGN_FLOW_GATING": 53,
       "ARC_2016_2021_METERED_ACCESS_FORMATION": 14,
       "ARC_2021_STATE_INSTITUTIONALIZATION": 14,
       "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY": 30,
-      "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK": 115,
-      "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL": 22
+      "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK": 118,
+      "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL": 45
     },
     "arc_families": {
-      "ARC_FAMILY_ACCESS_CONTROL": 175,
-      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 83,
-      "ARC_FAMILY_CYBER_COGNITION_WAR": 318,
+      "ARC_FAMILY_ACCESS_CONTROL": 201,
+      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 84,
+      "ARC_FAMILY_CYBER_COGNITION_WAR": 322,
       "ARC_FAMILY_DECISION_DATA_FINANCE": 74,
       "ARC_FAMILY_INFRASTRUCTURE_CAPITAL": 83,
       "ARC_FAMILY_FORMATION_TIMELINE": 43
@@ -122786,15 +124607,15 @@
     "primary_cyber_domains": {
       "CYBER_DOMAIN_03_NATIONAL_DEFENSE": 25,
       "CYBER_DOMAIN_01_SECURE_SYSTEMS": 35,
-      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE": 29,
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE": 32,
       "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE": 22,
       "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY": 49
     },
     "normative_forces": {
-      "not_applicable": 119,
+      "not_applicable": 120,
       "contractual": 4,
-      "binding": 16,
-      "advisory": 18,
+      "binding": 17,
+      "advisory": 19,
       "undetermined": 1,
       "conditional": 2
     }
@@ -122802,6 +124623,7 @@
   "language": "en",
   "presentation": {
     "corrections": [
+      "REGIME COMPARISON (v0.37): checkpoints exist beyond the United States, but govern different objects—development and deployment, pre-release evaluation, market access, service filing or supply continuity. This is not one global slowdown regime.",
       "PACE AND CONTINUITY (v0.36): laboratories asserted authority to slow training and release, while the state asserted speed, replaceability and protection against unilateral shutdown. The opposing mechanisms are established, not one common regime or a final winner.",
       "OBSERVABILITY AND ACCESS GATING (v0.35): Anthropic's report shows hosted infrastructure as a node of partial observability and access revocation. This extends beyond cyber incidents: flow control, state surveillance, influence operations and the U.S.-China distillation dispute converge on one infrastructure mechanism.",
       "DEFENSIVE CAPACITY (v0.34): validated findings already strain maintenance in selected major projects. Validation, patching, release, deployment and recovery are separate; assistance announcements are not evidence of effectiveness.",
@@ -122821,15 +124643,15 @@
     ],
     "release_notes": [
       {
-        "title": "Pace and continuity",
-        "text": "PACE AND CONTINUITY (v0.36): laboratories asserted authority to slow training and release, while the state asserted speed, replaceability and protection against unilateral shutdown. The opposing mechanisms are established, not one common regime or a final winner."
+        "title": "Different checkpoints",
+        "text": "REGIME COMPARISON (v0.37): checkpoints exist beyond the United States, but govern different objects—development and deployment, pre-release evaluation, market access, service filing or supply continuity. This is not one global slowdown regime."
       },
       {
-        "title": "Different legal force",
-        "text": "The strategy and memorandum, Amodei proposal, voluntary commitments and political rhetoric remain separately classified."
+        "title": "Legal force",
+        "text": "Voluntary commitments, evaluator access, statutory gates and administrative filing remain separately classified."
       }
     ],
-    "editorial_version": "0.36",
+    "editorial_version": "0.37",
     "graph_legend_ru": "Общая сюжетная дуга — не доказательство причинности. Отдельные карточки показывают, чей контроль над каким действием усиливается, ослабляется или остаётся условным.",
     "graph_legend_en": "Shared arcs do not prove causality. Individual cards describe whose control over which action strengthens, weakens or remains conditional."
   },
@@ -123225,7 +125047,7 @@
     }
   ],
   "migrationAudit": {
-    "version": "0.36",
+    "version": "0.37",
     "base_commit": "156e39a21b5a523092ccb2975e5aa38f489f52b6",
     "reviewed_cyber_records": 119,
     "translated_event_titles": 149,
@@ -123817,7 +125639,66 @@
       "CLM_026_DECISION_SOVEREIGNTY_MITIGATION",
       "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
     ],
-    "v036_source_package": "review/frontier-pacing-september-2026"
+    "v036_source_package": "review/frontier-pacing-september-2026",
+    "v037_base_commit": "50fc436b616bb36e253cb97e6db013716bd67689",
+    "v037_base_sha256": "30b6779021f5ad589fb327dc6cf717764b8a8fb2e42ed2a700af2336e64b3411",
+    "v037_added_event_ids": [
+      "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+      "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+      "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE"
+    ],
+    "v037_added_edge_ids": [
+      "EDGE_V037_GLOBAL_001",
+      "EDGE_V037_GLOBAL_002",
+      "EDGE_V037_GLOBAL_003",
+      "EDGE_V037_GLOBAL_004",
+      "EDGE_V037_GLOBAL_005",
+      "EDGE_V037_GLOBAL_006",
+      "EDGE_V037_GLOBAL_007",
+      "EDGE_V037_GLOBAL_008",
+      "EDGE_V037_GLOBAL_009",
+      "EDGE_V037_GLOBAL_010",
+      "EDGE_V037_GLOBAL_011",
+      "EDGE_V037_GLOBAL_012",
+      "EDGE_V037_GLOBAL_013",
+      "EDGE_V037_GLOBAL_014",
+      "EDGE_V037_GLOBAL_015",
+      "EDGE_V037_GLOBAL_016",
+      "EDGE_V037_GLOBAL_017",
+      "EDGE_V037_GLOBAL_018",
+      "EDGE_V037_GLOBAL_019",
+      "EDGE_V037_GLOBAL_020",
+      "EDGE_V037_GLOBAL_021",
+      "EDGE_V037_GLOBAL_022",
+      "EDGE_V037_GLOBAL_023",
+      "EDGE_V037_GLOBAL_024",
+      "EDGE_V037_GLOBAL_025",
+      "EDGE_V037_GLOBAL_026",
+      "EDGE_V037_GLOBAL_027",
+      "EDGE_V037_GLOBAL_028",
+      "EDGE_V037_GLOBAL_029",
+      "EDGE_V037_GLOBAL_030",
+      "EDGE_V037_GLOBAL_031"
+    ],
+    "v037_reused_event_ids": [
+      "SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+      "SIG_2026_CN_AGENT_GOVERNANCE_OPINIONS",
+      "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
+      "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+      "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL"
+    ],
+    "v037_updated_claim_check_ids": [
+      "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+    ],
+    "v037_updated_arc_ids": [
+      "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "ARC_QUIET_ACCESS_CONTROL",
+      "ARC_SOVEREIGN_FLOW_GATING",
+      "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"
+    ],
+    "v037_source_package": "review/global-pacing-access-regimes"
   },
   "relationLabels": {
     "supports": {
