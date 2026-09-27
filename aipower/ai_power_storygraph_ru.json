@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "ИИ-стек как структурная власть — Combined Master Pack",
-    "version": "0.39",
+    "version": "0.40",
     "created_at": "2026-06-28",
-    "updated_at": "2026-09-14",
+    "updated_at": "2026-09-27",
     "schema_version": "ai_stack_structural_power.v0.39.0-2026-09-14",
     "display_title_ru": "ИИ-стек: четыре структуры власти на одном КПП",
     "display_title_en": "AI stack: four structures of power at one checkpoint",
@@ -12,6 +12,14 @@
     "source_pack": "ai_power_storygraph_ru.json",
     "method": "ProfGames-style layered organization. Merge of: (a) v0.4 operational pack (evidence/timeline/claim_checks/country_cards/cyber_pack/cognitive_security/critical_decision_use/palantir_case/weekly_memo/gaps), (b) v0.2 factcheck layer (claims with recommended_phrasing_ru/counterarguments/recommendations), (c) new v0.3 research closing the Stanford-tables and chip-license gaps and adding model-layer export-control claims.",
     "changelog": [
+      {
+        "version": "0.40",
+        "date": "2026-09-27",
+        "added_evidence": 2,
+        "added_story_edges": 7,
+        "added_story_arcs": 0,
+        "description": "CVE quality framework and NVD enrichment priorities; no AI-attribution inference."
+      },
       {
         "version": "0.39",
         "date": "2026-09-14",
@@ -1241,30 +1249,30 @@
         "EU GenAI4EU"
       ]
     },
-    "total_evidence_items": 394,
-    "total_timeline_items": 394,
+    "total_evidence_items": 396,
+    "total_timeline_items": 396,
     "total_story_arcs": 26,
-    "total_story_edges": 941,
+    "total_story_edges": 948,
     "cyber_framework_version": "2.2",
-    "cyber_framework_event_count": 170,
-    "total_events": 394,
+    "cyber_framework_event_count": 172,
+    "total_events": 396,
     "total_claims": 73,
     "total_claim_checks": 32,
     "total_arcs": 26,
-    "total_edges": 941,
+    "total_edges": 948,
     "total_thesis_nodes": 5,
-    "source_count": 583,
+    "source_count": 586,
     "by_status": {
-      "verified": 137,
-      "partially_verified": 28,
+      "verified": 152,
+      "partially_verified": 29,
       "needs_correction": 1,
       "verified_as_reported_not_primary_order": 1,
       "reported_unconfirmed": 3,
       "disputed_capability_claim": 1,
       "verified_as_speech_not_as_fact": 5,
-      "verified_preprint": 8,
+      "verified_preprint": 18,
       "disputed_specific_claim_valid_general_mechanism": 1,
-      "verified_as_reported": 31,
+      "verified_as_reported": 33,
       "partially_verified_contested": 2,
       "verified_as_reported_indictment_allegation": 2,
       "verified_as_announcement": 2,
@@ -1274,7 +1282,7 @@
       "verified_as_reported_with_redacted_forensics": 2,
       "verified_malicious_registry_artifacts_no_victim_prevalence": 1,
       "controlled_real_world_and_internal_red_team_no_wild_campaign": 1,
-      "verified_controlled_evaluation": 1,
+      "verified_controlled_evaluation": 19,
       "controlled_real_world_validation_no_wild_campaign": 1,
       "advertisement_verified_implementation_unverified": 1,
       "reproducible_poc_no_wild_exploitation": 1,
@@ -1292,9 +1300,9 @@
       "verified_policy_decision_technical_detail_reported": 1,
       "reported_findings_independent_validation_pending": 2,
       "verified_joint_first_party_preliminary_forensics": 1,
-      "verified_first_party_operational_account": 3,
+      "verified_first_party_operational_account": 6,
       "weights_and_license_observed": 1,
-      "independently_investigated_with_scope_limits": 1,
+      "independently_investigated_with_scope_limits": 2,
       "verified_preliminary_court_order_stayed_on_appeal": 1,
       "verified_primary_binding_effective": 2,
       "verified_primary_consultation_voluntary": 1,
@@ -1304,7 +1312,7 @@
       "verified_primary_binding_effective_scoped": 1,
       "verified_primary_enacted_future_effective": 1,
       "verified_primary_joint_guidance_nonbinding": 1,
-      "verified_primary_government_policy": 1,
+      "verified_primary_government_policy": 3,
       "verified_primary_supervisory_signal_no_new_rule": 1,
       "verified_primary_government_guidance_scoped": 1,
       "verified_primary_government_blueprint_implementation_pending": 1,
@@ -1359,20 +1367,39 @@
       "construction_started_future_delivery": 1,
       "government_reported_platform_launch": 1,
       "government_reported_adoption": 1,
-      "published_proposal_not_final_rule": 1
+      "published_proposal_not_final_rule": 1,
+      "verified_provider_evaluation": 1,
+      "verified_provider_operational_account": 5,
+      "verified_as_reported_with_partial_corroboration": 1,
+      "verified_official_positions_disputed_attribution": 1,
+      "verified_binding_internal_strategy_implementation_pending": 1,
+      "verified_binding_presidential_memorandum_implementation_pending": 1,
+      "verified_primary_policy_proposal_not_implemented_regime": 1,
+      "verified_public_statements_no_joint_operational_commitment": 1,
+      "verified_as_reported_public_position_not_policy_instrument": 1,
+      "verified_voluntary_commitments_implementation_uneven": 1,
+      "verified_predeployment_access_no_general_veto_power": 1,
+      "verified_official_implementation_counts_no_independent_service_audit": 1,
+      "officially_reported_operational_use": 1,
+      "effective_internal_platform_designation": 1,
+      "government_reported_licensed_access_and_metrics": 1,
+      "signed_nonbinding_partnership_with_pilots": 1,
+      "agreement_announced_launch_pending": 1,
+      "provider_observed_development_activity": 1,
+      "provider_observed_reconnaissance_activity": 1
     },
     "by_confidence": {
-      "A": 181,
-      "B": 76,
-      "C": 30,
+      "A": 189,
+      "B": 117,
+      "C": 35,
       "D_for_capability_claim_B_for_speech_event": 1,
       "D": 9,
-      "B/C": 4,
+      "B/C": 15,
       "D/B": 1,
       "A/D": 3,
       "C/D": 1,
-      "A/B": 11,
-      "A/C": 3,
+      "A/B": 20,
+      "A/C": 4,
       "A_for_publication_D_for_forecast": 1
     },
     "years": [
@@ -1394,16 +1421,16 @@
       "disputed": 2
     },
     "event_status_counts": {
-      "verified": 137,
-      "partially_verified": 28,
+      "verified": 152,
+      "partially_verified": 29,
       "needs_correction": 1,
       "verified_as_reported_not_primary_order": 1,
       "reported_unconfirmed": 3,
       "disputed_capability_claim": 1,
       "verified_as_speech_not_as_fact": 5,
-      "verified_preprint": 8,
+      "verified_preprint": 18,
       "disputed_specific_claim_valid_general_mechanism": 1,
-      "verified_as_reported": 31,
+      "verified_as_reported": 33,
       "partially_verified_contested": 2,
       "verified_as_reported_indictment_allegation": 2,
       "verified_as_announcement": 2,
@@ -1413,7 +1440,7 @@
       "verified_as_reported_with_redacted_forensics": 2,
       "verified_malicious_registry_artifacts_no_victim_prevalence": 1,
       "controlled_real_world_and_internal_red_team_no_wild_campaign": 1,
-      "verified_controlled_evaluation": 1,
+      "verified_controlled_evaluation": 19,
       "controlled_real_world_validation_no_wild_campaign": 1,
       "advertisement_verified_implementation_unverified": 1,
       "reproducible_poc_no_wild_exploitation": 1,
@@ -1431,9 +1458,9 @@
       "verified_policy_decision_technical_detail_reported": 1,
       "reported_findings_independent_validation_pending": 2,
       "verified_joint_first_party_preliminary_forensics": 1,
-      "verified_first_party_operational_account": 3,
+      "verified_first_party_operational_account": 6,
       "weights_and_license_observed": 1,
-      "independently_investigated_with_scope_limits": 1,
+      "independently_investigated_with_scope_limits": 2,
       "verified_preliminary_court_order_stayed_on_appeal": 1,
       "verified_primary_binding_effective": 2,
       "verified_primary_consultation_voluntary": 1,
@@ -1443,7 +1470,7 @@
       "verified_primary_binding_effective_scoped": 1,
       "verified_primary_enacted_future_effective": 1,
       "verified_primary_joint_guidance_nonbinding": 1,
-      "verified_primary_government_policy": 1,
+      "verified_primary_government_policy": 3,
       "verified_primary_supervisory_signal_no_new_rule": 1,
       "verified_primary_government_guidance_scoped": 1,
       "verified_primary_government_blueprint_implementation_pending": 1,
@@ -1498,7 +1525,26 @@
       "construction_started_future_delivery": 1,
       "government_reported_platform_launch": 1,
       "government_reported_adoption": 1,
-      "published_proposal_not_final_rule": 1
+      "published_proposal_not_final_rule": 1,
+      "verified_provider_evaluation": 1,
+      "verified_provider_operational_account": 5,
+      "verified_as_reported_with_partial_corroboration": 1,
+      "verified_official_positions_disputed_attribution": 1,
+      "verified_binding_internal_strategy_implementation_pending": 1,
+      "verified_binding_presidential_memorandum_implementation_pending": 1,
+      "verified_primary_policy_proposal_not_implemented_regime": 1,
+      "verified_public_statements_no_joint_operational_commitment": 1,
+      "verified_as_reported_public_position_not_policy_instrument": 1,
+      "verified_voluntary_commitments_implementation_uneven": 1,
+      "verified_predeployment_access_no_general_veto_power": 1,
+      "verified_official_implementation_counts_no_independent_service_audit": 1,
+      "officially_reported_operational_use": 1,
+      "effective_internal_platform_designation": 1,
+      "government_reported_licensed_access_and_metrics": 1,
+      "signed_nonbinding_partnership_with_pilots": 1,
+      "agreement_announced_launch_pending": 1,
+      "provider_observed_development_activity": 1,
+      "provider_observed_reconnaissance_activity": 1
     },
     "counting_note_ru": "Статусы тезисов и событий считаются отдельно. Число источников — число уникальных URL, а не независимых свидетельств.",
     "counting_note_en": "Claim and event statuses have separate denominators. Sources count unique URLs, not independent evidence.",
@@ -48886,7 +48932,8 @@
         "EDGE_2026_US_GOLD_EAGLE_LAUNCH_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
         "EDGE_2026_US_GOLD_EAGLE_LAUNCH_CYBER_CLAIM_TO_CAVEAT_supports",
         "EDGE_2026_US_GOLD_EAGLE_LAUNCH_QUIET_ACCESS_CONTROL_supports",
-        "EDGE_V034_RESILIENCE_045"
+        "EDGE_V034_RESILIENCE_045",
+        "EDGE_V040_CVE_007"
       ],
       "arcIds": [
         "ARC_CYBER_CLAIM_TO_CAVEAT",
@@ -67610,7 +67657,8 @@
         "EDGE_V034_RESILIENCE_004",
         "EDGE_V034_RESILIENCE_019",
         "EDGE_V034_RESILIENCE_029",
-        "EDGE_V034_RESILIENCE_030"
+        "EDGE_V034_RESILIENCE_030",
+        "EDGE_V040_CVE_006"
       ],
       "arcIds": [
         "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
@@ -67622,7 +67670,8 @@
         "part_of_arc",
         "supports_with_scope",
         "context_for",
-        "updated_by"
+        "updated_by",
+        "parallel"
       ],
       "research_updates": [
         "resilience-throughput-v034"
@@ -75430,6 +75479,552 @@
         "ARC_QUIET_ACCESS_CONTROL",
         "ARC_WAR_DATA_FLYWHEEL"
       ]
+    },
+    {
+      "id": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+      "kind": "event",
+      "date": "2026-09-22",
+      "year": 2026,
+      "source_date": "2026-09-22",
+      "date_basis": "publication",
+      "date_status": "verified_primary_date",
+      "url": "https://www.cisa.gov/resources-tools/resources/cve-program-establishing-quality-era-framework",
+      "source_name": "CISA",
+      "source_type_raw": "government_publication",
+      "source_type": "Primary source",
+      "primary_or_secondary": "primary",
+      "actor": "CISA",
+      "actor_raw": "CISA",
+      "actors_raw": [
+        "CISA"
+      ],
+      "actors": [
+        "CISA"
+      ],
+      "actor_facets_legacy": [
+        "CISA"
+      ],
+      "actor_facets": [
+        "CISA"
+      ],
+      "actor_entities": [
+        "CISA"
+      ],
+      "actor_types": [
+        "government"
+      ],
+      "actor_jurisdictions": [
+        "US"
+      ],
+      "geography_raw": [
+        "US"
+      ],
+      "geography": [
+        "US"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "actor_unclassified": [],
+      "actor_classification_status": "resolved",
+      "geography_classification_status": "resolved",
+      "evidence_context": [
+        "governance_document"
+      ],
+      "evidence_method": "primary_publication_review_no_independent_cve_recount",
+      "stack_layer": [
+        "governance_law",
+        "cyber_security_patch",
+        "data_telemetry"
+      ],
+      "stack_layers": [
+        "governance_law",
+        "cyber_security_patch",
+        "data_telemetry"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [],
+      "exact_quote_short": "",
+      "numbers": {},
+      "money_status": "",
+      "confidence": "A",
+      "evidence_level": "A",
+      "status": "verified_primary_government_policy",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "cyber_subdomain_ids": [],
+      "cyber_role_ids": [],
+      "cyber_access_principal": false,
+      "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "artifact_kind": "policy_framework",
+      "normative_force": "advisory",
+      "implementation_stage": "published",
+      "delegated_authority": "not_applicable",
+      "editorial_priority": 1,
+      "sources": [
+        {
+          "url": "https://www.cisa.gov/resources-tools/resources/cve-program-establishing-quality-era-framework",
+          "publisher": "CISA",
+          "type": "Primary source",
+          "published_at": "2026-09-22",
+          "verification": "official_page_read",
+          "name": "CISA",
+          "title": "CISA задаёт рамку качества CVE при росте потока публикаций",
+          "date": "2026-09-22",
+          "primary_or_secondary": "primary",
+          "source_class": "government_publication",
+          "checked_at": "2026-09-27"
+        },
+        {
+          "url": "https://www.cisa.gov/sites/default/files/2026-09/cve-program-establishing-a-quality-era-framework-508c.pdf",
+          "publisher": "CISA",
+          "type": "Primary source",
+          "published_at": "2026-09-22",
+          "verification": "four_page_document_read; pages_1_and_2_visually_checked",
+          "name": "CISA",
+          "title": "CISA задаёт рамку качества CVE при росте потока публикаций",
+          "date": "2026-09-22",
+          "primary_or_secondary": "primary",
+          "source_class": "government_publication",
+          "checked_at": "2026-09-27"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V040_CVE_001",
+        "EDGE_V040_CVE_002",
+        "EDGE_V040_CVE_005",
+        "EDGE_V040_CVE_007"
+      ],
+      "arcIds": [
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "part_of_arc",
+        "supports_with_scope",
+        "context_for",
+        "parallel"
+      ],
+      "research_updates": [
+        "cve-quality-era"
+      ],
+      "classification_review": {
+        "date": "2026-09-27",
+        "method": "primary_publication_review_no_independent_cve_recount",
+        "independent_source_reverification": false,
+        "independent_replication": false
+      },
+      "governance_scale": "shared_vulnerability_information_infrastructure",
+      "behavioral_mechanism_ids": [],
+      "behavioral_status": [
+        "policy_response"
+      ],
+      "agent_population_scope": "not_applicable",
+      "shared_writable_state": "unknown",
+      "oversight_target": [
+        "institutional_process"
+      ],
+      "motivation_basis": "no_motivation_claim",
+      "behavior_track_ids": [],
+      "behavior_origin": "not_applicable",
+      "concealment_targets": [
+        "none"
+      ],
+      "persistence_media": [
+        "not_established"
+      ],
+      "goal_source": "not_applicable",
+      "candidate_evidence_tier": "primary_source_reviewed",
+      "title_ru": "CISA задаёт рамку качества CVE при росте потока публикаций",
+      "title_en": "CISA defines CVE quality dimensions as publication volumes rise",
+      "title": "CISA задаёт рамку качества CVE при росте потока публикаций",
+      "summary_ru": "CISA выделяет четыре направления: управление программой, участие сообщества, инфраструктура данных и содержание записей. Среди предложенных показателей есть пропускная способность API, ошибки валидации и частота исправлений после публикации. Документ связывает давление на процессы с ростом объёма, автоматизацией и ИИ, не оценивая их отдельный вклад.",
+      "summary_en": "CISA identifies governance, participation, data infrastructure and record content as quality dimensions. Proposed measures include API throughput, validation errors and post-publication corrections. The paper links pressure to volume, automation and AI without estimating each contribution.",
+      "summary": "CISA выделяет четыре направления: управление программой, участие сообщества, инфраструктура данных и содержание записей. Среди предложенных показателей есть пропускная способность API, ошибки валидации и частота исправлений после публикации. Документ связывает давление на процессы с ростом объёма, автоматизацией и ИИ, не оценивая их отдельный вклад.",
+      "claim_supported_ru": "CISA выделяет четыре направления: управление программой, участие сообщества, инфраструктура данных и содержание записей. Среди предложенных показателей есть пропускная способность API, ошибки валидации и частота исправлений после публикации. Документ связывает давление на процессы с ростом объёма, автоматизацией и ИИ, не оценивая их отдельный вклад.",
+      "claim_supported_en": "CISA identifies governance, participation, data infrastructure and record content as quality dimensions. Proposed measures include API throughput, validation errors and post-publication corrections. The paper links pressure to volume, automation and AI without estimating each contribution.",
+      "claim_supported": "CISA выделяет четыре направления: управление программой, участие сообщества, инфраструктура данных и содержание записей. Среди предложенных показателей есть пропускная способность API, ошибки валидации и частота исправлений после публикации. Документ связывает давление на процессы с ростом объёма, автоматизацией и ИИ, не оценивая их отдельный вклад.",
+      "notes_ru": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "notes_en": "Potential metrics are not numeric targets or demonstrated improvements. Over 67,000 records do not mean as many attacks or AI discoveries; 96,000 is a forecast.",
+      "notes": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "caveat_ru": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "caveat_en": "Potential metrics are not numeric targets or demonstrated improvements. Over 67,000 records do not mean as many attacks or AI discoveries; 96,000 is a forecast.",
+      "caveat": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "corroboration_needed_ru": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "corroboration_needed_en": "Potential metrics are not numeric targets or demonstrated improvements. Over 67,000 records do not mean as many attacks or AI discoveries; 96,000 is a forecast.",
+      "corroboration_needed": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "claim_challenged_ru": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "claim_challenged_en": "Potential metrics are not numeric targets or demonstrated improvements. Over 67,000 records do not mean as many attacks or AI discoveries; 96,000 is a forecast.",
+      "claim_challenged": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "scope_ru": "Политика американской общедоступной инфраструктуры данных, используемой во всём мире; не общая обязанность поставщиков ПО.",
+      "scope_en": "Policy for U.S.-operated public data infrastructure used globally; not a general obligation on software suppliers.",
+      "scope": "Политика американской общедоступной инфраструктуры данных, используемой во всём мире; не общая обязанность поставщиков ПО.",
+      "caveats_ru": [
+        "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом."
+      ],
+      "caveats_en": [
+        "Potential metrics are not numeric targets or demonstrated improvements. Over 67,000 records do not mean as many attacks or AI discoveries; 96,000 is a forecast."
+      ],
+      "caveats": [
+        "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом."
+      ],
+      "safe_wording_ru": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "safe_wording_en": "Potential metrics are not numeric targets or demonstrated improvements. Over 67,000 records do not mean as many attacks or AI discoveries; 96,000 is a forecast.",
+      "safe_wording": "Рамка перечисляет возможные метрики, но не задаёт численных целей и не доказывает достигнутое улучшение. Более 67 тысяч записей не означают столько же атак или находок ИИ; 96 тысяч является прогнозом.",
+      "role_basis_ru": "Документ касается координации защиты; применение конкретной модели или делегирование действий агенту не установлено.",
+      "role_basis_en": "The document concerns defensive coordination; it does not establish use of a particular model or delegated agent action.",
+      "role_basis": "Документ касается координации защиты; применение конкретной модели или делегирование действий агенту не установлено.",
+      "editorial_rationale_ru": "Изменение правил общей инфраструктуры влияет на качество и очерёдность обработки защитной информации. Рост публикаций не измеряет вклад ИИ.",
+      "editorial_rationale_en": "Shared-infrastructure rules affect the quality and processing priority of defensive information. Publication growth does not measure AI's contribution.",
+      "editorial_rationale": "Изменение правил общей инфраструктуры влияет на качество и очерёдность обработки защитной информации. Рост публикаций не измеряет вклад ИИ.",
+      "story_primary_arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "story_secondary_arc_ids": [],
+      "resilience_track_ids": [
+        "RES_TRACK_SHARED_REPAIR"
+      ],
+      "defense_evidence_kind": "public_infrastructure_policy",
+      "defense_stage_ids": [
+        "validation",
+        "coordination"
+      ],
+      "pipeline_metrics": [
+        {
+          "value": ">67 000",
+          "label_ru": "Новых записей опубликовано с начала 2026 года",
+          "label_en": "New records published during 2026",
+          "as_of": "2026-09-18",
+          "unit": "CVE",
+          "source_url": "https://www.cisa.gov/sites/default/files/2026-09/cve-program-establishing-a-quality-era-framework-508c.pdf",
+          "population_ru": "Показатель CISA: дата публикации, не год в идентификаторе; не число атак или находок ИИ.",
+          "population_en": "CISA-reported count by publication date, not identifier year; not attacks or AI discoveries."
+        },
+        {
+          "value": "96 000",
+          "label_ru": "Прогноз на весь 2026 год",
+          "label_en": "Full-year 2026 forecast",
+          "as_of": "2026-09-22",
+          "unit": "CVE",
+          "source_url": "https://www.cisa.gov/sites/default/files/2026-09/cve-program-establishing-a-quality-era-framework-508c.pdf",
+          "population_ru": "Прогноз CVEForecast.org, процитированный CISA. Не наблюдаемый итог; метод прогноза отдельно не проверялся.",
+          "population_en": "CVEForecast.org projection cited by CISA. Not an observed total; forecast methodology was not independently reviewed."
+        }
+      ],
+      "reported_metrics": [
+        {
+          "metric": "new_cve_records_published_in_calendar_2026",
+          "value": 67000,
+          "comparison": "greater_than",
+          "as_of": "2026-09-18",
+          "attribution": "CISA white paper, page 1",
+          "independently_recounted": false,
+          "scope_note": "Published during 2026; not restricted to identifiers beginning CVE-2026 and not a count of attacks, AI discoveries or deployed patches."
+        },
+        {
+          "metric": "projected_new_cve_records_full_year_2026",
+          "value": 96000,
+          "kind": "forecast_not_observation",
+          "forecast_provider": "CVEForecast.org",
+          "attribution": "Forecast cited by CISA, page 1; forecast method not independently reviewed"
+        }
+      ]
+    },
+    {
+      "id": "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
+      "kind": "event",
+      "date": "2026-04-15",
+      "year": 2026,
+      "source_date": "2026-04-15",
+      "date_basis": "announced_effective_date",
+      "date_status": "verified_primary_date",
+      "url": "https://www.nist.gov/news-events/news/2026/04/nist-updates-nvd-operations-address-record-cve-growth",
+      "source_name": "NIST",
+      "source_type_raw": "government_publication",
+      "source_type": "Primary source",
+      "primary_or_secondary": "primary",
+      "actor": "NIST",
+      "actor_raw": "NIST",
+      "actors_raw": [
+        "NIST"
+      ],
+      "actors": [
+        "NIST"
+      ],
+      "actor_facets_legacy": [
+        "NIST"
+      ],
+      "actor_facets": [
+        "NIST"
+      ],
+      "actor_entities": [
+        "NIST"
+      ],
+      "actor_types": [
+        "government"
+      ],
+      "actor_jurisdictions": [
+        "US"
+      ],
+      "geography_raw": [
+        "US"
+      ],
+      "geography": [
+        "US"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "actor_unclassified": [],
+      "actor_classification_status": "resolved",
+      "geography_classification_status": "resolved",
+      "evidence_context": [
+        "governance_document"
+      ],
+      "evidence_method": "primary_publication_review_no_independent_cve_recount",
+      "stack_layer": [
+        "governance_law",
+        "cyber_security_patch",
+        "data_telemetry"
+      ],
+      "stack_layers": [
+        "governance_law",
+        "cyber_security_patch",
+        "data_telemetry"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [],
+      "exact_quote_short": "",
+      "numbers": {},
+      "money_status": "",
+      "confidence": "A",
+      "evidence_level": "A",
+      "status": "verified_primary_government_policy",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "cyber_subdomain_ids": [],
+      "cyber_role_ids": [],
+      "cyber_access_principal": false,
+      "primary_domain_id": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "artifact_kind": "government_program",
+      "normative_force": "not_applicable",
+      "implementation_stage": "effective",
+      "delegated_authority": "not_applicable",
+      "editorial_priority": 1,
+      "sources": [
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/04/nist-updates-nvd-operations-address-record-cve-growth",
+          "publisher": "NIST",
+          "type": "Primary source",
+          "published_at": "2026-04-15",
+          "updated_at": "2026-04-17",
+          "verification": "primary_source_read",
+          "name": "NIST",
+          "title": "NIST переводит NVD на приоритетное обогащение записей CVE",
+          "date": "2026-04-15",
+          "primary_or_secondary": "primary",
+          "source_class": "government_publication",
+          "checked_at": "2026-09-27"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V040_CVE_003",
+        "EDGE_V040_CVE_004",
+        "EDGE_V040_CVE_005",
+        "EDGE_V040_CVE_006"
+      ],
+      "arcIds": [
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "part_of_arc",
+        "supports_with_scope",
+        "context_for",
+        "parallel"
+      ],
+      "research_updates": [
+        "cve-quality-era"
+      ],
+      "classification_review": {
+        "date": "2026-09-27",
+        "method": "primary_publication_review_no_independent_cve_recount",
+        "independent_source_reverification": false,
+        "independent_replication": false
+      },
+      "governance_scale": "shared_vulnerability_information_infrastructure",
+      "behavioral_mechanism_ids": [],
+      "behavioral_status": [
+        "policy_response"
+      ],
+      "agent_population_scope": "not_applicable",
+      "shared_writable_state": "unknown",
+      "oversight_target": [
+        "institutional_process"
+      ],
+      "motivation_basis": "no_motivation_claim",
+      "behavior_track_ids": [],
+      "behavior_origin": "not_applicable",
+      "concealment_targets": [
+        "none"
+      ],
+      "persistence_media": [
+        "not_established"
+      ],
+      "goal_source": "not_applicable",
+      "candidate_evidence_tier": "primary_source_reviewed",
+      "title_ru": "NIST переводит NVD на приоритетное обогащение записей CVE",
+      "title_en": "NIST shifts NVD to prioritized CVE enrichment",
+      "title": "NIST переводит NVD на приоритетное обогащение записей CVE",
+      "summary_ru": "С 15 апреля NIST отдаёт приоритет KEV, ПО федеральных органов и критическому ПО. Остальные CVE сохраняются в NVD, но немедленное обогащение не планируется; запросить его можно отдельно. Ведомство сообщает, что рекордной производительности обработки недостаточно для растущего потока.",
+      "summary_en": "From April 15, NIST prioritizes KEV, federal-government software and critical software. Other CVEs remain listed but are not scheduled for immediate enrichment; users may request it. NIST says record processing output still cannot keep pace.",
+      "summary": "С 15 апреля NIST отдаёт приоритет KEV, ПО федеральных органов и критическому ПО. Остальные CVE сохраняются в NVD, но немедленное обогащение не планируется; запросить его можно отдельно. Ведомство сообщает, что рекордной производительности обработки недостаточно для растущего потока.",
+      "claim_supported_ru": "С 15 апреля NIST отдаёт приоритет KEV, ПО федеральных органов и критическому ПО. Остальные CVE сохраняются в NVD, но немедленное обогащение не планируется; запросить его можно отдельно. Ведомство сообщает, что рекордной производительности обработки недостаточно для растущего потока.",
+      "claim_supported_en": "From April 15, NIST prioritizes KEV, federal-government software and critical software. Other CVEs remain listed but are not scheduled for immediate enrichment; users may request it. NIST says record processing output still cannot keep pace.",
+      "claim_supported": "С 15 апреля NIST отдаёт приоритет KEV, ПО федеральных органов и критическому ПО. Остальные CVE сохраняются в NVD, но немедленное обогащение не планируется; запросить его можно отдельно. Ведомство сообщает, что рекордной производительности обработки недостаточно для растущего потока.",
+      "notes_ru": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "notes_en": "Priority concerns metadata enrichment, not publication access. Counts neither measure active exploitation nor identify AI's causal contribution. The one-business-day KEV target is not a measured outcome.",
+      "notes": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "caveat_ru": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "caveat_en": "Priority concerns metadata enrichment, not publication access. Counts neither measure active exploitation nor identify AI's causal contribution. The one-business-day KEV target is not a measured outcome.",
+      "caveat": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "corroboration_needed_ru": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "corroboration_needed_en": "Priority concerns metadata enrichment, not publication access. Counts neither measure active exploitation nor identify AI's causal contribution. The one-business-day KEV target is not a measured outcome.",
+      "corroboration_needed": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "claim_challenged_ru": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "claim_challenged_en": "Priority concerns metadata enrichment, not publication access. Counts neither measure active exploitation nor identify AI's causal contribution. The one-business-day KEV target is not a measured outcome.",
+      "claim_challenged": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "scope_ru": "Политика американской общедоступной инфраструктуры данных, используемой во всём мире; не общая обязанность поставщиков ПО.",
+      "scope_en": "Policy for U.S.-operated public data infrastructure used globally; not a general obligation on software suppliers.",
+      "scope": "Политика американской общедоступной инфраструктуры данных, используемой во всём мире; не общая обязанность поставщиков ПО.",
+      "caveats_ru": [
+        "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом."
+      ],
+      "caveats_en": [
+        "Priority concerns metadata enrichment, not publication access. Counts neither measure active exploitation nor identify AI's causal contribution. The one-business-day KEV target is not a measured outcome."
+      ],
+      "caveats": [
+        "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом."
+      ],
+      "safe_wording_ru": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "safe_wording_en": "Priority concerns metadata enrichment, not publication access. Counts neither measure active exploitation nor identify AI's causal contribution. The one-business-day KEV target is not a measured outcome.",
+      "safe_wording": "Приоритет относится к обогащению метаданных, а не к запрету публикации. Это не оценка числа активно эксплуатируемых уязвимостей и не причинная оценка вклада ИИ. Цель обработки KEV за один рабочий день не является измеренным результатом.",
+      "role_basis_ru": "Документ касается координации защиты; применение конкретной модели или делегирование действий агенту не установлено.",
+      "role_basis_en": "The document concerns defensive coordination; it does not establish use of a particular model or delegated agent action.",
+      "role_basis": "Документ касается координации защиты; применение конкретной модели или делегирование действий агенту не установлено.",
+      "editorial_rationale_ru": "Изменение правил общей инфраструктуры влияет на качество и очерёдность обработки защитной информации. Рост публикаций не измеряет вклад ИИ.",
+      "editorial_rationale_en": "Shared-infrastructure rules affect the quality and processing priority of defensive information. Publication growth does not measure AI's contribution.",
+      "editorial_rationale": "Изменение правил общей инфраструктуры влияет на качество и очерёдность обработки защитной информации. Рост публикаций не измеряет вклад ИИ.",
+      "story_primary_arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "story_secondary_arc_ids": [],
+      "resilience_track_ids": [
+        "RES_TRACK_SHARED_REPAIR"
+      ],
+      "defense_evidence_kind": "public_infrastructure_policy",
+      "defense_stage_ids": [
+        "validation",
+        "coordination"
+      ],
+      "pipeline_metrics": [
+        {
+          "value": "+263%",
+          "label_ru": "Рост поступлений за 2020–2025 годы",
+          "label_en": "Submission growth over 2020–2025",
+          "as_of": "2026-04-15",
+          "unit": "%",
+          "source_url": "https://www.nist.gov/news-events/news/2026/04/nist-updates-nvd-operations-address-record-cve-growth",
+          "population_ru": "По данным NIST; не рост числа атак.",
+          "population_en": "NIST-reported; not attack growth."
+        },
+        {
+          "value": "≈ +1/3",
+          "label_ru": "Первый квартал 2026 к первому кварталу 2025",
+          "label_en": "Q1 2026 compared with Q1 2025",
+          "as_of": "2026-04-15",
+          "unit": "CVE",
+          "source_url": "https://www.nist.gov/news-events/news/2026/04/nist-updates-nvd-operations-address-record-cve-growth",
+          "population_ru": "Формулировка NIST: почти на треть больше. Точный процент не опубликован.",
+          "population_en": "NIST says nearly one-third higher. No exact percentage is published."
+        },
+        {
+          "value": "≈42 000",
+          "label_ru": "Обогащено записей за 2025 год",
+          "label_en": "Records enriched in 2025",
+          "as_of": "2026-04-15",
+          "unit": "CVE",
+          "source_url": "https://www.nist.gov/news-events/news/2026/04/nist-updates-nvd-operations-address-record-cve-growth",
+          "population_ru": "Почти 42 тысячи: на 45% больше предыдущего годового рекорда, но поток всё ещё превышает ёмкость обработки.",
+          "population_en": "Nearly 42,000: 45% above the previous annual record, yet still insufficient to keep pace."
+        }
+      ],
+      "reported_metrics": [
+        {
+          "metric": "cve_submission_growth",
+          "change_percent": 263,
+          "comparison_period": "2020_to_2025",
+          "attribution": "NIST",
+          "independently_recounted": false
+        },
+        {
+          "metric": "cve_submission_growth_q1",
+          "reported_value": "nearly_one_third_higher",
+          "period": "2026-Q1",
+          "comparison_period": "2025-Q1",
+          "attribution": "NIST",
+          "exact_percentage_published": false
+        },
+        {
+          "metric": "cves_enriched",
+          "value": 42000,
+          "approximation": "nearly",
+          "period": "2025",
+          "attribution": "NIST",
+          "independently_recounted": false
+        },
+        {
+          "metric": "enrichment_output_above_previous_annual_record",
+          "change_percent": 45,
+          "period": "2025",
+          "comparison_period": "previous_highest_year_unspecified",
+          "attribution": "NIST"
+        }
+      ]
     }
   ],
   "claims": [
@@ -82526,9 +83121,9 @@
     },
     {
       "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
-      "claim": "Киберустойчивость ИИ складывается из безопасной разработки, испытаний возможностей, национальной защиты, отраслевого восстановления и защиты решений. Сравнительный слой добавляет дорелизный доступ оценщиков, пороги выпуска, обязательный допуск публичных сервисов и непрерывность критичного доступа. Это набор взаимодополняющих механизмов разной нормативной силы, а не единый стандарт.",
-      "claim_en": "AI cyber resilience combines secure development, capability testing, national defence, sector recovery and decision protection. The comparative layer adds pre-release evaluator access, deployment thresholds, mandatory gates for public services and continuity of mission access. These are complementary mechanisms of different legal force, not one standard.",
-      "claim_ru": "Киберустойчивость ИИ складывается из безопасной разработки, испытаний возможностей, национальной защиты, отраслевого восстановления и защиты решений. Сравнительный слой добавляет дорелизный доступ оценщиков, пороги выпуска, обязательный допуск публичных сервисов и непрерывность критичного доступа. Это набор взаимодополняющих механизмов разной нормативной силы, а не единый стандарт.",
+      "claim": "Киберустойчивость ИИ складывается из безопасной разработки, испытаний возможностей, национальной защиты, отраслевого восстановления и защиты решений. Сравнительный слой добавляет дорелизный доступ оценщиков, пороги выпуска, обязательный допуск публичных сервисов и непрерывность критичного доступа. Это набор взаимодополняющих механизмов разной нормативной силы, а не единый стандарт. Общая инфраструктура уязвимостей также требует распределения ёмкости: NVD приоритизирует обогащение записей, а CISA задаёт рамку качества данных и управления CVE.",
+      "claim_en": "AI cyber resilience combines secure development, capability testing, national defence, sector recovery and decision protection. The comparative layer adds pre-release evaluator access, deployment thresholds, mandatory gates for public services and continuity of mission access. These are complementary mechanisms of different legal force, not one standard. Shared vulnerability infrastructure also requires capacity allocation: NVD prioritizes enrichment while CISA defines CVE data-quality and governance dimensions.",
+      "claim_ru": "Киберустойчивость ИИ складывается из безопасной разработки, испытаний возможностей, национальной защиты, отраслевого восстановления и защиты решений. Сравнительный слой добавляет дорелизный доступ оценщиков, пороги выпуска, обязательный допуск публичных сервисов и непрерывность критичного доступа. Это набор взаимодополняющих механизмов разной нормативной силы, а не единый стандарт. Общая инфраструктура уязвимостей также требует распределения ёмкости: NVD приоритизирует обогащение записей, а CISA задаёт рамку качества данных и управления CVE.",
       "status": "verified_with_jurisdictional_and_implementation_caveats",
       "confidence": "A/B",
       "supporting_evidence": [
@@ -82566,7 +83161,9 @@
         "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
         "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
         "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
-        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE"
+        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
+        "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+        "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT"
       ],
       "safe_wording_en": "Show the full control stack while separately labelling law, administrative practice, voluntary commitment, evaluation and programme. The existence of a mechanism does not establish effectiveness.",
       "safe_wording_ru": "Показывать полный стек контролей, но отдельно маркировать закон, административную практику, добровольное обязательство, испытание и программу. Наличие механизма не доказывает его эффективность.",
@@ -82594,7 +83191,9 @@
         "EDGE_2026_EU_CRA_REPORTING_SCHEDULED_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
         "EDGE_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
         "EDGE_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
-        "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope"
+        "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+        "EDGE_V040_CVE_002",
+        "EDGE_V040_CVE_004"
       ],
       "safe_wording": "Показывать полный стек контролей, но отдельно маркировать закон, административную практику, добровольное обязательство, испытание и программу. Наличие механизма не доказывает его эффективность.",
       "recommended_phrasing_ru": "Показывать полный стек контролей, но отдельно маркировать закон, административную практику, добровольное обязательство, испытание и программу. Наличие механизма не доказывает его эффективность.",
@@ -82672,6 +83271,46 @@
           "type": "Government / policy",
           "source_class": "official implementation notice",
           "primary_or_secondary": "primary"
+        },
+        {
+          "url": "https://www.cisa.gov/resources-tools/resources/cve-program-establishing-quality-era-framework",
+          "publisher": "CISA",
+          "type": "Primary source",
+          "published_at": "2026-09-22",
+          "verification": "official_page_read",
+          "name": "CISA",
+          "title": "CISA задаёт рамку качества CVE при росте потока публикаций",
+          "date": "2026-09-22",
+          "primary_or_secondary": "primary",
+          "source_class": "government_publication",
+          "checked_at": "2026-09-27"
+        },
+        {
+          "url": "https://www.cisa.gov/sites/default/files/2026-09/cve-program-establishing-a-quality-era-framework-508c.pdf",
+          "publisher": "CISA",
+          "type": "Primary source",
+          "published_at": "2026-09-22",
+          "verification": "four_page_document_read; pages_1_and_2_visually_checked",
+          "name": "CISA",
+          "title": "CISA задаёт рамку качества CVE при росте потока публикаций",
+          "date": "2026-09-22",
+          "primary_or_secondary": "primary",
+          "source_class": "government_publication",
+          "checked_at": "2026-09-27"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/04/nist-updates-nvd-operations-address-record-cve-growth",
+          "publisher": "NIST",
+          "type": "Primary source",
+          "published_at": "2026-04-15",
+          "updated_at": "2026-04-17",
+          "verification": "primary_source_read",
+          "name": "NIST",
+          "title": "NIST переводит NVD на приоритетное обогащение записей CVE",
+          "date": "2026-04-15",
+          "primary_or_secondary": "primary",
+          "source_class": "government_publication",
+          "checked_at": "2026-09-27"
         }
       ],
       "research_updates": [
@@ -84734,77 +85373,79 @@
       "title_en": "AI cyber resilience: from model controls to an assurance stack",
       "arc_type": "cross_jurisdiction_governance_mechanism",
       "start_date": "2024-05-21",
-      "end_date": "2026-09-12",
+      "end_date": "2026-09-22",
       "key_nodes": [
+        "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
         "SIG_2026_CN_CYBERSECURITY_LAW_AI_AMENDMENT_EFFECTIVE",
         "SIG_2026_CA_SB53_EFFECTIVE",
         "SIG_2026_NIST_AGENT_SECURITY_RFI",
         "SIG_2026_KOREA_AI_BASIC_ACT_EFFECTIVE",
         "SIG_2026_SINGAPORE_AGENTIC_GOVERNANCE_FRAMEWORK",
+        "SIG_2026_CURL_BOUNTY_CLOSURE",
         "SIG_2026_NIST_AI_AGENT_STANDARDS_INITIATIVE",
         "SIG_2026_RU_FSTEC_ORDER117_AI_CONTROLS_EFFECTIVE",
+        "SIG_2026_CODEX_SECURITY_VALIDATION_PREVIEW",
         "SIG_2026_NY_RAISE_SIGNED_FUTURE_EFFECTIVE",
+        "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
+        "SIG_2026_CURL_HIGH_QUALITY_TRANSITION",
         "SIG_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE",
+        "SIG_2026_MICROSOFT_AGENT365_GENERAL_AVAILABILITY",
         "SIG_2026_CN_AGENT_GOVERNANCE_OPINIONS",
+        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE",
         "SIG_2026_BOE_FCA_FRONTIER_AI_CYBER_STATEMENT",
         "SIG_2026_CANADA_AGENTIC_AI_GOVERNMENT_GUIDE",
         "SIG_2026_UK_CYBER_SHIELD_BLUEPRINT",
-        "SIG_2026_JAPAN_GOV_AI_PROCUREMENT_GUIDE_V2",
         "SIG_2026_EBA_FRONTIER_AI_PATCH_CYCLE_ASSESSMENT",
+        "SIG_EU_2026_CADA_PROPOSAL_SOVEREIGNTY_LEVELS",
+        "SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
+        "SIG_2026_JAPAN_GOV_AI_PROCUREMENT_GUIDE_V2",
+        "SIG_2026_GSA_LLM_DATA_SAFEGUARDING_REVISED_PROPOSAL",
+        "SIG_2026_CURL_821_RELEASE_CAPACITY",
         "SIG_2026_ESRB_FRONTIER_AI_SYSTEMIC_WARNING",
+        "SIG_2026_AKRITES_SHARED_REMEDIATION",
         "SIG_2026_CN_AGENT_DEPLOYMENT_SECURITY_GUIDE",
+        "SIG_2026_CURL_REPORTING_PAUSE",
         "SIG_2026_CN_AGENT_SECURITY_STANDARDS_PIPELINE",
         "SIG_2026_ECB_AI_CYBER_ACTION_PLANS",
+        "SIG_EU_2026_CYBER_AI_ACTION_PLAN",
+        "SIG_2026_BOE_PATCHING_OPERATIONAL_RISK",
         "SIG_2026_US_GOLD_EAGLE_LAUNCH",
+        "SIG_2026_ORACLE_AI_ASSISTED_RECORD_PATCH_RELEASE",
         "SIG_2026_EU_AI_OMNIBUS_EFFECTIVE",
         "SIG_2026_NIST_AI_DATACENTER_SECURITY_DRAFT",
-        "SIG_2026_ESAS_FRONTIER_AI_DORA_SUPERVISION",
-        "SIG_2026_CA_AI_CYBER_DEFENSE_PROGRAM",
-        "SIG_2026_FSB_FRONTIER_AI_CYBER_WARNING",
-        "SIG_2026_AU_ISM_AGENT_CONTROLS",
-        "SIG_2026_EU_CRA_REPORTING_SCHEDULED",
+        "SIG_2026_OPEN_SECURE_AI_ALLIANCE",
         "SIG_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS",
-        "SIG_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS",
-        "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
-        "SIG_EU_2026_CYBER_AI_ACTION_PLAN",
-        "SIG_EU_2026_CADA_PROPOSAL_SOVEREIGNTY_LEVELS",
         "SIG_2026_ANTHROPIC_EVAL_REAL_WORLD_INTRUSIONS",
-        "SIG_2026_ORACLE_AI_ASSISTED_RECORD_PATCH_RELEASE",
+        "SIG_2026_ESAS_FRONTIER_AI_DORA_SUPERVISION",
+        "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
+        "SIG_2026_SAFE_INCIDENT_LEARNING_RFC",
         "SIG_2026_RUST_IN_PEACE_AGENT_ASSISTED_DISCLOSURES",
+        "SIG_2026_CA_AI_CYBER_DEFENSE_PROGRAM",
         "SIG_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE",
         "SIG_2026_RAPID7_Q2_PATCH_CYCLE_COMPRESSION",
+        "SIG_2026_LINUX_NETDEV_VALID_FIX_OVERLOAD",
+        "SIG_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS",
         "SIG_2026_GATES_AI_TRANSITION_INSTITUTIONS_ESSAY",
+        "SIG_2026_ANTHROPIC_CVD_VALIDATED_BACKLOG",
         "SIG_2026_OPENAI_COLLECTIVE_CYBER_DEFENSE_LETTER",
-        "SIG_2026_MICROSOFT_AGENT365_GENERAL_AVAILABILITY",
+        "SIG_2026_FSB_FRONTIER_AI_CYBER_WARNING",
+        "SIG_2026_ANTHROPIC_EVAL_RL_HARDENING_DISCLOSURE",
+        "SIG_2026_PROJECT_WATERSHED_250_PILOT",
         "SIG_2026_ANTHROPIC_ENTERPRISE_FRONTIER_SAFEGUARDS",
         "SIG_2026_ASTRA_CRITICAL_CYBER_ASSESSMENT",
         "SIG_2026_BOE_FRONTIER_AI_HARNESS_ENGINEERING",
         "SIG_2026_G20_CAROLINA_INNOVATION_CONSENSUS",
-        "SIG_2026_ANTHROPIC_EVAL_RL_HARDENING_DISCLOSURE",
-        "SIG_2026_GSA_LLM_DATA_SAFEGUARDING_REVISED_PROPOSAL",
-        "SIG_2026_CURL_BOUNTY_CLOSURE",
-        "SIG_2026_CURL_HIGH_QUALITY_TRANSITION",
-        "SIG_2026_CURL_821_RELEASE_CAPACITY",
-        "SIG_2026_CURL_REPORTING_PAUSE",
         "SIG_2026_CURL_822_SECURITY_RELEASE",
-        "SIG_2026_ANTHROPIC_CVD_VALIDATED_BACKLOG",
-        "SIG_2026_LINUX_NETDEV_VALID_FIX_OVERLOAD",
-        "SIG_2026_AKRITES_SHARED_REMEDIATION",
-        "SIG_2026_OPEN_SECURE_AI_ALLIANCE",
-        "SIG_2026_SAFE_INCIDENT_LEARNING_RFC",
-        "SIG_2026_DEFENSE_FACTORY_VERIFIED_REMEDIATION",
+        "SIG_2026_AU_ISM_AGENT_CONTROLS",
         "SIG_2026_DAYBREAK_FRONTLINE_SUBSIDIZED_ACCESS",
-        "SIG_2026_PROJECT_WATERSHED_250_PILOT",
-        "SIG_2026_BOE_PATCHING_OPERATIONAL_RISK",
-        "SIG_2026_CODEX_SECURITY_VALIDATION_PREVIEW",
-        "CLM_VALID_FINDINGS_MAINTENANCE_CAPACITY",
+        "SIG_2026_DEFENSE_FACTORY_VERIFIED_REMEDIATION",
         "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE",
         "SIG_2026_ANTHROPIC_GTG50014_CREDENTIAL_SUPPLY_CHAIN",
-        "SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
+        "SIG_2026_EU_CRA_REPORTING_SCHEDULED",
         "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
-        "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
-        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
-        "SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE"
+        "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+        "CLM_VALID_FINDINGS_MAINTENANCE_CAPACITY"
       ],
       "visual_lanes": [
         "governance_law",
@@ -84817,8 +85458,8 @@
         "finance_rent"
       ],
       "status": "verified_mixed_legal_force_and_implementation",
-      "thesis_ru": "Киберустойчивость ИИ включает безопасную разработку, оценку возможностей, защиту, отраслевое восстановление и безопасность решений. Сравнительный слой показывает дополнительные контрольные точки: добровольные пороги разработки и выпуска, дорелизный доступ оценщика, обязательную оценку или регистрацию публичного сервиса и непрерывность критичного доступа.",
-      "thesis_en": "AI cyber resilience includes secure development, capability evaluation, defence, sector recovery and decision security. The comparative layer adds further checkpoints: voluntary development and deployment thresholds, pre-release evaluator access, mandatory evaluation or filing for public services, and continuity of mission access.",
+      "thesis_ru": "Киберустойчивость ИИ включает безопасную разработку, оценку возможностей, защиту, отраслевое восстановление и безопасность решений. Сравнительный слой показывает дополнительные контрольные точки: добровольные пороги разработки и выпуска, дорелизный доступ оценщика, обязательную оценку или регистрацию публичного сервиса и непрерывность критичного доступа. Общая инфраструктура уязвимостей также требует распределения ёмкости: NVD приоритизирует обогащение записей, а CISA задаёт рамку качества данных и управления CVE.",
+      "thesis_en": "AI cyber resilience includes secure development, capability evaluation, defence, sector recovery and decision security. The comparative layer adds further checkpoints: voluntary development and deployment thresholds, pre-release evaluator access, mandatory evaluation or filing for public services, and continuity of mission access. Shared vulnerability infrastructure also requires capacity allocation: NVD prioritizes enrichment while CISA defines CVE data-quality and governance dimensions.",
       "safe_wording_ru": "Различать существование элемента контроля, его обязательность, применение и измеренную эффективность.",
       "safe_wording_en": "Distinguish a control's existence, binding force, implementation and measured effectiveness.",
       "counterpoints": [
@@ -84861,7 +85502,9 @@
         "EDGE_V036_PACING_012",
         "EDGE_V037_GLOBAL_003",
         "EDGE_V037_GLOBAL_006",
-        "EDGE_V037_GLOBAL_010"
+        "EDGE_V037_GLOBAL_010",
+        "EDGE_V040_CVE_001",
+        "EDGE_V040_CVE_003"
       ],
       "relationTypes": [
         "part_of_arc",
@@ -84873,7 +85516,7 @@
       "arcFamilyIds": [
         "ARC_FAMILY_CYBER_COGNITION_WAR"
       ],
-      "thesis": "Киберустойчивость ИИ включает безопасную разработку, оценку возможностей, защиту, отраслевое восстановление и безопасность решений. Сравнительный слой показывает дополнительные контрольные точки: добровольные пороги разработки и выпуска, дорелизный доступ оценщика, обязательную оценку или регистрацию публичного сервиса и непрерывность критичного доступа.",
+      "thesis": "Киберустойчивость ИИ включает безопасную разработку, оценку возможностей, защиту, отраслевое восстановление и безопасность решений. Сравнительный слой показывает дополнительные контрольные точки: добровольные пороги разработки и выпуска, дорелизный доступ оценщика, обязательную оценку или регистрацию публичного сервиса и непрерывность критичного доступа. Общая инфраструктура уязвимостей также требует распределения ёмкости: NVD приоритизирует обогащение записей, а CISA задаёт рамку качества данных и управления CVE.",
       "resilience_track_ids": [
         "RES_TRACK_MAINTENANCE_CAPACITY",
         "RES_TRACK_VERIFIED_REMEDIATION",
@@ -102901,6 +103544,139 @@
       "kind": "edge",
       "is_auto": false,
       "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V040_CVE_001",
+      "source": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+      "target": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность, не доказательство всей дуги.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V040_CVE_002",
+      "source": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+      "target": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A",
+      "visual_lane": "cyber_security_patch",
+      "style": "solid",
+      "summary_ru": "Показывает государственное управление общей защитной инфраструктурой, но не измеренную эффективность мер.",
+      "summary_en": "Shows public governance of shared defensive infrastructure, not measured effectiveness.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V040_CVE_003",
+      "source": "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
+      "target": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "summary_ru": "Тематическая принадлежность, не доказательство всей дуги.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic"
+    },
+    {
+      "id": "EDGE_V040_CVE_004",
+      "source": "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
+      "target": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_with_scope",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A",
+      "visual_lane": "cyber_security_patch",
+      "style": "solid",
+      "summary_ru": "Показывает государственное управление общей защитной инфраструктурой, но не измеренную эффективность мер.",
+      "summary_en": "Shows public governance of shared defensive infrastructure, not measured effectiveness.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential"
+    },
+    {
+      "id": "EDGE_V040_CVE_005",
+      "source": "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
+      "target": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "context_for",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A",
+      "visual_lane": "cyber_security_patch",
+      "style": "solid",
+      "summary_ru": "Сентябрьский документ CISA прямо ссылается на апрельские показатели NIST; это связь источников, не причинность решений.",
+      "summary_en": "The September CISA paper cites April NIST figures; this is a source relationship, not decision causality.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V040_CVE_006",
+      "source": "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
+      "target": "SIG_2026_CURL_REPORTING_PAUSE",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "parallel",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A",
+      "visual_lane": "cyber_security_patch",
+      "style": "solid",
+      "summary_ru": "Два разных ограничения ёмкости: обогащение метаданных и сопровождение проекта. Потоки не складываются.",
+      "summary_en": "Different capacity constraints: metadata enrichment and project maintenance. Their flows are not additive.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
+    },
+    {
+      "id": "EDGE_V040_CVE_007",
+      "source": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+      "target": "SIG_2026_US_GOLD_EAGLE_LAUNCH",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "parallel",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "A",
+      "visual_lane": "cyber_security_patch",
+      "style": "solid",
+      "summary_ru": "Рамка качества CVE и программа координации уязвимостей решают смежные задачи; единый результат не установлен.",
+      "summary_en": "CVE quality and vulnerability coordination address related tasks; a joint outcome is not established.",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship"
     }
   ],
   "thesisNodes": [
@@ -103512,43 +104288,43 @@
   ],
   "referenceIntegrity": {
     "valid": true,
-    "checked_references": 8798,
+    "checked_references": 8858,
     "checked_by_field": {
-      "arc.key_nodes": 640,
+      "arc.key_nodes": 642,
       "arc.family_id": 26,
       "arc.parent_arc_id": 7,
-      "event.story_primary_arc_id": 354,
+      "event.story_primary_arc_id": 356,
       "event.story_secondary_arc_ids": 242,
       "arcHierarchy.family_order": 6,
-      "edge.source": 941,
-      "edge.target": 941,
-      "edge.arc_id": 941,
-      "edge.arc_family_id": 853,
+      "edge.source": 948,
+      "edge.target": 948,
+      "edge.arc_id": 948,
+      "edge.arc_family_id": 860,
       "claim.supporting_evidence": 30,
       "claim.qualifying_evidence": 10,
-      "claim_check.supporting_evidence": 206,
+      "claim_check.supporting_evidence": 208,
       "counterargument.evidence": 7,
       "country.strongest_supporting_evidence": 15,
       "country.strongest_counter_evidence": 4,
       "recipe.recommended_filters.hide_arc_ids": 2,
       "recipe.recommended_arc_ids": 22,
-      "event.arcIds": 660,
-      "event.arcFamilyIds": 485,
-      "event.edgeIds": 907,
+      "event.arcIds": 662,
+      "event.arcFamilyIds": 487,
+      "event.edgeIds": 917,
       "claim.arcIds": 55,
       "claim.arcFamilyIds": 49,
       "claim.edgeIds": 104,
       "claimCheck.arcIds": 64,
-      "claimCheck.edgeIds": 211,
+      "claimCheck.edgeIds": 213,
       "claimCheck.arcFamilyIds": 30,
       "arc.arcIds": 14,
       "arc.arcFamilyIds": 14,
-      "arc.edgeIds": 131,
+      "arc.edgeIds": 133,
       "thesis.arcIds": 6,
       "thesis.arcFamilyIds": 4,
       "thesis.edgeIds": 6,
-      "source.used_by": 762,
-      "resilience_track.event_ids": 48,
+      "source.used_by": 768,
+      "resilience_track.event_ids": 50,
       "resilience.claim": 1
     },
     "unresolved_count": 0,
@@ -103607,7 +104383,7 @@
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
     ],
-    "edge_count": 941,
+    "edge_count": 948,
     "v0_13_added_evidence": 6,
     "v0_13_added_edges": 6,
     "v0_14_added_evidence": 11,
@@ -103670,8 +104446,8 @@
     "v0_28_added_edges": 27,
     "v0_28_added_arcs": [],
     "story_arcs": 25,
-    "story_edges": 941,
-    "last_recomputed": "2026-09-14",
+    "story_edges": 948,
+    "last_recomputed": "2026-09-27",
     "note": "Generator recomputes reference integrity and arc-to-thesis connectivity.",
     "computed_arc_count": 25,
     "computed_arc_to_thesis_counts": {
@@ -113769,6 +114545,79 @@
           "kind": "claimCheck"
         }
       ]
+    },
+    {
+      "url": "https://www.cisa.gov/resources-tools/resources/cve-program-establishing-quality-era-framework",
+      "publisher": "CISA",
+      "type": "Primary source",
+      "published_at": "2026-09-22",
+      "verification": "official_page_read",
+      "name": "CISA",
+      "title": "CISA задаёт рамку качества CVE при росте потока публикаций",
+      "date": "2026-09-22",
+      "primary_or_secondary": "primary",
+      "source_class": "government_publication",
+      "checked_at": "2026-09-27",
+      "id": "src-584",
+      "used_by": [
+        {
+          "id": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cisa.gov/sites/default/files/2026-09/cve-program-establishing-a-quality-era-framework-508c.pdf",
+      "publisher": "CISA",
+      "type": "Primary source",
+      "published_at": "2026-09-22",
+      "verification": "four_page_document_read; pages_1_and_2_visually_checked",
+      "name": "CISA",
+      "title": "CISA задаёт рамку качества CVE при росте потока публикаций",
+      "date": "2026-09-22",
+      "primary_or_secondary": "primary",
+      "source_class": "government_publication",
+      "checked_at": "2026-09-27",
+      "id": "src-585",
+      "used_by": [
+        {
+          "id": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2026/04/nist-updates-nvd-operations-address-record-cve-growth",
+      "publisher": "NIST",
+      "type": "Primary source",
+      "published_at": "2026-04-15",
+      "updated_at": "2026-04-17",
+      "verification": "primary_source_read",
+      "name": "NIST",
+      "title": "NIST переводит NVD на приоритетное обогащение записей CVE",
+      "date": "2026-04-15",
+      "primary_or_secondary": "primary",
+      "source_class": "government_publication",
+      "checked_at": "2026-09-27",
+      "id": "src-586",
+      "used_by": [
+        {
+          "id": "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
+        }
+      ]
     }
   ],
   "sourceGroups": [
@@ -117836,16 +118685,73 @@
               "kind": "event"
             }
           ]
+        },
+        {
+          "url": "https://www.cisa.gov/resources-tools/resources/cve-program-establishing-quality-era-framework",
+          "publisher": "CISA",
+          "type": "Primary source",
+          "published_at": "2026-09-22",
+          "verification": "official_page_read",
+          "name": "CISA",
+          "title": "CISA задаёт рамку качества CVE при росте потока публикаций",
+          "date": "2026-09-22",
+          "primary_or_secondary": "primary",
+          "source_class": "government_publication",
+          "checked_at": "2026-09-27",
+          "id": "src-584",
+          "used_by": [
+            {
+              "id": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+              "kind": "event"
+            },
+            {
+              "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+              "kind": "claimCheck"
+            }
+          ]
+        },
+        {
+          "url": "https://www.cisa.gov/sites/default/files/2026-09/cve-program-establishing-a-quality-era-framework-508c.pdf",
+          "publisher": "CISA",
+          "type": "Primary source",
+          "published_at": "2026-09-22",
+          "verification": "four_page_document_read; pages_1_and_2_visually_checked",
+          "name": "CISA",
+          "title": "CISA задаёт рамку качества CVE при росте потока публикаций",
+          "date": "2026-09-22",
+          "primary_or_secondary": "primary",
+          "source_class": "government_publication",
+          "checked_at": "2026-09-27",
+          "id": "src-585",
+          "used_by": [
+            {
+              "id": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+              "kind": "event"
+            },
+            {
+              "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+              "kind": "claimCheck"
+            }
+          ]
         }
       ],
       "used_by": [
         {
           "id": "SIG_2026_LANGFLOW_REPEATED_KEV_EXPLOITATION",
           "kind": "event"
+        },
+        {
+          "id": "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
         }
       ],
       "types": [
-        "Government / policy"
+        "Government / policy",
+        "Primary source"
       ]
     },
     {
@@ -124197,6 +125103,31 @@
               "kind": "event"
             }
           ]
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/04/nist-updates-nvd-operations-address-record-cve-growth",
+          "publisher": "NIST",
+          "type": "Primary source",
+          "published_at": "2026-04-15",
+          "updated_at": "2026-04-17",
+          "verification": "primary_source_read",
+          "name": "NIST",
+          "title": "NIST переводит NVD на приоритетное обогащение записей CVE",
+          "date": "2026-04-15",
+          "primary_or_secondary": "primary",
+          "source_class": "government_publication",
+          "checked_at": "2026-09-27",
+          "id": "src-586",
+          "used_by": [
+            {
+              "id": "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
+              "kind": "event"
+            },
+            {
+              "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+              "kind": "claimCheck"
+            }
+          ]
         }
       ],
       "used_by": [
@@ -124219,10 +125150,19 @@
         {
           "id": "SIG_2026_NIST_AI_AGENT_STANDARDS_INITIATIVE",
           "kind": "event"
+        },
+        {
+          "id": "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
+          "kind": "event"
+        },
+        {
+          "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "kind": "claimCheck"
         }
       ],
       "types": [
-        "Government / policy"
+        "Government / policy",
+        "Primary source"
       ]
     },
     {
@@ -129159,7 +130099,7 @@
   },
   "cyberFramework": {
     "version": "2.2",
-    "updated_at": "2026-09-14",
+    "updated_at": "2026-09-27",
     "title_ru": "Пять доменов киберустойчивости ИИ",
     "title_en": "Five domains of AI cyber resilience",
     "summary_ru": "Пять доменов разделяют объект управления и роль ИИ. В 5A отдельно показана дорожка скрытия и преемственности: веса, режим наблюдения, объяснение и внешнее состояние.",
@@ -130297,6 +131237,11 @@
         "id": "product_preview",
         "label_ru": "Предварительная версия продукта",
         "label_en": "Product preview"
+      },
+      {
+        "id": "public_infrastructure_policy",
+        "label_ru": "Политика общей инфраструктуры",
+        "label_en": "Shared infrastructure policy"
       }
     ],
     "defense_stages": [
@@ -130392,16 +131337,18 @@
         "id": "RES_TRACK_SHARED_REPAIR",
         "label_ru": "Общее сопровождение",
         "label_en": "Shared maintenance",
-        "description_ru": "Общие зависимости требуют согласованных отчётов и инженерных ресурсов, а не только обмена индикаторами.",
-        "description_en": "Shared dependencies require coordinated reports and engineering capacity, not just indicator sharing.",
+        "description_ru": "Общие зависимости требуют координации, качества данных и ресурсов сопровождения; приоритет обработки не равен запрету доступа.",
+        "description_en": "Shared dependencies require coordination, data quality and maintenance capacity; processing priority is not an access ban.",
         "event_ids": [
+          "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT",
           "SIG_2026_UK_CYBER_SHIELD_BLUEPRINT",
-          "SIG_2026_US_GOLD_EAGLE_LAUNCH",
-          "SIG_2026_RUST_IN_PEACE_AGENT_ASSISTED_DISCLOSURES",
-          "SIG_2026_OPENAI_COLLECTIVE_CYBER_DEFENSE_LETTER",
-          "SIG_2026_ANTHROPIC_CVD_VALIDATED_BACKLOG",
           "SIG_2026_AKRITES_SHARED_REMEDIATION",
-          "SIG_2026_OPEN_SECURE_AI_ALLIANCE"
+          "SIG_2026_US_GOLD_EAGLE_LAUNCH",
+          "SIG_2026_OPEN_SECURE_AI_ALLIANCE",
+          "SIG_2026_RUST_IN_PEACE_AGENT_ASSISTED_DISCLOSURES",
+          "SIG_2026_ANTHROPIC_CVD_VALIDATED_BACKLOG",
+          "SIG_2026_OPENAI_COLLECTIVE_CYBER_DEFENSE_LETTER",
+          "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK"
         ]
       },
       {
@@ -131144,6 +132091,22 @@
         }
       ],
       "primary_source_first": true
+    },
+    "cve_quality_era": {
+      "date": "2026-09-27",
+      "accepted_ids": [
+        "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+        "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT"
+      ],
+      "excluded_inferences": [
+        "All or most 2026 CVEs were discovered by LLMs.",
+        "The 263 percent submission increase means 263 percent more attacks.",
+        "A published CVE is necessarily actively exploited or already remediated.",
+        "NVD excludes lower-priority CVEs from public access.",
+        "The September framework imposes mandatory numerical quality targets.",
+        "The forecast of 96,000 records is an observed annual total.",
+        "Agency prioritization proves a deliberate geopolitical chokepoint."
+      ]
     }
   },
   "chronologyAudit": {
@@ -132127,6 +133090,13 @@
       "autonomous_field_action_inferred": false,
       "new_top_level_arc_added": false,
       "note": "Campaign totals, individual AI decisions, provider telemetry and field autonomy remain separate claims."
+    },
+    "v040_cve_quality": {
+      "date": "2026-09-27",
+      "source_records": 3,
+      "independent_cve_recount": false,
+      "ai_contribution_quantified": false,
+      "outcome_effectiveness_measured": false
     }
   },
   "actorTypeLabels": {
@@ -132181,7 +133151,7 @@
   },
   "counts": {
     "geographies": {
-      "US": 207,
+      "US": 209,
       "China": 60,
       "Macau": 3,
       "UAE": 6,
@@ -132212,7 +133182,7 @@
       "Mali": 1
     },
     "geographies_raw": {
-      "US": 204,
+      "US": 206,
       "China": 59,
       "global": 62,
       "Macau": 3,
@@ -132277,7 +133247,7 @@
       "Mali": 1
     },
     "jurisdictions": {
-      "US": 207,
+      "US": 209,
       "China": 60,
       "Macau": 3,
       "UAE": 6,
@@ -132337,7 +133307,7 @@
       "China-route-possible": 1
     },
     "geographic_scopes": {
-      "Global": 180,
+      "Global": 182,
       "National": 9,
       "International": 1,
       "Cross-border": 3,
@@ -132397,7 +133367,7 @@
       "Sightline Climate": 1,
       "Data Center Watch": 1,
       "US Congress": 1,
-      "NIST": 4,
+      "NIST": 5,
       "Cyberspace Administration of China": 4,
       "Executive Office of the President": 1,
       "European Parliament": 2,
@@ -132431,7 +133401,7 @@
       "International Energy Agency": 1,
       "Ministry of Defence of Ukraine": 4,
       "DELTA": 2,
-      "CISA": 5,
+      "CISA": 6,
       "UK AI Security Institute": 9,
       "Langflow": 2,
       "Claude Code": 7,
@@ -132626,7 +133596,7 @@
       "Sightline Climate": 1,
       "Data Center Watch": 1,
       "US Congress": 1,
-      "NIST": 4,
+      "NIST": 5,
       "Cyberspace Administration of China": 4,
       "Executive Office of the President": 1,
       "European Parliament": 2,
@@ -132660,7 +133630,7 @@
       "International Energy Agency": 1,
       "Ministry of Defence of Ukraine": 4,
       "DELTA": 2,
-      "CISA": 5,
+      "CISA": 6,
       "UK AI Security Institute": 9,
       "Langflow": 2,
       "Claude Code": 7,
@@ -132802,7 +133772,7 @@
       "Iran-nexus actor": 1
     },
     "actor_types": {
-      "government": 119,
+      "government": 121,
       "regulator": 63,
       "company": 193,
       "financial_institution": 27,
@@ -132819,7 +133789,7 @@
       "state_security": 1
     },
     "actor_jurisdictions": {
-      "US": 137,
+      "US": 139,
       "Saudi Arabia": 3,
       "EU": 23,
       "China": 38,
@@ -132885,7 +133855,7 @@
       "Malaysia": 1,
       "South Korea": 5,
       "Taiwan": 1,
-      "NIST": 4,
+      "NIST": 5,
       "European Parliament": 2,
       "Meta": 6,
       "DeepSeek": 3,
@@ -132904,7 +133874,7 @@
       "University of Manchester": 1,
       "UK Home Office": 1,
       "UK Competition and Markets Authority": 3,
-      "CISA": 5,
+      "CISA": 6,
       "UK AI Security Institute": 9,
       "Langflow": 2,
       "Claude Code": 7,
@@ -133030,20 +134000,20 @@
       "Iran-nexus actor": 1
     },
     "stack_layers": {
-      "governance_law": 214,
+      "governance_law": 216,
       "energy_compute_chips": 87,
       "cloud_inference": 124,
       "finance_rent": 81,
-      "data_telemetry": 136,
+      "data_telemetry": 138,
       "model_weights": 132,
       "decision_support_cognition": 183,
-      "cyber_security_patch": 156
+      "cyber_security_patch": 158
     },
     "source_types": {
       "Government / policy": 125,
       "Press / wire": 71,
       "Research / preprint": 63,
-      "Primary source": 24,
+      "Primary source": 26,
       "Investigative reporting": 2,
       "Industry / think tank": 6,
       "Company / vendor": 87,
@@ -133065,11 +134035,11 @@
       "qualifies": 35,
       "supports_counterargument": 2,
       "mitigates": 6,
-      "parallel": 23,
+      "parallel": 25,
       "countermove": 3,
       "supports_as_claim_not_fact": 4,
       "challenges": 7,
-      "supports_with_scope": 119,
+      "supports_with_scope": 121,
       "challenges_overclaim": 2,
       "supports_but_limits": 10,
       "develops_into": 20,
@@ -133084,11 +134054,11 @@
       "triggers_capital_and_cloud_lockin": 1,
       "accelerates_governance": 2,
       "early_countermeasure": 2,
-      "part_of_arc": 358,
+      "part_of_arc": 360,
       "institutionalizes": 23,
       "routes_around": 1,
       "materially_updates": 2,
-      "context_for": 16,
+      "context_for": 17,
       "precedes_and_qualifies": 4,
       "updated_by": 10,
       "supports_with_legal_caveat": 1
@@ -133120,29 +134090,29 @@
       "ARC_2016_2021_METERED_ACCESS_FORMATION": 14,
       "ARC_2021_STATE_INSTITUTIONALIZATION": 14,
       "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY": 30,
-      "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK": 118,
+      "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK": 125,
       "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL": 45
     },
     "arc_families": {
       "ARC_FAMILY_ACCESS_CONTROL": 213,
       "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 87,
-      "ARC_FAMILY_CYBER_COGNITION_WAR": 310,
+      "ARC_FAMILY_CYBER_COGNITION_WAR": 317,
       "ARC_FAMILY_DECISION_DATA_FINANCE": 117,
       "ARC_FAMILY_INFRASTRUCTURE_CAPITAL": 83,
       "ARC_FAMILY_FORMATION_TIMELINE": 43
     },
     "primary_cyber_domains": {
-      "CYBER_DOMAIN_03_NATIONAL_DEFENSE": 26,
+      "CYBER_DOMAIN_03_NATIONAL_DEFENSE": 28,
       "CYBER_DOMAIN_01_SECURE_SYSTEMS": 35,
       "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE": 34,
       "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE": 22,
       "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY": 53
     },
     "normative_forces": {
-      "not_applicable": 124,
+      "not_applicable": 125,
       "contractual": 5,
       "binding": 18,
-      "advisory": 20,
+      "advisory": 21,
       "undetermined": 1,
       "conditional": 2
     }
@@ -133171,15 +134141,15 @@
     ],
     "release_notes": [
       {
-        "title": "От данных к решению",
-        "text": "ВОЕННЫЙ AI-КОНТУР (v0.39): данные, модели и программные слои образуют несколько разных цепочек — лицензируемый боевой корпус, открытый сбор, провайдерский доступ и институциональный decision OS. Их нельзя сводить к одному показателю автономности."
+        "title": "Качество и ёмкость обработки",
+        "text": "CISA задаёт рамку качества CVE; NIST меняет приоритеты обогащения записей. Даты решений, срезы статистики и прогнозы разделены."
       },
       {
-        "title": "Граница атрибуции",
-        "text": "Операционное использование, провайдерская телеметрия, анонс программы и автономное боевое действие маркируются раздельно."
+        "title": "Границы вывода",
+        "text": "Рост CVE не измеряет вклад ИИ; приоритет обработки не закрывает публичный доступ."
       }
     ],
-    "editorial_version": "0.39",
+    "editorial_version": "0.40",
     "graph_legend_ru": "Общая сюжетная дуга — не доказательство причинности. Отдельные карточки показывают, чей контроль над каким действием усиливается, ослабляется или остаётся условным.",
     "graph_legend_en": "Shared arcs do not prove causality. Individual cards describe whose control over which action strengthens, weakens or remains conditional."
   },
@@ -133585,7 +134555,7 @@
     }
   ],
   "migrationAudit": {
-    "version": "0.39",
+    "version": "0.40",
     "base_commit": "156e39a21b5a523092ccb2975e5aa38f489f52b6",
     "reviewed_cyber_records": 119,
     "translated_event_titles": 149,
@@ -134362,7 +135332,21 @@
       "ARC_GULF_CONDITIONAL_SOVEREIGNTY",
       "ARC_QUIET_ACCESS_CONTROL"
     ],
-    "v039_source_package": "review/war-ai-operations-september-2026"
+    "v039_source_package": "review/war-ai-operations-september-2026",
+    "v040_base_sha256": "9e1a44b4d13b604de7f3925e05f0f7614491f6f618ad6bee475175baab55cbc6",
+    "v040_added_event_ids": [
+      "SIG_2026_CISA_CVE_QUALITY_ERA_FRAMEWORK",
+      "SIG_2026_NIST_NVD_SELECTIVE_ENRICHMENT"
+    ],
+    "v040_added_edge_ids": [
+      "EDGE_V040_CVE_001",
+      "EDGE_V040_CVE_002",
+      "EDGE_V040_CVE_003",
+      "EDGE_V040_CVE_004",
+      "EDGE_V040_CVE_005",
+      "EDGE_V040_CVE_006",
+      "EDGE_V040_CVE_007"
+    ]
   },
   "relationLabels": {
     "supports": {
@@ -134573,7 +135557,7 @@
     ],
     "method_note_ru": "Иерархия определяет маршрут чтения, а не силу доказательства. Один факт получает основную позицию для показа; все прежние тематические и доказательные связи сохраняются.",
     "method_note_en": "The hierarchy defines a reading route, not evidentiary strength. Each classified fact receives one primary display position while all previous thematic and evidentiary links remain.",
-    "primary_event_assignments": 354,
+    "primary_event_assignments": 356,
     "events_with_secondary_arcs": 163
   }
 }

@@ -33,10 +33,10 @@ def main():
         events = {event["id"]: event for event in doc["events"]}
         arcs = {arc["id"]: arc for arc in doc["arcs"]}
         checks = {claim["id"]: claim for claim in doc["claimChecks"]}
-        assert doc["meta"]["version"] == "0.39"
-        assert (len(doc["events"]), len(doc["claims"]), len(doc["claimChecks"]), len(doc["arcs"]), len(doc["edges"])) == (394, 73, 32, 26, 941)
+        assert doc["meta"]["version"] == "0.40"
+        assert (len(doc["events"]), len(doc["claims"]), len(doc["claimChecks"]), len(doc["arcs"]), len(doc["edges"])) == (396, 73, 32, 26, 948)
         assert EVENT_IDS <= events.keys()
-        assert len({source["url"] for source in doc["sourceIndex"]}) == len(doc["sourceIndex"]) == 583
+        assert len({source["url"] for source in doc["sourceIndex"]}) == len(doc["sourceIndex"]) == 586
         assert doc["referenceIntegrity"]["valid"]
         assert doc["arcHierarchy"]["role_counts"]["mechanism"] == 13
         assert sum(arc["display_role"] == "mechanism" for arc in doc["arcs"]) == 13

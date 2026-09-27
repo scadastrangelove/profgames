@@ -21,7 +21,7 @@ def run(root: Path, executable: str):
             page.set_content(html,wait_until='load')
             page.evaluate("switchTab('cyber');cyberState.mode='all';resilienceState.open=true;renderCyber()")
             ok(lang+': six local track controls',page.locator('[data-resilience-track]').count()==6)
-            ok(lang+': all 31 tagged records in layer',page.locator('#resilience-count').inner_text()=='31 / 31')
+            ok(lang+': all 33 tagged records in layer',page.locator('#resilience-count').inner_text()=='33 / 33')
             ok(lang+': CVD anchor visible',page.locator('.resilience-evidence-card[data-id="SIG_2026_ANTHROPIC_CVD_VALIDATED_BACKLOG"]').count()==1)
             ok(lang+': historical slop comes after core records',page.evaluate("Array.from(document.querySelectorAll('.resilience-evidence-card')).map(x=>x.dataset.id).at(-1)==='SIG_2026_CURL_BOUNTY_CLOSURE'"))
             for t in raw['tracks']:

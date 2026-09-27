@@ -2,7 +2,7 @@
   "mode": "local HTML injection and fresh-document hash restoration; no model calls or network",
   "checks": [
     "ru: six local track controls",
-    "ru: all 31 tagged records in layer",
+    "ru: all 33 tagged records in layer",
     "ru: CVD anchor visible",
     "ru: historical slop comes after core records",
     "ru: every track displays all matching records RES_TRACK_MAINTENANCE_CAPACITY",
@@ -49,7 +49,7 @@
     "ru: no JS errors",
     "ru: no external requests",
     "en: six local track controls",
-    "en: all 31 tagged records in layer",
+    "en: all 33 tagged records in layer",
     "en: CVD anchor visible",
     "en: historical slop comes after core records",
     "en: every track displays all matching records RES_TRACK_MAINTENANCE_CAPACITY",

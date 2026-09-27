@@ -44,10 +44,10 @@ def run(root: Path, executable: str):
             page.on("request", lambda request, bucket=requests: bucket.append(request.url))
             page.set_content((root / filename).read_text(), wait_until="load")
 
-            ok(lang + ": current data loaded", page.evaluate("D.meta.version") == "0.39")
+            ok(lang + ": current data loaded", page.evaluate("D.meta.version") == "0.40")
             ok(
                 lang + ": current counts loaded",
-                page.evaluate("[EV.length,CHECKS.length,EDGES.length,SOURCES.length]") == [394, 32, 941, 583],
+                page.evaluate("[EV.length,CHECKS.length,EDGES.length,SOURCES.length]") == [396, 32, 948, 586],
             )
 
             page.evaluate("switchTab('story')")

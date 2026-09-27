@@ -15,11 +15,11 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2307.495849609375,
-        "behavior_section_1440": 441.49591064453125,
-        "cyber_first_card_390": 5506.1669921875,
-        "behavior_section_390": 731.276611328125,
-        "map_top": 800.078125
+        "cyber_first_card_1440": 2307.492919921875,
+        "behavior_section_1440": 441.4928894042969,
+        "cyber_first_card_390": 5506.1650390625,
+        "behavior_section_390": 731.7743530273438,
+        "map_top": 743.546875
       },
       "page_widths": {
         "story:1440": 1440,
@@ -59,7 +59,7 @@
         "behavior_section_1440": 429.625,
         "cyber_first_card_390": 5165.015625,
         "behavior_section_390": 677.015625,
-        "map_top": 583.984375
+        "map_top": 546.296875
       },
       "page_widths": {
         "overview:1440": 1440,
