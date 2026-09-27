@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline browser checks that the v0.36 frontier-pacing layer survives v0.40."""
+"""Offline browser checks that the v0.36 frontier-pacing layer survives v0.41."""
 from pathlib import Path
 import argparse
 import json
@@ -37,8 +37,8 @@ def run(root: Path, executable: str):
             page.on("request", lambda request, bucket=requests: bucket.append(request.url))
             page.set_content((root / filename).read_text(), wait_until="load")
 
-            ok(lang + ": current data loaded", page.evaluate("D.meta.version") == "0.40")
-            ok(lang + ": current counts loaded", page.evaluate("[EV.length,CHECKS.length,ARCS.length,EDGES.length,SOURCES.length]") == [396, 32, 26, 948, 586])
+            ok(lang + ": current data loaded", page.evaluate("D.meta.version") == "0.41")
+            ok(lang + ": current counts loaded", page.evaluate("[EV.length,CHECKS.length,ARCS.length,EDGES.length,SOURCES.length]") == [404, 32, 26, 981, 597])
             page.evaluate("switchTab('story')")
             for event_id in EVENT_IDS:
                 ok(lang + ": pacing event reaches story graph " + event_id, page.locator(f'.event-dot[data-id="{event_id}"]').count() >= 1)

@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "reviewed_at": "2026-09-27",
+    "atlas_commit_reviewed": "9cabc78c3a91b09bbdec34d68ff9f7f324b1253c",
+    "base_version": "0.40",
+    "base_sha256": {
+      "ru": "d2d3710b6e00ec2d7d50f40dff79ef554ee7a99c246bbb146415e7100463f4ab",
+      "en": "fc354942e80ed9532365b0d0de867357e76c24f231e41145c03e0aa22ece72ec"
+    },
+    "scope": "Eight distinct publications; direct discovery attribution, remediation, exploitation and public policy positions remain separate."
+  },
+  "sources": {
+    "mozilla": {"name": "Mozilla", "date": "2026-03-06", "title": "Hardening Firefox with Anthropic's Red Team", "url": "https://blog.mozilla.org/en/firefox/hardening-firefox-anthropic-red-team/", "source_class": "maintainer_publication", "primary_or_secondary": "primary"},
+    "wordfence": {"name": "Wordfence", "date": "2026-04-10", "title": "The Increasing Role of AI in Vulnerability Research", "url": "https://www.wordfence.com/blog/2026/04/the-increasing-role-of-ai-in-vulnerability-research/", "source_class": "program_operator_publication", "primary_or_secondary": "primary"},
+    "curl": {"name": "Daniel Stenberg / curl", "date": "2026-05-11", "title": "Mythos finds a curl vulnerability", "url": "https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/", "source_class": "maintainer_publication", "primary_or_secondary": "primary"},
+    "windows": {"name": "Microsoft", "date": "2026-07-09", "title": "Evolving Windows vulnerability management to meet the speed of AI-powered discovery", "url": "https://blogs.windows.com/windowsexperience/2026/07/09/evolving-windows-vulnerability-management-to-meet-the-speed-of-ai-powered-discovery/", "source_class": "vendor_publication", "primary_or_secondary": "primary"},
+    "vulncheck": {"name": "VulnCheck", "date": "2026-07-28", "title": "VulnCheck State of Exploitation 1H-2026", "url": "https://www.vulncheck.com/blog/state-of-exploitation-1h-2026", "source_class": "original_research", "primary_or_secondary": "primary"},
+    "chrome": {"name": "Google Chrome Security Team", "date": "2026-07-30", "title": "Stronger with every update: How we're making Chrome and the web safer in the AI Era", "url": "https://blog.google/security/chrome-stronger-with-every-update/", "source_class": "maintainer_publication", "primary_or_secondary": "primary"},
+    "metr": {"name": "METR", "date": "2026-08-14", "title": "Have We Seen an Acceleration in Discoveries?", "url": "https://metr.org/notes/2026-08-14-llm-contribution-to-discoveries/", "source_class": "original_research", "primary_or_secondary": "primary"},
+    "openssl_data": {"name": "Tom Cunningham / AI discovery data", "date": "", "observed_at": "2026-09-27", "date_basis": "dataset_publication_date_unknown_linked_from_august_14_analysis", "title": "OpenSSL vulnerability disclosures", "url": "https://tecunningham.github.io/ai-discovery-data/cyber-openssl.html", "source_class": "research_dataset", "primary_or_secondary": "primary"},
+    "aisle": {"name": "AISLE", "date": "2026-04-24", "title": "AISLE discovers 20 OpenSSL zero-days in 6 months", "url": "https://aisle.com/blog/aisle-discovers-20-openssl-zero-days-in-6-months", "source_class": "researcher_disclosure", "primary_or_secondary": "primary"},
+    "nbc": {"name": "NBC News / NBC Bay Area", "date": "2026-09-25", "title": "Bill Gates says AI companies self-regulating isn't enough and governments should be involved", "url": "https://www.nbcbayarea.com/news/national-international/bill-gates-ai-governments-involved/4148579/", "source_class": "interview_publisher", "primary_or_secondary": "primary"},
+    "securitylab": {"name": "SecurityLab", "date": "2026-09-25", "title": "Coverage of the Bill Gates interview", "url": "https://www.securitylab.ru/news/577938.php", "source_class": "secondary_news", "primary_or_secondary": "secondary"}
+  },
+  "events": [
+    {
+      "id": "SIG_2026_FIREFOX_CLAUDE_22_CVES", "date": "2026-03-06", "source_ids": ["mozilla"], "actors": ["Mozilla", "Anthropic"], "jurisdictions": ["US"],
+      "artifact": "disclosure", "stage": "remediated", "confidence": "A", "priority": 1, "defense_evidence_kind": "released_fixes", "stages": ["discovery", "validation", "release"], "remediation_track": true,
+      "title_ru": "Mozilla: поиск с Claude привёл к 22 CVE и исправлениям Firefox 148",
+      "title_en": "Mozilla: Claude-assisted research led to 22 CVEs and Firefox 148 fixes",
+      "summary_ru": "Mozilla воспроизвела находки команды Anthropic и выпустила исправления: 22 CVE, включая 14 уязвимостей высокой опасности. Отдельно поступило 90 других ошибок. Среди находок были логические ошибки, ранее не обнаруженные фаззингом.",
+      "summary_en": "Mozilla reproduced Anthropic's findings and shipped fixes: 22 CVEs, including 14 high-severity vulnerabilities. Another 90 bugs were reported separately. Findings included logic flaws previously missed by fuzzing.",
+      "caveat_ru": "Мартовский результат не равен апрельским 271 находке Mythos. 90 других ошибок не являются дополнительными CVE. Подтверждено защитное применение, не автономная атака.",
+      "caveat_en": "This March result is distinct from April's 271 Mythos findings. The other 90 bugs are not additional CVEs. It establishes defensive use, not an autonomous attack.",
+      "metrics": [
+        {"value": 22, "unit": "CVE", "label_ru": "Опубликованные CVE", "label_en": "Published CVEs", "as_of": "2026-03-06", "source": "mozilla"},
+        {"value": 14, "unit": "vulnerabilities", "label_ru": "Высокая опасность, подмножество", "label_en": "High severity, a subset", "as_of": "2026-03-06", "source": "mozilla"}
+      ]
+    },
+    {
+      "id": "SIG_2026_WORDFENCE_AI_REPORTING_SHARE", "date": "2026-04-10", "source_ids": ["wordfence"], "actors": ["Wordfence"], "jurisdictions": ["US"],
+      "artifact": "survey", "stage": "reported", "confidence": "B", "priority": 1, "defense_evidence_kind": "provider_operational_report", "stages": ["discovery", "validation"],
+      "title_ru": "Wordfence: доля сообщений с заявленным применением ИИ выросла с 16% до 66%",
+      "title_en": "Wordfence: self-reported AI assistance rose from 16% to about 66% of submissions",
+      "summary_ru": "Wordfence отслеживает заявленное исследователями применение ИИ с конца ноября 2025 года. К апрелю доля таких сообщений выросла примерно до 66%; общий поток сообщений с октября увеличился на 453%. Для проверки компания также применяет агентов.",
+      "summary_en": "Wordfence has tracked researcher-reported AI use since late November 2025. By April its share reached about 66%; total submissions had risen 453% since October. The company also uses agents for triage.",
+      "caveat_ru": "Это самоотчёты участников программы, не доля подтверждённых CVE. У двух показателей разные начальные даты; весь прирост сообщений нельзя причинно приписать ИИ.",
+      "caveat_en": "These are program participants' self-reports, not a share of validated CVEs. The two measures have different starting dates; the entire submission increase cannot be causally assigned to AI.",
+      "metrics": [
+        {"value": "16% → ≈66%", "unit": "% submissions", "label_ru": "Сообщения с заявленным применением ИИ", "label_en": "Submissions reporting AI assistance", "as_of": "2026-04-10", "source": "wordfence", "population_ru": "Доля входящих сообщений; сравнение с концом ноября 2025 года.", "population_en": "Share of incoming submissions; compared with late November 2025."},
+        {"value": "+453%", "unit": "% submissions", "label_ru": "Рост всего потока сообщений", "label_en": "Growth in total submissions", "as_of": "2026-04-10", "source": "wordfence", "population_ru": "С октября 2025 года; не число уникальных подтверждённых уязвимостей.", "population_en": "Since October 2025; not unique validated vulnerabilities."}
+      ]
+    },
+    {
+      "id": "SIG_2026_CURL_AI_FIXES_MYTHOS_REVIEW", "date": "2026-05-11", "source_ids": ["curl"], "actors": ["curl"], "jurisdictions": [],
+      "artifact": "disclosure", "stage": "reported", "confidence": "A", "priority": 2, "defense_evidence_kind": "maintainer_report", "stages": ["discovery", "validation", "patch"], "remediation_track": true,
+      "title_ru": "curl: сотни принятых исправлений от ИИ-анализаторов и ручная проверка находок Mythos",
+      "title_en": "curl: hundreds of merged fixes from AI analyzers and human review of Mythos findings",
+      "summary_ru": "Дэниел Стенберг оценил результат ИИ-анализаторов за 8–10 месяцев в 200–300 принятых исправлений и около дюжины или более CVE. Из пяти заявленных уязвимостей первого сканирования Mythos он подтвердил одну низкой опасности; ещё три оказались ложными срабатываниями и одна обычной ошибкой.",
+      "summary_en": "Daniel Stenberg estimated 200–300 merged fixes and roughly a dozen or more CVEs from AI analyzers over 8–10 months. Of five claimed vulnerabilities in the first Mythos scan, he confirmed one low-severity issue; three were false positives and one an ordinary bug.",
+      "caveat_ru": "Оценка сопровождающего одного проекта, не независимый пересчёт. CVE новой находки Mythos ещё ожидал выпуска; проект до этого многократно проверяли другие анализаторы. Число исправлений не равно числу CVE.",
+      "caveat_en": "A maintainer estimate for one project, not an independent recount. The new Mythos finding's CVE was still awaiting release; other analyzers had already reviewed the project extensively. Fix counts are not CVE counts.",
+      "metrics": [
+        {"value": "≈200–300", "unit": "merged fixes", "label_ru": "Принятые исправления за 8–10 месяцев", "label_en": "Merged fixes over 8–10 months", "as_of": "2026-05-11", "source": "curl"},
+        {"value": "1 / 5", "unit": "reviewed findings", "label_ru": "Подтверждённая уязвимость в первом отчёте Mythos", "label_en": "Confirmed vulnerability in the first Mythos report", "as_of": "2026-05-11", "source": "curl"}
+      ]
+    },
+    {
+      "id": "SIG_2026_WINDOWS_MDASH_DISCOVERY_CAPACITY", "date": "2026-07-09", "source_ids": ["windows"], "actors": ["Microsoft"], "jurisdictions": ["US"],
+      "artifact": "deployment", "stage": "effective", "confidence": "B", "priority": 1, "defense_evidence_kind": "provider_operational_report", "stages": ["discovery", "validation", "release"], "remediation_track": true,
+      "title_ru": "Windows: Microsoft перестраивает обработку уязвимостей под ИИ-поиск",
+      "title_en": "Windows: Microsoft adapts vulnerability management to AI-powered discovery",
+      "summary_ru": "Microsoft описала MDASH: облачное сканирование критических компонентов агентами с несколькими моделями, отдельную проверку находок и участие инженеров. Компания прямо связала ИИ-поиск с ростом объёма исправлений безопасности в выпусках Windows.",
+      "summary_en": "Microsoft described MDASH: cloud-based, multi-model agent scanning of critical components, a separate validation pipeline and engineer review. It explicitly linked AI discovery to growing security-fix volume in Windows releases.",
+      "caveat_ru": "Операционное описание поставщика без опубликованного числа уникальных CVE, найденных именно ИИ, или контролируемой оценки вклада отдельных моделей. Рост исправлений не означает рост успешных атак.",
+      "caveat_en": "A provider's operational account without a published count of unique AI-attributed CVEs or a controlled estimate of individual models' contributions. More fixes do not imply more successful attacks.",
+      "metrics": []
+    },
+    {
+      "id": "SIG_2026_VULNCHECK_AI_DISCOVERY_EXPLOITATION_COHORT", "date": "2026-07-28", "source_ids": ["vulncheck"], "actors": ["VulnCheck"], "jurisdictions": ["US"],
+      "artifact": "research", "stage": "published", "confidence": "B", "priority": 2, "defense_evidence_kind": "risk_assessment", "stages": ["validation"], "observational": true,
+      "title_ru": "VulnCheck: 14 случаев эксплуатации среди 1 061 уязвимости с ИИ-атрибуцией",
+      "title_en": "VulnCheck: 14 exploited vulnerabilities in an AI-attributed cohort of 1,061",
+      "summary_ru": "VulnCheck сопоставила списки Anthropic и Berkeley с данными об эксплуатации. Из 1 061 уязвимости, приписанной поиску с ИИ, 14 (1,3%) имели подтверждённую эксплуатацию. В этом срезе доля близка к общей: повышенная вероятность эксплуатации ИИ-находок не установлена.",
+      "summary_en": "VulnCheck matched Anthropic and Berkeley discovery lists against exploitation evidence. Of 1,061 AI-attributed vulnerabilities, 14 (1.3%) had confirmed exploitation. The observed proportion was close to the overall rate; this snapshot did not establish higher exploitation likelihood for AI discoveries.",
+      "caveat_ru": "Срез отчёта за первое полугодие, опубликованного 28 июля. Обнаружение эксплуатации запаздывает; выборки имеют разную выдержку. Это не опровержение роста ИИ-находок и не свидетельство, что атакующие применяли ИИ.",
+      "caveat_en": "A first-half report published July 28. Exploitation detection lags, and cohorts have different follow-up periods. This does not refute AI discovery growth or establish attackers' use of AI.",
+      "metrics": [
+        {"value": 1061, "unit": "vulnerabilities", "label_ru": "Уязвимости с атрибуцией поиска ИИ", "label_en": "Vulnerabilities attributed to AI-assisted discovery", "as_of": "2026-07-28", "source": "vulncheck", "population_ru": "Объединённая выборка двух публичных списков; не весь поток CVE.", "population_en": "Combined cohort from two public lists; not the entire CVE flow."},
+        {"value": "14 / 1 061 (1.3%)", "unit": "confirmed exploited", "label_ru": "Подтверждённая эксплуатация в выборке", "label_en": "Confirmed exploitation within the cohort", "as_of": "2026-07-28", "source": "vulncheck", "population_ru": "Срез к подготовке отчёта; точная дата последнего наблюдения не названа.", "population_en": "Snapshot at report preparation; the exact final observation date is unspecified."}
+      ]
+    },
+    {
+      "id": "SIG_2026_CHROME_AI_SECURITY_FIX_THROUGHPUT", "date": "2026-07-30", "source_ids": ["chrome"], "actors": ["Google"], "jurisdictions": ["US"],
+      "artifact": "disclosure", "stage": "remediated", "confidence": "A", "priority": 1, "defense_evidence_kind": "released_fixes", "stages": ["discovery", "validation", "release"], "remediation_track": true,
+      "title_ru": "Chrome: 1 072 исправленные ошибки безопасности в двух версиях и расширение ИИ-поиска",
+      "title_en": "Chrome: 1,072 security bugs fixed across two versions as AI discovery expands",
+      "summary_ru": "Google сообщила об ИИ-поиске и проверке уязвимостей несколькими моделями, включая давнюю ошибку выхода из песочницы. В Chrome 149 и 150 исправлены 1 072 ошибки безопасности, больше, чем в предыдущих 23 версиях вместе. Компания испытывает два выпуска безопасности в неделю.",
+      "summary_en": "Google described multi-model AI discovery and validation, including a longstanding sandbox-escape flaw. Chrome 149 and 150 fixed 1,072 security bugs, exceeding the previous 23 milestones combined. The team is piloting two security releases per week.",
+      "caveat_ru": "1 072 — ошибки безопасности, исправленные в выпусках, не 1 072 CVE с индивидуально подтверждённым ИИ-авторством. Сводка команды Chrome не даёт причинного разложения всего прироста.",
+      "caveat_en": "The 1,072 figure counts security bugs fixed in releases, not 1,072 individually AI-attributed CVEs. The Chrome team's account does not causally decompose the entire increase.",
+      "metrics": [
+        {"value": 1072, "unit": "security bugs fixed", "label_ru": "Исправлено в Chrome 149 и 150", "label_en": "Fixed in Chrome 149 and 150", "as_of": "2026-07-30", "source": "chrome", "population_ru": "Два выпуска; показатель не равен числу уникальных CVE, найденных ИИ.", "population_en": "Two releases; not a count of unique AI-discovered CVEs."}
+      ]
+    },
+    {
+      "id": "SIG_2026_METR_AI_DISCOVERY_OPENSSL_ATTRIBUTION", "date": "2026-08-14", "source_ids": ["metr", "openssl_data", "aisle"], "actors": ["METR", "OpenSSL", "AISLE"], "jurisdictions": [],
+      "artifact": "research", "stage": "published", "confidence": "B", "priority": 1, "defense_evidence_kind": "research_measurement", "stages": ["discovery", "validation"], "observational": true,
+      "title_ru": "METR: рост раскрытий и подтверждённая атрибуция ИИ в данных OpenSSL",
+      "title_en": "METR: accelerating disclosures and corroborated AI attribution in OpenSSL data",
+      "summary_ru": "Сравнительный сбор METR фиксирует ускорение раскрытий в нескольких проектах. Для OpenSSL к 5 августа учтены 39 CVE за 2026 год, 18 с подтверждённым использованием ИИ; за весь 2025 год — 6 и 3 соответственно. Ещё девять записей связаны с ИИ-компаниями, но метод поиска не подтверждён.",
+      "summary_en": "METR's comparative collection documents accelerating disclosures across projects. OpenSSL had 39 CVEs in 2026 through August 5, with corroborated AI use for 18; full-year 2025 had six and three respectively. Another nine records involved AI-company affiliations without confirmed discovery methods.",
+      "caveat_ru": "18 из 39 — атрибутированный минимум внутри проекта, не доля ИИ во всех CVE. Атрибуция AISLE опирается на заявления исследователя о конкретных CVE, не независимое воспроизведение. Сбор METR выполнен агентами с аудитом авторов. Даты раскрытий не равны датам находок; затраты поиска и изменения кода не контролируются. Принадлежность к ИИ-компании сама по себе не доказывает метод.",
+      "caveat_en": "18 of 39 is an attributed lower bound within one project, not AI's share of all CVEs. AISLE attribution uses finding-specific researcher statements, not independent replication. METR's data was agent-collected and author-audited. Disclosure dates differ from discovery dates; search effort and code changes are uncontrolled. AI-company affiliation alone does not establish the method.",
+      "metrics": [
+        {"value": "18 / 39", "unit": "CVE", "label_ru": "OpenSSL: подтверждённый ИИ-метод / все CVE за 2026 год", "label_en": "OpenSSL: corroborated AI method / all 2026 CVEs", "as_of": "2026-08-05", "source": "openssl_data", "population_ru": "Срез данных исследования; публикация анализа 14 августа.", "population_en": "Research dataset snapshot; analysis published August 14."},
+        {"value": "3 / 6", "unit": "CVE", "label_ru": "OpenSSL: подтверждённый ИИ-метод / весь 2025 год", "label_en": "OpenSSL: corroborated AI method / full-year 2025", "as_of": "2025-12-31", "source": "openssl_data"}
+      ]
+    },
+    {
+      "id": "SIG_2026_GATES_MANDATORY_AI_OVERSIGHT_INTERVIEW", "date": "2026-09-25", "source_ids": ["nbc", "securitylab"], "actors": ["Bill Gates"], "jurisdictions": ["US"],
+      "artifact": "commentary", "stage": "published", "confidence": "B", "priority": 1, "policy": true,
+      "title_ru": "Билл Гейтс призвал закрепить государственный надзор за ИИ вместо одного саморегулирования",
+      "title_en": "Bill Gates called for mandatory public AI oversight beyond industry self-regulation",
+      "summary_ru": "В опубликованном NBC фрагменте интервью Гейтс призвал законодателей и правоохранительные органы определить обязательные меры защиты и мониторинга ИИ. Он считает одного саморегулирования недостаточным и не ожидает от надзора резкого замедления разработки.",
+      "summary_en": "In an interview excerpt published by NBC, Gates called for lawmakers and law enforcement to define mandatory AI safeguards and monitoring. He considers self-regulation insufficient and does not expect oversight to dramatically slow development.",
+      "caveat_ru": "Публичная позиция Гейтса, не принятый закон и не официальная политика Microsoft. Упоминание миллиарда погибших описывает возможный сценарий злоупотребления, не неизбежный исход или количественный прогноз. 25 сентября — публикация фрагмента, запись интервью состоялась 23 сентября.",
+      "caveat_en": "Gates's public position, not enacted law or official Microsoft policy. The reference to a billion deaths describes a possible misuse scenario, not an inevitable outcome or quantified forecast. September 25 is the excerpt's publication date; the interview was recorded September 23.",
+      "metrics": []
+    }
+  ],
+  "dedup": {
+    "existing_records_retained": ["SIG_2026_GATES_AI_TRANSITION_INSTITUTIONS_ESSAY", "SIG_2026_MYTHOS_FIREFOX_271", "SIG_2026_CURL_HIGH_QUALITY_TRANSITION", "SIG_2026_CURL_821_RELEASE_CAPACITY", "SIG_2026_CURL_REPORTING_PAUSE", "SIG_2026_CURL_822_SECURITY_RELEASE"],
+    "rule": "Different dated publications remain separate only where they add a new measured result or policy position. Overlapping counts must not be added across records."
+  },
+  "excluded_inferences": [
+    "Low public attribution means AI's actual contribution is negligible.",
+    "The entire increase in global CVE publications is caused by AI.",
+    "More AI-found vulnerabilities necessarily mean a higher exploitation probability.",
+    "All Chrome security fixes are separate AI-discovered CVEs.",
+    "Gates announced a law, a Microsoft policy or an inevitable death toll."
+  ]
+}

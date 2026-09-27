@@ -33,3 +33,11 @@ The three formation arcs and the 2023 governance marker are timeline records. Th
 ## Audit
 
 `scripts/migrate_arc_hierarchy.py` accepts only the pinned v0.37 bilingual checksums. `migrationAudit.v038_arc_hierarchy` records role counts, the single family reassignment, 14 matching edge-family metadata updates, 12 recomputed node-family memberships, zero semantic edge changes and zero removed IDs. Validation checks all new references, bilingual hierarchy parity, embedded-data parity and preservation of the complete legacy corpus.
+
+## Compatible additions in v0.41
+
+`cyberFramework.resilience_tracks[].claim_ids` optionally lists claim IDs for a reading track. Each resolves to a `claims` record. If absent, the interface uses `cyberFramework.resilience_claim_id`, preserving older documents.
+
+`pipeline_metrics[].unit` remains the canonical measurement unit. Optional `unit_ru` and `unit_en` provide display labels without changing the denominator. `research_measurement` is a new `defense_evidence_kinds` value for an original research measurement, distinct from a maintainer's operational account.
+
+AI-method attribution, published CVEs, incoming reports, accepted fixes and observed exploitation are separate measures. Cross-publication totals may overlap. A date in `pipeline_metrics[].as_of` belongs to the measurement; it does not replace the event's publication date.

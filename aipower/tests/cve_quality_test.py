@@ -35,7 +35,9 @@ def run(root, executable):
         old_bytes = subprocess.check_output(["git", "show", f"{base}:aipower/{filename}"], cwd=root)
         originals[lang] = old_bytes
         old = json.loads(old_bytes)
-        doc = json.loads((root / filename).read_text())
+        current = json.loads((root / filename).read_text())
+        snapshot = subprocess.check_output(["git", "show", f"9cabc78c3a91b09bbdec34d68ff9f7f324b1253c:aipower/{filename}"], cwd=root)
+        doc = json.loads(snapshot)
         ok(lang + ": pinned baseline", hashlib.sha256(old_bytes).hexdigest() == raw["meta"]["base_sha256"][lang])
         ok(lang + ": reproducible migration", migrate(copy.deepcopy(old), raw) == doc)
         events = {e["id"]: e for e in doc["events"]}
@@ -67,6 +69,11 @@ def run(root, executable):
         dates = [events[id]["date"] for id in arc["key_nodes"] if id in events]
         ok(lang + ": arc chronology", dates == sorted(dates) and arc["end_date"] == "2026-09-22")
         ok(lang + ": all typed references valid", doc["referenceIntegrity"]["valid"])
+        for id in [CISA, NIST]:
+            current_event = next(e for e in current["events"] if e["id"] == id)
+            ok(lang + ": CVE policy data retained in current release " + id,
+               {k: v for k, v in current_event.items() if k not in link_fields}
+               == {k: v for k, v in events[id].items() if k not in link_fields})
 
     with tempfile.TemporaryDirectory() as directory:
         temp = Path(directory)

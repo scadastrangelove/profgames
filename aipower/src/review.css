@@ -42,7 +42,7 @@
 .resilience-track.active{border-color:var(--amber);box-shadow:inset 3px 0 var(--amber)}
 .resilience-track:focus-visible,.resilience-evidence-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 #resilience-description{font-size:15px;line-height:1.55;font-weight:500;margin:12px 0}
-.resilience-claim{border:0;background:none;color:var(--blue);padding:6px 0;text-align:left;font:inherit;cursor:pointer}
+.resilience-claim{display:block;max-width:100%;border:0;background:none;color:var(--blue);padding:6px 0;text-align:left;font:inherit;cursor:pointer}
 .resilience-events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
 .resilience-evidence-card{border:1px solid var(--line);border-radius:7px;padding:14px;cursor:pointer;min-width:0}
 .resilience-evidence-card:hover{border-color:var(--amber)}.resilience-evidence-card h4{font-size:14px;line-height:1.45;margin:9px 0}
