@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "schema": "aipower.research_candidates.v1",
+    "reviewed_at": "2026-09-27",
+    "atlas_version_reviewed": "0.39",
+    "atlas_commit_reviewed": "d7651ac34249972d02b96be58b1948fe90c5e54c",
+    "companion_page": "../../../pult.html",
+    "merged_into_atlas": false,
+    "scope": "Targeted primary-source review for a companion publication; not a full fact-check of the article or a workforce forecast.",
+    "dedup_method": "Compared primary URLs and named cases against events and sourceIndex in both canonical atlas files. Related mechanisms are retained as proposed links, not proof of an entire arc."
+  },
+  "candidates": [
+    {
+      "id": "PULT_CAND_2026_STRONGDM_VALIDATION_ENVIRONMENT",
+      "date": "2026-02-06",
+      "date_kind": "publication",
+      "title_ru": "StrongDM описывает разработку через сценарии приёмки и копии внешних сервисов",
+      "title_en": "StrongDM describes development using acceptance scenarios and service twins",
+      "evidence_kind": "company_self_report",
+      "review_status": "primary_source_checked_scope_limited",
+      "summary_ru": "Компания описывает сценарии вне репозитория и поведенческие копии зависимостей для проверки агентной разработки. Это конкретный пример инфраструктуры, которая задаёт критерии приёмки.",
+      "summary_en": "The company describes external scenarios and behavioural service twins for validating agent-built software. This illustrates infrastructure that defines acceptance criteria.",
+      "caveat_ru": "Самоописание компании. Рекомендация расходовать $1 000 в день на инженера не является измеренной средней стоимостью. Данные о долгосрочной частоте инцидентов не представлены.",
+      "caveat_en": "Company self-report. The $1,000-per-engineer daily recommendation is not measured average cost; long-run incident rates are not provided.",
+      "sources": [{"url": "https://factory.strongdm.ai/", "publisher": "StrongDM", "type": "primary", "published_at": "2026-02-06"}],
+      "proposed_arc_ids": ["ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "related_existing_event_ids": ["SIG_2026_BOE_FRONTIER_AI_HARNESS_ENGINEERING"],
+      "exact_source_duplicate_event_ids": [],
+      "integration_note": "Use as an institutional practice case; any inference about dependency on the validation environment must be labelled analytical."
+    },
+    {
+      "id": "PULT_CAND_2026_OPENAI_HARNESS_ENGINEERING",
+      "date": "2026-02-11",
+      "date_kind": "publication",
+      "title_ru": "OpenAI описывает агентную разработку с проверками и знаниями внутри репозитория",
+      "title_en": "OpenAI describes agent-led development with repository-based knowledge and controls",
+      "evidence_kind": "company_self_report",
+      "review_status": "primary_source_checked_scope_limited",
+      "summary_ru": "Внутренний проект переносит инженерную работу к устройству среды, правилам архитектуры, наблюдаемости и приёмке. Авторы прямо связывают результат с вложениями в эту среду.",
+      "summary_en": "An internal project shifts engineering work towards environment design, architecture rules, observability and acceptance. The authors explicitly tie results to investment in that environment.",
+      "caveat_ru": "Около миллиона строк включает код, тесты, документацию и инфраструктуру. Оценка десятой части срока не получена в контрольном эксперименте и не измеряет сокращение занятости.",
+      "caveat_en": "The roughly million-line count includes code, tests, documentation and infrastructure. The one-tenth-time estimate is not controlled evidence or a measure of job losses.",
+      "sources": [{"url": "https://openai.com/index/harness-engineering/", "publisher": "OpenAI", "type": "primary", "published_at": "2026-02-11"}],
+      "proposed_arc_ids": ["ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "related_existing_event_ids": ["SIG_2026_BOE_FRONTIER_AI_HARNESS_ENGINEERING", "SIG_2026_OPENAI_FRONTIER_ENTERPRISE_CONTROL_LAYER"],
+      "exact_source_duplicate_event_ids": [],
+      "integration_note": "Keep the engineering case distinct from the existing Bank of England paper and Frontier enterprise-platform announcement."
+    },
+    {
+      "id": "PULT_CAND_2026_FAROS_DELIVERY_REVIEW_PRESSURE",
+      "date": null,
+      "report_period": "2026-Q2",
+      "date_kind": "publication_day_unresolved",
+      "observed_at": "2026-09-27",
+      "title_ru": "Faros сообщает о росте нагрузки на проверку и инцидентов в своей выборке",
+      "title_en": "Faros reports growing review pressure and incidents in its sample",
+      "evidence_kind": "vendor_observational_telemetry",
+      "review_status": "primary_page_checked_methodology_and_date_pending",
+      "summary_ru": "В отчёте Q2 на телеметрии 22 тысяч разработчиков и 4 тысяч команд рост выпуска сопровождается ухудшением ряда показателей качества. Страница Q3 продолжает тему отставания контролей.",
+      "summary_en": "The Q2 report covers telemetry from 22,000 developers and 4,000 teams, associating greater output with poorer quality indicators. A Q3 page continues the theme of lagging controls.",
+      "numbers": {"developers": 22000, "teams": 4000, "reported_median_review_time_multiple": 5, "reported_incidents_per_pr_change_percent": 242.7},
+      "caveat_ru": "Выборка клиентов поставщика; причинность и репрезентативность всего рынка не установлены. Числа Q2 нельзя автоматически переносить в Q3. До включения в хронологию нужна дата публикации и полный протокол анализа.",
+      "caveat_en": "Vendor-client sample; market representativeness and causality are not established. Q2 figures must not be assigned to Q3. Publication date and full methodology remain to be checked.",
+      "sources": [
+        {"url": "https://www.faros.ai/research/ai-acceleration-whiplash", "publisher": "Faros AI", "type": "primary"},
+        {"url": "https://www.faros.ai/research/speed-trap", "publisher": "Faros AI", "type": "primary", "role": "later_report_landing_page_only"}
+      ],
+      "proposed_arc_ids": ["ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"],
+      "related_existing_event_ids": ["SIG_2026_LINUX_NETDEV_VALID_FIX_OVERLOAD", "SIG_2026_CURL_REPORTING_PAUSE"],
+      "exact_source_duplicate_event_ids": [],
+      "integration_note": "A parallel capacity constraint in software delivery. Do not equate increased defective code with the existing influx of valid security findings."
+    },
+    {
+      "id": "PULT_CAND_2025_METR_PRODUCTIVITY_RCT",
+      "date": "2025-07-10",
+      "date_kind": "publication",
+      "study_period": {"from": "2025-02", "through": "2025-06"},
+      "title_ru": "METR измерил замедление в ограниченном эксперименте с инструментами начала 2025 года",
+      "title_en": "METR measured slowdown in a bounded early-2025 developer experiment",
+      "evidence_kind": "randomized_controlled_trial",
+      "review_status": "primary_source_checked_scope_limited",
+      "summary_ru": "В эксперименте с 16 опытными разработчиками и 246 задачами доступ к ИИ увеличивал время выполнения на 19% в знакомых репозиториях.",
+      "summary_en": "In a trial with 16 experienced developers and 246 tasks, AI access increased completion time by 19% in familiar repositories.",
+      "numbers": {"developers": 16, "tasks": 246, "completion_time_change_percent": 19},
+      "caveat_ru": "Результат относится к этой популяции, задачам и инструментам. Он не описывает весь рынок или инструменты сентября 2026 года. Требуется совместное представление с обновлением METR.",
+      "caveat_en": "Bounded to this population, tasks and tools; not the whole market or September 2026 tools. Present alongside METR's follow-up.",
+      "sources": [{"url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/", "publisher": "METR", "type": "primary", "published_at": "2025-07-10"}],
+      "proposed_arc_ids": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "related_existing_event_ids": [],
+      "exact_source_duplicate_event_ids": [],
+      "integration_note": "Qualifies blanket productivity claims; does not by itself prove dependency, concentration or employment losses."
+    },
+    {
+      "id": "PULT_CAND_2026_METR_PRODUCTIVITY_SELECTION_UPDATE",
+      "date": "2026-02-24",
+      "date_kind": "publication",
+      "title_ru": "METR признаёт ограничения повторного измерения производительности",
+      "title_en": "METR identifies selection problems in its productivity follow-up",
+      "evidence_kind": "study_methodology_update",
+      "review_status": "primary_source_checked_scope_limited",
+      "summary_ru": "METR сообщил о признаках ускорения в новом исследовании, но признал оценку ненадёжной из-за отбора участников и задач, изменения оплаты и параллельной работы агентов.",
+      "summary_en": "METR reported signs of speedup but judged the estimate unreliable because of participant and task selection, changed pay and parallel-agent work.",
+      "caveat_ru": "Обновление ограничивает перенос раннего результата; оно не даёт надёжного единого коэффициента текущего ускорения.",
+      "caveat_en": "The update limits extrapolation of the earlier finding; it supplies no reliable universal current speedup factor.",
+      "sources": [{"url": "https://metr.org/blog/2026-02-24-uplift-update/", "publisher": "METR", "type": "primary", "published_at": "2026-02-24"}],
+      "proposed_arc_ids": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "related_existing_event_ids": [],
+      "exact_source_duplicate_event_ids": [],
+      "qualifies_candidate_id": "PULT_CAND_2025_METR_PRODUCTIVITY_RCT",
+      "integration_note": "Keep the original experiment and this methodological update as separate dated observations."
+    }
+  ],
+  "research_hypotheses": [
+    {
+      "id": "PULT_HYP_COMPUTE_RENT_TRANSFER",
+      "text_ru": "Перестройка разработки может переносить расходы и переговорную силу к поставщикам инференса и среды исполнения.",
+      "proposed_arc_ids": ["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN", "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"],
+      "needed_evidence": "Comparable realized inference spending, supplier concentration, switching costs and margins. A token-budget recommendation alone does not demonstrate transfer of rent."
+    },
+    {
+      "id": "PULT_HYP_AGENT_DISTRIBUTION_CONTROL",
+      "text_ru": "Агентный интерфейс может перераспределять контроль над доступом к корпоративным приложениям и каналом продаж.",
+      "proposed_arc_ids": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION", "ARC_QUIET_ACCESS_CONTROL"],
+      "needed_evidence": "Observed contracts, access policies, API prices and switching behaviour. A decline in per-seat revenue alone does not identify the new controller."
+    }
+  ],
+  "excluded_inferences": [
+    "A universal minimum 40% job loss independent of demand: a scenario assumption, not an empirical bound.",
+    "30-to-4 teams as the median industry outcome: not established by selected company cases.",
+    "A universal 10x productivity multiplier: uncontrolled self-estimates do not establish it.",
+    "AI causes every observed incident or layoff: vendor correlations and temporal coincidence do not identify causality.",
+    "Commercial control of validation proves monopoly: concentration and switching-cost evidence is still required."
+  ]
+}

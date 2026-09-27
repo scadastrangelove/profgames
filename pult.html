@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Пульт управления концом — аналитическая записка о занятости в разработке ПО</title>
+<meta name="description" content="Занятость в разработке ПО в эпоху ИИ: факты, допущения и два интерактивных сценария для команды и софтверного вендора. Приложение к циклу «Игры в профессию».">
+<meta property="og:title" content="Пульт управления концом · Игры в профессию">
+<meta property="og:description" content="Как ускорение разработки, координация и затраты на вычисления меняют команду и экономику вендора.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navh:43px;
+  --bg:#0a0d09; --panel:#121810; --panel-2:#1a2318; --line:#2c3a28; --line-2:#3f5439;
+  --phos:#8cf58c; --phos-dim:#4d8f4d; --phos-faint:#20361d; --amber:#f2b632; --red:#e8452c;
+  --paper:#d9d3b4; --text:#c9e6c0; --muted:#7ea378;
+  --mono:"IBM Plex Mono","JetBrains Mono",Consolas,"Liberation Mono",monospace;
+  --stencil:"Rubik Mono One","Arial Black",Impact,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#0a0d09; --text:#c9e6c0; } }
+:root[data-theme="dark"]{ --bg:#0a0d09; --text:#c9e6c0; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + var(--navh) + 12px); scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{margin:0; background:var(--bg); color:var(--text); font-family:var(--mono); font-size:15.5px; line-height:1.62; -webkit-font-smoothing:antialiased; position:relative}
+body::before{content:""; position:fixed; inset:0; pointer-events:none; z-index:50;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0px, rgba(0,0,0,.18) 1px, transparent 1px, transparent 3px);
+  mix-blend-mode:multiply}
+body::after{content:""; position:fixed; inset:0; pointer-events:none; z-index:49;
+  background:radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%)}
+a{color:var(--phos); text-decoration:underline; text-decoration-color:var(--phos-dim); text-underline-offset:3px}
+a:hover{text-decoration-color:var(--phos)}
+:focus-visible{outline:2px solid var(--amber); outline-offset:3px}
+img{max-width:100%}
+
+.wrap{max-width:1040px; margin:0 auto; padding:0 20px}
+.col{max-width:none}
+
+/* ---------- head ---------- */
+.head{border-bottom:3px double var(--line-2); padding:28px 0 22px}
+.head .stamp{display:flex; flex-wrap:wrap; gap:10px 22px; color:var(--muted); font-size:13px; margin-bottom:18px}
+.head .stamp b{color:var(--paper); font-weight:500}
+.project-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin:0 0 18px;font-size:13px}
+h1{font-family:var(--stencil); font-weight:400; font-size:clamp(26px,5.2vw,54px); line-height:1.05; letter-spacing:.01em; margin:0 0 14px; color:var(--phos); text-shadow:0 0 14px rgba(140,245,140,.35)}
+.head .sub{font-size:16px; color:var(--text); max-width:none; margin:0 0 22px}
+.epi{border-left:4px solid var(--amber); padding:10px 18px; background:var(--panel); max-width:70ch; color:var(--paper); font-style:italic}
+.epi p{margin:0 0 8px}
+.epi .who{font-style:normal; color:var(--muted); font-size:13px; margin:0}
+
+/* ---------- nav ---------- */
+.chan{position:sticky; top:env(safe-area-inset-top,0px); z-index:40; background:rgba(10,13,9,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(4px)}
+.chan ul{list-style:none; margin:0 auto; padding:0 20px; display:flex; gap:0; overflow-x:auto}
+.chan li{flex:0 0 auto; margin:0}
+.chan a{display:flex; align-items:center; height:42px; padding:0 16px; text-decoration:none; color:var(--muted); font-size:13px; border-right:1px solid var(--line)}
+.chan a:hover{color:var(--phos); background:var(--panel)}
+.chan a b{color:var(--amber); font-weight:500; margin-right:6px}
+
+/* ---------- readouts ---------- */
+.readouts{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; padding:22px 0 10px}
+.ro{background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--phos-dim); padding:12px 14px; min-height:112px; display:flex; flex-direction:column; justify-content:flex-start}
+.ro .v{font-family:var(--stencil); font-size:26px; color:var(--phos); line-height:1.1; text-shadow:0 0 10px rgba(140,245,140,.3)}
+.ro .v.warn{color:var(--amber); text-shadow:0 0 10px rgba(242,182,50,.3)}
+.ro .v.bad{color:var(--red); text-shadow:0 0 10px rgba(232,69,44,.3)}
+.ro .l{font-size:12.5px; color:var(--muted); line-height:1.35; margin-top:10px}
+.boot .ro{opacity:0; animation:boot .5s ease-out forwards}
+.boot .ro:nth-child(1){animation-delay:.05s}.boot .ro:nth-child(2){animation-delay:.2s}.boot .ro:nth-child(3){animation-delay:.35s}.boot .ro:nth-child(4){animation-delay:.5s}.boot .ro:nth-child(5){animation-delay:.65s}.boot .ro:nth-child(6){animation-delay:.8s}
+@keyframes boot{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){ .boot .ro{animation:none; opacity:1} }
+.ro .c{font-size:12px; color:var(--paper); border-top:1px dashed var(--line-2); margin-top:8px; padding-top:6px; line-height:1.35}
+.readnote{color:var(--muted); font-size:13px; margin:0 0 6px}
+
+/* ---------- sections ---------- */
+section.blk{padding:34px 0 8px; border-top:1px solid var(--line)}
+h2{font-family:var(--stencil); font-weight:400; font-size:clamp(20px,3vw,28px); color:var(--phos); margin:0 0 6px; line-height:1.15}
+h2 .num{color:var(--amber); margin-right:12px}
+.lead{color:var(--muted); margin:0 0 22px; max-width:none}
+h3{font-size:16px; font-weight:600; color:var(--paper); margin:30px 0 8px; line-height:1.35}
+h4{font-size:15px; font-weight:600; color:var(--phos); margin:22px 0 6px}
+p{margin:0 0 14px}
+p.slogan{color:var(--paper); font-weight:600}
+ul,ol{padding-left:22px; margin:0 0 14px}
+li{margin:0 0 6px}
+.facts{list-style:none; padding:0; margin:0 0 14px; border-left:2px solid var(--line-2)}
+.facts li{padding:4px 0 4px 14px; margin:0; color:var(--text)}
+.facts li::before{content:"▸ "; color:var(--phos-dim)}
+.read{background:var(--panel); border:1px solid var(--line); padding:10px 14px; margin:6px 0 18px; color:var(--paper)}
+.read b{color:var(--amber); font-weight:500}
+.formula{font-family:var(--mono); background:var(--panel-2); border:1px solid var(--line); padding:10px 14px; margin:8px 0 14px; color:var(--phos); overflow-x:auto; white-space:nowrap}
+.warnbox{border:2px solid var(--amber); padding:14px 18px; margin:18px 0 22px; background:rgba(242,182,50,.05)}
+.warnbox h3{margin-top:0; color:var(--amber)}
+.tbl{overflow-x:auto; margin:8px 0 20px}
+table{border-collapse:collapse; width:100%; font-size:14px; min-width:520px}
+th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top}
+.tbl th,.tbl td{overflow-wrap:normal; hyphens:manual}
+.tbl th:first-child,.tbl td:first-child{min-width:9em; white-space:nowrap}
+.tbl td.c{white-space:normal; min-width:7em}
+th{color:var(--paper); font-weight:600; background:var(--panel)}
+td.c{text-align:center}
+
+/* ---------- pult ---------- */
+.mod{background:var(--panel); border:2px solid var(--line-2); margin:18px 0 26px; padding:18px 18px 12px}
+.mod-grid{display:grid; grid-template-columns:minmax(260px,360px) minmax(0,1fr); gap:8px 24px; align-items:start}
+.strip{display:none}
+@media (max-width:900px){
+  .mod-grid{grid-template-columns:1fr}
+  .strip{display:flex; flex-wrap:wrap; gap:4px 18px; position:sticky; top:calc(env(safe-area-inset-top,0px) + var(--navh)); z-index:30;
+    background:var(--bg); border-top:1px solid var(--phos-dim); border-bottom:1px solid var(--phos-dim); box-shadow:0 8px 14px rgba(0,0,0,.55);
+    margin:0 -18px 14px; padding:8px 18px}
+  .strip span{display:flex; flex-direction:column; min-width:0}
+  .strip small{font-size:11px; color:var(--muted); line-height:1.2}
+  .strip b{font-family:var(--stencil); font-weight:400; font-size:17px; color:var(--phos); line-height:1.2; white-space:nowrap}
+}
+.chart.a{height:150px}
+.chart.b{height:300px}
+@media (max-width:900px){ .chart.b{height:360px} }
+.flash{animation:flash .7s ease-out}
+@keyframes flash{0%{color:var(--amber); text-shadow:0 0 10px rgba(242,182,50,.8)} 100%{}}
+@media (prefers-reduced-motion: reduce){ .flash{animation:none} #needle{transition:none !important} }
+.mod-h{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 18px; margin-bottom:12px; border-bottom:1px solid var(--line); padding-bottom:10px}
+.mod-h h3{margin:0; font-family:var(--stencil); font-weight:400; font-size:17px; color:var(--phos)}
+.mod-h span{color:var(--muted); font-size:13px}
+.sw{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 14px}
+.sw-l{font-size:12.5px; color:var(--muted); margin:0 0 6px}
+button.tog{font-family:var(--mono); font-size:13.5px; color:var(--text); background:var(--panel-2); border:2px solid var(--line-2); padding:8px 14px; cursor:pointer; border-radius:2px}
+button.tog:hover{border-color:var(--phos-dim)}
+button.tog[aria-pressed="true"]{background:var(--phos-faint); color:var(--phos); border-color:var(--phos); box-shadow:inset 0 0 10px rgba(140,245,140,.18)}
+.sl{display:grid; grid-template-columns:minmax(0,1fr) 70px; gap:8px 12px; align-items:center; margin:0 0 16px; font-size:13.5px; min-width:0}
+.sl label{color:var(--muted); grid-column:1/-1; margin-top:6px}
+.sl output{color:var(--phos); text-align:right; font-weight:500; min-width:0}
+input[type=range]{-webkit-appearance:none; appearance:none; display:block; width:100%; min-width:0; margin:0; height:28px; background:linear-gradient(var(--line-2),var(--line-2)) center/100% 4px no-repeat; border-radius:2px; cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none; appearance:none; width:18px; height:18px; border-radius:50%; background:var(--phos); border:2px solid var(--bg); box-shadow:0 0 8px rgba(140,245,140,.5); cursor:pointer}
+input[type=range]::-moz-range-thumb{width:18px; height:18px; border-radius:50%; background:var(--phos); border:2px solid var(--bg); box-shadow:0 0 8px rgba(140,245,140,.5); cursor:pointer}
+input[type=range]:focus-visible{outline:2px solid var(--amber); outline-offset:6px}
+.kpi{display:grid; grid-template-columns:repeat(auto-fit,minmax(125px,1fr)); gap:8px; margin:0 0 12px}
+.kpi div{background:var(--panel-2); border:1px solid var(--line); padding:10px 12px}
+.kpi small{display:block; color:var(--muted); font-size:12px; margin-bottom:4px}
+.kpi b{font-family:var(--stencil); font-weight:400; font-size:19px; color:var(--phos); display:block}
+.kpi b.warn{color:var(--amber)}.kpi b.bad{color:var(--red)}
+.legend{display:flex; flex-wrap:wrap; gap:14px; margin:8px 0 6px; font-size:12px; color:var(--muted)}
+.legend i{display:inline-block; width:10px; height:10px; margin-right:5px; vertical-align:middle}
+.chart{position:relative; width:100%}
+.err{color:var(--red); font-size:13px; min-height:1.2em; margin:6px 0 0}
+.board{display:grid; grid-template-columns:minmax(170px,210px) 1fr; gap:12px; align-items:center; margin:0 0 12px}
+@media (max-width:640px){ .board{grid-template-columns:1fr} }
+.gauge{background:var(--bg); border:2px solid var(--line-2); padding:12px; text-align:center}
+.gauge svg{width:100%; height:auto; display:block}
+.gauge .gv{font-family:var(--stencil); font-size:26px; color:var(--phos); margin-top:-6px}
+.gauge .gl{color:var(--muted); font-size:12px}
+.lamps{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+.lamp{background:var(--panel-2); border:1px solid var(--line); padding:12px 10px; text-align:center}
+.lamp i{display:block; width:18px; height:18px; border-radius:50%; margin:0 auto 8px; background:#2a2f28; border:2px solid #111}
+.lamp i.g{background:var(--phos); box-shadow:0 0 12px var(--phos)}
+.lamp i.a{background:var(--amber); box-shadow:0 0 12px var(--amber)}
+.lamp i.r{background:var(--red); box-shadow:0 0 12px var(--red)}
+.lamp small{display:block; color:var(--muted); font-size:11.5px; line-height:1.3}
+.lamp b{display:block; color:var(--paper); font-weight:500; font-size:13px; margin-top:4px}
+.mini{font-size:12.5px; color:var(--muted); margin:6px 0 10px}
+
+/* ---------- sources / foot ---------- */
+.src{font-size:13.5px; color:var(--text)}
+.src li{margin-bottom:5px}
+footer{border-top:3px double var(--line-2); margin-top:40px; padding:22px 0 40px; color:var(--muted); font-size:13px}
+footer p{margin:0 0 8px}
+.sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+
+/* Release 2.0: self-contained charts, narrow-panel controls, sum-preserving tables. */
+.mod-grid > *, .ctl, .out, .board > *, .kpi > *{min-width:0}
+.mod{scroll-margin-top:12px}
+.col, .mod p, .mod label, .kpi b, .head .sub{overflow-wrap:anywhere}
+.kpi b{line-height:1.35; font-variant-numeric:tabular-nums}
+.kpi .wide{grid-column:1/-1}
+.kpi{grid-template-columns:repeat(auto-fit,minmax(min(100%,165px),1fr))}
+.kpi small{line-height:1.4;overflow-wrap:anywhere}
+.board{grid-template-columns:minmax(150px,190px) minmax(0,1fr)}
+.lamps{grid-template-columns:repeat(3,minmax(0,1fr))}
+.lamp{padding:10px 5px}
+.lamp b{overflow-wrap:anywhere}
+.mod .chart.a,.mod .chart.b{height:auto}
+.chart-group{margin:0 0 13px}
+.chart-head{display:flex; flex-wrap:wrap; justify-content:space-between; gap:3px 12px; color:var(--muted); font-size:12px; line-height:1.4; margin-bottom:5px}
+.chart-head b{color:var(--paper); font-weight:500; font-variant-numeric:tabular-nums}
+.chart-track{height:12px; display:flex; background:var(--bg); margin:3px 0; border-radius:1px; overflow:hidden}
+.chart-track.stacked{height:24px}
+.chart-bar{height:100%; flex:none; min-width:0; background:var(--phos)}
+.chart-bar.before{background:var(--phos-dim)}
+.chart-bar.coord{background:var(--amber)}
+.chart-bar.rework{background:var(--red)}
+.chart-axis{display:flex; justify-content:space-between; border-top:1px solid var(--line); color:var(--muted); font-size:11px; padding-top:4px}
+.chart-scale{color:var(--muted); font-size:11px; margin:6px 0 10px}
+details.data{border-top:1px dashed var(--line-2); margin-top:12px; padding-top:8px}
+details.data summary{font-size:12.5px; color:var(--paper); cursor:pointer}
+.data table{min-width:0; font-size:12px; margin:8px 0; table-layout:fixed}
+.data th:first-child,.data td:first-child{width:58%; overflow-wrap:anywhere}
+.data td:not(:first-child),.data th:not(:first-child){text-align:right; width:21%; font-variant-numeric:tabular-nums; overflow-wrap:anywhere}
+.data tfoot{color:var(--paper); font-weight:600}
+.data th,.data td{padding:6px}
+.data caption{text-align:left; font-size:12px; color:var(--muted); padding:6px 0}
+.sync{border-left:2px solid var(--phos-dim); padding-left:10px}
+.notice{color:var(--amber); font-size:12.5px; margin:8px 0}
+.err:empty,.notice:empty{display:none}
+#errA,#errB{overflow-wrap:anywhere}
+#modB .out{position:sticky; top:calc(var(--navh) + 12px); align-self:start}
+#modA .out{position:sticky; top:calc(var(--navh) + 12px); align-self:start}
+@media(max-width:900px){#modA .out,#modB .out{position:static}.board{grid-template-columns:minmax(150px,190px) minmax(0,1fr)}}
+@media(max-width:640px){.board{grid-template-columns:1fr}.gauge{max-width:240px;width:100%;justify-self:center}}
+@media(max-width:380px){.wrap{padding:0 14px}.mod{padding:14px 12px 12px}.strip{margin:0 -12px 14px;padding:8px 12px}.mod-grid{gap:14px}.sw{gap:6px}button.tog{padding:8px 10px}.kpi{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi div{padding:9px 8px}.kpi b{font-size:16px}}
+@media print{.chan,.ctl,.strip{display:none!important}.out{position:static!important}.mod-grid{display:block}body::before,body::after{display:none}}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="wrap">
+    <nav class="project-links" aria-label="Проекты"><a href="index.html">← Игры в профессию</a><a href="aipower/">Атлас ИИ-стека</a></nav>
+    <div class="stamp"><span>Аналитическая записка</span><span>Редакция <b>25.09.2026</b></span><span>Пульт <b>2.0</b></span><span>Статус <b>рабочая</b></span><span>Гриф <b>крутите сами</b></span></div>
+    <h1>Пульт управления концом</h1>
+    <p class="sub">Занятость в разработке ПО в эпоху агентов: что известно, что допущено, что будет и на какие ручки нажимать. Четыре разговора, сжатые в одну панель.</p>
+    <p class="readnote">Расчёты показывают последствия выбранных допущений. Они не являются прогнозом занятости или оценкой неизбежных сокращений.</p>
+    <blockquote class="epi">
+      <p>«Внимание. Говорит пульт. Тревога не учебная, тревога штатная. Оставайтесь на рабочих местах, пока они есть. Убежище рассчитано на тридцать человек, вентиляция — на пять. Если на экране появился тридцать первый, не оборачивайтесь. Продолжайте ревью.»</p>
+      <p class="who">— Инструкция к пульту, страница 3. Страницы 4–30 отсутствуют.</p>
+    </blockquote>
+  </div>
+</header>
+
+<nav class="chan" aria-label="Разделы">
+  <ul class="wrap">
+    <li><a href="#tezisy"><b>1</b>Тезисы и факты</a></li>
+    <li><a href="#pult"><b>2</b>Пульт</a></li>
+    <li><a href="#varianty"><b>3</b>Варианты и стратегии</a></li>
+    <li><a href="#dopushcheniya"><b>4</b>Допущения и ограничения</a></li>
+    <li><a href="#istochniki"><b>5</b>Источники</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+  <p class="readnote" style="margin-top:22px">Каждый прибор показывает два числа: то, что пугает, и то, что его уравновешивает. Источники — в разделе 5.</p>
+  <div class="readouts boot" aria-label="Ключевые показатели">
+    <div class="ro"><span class="v">+15,5%</span><span class="l">Расходы на софт в мире, 2026 к 2025 (Gartner, июль)</span><span class="c">Но рост включает ИИ: модели +80,8%, остальной софт около +13% (наша оценка из долей Gartner), и доля лицензий на рабочие места внутри него падает</span></div>
+    <div class="ro"><span class="v warn">107%</span><span class="l">Медианное удержание выручки в SaaS. Было 110,5% в 2023-м</span><span class="c">Но у крупных контрактов — 118%, у малого бизнеса — 97%. Умирает не всё, умирают середина и низ</span></div>
+    <div class="ro"><span class="v bad">−27%</span><span class="l">Вакансии в маркетинге к допандемийному уровню — <a href="#src-ama">Indeed по отчёту AMA</a></span><span class="c">Но нанимающих работодателей стало больше. Исчезает исполнение: контент −11%, SEO −15% за год; стратегические роли держатся</span></div>
+    <div class="ro"><span class="v bad">−18%</span><span class="l">Штат SDR в американском B2B SaaS за год, младшие −31%</span><span class="c">Но 28% компаний нарастили закрытие сделок, 34% — внедрение</span></div>
+    <div class="ro"><span class="v warn">30 → 4</span><span class="l">Продуктовая команда у чемпионов</span><span class="c">Но у медианы ×1,2, а в эксперименте METR начала 2025 года опытные разработчики тратили с ИИ на 19% больше времени</span></div>
+    <div class="ro"><span class="v bad">+243%</span><span class="l">Инцидентов на пул-реквест при высоком внедрении ИИ в выборке Faros, Q2 2026</span><span class="c">Но эпиков на разработчика +66%. Связь в телеметрии не устанавливает причину</span></div>
+  </div>
+</div>
+
+<main class="wrap">
+<noscript><p class="warnbox">Текст доступен без JavaScript. Для работы ручек и пересчёта показателей включите JavaScript; подключение к интернету не требуется.</p></noscript>
+
+<!-- =============================== 1 =============================== -->
+<section class="blk" id="tezisy">
+  <h2><span class="num">1</span>Тезисы, факты и наблюдения</h2>
+  <p class="lead">Десять тезисов. Под каждым — факты, которыми он держится, и одна строка про то, что из них следует. Что не следует — в разделе 4.</p>
+  <div class="col">
+
+  <h3>1. Рынок испугался правильно, но не того</h3>
+  <ul class="facts">
+    <li>ETF софтверного сектора упал на 28% от пика сентября 2025-го к началу февраля 2026-го. Триггер — выход агентных плагинов 30 января: минус $285 млрд капитализации за двое суток.</li>
+    <li>Форвардный мультипликатор софта впервые опустился ниже мультипликатора S&amp;P 500.</li>
+    <li>Фундаментал не ломался: рост прибыли софтверных компаний ждали с ускорением, до 21%. Ни одна компания не заявила отрицательного эффекта ИИ на выручку 2026 года.</li>
+    <li>С апрельских минимумов сектор отыграл почти 40%.</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> Рынок переоценивал не выручку этого года, а форму бизнеса. Отскок вернул цену. Форму не вернул.</p>
+
+  <h3>2. Лицензия на рабочее место умирает. Вендор узнаёт об этом при продлении</h3>
+  <ul class="facts">
+    <li>Медианный NRR: 110,5% в 2023-м, 107,1% в 2025-м. 58% компаний объясняют снижение тем, что клиент делает тот же объём меньшим числом людей.</li>
+    <li>В сегменте малого бизнеса медианный NRR — 97%. Медианный вендор там сжимается внутри своей базы ещё до новых продаж.</li>
+    <li>25–40% корпоративных мест недоиспользованы. Запас для сжатия огромный.</li>
+    <li>Доля выручки от лицензий на рабочие места: с 21% до 15% к 2030 году (Deloitte). Не менее 40% расходов на SaaS уйдёт на оплату по использованию, агентам или результату (Gartner).</li>
+    <li>Ответ вендоров — «налог на ИИ»: надбавка 20–37% при продлении через принудительный перевод на пакеты с ИИ.</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> Вы поздравили клиента с автоматизацией. Он вернул поздравление минусом в чеке. Надбавка за ИИ работает, пока клиент не заметил, что платит за интерфейс, которым больше не пользуется.</p>
+
+  <h3>3. Софт становится сервисом. По марже</h3>
+  <ul class="facts">
+    <li>Валовая маржа функций с ИИ — 50–60% против 80–90% у классического SaaS.</li>
+    <li>С каждого миллиона выручки ИИ-продукта около $230 тыс. уходит на инференс (ICONIQ).</li>
+    <li>StrongDM предлагает ориентир — не менее $1 000 в день на токены на инженера. Это рекомендация автора о расходах на «фабрику», а не опубликованная средняя стоимость разработки.</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> Постоянные расходы на людей превращаются в переменные на вычисления. За переменные расходы мультипликатор софта не платят. Людей меньше в 10 раз, затрат — в 5.</p>
+
+  <h3>4. Чемпионы — 30 → 3–5. Медиана — ×1,2</h3>
+  <ul class="facts">
+    <li>Инструменты для кода — самая быстрорастущая категория в истории софта: Cursor около $2 млрд годовой выручки, Claude Code около $2,5 млрд. Пользуются 85% разработчиков, доверяют результату 29%.</li>
+    <li>StrongDM: три инженера, продукт по ИБ, люди код не пишут и не читают. OpenAI: миллион строк без единой написанной вручную, примерно за десятую часть срока.</li>
+    <li>ИИ-нативные стартапы в среднем на 25% меньше сопоставимых (Kim &amp; Koning). Медианная посевная команда: 6,9 → 5,3 человека за два года.</li>
+    <li>Малые команды в масштабе: у 15% организаций сейчас, у 60% к 2029-му (Gartner).</li>
+    <li>В контролируемом эксперименте METR с инструментами февраля–июня 2025 года опытные разработчики в знакомых репозиториях тратили с ИИ на 19% больше времени и считали, что быстрее. В обновлении от 24 февраля 2026 года METR сообщил о признаках ускорения, но признал новую оценку ненадёжной из-за отбора участников и задач. Переносить результат 2025 года на текущие инструменты нельзя.</li>
+    <li>Faros по 22 тыс. разработчиков: эпиков на человека +66%, задач +34%, значимого эффекта на уровне компании — нет.</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> Кривых диффузии три: инструменты (85%), малые команды (15%), фабрика без человеческого ревью (менее 1% пул-реквестов в корпоративных данных). Занятость идёт за третьей.</p>
+
+  <h3>5. Узкое место переехало в проверку. И там застряло</h3>
+  <ul class="facts">
+    <li>Faros, два года телеметрии: время ревью выросло примерно впятеро, ошибок на разработчика +54%, инцидентов на пул-реквест +243%, кода, переписанного в первые две недели, +861%.</li>
+    <li>Слияний вообще без ревью — ни человеческого, ни агентного — на 31% больше. Faros считает это перегрузкой, не решением.</li>
+    <li>В открытых репозиториях у 61% пул-реквестов от агентов нет следов ревью; из проверенных 59% проверяли только агенты. На GitHub агент участвует в каждом пятом ревью.</li>
+    <li><a href="#src-circleci">CircleCI, отчёт 2026</a>: средняя пропускная способность +59% год к году, но среднее тянут верхние 5% команд. У медианной команды общий рост всего +4%, а на основной ветке −6,8%. Успешность сборок на основной ветке упала до 70,8%, минимум за пять лет. Данные за 1–28 сентября 2025 года.</li>
+    <li>Фронтир ревью убрал по проекту: держит отложенные сценарии, которых не видел агент-автор, оценивает вероятность выполнения пользовательской истории, строит поведенческие копии зависимостей.</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> Медиана перестала читать код от усталости. Фронтир — по проекту, перенеся контроль с кода на поведение. Цена у медианы измерена: инцидентов на пул-реквест в 3,4 раза больше. Частоту инцидентов у фронтира никто не публиковал, поэтому сравнение двух путей — наш вывод, а не измерение.</p>
+
+  <h3>6. Роли-переводчики исчезают. Функции остаются</h3>
+  <ul class="facts">
+    <li>Вакансии: старшие +13,5%, средний уровень −6,7%, начинающие −6,3%.</li>
+    <li>Salesforce за 2026 финансовый год не нанял ни одного инженера. Поддержка: 9 000 → 5 000 после того, как агенты взяли половину диалогов.</li>
+    <li>Наём инженеров в крупных техкомпаниях −11% к 2019-му при общем найме −25%. Доля инженеров среди новых сотрудников выросла с 46% до 55% (SignalFire).</li>
+    <li>Вакансий ручных тестировщиков на зрелых рынках на 25–40% меньше пика 2021-го (нишевый источник, направление совпадает с остальными).</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> В команде из 30 человек 12 мест — тестировщики, аналитики, лиды, скрам — исчезают при любой эластичности спроса. Это нижняя граница потерь: 40%, не зависящие от того, сколько софта понадобится миру.</p>
+
+  <h3>7. Маркетинг уже под ударом. Продажи — слоями</h3>
+  <ul class="facts">
+    <li>По подборке <a href="#src-amra">Amra &amp; Elma</a>, ссылающейся на анализ 3,4 млн вакансий: рутинное исполнение в маркетинге −53% за два года, стратегические роли +29%, начинающие в соцсетях, PPC и контенте −41% за год. Первоисточник этих трёх цифр найти не удалось, поэтому на приборы они не вынесены. Проверяемое: по <a href="#src-ama">отчёту AMA</a> вакансии контент-маркетологов −11%, SEO-специалистов −15% за год, а маркетинговые вакансии в целом на 27% ниже допандемийного уровня по данным Indeed.</li>
+    <li>Omnicom и IPG вместе: со 128 до 105 тысяч человек за год. Publicis: выручка +5,6% без роста штата.</li>
+    <li>Emergence, 560 компаний: 36% сократили поиск и прогрев клиентов (SDR), 28% нарастили закрытие сделок (AE), 14% сократили технических специалистов продаж (SE), 34% нарастили внедрение и профессиональные услуги. Штат SDR −18% за год, младшие −31%, старшие +14%.</li>
+    <li>У AI-SDR-платформ отток 50–70% в год. Хорошего ИИ-аккаунта пока нет, момент траты денег остаётся за человеком (SaaStr). Выполнение плана 48%; выход нового продавца на план — 6,2 месяца, рекорд.</li>
+    <li>ICONIQ: компании с активным ИИ на $10–25 млн ARR держат в продажах и маркетинге 20 человек против 35. На $250–500 млн — 275 против 350. Разрыв сужается с масштабом.</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> У маркетинга исчезает не работа, а канал: контент → поиск → лид. У продаж исчезает воронка, а не закрытие. Постпродажа растёт. Продажи считаются по аккаунтам, а не по продуктам — это меняет стратегию крупного вендора, см. раздел 3.</p>
+
+  <h3>8. Бюджеты растут. Не у вас</h3>
+  <ul class="facts">
+    <li>Расходы на софт в 2026-м: $1,468 трлн, +15,5%, прогноз пересмотрен вверх четыре раза за год. Расходы на генеративные модели +80,8%, их доля в софтверном рынке растёт.</li>
+    <li>Опрос финансовых директоров: технологические бюджеты +10%, штат +2%. Пять к одному.</li>
+    <li>Приложений на компанию: 112 → 106. Насыщение по вниманию.</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> Деньги перетекают из зарплат в софт, из софта — в модели и железо. В этом слое на доллар выручки нужно в разы меньше людей. Передел рынка — переход в слой с низкой трудоёмкостью, а не просто от одних вендоров к другим.</p>
+
+  <h3>9. Заказная разработка и аутсорс — первыми</h3>
+  <ul class="facts">
+    <li>Пять крупнейших индийских ИТ-компаний за финансовый год заработали больше при меньшем штате: суммарно −7 389 человек против +12 718 годом раньше.</li>
+    <li>S&amp;P ждёт замедления роста Infosys, HCL и Wipro до 2–4%; часть выручки заберут собственные центры компетенций заказчиков.</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> Контракт на часы рвётся первым: если меньшая команда даёт тот же результат, штат и выручка расходятся. Для студий — переход на фиксированную цену или результат, других вариантов нет.</p>
+
+  <h3>10. Так уже было. Только медленнее и по очереди</h3>
+  <ul class="facts">
+    <li>Турагенты: около −70% за 2000–2021 годы. Убил не интернет, а 15 лет роста онлайн-бронирования.</li>
+    <li>Кассиры: банкоматы сократили их на отделение, отделений стало больше, кассиров прибавлялось ещё 30 лет. Упали с мобильным банкингом (Bessen).</li>
+    <li>Рутинные рабочие места исчезают в рецессии и не возвращаются (Jaimovich &amp; Siu). До рецессии — заморозка найма. Мы в ней.</li>
+    <li>Розница США 1990-х: почти весь рост производительности — за счёт новых точек, вытеснивших старые (Foster, Haltiwanger, Krizan). Производительность росла за счёт смены игроков, а не перестройки старых.</li>
+    <li>Настольные издательские системы: цепочка наборщик → корректор → верстальщик → монтажист схлопнулась в одного дизайнера. Наборщики дизайнерами не стали.</li>
+    <li>QSM, 1 060 проектов: медиана лучших — 4 человека, худших — 17. Крупные команды на тех же проектах тратят в 3–4 раза больше усилий и дают в 2–3 раза больше дефектов. Это данные до всякого ИИ.</li>
+  </ul>
+  <p class="read"><b>Наблюдение.</b> Занятость следует за внедрением, падает ступенью в спад, посредники теряют больше производителей, названия профессий живут дольше содержания. Отличие сегодня одно, и оно главное: соседние профессии затронуты одновременно. Перетекать некуда.</p>
+
+  </div>
+</section>
+
+<!-- =============================== 2 =============================== -->
+<section class="blk" id="pult">
+  <h2><span class="num">2</span>Пульт</h2>
+  <p class="lead">Два модуля. Первый считает команду, второй — вендора. Переключатели ставят наши калибровки; ручки — ваши. Итог держится рядом с ручками: на широком экране справа, на узком — в строке над ними.</p>
+
+  <!-- ---------- Module A ---------- -->
+  <div class="mod" id="modA">
+    <div class="mod-h"><h3>Модуль А. Сжатие команды</h3><span>ускорение × координация × посредники</span></div>
+    <div class="strip" aria-live="polite"><span><small>После</small><b id="sA1">–</b></span><span><small>Множитель</small><b id="sA2">–</b></span><span><small>Чистая работа</small><b id="sA3">–</b></span></div>
+    <div class="mod-grid">
+      <div class="ctl">
+        <p class="sw-l">Переключатели</p>
+        <div class="sw" role="group" aria-label="Пресеты модуля А">
+          <button class="tog" id="a1" aria-pressed="false">Новый продукт</button>
+          <button class="tog" id="a2" aria-pressed="false">Унаследованная система</button>
+          <button class="tog" id="a3" aria-pressed="false">Ускорение без перестройки ролей</button>
+          <button class="tog" id="a4" aria-pressed="false">Скептик</button>
+          <button class="tog" id="a0" aria-pressed="false">Без изменений</button>
+        </div>
+        <div class="sl">
+          <label for="n0">Команда до, человек</label><input type="range" id="n0" min="5" max="60" step="1" value="30"><output id="n0o">30</output>
+          <label for="S">Ускорение чистой работы</label><input type="range" id="S" min="1" max="8" step="0.1" value="3.2"><output id="So">3.2×</output>
+          <label for="k">Цена координации, κ</label><input type="range" id="k" min="0.01" max="0.06" step="0.005" value="0.03"><output id="ko">0.030</output>
+          <label for="r0">Переделки на стыках до, %</label><input type="range" id="r0" min="0" max="50" step="1" value="35"><output id="r0o">35%</output>
+          <label for="r1">Переделки на стыках после, %</label><input type="range" id="r1" min="0" max="50" step="1" value="15"><output id="r1o">15%</output>
+        </div>
+        <p class="mini">Пресет «Скептик» — мягкие значения κ и переделок из возражений в разделе 4. Он даёт нижнюю границу, а не другой знак.</p>
+      </div>
+      <div class="out">
+        <div class="kpi">
+          <div><small>Команда после, чел.-экв.</small><b id="o1">–</b></div>
+          <div><small>Требуется без минимума 2</small><b id="requiredA">–</b></div>
+          <div><small>Сокращение штата, ×</small><b id="o2">–</b></div>
+          <div><small>Производительность на человека</small><b id="productivityA">–</b></div>
+          <div><small>Мощность команды к прежней</small><b id="capacityA">–</b></div>
+          <div><small>Чистая работа до</small><b id="o3">–</b></div>
+          <div><small>Чистая работа после</small><b id="o4">–</b></div>
+          <div><small>Вклад ускорения</small><b id="f1">–</b></div>
+          <div><small>Вклад коммуникаций</small><b id="f2">–</b></div>
+          <div><small>Вклад посредников</small><b id="f3">–</b></div>
+        </div>
+        <div class="legend"><span><i style="background:#8cf58c"></i>Чистая работа</span><span><i style="background:#f2b632"></i>Координация</span><span><i style="background:#e8452c"></i>Переделки на стыках</span></div>
+        <div class="chart a" id="chA" role="img" aria-label="Распределение трудозатрат команды до и после"></div>
+        <details class="data"><summary>Трудозатраты числом</summary><div id="tableA"></div></details>
+        <p class="mini">Три вклада перемножаются в производительность на человека. Когда срабатывает минимум 2, мощность команды может превышать прежний выпуск: это резерв, а не дополнительное сокращение штата.</p>
+        <p class="err" id="errA" role="status"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- Module B ---------- -->
+  <div class="mod" id="modB">
+    <div class="mod-h"><h3>Модуль Б. Штат вендора</h3><span>R&amp;D из модуля А, коммерция и постпродажа — отдельно</span></div>
+    <div class="strip" aria-live="polite"><span><small>Штат</small><b id="sB1">–</b></span><span><small>ФОТ</small><b id="sB2">–</b></span><span><small>Выпуск</small><b id="sB3">–</b></span><span><small>Команды</small><b id="sB4">–</b></span></div>
+    <div class="mod-grid">
+      <div class="ctl">
+        <p class="sw-l">Вендор</p>
+        <div class="sw" role="group" aria-label="Вендор">
+          <button class="tog" id="v0" aria-pressed="false">Малый, 125 человек</button>
+          <button class="tog" id="v1" aria-pressed="true">Крупный, 3 000 человек</button>
+        </div>
+        <p class="sw-l">Сценарий задаёт параметры А и множители Б; дальше их можно двигать</p>
+        <div class="sw" role="group" aria-label="Сценарий">
+          <button class="tog" id="s0" aria-pressed="false">Осторожный</button>
+          <button class="tog" id="s1" aria-pressed="true">Базовый</button>
+          <button class="tog" id="s2" aria-pressed="false">Фабрика</button>
+          <button class="tog" id="sN" aria-pressed="false">Без изменений</button>
+        </div>
+        <div class="sl">
+          <label for="bS">Ускорение чистой работы в R&amp;D</label><input type="range" id="bS" min="1" max="8" step="0.1" value="2.5"><output id="bSo">2.5×</output>
+          <label for="mm">Маркетинг</label><input type="range" id="mm" min="1" max="5" step="0.1" value="2.2"><output id="mmo">2.2×</output>
+          <label for="ms">Поиск клиентов (SDR/BDR)</label><input type="range" id="ms" min="1" max="8" step="0.1" value="3"><output id="mso">3.0×</output>
+          <label for="ma">Закрытие сделок (AE) и SE</label><input type="range" id="ma" min="1" max="2" step="0.05" value="1.1"><output id="mao">1.10×</output>
+          <label for="msu">Поддержка</label><input type="range" id="msu" min="1" max="4" step="0.1" value="2.2"><output id="msuo">2.2×</output>
+          <label for="phi">Приоритет скорости / выпуска</label><input type="range" id="phi" min="0" max="100" step="5" value="0"><output id="phio">0%</output>
+          <label for="g">Рост числа клиентов</label><input type="range" id="g" min="0" max="100" step="5" value="0"><output id="go">0%</output>
+        </div>
+        <p class="mini sync" id="syncB"></p>
+        <p class="mini">А и Б используют одни S, κ и переделки. Размер команды в А переразбивает прежний продуктовый штат вендора, не меняя исходные 125 / 3 000 человек.</p>
+        <p class="mini">Скорость здесь — выпуск за тот же период: 0% — прежний выпуск, 100% — весь прежний продуктовый штат. Между ними геометрическая шкала, не доля возвращённых человеко-часов. При минимуме 2 сначала используется резерв мощности.</p>
+        <details class="data"><summary>Как считаются ФОТ и ИИ</summary>
+          <p class="mini">ФОТ — только оплата труда: условные $180 тыс. на сотрудника в год. Поэтому при неизменной средней зарплате доля ФОТ равна доле штата.</p>
+          <p class="mini">Вычисления показаны отдельно. Дополнительный расход в R&amp;D: 10·max(0, S² − 1) тыс. долларов на сотрудника продуктовых команд и платформы в год. В маркетинге и поиске клиентов — $12 тыс. на автоматизированный человеко-эквивалент. Обе величины — сценарные допущения. Итого «ФОТ + ИИ» делится на прежний ФОТ.</p>
+        </details>
+        <p class="mini">Команды и сотрудники — расчётные эквиваленты; дробные значения не округляются внутри модели. В таблице и графике округление согласовано с итогом.</p>
+      </div>
+      <div class="out">
+        <div class="board">
+          <div class="gauge">
+            <svg viewBox="0 0 220 128" role="img" aria-label="Стрелочный индикатор: штат вендора после перестройки, в процентах от исходного">
+              <defs><linearGradient id="arc" x1="0" x2="1"><stop offset="0" stop-color="#e8452c"/><stop offset=".5" stop-color="#f2b632"/><stop offset="1" stop-color="#8cf58c"/></linearGradient></defs>
+              <path d="M20 110 A90 90 0 0 1 200 110" fill="none" stroke="#2c3a28" stroke-width="14"/>
+              <path d="M20 110 A90 90 0 0 1 200 110" fill="none" stroke="url(#arc)" stroke-width="10" opacity=".85"/>
+              <g fill="#7ea378" font-family="IBM Plex Mono, monospace" font-size="10">
+                <text x="14" y="126">0%</text><text id="gaugeMid" x="110" y="12" text-anchor="middle">50%</text><text id="gaugeMax" x="206" y="126" text-anchor="end">100%</text>
+              </g>
+              <g id="needle" style="transform-origin:110px 110px; transform:rotate(-90deg); transition:transform .4s ease">
+                <line x1="110" y1="110" x2="110" y2="28" stroke="#d9d3b4" stroke-width="3" stroke-linecap="round"/>
+              </g>
+              <circle cx="110" cy="110" r="7" fill="#d9d3b4"/>
+            </svg>
+            <div class="gv" id="gv">–</div>
+            <div class="gl">штат после, % от исходного</div>
+          </div>
+          <div class="lamps">
+            <div class="lamp"><i id="l1"></i><small>Люди</small><b id="l1t">–</b></div>
+            <div class="lamp"><i id="l2"></i><small>ФОТ</small><b id="l2t">–</b></div>
+            <div class="lamp"><i id="l3"></i><small>Выпуск</small><b id="l3t">–</b></div>
+          </div>
+        </div>
+        <div class="kpi">
+          <div><small>Штат после</small><b id="k1">–</b></div>
+          <div><small>ФОТ к исходному</small><b id="k2">–</b></div>
+          <div><small>ИИ, % прежнего ФОТ</small><b id="aiB">–</b></div>
+          <div><small>ФОТ + ИИ / прежний ФОТ</small><b id="totalB">–</b></div>
+          <div><small>Выпуск продукта</small><b id="k3">–</b></div>
+          <div class="wide"><small>Команды, эквиваленты</small><b id="k4">–</b></div>
+          <div><small>Доля R&amp;D</small><b id="d1">–</b></div>
+          <div><small>Доля продаж и маркетинга</small><b id="d2">–</b></div>
+          <div><small>Доля поддержки и внедрения</small><b id="d3">–</b></div>
+        </div>
+        <div class="legend"><span><i style="background:#4d8f4d"></i>До</span><span><i style="background:#8cf58c"></i>После</span></div>
+        <div class="chart b" id="chB" role="img" aria-label="Численность по десяти функциям вендора до и после"></div>
+        <details class="data"><summary>Весь штат по функциям</summary><div id="tableB"></div></details>
+        <p class="notice" id="reserveB"></p><p class="err" id="errB" role="status"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  <h3>Как читать пульт</h3>
+  <ul>
+    <li>Крупный вендор, базовый сценарий, скорость 50%, клиенты 0% — стратегия ширины: <span id="exWidth">команд вдвое больше, штат около −40%</span>, продажи не растут.</li>
+    <li>То же плюс клиенты +50% — вендор, который превратил сжатие в захват рынка: <span id="exClients">штат отыгрывает часть сокращения</span>. Прирост — в продажах, поддержке, внедрении и обслуживающей их администрации. R&amp;D в этих двух расчётах одинаков.</li>
+    <li>Малый вендор, «Фабрика»: <span id="exSmall">ФОТ и вычисления считаются отдельно</span>. На фронтир идут за скоростью, не за бюджетом.</li>
+    <li>Модуль А, «Скептик» — 30 → 8. Это нижняя граница, и она всё равно минус три четверти команды.</li>
+  </ul>
+  </div>
+</section>
+
+<!-- =============================== 3 =============================== -->
+<section class="blk" id="varianty">
+  <h2><span class="num">3</span>Варианты развития и стратегии</h2>
+  <p class="lead">Три сценария спроса, одна траектория во времени и по одной стратегии на каждого участника. Стратегии короткие. Длинные вы уже читали в трёхлетнем роадмапе.</p>
+  <div class="col">
+
+  <h3>Сценарии</h3>
+  <div class="tbl"><table>
+    <tr><th>Сценарий</th><th>Механика</th><th>Занятость в R&amp;D к 2031</th><th>Кому достаётся</th></tr>
+    <tr><td><b>Джевонс</b><br>ε &gt; 1</td><td>Удешевление рождает больше работы, чем экономит. Выпуск ×3–5, продукты в длинный хвост.</td><td class="c">0…+40%, состав другой</td><td>Инфраструктура, безопасность, данные, вертикали</td></tr>
+    <tr><td><b>Насыщение</b><br>ε ≈ 0,5</td><td>Бюджеты ×1,5 за пять лет, выпуск ×2–3. Выручка на продукт падает вдвое. Умирает средний ценовой уровень.</td><td class="c">−30…−45%</td><td>Клиенты (цена), платформы (консолидация)</td></tr>
+    <tr><td><b>Вычитание</b><br>ε &lt; 0</td><td>Функция уходит в модель. Документ — результат, а не работа. Остаются формат, хранение, права, запись.</td><td class="c">−50% и ниже в затронутых категориях</td><td>Владельцы моделей и дистрибуции</td></tr>
+  </table></div>
+  <p>Сценарии не альтернативы. Это три категории софта, живущие одновременно. Средняя по отрасли — около −30% за пять лет с тяжёлым хвостом; но средняя — худшая из возможных цифр, потому что распределение бимодальное.</p>
+
+  <h3>Траектория</h3>
+  <ol>
+    <li><b>Заморозка найма.</b> Уже идёт. Младшие не входят, средние не растут, старшие дорожают.</li>
+    <li><b>Продления 2026–2029.</b> Корпоративные контракты живут три года. Вычитание мест проявляется при каждом продлении, не сразу.</li>
+    <li><b>Вытеснение.</b> Малые команды и новички забирают ниши. Средние вендоры сливаются или гаснут. Крупные режут волнами по 10–15%.</li>
+    <li><b>Ступень.</b> Ближайшая рецессия обналичивает всё, что до неё копилось в заморозке. Рутинные места не возвращаются.</li>
+    <li><b>Насыщение.</b> Скорость перестаёт быть преимуществом и становится условием выживания. Выигрыш уходит клиентам. Маржа — сервисная.</li>
+  </ol>
+
+  <h3>Стратегии</h3>
+  <h4>Малый вендор, 100–150 человек</h4>
+  <p class="slogan">Скорость и глубина. Ширины не будет.</p>
+  <ul>
+    <li>Перестройка занимает квартал: слоёв нет, решение одно. Это единственное преимущество перед крупными. Не тратьте его на пилот.</li>
+    <li>Один продукт превратите в три-четыре смежных — на той же базе, теми же тремя-пятью людьми на продукт.</li>
+    <li>Углубляйте отраслевую специфику, данные и интеграции. Тонкий интерфейс над чужой базой воспроизведёт первая же малая команда крупного игрока.</li>
+    <li>Уходите от лицензии на рабочее место раньше, чем клиент попросит. Сначала на новые продажи, потом на расширения, потом на продления.</li>
+    <li>Следите за долей выручки от продуктов моложе года и за появлением прямого аналога у крупного вендора. Второе — сигнал к продаже компании, пока есть что продавать.</li>
+  </ul>
+
+  <h4>Крупный вендор, 2 000–4 000 человек, 25–40 команд</h4>
+  <p class="slogan">Сжатие — в ширину портфеля. Продажи амортизируются.</p>
+  <ul>
+    <li>Команды по 30 теряют четыре пятых состава. Не режьте R&amp;D до нуля выпуска: удвойте число команд при вдвое меньшем штате. Каждая новая команда — ниша какого-нибудь малого вендора.</li>
+    <li>Продажи считаются по аккаунтам. Новые продукты идут в старые аккаунты, штат продаж не растёт. Отдел продаж — актив, который делится на большее число продуктов. Это главный аргумент за ширину.</li>
+    <li>Платформу не сокращайте. Обвязка агентов, копии зависимостей, поведенческая проверка — это теперь основной инженерный актив, а не «поддержка инфраструктуры».</li>
+    <li>Перестройку должен провести средний слой, который она упраздняет. Он её не проведёт. Ведите её мимо него или вместе с честной сделкой: следующий проект, а не благодарность перед сокращением.</li>
+    <li>Не останавливайте наём младших полностью. Через семь лет старших будет неоткуда взять, а конкурент, который их вырастил, заберёт и ваших.</li>
+    <li>Метрики: продуктовых линий на сотню инженеров, инцидентов на релиз, доля выручки не от лицензий на рабочие места, доля выручки от расширения существующих аккаунтов.</li>
+  </ul>
+
+  <h4>Заказная разработка и аутсорс</h4>
+  <p class="slogan">Час умер. Продавайте результат или уходите.</p>
+  <ul>
+    <li>Контракт на людей рвётся первым. Фиксированная цена и оплата за результат — не опция, а условие выживания.</li>
+    <li>Ставка на «фабрику»: спецификации, сценарии, поведенческая приёмка. Клиент покупает не код, а обещание, что код будет работать после обновления соседней системы.</li>
+    <li>Заказчики строят собственные центры компетенций. Тот, кто поможет им построить, переживёт того, кто конкурирует с ними часами.</li>
+  </ul>
+
+  <h4>Инженер</h4>
+  <p class="slogan">Уходите из кода в поведение.</p>
+  <ul>
+    <li>Ценится не умение проверить чужой код, а умение задать поведение и судить о нём. Это ближе к продуктовому и тестировочному мышлению, чем к инженерному.</li>
+    <li>Держите домен. Инженер без домена — интерфейс между заказчиком и агентом, а интерфейсы схлопываются первыми.</li>
+    <li>Если вы координатор, аналитик, ручной тестировщик или скрам-мастер: функция останется, должность нет. Переходить в соседнюю функцию нужно до того, как её займут.</li>
+    <li>Начинающим: вход сжимается первым. Идите в малые команды и стартапы — там наём вырос. В корпорациях дверь закрыта.</li>
+  </ul>
+
+  <h4>Тот, кто смотрит на всё это со стороны</h4>
+  <p class="slogan">Следите за пятью приборами, а не за новостями.</p>
+  <ul>
+    <li>Медианный NRR — темп вычитания мест.</li>
+    <li>Доля моделей в софтверных расходах — темп передела.</li>
+    <li>Доля выручки по результату у прикладных вендоров — удаётся ли забирать бюджет труда.</li>
+    <li>Продуктовых линий на сотню инженеров у лидеров против медианы — сколько давления конкуренции впереди.</li>
+    <li>Число мест у офисных пакетов — самый прямой измеритель вычитания.</li>
+  </ul>
+
+  </div>
+</section>
+
+<!-- =============================== 4 =============================== -->
+<section class="blk" id="dopushcheniya">
+  <h2><span class="num">4</span>Допущения, возражения и ограничения</h2>
+  <p class="lead">Модель — это ручки и формулы. Формулы честные, значения на ручках — наши. Здесь перечислено, что именно мы допустили, где база слабая, какие возражения возможны и чего модель не умеет.</p>
+  <div class="col">
+
+  <h3>Модель команды</h3>
+  <p>Из работы команды только часть — чистая работа над продуктом. Остальное — координация и переделки на стыках ролей.</p>
+  <div class="formula">Чистая работа = n · f(n) · (1 − r),&nbsp;&nbsp; f(n) = 1 / (1 + κ·(n − 1))</div>
+  <ul>
+    <li><b>κ = 0,03</b> — цена координации на одного коллегу. Команда из 5 продуктивна на 89%, из 30 — на 54%.</li>
+    <li><b>r₀</b> — видимая ручка переделок до перестройки. Пресеты вендора ставят 20% для малого и 35% для крупного; ручка не меняется автоматически вместе с ускорением.</li>
+    <li><b>r₁ = 0,15</b> на фронтире, <b>0,20</b> в базовом сценарии, <b>0,30</b> в унаследованных системах — переделки после того, как контекст держит один человек и его агенты. Пресеты вендора не ставят r₁ выше r₀, но вручную ухудшение задать можно.</li>
+    <li><b>Ускорение S</b> считается по Амдалу по долям цикла: код 45% × 5, проверка 20% × 4, требования 15% × 2, дизайн 10% × 1,5, эксплуатация 10% × 3 → <b>×3,2</b>. Фронтир (код × 20, проверка × 10) → <b>×4,6</b>. Медиана по Faros — ×1,2–1,4.</li>
+    <li>Минимальный размер команды — 2. Меньше не бывает даже у чемпионов. Пульт отдельно показывает расчётную потребность без этого минимума и оставшийся резерв мощности. Рост потребного штата не обрезается, а недостижимый объём отмечается предупреждением.</li>
+    <li>Координационный выигрыш модель приписывает перестройке, но существовал он до всякого ИИ: крупная команда была неэффективна и в 2005 году. ИИ и конкуренция — спусковой крючок, не источник. Вывод от этого устойчивее, а слова «эффект ИИ» — слабее.</li>
+  </ul>
+
+  <div class="warnbox">
+    <h3>Возможные возражения</h3>
+    <h4>«Две трети команды объявлены накладными расходами. Выигрыш заложен по построению»</h4>
+    <p>Так и есть: при κ = 0,03 и r₀ = 0,35 чистая работа в команде из 30 — 35%. Вопрос в том, из головы ли это число.</p>
+    <p>Данные до всякого ИИ. QSM на 1 060 проектах 2005–2011 годов: у лучших проектов медианная команда 4 человека, у худших 17; на проектах одного размера крупные команды тратили в 3–4 раза больше усилий и давали в 2–3 раза больше дефектов; при 50 тысячах строк команда из 20+ тратила 99 человеко-месяцев, команда до 5 — 19. Boehm и Basili: 40–50% усилий типичного проекта — устранимые переделки. Модель даёт отношение усилий 30 против 5 около 2,1×. Она консервативнее эмпирики.</p>
+    <p>Где возражение сильно: данные корреляционные, сложное дают большим командам; данные проектные, а продуктовая команда живёт годами; координация и переделки перемножены, хотя у них есть общая причина. Пресет «Скептик» в модуле А ставит мягкие значения и даёт 30 → 8.</p>
+    <h4>«Медиана не показывает эффекта, значит, эффекта нет»</h4>
+    <p>Faros не видит эффекта на уровне компаний, потому что компании не перестроились. Инструменты внедрены на 85%, малые команды — на 15%. Отсутствие эффекта у медианы — свойство медианы, а не инструмента.</p>
+    <h4>«Спрос на софт вырастет и всё компенсирует»</h4>
+    <p>Верно для инфраструктуры, данных и вертикалей. Для инструментов, чью функцию забирает модель, спрос не растёт, а вычитается. Единого ответа нет, потому что нет единой эластичности — см. сценарии в разделе 3.</p>
+    <h4>«Это не ИИ, это ИИ-отмывание»</h4>
+    <p>Отчасти. Часть сокращений сделали бы и так, а ИИ назначен причиной. Это завышает эффект в новостях и не меняет ни удержание выручки, ни размер команд у новичков.</p>
+  </div>
+
+  <h3>Модель вендора</h3>
+  <ul>
+    <li>Структуры штата (125 и 3 000 человек) — иллюстративные, собраны по отраслевым ориентирам распределения R&amp;D, продаж, поддержки и администрации. Не статистика.</li>
+    <li>Множители R&amp;D выводятся из единой с модулем А модели команды. Общая численность продуктового R&amp;D до перестройки фиксирована; изменение размера команды переразбивает этот штат. Множители маркетинга, SDR, AE, поддержки — из опросов и данных по вакансиям. Это самая слабая доказательная база в записке, поэтому под них выведены отдельные ручки.</li>
+    <li>Продажи масштабируются по клиентам, не по продуктам. Новые продукты крупного вендора — кросс-продажи в старые аккаунты, штат продаж от них не растёт.</li>
+    <li>Внедрение и постпродажи почти не сжимаются: их ограничивает число клиентов, а не производительность. Операции продаж также растут с клиентами; управление сохраняет исходную норму управляемости. Администрация: 40% фиксированной части и 60% пропорционально остальному штату, без скрытого сокращения на 1,2.</li>
+    <li>Дополнительные вычисления в R&amp;D: 10·max(0, S² − 1) тыс. долларов на сотрудника продуктовых команд и платформы в год. Это прежняя квадратичная эвристика за вычетом исходного уровня при S = 1; реальный разброс — на порядок. ФОТ и вычисления показаны раздельно.</li>
+    <li>Выручка и зарплаты — константы. Если цены сожмутся вместе с местами, сокращения глубже, особенно в коммерческих функциях. Если старших инженеров начнёт не хватать, их зарплаты вырастут, и сжатие штата ускорится.</li>
+  </ul>
+
+  <h3>Диффузия и спрос</h3>
+  <ul>
+    <li>Прогноз Gartner о малых командах (15% → 60% к 2029-му) принят за верхнюю оценку скорости. Gartner консультирует директоров по разработке; ей выгодно, чтобы они шевелились.</li>
+    <li>S-кривая гладкая. Реальность ступенчатая: основной сброс придётся на ближайшую рецессию. До неё статистика спокойнее, чем реальность.</li>
+    <li>Эластичность спроса задаётся по категориям: больше единицы у инфраструктуры, около 0,3–0,5 у систем учёта, ниже нуля у инструментов для производства артефактов человеком. Единого ε для «продуктовой разработки» не существует.</li>
+    <li>Смена состава рынка — старые компании уходят, новые приходят уже с малыми командами — считается вероятнее, чем перестройка существующих. Это следует из истории, а не из данных 2026 года.</li>
+  </ul>
+
+  <h3>Качество источников</h3>
+  <ul>
+    <li>Faros — телеметрия собственных клиентов вендора. Выборка смещена к тем, кто уже внедряет ИИ и мерит.</li>
+    <li>StrongDM и OpenAI — единичные случаи. Один случай ничего не доказывает, но показывает достижимое.</li>
+    <li>NRR и бюджеты — опросы консультантов и Gartner. Направление надёжно, точность — нет.</li>
+        <li>Чемпионы — выжившие. Их выручка на сотрудника завышена нулевым штатом, а не производительностью.</li>
+  </ul>
+
+  <h3>Консенсус с аналитиками</h3>
+  <div class="tbl"><table>
+    <tr><th>Тезис</th><th>Кто согласен</th><th>Где расходимся</th></tr>
+    <tr><td>Команды сжимаются, роли сливаются, работа становится другой</td><td>Gartner (малые команды), Forrester, Kim &amp; Koning</td><td>Нет расхождений</td></tr>
+    <tr><td>Лицензия на рабочее место не переживёт агентов</td><td>Gartner, Deloitte, IDC (70% вендоров перестроят цены к 2028-му)</td><td>Аналитики видят в этом задачу ценообразования; мы — ещё и сжатие маржи до сервисной</td></tr>
+    <tr><td>Системы учёта, данные и безопасность защищены</td><td>Jefferies, Deutsche Bank</td><td>Защищены как спрос, но не как ценовая власть: интерфейс уходит агенту</td></tr>
+    <tr><td>Инженеров понадобится больше</td><td>Gartner, WEF</td><td>Верно для квалифицированных и для собственной разработки у предприятий; для общего числа и для вендоров — нет. Gartner не учитывает вычитание спроса моделями</td></tr>
+    <tr><td>Занятость упадёт ступенью в рецессию</td><td>Jaimovich &amp; Siu (исторически)</td><td>Аналитики рынка этого не моделируют вовсе: горизонт 2027–2029 короче цикла</td></tr>
+  </table></div>
+
+  </div>
+</section>
+
+<!-- =============================== 5 =============================== -->
+<section class="blk" id="istochniki">
+  <h2><span class="num">5</span>Источники</h2>
+  <p class="lead">Ссылки — там, где страница открывалась при проверке. Остальное — по названию отчёта, найдётся за минуту.</p>
+  <ol class="src col">
+    <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-07-gartner-predicts-60-percent-of-organizations-will-adopt-smaller-software-engineering-teams-by-2029">Gartner, 07.07.2026 — 60% организаций перейдут на малые команды к 2029 году</a></li>
+    <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-27-gartner-forecasts-worldwide-it-spending-to-grow-14-point-2-percent-in-2026-totaling-6-point-37-trillion">Gartner, 27.07.2026 — прогноз ИТ-расходов на 2026 год</a></li>
+    <li><a href="https://www.gartner.com/en/newsroom/press-releases/2024-10-03-gartner-says-generative-ai-will-require-80-percent-of-engineering-workforce-to-upskill-through-2027">Gartner, 03.10.2024 — 80% инженеров придётся переучиваться</a></li>
+    <li><a href="https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/">TechCrunch, 24.06.2026 — данные SignalFire о найме инженеров</a></li>
+    <li><a href="https://www.cnbc.com/2026/09/03/software-is-up-40percent-since-saaspocalypse-bottom-ways-to-play-the-sector-.html">CNBC, 03.09.2026 — отскок софтверного сектора</a></li>
+    <li><a href="https://sbigrowth.com/insights/the-great-unbundling">SBI Growth, 2026 — снижение NRR из-за производительности ИИ</a></li>
+    <li><a href="https://thesaaslibrary.com/b2b-saas-trends-in-2026whats-actually-changing-and-what-isnt/">Обзор SaaS Capital 2026 — NRR по сегментам</a></li>
+    <li><a href="https://qsm.com/blog/2025/4-key-studies-team-size">QSM, 2025 — четыре исследования размера команды</a>; <a href="https://qsm.com/blog/2012/part-ii-small-teams-deliver-lower-cost-higher-quality">QSM, 2012 — малые команды дешевле и качественнее</a></li>
+    <li><a href="https://condor.depaul.edu/dmumaugh/readings/handouts/SE425/J81.pdf">Boehm, Basili — Software Defect Reduction Top 10 List (2001)</a></li>
+    <li>Faros AI — <a href="https://www.faros.ai/blog/ai-software-engineering">The AI Productivity Paradox, 2025</a>; <a href="https://www.faros.ai/research/ai-acceleration-whiplash">The Acceleration Whiplash, Q2 2026</a> (телеметрия 10 и 22 тыс. разработчиков). Приведённые числа относятся к Q2; также опубликован <a href="https://www.faros.ai/research/speed-trap">обзор Q3</a>.</li>
+    <li><a id="src-circleci" href="https://circleci.com/landing-pages/assets/2026-state-of-software-delivery-report.pdf">CircleCI — The 2026 State of Software Delivery</a>, с. 4, 8 и 26: throughput и методология</li>
+    <li>METR — <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">рандомизированный эксперимент, 10.07.2025</a>; <a href="https://metr.org/blog/2026-02-24-uplift-update/">обновление и ограничения повторного исследования, 24.02.2026</a></li>
+    <li>Kim, Koning — рабочая статья о размере ИИ-нативных стартапов</li>
+    <li><a href="https://factory.strongdm.ai/">StrongDM — Software Factories And The Agentic Moment, 06.02.2026</a>; <a href="https://openai.com/index/harness-engineering/">OpenAI — Harness engineering, 11.02.2026</a>. Описания собственных практик компаний; оценки ускорения не являются сравнительными испытаниями.</li>
+    <li>ICONIQ — State of GTM 2026, State of AI; Emergence Capital — опрос 560 компаний о продажах; SaaStr — заметки о SDR и AE</li>
+    <li><a id="src-amra" href="https://www.amraandelma.com/marketing-layoffs-due-to-ai-statistics/">Amra &amp; Elma — Marketing Layoffs Due to AI Statistics, 2026</a>; подборка, единственное найденное место с цифрами −53%, +29% и −41%; первоисточник не найден</li>
+    <li>
+<a id="src-ama" href="https://www.ama.org/marketing-news/2026-career-report/">American Marketing Association — 2026 State of Marketing Careers Report</a>; вакансии по ролям и данные Indeed о рынке маркетинга</li>
+    <li>Deloitte — TMT Predictions 2026; IDC — прогноз ухода вендоров от лицензий на рабочие места</li>
+    <li>Jaimovich, Siu — Job Polarization and Jobless Recoveries; Bessen — Learning by Doing; Foster, Haltiwanger, Krizan — Market Selection, Reallocation and Restructuring in the U.S. Retail Trade Sector</li>
+    <li><a href="https://habr.com/ru/articles/1083166/">«О праве на следующий бюджет», Хабр, 16.09.2026 — предыдущая серия</a></li>
+  </ol>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="index.html">Игры в профессию</a> · <a href="aipower/">Атлас ИИ-стека</a> · <a href="aipower/review/pult-software-production/README.md">Отбор для атласа</a> · <a href="aipower/review/pult-software-production/candidates.json">Кандидаты JSON</a></p>
+    <p>Записка собрана из четырёх разговоров. Числа проверены на 25.09.2026, модель — на арифметику. На истину не проверялась: её пока нет.</p>
+    <p>Автор модели работает у поставщика моделей. Учитывайте при чтении раздела про то, куда уходит стоимость.</p>
+    <p>Страница 31 инструкции: «Пульт не отвечает за то, что вы на нём насчитали».</p>
+  </div>
+</footer>
+
+<script id="pult-model">
+/* Pult model 2.0 — shared by the page and the regression tests. No DOM dependencies. */
+(function (root, factory) {
+  'use strict';
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  else root.PultModel = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const EPS = 1e-10;
+  const VENDORS = Object.freeze([
+    Object.freeze({name:'Малый',Nt:4,n0:10,M0:0,P0:5,sdr:6,ae:12,se:2,ops:1,mg:3,mkt:14,sup:12,cs:15,ga:15}),
+    Object.freeze({name:'Крупный',Nt:32,n0:30,M0:100,P0:80,sdr:150,ae:260,se:80,ops:60,mg:100,mkt:350,sup:300,cs:260,ga:300})
+  ]);
+  const SCENARIOS = Object.freeze([
+    Object.freeze({name:'Осторожный',S:1.6,r1:0.30,mm:1.4,ms:1.5,ma:1,msu:1.4}),
+    Object.freeze({name:'Базовый',S:2.5,r1:0.20,mm:2.2,ms:3,ma:1.1,msu:2.2}),
+    Object.freeze({name:'Фабрика',S:4.6,r1:0.15,mm:3.5,ms:6,ma:1.3,msu:3})
+  ]);
+  const sum = xs => xs.reduce((s,x) => s+x,0);
+  function finite(name, value, min, max) {
+    if (!Number.isFinite(value) || value < min || value > max) throw new RangeError(name+': значение вне допустимого диапазона');
+  }
+  function teamCalc(p) {
+    const {n0,S,k,r0,r1}=p, minTeam=p.minTeam === undefined ? 2 : p.minTeam;
+    finite('n0',n0,2,1e6); finite('S',S,0.01,1e4); finite('κ',k,0,0.99);
+    finite('r0',r0,0,0.999); finite('r1',r1,0,0.999); finite('minTeam',minTeam,1,n0);
+    const f = n => 1/(1+k*(n-1));
+    const f0=f(n0), W0=n0*f0*(1-r0), denominator=S*(1-r1)-k*W0;
+    // At the exact asymptote, floating-point cancellation can leave a tiny
+    // positive denominator and invent a team of 10^17 people. Use a relative
+    // machine-precision guard, not a headcount cap.
+    const cancellationScale=Math.max(Math.abs(S*(1-r1)),Math.abs(k*W0));
+    const attainable=denominator>32*Number.EPSILON*cancellationScale;
+    let required=attainable ? W0*(1-k)/denominator : null;
+    if (required!==null && Math.abs(required-n0)<EPS*n0) required=n0;
+    const floor=required!==null && required<minTeam-EPS;
+    // An unreachable target is not silently presented as an unchanged result.
+    // Keep the original team and report its actual reduced output instead.
+    const n1=attainable ? Math.max(minTeam,required) : n0;
+    const f1=f(n1), W1=n1*f1*(1-r1)*S, capacity=W1/W0;
+    const compression=n0/n1, coordination=f1/f0, rework=(1-r1)/(1-r0);
+    const perPerson=S*coordination*rework;
+    const split=(n,eff,r)=>[n*eff*(1-r),n*(1-eff),n*eff*r];
+    return {n0,S,k,r0,r1,minTeam,required,n1,f0,f1,W0,W1,attainable,floor,
+      growth:attainable && n1>n0+EPS,compression,coordination,rework,perPerson,capacity,
+      retainedOutput:S*(1-r1)/(1-r0),
+      before:split(n0,f0,r0),after:split(n1,f1,r1),
+      status:!attainable?'unattainable':floor?'floor':n1>n0+EPS?'growth':'balanced'};
+  }
+  function preset(vi,si) {
+    const d=VENDORS[vi]; if (!d) throw new RangeError('Неизвестный вендор');
+    const r0=vi===0 ? 0.20 : 0.35;
+    if (si===-1) return {vi,si,n0:d.n0,S:1,k:0.03,r0,r1:r0,mm:1,ms:1,ma:1,msu:1,phi:0,g:0};
+    const s=SCENARIOS[si]; if(!s) throw new RangeError('Неизвестный сценарий');
+    return {vi,si,n0:d.n0,k:0.03,r0,r1:Math.min(r0,s.r1),S:s.S,mm:s.mm,ms:s.ms,ma:s.ma,msu:s.msu,phi:0,g:0};
+  }
+  // Sum-preserving display rounding: all table/graph rows add up to the displayed total.
+  function allocateRounded(values, digits=0) {
+    const scale=10**digits, scaled=values.map(x=>x*scale);
+    const ints=scaled.map(Math.floor), target=Math.round(sum(values)*scale);
+    let remaining=target-sum(ints);
+    const order=scaled.map((x,i)=>({i,f:x-ints[i]})).sort((a,b)=>b.f-a.f || a.i-b.i);
+    for(let j=0;j<remaining;j++) ints[order[j%order.length].i]++;
+    return ints.map(x=>x/scale);
+  }
+  function vendorCalc(p) {
+    const d=VENDORS[p.vi]; if (!d) throw new RangeError('Неизвестный вендор');
+    ['mm','ms','ma','msu'].forEach(key=>finite(key,p[key],1,100));
+    finite('phi',p.phi,0,1);finite('g',p.g,0,100);
+    const t=teamCalc(p), PT0=d.Nt*d.n0, Nt0=PT0/p.n0;
+    // Geometric policy dial: 0 = the same output, 1 = all original product headcount.
+    // At the minimum team size, surplus capacity is used before adding teams.
+    const maxOutput=Math.max(1,t.compression*t.capacity);
+    const out=t.attainable ? Math.pow(maxOutput,p.phi) : t.capacity;
+    const teams=t.attainable ? Nt0*Math.max(1,out/t.capacity) : Nt0;
+    const PT=teams*t.n1;
+    const M=Math.max(d.M0*PT/PT0,Math.max(0,teams-Nt0)/6);
+    const P=d.P0*Math.sqrt(teams/Nt0);
+    const g1=1+p.g,mops=1+(p.ms-1)/2.5,mcs=1+(p.msu-1)*0.15;
+    const sdr=d.sdr/p.ms*g1,ae=d.ae/p.ma*g1,se=d.se/p.ma*g1,ops=d.ops/mops*g1;
+    // Preserve the baseline management span instead of substituting a new norm at x1.
+    const mg=d.mg*(sdr+ae+se+ops)/(d.sdr+d.ae+d.se+d.ops);
+    const mkt=d.mkt/p.mm,sup=d.sup/p.msu*g1,cs=d.cs/mcs*g1;
+    const coreRows=[
+      ['product','Продуктовые команды',PT0,PT],
+      ['management','Управление R&D',d.M0,M],
+      ['platform','Платформа R&D',d.P0,P],
+      ['marketing','Маркетинг',d.mkt,mkt],
+      ['sdr','Поиск клиентов (SDR)',d.sdr,sdr],
+      ['ae_se','Закрытие сделок и SE',d.ae+d.se,ae+se],
+      ['sales_ops','Операции и управление продажами',d.ops+d.mg,ops+mg],
+      ['support','Поддержка',d.sup,sup],
+      ['success','Внедрение и постпродажи',d.cs,cs]
+    ];
+    const o0=sum(coreRows.map(x=>x[2])),o1=sum(coreRows.map(x=>x[3]));
+    const ga=d.ga*(0.4+0.6*o1/o0);
+    const rows=[...coreRows,['admin','Администрация',d.ga,ga]].map(([key,label,before,after])=>({key,label,before,after}));
+    const H0=sum(rows.map(r=>r.before)),H1=sum(rows.map(r=>r.after)),ratio=H1/H0;
+    const salary=180, payroll0=H0*salary,payroll1=H1*salary;
+    // kUSD/year; additional compute above the baseline. This is an explicit scenario heuristic.
+    const tokenRate=10*Math.max(0,p.S*p.S-1);
+    const aiRD=(PT+P)*tokenRate;
+    const aiGTM=(d.sdr*(1-1/p.ms)*g1+d.mkt*(1-1/p.mm))*12;
+    const ai=aiRD+aiGTM;
+    const roundedBefore=allocateRounded(rows.map(r=>r.before));
+    const roundedAfter=allocateRounded(rows.map(r=>r.after));
+    rows.forEach((r,i)=>{r.displayBefore=roundedBefore[i];r.displayAfter=roundedAfter[i];});
+    const sales0=d.sdr+d.ae+d.se+d.ops+d.mg,sales=sdr+ae+se+ops+mg;
+    return {team:t,H0,H1,ratio,rows,Nt0,teams,PT0,PT,M,P,out,maxOutput,
+      capacity:teams/Nt0*t.capacity,reserve:Math.max(0,teams/Nt0*t.capacity-out),
+      payroll0,payroll1,payrollRatio:payroll1/payroll0,tokenRate,aiRD,aiGTM,ai,
+      aiRatio:ai/payroll0,totalRatio:(payroll1+ai)/payroll0,
+      rd0:PT0+d.M0+d.P0,rd:PT+M+P,sm0:sales0+d.mkt,sm:sales+mkt,
+      support0:d.sup+d.cs,support:sup+cs,ad:ga,attainable:t.attainable};
+  }
+  function gauge(ratio) {
+    finite('ratio',ratio,0,1e15);
+    const max=Math.max(1,Math.ceil((ratio-1e-12)*2)/2);
+    return {max,angle:-90+180*ratio/max};
+  }
+  return Object.freeze({version:'2.0.0',VENDORS,SCENARIOS,teamCalc,vendorCalc,preset,allocateRounded,gauge});
+});
+
+</script>
+<script id="pult-ui">
+(function(){
+  'use strict';
+  const M=window.PultModel,$=id=>document.getElementById(id);
+  let state=M.preset(1,1),aPreset=null,lastResult=null;
+  const format=(v,d=1)=>Number.isFinite(v)?(Math.abs(v)>=1e7?v.toExponential(2).replace('.',','):v.toLocaleString('ru-RU',{maximumFractionDigits:d,minimumFractionDigits:d})):'—';
+  const num=v=>format(v,0),pct=v=>num(100*v)+'%',x=(v,d=2)=>'×'+format(v,d);
+  const change=v=>{const n=Math.round(100*(v-1));return (n>0?'+':n<0?'−':'')+Math.abs(n)+'%';};
+  const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function setv(id,value,cls){
+    const e=$(id);if(!e)return;
+    if(cls!==undefined)e.className=cls;
+    if(e.textContent!==value){e.textContent=value;e.classList.remove('flash');void e.offsetWidth;e.classList.add('flash');}
+  }
+  function updateControls(){
+    const values={n0:state.n0,S:state.S,bS:state.S,k:state.k,r0:state.r0*100,r1:state.r1*100,
+      mm:state.mm,ms:state.ms,ma:state.ma,msu:state.msu,phi:state.phi*100,g:state.g*100};
+    const displays={n0:num(state.n0),S:format(state.S)+'×',bS:format(state.S)+'×',k:format(state.k,3),
+      r0:pct(state.r0),r1:pct(state.r1),mm:format(state.mm)+'×',ms:format(state.ms)+'×',ma:format(state.ma,2)+'×',
+      msu:format(state.msu)+'×',phi:pct(state.phi),g:pct(state.g)};
+    Object.keys(values).forEach(id=>{$(id).value=values[id];$(id+'o').value=displays[id];$(id).setAttribute('aria-valuetext',displays[id]);});
+    ['a0','a1','a2','a3','a4'].forEach(id=>$(id).setAttribute('aria-pressed',String(id===aPreset)));
+    ['v0','v1'].forEach((id,i)=>$(id).setAttribute('aria-pressed',String(i===state.vi)));
+    ['s0','s1','s2'].forEach((id,i)=>$(id).setAttribute('aria-pressed',String(i===state.si)));
+    $('sN').setAttribute('aria-pressed',String(state.si===-1));
+  }
+  function tableHTML(rows,headers,total,digits=0,caption=''){
+    const cell=(v)=>escape(format(v,digits));
+    return '<table><caption>'+escape(caption)+'</caption><thead><tr><th scope="col">'+escape(headers[0])+'</th><th scope="col">До</th><th scope="col">После</th></tr></thead><tbody>'+
+      rows.map(row=>'<tr><th scope="row">'+escape(row[0])+'</th><td>'+cell(row[1])+'</td><td>'+cell(row[2])+'</td></tr>').join('')+
+      '</tbody><tfoot><tr><th scope="row">Итого</th><td>'+cell(total[0])+'</td><td>'+cell(total[1])+'</td></tr></tfoot></table>';
+  }
+  function drawA(t){
+    const names=['Чистая работа','Координация','Переделки на стыках'],classes=['','coord','rework'];
+    const maximum=Math.max(t.n0,t.n1),sets=[t.before,t.after];
+    $('chA').innerHTML=sets.map((values,j)=>'<div class="chart-group"><div class="chart-head"><span>'+(j?'После':'До')+'</span><b>'+escape(format(j?t.n1:t.n0))+' чел.-экв.</b></div><div class="chart-track stacked">'+
+      values.map((v,i)=>'<span class="chart-bar '+classes[i]+'" style="width:'+(v/maximum*100)+'%" title="'+escape(names[i]+': '+format(v,2))+'"></span>').join('')+'</div></div>').join('')+
+      '<div class="chart-axis"><span>0</span><span>'+escape(format(maximum))+' чел.-экв.</span></div>';
+    $('chA').setAttribute('aria-label','Команда: '+format(t.n0)+' → '+format(t.n1)+' человеко-эквивалентов. Полная разбивка в таблице ниже.');
+    const before=M.allocateRounded(t.before,1),after=M.allocateRounded(t.after,1);
+    $('tableA').innerHTML=tableHTML(names.map((label,i)=>[label,before[i],after[i]]),['Трудозатраты'],[t.n0,t.n1],1,'Человеко-эквиваленты; округление до 0,1 согласовано с итогом.');
+  }
+  function renderA(t){
+    setv('o1',format(t.n1)+' чел.',t.growth?'warn':'');
+    setv('requiredA',t.required===null?'нет решения':format(t.required,t.required<1?2:1)+' чел.');
+    setv('o2',x(t.compression));setv('productivityA',x(t.perPerson));setv('capacityA',x(t.capacity));
+    setv('o3',pct(t.f0*(1-t.r0)));setv('o4',pct(t.f1*(1-t.r1)));
+    setv('f1',x(t.S));setv('f2',x(t.coordination));setv('f3',x(t.rework));
+    setv('sA1',num(t.n0)+' → '+format(t.n1));setv('sA2',x(t.compression));
+    setv('sA3',pct(t.f0*(1-t.r0))+' → '+pct(t.f1*(1-t.r1)));
+    let message='';
+    if(!t.attainable)message='Прежний объём недостижим увеличением одной команды при этих параметрах: координация поглощает прирост. Сохранённые '+num(t.n0)+' человек дают '+pct(t.capacity)+' прежнего выпуска. Измените ускорение, κ или переделки.';
+    else if(t.growth)message='Сокращения нет: для прежнего выпуска требуется '+format(t.n1)+' человек. При сохранении '+num(t.n0)+' человек выпуск составит '+pct(t.retainedOutput)+' прежнего.';
+    else if(t.floor)message='Сработал минимум 2 человека. Расчётная потребность без ограничения — '+format(t.required,2)+'. Мощность оставшейся команды — '+x(t.capacity)+': избыточная мощность показана отдельно, а не превращена в сокращение.';
+    $('errA').textContent=message;$('errA').className=t.floor?'notice':'err';drawA(t);
+  }
+  function drawB(r){
+    const maximum=Math.max(...r.rows.flatMap(row=>[row.before,row.after]));
+    $('chB').innerHTML=r.rows.map(row=>'<div class="chart-group"><div class="chart-head"><span>'+escape(row.label)+'</span><b>'+escape(num(row.displayBefore)+' → '+num(row.displayAfter))+'</b></div>'+
+      '<div class="chart-track"><span class="chart-bar before" style="width:'+(row.before/maximum*100)+'%" title="'+escape('До: '+format(row.before,2))+'"></span></div>'+
+      '<div class="chart-track"><span class="chart-bar" style="width:'+(row.after/maximum*100)+'%" title="'+escape('После: '+format(row.after,2))+'"></span></div></div>').join('')+
+      '<div class="chart-axis"><span>0</span><span>'+escape(num(maximum))+' чел.-экв.</span></div>';
+    $('chB').setAttribute('aria-label','Штат по десяти функциям, '+num(r.H0)+' → '+num(r.H1)+'. Все функции включены, полная таблица ниже.');
+    $('tableB').innerHTML=tableHTML(r.rows.map(row=>[row.label,row.displayBefore,row.displayAfter]),['Функция'],[r.H0,r.H1],0,'Округлённые числа по функциям складываются в показанный итог.');
+  }
+  function lamp(id,cls,txt){$(id).className=cls;$(id+'t').textContent=txt;}
+  function renderB(r){
+    const chg=change(r.ratio),cls=r.ratio<.55?'bad':r.ratio<.8?'warn':'';
+    setv('k1',num(r.H1)+' ('+chg+')',cls);setv('k2',pct(r.payrollRatio));
+    setv('aiB','+'+format(r.aiRatio*100)+'%');setv('totalB',pct(r.totalRatio));
+    setv('k3',x(r.out));setv('k4',format(r.Nt0)+' по '+num(state.n0)+' → '+format(r.teams)+' по '+format(r.team.n1));
+    setv('d1',pct(r.rd0/r.H0)+' → '+pct(r.rd/r.H1));setv('d2',pct(r.sm0/r.H0)+' → '+pct(r.sm/r.H1));setv('d3',pct(r.support0/r.H0)+' → '+pct(r.support/r.H1));
+    setv('sB1',num(r.H1)+' ('+chg+')',cls);setv('sB2',pct(r.payrollRatio));setv('sB3',x(r.out));setv('sB4',format(r.teams)+' по '+format(r.team.n1));
+    $('syncB').textContent='Из модуля А: '+num(state.n0)+' человек; S = '+format(state.S)+'; κ = '+format(state.k,3)+'; переделки '+pct(state.r0)+' → '+pct(state.r1)+'.';
+    const g=M.gauge(r.ratio);$('needle').style.transform='rotate('+g.angle+'deg)';
+    $('gaugeMid').textContent=pct(g.max/2);$('gaugeMax').textContent=pct(g.max);setv('gv',pct(r.ratio));
+    $('needle').closest('svg').setAttribute('aria-label','Штат после: '+pct(r.ratio)+', шкала от 0 до '+pct(g.max));
+    lamp('l1',r.ratio<.55?'r':r.ratio<.8?'a':'g',chg+' штата');
+    lamp('l2',r.payrollRatio<.55?'r':r.payrollRatio<.8?'a':'g',pct(r.payrollRatio)+' ФОТ');
+    lamp('l3',r.out>=2?'g':r.out>=1.3?'a':'r',x(r.out,1)+' выпуск');
+    $('reserveB').textContent=r.reserve>1e-7?'Незанятая мощность при выбранном выпуске: '+x(r.reserve)+' прежнего выпуска. Штат ниже двух человек на команду не уменьшается.':'';
+    $('errB').textContent=!r.attainable?'Прежний выпуск при этих параметрах недостижим одной командой. Расчёт сохраняет продуктовый штат и показывает уменьшенный выпуск; режим скорости не маскирует дефицит.':r.team.growth?'Для сохранения выпуска продуктовый штат растёт. Переключение приоритета скорости не даёт выигрыша при отрицательной производительности.':'';
+    drawB(r);
+  }
+  function render(){
+    updateControls();const r=M.vendorCalc(state);lastResult=r;renderA(r.team);renderB(r);
+  }
+  const A={a1:[30,3.2,.03,.35,.15],a2:[30,1.6,.03,.35,.30],a3:[30,3.2,.03,.35,.35],a4:[30,2.5,.02,.25,.20]};
+  function applyA(id){
+    if(id==='a0'){state.S=1;state.r1=state.r0;}
+    else {const [n0,S,k,r0,r1]=A[id];Object.assign(state,{n0,S,k,r0,r1});}
+    state.si=-2;aPreset=id;render();
+  }
+  function applyScenario(si){
+    const {phi,g}=state;state=M.preset(state.vi,si);
+    if(si!==-1){state.phi=phi;state.g=g;}
+    aPreset=si===-1?'a0':null;render();
+  }
+  function selectVendor(vi){
+    if(state.si>=-1){const {phi,g,si}=state;state=M.preset(vi,si);state.phi=phi;state.g=g;}
+    else {state.vi=vi;state.n0=M.VENDORS[vi].n0;}
+    aPreset=null;render();
+  }
+  function examples(){
+    const width=M.vendorCalc({...M.preset(1,1),phi:.5}),growth=M.vendorCalc({...M.preset(1,1),phi:.5,g:.5});
+    const small=M.vendorCalc(M.preset(0,2)),base=M.vendorCalc(M.preset(0,1));
+    $('exWidth').textContent='команд '+format(width.Nt0)+' → '+format(width.teams)+' ('+x(width.teams/width.Nt0)+'), штат '+num(width.H1)+' ('+change(width.ratio)+')';
+    const recovered=(growth.H1-width.H1)/(width.H0-width.H1);
+    $('exClients').textContent='штат '+num(width.H1)+' → '+num(growth.H1)+' ('+change(growth.ratio)+' к исходному), отыграно '+pct(recovered)+' сокращения';
+    $('exSmall').textContent='ФОТ '+pct(small.payrollRatio)+', ФОТ с ИИ '+pct(small.totalRatio)+' прежнего ФОТ; в базовом сценарии — '+pct(base.payrollRatio)+' и '+pct(base.totalRatio)+' соответственно';
+  }
+  ['a0',...Object.keys(A)].forEach(id=>$(id).addEventListener('click',()=>applyA(id)));
+  ['s0','s1','s2'].forEach((id,i)=>$(id).addEventListener('click',()=>applyScenario(i)));
+  $('sN').addEventListener('click',()=>applyScenario(-1));
+  $('v0').addEventListener('click',()=>selectVendor(0));$('v1').addEventListener('click',()=>selectVendor(1));
+  const fields={n0:['n0',1],S:['S',1],bS:['S',1],k:['k',1],r0:['r0',100],r1:['r1',100],mm:['mm',1],ms:['ms',1],ma:['ma',1],msu:['msu',1],phi:['phi',100],g:['g',100]};
+  Object.entries(fields).forEach(([id,[key,div]])=>$(id).addEventListener('input',()=>{
+    state[key]=Number($(id).value)/div;state.si=-2;if(['n0','S','k','r0','r1'].includes(key))aPreset=null;render();
+  }));
+  function navSize(){const h=document.querySelector('.chan').getBoundingClientRect().height;document.documentElement.style.setProperty('--navh',h+'px');}
+  if(typeof ResizeObserver!=='undefined')new ResizeObserver(navSize).observe(document.querySelector('.chan'));
+  window.addEventListener('resize',navSize);navSize();examples();render();
+  // Read-only snapshots for reproducible regression tests and embedding diagnostics.
+  window.PultApp=Object.freeze({getState:()=>({...state}),getResult:()=>JSON.parse(JSON.stringify(lastResult)),version:M.version});
+})();
+
+</script>
+</body>
+</html>
