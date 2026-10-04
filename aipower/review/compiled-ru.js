@@ -106,6 +106,7 @@ function detailLink(id){
 }
 
 function statusLabelRu(value){
+  if (value === 'verified_provider_operational_account') return 'По операционному отчёту поставщика';
   return ({
     verified:'Подтверждено',
     verified_as_reported:'Подтверждено как сообщение источника',
@@ -174,6 +175,9 @@ function statusLabelRu(value){
     reproducible_self_authored_preprint_synthetic:'Self-authored reproducible preprint, synthetic',
     advertisement_verified_implementation_unverified:'Реклама подтверждена, реализация не проверена',
     reported_unconfirmed:'Сообщается, не подтверждено',
+    reported_unnamed_eyewitness:'Сообщение неназванного очевидца',
+    verified_official_filing_operational_claim:'Официальный документ; применение заявлено',
+    verified_announcement:'Объявление подтверждено',
     needs_primary_confirmation:'Нужен первичный источник',
     context_only:'Только контекст',
     disputed_capability_claim:'Спорное capability claim',
@@ -181,6 +185,9 @@ function statusLabelRu(value){
   })[value] || relationLabel(value);
 }
 function statusShortRu(value){
+  if (value === 'reported_unnamed_eyewitness') return 'Сообщение очевидца';
+  if (value === 'verified_official_filing_operational_claim') return 'Официальное заявление';
+  if (value === 'verified_announcement') return 'Анонс';
   if (value === 'proposal_not_enacted') return 'Проект';
   if (value === 'verified_announcement_implementation_pending') return 'Анонс';
   if (value === 'verified_preview_license_pending') return 'Предв. версия';
@@ -200,6 +207,14 @@ function statusShortRu(value){
 }
 function dateBasisLabelRu(value){
   return ({
+    reported_event_month:'месяц события по сообщению источника',
+    court_filing_date:'дата подачи в суд',
+    official_announcement_date:'дата официального объявления',
+    incident_date:'дата эпизода',
+    main_sample_date:'дата основного обучающего примера',
+    report_update_date_sample_mapping_unresolved:'обновление отчёта; даты отдельных примеров не сопоставлены',
+    disclosure_date_incident_dates_unknown:'дата раскрытия; даты загрузок неизвестны',
+    official_response_date:'дата официального ответа',
     public_disclosure_date:'дата публичного раскрытия',
     public_disclosure_date_incident_date_not_disclosed:'дата публичного раскрытия; дата инцидента не названа',
     public_beta_start_date:'начало публичного бета-тестирования',
@@ -266,6 +281,10 @@ function dateBasisLabelRu(value){
   })[value] || relationLabel(value);
 }
 function dateStatusLabelRu(value){
+  if (value === 'month_known_day_unknown') return 'известен месяц; точный день неизвестен';
+  if (value === 'exact') return 'точная дата';
+  var reviewed = {verified_primary_date:'дата указана в первоисточнике',report_date_known_sample_mapping_unresolved:'дата отчёта известна; сопоставление примеров не установлено',disclosure_date_known_incident_date_unknown:'дата сообщения известна; дата эпизода неизвестна'};
+  if (reviewed[value]) return reviewed[value];
   if (String(value).indexOf('scheduled_as_of_') === 0) return 'запланировано на ' + String(value).replace('scheduled_as_of_', '');
   if (value === 'future_effective_at_research_cutoff') return 'ещё не действует на дату отсечения';
   return relationLabel(value);

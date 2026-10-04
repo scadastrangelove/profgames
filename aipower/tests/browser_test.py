@@ -76,7 +76,7 @@ def run(root,executable,only=None):
    pg.locator('.behavior-section').screenshot(path=str(root/'review'/f'{lang}-behavior-1440.png'))
    pg.locator('[data-behavior-track="BEH_TRACK_CONCEALMENT_PERSISTENCE"]').click()
    ok(lang+': concealment view has four authored stages',pg.locator('.behavior-stage').count()==4)
-   ok(lang+': concealment view selects 23 classified records',pg.evaluate('behaviorEvents(cyberRenderedEvents).length')==23)
+   ok(lang+': core concealment view selects 26 records; workbook is extended',pg.evaluate('behaviorEvents(cyberRenderedEvents).length')==26 and pg.locator('.behavior-evidence-card[data-id="SIG_2026_OPENAI_PUBLIC_WORKBOOK_AGENT_HANDOFF"]').count()==0)
    ok(lang+': Astra controllability card is visible',pg.locator('.behavior-evidence-card[data-id="SIG_2026_ASTRA_COT_CONTROLLABILITY_MONITORABILITY"]').count()==1)
    ok(lang+': Astra prompted-evasion card is visible',pg.locator('.behavior-evidence-card[data-id="SIG_2026_ASTRA_PROMPTED_MONITOR_EVASION"]').count()==1)
    ok(lang+': concealment track reaches permalink','b.track=BEH_TRACK_CONCEALMENT_PERSISTENCE' in pg.url)

@@ -15,11 +15,11 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2307.492919921875,
-        "behavior_section_1440": 440.9937744140625,
-        "cyber_first_card_390": 5506.16357421875,
-        "behavior_section_390": 731.773193359375,
-        "map_top": 800.078125
+        "cyber_first_card_1440": 2346.205810546875,
+        "behavior_section_1440": 441.4963073730469,
+        "cyber_first_card_390": 5645.796875,
+        "behavior_section_390": 731.7742919921875,
+        "map_top": 724.703125
       },
       "page_widths": {
         "story:1440": 1440,
@@ -55,11 +55,11 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2211.953125,
+        "cyber_first_card_1440": 2247.953125,
         "behavior_section_1440": 429.625,
-        "cyber_first_card_390": 5165.015625,
+        "cyber_first_card_390": 5354.015625,
         "behavior_section_390": 677.015625,
-        "map_top": 583.984375
+        "map_top": 527.453125
       },
       "page_widths": {
         "overview:1440": 1440,
@@ -138,7 +138,7 @@
     "ru: curated Mozilla and SB53",
     "ru: five behavior dependency stages",
     "ru: concealment view has four authored stages",
-    "ru: concealment view selects 23 classified records",
+    "ru: core concealment view selects 26 records; workbook is extended",
     "ru: Astra controllability card is visible",
     "ru: Astra prompted-evasion card is visible",
     "ru: concealment track reaches permalink",
@@ -226,7 +226,7 @@
     "en: curated Mozilla and SB53",
     "en: five behavior dependency stages",
     "en: concealment view has four authored stages",
-    "en: concealment view selects 23 classified records",
+    "en: core concealment view selects 26 records; workbook is extended",
     "en: Astra controllability card is visible",
     "en: Astra prompted-evasion card is visible",
     "en: concealment track reaches permalink",
