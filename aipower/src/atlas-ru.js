@@ -207,6 +207,8 @@ function statusShortRu(value){
 }
 function dateBasisLabelRu(value){
   return ({
+    source_publication_date:'дата официальной публикации',
+    report_date_not_incident_date:'дата отчёта; точная дата испытания не указана',
     reported_event_month:'месяц события по сообщению источника',
     court_filing_date:'дата подачи в суд',
     official_announcement_date:'дата официального объявления',

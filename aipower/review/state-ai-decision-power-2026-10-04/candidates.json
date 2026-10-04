@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "reviewed_at": "2026-10-04",
+    "atlas_version_reviewed": "0.43",
+    "atlas_events_reviewed": 416,
+    "scope": "State decision support, supplier participation and security-based infrastructure privileges",
+    "status": "research_candidates_not_merged",
+    "method": "Primary-source web review; local event-text and source-URL duplicate screening. Announcements are not treated as verified operational outcomes.",
+    "unit": "candidate dossiers; separate dated milestones before migration",
+    "not_exhaustive": true
+  },
+  "candidates": [
+    {
+      "id": "CAND_US_DETACHMENT_201",
+      "date": "2025-06-13",
+      "title_ru": "Армия США создаёт Detachment 201 с руководителями технологических компаний",
+      "fact_ru": "Армия объявила о создании подразделения советников в резерве и приведении к присяге Shyam Sankar, Andrew Bosworth, Kevin Weil и Bob McGrew в звании подполковников. Предусмотрена частичная занятость без ухода из коммерческих компаний.",
+      "mechanism_ru": "Поставщики входят в институт постановки технологических задач, а не только продают решения.",
+      "caveat_ru": "Источник подтверждает объявление и назначенные роли; не доказывает передачу оперативного командования, закупочных полномочий или коррупцию.",
+      "evidence_status": "official_announcement",
+      "arc_ids": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "related_existing_ids": ["SIG_2026_US_PROJECT_MERIDIAN_ANNOUNCEMENT"],
+      "sources": [{"url": "https://www.army.mil/article/286317/army_launches_detachment_201_executive_innovation_corps_to_drive_tech_transformation", "published": "2025-06-13", "type": "primary", "read": true}]
+    },
+    {
+      "id": "CAND_UK_CONSULT_PUBLIC_RESPONSES",
+      "date": "2025-05-14",
+      "date_basis": "disclosure_date_not_exact_pilot_date",
+      "title_ru": "Consult группирует ответы граждан перед рассмотрением государственной политики",
+      "fact_ru": "DSIT сообщил об анализе более 2000 ответов на шотландскую консультацию по косметическим процедурам. Чиновники проверили каждый ответ в первом испытании. В июле правительство отдельно указало использование GPT-4o в Consult.",
+      "mechanism_ru": "Модель участвует в отборе и группировке знания, доступного принимающему решение. Это не передача модели окончательного решения.",
+      "caveat_ru": "Согласованность результатов и экономия заявлены разработчиком. Ручная проверка в испытании не доказывает ни независимость всех будущих решений, ни наличие манипуляций. План отказа от ручного чтения каждого ответа не равен состоявшемуся внедрению.",
+      "evidence_status": "official_report_of_pilot",
+      "arc_ids": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION", "ARC_COGSEC_LAB_TO_WILD_TO_STATE"],
+      "related_existing_ids": [],
+      "sources": [
+        {"url": "https://www.gov.uk/government/news/government-built-humphrey-ai-tool-reviews-responses-to-consultation-for-first-time-in-bid-to-save-millions", "published": "2025-05-14", "type": "primary", "read": true},
+        {"url": "https://www.gov.uk/government/news/openai-to-expand-uk-office-and-work-with-government-departments-to-turbocharge-the-uks-ai-infrastructure-and-transform-public-services", "published": "2025-07-21", "type": "primary", "read": true}
+      ]
+    },
+    {
+      "id": "CAND_UK_RAID_PROCEDURAL_EXCEPTIONS",
+      "date": "2026-06-10",
+      "title_ru": "Британская RAID получает исключения из стандартных процедур ради военного внедрения ИИ",
+      "fact_ru": "Объявленная Rapid AI Delivery Taskforce подчиняется начальнику штаба обороны. Приоритеты включают обработку разведывательных данных и военное планирование. Правительство прямо указало исключения из стандартных финансовых и процедурных контролей; Rowden назван одним из первых партнёров.",
+      "mechanism_ru": "Военная срочность меняет организационные правила внедрения ИИ и отношения государства с поставщиками.",
+      "caveat_ru": "Объём исключений в публикации не детализирован. Это не отмена законов и не доказательство автономных боевых решений: документ одновременно сохраняет требования надзора и проверки.",
+      "evidence_status": "official_program_announcement",
+      "arc_ids": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION", "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"],
+      "related_existing_ids": ["SIG_2026_DOW_AI_STRATEGY_SPEED_WINS"],
+      "sources": [{"url": "https://www.gov.uk/government/news/new-taskforce-to-put-ai-on-the-uks-frontline", "published": "2026-06-10", "type": "primary", "read": true}]
+    },
+    {
+      "id": "CAND_UAE_REGULATORY_INTELLIGENCE",
+      "date": "2025-04-14",
+      "title_ru": "ОАЭ учреждают Regulatory Intelligence Office для применения ИИ в законодательной работе",
+      "fact_ru": "Кабинет одобрил офис и систему, связывающую федеральные и местные законы, судебные решения, процедуры и государственные услуги. Система должна анализировать последствия норм, обнаруживать пробелы и предлагать изменения.",
+      "mechanism_ru": "ИИ включается в производство правовых категорий и рекомендаций, а не только обслуживает уже принятые решения.",
+      "caveat_ru": "Подтверждено решение о создании. Публикация не устанавливает конкретную модель, поставщика, степень исполнения или автономное принятие законов. Обещанные 70% ускорения не являются измеренным результатом.",
+      "evidence_status": "official_approval_and_plan",
+      "arc_ids": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "related_existing_ids": [],
+      "sources": [{"url": "https://uaecabinet.ae/en/news/uae-cabinet-chaired-by-mohammed-bin-rashid-approves-launch-of-first-integrated-regulatory-intelligence-ecosystem-in-uae-government", "published": "2025-04-14", "type": "primary", "read": true}]
+    },
+    {
+      "id": "CAND_US_AI_INFRASTRUCTURE_PERMITTING",
+      "date": "2025-07-23",
+      "title_ru": "Указ 14318 вводит ускоренные механизмы поддержки и разрешений для ИИ-инфраструктуры",
+      "fact_ru": "Указ направляет ведомства ускорять разрешения, рассматривать финансовую поддержку и предоставление федеральных земель. Защита национальной безопасности является одним из оснований отнесения проекта к соответствующей категории.",
+      "mechanism_ru": "Стратегическая значимость вычислений становится основанием особого административного режима для инфраструктуры.",
+      "caveat_ru": "Это не безусловное освобождение от экологических законов и не решение по делу xAI. Инструменты должны применяться в пределах закона и бюджетных ассигнований.",
+      "evidence_status": "executive_order_text",
+      "arc_ids": ["ARC_ENERGY_GRID_POLITICS", "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"],
+      "related_existing_ids": ["SIG_2026_GROK_MAVEN_ENERGY_NATIONAL_SECURITY_FILING"],
+      "sources": [{"url": "https://www.whitehouse.gov/presidential-actions/2025/07/accelerating-federal-permitting-of-data-center-infrastructure/", "published": "2025-07-23", "type": "primary", "read": true}]
+    },
+    {
+      "id": "CAND_US_GENESIS_CONTROLLED_SCIENCE_PLATFORM",
+      "date": "2025-11-24",
+      "title_ru": "Genesis объединяет государственные научные данные, модели, вычисления и правила доступа",
+      "fact_ru": "Указ 14363 учреждает Genesis Mission и поручает создать American Science and Security Platform. Он требует правил доступа, проверки участников, защиты данных и распределения прав на результаты. DOE сообщил о 24 MOU 18 декабря 2025 года, а 9 февраля 2026 года объявил консорциум с рабочими группами участников по моделям, данным и инфраструктуре.",
+      "mechanism_ru": "Государство объединяет производство знания с ИИ-инфраструктурой и условиями допуска; компании участвуют в разработке технических правил.",
+      "caveat_ru": "Разделить учреждение, соглашения и консорциум на датированные события при миграции. MOU не означает передачу всех государственных данных или эксклюзивность поставщика; DOE заявляет архитектурную нейтральность. Научные результаты требуют отдельной проверки.",
+      "evidence_status": "executive_order_and_official_partnership_announcements",
+      "arc_ids": ["ARC_DATA_LICENSING_AS_INPUT_LAYER", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION", "ARC_SOVEREIGN_FLOW_GATING"],
+      "related_existing_ids": [],
+      "sources": [
+        {"url": "https://www.whitehouse.gov/presidential-actions/2025/11/launching-the-genesis-mission/", "published": "2025-11-24", "type": "primary", "read": true},
+        {"url": "https://www.energy.gov/articles/energy-department-announces-collaboration-agreements-24-organizations-advance-genesis", "published": "2025-12-18", "type": "primary", "read": true},
+        {"url": "https://www.energy.gov/articles/energy-department-launches-genesis-mission-consortium-accelerate-ai-driven-scientific", "published": "2026-02-09", "type": "primary", "read": true}
+      ]
+    },
+    {
+      "id": "CAND_UK_MODEL_ARENA",
+      "date": "2025-11-10",
+      "title_ru": "Британский Defence AI Centre объявляет сравнительные испытания моделей перед закупками",
+      "fact_ru": "DAIC представил AI Model Arena, разработанную с Advai и NSSIF. Заявлены сравнение производительности, надёжности, устойчивости и безопасности по военным требованиям и нейтральность к поставщику; целевой запуск намечен на март 2026 года.",
+      "mechanism_ru": "Попытка сохранить государственный контроль над критериями выбора и сопоставимостью моделей, а не принять оценку одного поставщика.",
+      "caveat_ru": "Подтверждён анонс. Фактический запуск, результаты испытаний и снижение зависимости этим источником не доказаны. Нейтральность заявлена организатором.",
+      "evidence_status": "official_announcement_not_verified_outcome",
+      "arc_ids": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION", "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"],
+      "relation_to_hypothesis": "qualifies_inevitable_vendor_capture",
+      "related_existing_ids": ["SIG_2026_DECISION_SOVEREIGNTY_MILITARY_AI_FRAMEWORK"],
+      "sources": [{"url": "https://www.gov.uk/government/news/launching-the-ai-model-arena", "published": "2025-11-10", "type": "primary", "read": true}]
+    },
+    {
+      "id": "CAND_ALBANIA_DIELLA_RESPONSIBILITY",
+      "date": "2025-09-19",
+      "date_basis": "swearing_in_and_official_composition_publication",
+      "title_ru": "В албанском правительстве ответственность за виртуальную Diella закреплена за премьером",
+      "fact_ru": "Официальное сообщение о приведении правительства к присяге включает создание и функционирование виртуальной Diella в ответственность премьер-министра Эди Рамы.",
+      "mechanism_ru": "Институционализация интерфейса ИИ при сохранении явно названного человеческого носителя ответственности.",
+      "caveat_ru": "Не доказывает юридическую самостоятельность модели, автономное распределение закупок или исполнение антикоррупционных обещаний. Дата церемонии не равна дате первого анонса или президентского декрета.",
+      "evidence_status": "official_government_composition",
+      "arc_ids": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "related_existing_ids": [],
+      "sources": [{"url": "https://www.kryeministria.al/en/newsroom/zhvillohet-ceremonia-e-betimit-te-qeverise-se-re-ne-presidence/", "published": "2025-09-19", "type": "primary", "read": true}]
+    }
+  ],
+  "follow_up": [
+    {
+      "topic": "DOJ appeal in NAACP v. X.AI",
+      "reported_event_date": "2026-09-18",
+      "status": "secondary_report_primary_document_login_required",
+      "related_existing_id": "SIG_2026_GROK_MAVEN_ENERGY_NATIONAL_SECURITY_FILING",
+      "finding_ru": "Юридический обзор сообщает об апелляции на предполагаемый фактический отказ допустить вмешательство DOJ. Автор прямо отмечает отсутствие письменного отказа. Нельзя записывать как окончательное решение по экологическому иску.",
+      "source": "https://www.mitchellwilliamslaw.com/citizen-suit-enforcement/clean-air-act-us-department-of-justice-alleges-constructive-denial-of-request-to-intervene-in-naacps-challenge-to-southaven-ms-data-center",
+      "primary_document_blocked": "https://insideepa.com/sites/insideepa.com/files/documents/2026/sep/epa2026_1617.pdf"
+    },
+    {
+      "topic": "French defence Mistral framework agreement",
+      "reported_agreement_date": "2025-12-16",
+      "reported_publication_date": "2026-01-08",
+      "status": "official_search_result_only_pdf_fetch_failed",
+      "finding_ru": "Официальный поисковый результат сообщает об accord-cadre с Mistral AI. Полный PDF не получен; условия соглашения в подтверждённую подборку не включены."
+    }
+  ]
+}
