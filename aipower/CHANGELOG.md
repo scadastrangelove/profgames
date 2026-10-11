@@ -1,5 +1,12 @@
 # AI Power Atlas v0.44 — 4 октября 2026
 
+## v0.45 — 2026-10-11
+
+- 3 cyber records: CAISI GLM-5.3 evaluation, Anthropic capability/access-policy report, and Claude boundary-failure disclosure.
+- 14 edges and 3 source URLs; no new arcs. Existing data and source identifiers preserved.
+- Capability, simulated harmful-request engagement and ordinary-task boundary compliance remain distinct. Publication dates are not incident dates.
+- Both JSON and offline HTML languages rebuilt. Sources and checks: `review/glm-access-control-october-2026/`.
+
 Восемь проверенных сюжетов добавлены как десять датированных событий: Detachment 201, Consult, RAID, правовые рекомендации ОАЭ, указ 14318, три стадии Genesis, Model Arena и ответственность премьера за Diella. Новых верхнеуровневых дуг и тезисов нет. Добавлены 33 связи и 11 URL.
 
 Проверены совпадения URL, идентификаторов, дат и заголовков, а также близкие по смыслу существующие события. Три стадии Genesis связаны как этапы одной программы, не как независимые результаты. Model Arena ограничивает обобщение о неизбежной зависимости от поставщика; объявленные планы не представлены как доказанное внедрение. Два недостаточно проверенных продолжения оставлены в исследовательском пакете, вне базы событий.

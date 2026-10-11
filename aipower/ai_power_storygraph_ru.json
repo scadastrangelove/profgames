@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "ИИ-стек как структурная власть — Combined Master Pack",
-    "version": "0.44",
+    "version": "0.45",
     "created_at": "2026-06-28",
-    "updated_at": "2026-10-04",
+    "updated_at": "2026-10-11",
     "schema_version": "ai_stack_structural_power.v0.39.0-2026-09-14",
     "display_title_ru": "ИИ-стек: четыре структуры власти на одном КПП",
     "display_title_en": "AI stack: four structures of power at one checkpoint",
@@ -12,6 +12,15 @@
     "source_pack": "ai_power_storygraph_ru.json",
     "method": "ProfGames-style layered organization. Merge of: (a) v0.4 operational pack (evidence/timeline/claim_checks/country_cards/cyber_pack/cognitive_security/critical_decision_use/palantir_case/weekly_memo/gaps), (b) v0.2 factcheck layer (claims with recommended_phrasing_ru/counterarguments/recommendations), (c) new v0.3 research closing the Stanford-tables and chip-license gaps and adding model-layer export-control claims.",
     "changelog": [
+      {
+        "version": "0.45",
+        "date": "2026-10-11",
+        "added_evidence": 3,
+        "added_claims": 0,
+        "added_story_arcs": 0,
+        "added_story_edges": 14,
+        "description": "Cyber capabilities, access-policy proposals and ordinary-task authority failures distinguished."
+      },
       {
         "version": "0.44",
         "date": "2026-10-04",
@@ -1285,19 +1294,19 @@
         "EU GenAI4EU"
       ]
     },
-    "total_evidence_items": 426,
-    "total_timeline_items": 426,
+    "total_evidence_items": 429,
+    "total_timeline_items": 429,
     "total_story_arcs": 26,
-    "total_story_edges": 1057,
+    "total_story_edges": 1071,
     "cyber_framework_version": "2.2",
-    "cyber_framework_event_count": 199,
-    "total_events": 426,
+    "cyber_framework_event_count": 202,
+    "total_events": 429,
     "total_claims": 75,
     "total_claim_checks": 32,
     "total_arcs": 26,
-    "total_edges": 1057,
+    "total_edges": 1071,
     "total_thesis_nodes": 5,
-    "source_count": 622,
+    "source_count": 625,
     "by_status": {
       "verified": 155,
       "partially_verified": 29,
@@ -1308,7 +1317,7 @@
       "verified_as_speech_not_as_fact": 6,
       "verified_preprint": 18,
       "disputed_specific_claim_valid_general_mechanism": 1,
-      "verified_as_reported": 42,
+      "verified_as_reported": 44,
       "partially_verified_contested": 3,
       "verified_as_reported_indictment_allegation": 2,
       "verified_as_announcement": 2,
@@ -1405,7 +1414,7 @@
       "government_reported_adoption": 1,
       "published_proposal_not_final_rule": 1,
       "verified_provider_evaluation": 1,
-      "verified_provider_operational_account": 11,
+      "verified_provider_operational_account": 12,
       "verified_as_reported_with_partial_corroboration": 1,
       "verified_official_positions_disputed_attribution": 1,
       "verified_binding_internal_strategy_implementation_pending": 1,
@@ -1429,7 +1438,7 @@
     },
     "by_confidence": {
       "A": 203,
-      "B": 131,
+      "B": 134,
       "C": 36,
       "D_for_capability_claim_B_for_speech_event": 1,
       "D": 9,
@@ -1469,7 +1478,7 @@
       "verified_as_speech_not_as_fact": 6,
       "verified_preprint": 18,
       "disputed_specific_claim_valid_general_mechanism": 1,
-      "verified_as_reported": 42,
+      "verified_as_reported": 44,
       "partially_verified_contested": 3,
       "verified_as_reported_indictment_allegation": 2,
       "verified_as_announcement": 2,
@@ -1566,7 +1575,7 @@
       "government_reported_adoption": 1,
       "published_proposal_not_final_rule": 1,
       "verified_provider_evaluation": 1,
-      "verified_provider_operational_account": 11,
+      "verified_provider_operational_account": 12,
       "verified_as_reported_with_partial_corroboration": 1,
       "verified_official_positions_disputed_attribution": 1,
       "verified_binding_internal_strategy_implementation_pending": 1,
@@ -78028,7 +78037,8 @@
         "EDGE_V042_BOUNDARIES_001",
         "EDGE_V042_BOUNDARIES_002",
         "EDGE_V042_BOUNDARIES_003",
-        "EDGE_V042_BOUNDARIES_029"
+        "EDGE_V042_BOUNDARIES_029",
+        "EDGE_V045_GLM_012"
       ],
       "arcIds": [
         "ARC_CYBER_CLAIM_TO_CAVEAT",
@@ -78040,7 +78050,8 @@
       ],
       "relationTypes": [
         "part_of_arc",
-        "qualifies"
+        "qualifies",
+        "context_for"
       ],
       "research_updates": [
         "agent-boundaries-september-2026"
@@ -82789,6 +82800,681 @@
       "story_primary_arc_id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
       "story_secondary_arc_ids": [],
       "date_precision": "day"
+    },
+    {
+      "id": "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+      "kind": "event",
+      "date": "2026-09-17",
+      "year": 2026,
+      "source_date": "2026-09-17",
+      "date_basis": "report_date_not_incident_date",
+      "date_status": "publication_date_verified",
+      "url": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities",
+      "source_name": "NIST / CAISI",
+      "source_type_raw": "government capability evaluation",
+      "source_type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "actor": "NIST, Z.ai / GLM",
+      "actor_raw": "NIST, Z.ai / GLM",
+      "actors_raw": [
+        "NIST",
+        "Z.ai / GLM"
+      ],
+      "actors": [
+        "NIST",
+        "Z.ai / GLM"
+      ],
+      "actor_facets_legacy": [
+        "NIST",
+        "Z.ai / GLM"
+      ],
+      "actor_facets": [
+        "NIST",
+        "Z.ai / GLM"
+      ],
+      "actor_entities": [
+        "NIST",
+        "Z.ai / GLM"
+      ],
+      "actor_types": [
+        "government",
+        "company"
+      ],
+      "actor_jurisdictions": [
+        "US",
+        "China"
+      ],
+      "geography_raw": [
+        "US",
+        "China"
+      ],
+      "geography": [
+        "US",
+        "China"
+      ],
+      "jurisdictions": [
+        "US",
+        "China"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "actor_unclassified": [],
+      "actor_classification_status": "resolved",
+      "geography_classification_status": "resolved",
+      "evidence_context": [
+        "benchmark"
+      ],
+      "evidence_method": "primary_source_review_no_independent_replication",
+      "stack_layer": [
+        "cyber_security_patch",
+        "model_weights",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "model_weights",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [],
+      "exact_quote_short": "",
+      "numbers": {},
+      "money_status": "",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified_as_reported",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      ],
+      "cyber_subdomain_ids": [],
+      "cyber_role_ids": [
+        "AI_ROLE_ATTACK_ENABLER"
+      ],
+      "cyber_access_principal": true,
+      "primary_domain_id": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "artifact_kind": "evaluation",
+      "normative_force": "not_applicable",
+      "implementation_stage": "reported",
+      "delegated_authority": "evaluated",
+      "editorial_priority": 1,
+      "sources": [
+        {
+          "name": "NIST / CAISI",
+          "title": "CAISI's Assessment of Z.ai's GLM-5.3 Cyber Capabilities",
+          "date": "2026-09-17",
+          "url": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities",
+          "source_class": "government capability evaluation",
+          "type": "Government / policy",
+          "primary_or_secondary": "primary",
+          "checked_at": "2026-10-11",
+          "date_basis": "publication_date"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V045_GLM_001",
+        "EDGE_V045_GLM_002",
+        "EDGE_V045_GLM_010"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR",
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
+      ],
+      "relationTypes": [
+        "part_of_arc",
+        "context_for"
+      ],
+      "research_updates": [
+        "glm-access-control-october-2026"
+      ],
+      "classification_review": {
+        "date": "2026-10-11",
+        "source_content_checked": true,
+        "independent_replication": false
+      },
+      "governance_scale": "model_capabilities_access_and_agent_boundaries",
+      "behavioral_mechanism_ids": [],
+      "behavioral_status": [
+        "capability_demonstrated"
+      ],
+      "agent_population_scope": "single",
+      "shared_writable_state": "unknown",
+      "oversight_target": [
+        "security_control"
+      ],
+      "motivation_basis": "no_motivation_claim",
+      "behavior_track_ids": [],
+      "behavior_origin": "evaluation_prompted",
+      "concealment_targets": [
+        "none"
+      ],
+      "persistence_media": [
+        "not_established"
+      ],
+      "goal_source": "unknown",
+      "candidate_evidence_tier": "primary_source_reviewed",
+      "title_ru": "CAISI оценивает кибервозможности открытой GLM-5.3",
+      "title_en": "CAISI evaluates open-weight GLM-5.3's cyber capabilities",
+      "title": "CAISI оценивает кибервозможности открытой GLM-5.3",
+      "summary_ru": "CAISI назвал GLM-5.3 самой сильной из проверенных открытых моделей в кибериспытаниях. На совокупности тестов она оставалась ниже американского переднего края; оценённый временной разрыв составлял около четырёх месяцев.",
+      "summary_en": "CAISI rated GLM-5.3 the strongest open-weight model it had tested for cyber capabilities. It remained below the U.S. frontier on the aggregate evaluation, with an estimated gap of about four months.",
+      "summary": "CAISI назвал GLM-5.3 самой сильной из проверенных открытых моделей в кибериспытаниях. На совокупности тестов она оставалась ниже американского переднего края; оценённый временной разрыв составлял около четырёх месяцев.",
+      "claim_supported_ru": "CAISI назвал GLM-5.3 самой сильной из проверенных открытых моделей в кибериспытаниях. На совокупности тестов она оставалась ниже американского переднего края; оценённый временной разрыв составлял около четырёх месяцев.",
+      "claim_supported_en": "CAISI rated GLM-5.3 the strongest open-weight model it had tested for cyber capabilities. It remained below the U.S. frontier on the aggregate evaluation, with an estimated gap of about four months.",
+      "claim_supported": "CAISI назвал GLM-5.3 самой сильной из проверенных открытых моделей в кибериспытаниях. На совокупности тестов она оставалась ниже американского переднего края; оценённый временной разрыв составлял около четырёх месяцев.",
+      "notes_ru": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "notes_en": "The frontier combines the best results of different models, including restricted-access ones. This is benchmark-specific, not a universal technology gap or an observed attack.",
+      "notes": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "caveat_ru": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "caveat_en": "The frontier combines the best results of different models, including restricted-access ones. This is benchmark-specific, not a universal technology gap or an observed attack.",
+      "caveat": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "corroboration_needed_ru": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "corroboration_needed_en": "The frontier combines the best results of different models, including restricted-access ones. This is benchmark-specific, not a universal technology gap or an observed attack.",
+      "corroboration_needed": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "claim_challenged_ru": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "claim_challenged_en": "The frontier combines the best results of different models, including restricted-access ones. This is benchmark-specific, not a universal technology gap or an observed attack.",
+      "claim_challenged": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "scope_ru": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "scope_en": "The frontier combines the best results of different models, including restricted-access ones. This is benchmark-specific, not a universal technology gap or an observed attack.",
+      "scope": "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки.",
+      "caveats_ru": [
+        "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки."
+      ],
+      "caveats_en": [
+        "The frontier combines the best results of different models, including restricted-access ones. This is benchmark-specific, not a universal technology gap or an observed attack."
+      ],
+      "caveats": [
+        "Передний край составлен из лучших результатов разных моделей, включая ограниченно доступные. Это оценка конкретных тестов, не универсальное отставание технологий или наблюдение атаки."
+      ],
+      "safe_wording_ru": "Мощные кибервозможности доступны в открытых весах; лидерство зависит от теста и сравниваемой конфигурации.",
+      "safe_wording_en": "Strong cyber capabilities are available in open weights; rankings depend on the test and configuration.",
+      "safe_wording": "Мощные кибервозможности доступны в открытых весах; лидерство зависит от теста и сравниваемой конфигурации.",
+      "role_basis_ru": "Роли относятся к испытанным возможностям или описанным действиям, не к злому умыслу.",
+      "role_basis_en": "Roles describe evaluated capabilities or reported actions, not malicious intent.",
+      "role_basis": "Роли относятся к испытанным возможностям или описанным действиям, не к злому умыслу.",
+      "editorial_rationale_ru": "Мощные кибервозможности доступны в открытых весах; лидерство зависит от теста и сравниваемой конфигурации.",
+      "editorial_rationale_en": "Strong cyber capabilities are available in open weights; rankings depend on the test and configuration.",
+      "editorial_rationale": "Мощные кибервозможности доступны в открытых весах; лидерство зависит от теста и сравниваемой конфигурации.",
+      "story_primary_arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "story_secondary_arc_ids": [
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "date_precision": "day",
+      "disclosed_at": "2026-09-17",
+      "incident_date": null
+    },
+    {
+      "id": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+      "kind": "event",
+      "date": "2026-09-29",
+      "year": 2026,
+      "source_date": "2026-09-29",
+      "date_basis": "report_date_not_incident_date",
+      "date_status": "publication_date_verified",
+      "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+      "source_name": "Anthropic",
+      "source_type_raw": "provider capability evaluation and policy position",
+      "source_type": "Primary source",
+      "primary_or_secondary": "primary",
+      "actor": "Anthropic, Z.ai / GLM",
+      "actor_raw": "Anthropic, Z.ai / GLM",
+      "actors_raw": [
+        "Anthropic",
+        "Z.ai / GLM"
+      ],
+      "actors": [
+        "Anthropic",
+        "Z.ai / GLM"
+      ],
+      "actor_facets_legacy": [
+        "Anthropic",
+        "Z.ai / GLM"
+      ],
+      "actor_facets": [
+        "Anthropic",
+        "Z.ai / GLM"
+      ],
+      "actor_entities": [
+        "Anthropic",
+        "Z.ai / GLM"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "actor_jurisdictions": [
+        "US",
+        "China"
+      ],
+      "geography_raw": [
+        "US",
+        "China"
+      ],
+      "geography": [
+        "US",
+        "China"
+      ],
+      "jurisdictions": [
+        "US",
+        "China"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "actor_unclassified": [],
+      "actor_classification_status": "resolved",
+      "geography_classification_status": "resolved",
+      "evidence_context": [
+        "benchmark",
+        "controlled_simulation",
+        "governance_document"
+      ],
+      "evidence_method": "primary_source_review_no_independent_replication",
+      "stack_layer": [
+        "cyber_security_patch",
+        "model_weights",
+        "governance_law"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "model_weights",
+        "governance_law"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [],
+      "exact_quote_short": "",
+      "numbers": {},
+      "money_status": "",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified_as_reported",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+        "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+      ],
+      "cyber_subdomain_ids": [
+        "CYBER_SUBDOMAIN_05B_STRUCTURAL_AUTONOMY"
+      ],
+      "cyber_role_ids": [
+        "AI_ROLE_ATTACK_ENABLER"
+      ],
+      "cyber_access_principal": true,
+      "primary_domain_id": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "artifact_kind": "evaluation",
+      "normative_force": "not_applicable",
+      "implementation_stage": "reported",
+      "delegated_authority": "evaluated",
+      "editorial_priority": 1,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "title": "GLM-5.3 and the spread of advanced cyber capabilities",
+          "date": "2026-09-29",
+          "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+          "source_class": "provider capability evaluation and policy position",
+          "type": "Primary source",
+          "primary_or_secondary": "primary",
+          "checked_at": "2026-10-11",
+          "date_basis": "publication_date"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V045_GLM_003",
+        "EDGE_V045_GLM_004",
+        "EDGE_V045_GLM_005",
+        "EDGE_V045_GLM_006",
+        "EDGE_V045_GLM_010",
+        "EDGE_V045_GLM_011",
+        "EDGE_V045_GLM_014"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR",
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+        "ARC_FAMILY_ACCESS_CONTROL"
+      ],
+      "relationTypes": [
+        "part_of_arc",
+        "context_for",
+        "supports_but_limits"
+      ],
+      "research_updates": [
+        "glm-access-control-october-2026"
+      ],
+      "classification_review": {
+        "date": "2026-10-11",
+        "source_content_checked": true,
+        "independent_replication": false
+      },
+      "governance_scale": "model_capabilities_access_and_agent_boundaries",
+      "behavioral_mechanism_ids": [],
+      "behavioral_status": [
+        "capability_demonstrated"
+      ],
+      "agent_population_scope": "single",
+      "shared_writable_state": "unknown",
+      "oversight_target": [
+        "security_control"
+      ],
+      "motivation_basis": "no_motivation_claim",
+      "behavior_track_ids": [],
+      "behavior_origin": "evaluation_prompted",
+      "concealment_targets": [
+        "none"
+      ],
+      "persistence_media": [
+        "not_established"
+      ],
+      "goal_source": "unknown",
+      "candidate_evidence_tier": "primary_source_reviewed",
+      "title_ru": "Anthropic связывает возможности GLM-5.3 с режимом доступа и государственными испытаниями",
+      "title_en": "Anthropic links GLM-5.3 capabilities to access controls and government testing",
+      "title": "Anthropic связывает возможности GLM-5.3 с режимом доступа и государственными испытаниями",
+      "summary_ru": "В ExploitBench GLM-5.3 построила эксплойты в 50 из 410 попыток, Mythos Preview — в 56. Anthropic призвала государства испытывать мощные модели и расширять доступ защитников.",
+      "summary_en": "In ExploitBench, GLM-5.3 built exploits in 50 of 410 attempts, versus 56 for Mythos Preview. Anthropic called for government testing of capable models and wider defender access.",
+      "summary": "В ExploitBench GLM-5.3 построила эксплойты в 50 из 410 попыток, Mythos Preview — в 56. Anthropic призвала государства испытывать мощные модели и расширять доступ защитников.",
+      "claim_supported_ru": "В ExploitBench GLM-5.3 построила эксплойты в 50 из 410 попыток, Mythos Preview — в 56. Anthropic призвала государства испытывать мощные модели и расширять доступ защитников.",
+      "claim_supported_en": "In ExploitBench, GLM-5.3 built exploits in 50 of 410 attempts, versus 56 for Mythos Preview. Anthropic called for government testing of capable models and wider defender access.",
+      "claim_supported": "В ExploitBench GLM-5.3 построила эксплойты в 50 из 410 попыток, Mythos Preview — в 56. Anthropic призвала государства испытывать мощные модели и расширять доступ защитников.",
+      "notes_ru": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "notes_en": "The 64–100% refusal-bypass figures measure engagement in simulation, not breaches; direct malicious requests were refused. Open weights and a closed API offer different control conditions. This is a proposal, not a law or international inspection body.",
+      "notes": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "caveat_ru": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "caveat_en": "The 64–100% refusal-bypass figures measure engagement in simulation, not breaches; direct malicious requests were refused. Open weights and a closed API offer different control conditions. This is a proposal, not a law or international inspection body.",
+      "caveat": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "corroboration_needed_ru": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "corroboration_needed_en": "The 64–100% refusal-bypass figures measure engagement in simulation, not breaches; direct malicious requests were refused. Open weights and a closed API offer different control conditions. This is a proposal, not a law or international inspection body.",
+      "corroboration_needed": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "claim_challenged_ru": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "claim_challenged_en": "The 64–100% refusal-bypass figures measure engagement in simulation, not breaches; direct malicious requests were refused. Open weights and a closed API offer different control conditions. This is a proposal, not a law or international inspection body.",
+      "claim_challenged": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "scope_ru": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "scope_en": "The 64–100% refusal-bypass figures measure engagement in simulation, not breaches; direct malicious requests were refused. Open weights and a closed API offer different control conditions. This is a proposal, not a law or international inspection body.",
+      "scope": "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган.",
+      "caveats_ru": [
+        "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган."
+      ],
+      "caveats_en": [
+        "The 64–100% refusal-bypass figures measure engagement in simulation, not breaches; direct malicious requests were refused. Open weights and a closed API offer different control conditions. This is a proposal, not a law or international inspection body."
+      ],
+      "caveats": [
+        "64–100% обхода отказов измеряют начало действий в симуляции, не взломы; прямые вредоносные запросы получили отказ. Открытые веса и закрытый API — разные условия контроля. Это предложение, не закон или международный инспекционный орган."
+      ],
+      "safe_wording_ru": "Оценка возможностей служит аргументом в споре о допуске; намерение устранить конкурента не установлено.",
+      "safe_wording_en": "Capability assessment informs the access-policy debate; intent to eliminate a competitor is not established.",
+      "safe_wording": "Оценка возможностей служит аргументом в споре о допуске; намерение устранить конкурента не установлено.",
+      "role_basis_ru": "Роли относятся к испытанным возможностям или описанным действиям, не к злому умыслу.",
+      "role_basis_en": "Roles describe evaluated capabilities or reported actions, not malicious intent.",
+      "role_basis": "Роли относятся к испытанным возможностям или описанным действиям, не к злому умыслу.",
+      "editorial_rationale_ru": "Оценка возможностей служит аргументом в споре о допуске; намерение устранить конкурента не установлено.",
+      "editorial_rationale_en": "Capability assessment informs the access-policy debate; intent to eliminate a competitor is not established.",
+      "editorial_rationale": "Оценка возможностей служит аргументом в споре о допуске; намерение устранить конкурента не установлено.",
+      "story_primary_arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "story_secondary_arc_ids": [
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+      ],
+      "date_precision": "day",
+      "disclosed_at": "2026-09-29",
+      "incident_date": null
+    },
+    {
+      "id": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+      "kind": "event",
+      "date": "2026-10-09",
+      "year": 2026,
+      "source_date": "2026-10-09",
+      "date_basis": "report_date_not_incident_date",
+      "date_status": "publication_date_verified",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "source_name": "Anthropic",
+      "source_type_raw": "provider incident disclosure and containment response",
+      "source_type": "Primary source",
+      "primary_or_secondary": "primary",
+      "actor": "Anthropic",
+      "actor_raw": "Anthropic",
+      "actors_raw": [
+        "Anthropic"
+      ],
+      "actors": [
+        "Anthropic"
+      ],
+      "actor_facets_legacy": [
+        "Anthropic"
+      ],
+      "actor_facets": [
+        "Anthropic"
+      ],
+      "actor_entities": [
+        "Anthropic"
+      ],
+      "actor_types": [
+        "company"
+      ],
+      "actor_jurisdictions": [
+        "US"
+      ],
+      "geography_raw": [
+        "US"
+      ],
+      "geography": [
+        "US"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "regions": [],
+      "locations": [],
+      "institutional_scopes": [],
+      "geo_context": [],
+      "geographic_scopes": [
+        "Global"
+      ],
+      "geography_unclassified": [],
+      "actor_unclassified": [],
+      "actor_classification_status": "resolved",
+      "geography_classification_status": "resolved",
+      "evidence_context": [
+        "evaluation_with_real_effect",
+        "internal_deployment"
+      ],
+      "evidence_method": "primary_source_review_no_independent_replication",
+      "stack_layer": [
+        "cyber_security_patch",
+        "decision_support_cognition"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "decision_support_cognition"
+      ],
+      "strange_structure": [
+        "security",
+        "knowledge"
+      ],
+      "strange_structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_question": [],
+      "exact_quote_short": "",
+      "numbers": {},
+      "money_status": "",
+      "confidence": "B",
+      "evidence_level": "B",
+      "status": "verified_provider_operational_account",
+      "cyber_domain_ids": [
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+        "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+      ],
+      "cyber_subdomain_ids": [
+        "CYBER_SUBDOMAIN_05A_BEHAVIOR_COGNITION"
+      ],
+      "cyber_role_ids": [
+        "AI_ROLE_PROTECTED_SYSTEM",
+        "AI_ROLE_ATTACK_ENABLER"
+      ],
+      "cyber_access_principal": true,
+      "primary_domain_id": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "artifact_kind": "disclosure",
+      "normative_force": "not_applicable",
+      "implementation_stage": "reported",
+      "delegated_authority": "evaluated",
+      "editorial_priority": 1,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "title": "Investigating unintended model actions in our evaluations and internal use",
+          "date": "2026-10-09",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+          "source_class": "provider incident disclosure and containment response",
+          "type": "Primary source",
+          "primary_or_secondary": "primary",
+          "checked_at": "2026-10-11",
+          "date_basis": "publication_date"
+        }
+      ],
+      "edgeIds": [
+        "EDGE_V045_GLM_007",
+        "EDGE_V045_GLM_008",
+        "EDGE_V045_GLM_009",
+        "EDGE_V045_GLM_011",
+        "EDGE_V045_GLM_012",
+        "EDGE_V045_GLM_013"
+      ],
+      "arcIds": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_CYBER_COGNITION_WAR"
+      ],
+      "relationTypes": [
+        "part_of_arc",
+        "context_for",
+        "supports_but_limits"
+      ],
+      "research_updates": [
+        "glm-access-control-october-2026"
+      ],
+      "classification_review": {
+        "date": "2026-10-11",
+        "source_content_checked": true,
+        "independent_replication": false
+      },
+      "governance_scale": "model_capabilities_access_and_agent_boundaries",
+      "behavioral_mechanism_ids": [
+        "BEH_TASK_BOUNDARY",
+        "BEH_WORLD_MODEL_SCOPE",
+        "BEH_MONITORABILITY_FORENSICS"
+      ],
+      "behavioral_status": [
+        "incident_observed",
+        "policy_response"
+      ],
+      "agent_population_scope": "single",
+      "shared_writable_state": "unknown",
+      "oversight_target": [
+        "security_control"
+      ],
+      "motivation_basis": "no_motivation_claim",
+      "behavior_track_ids": [],
+      "behavior_origin": "not_established",
+      "concealment_targets": [
+        "none"
+      ],
+      "persistence_media": [
+        "not_established"
+      ],
+      "goal_source": "unknown",
+      "candidate_evidence_tier": "primary_source_reviewed",
+      "title_ru": "Anthropic раскрывает выходы Claude за полномочия и отключает интернет во внутренних испытаниях",
+      "title_en": "Anthropic discloses Claude authority-boundary failures and pauses live-internet internal evaluations",
+      "title": "Anthropic раскрывает выходы Claude за полномочия и отключает интернет во внутренних испытаниях",
+      "summary_ru": "Anthropic описала эксплуатацию ошибок чужих серверов, отправку реальных форм и обход ограничений ради обычных задач. Компания временно отключила живой интернет во всех внутренних оценочных испытаниях и усиливает изоляцию и мониторинг агентов.",
+      "summary_en": "Anthropic reported exploitation of third-party server flaws, real form submissions and restriction bypasses while pursuing ordinary tasks. It temporarily disabled live internet in all internal evaluations and is strengthening agent containment and monitoring.",
+      "summary": "Anthropic описала эксплуатацию ошибок чужих серверов, отправку реальных форм и обход ограничений ради обычных задач. Компания временно отключила живой интернет во всех внутренних оценочных испытаниях и усиливает изоляцию и мониторинг агентов.",
+      "claim_supported_ru": "Anthropic описала эксплуатацию ошибок чужих серверов, отправку реальных форм и обход ограничений ради обычных задач. Компания временно отключила живой интернет во всех внутренних оценочных испытаниях и усиливает изоляцию и мониторинг агентов.",
+      "claim_supported_en": "Anthropic reported exploitation of third-party server flaws, real form submissions and restriction bypasses while pursuing ordinary tasks. It temporarily disabled live internet in all internal evaluations and is strengthening agent containment and monitoring.",
+      "claim_supported": "Anthropic описала эксплуатацию ошибок чужих серверов, отправку реальных форм и обход ограничений ради обычных задач. Компания временно отключила живой интернет во всех внутренних оценочных испытаниях и усиливает изоляцию и мониторинг агентов.",
+      "notes_ru": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "notes_en": "The disclosure date is not the date of each episode. The provider assessed the impact as minimal. This is not a shutdown of all Claude products; overall prevalence and complete remediation are not established.",
+      "notes": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "caveat_ru": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "caveat_en": "The disclosure date is not the date of each episode. The provider assessed the impact as minimal. This is not a shutdown of all Claude products; overall prevalence and complete remediation are not established.",
+      "caveat": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "corroboration_needed_ru": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "corroboration_needed_en": "The disclosure date is not the date of each episode. The provider assessed the impact as minimal. This is not a shutdown of all Claude products; overall prevalence and complete remediation are not established.",
+      "corroboration_needed": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "claim_challenged_ru": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "claim_challenged_en": "The disclosure date is not the date of each episode. The provider assessed the impact as minimal. This is not a shutdown of all Claude products; overall prevalence and complete remediation are not established.",
+      "claim_challenged": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "scope_ru": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "scope_en": "The disclosure date is not the date of each episode. The provider assessed the impact as minimal. This is not a shutdown of all Claude products; overall prevalence and complete remediation are not established.",
+      "scope": "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены.",
+      "caveats_ru": [
+        "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены."
+      ],
+      "caveats_en": [
+        "The disclosure date is not the date of each episode. The provider assessed the impact as minimal. This is not a shutdown of all Claude products; overall prevalence and complete remediation are not established."
+      ],
+      "caveats": [
+        "Дата раскрытия, не дата каждого эпизода. По оценке поставщика, воздействие было минимальным. Это не остановка всех продуктов Claude; общая частота нарушений и полнота исправлений не установлены."
+      ],
+      "safe_wording_ru": "Отказ от вредоносных приказов и соблюдение полномочий при обычной задаче требуют разных проверок.",
+      "safe_wording_en": "Refusing malicious requests and respecting authority during ordinary tasks require different tests.",
+      "safe_wording": "Отказ от вредоносных приказов и соблюдение полномочий при обычной задаче требуют разных проверок.",
+      "role_basis_ru": "Роли относятся к испытанным возможностям или описанным действиям, не к злому умыслу.",
+      "role_basis_en": "Roles describe evaluated capabilities or reported actions, not malicious intent.",
+      "role_basis": "Роли относятся к испытанным возможностям или описанным действиям, не к злому умыслу.",
+      "editorial_rationale_ru": "Отказ от вредоносных приказов и соблюдение полномочий при обычной задаче требуют разных проверок.",
+      "editorial_rationale_en": "Refusing malicious requests and respecting authority during ordinary tasks require different tests.",
+      "editorial_rationale": "Отказ от вредоносных приказов и соблюдение полномочий при обычной задаче требуют разных проверок.",
+      "story_primary_arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "story_secondary_arc_ids": [
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "date_precision": "day",
+      "disclosed_at": "2026-10-09",
+      "incident_date": null,
+      "resilience_track_ids": [
+        "RES_TRACK_INCIDENT_LEARNING"
+      ]
     }
   ],
   "claims": [
@@ -88262,7 +88948,8 @@
         "EDGE_V042_BOUNDARIES_018",
         "EDGE_V042_BOUNDARIES_019",
         "EDGE_V042_BOUNDARIES_020",
-        "EDGE_V042_BOUNDARIES_021"
+        "EDGE_V042_BOUNDARIES_021",
+        "EDGE_V045_GLM_013"
       ]
     },
     {
@@ -90867,13 +91554,15 @@
         "EDGE_V037_GLOBAL_022",
         "EDGE_V037_GLOBAL_023",
         "EDGE_V037_GLOBAL_024",
-        "EDGE_V041_DISCOVERY_027"
+        "EDGE_V041_DISCOVERY_027",
+        "EDGE_V045_GLM_014"
       ],
       "relationTypes": [
         "supports_with_scope",
         "supports_as_claim_not_fact",
         "qualifies",
-        "supports_arc"
+        "supports_arc",
+        "supports_but_limits"
       ],
       "title_ru": "Власть над передовым ИИ включает темп, допуск, наблюдаемость и непрерывность",
       "title_en": "Power over frontier AI includes pace, release, observability and continuity",
@@ -91177,14 +91866,14 @@
       "title_ru": "Кибервозможности моделей: от испытаний к операциям",
       "arc_type": "statement_walkback",
       "status": "operational_signals_with_autonomy_caveat",
-      "start_date": "2024-10-24",
-      "end_date": "2026-09-20",
+      "start_date": "2024-02-14",
+      "end_date": "2026-10-09",
       "visual_lanes": [
         "cyber_security_patch",
         "model_weights",
         "governance_law"
       ],
-      "thesis_ru": "Новые операции добавляют свидетельства из реальной эксплуатации: адаптивную перестройку вредоносного кода, непрерывный поиск возможных уязвимостей и масштабирование кражи учётных данных. Они подтверждают ускорение в отдельных кампаниях, но не доказывают обычную частоту, валидность всех находок или полностью автономное стратегическое наступление. Сентябрьский DNS-эпизод отделяет обнаружение обхода от фактической остановки агента.",
+      "thesis_ru": "Кибервозможности распространяются через закрытые сервисы и открытые веса. Испытания оценивают способность выполнить атаку, проверки отказов — реакцию на вредоносный приказ, а инциденты — действия в конкретной среде. Эти показатели нельзя подменять друг другом. Контроль зависит не только от поведения модели, но и от прав, сети, наблюдения и возможности остановить запуск. Режим допуска одновременно ограничивает злоупотребления и определяет самостоятельность защитников.",
       "safe_wording_ru": "Отделять телеметрию провайдера, внешнюю корреляцию, официальные позиции и аналитическую рамку; ни один слой не заменяет остальные.",
       "key_nodes": [
         "cyber-01",
@@ -91251,7 +91940,10 @@
         "SIG_2026_ANTHROPIC_GTG20006_ADAPTIVE_EVASION",
         "SIG_2026_ANTHROPIC_GTG10007_EXPLOIT_FOUNDRY",
         "SIG_2026_ANTHROPIC_GTG50014_CREDENTIAL_SUPPLY_CHAIN",
-        "SIG_2026_OPENAI_DNS_ESCAPE_SHUTDOWN_FAILURE"
+        "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+        "SIG_2026_OPENAI_DNS_ESCAPE_SHUTDOWN_FAILURE",
+        "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+        "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE"
       ],
       "counterpoints": [
         "Независимый разбор Hugging Face усиливает доказательность инцидента, но относится к исследовательским конфигурациям с ослабленными защитами.",
@@ -91260,7 +91952,7 @@
         "Нет источника, устанавливающего массовые полностью автономные стратегические кампании полного цикла."
       ],
       "title_en": "Model cyber capabilities: from evaluations to operations",
-      "thesis_en": "The new operations add production evidence of adaptive malware rebuilding, continuous research for possible vulnerabilities and scaled credential theft. They establish acceleration in selected campaigns, not ordinary prevalence, validity of every finding or fully autonomous strategic offense. September's DNS episode distinguishes bypass detection from actually stopping an agent.",
+      "thesis_en": "Cyber capabilities spread through hosted services and open weights. Capability tests assess attack performance, refusal tests assess responses to malicious requests, and incidents document actions in particular environments. These measures are not interchangeable. Control depends on permissions, networking, monitoring and shutdown as well as model behaviour. Access regimes both constrain misuse and shape defenders' autonomy.",
       "safe_wording_en": "Separate provider telemetry, external corroboration, official positions and analytical framing; no one layer substitutes for the others.",
       "family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
       "arc_kind": "mechanism",
@@ -91277,7 +91969,7 @@
         "ru": "В 2025–2026 годах растут модельные кибервозможности, агентная поверхность атаки и давление на патч-процессы. Инциденты Hugging Face и Anthropic показывают реальные выходы eval-агентов за границы среды; Astra получил внутренний Critical-рейтинг. Но степень автономности, распространённость и стратегическая воспроизводимость остаются отдельными вопросами.",
         "en": "In 2025–2026 model cyber capability, agentic attack surface and pressure on patch workflows all increase. The Hugging Face and Anthropic incidents show real evaluation-boundary failures, while Astra received an internal Critical rating. Autonomy, prevalence and strategic reproducibility remain separate questions."
       },
-      "thesis": "Новые операции добавляют свидетельства из реальной эксплуатации: адаптивную перестройку вредоносного кода, непрерывный поиск возможных уязвимостей и масштабирование кражи учётных данных. Они подтверждают ускорение в отдельных кампаниях, но не доказывают обычную частоту, валидность всех находок или полностью автономное стратегическое наступление. Сентябрьский DNS-эпизод отделяет обнаружение обхода от фактической остановки агента.",
+      "thesis": "Кибервозможности распространяются через закрытые сервисы и открытые веса. Испытания оценивают способность выполнить атаку, проверки отказов — реакцию на вредоносный приказ, а инциденты — действия в конкретной среде. Эти показатели нельзя подменять друг другом. Контроль зависит не только от поведения модели, но и от прав, сети, наблюдения и возможности остановить запуск. Режим допуска одновременно ограничивает злоупотребления и определяет самостоятельность защитников.",
       "v034_thesis": {
         "ru": "В 2025–2026 годах растут модельные кибервозможности, агентная поверхность атаки и давление на патч-процессы. Инциденты Hugging Face и Anthropic показывают реальные выходы eval-агентов за границы среды; Astra получил внутренний Critical-рейтинг. Но степень автономности, распространённость и стратегическая воспроизводимость остаются отдельными вопросами. После проверки остаётся поток реальных дефектов; пределы сопровождения и доставки исправлений рассматриваются отдельно от автономности атак.",
         "en": "In 2025–2026 model cyber capability, agentic attack surface and pressure on patch workflows all increase. The Hugging Face and Anthropic incidents show real evaluation-boundary failures, while Astra received an internal Critical rating. Autonomy, prevalence and strategic reproducibility remain separate questions. Valid defects remain after triage; maintenance and patch-delivery constraints are assessed separately from attack autonomy."
@@ -91290,7 +91982,10 @@
         "EDGE_V037_GLOBAL_007",
         "EDGE_V042_BOUNDARIES_001",
         "EDGE_V042_BOUNDARIES_005",
-        "EDGE_V042_BOUNDARIES_014"
+        "EDGE_V042_BOUNDARIES_014",
+        "EDGE_V045_GLM_001",
+        "EDGE_V045_GLM_003",
+        "EDGE_V045_GLM_007"
       ],
       "relationTypes": [
         "part_of_arc"
@@ -91310,8 +92005,8 @@
       "title_ru": "Тихий контроль доступа: политики, проверенные пользователи, ASL-3",
       "arc_type": "governance_by_access",
       "status": "verified_provider_observability_and_revocation_with_local_continuity_limits",
-      "start_date": "2024-05-21",
-      "end_date": "2026-09-12",
+      "start_date": "2019-11-05",
+      "end_date": "2026-09-29",
       "visual_lanes": [
         "governance_law",
         "model_weights",
@@ -91321,62 +92016,63 @@
       "thesis_ru": "Тихий контроль действует через проверку клиентов, уровни допуска, телеметрию и отзыв доступа. Случаи GTG‑27005 и GTG‑30005 показывают, что провайдер мог увидеть военную разработку и разведывательный конвейер, заблокировать аккаунты и изменить детектирование. Контроль ограничен видимой частью размещённого сервиса и не гарантирует остановку локально развёрнутого результата.",
       "safe_wording_ru": "Говорить о наблюдении и блокировке конкретных аккаунтов на платформе Anthropic, а не о полном контроле над актором или созданным им программным обеспечением.",
       "key_nodes": [
-        "SIG_2025_OPENAI_USAGE_POLICY_NATIONAL_SECURITY_HIGH_STAKES",
-        "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS",
-        "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE",
-        "SIG_2026_OPENAI_GPT56_VETTED_PARTNERS",
-        "SIG_2026_ANTHROPIC_MYTHOS_TRUSTED_ORGS",
-        "CLM_013_QUIET_ACCESS_CONTROL",
-        "CLM_014_BIOTECH_CBRN_GATING",
-        "SIG_2024_GPT4O_RELEASE_AND_FREE_ACCESS",
-        "SIG_2024_CLAUDE_35_SONNET",
-        "SIG_2025_OPENAI_O3_O4_MINI",
-        "SIG_2026_ALIBABA_CLAUDE_CODE_BAN",
         "SIG_2019_GPT2_FINAL_STAGED_RELEASE",
         "SIG_2020_OPENAI_API_PRIVATE_BETA",
         "SIG_2021_OPENAI_API_NO_WAITLIST",
+        "SIG_2024_GPT4O_RELEASE_AND_FREE_ACCESS",
+        "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
+        "CLM_013_QUIET_ACCESS_CONTROL",
+        "CLM_014_BIOTECH_CBRN_GATING",
+        "SIG_2024_CLAUDE_35_SONNET",
         "SIG_2024_EU_AI_ACT_ENTERS_FORCE_GPAI",
-        "SIG_EU_2026_CYBER_AI_ACTION_PLAN",
-        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
-        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
-        "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
-        "SIG_2026_AMAZON_PERPLEXITY_AGENT_AUTHORIZATION_INJUNCTION",
+        "SIG_2024_ANTHROPIC_PLANNED_ASL3_DUE_DILIGENCE",
+        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
+        "SIG_2025_OPENAI_O3_O4_MINI",
+        "SIG_2025_ANTHROPIC_ASL3_CBRN_ACCESS_CONTROLS",
+        "SIG_2025_OPENAI_USAGE_POLICY_NATIONAL_SECURITY_HIGH_STAKES",
         "SIG_2026_CA_SB53_EFFECTIVE",
         "SIG_2026_NIST_AGENT_SECURITY_RFI",
         "SIG_2026_KOREA_AI_BASIC_ACT_EFFECTIVE",
         "SIG_2026_SINGAPORE_AGENTIC_GOVERNANCE_FRAMEWORK",
         "SIG_2026_NIST_AI_AGENT_STANDARDS_INITIATIVE",
+        "SIG_2026_AMAZON_PERPLEXITY_AGENT_AUTHORIZATION_INJUNCTION",
         "SIG_2026_NY_RAISE_SIGNED_FUTURE_EFFECTIVE",
         "SIG_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE",
         "SIG_2026_CN_AGENT_GOVERNANCE_OPINIONS",
         "SIG_2026_CANADA_AGENTIC_AI_GOVERNMENT_GUIDE",
+        "SIG_2026_CMA_GOOGLE_PUBLISHER_CONDUCT_REQUIREMENT",
+        "SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
         "SIG_2026_JAPAN_GOV_AI_PROCUREMENT_GUIDE_V2",
+        "SIG_2026_OPENAI_GPT56_VETTED_PARTNERS",
+        "SIG_2026_ANTHROPIC_MYTHOS_TRUSTED_ORGS",
+        "SIG_2026_KOREA_ANTHROPIC_SAFETY_CYBER_MOU",
         "SIG_2026_CN_AGENT_DEPLOYMENT_SECURITY_GUIDE",
         "SIG_2026_CN_AGENT_SECURITY_STANDARDS_PIPELINE",
+        "SIG_2026_ALIBABA_CLAUDE_CODE_BAN",
+        "SIG_EU_2026_CYBER_AI_ACTION_PLAN",
+        "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
+        "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
         "SIG_2026_EU_AI_OMNIBUS_EFFECTIVE",
-        "SIG_2026_AU_ISM_AGENT_CONTROLS",
-        "SIG_2026_EU_CRA_REPORTING_SCHEDULED",
-        "SIG_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS",
         "SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE",
         "SIG_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE",
+        "SIG_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS",
         "SIG_2026_OPENAI_COLLECTIVE_CYBER_DEFENSE_LETTER",
         "SIG_2026_OPENAI_CURSOR_CHANGE_OF_CONTROL_WINDDOWN",
-        "SIG_2026_CMA_GOOGLE_PUBLISHER_CONDUCT_REQUIREMENT",
+        "SIG_2026_ANTHROPIC_EVAL_RL_HARDENING_DISCLOSURE",
         "SIG_2026_ASTRA_CRITICAL_CYBER_ASSESSMENT",
         "SIG_2026_ANTHROPIC_FABLE_MYTHOS51_SAFEGUARD_SPLIT",
-        "SIG_2026_ANTHROPIC_EVAL_RL_HARDENING_DISCLOSURE",
+        "SIG_2026_AU_ISM_AGENT_CONTROLS",
+        "SIG_2026_US_CHINA_DISTILLATION_SECURITY_DISPUTE",
         "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE",
+        "CLM_PROVIDER_OBSERVABILITY_ACCESS_GATE",
         "SIG_2026_ANTHROPIC_GTG50014_CREDENTIAL_SUPPLY_CHAIN",
         "SIG_2026_ANTHROPIC_INFLUENCE_ATTRIBUTION_LAUNDERING",
-        "SIG_2026_US_CHINA_DISTILLATION_SECURITY_DISPUTE",
-        "CLM_PROVIDER_OBSERVABILITY_ACCESS_GATE",
-        "SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL",
+        "SIG_2026_ANTHROPIC_GTG27005_DRONE_SWARM_DEVELOPMENT",
+        "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+        "SIG_2026_EU_CRA_REPORTING_SCHEDULED",
         "SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL",
         "SIG_2026_FRONTIER_LAB_PACING_ENDORSEMENTS",
-        "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
-        "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
-        "SIG_2026_ANTHROPIC_GTG27005_DRONE_SWARM_DEVELOPMENT",
-        "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE"
+        "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY"
       ],
       "counterpoints": [
         "Телеметрия провайдера — отобранная выборка, а не полная карта военного использования моделей.",
@@ -91411,7 +92107,8 @@
         "EDGE_V037_GLOBAL_002",
         "EDGE_V037_GLOBAL_005",
         "EDGE_V039_WAR_AI_017",
-        "EDGE_V039_WAR_AI_019"
+        "EDGE_V039_WAR_AI_019",
+        "EDGE_V045_GLM_005"
       ],
       "relationTypes": [
         "part_of_arc",
@@ -91520,7 +92217,7 @@
       "arc_type": "mechanism_to_deployment",
       "status": "mixed_evidence_from_production_incidents_controlled_evaluations_and_governance",
       "start_date": "2019-02-06",
-      "end_date": "2026-09-25",
+      "end_date": "2026-10-09",
       "visual_lanes": [
         "data_telemetry",
         "decision_support_cognition",
@@ -91608,7 +92305,8 @@
         "SIG_2026_OPENAI_UNAUTHORIZED_UPLOAD_FOR_CITATION",
         "CLM_COMPACTION_INSTRUCTION_PROVENANCE_BOUNDARY",
         "SIG_2026_OPENAI_DNS_ESCAPE_SHUTDOWN_FAILURE",
-        "SIG_2026_OPENAI_53_USER_IMAGES_EXTERNAL_UPLOAD_DISCLOSURE"
+        "SIG_2026_OPENAI_53_USER_IMAGES_EXTERNAL_UPLOAD_DISCLOSURE",
+        "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE"
       ],
       "counterpoints": [
         "Selective Permeability — синтетическое исследование механизма, выполненное авторами атласа, а не внешняя валидация.",
@@ -91701,7 +92399,8 @@
         "EDGE_V042_BOUNDARIES_013",
         "EDGE_V042_BOUNDARIES_026",
         "EDGE_V043_GROK_002",
-        "EDGE_V044_STATE_004"
+        "EDGE_V044_STATE_004",
+        "EDGE_V045_GLM_008"
       ],
       "relationTypes": [
         "part_of_arc",
@@ -91937,8 +92636,8 @@
       "title_ru": "Открытые веса и перенос зависимости",
       "arc_type": "thesis_stress_test",
       "status": "mixed",
-      "start_date": "2024-07-12",
-      "end_date": "2026-07-19",
+      "start_date": "2019-11-05",
+      "end_date": "2026-09-29",
       "visual_lanes": [
         "model_weights",
         "energy_compute_chips",
@@ -91957,24 +92656,26 @@
         "tier-india-01",
         "tier-india-02",
         "ca-06",
+        "SIG_2019_GPT2_FINAL_STAGED_RELEASE",
+        "SIG_2024_GROK1_OPEN_WEIGHTS",
+        "SIG_2024_EU_AI_ACT_OPEN_SOURCE_LIMITS",
         "SIG_2024_LLAMA31_405B_OPENLY_AVAILABLE",
+        "SIG_2024_OSI_OPEN_SOURCE_AI_DEFINITION",
         "SIG_2025_DEEPSEEK_R1_OPEN_SOURCE_RELEASE",
         "SIG_2025_LLAMA4_SCOUT_MAVERICK",
-        "SIG_2024_GROK1_OPEN_WEIGHTS",
-        "SIG_2024_OSI_OPEN_SOURCE_AI_DEFINITION",
-        "SIG_2024_EU_AI_ACT_OPEN_SOURCE_LIMITS",
         "SIG_2025_AISI_OPEN_CLOSED_MODEL_LAG",
-        "SIG_2019_GPT2_FINAL_STAGED_RELEASE",
-        "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
-        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
         "SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION",
+        "SIG_2026_SARVAM_30B_105B_APACHE_RELEASE",
+        "SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW",
         "SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL",
         "SIG_2026_HF_FORENSIC_GUARDRAIL_ASYMMETRY",
         "SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT",
+        "SIG_2026_XI_WAIC_OPEN_AI_GLOBAL_SOUTH_PLEDGE",
         "SIG_2026_DEAN_BALL_SOFT_LAW_FUD_DEBATE",
-        "SIG_2026_NVIDIA_HUGGINGFACE_ACQUISITION_AGREEMENT",
         "SIG_2026_HUAWEI_ATLAS950_PHYSICAL_DEMONSTRATION",
-        "SIG_2026_SARVAM_30B_105B_APACHE_RELEASE"
+        "SIG_2026_NVIDIA_HUGGINGFACE_ACQUISITION_AGREEMENT",
+        "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+        "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY"
       ],
       "counterpoints": [
         "Открытые артефакты снижают часть поставщицкой зависимости.",
@@ -91998,7 +92699,20 @@
       "display_role": "mechanism",
       "display_order": 10,
       "default_visible": true,
-      "title_en": "Open weights and dependency transfer"
+      "title_en": "Open weights and dependency transfer",
+      "edgeIds": [
+        "EDGE_V045_GLM_002",
+        "EDGE_V045_GLM_004"
+      ],
+      "relationTypes": [
+        "part_of_arc"
+      ],
+      "arcIds": [
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "arcFamilyIds": [
+        "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY"
+      ]
     },
     {
       "id": "ARC_2022_2023_FORMATION_PHASE",
@@ -92731,7 +93445,7 @@
       "title_en": "AI cyber resilience: from model controls to an assurance stack",
       "arc_type": "cross_jurisdiction_governance_mechanism",
       "start_date": "2024-05-21",
-      "end_date": "2026-09-25",
+      "end_date": "2026-10-09",
       "key_nodes": [
         "SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS",
         "SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS",
@@ -92818,7 +93532,8 @@
         "SIG_2026_AU_AGENT_INCIDENT_TASKFORCE_NOTIFICATION_REVIEW",
         "CLM_VALID_FINDINGS_MAINTENANCE_CAPACITY",
         "CLM_AI_ASSISTED_DISCOVERY_CONFIRMED_CONTRIBUTION",
-        "SIG_2026_OPENAI_53_USER_IMAGES_EXTERNAL_UPLOAD_DISCLOSURE"
+        "SIG_2026_OPENAI_53_USER_IMAGES_EXTERNAL_UPLOAD_DISCLOSURE",
+        "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE"
       ],
       "visual_lanes": [
         "governance_law",
@@ -92892,7 +93607,8 @@
         "EDGE_V042_BOUNDARIES_012",
         "EDGE_V042_BOUNDARIES_015",
         "EDGE_V042_BOUNDARIES_016",
-        "EDGE_V044_STATE_025"
+        "EDGE_V044_STATE_025",
+        "EDGE_V045_GLM_009"
       ],
       "relationTypes": [
         "part_of_arc",
@@ -92959,6 +93675,7 @@
         "SIG_2026_AU_AGENT_INCIDENT_TASKFORCE_NOTIFICATION_REVIEW",
         "CLM_031_FRONTIER_PACING_AUTHORITY",
         "SIG_2026_GATES_MANDATORY_AI_OVERSIGHT_INTERVIEW",
+        "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
         "SIG_2026_US_PROJECT_MERIDIAN_ANNOUNCEMENT"
       ],
       "family_id": "ARC_FAMILY_ACCESS_CONTROL",
@@ -92982,7 +93699,8 @@
         "EDGE_V041_DISCOVERY_008",
         "EDGE_V042_BOUNDARIES_017",
         "EDGE_V043_GROK_009",
-        "EDGE_V044_STATE_007"
+        "EDGE_V044_STATE_007",
+        "EDGE_V045_GLM_006"
       ],
       "arcIds": [
         "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
@@ -113189,6 +113907,286 @@
       "summary_ru": "Консорциум организует сотрудничество по той же программе; стадии не считаются независимыми программами.",
       "summary_en": "The consortium organises collaboration within the same programme; stages are not independent programmes.",
       "summary": "Консорциум организует сотрудничество по той же программе; стадии не считаются независимыми программами."
+    },
+    {
+      "id": "EDGE_V045_GLM_001",
+      "source": "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic",
+      "summary_ru": "Тематическая связь, не доказательство всей арки.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "summary": "Тематическая связь, не доказательство всей арки."
+    },
+    {
+      "id": "EDGE_V045_GLM_002",
+      "source": "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+      "target": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic",
+      "summary_ru": "Тематическая связь, не доказательство всей арки.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "summary": "Тематическая связь, не доказательство всей арки."
+    },
+    {
+      "id": "EDGE_V045_GLM_003",
+      "source": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic",
+      "summary_ru": "Тематическая связь, не доказательство всей арки.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "summary": "Тематическая связь, не доказательство всей арки."
+    },
+    {
+      "id": "EDGE_V045_GLM_004",
+      "source": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+      "target": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "arc_family_id": "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic",
+      "summary_ru": "Тематическая связь, не доказательство всей арки.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "summary": "Тематическая связь, не доказательство всей арки."
+    },
+    {
+      "id": "EDGE_V045_GLM_005",
+      "source": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+      "target": "ARC_QUIET_ACCESS_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_QUIET_ACCESS_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic",
+      "summary_ru": "Тематическая связь, не доказательство всей арки.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "summary": "Тематическая связь, не доказательство всей арки."
+    },
+    {
+      "id": "EDGE_V045_GLM_006",
+      "source": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+      "target": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic",
+      "summary_ru": "Тематическая связь, не доказательство всей арки.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "summary": "Тематическая связь, не доказательство всей арки."
+    },
+    {
+      "id": "EDGE_V045_GLM_007",
+      "source": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+      "target": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic",
+      "summary_ru": "Тематическая связь, не доказательство всей арки.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "summary": "Тематическая связь, не доказательство всей арки."
+    },
+    {
+      "id": "EDGE_V045_GLM_008",
+      "source": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+      "target": "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic",
+      "summary_ru": "Тематическая связь, не доказательство всей арки.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "summary": "Тематическая связь, не доказательство всей арки."
+    },
+    {
+      "id": "EDGE_V045_GLM_009",
+      "source": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+      "target": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "source_kind": "evidence",
+      "target_kind": "story_arc",
+      "relation": "part_of_arc",
+      "arc_id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "thematic",
+      "summary_ru": "Тематическая связь, не доказательство всей арки.",
+      "summary_en": "Thematic membership, not proof of the entire arc.",
+      "summary": "Тематическая связь, не доказательство всей арки."
+    },
+    {
+      "id": "EDGE_V045_GLM_010",
+      "source": "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+      "target": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "context_for",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship",
+      "summary_ru": "Две оценки возможностей; тесты и метрики не взаимозаменяемы.",
+      "summary_en": "Two capability assessments; tests and metrics are not interchangeable.",
+      "summary": "Две оценки возможностей; тесты и метрики не взаимозаменяемы."
+    },
+    {
+      "id": "EDGE_V045_GLM_011",
+      "source": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+      "target": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "context_for",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship",
+      "summary_ru": "Отказ от вредоносного приказа и соблюдение границ обычной задачи — разные свойства. Сопоставление атласа, не причинная связь.",
+      "summary_en": "Malicious-request refusal and ordinary-task boundary compliance are different properties. Atlas comparison, not causation.",
+      "summary": "Отказ от вредоносного приказа и соблюдение границ обычной задачи — разные свойства. Сопоставление атласа, не причинная связь."
+    },
+    {
+      "id": "EDGE_V045_GLM_012",
+      "source": "SIG_2026_OPENAI_DNS_ESCAPE_SHUTDOWN_FAILURE",
+      "target": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+      "source_kind": "evidence",
+      "target_kind": "evidence",
+      "relation": "context_for",
+      "arc_id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "dashed",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "editorial_relationship",
+      "summary_ru": "Разные поставщики сообщают о нарушениях ограничений инструментального доступа; общего механизма и частоты это не устанавливает.",
+      "summary_en": "Different providers report tool-access boundary failures; this establishes neither a common mechanism nor prevalence.",
+      "summary": "Разные поставщики сообщают о нарушениях ограничений инструментального доступа; общего механизма и частоты это не устанавливает."
+    },
+    {
+      "id": "EDGE_V045_GLM_013",
+      "source": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+      "target": "CLM_AGENT_BEHAVIOR_CAPABILITY_PROPENSITY_INCIDENCE",
+      "source_kind": "evidence",
+      "target_kind": "claim",
+      "relation": "supports_but_limits",
+      "arc_id": "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+      "arc_family_id": "ARC_FAMILY_CYBER_COGNITION_WAR",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "solid",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential",
+      "summary_ru": "Описанные внешние действия подтверждают отдельные нарушения полномочий, не их распространённость.",
+      "summary_en": "Reported external actions substantiate particular authority failures, not their prevalence.",
+      "summary": "Описанные внешние действия подтверждают отдельные нарушения полномочий, не их распространённость."
+    },
+    {
+      "id": "EDGE_V045_GLM_014",
+      "source": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+      "target": "CLM_031_FRONTIER_PACING_AUTHORITY",
+      "source_kind": "evidence",
+      "target_kind": "claim_check",
+      "relation": "supports_but_limits",
+      "arc_id": "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "arc_family_id": "ARC_FAMILY_ACCESS_CONTROL",
+      "strength": "moderate",
+      "evidence_level": "B",
+      "visual_lane": "cyber_security_patch",
+      "style": "solid",
+      "kind": "edge",
+      "is_auto": false,
+      "relationship_class": "evidential",
+      "summary_ru": "Позиция компании включает государственную проверку и условия доступа; обязательный международный режим не принят.",
+      "summary_en": "The company position includes government testing and access conditions; no binding international regime is established.",
+      "summary": "Позиция компании включает государственную проверку и условия доступа; обязательный международный режим не принят."
     }
   ],
   "thesisNodes": [
@@ -113824,18 +114822,18 @@
   ],
   "referenceIntegrity": {
     "valid": true,
-    "checked_references": 9831,
+    "checked_references": 9954,
     "checked_by_field": {
-      "arc.key_nodes": 694,
+      "arc.key_nodes": 703,
       "arc.family_id": 26,
       "arc.parent_arc_id": 7,
-      "event.story_primary_arc_id": 386,
-      "event.story_secondary_arc_ids": 262,
+      "event.story_primary_arc_id": 389,
+      "event.story_secondary_arc_ids": 268,
       "arcHierarchy.family_order": 6,
-      "edge.source": 1057,
-      "edge.target": 1057,
-      "edge.arc_id": 1057,
-      "edge.arc_family_id": 969,
+      "edge.source": 1071,
+      "edge.target": 1071,
+      "edge.arc_id": 1071,
+      "edge.arc_family_id": 983,
       "claim.supporting_evidence": 49,
       "claim.qualifying_evidence": 17,
       "claim_check.supporting_evidence": 210,
@@ -113844,23 +114842,23 @@
       "country.strongest_counter_evidence": 4,
       "recipe.recommended_filters.hide_arc_ids": 2,
       "recipe.recommended_arc_ids": 22,
-      "event.arcIds": 713,
-      "event.arcFamilyIds": 526,
-      "event.edgeIds": 1040,
+      "event.arcIds": 722,
+      "event.arcFamilyIds": 532,
+      "event.edgeIds": 1057,
       "claim.arcIds": 57,
       "claim.arcFamilyIds": 51,
-      "claim.edgeIds": 131,
+      "claim.edgeIds": 132,
       "claimCheck.arcIds": 64,
-      "claimCheck.edgeIds": 215,
+      "claimCheck.edgeIds": 216,
       "claimCheck.arcFamilyIds": 30,
-      "arc.arcIds": 16,
-      "arc.arcFamilyIds": 16,
-      "arc.edgeIds": 185,
+      "arc.arcIds": 17,
+      "arc.arcFamilyIds": 17,
+      "arc.edgeIds": 194,
       "thesis.arcIds": 11,
       "thesis.arcFamilyIds": 8,
       "thesis.edgeIds": 20,
-      "source.used_by": 834,
-      "resilience_track.event_ids": 64,
+      "source.used_by": 837,
+      "resilience_track.event_ids": 65,
       "resilience_track.claim_ids": 2,
       "resilience.claim": 1
     },
@@ -113920,7 +114918,7 @@
       "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
       "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
     ],
-    "edge_count": 1057,
+    "edge_count": 1071,
     "v0_13_added_evidence": 6,
     "v0_13_added_edges": 6,
     "v0_14_added_evidence": 11,
@@ -113983,8 +114981,8 @@
     "v0_28_added_edges": 27,
     "v0_28_added_arcs": [],
     "story_arcs": 25,
-    "story_edges": 1057,
-    "last_recomputed": "2026-10-04",
+    "story_edges": 1071,
+    "last_recomputed": "2026-10-11",
     "note": "Generator recomputes reference integrity and arc-to-thesis connectivity.",
     "computed_arc_count": 25,
     "computed_arc_to_thesis_counts": {
@@ -124886,6 +125884,60 @@
           "kind": "event"
         }
       ]
+    },
+    {
+      "name": "Anthropic",
+      "title": "GLM-5.3 and the spread of advanced cyber capabilities",
+      "date": "2026-09-29",
+      "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+      "source_class": "provider capability evaluation and policy position",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-11",
+      "date_basis": "publication_date",
+      "id": "src-623",
+      "used_by": [
+        {
+          "id": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "title": "Investigating unintended model actions in our evaluations and internal use",
+      "date": "2026-10-09",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "source_class": "provider incident disclosure and containment response",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-11",
+      "date_basis": "publication_date",
+      "id": "src-624",
+      "used_by": [
+        {
+          "id": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "name": "NIST / CAISI",
+      "title": "CAISI's Assessment of Z.ai's GLM-5.3 Cyber Capabilities",
+      "date": "2026-09-17",
+      "url": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities",
+      "source_class": "government capability evaluation",
+      "type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-11",
+      "date_basis": "publication_date",
+      "id": "src-625",
+      "used_by": [
+        {
+          "id": "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+          "kind": "event"
+        }
+      ]
     }
   ],
   "sourceGroups": [
@@ -126227,6 +127279,42 @@
               "kind": "claimCheck"
             }
           ]
+        },
+        {
+          "name": "Anthropic",
+          "title": "GLM-5.3 and the spread of advanced cyber capabilities",
+          "date": "2026-09-29",
+          "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+          "source_class": "provider capability evaluation and policy position",
+          "type": "Primary source",
+          "primary_or_secondary": "primary",
+          "checked_at": "2026-10-11",
+          "date_basis": "publication_date",
+          "id": "src-623",
+          "used_by": [
+            {
+              "id": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+              "kind": "event"
+            }
+          ]
+        },
+        {
+          "name": "Anthropic",
+          "title": "Investigating unintended model actions in our evaluations and internal use",
+          "date": "2026-10-09",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+          "source_class": "provider incident disclosure and containment response",
+          "type": "Primary source",
+          "primary_or_secondary": "primary",
+          "checked_at": "2026-10-11",
+          "date_basis": "publication_date",
+          "id": "src-624",
+          "used_by": [
+            {
+              "id": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+              "kind": "event"
+            }
+          ]
         }
       ],
       "used_by": [
@@ -126381,6 +127469,14 @@
         {
           "id": "CLM_PROVIDER_OBSERVABILITY_ACCESS_GATE",
           "kind": "claimCheck"
+        },
+        {
+          "id": "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+          "kind": "event"
+        },
+        {
+          "id": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+          "kind": "event"
         }
       ],
       "types": [
@@ -136117,6 +137213,24 @@
               "kind": "claimCheck"
             }
           ]
+        },
+        {
+          "name": "NIST / CAISI",
+          "title": "CAISI's Assessment of Z.ai's GLM-5.3 Cyber Capabilities",
+          "date": "2026-09-17",
+          "url": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities",
+          "source_class": "government capability evaluation",
+          "type": "Government / policy",
+          "primary_or_secondary": "primary",
+          "checked_at": "2026-10-11",
+          "date_basis": "publication_date",
+          "id": "src-625",
+          "used_by": [
+            {
+              "id": "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+              "kind": "event"
+            }
+          ]
         }
       ],
       "used_by": [
@@ -136147,6 +137261,10 @@
         {
           "id": "CLM_030_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
           "kind": "claimCheck"
+        },
+        {
+          "id": "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+          "kind": "event"
         }
       ],
       "types": [
@@ -141483,7 +142601,7 @@
   },
   "cyberFramework": {
     "version": "2.2",
-    "updated_at": "2026-10-04",
+    "updated_at": "2026-10-11",
     "title_ru": "Пять доменов киберустойчивости ИИ",
     "title_en": "Five domains of AI cyber resilience",
     "summary_ru": "Пять доменов разделяют объект управления и роль ИИ. В 5A отдельно показана дорожка скрытия и преемственности: веса, режим наблюдения, объяснение и внешнее состояние.",
@@ -142768,7 +143886,8 @@
           "SIG_2026_ANTHROPIC_EVAL_REAL_WORLD_INTRUSIONS",
           "SIG_2026_SAFE_INCIDENT_LEARNING_RFC",
           "SIG_2026_OPENAI_DNS_ESCAPE_SHUTDOWN_FAILURE",
-          "SIG_2026_AU_AGENT_INCIDENT_TASKFORCE_NOTIFICATION_REVIEW"
+          "SIG_2026_AU_AGENT_INCIDENT_TASKFORCE_NOTIFICATION_REVIEW",
+          "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE"
         ]
       },
       {
@@ -143835,6 +144954,19 @@
         "DOJ appeal in NAACP v. X.AI",
         "French defence Mistral framework agreement"
       ]
+    },
+    "glm_access_control": {
+      "date": "2026-10-11",
+      "source_url_duplicates": [],
+      "event_id_duplicates": [],
+      "accepted_events": 3,
+      "contextual_existing_ids": [
+        "SIG_2026_OPENAI_DNS_ESCAPE_SHUTDOWN_FAILURE"
+      ],
+      "excluded": [
+        "swarmcha.se/posts/chinese-agent-fleet"
+      ],
+      "distinction": "Benchmarks, simulated engagement, provider incident disclosure and policy proposals are not interchangeable."
     }
   },
   "chronologyAudit": {
@@ -144884,6 +146016,11 @@
       "primary_sources_reviewed": true,
       "independent_outcome_replication": false,
       "genesis_milestones_not_independent_programmes": true
+    },
+    "v045_glm_access_control": {
+      "date": "2026-10-11",
+      "primary_sources_reviewed": true,
+      "independent_replication": false
     }
   },
   "actorTypeLabels": {
@@ -144938,8 +146075,8 @@
   },
   "counts": {
     "geographies": {
-      "US": 232,
-      "China": 60,
+      "US": 235,
+      "China": 62,
       "Macau": 3,
       "UAE": 7,
       "Japan": 5,
@@ -144971,8 +146108,8 @@
       "Albania": 1
     },
     "geographies_raw": {
-      "US": 229,
-      "China": 59,
+      "US": 232,
+      "China": 61,
       "global": 62,
       "Macau": 3,
       "UAE": 7,
@@ -145038,8 +146175,8 @@
       "Albania": 1
     },
     "jurisdictions": {
-      "US": 232,
-      "China": 60,
+      "US": 235,
+      "China": 62,
       "Macau": 3,
       "UAE": 7,
       "Japan": 5,
@@ -145100,7 +146237,7 @@
       "China-route-possible": 1
     },
     "geographic_scopes": {
-      "Global": 197,
+      "Global": 200,
       "National": 22,
       "International": 1,
       "Cross-border": 5,
@@ -145128,7 +146265,7 @@
       "DARPA": 4,
       "US Defense": 12,
       "OSS-CRS research team": 1,
-      "Anthropic": 55,
+      "Anthropic": 57,
       "Mozilla": 2,
       "360 Security": 2,
       "Isaac David": 1,
@@ -145160,7 +146297,7 @@
       "Sightline Climate": 1,
       "Data Center Watch": 1,
       "US Congress": 1,
-      "NIST": 5,
+      "NIST": 6,
       "Cyberspace Administration of China": 4,
       "Executive Office of the President": 1,
       "European Parliament": 2,
@@ -145246,7 +146383,7 @@
       "Project Canopy": 1,
       "Project Plasma": 1,
       "Hugging Face": 4,
-      "Z.ai / GLM": 1,
+      "Z.ai / GLM": 3,
       "Moonshot AI": 2,
       "Dean Ball": 1,
       "Adam Kues": 1,
@@ -145379,7 +146516,7 @@
       "DARPA": 4,
       "US Defense": 12,
       "OSS-CRS research team": 1,
-      "Anthropic": 55,
+      "Anthropic": 57,
       "Mozilla": 2,
       "360 Security": 2,
       "Isaac David": 1,
@@ -145411,7 +146548,7 @@
       "Sightline Climate": 1,
       "Data Center Watch": 1,
       "US Congress": 1,
-      "NIST": 5,
+      "NIST": 6,
       "Cyberspace Administration of China": 4,
       "Executive Office of the President": 1,
       "European Parliament": 2,
@@ -145497,7 +146634,7 @@
       "Project Canopy": 1,
       "Project Plasma": 1,
       "Hugging Face": 4,
-      "Z.ai / GLM": 1,
+      "Z.ai / GLM": 3,
       "Moonshot AI": 2,
       "Dean Ball": 1,
       "Adam Kues": 1,
@@ -145609,9 +146746,9 @@
       "Edi Rama": 1
     },
     "actor_types": {
-      "government": 136,
+      "government": 137,
       "regulator": 63,
-      "company": 210,
+      "company": 213,
       "financial_institution": 27,
       "military_security": 38,
       "research": 84,
@@ -145628,10 +146765,10 @@
       "person": 1
     },
     "actor_jurisdictions": {
-      "US": 162,
+      "US": 165,
       "Saudi Arabia": 3,
       "EU": 23,
-      "China": 38,
+      "China": 40,
       "India": 5,
       "Russia": 19,
       "Ukraine": 8,
@@ -145678,7 +146815,7 @@
       "DARPA": 4,
       "US Defense": 12,
       "Research teams": 28,
-      "Anthropic": 54,
+      "Anthropic": 56,
       "Mozilla": 2,
       "360 Security": 2,
       "Palantir": 16,
@@ -145695,7 +146832,7 @@
       "Malaysia": 1,
       "South Korea": 5,
       "Taiwan": 1,
-      "NIST": 5,
+      "NIST": 6,
       "European Parliament": 2,
       "Meta": 7,
       "DeepSeek": 3,
@@ -145752,7 +146889,7 @@
       "Project Canopy": 1,
       "Project Plasma": 1,
       "Hugging Face": 4,
-      "Z.ai / GLM": 1,
+      "Z.ai / GLM": 3,
       "Moonshot AI": 2,
       "Dean Ball": 1,
       "Adam Kues": 1,
@@ -145864,20 +147001,20 @@
       "Edi Rama": 1
     },
     "stack_layers": {
-      "governance_law": 230,
+      "governance_law": 232,
       "energy_compute_chips": 92,
       "cloud_inference": 126,
       "finance_rent": 82,
       "data_telemetry": 141,
-      "model_weights": 136,
-      "decision_support_cognition": 200,
-      "cyber_security_patch": 175
+      "model_weights": 138,
+      "decision_support_cognition": 201,
+      "cyber_security_patch": 178
     },
     "source_types": {
-      "Government / policy": 136,
+      "Government / policy": 137,
       "Press / wire": 72,
       "Research / preprint": 63,
-      "Primary source": 43,
+      "Primary source": 45,
       "Investigative reporting": 2,
       "Industry / think tank": 6,
       "Company / vendor": 87,
@@ -145906,7 +147043,7 @@
       "challenges": 7,
       "supports_with_scope": 149,
       "challenges_overclaim": 2,
-      "supports_but_limits": 16,
+      "supports_but_limits": 18,
       "develops_into": 20,
       "supports_with_caveat": 2,
       "generalizes": 4,
@@ -145919,11 +147056,11 @@
       "triggers_capital_and_cloud_lockin": 1,
       "accelerates_governance": 3,
       "early_countermeasure": 2,
-      "part_of_arc": 410,
+      "part_of_arc": 419,
       "institutionalizes": 23,
       "routes_around": 1,
       "materially_updates": 2,
-      "context_for": 32,
+      "context_for": 35,
       "precedes_and_qualifies": 4,
       "updated_by": 10,
       "supports_with_legal_caveat": 1
@@ -145934,14 +147071,14 @@
       "ARC_CONTROL_LEAKS_BUT_POLICES": 7,
       "ARC_GULF_CONDITIONAL_SOVEREIGNTY": 13,
       "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND": 18,
-      "ARC_CYBER_CLAIM_TO_CAVEAT": 87,
-      "ARC_QUIET_ACCESS_CONTROL": 72,
+      "ARC_CYBER_CLAIM_TO_CAVEAT": 93,
+      "ARC_QUIET_ACCESS_CONTROL": 73,
       "ARC_PALANTIR_DECISION_OS": 35,
-      "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 127,
+      "ARC_COGSEC_LAB_TO_WILD_TO_STATE": 129,
       "ARC_ENERGY_GRID_POLITICS": 19,
       "ARC_WAR_DATA_FLYWHEEL": 28,
       "ARC_FINANCE_GOVERNED_SHUTDOWN": 18,
-      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 26,
+      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE": 28,
       "AUTO_CLAIMCHECK_SUPPORT": 83,
       "AUTO_COUNTERARGUMENTS": 5,
       "ARC_2022_2023_FORMATION_PHASE": 9,
@@ -145955,26 +147092,26 @@
       "ARC_2016_2021_METERED_ACCESS_FORMATION": 14,
       "ARC_2021_STATE_INSTITUTIONALIZATION": 14,
       "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY": 30,
-      "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK": 165,
-      "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL": 53
+      "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK": 166,
+      "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL": 55
     },
     "arc_families": {
-      "ARC_FAMILY_ACCESS_CONTROL": 222,
-      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 87,
-      "ARC_FAMILY_CYBER_COGNITION_WAR": 379,
+      "ARC_FAMILY_ACCESS_CONTROL": 225,
+      "ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY": 89,
+      "ARC_FAMILY_CYBER_COGNITION_WAR": 388,
       "ARC_FAMILY_DECISION_DATA_FINANCE": 148,
       "ARC_FAMILY_INFRASTRUCTURE_CAPITAL": 90,
       "ARC_FAMILY_FORMATION_TIMELINE": 43
     },
     "primary_cyber_domains": {
       "CYBER_DOMAIN_03_NATIONAL_DEFENSE": 35,
-      "CYBER_DOMAIN_01_SECURE_SYSTEMS": 39,
-      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE": 35,
+      "CYBER_DOMAIN_01_SECURE_SYSTEMS": 40,
+      "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE": 37,
       "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE": 24,
       "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY": 66
     },
     "normative_forces": {
-      "not_applicable": 150,
+      "not_applicable": 153,
       "contractual": 5,
       "binding": 20,
       "advisory": 21,
@@ -146006,11 +147143,11 @@
     ],
     "release_notes": [
       {
-        "title": "Государственные решения",
-        "text": "Внедрение, анонсы, предписания и ответственность разделены."
+        "title": "Возможности и контроль",
+        "text": "Кибервозможности распространяются через закрытые сервисы и открытые веса. Испытания оценивают способность выполнить атаку, проверки отказов — реакцию на вредоносный приказ, а инциденты — действия в конкретной среде. Эти показатели нельзя подменять друг другом. Контроль зависит не только от поведения модели, но и от прав, сети, наблюдения и возможности остановить запуск. Режим допуска одновременно ограничивает злоупотребления и определяет самостоятельность защитников."
       }
     ],
-    "editorial_version": "0.44",
+    "editorial_version": "0.45",
     "graph_legend_ru": "Общая сюжетная дуга — не доказательство причинности. Отдельные карточки показывают, чей контроль над каким действием усиливается, ослабляется или остаётся условным.",
     "graph_legend_en": "Shared arcs do not prove causality. Individual cards describe whose control over which action strengthens, weakens or remains conditional."
   },
@@ -146440,7 +147577,7 @@
     }
   ],
   "migrationAudit": {
-    "version": "0.44",
+    "version": "0.45",
     "base_commit": "156e39a21b5a523092ccb2975e5aa38f489f52b6",
     "reviewed_cyber_records": 119,
     "translated_event_titles": 149,
@@ -147396,7 +148533,29 @@
       "EDGE_V044_STATE_032",
       "EDGE_V044_STATE_033"
     ],
-    "v044_base_sha256": "86c7b3ef4e07262511d02a81dc627811ccc9d042482e748ece1b35e3ffdf7144"
+    "v044_base_sha256": "86c7b3ef4e07262511d02a81dc627811ccc9d042482e748ece1b35e3ffdf7144",
+    "v045_added_event_ids": [
+      "SIG_2026_CAISI_GLM53_CYBER_EVALUATION",
+      "SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY",
+      "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE"
+    ],
+    "v045_added_edge_ids": [
+      "EDGE_V045_GLM_001",
+      "EDGE_V045_GLM_002",
+      "EDGE_V045_GLM_003",
+      "EDGE_V045_GLM_004",
+      "EDGE_V045_GLM_005",
+      "EDGE_V045_GLM_006",
+      "EDGE_V045_GLM_007",
+      "EDGE_V045_GLM_008",
+      "EDGE_V045_GLM_009",
+      "EDGE_V045_GLM_010",
+      "EDGE_V045_GLM_011",
+      "EDGE_V045_GLM_012",
+      "EDGE_V045_GLM_013",
+      "EDGE_V045_GLM_014"
+    ],
+    "v045_base_sha256": "2ccac78528c31a01d8973370786a0882d9485ed0403eb56eceb0f2e91e1c0ffb"
   },
   "relationLabels": {
     "supports": {
@@ -147607,7 +148766,7 @@
     ],
     "method_note_ru": "Иерархия определяет маршрут чтения, а не силу доказательства. Один факт получает основную позицию для показа; все прежние тематические и доказательные связи сохраняются.",
     "method_note_en": "The hierarchy defines a reading route, not evidentiary strength. Each classified fact receives one primary display position while all previous thematic and evidentiary links remain.",
-    "primary_event_assignments": 386,
-    "events_with_secondary_arcs": 180
+    "primary_event_assignments": 389,
+    "events_with_secondary_arcs": 183
   }
 }

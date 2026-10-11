@@ -15,11 +15,11 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2344.699462890625,
-        "behavior_section_1440": 440.6374816894531,
-        "cyber_first_card_390": 5646.623046875,
-        "behavior_section_390": 731.7754516601562,
-        "map_top": 724.703125
+        "cyber_first_card_1440": 2398.745361328125,
+        "behavior_section_1440": 440.9947204589844,
+        "cyber_first_card_390": 5675.9150390625,
+        "behavior_section_390": 731.7743530273438,
+        "map_top": 875.453125
       },
       "page_widths": {
         "story:1440": 1440,
@@ -55,11 +55,11 @@
       "errors": [],
       "external_requests": [],
       "positions": {
-        "cyber_first_card_1440": 2247.953125,
+        "cyber_first_card_1440": 2261.953125,
         "behavior_section_1440": 429.625,
-        "cyber_first_card_390": 5354.015625,
+        "cyber_first_card_390": 5384.8125,
         "behavior_section_390": 677.015625,
-        "map_top": 527.453125
+        "map_top": 640.515625
       },
       "page_widths": {
         "overview:1440": 1440,
