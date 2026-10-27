@@ -1,9 +1,49 @@
-# AI Power Atlas — v0.45
+# AI Power Atlas — v0.49
 
-**Двуязычный исследовательский атлас структурной власти и киберустойчивости ИИ. Выпуск — 11 октября 2026 года.**
-База последнего слоя: v0.44 (`8ccfdad`). Миграция `scripts/migrate_glm_access_control.py` сохраняет прежние события, связи и идентификаторы источников.
+**Двуязычный исследовательский атлас структурной власти и киберустойчивости ИИ. Выпуск — 27 октября 2026 года.**
+База последнего слоя: v0.48, закреплённая SHA-256 в `scripts/migrate_october_access.py`. Предшествующие слои Palantir/NATO, лабораторных инцидентов и доступа к знаниям сохранены. Миграция сохраняет прежние ID, связи и идентификаторы источников; повторное применение к изменённой базе запрещено.
 
-В выпуске **429 событий, 75 тезисов и 32 проверяемых утверждения, 26 сюжетных арок, 1071 связей и 625 уникальных URL источников**. Кибервыборка содержит 202 карточки, из них 130 — опорные. Статусы тезисов: 50 подтверждены, 23 подтверждены частично, 2 спорны.
+В выпуске **467 событий, 76 тезисов и 32 проверяемых утверждения, 26 сюжетных арок, 1189 связей и 674 уникальных URL источников**. Кибервыборка содержит 228 карточек, из них 141 — опорная. Статусы тезисов: 50 подтверждены, 24 подтверждены частично, 2 спорны.
+
+## Что изменено в v0.49
+
+Семь новых записей, две уточнённые карточки, 20 связей и девять URL. Добавлены возобновление обучения OpenAI после 11-дневной паузы, ограничения публичных ИИ-интерфейсов в аппарате правительства Швеции, обязательство по GPU-лизингу SpaceX, технический кейс llm-d и позиция IBM об открытых моделях, а также сентябрьский срез Mozilla.
+
+Официальное уточнение Джорджии связано с прежним раскрытием Anthropic: обход платного доступа не считается установленным. Шведская ведомственная политика не выдана за национальный запрет, финансовое обязательство SpaceX — за закрытую сделку, оценки IBM — за независимое доказательство паритета. Новых верхнеуровневых арок нет. Даты событий, публикаций и наблюдений разделены.
+
+English: seven records and two reconciled records cover institutional access, frontier-training resumption, GPU finance commitments and scoped open-model economics. Georgia's correction qualifies the earlier disclosure; Sweden's policy is not a nationwide ban. Vendor costing, executive estimates and research snapshots remain distinct.
+
+Проверки текущего выпуска: `python3 scripts/build.py`, `python3 scripts/validate.py`, `python3 tests/october_access_test.py`, `python3 tests/october_access_browser_test.py --chromium /path/to/chrome`. Источники, ограничения и результаты: `review/october-access-finance-2026/README.md`. Тесты прежних миграций проверяют свои исторические версии.
+
+## Что изменено в v0.48
+
+14 событий, один ограниченный тезис, один исследовательский пробел, 44 связи и 16 URL. Арка о лицензировании данных расширена до «Доступ к знаниям: данные, поиск и источники» с сохранением ID. Добавлены GEO, измерения переходов Pew, статистика цитирования Bing, глобальный отказ от ИИ-поиска Google, исследования выбора источников и языкового перекоса, Pay per Crawl, сетевые фильтры Китая и российский TLS. Новых верхнеуровневых арок нет.
+
+Видимость, переходы и достоверность не смешиваются. У DeLP сохранено альтернативное объяснение языкового перекоса. Российские сертификаты и доступность сайтов представлены как предпосылка проверки, не как измеренный перекос ответов или обучающих корпусов. Сопоставление с Selective Permeability — редакционная связь, не независимая валидация препринта. Даты публикации, внедрения и измерений разделены.
+
+English: 14 events, one scoped claim and one open research question cover AI-search source selection and network access. Publisher controls, language/corpus effects and citation experiments remain distinct. Russian TLS effects on model coverage are unmeasured; the existing data arc is extended without adding a new top-level arc.
+
+Проверки: `python3 tests/knowledge_gatekeeping_test.py`, `python3 scripts/build.py`, `python3 scripts/validate.py`, `python3 tests/knowledge_gatekeeping_browser_test.py --chromium /path/to/chrome`. Источники и ограничения: `review/knowledge-gatekeeping-october-2026/README.md`.
+
+## Что изменено в v0.47
+
+16 новых записей, пять обновлённых карточек, 46 связей и 20 URL. Раскрытия OpenAI, Anthropic, Google и Meta сопоставлены с заявлениями владельцев систем и внешними реконструкциями. У BOCSAR сохранён итог «нарушения не найдено», у AIHW — отсутствие установленной компрометации, у RubyGems/RubyDoc — неподтверждённая атрибуция. Посещение SEC или Census не записано как атака.
+
+Hugging Face, Medicare, Anthropic и AISI обновлены на месте. Приложение клиента Modal не приравнено к платформе; анонимные организации не суммируются. Месяцы эпизодов сохранены без выдуманного дня. Исследование саморепликации Anthropic и срез вакансий SANS являются экспериментом и наблюдением рынка, а не инцидентами.
+
+English: 16 new records and five reconciled records distinguish acknowledged compromise, unsuccessful probes, disputed attribution and negative findings. Controlled replication and a workforce snapshot are separate evidence types. No new top-level arcs or aggregate victim count.
+
+Проверки: `python3 tests/lab_incidents_test.py`, `python3 scripts/build.py`, `python3 scripts/validate.py`, `python3 tests/lab_incidents_browser_test.py --chromium /path/to/chrome`. Методика и источники: `review/lab-origin-incidents-october-2026/README.md`. Старые тесты миграций проверяют свои исторические версии, не текущий выпуск.
+
+## Что изменено в v0.46
+
+Британская карточка Palantir усилена официальным обоснованием прямой закупки и ответом Минобороны парламенту. Дата подписания исправлена с условного 1 декабря на 30 декабря 2025 года. Добавлена веха технической готовности Maven в НАТО: 22 июня 2026 года, публикация 12 августа. Закупка и эксплуатационная готовность остаются разными этапами одной программы.
+
+Восемь новых связей уточняют зависимость от платформы при наличии разных моделей внутри неё. Издержки замены, названные британским заказчиком, не перенесены на НАТО как измеренная величина. Четыре новых URL представляют три документа: оригинал закупочного извещения и его официальное зеркало не считаются независимыми подтверждениями.
+
+English: the UK buyer's switching-cost rationale strengthens an existing record; NATO's readiness announcement adds one dated milestone. Model diversity and platform portability are assessed separately, without inferring remote shutdown or U.S. control over allied decisions.
+
+Проверки: `python3 tests/platform_exit_test.py`, `python3 scripts/validate.py`, `python3 tests/platform_exit_browser_test.py --chromium /path/to/chrome`. Источники, ограничения и результаты: `review/platform-exit-october-2026/README.md`.
 
 ## Что изменено в v0.45
 

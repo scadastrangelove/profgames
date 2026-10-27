@@ -1,0 +1,642 @@
+{
+  "version": "0.48",
+  "checked_at": "2026-10-25",
+  "sources": {
+    "geo": {
+      "name": "GEO authors",
+      "title": "GEO: Generative Engine Optimization",
+      "date": "2023-11-16",
+      "url": "https://arxiv.org/abs/2311.09735",
+      "source_class": "research paper; revised 2024-06-28; KDD 2024",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date",
+      "updated_at": "2024-06-28"
+    },
+    "google_guidance": {
+      "name": "Google",
+      "title": "AI features and your website",
+      "date": "",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "source_class": "provider technical documentation; checked 2026-10-25",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "undated_document; access_date_not_publication_date"
+    },
+    "pew": {
+      "name": "Pew Research Center",
+      "title": "Google users are less likely to click on links when an AI summary appears in the results",
+      "date": "2025-07-22",
+      "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "source_class": "observational browsing study",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date"
+    },
+    "bing": {
+      "name": "Microsoft / Bing",
+      "title": "Introducing AI Performance in Bing Webmaster Tools Public Preview",
+      "date": "2026-02-10",
+      "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+      "source_class": "provider feature announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date"
+    },
+    "google_controls": {
+      "name": "Google",
+      "title": "New opportunities, control and insights for website owners",
+      "date": "2026-06-03",
+      "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/",
+      "source_class": "provider rollout announcement; updated 2026-08-31",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date",
+      "updated_at": "2026-08-31"
+    },
+    "media": {
+      "name": "Sunhao Dai et al. / EMNLP",
+      "title": "Media Source Matters More Than Content: Unveiling Political Bias in LLM-Generated Citations",
+      "date": "2025-11",
+      "url": "https://aclanthology.org/2025.emnlp-main.872/",
+      "source_class": "peer-reviewed controlled citation study",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date"
+    },
+    "robots": {
+      "name": "Nicolas Steinacker-Olsztyn, Devashish Gosain and Ha Dao",
+      "title": "Is Misinformation More Open? A Study of robots.txt Gatekeeping on the Web",
+      "date": "2025-10-11",
+      "url": "https://arxiv.org/abs/2510.10315",
+      "source_class": "measurement study; WWW 2026; revised 2026-08-12",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date",
+      "updated_at": "2026-08-12"
+    },
+    "posts": {
+      "name": "Qi Liu et al.",
+      "title": "From Public Posts to AI-Search Citations: Measuring the Fragility of AI Search",
+      "date": "2026-10-08",
+      "url": "https://arxiv.org/abs/2610.11932",
+      "source_class": "preprint; controlled publication experiments",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date"
+    },
+    "language": {
+      "name": "Dan Wang et al.",
+      "title": "All Languages Matter: Understanding and Mitigating Language Bias in Multilingual RAG",
+      "date": "2026-04-22",
+      "url": "https://arxiv.org/abs/2604.20199",
+      "source_class": "research paper; ACL 2026",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date"
+    },
+    "language_acl": {
+      "name": "ACL",
+      "title": "All Languages Matter: Understanding and Mitigating Language Bias in Multilingual RAG",
+      "date": "2026-07",
+      "url": "https://aclanthology.org/2026.acl-long.338/",
+      "source_class": "peer-reviewed conference publication",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date"
+    },
+    "delp": {
+      "name": "Jeonghyun Park et al.",
+      "title": "Enhancing Multilingual RAG Systems with Debiased Language Preference-Guided Query Fusion",
+      "date": "2026-01-06",
+      "url": "https://arxiv.org/abs/2601.02956",
+      "source_class": "research paper; revised 2026-04-13; ACL Findings 2026",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date",
+      "updated_at": "2026-04-13"
+    },
+    "china_search": {
+      "name": "Tao Zhen et al.",
+      "title": "What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study",
+      "date": "2026-07-17",
+      "url": "https://arxiv.org/abs/2607.15771",
+      "source_class": "preprint; web/app citation measurement",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date"
+    },
+    "cloudflare": {
+      "name": "Cloudflare",
+      "title": "Introducing pay per crawl",
+      "date": "2025-07-01",
+      "url": "https://blog.cloudflare.com/introducing-pay-per-crawl/",
+      "source_class": "private beta announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date"
+    },
+    "gfw": {
+      "name": "GFW Report",
+      "title": "A Wall Behind A Wall: Emerging Regional Censorship in China",
+      "date": "2025-05-11",
+      "url": "https://gfw.report/publications/sp25/en/",
+      "source_class": "IEEE S&P 2025 network measurement",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "publication_date"
+    },
+    "ru_tls": {
+      "name": "Mattijs Jonker et al. / IMC",
+      "title": "Where .ru? Assessing the Impact of Conflict on Russian Domain Infrastructure",
+      "date": "2022-10-25",
+      "url": "https://www.caida.org/catalog/papers/2022_assessing_impact_conflict_russian/assessing_impact_conflict_russian.pdf",
+      "source_class": "IMC 2022 historical domain and TLS measurement",
+      "type": "Research / technical",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "conference_opening_date; proceedings_published_October_2022"
+    },
+    "sfr": {
+      "name": "Social Fund of Russia",
+      "title": "Рекомендации по работе с сайтом с 1 сентября 2026 года",
+      "date": "",
+      "url": "https://sfr.gov.ru/info/podderzhka_raboty_sayta/",
+      "source_class": "official website-access guidance; effective 2026-09-01",
+      "type": "Government / policy",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-25",
+      "verification_method": "published_primary_account_reviewed; not_independently_reproduced",
+      "date_basis": "undated_document; access_date_not_publication_date"
+    }
+  },
+  "records": [
+    {
+      "id": "SIG_2023_GEO_VISIBILITY_EXPERIMENT",
+      "date": "2023-11-16",
+      "source_ids": [
+        "geo",
+        "google_guidance"
+      ],
+      "actors": [
+        "Pranjal Aggarwal"
+      ],
+      "title_ru": "GEO: оформление источника меняет его видимость в ИИ-ответе",
+      "title_en": "GEO: source presentation changes visibility in AI answers",
+      "summary_ru": "Исследование GEO, опубликованное в 2023 году и переработанное для KDD 2024, показало рост видимости до 40% в своих экспериментах. Эффект зависел от области и способа редактирования; среди приёмов были добавление цитат и статистики.",
+      "summary_en": "GEO, first published in 2023 and revised for KDD 2024, reported visibility gains of up to 40% in its experiments. Effects varied by domain and editing method, including adding quotations and statistics.",
+      "caveat_ru": "Видимость в ответе не равна переходам или выручке. Это не универсальное требование писать FAQ: Google отдельно указывает, что для ИИ-функций нет специальных технических требований сверх обычных условий поиска.",
+      "caveat_en": "Answer visibility is not clicks or revenue. This is not a universal requirement to write FAQs: Google separately says its AI features impose no special technical requirements beyond normal search eligibility.",
+      "safe_ru": "Исследование GEO, опубликованное в 2023 году и переработанное для KDD 2024, показало рост видимости до 40% в своих экспериментах. Эффект зависел от области и способа редактирования; среди приёмов были добавление цитат и статистики.",
+      "safe_en": "GEO, first published in 2023 and revised for KDD 2024, reported visibility gains of up to 40% in its experiments. Effects varied by domain and editing method, including adding quotations and statistics.",
+      "cyber": false,
+      "jurisdictions": [],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "numbers": {
+        "max_visibility_gain_percent_in_study": 40
+      },
+      "observation_period": "2023 paper; revised 2024-06-28",
+      "date_basis": "publication_date",
+      "artifact": "research",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2025_PEW_AI_SUMMARY_CLICK_OBSERVATION",
+      "date": "2025-07-22",
+      "source_ids": [
+        "pew"
+      ],
+      "actors": [
+        "Pew Research Center",
+        "Google"
+      ],
+      "title_ru": "Pew: при ИИ-сводке пользователи реже переходили по ссылкам",
+      "title_en": "Pew: users clicked links less often when an AI summary appeared",
+      "summary_ru": "В исследовании 900 взрослых пользователей из США переход по обычной ссылке следовал за 8% посещений Google с ИИ-сводкой и 15% без неё. По ссылке внутри сводки переходили примерно в 1% случаев. История просмотров относится к марту 2025 года.",
+      "summary_en": "Among 900 US adults, a traditional-result click followed 8% of Google visits with an AI summary and 15% without one. Summary citations received a click in about 1% of visits. Browsing histories covered March 2025.",
+      "caveat_ru": "Наблюдение, а не рандомизированный опыт. Выдачу для мартовских запросов восстанавливали в апреле; состав запросов различался. Нельзя превращать разницу в причинную оценку потери трафика для всех сайтов и поисковиков.",
+      "caveat_en": "Observational, not randomized. March-query results were reconstructed in April and query composition differed. The difference is not a causal traffic-loss estimate for all sites or search engines.",
+      "safe_ru": "В исследовании 900 взрослых пользователей из США переход по обычной ссылке следовал за 8% посещений Google с ИИ-сводкой и 15% без неё. По ссылке внутри сводки переходили примерно в 1% случаев. История просмотров относится к марту 2025 года.",
+      "safe_en": "Among 900 US adults, a traditional-result click followed 8% of Google visits with an AI summary and 15% without one. Summary citations received a click in about 1% of visits. Browsing histories covered March 2025.",
+      "cyber": false,
+      "jurisdictions": [
+        "US"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "numbers": {
+        "participants": 900,
+        "traditional_click_with_ai_percent": 8,
+        "traditional_click_without_ai_percent": 15,
+        "ai_citation_click_percent": 1
+      },
+      "observation_period": "browsing 2025-03-01/2025-03-31; SERPs reconstructed 2025-04-07/2025-04-17",
+      "date_basis": "publication_date",
+      "artifact": "research",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2026_BING_AI_CITATION_ANALYTICS",
+      "date": "2026-02-10",
+      "source_ids": [
+        "bing"
+      ],
+      "actors": [
+        "Microsoft"
+      ],
+      "title_ru": "Bing открыл вебмастерам статистику цитирования в ИИ-ответах",
+      "title_en": "Bing opened AI-citation analytics to webmasters",
+      "summary_ru": "В предварительной версии AI Performance вебмастерам стали доступны числа цитирований, цитируемые страницы и запросы для поиска источников в Copilot, Bing и отдельных партнёрских сервисах. Bing также описывает оформление материала, облегчающее его использование в ответах.",
+      "summary_en": "The AI Performance public preview exposed citation counts, cited pages and grounding queries across Copilot, Bing and selected partner services. Bing also describes content presentation practices intended to help inclusion in answers.",
+      "caveat_ru": "Это инструмент и рекомендации поставщика, а не независимое доказательство эффективности GEO. Число цитирований не измеряет позицию, авторитетность, переходы или выручку сайта.",
+      "caveat_en": "These are provider tools and recommendations, not independent evidence of GEO efficacy. Citation counts do not measure placement, authority, clicks or site revenue.",
+      "safe_ru": "В предварительной версии AI Performance вебмастерам стали доступны числа цитирований, цитируемые страницы и запросы для поиска источников в Copilot, Bing и отдельных партнёрских сервисах. Bing также описывает оформление материала, облегчающее его использование в ответах.",
+      "safe_en": "The AI Performance public preview exposed citation counts, cited pages and grounding queries across Copilot, Bing and selected partner services. Bing also describes content presentation practices intended to help inclusion in answers.",
+      "cyber": false,
+      "jurisdictions": [],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "numbers": {},
+      "observation_period": "",
+      "date_basis": "publication_date",
+      "artifact": "product_release",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2026_GOOGLE_AI_SEARCH_OPTOUT_GLOBAL_ROLLOUT",
+      "date": "2026-08-31",
+      "source_ids": [
+        "google_controls"
+      ],
+      "actors": [
+        "Google"
+      ],
+      "title_ru": "Google сообщил о глобальном запуске отказа от участия в ИИ-поиске",
+      "title_en": "Google reported a global rollout of generative-search opt-out controls",
+      "summary_ru": "В обновлении от 31 августа Google сообщил о доступности нового переключателя для всех сайтов. Он позволяет исключить сайт из генеративных функций поиска; компания заявляет, что отказ не используется как сигнал ранжирования в остальной выдаче.",
+      "summary_en": "In an August 31 update, Google reported that its new toggle was available to all websites. It lets sites opt out of generative search features; the company says opting out is not a ranking signal for other search results.",
+      "caveat_ru": "Это стадия внедрения, отдельная от июньского требования CMA и анонса теста. Нейтральность обычного ранжирования здесь подтверждена заявлением Google, не независимым аудитом; отказ исключает и показы, и переходы из ИИ-функций.",
+      "caveat_en": "This is deployment, distinct from the June CMA requirement and test announcement. Ranking neutrality is a Google statement, not an independent audit; opting out also removes generative-feature impressions and traffic.",
+      "safe_ru": "В обновлении от 31 августа Google сообщил о доступности нового переключателя для всех сайтов. Он позволяет исключить сайт из генеративных функций поиска; компания заявляет, что отказ не используется как сигнал ранжирования в остальной выдаче.",
+      "safe_en": "In an August 31 update, Google reported that its new toggle was available to all websites. It lets sites opt out of generative search features; the company says opting out is not a ranking signal for other search results.",
+      "cyber": false,
+      "jurisdictions": [],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_QUIET_ACCESS_CONTROL"
+      ],
+      "numbers": {},
+      "observation_period": "",
+      "date_basis": "explicit_global_rollout_update",
+      "artifact": "product_release",
+      "priority": 1
+    },
+    {
+      "id": "SIG_2025_MEDIA_IDENTITY_CITATION_BIAS",
+      "date": "2025-11",
+      "source_ids": [
+        "media"
+      ],
+      "actors": [
+        "Sunhao Dai"
+      ],
+      "title_ru": "EMNLP: выбор цитаты зависел от названия издания, а не только от текста",
+      "title_en": "EMNLP: citation choice depended on outlet identity, not only content",
+      "summary_ru": "В контролируемом исследовании новостных материалов AllSides модели чаще цитировали левые источники, чем системы поиска BM25 и плотного поиска. Подмена идентичности источника помогла отделить предпочтение издания от содержания статьи.",
+      "summary_en": "In a controlled study of AllSides news, models favoured left-leaning sources more than BM25 and dense retrieval did. Source-identity interventions helped distinguish outlet preference from article content.",
+      "caveat_ru": "Результат относится к выбранным новостям, моделям и процедуре. Он не устанавливает намеренную цензуру, политическую политику всех поставщиков или одинаковый перекос во всех языках.",
+      "caveat_en": "The result concerns selected news, models and procedures. It does not establish intentional censorship, a policy shared by all providers or the same bias in every language.",
+      "safe_ru": "В контролируемом исследовании новостных материалов AllSides модели чаще цитировали левые источники, чем системы поиска BM25 и плотного поиска. Подмена идентичности источника помогла отделить предпочтение издания от содержания статьи.",
+      "safe_en": "In a controlled study of AllSides news, models favoured left-leaning sources more than BM25 and dense retrieval did. Source-identity interventions helped distinguish outlet preference from article content.",
+      "cyber": true,
+      "jurisdictions": [],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+      ],
+      "numbers": {},
+      "observation_period": "",
+      "date_basis": "conference_publication_month",
+      "artifact": "research",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2025_ROBOTS_AI_EXCLUSION_ASYMMETRY",
+      "date": "2025-10-11",
+      "source_ids": [
+        "robots"
+      ],
+      "actors": [
+        "Nicolas Steinacker-Olsztyn",
+        "Devashish Gosain",
+        "Ha Dao"
+      ],
+      "title_ru": "robots.txt: надёжные новостные сайты чаще ограничивали ИИ-ботов",
+      "title_en": "robots.txt: reputable news sites restricted AI bots more often",
+      "summary_ru": "В исследовании двух отобранных групп сайтов 60,0% сайтов надёжных изданий и 9,1% сайтов с дезинформацией запрещали хотя бы одного ИИ-бота. Доли рассчитаны среди сайтов с пригодным robots.txt; исторический ряд охватывает сентябрь 2023 года - май 2025 года.",
+      "summary_en": "In a study of two curated site groups, 60.0% of reputable-news sites and 9.1% of misinformation sites disallowed at least one AI bot. Percentages concern sites with usable robots.txt; the historical series spans September 2023 to May 2025.",
+      "caveat_ru": "Классификация и выборка ограничены. Запрет в robots.txt не доказывает соблюдение ботом или отсутствие текста в обучении. Работа не измеряет причинное влияние этих правил на достоверность ответов; использована редакция от августа 2026 года.",
+      "caveat_en": "Classification and sampling are limited. A robots.txt prohibition does not prove crawler compliance or absence from training. The work does not measure these rules' causal effect on answer truthfulness; the August 2026 revision was reviewed.",
+      "safe_ru": "В исследовании двух отобранных групп сайтов 60,0% сайтов надёжных изданий и 9,1% сайтов с дезинформацией запрещали хотя бы одного ИИ-бота. Доли рассчитаны среди сайтов с пригодным robots.txt; исторический ряд охватывает сентябрь 2023 года - май 2025 года.",
+      "safe_en": "In a study of two curated site groups, 60.0% of reputable-news sites and 9.1% of misinformation sites disallowed at least one AI bot. Percentages concern sites with usable robots.txt; the historical series spans September 2023 to May 2025.",
+      "cyber": false,
+      "jurisdictions": [],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "numbers": {
+        "reputable_sites_disallow_ai_percent": 60.0,
+        "misinformation_sites_disallow_ai_percent": 9.1
+      },
+      "observation_period": "2023-09/2025-05; source revision 2026-08-12",
+      "date_basis": "publication_date",
+      "artifact": "research",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2026_PUBLIC_POSTS_AI_SEARCH_CITATION_EXPERIMENT",
+      "date": "2026-10-08",
+      "source_ids": [
+        "posts"
+      ],
+      "actors": [
+        "Qi Liu",
+        "Geng Hong"
+      ],
+      "title_ru": "Эксперимент: открытые публикации внесли выдуманные понятия в ИИ-поиск",
+      "title_en": "Experiment: public posts introduced fabricated concepts into AI search",
+      "summary_ru": "Авторы препринта проверили десять поисковых ИИ-платформ: восемь цитировали публикации с выдуманным понятием в течение семи дней. В одном отдельном опыте покупка GEO за $14 дала 13 публикаций, и одна платформа процитировала помеченный материал в течение часа.",
+      "summary_en": "A preprint tested ten AI-search platforms: eight cited posts containing a fabricated concept within seven days. In one separate test, a $14 GEO purchase produced 13 posts, and one platform cited marked content within an hour.",
+      "caveat_ru": "Измерения марта-апреля 2026 года; контролируемые публикации, часто по темам без конкурирующих сведений. Это не эпидемия и не доказанная инъекция инструкций или отравление обучения. Один коммерческий опыт не задаёт обычную стоимость влияния.",
+      "caveat_en": "Measurements were made in March-April 2026; controlled posts often concerned topics with little competing evidence. This is not an epidemic or demonstrated prompt injection or training-data poisoning. One commercial test does not establish a typical influence price.",
+      "safe_ru": "Авторы препринта проверили десять поисковых ИИ-платформ: восемь цитировали публикации с выдуманным понятием в течение семи дней. В одном отдельном опыте покупка GEO за $14 дала 13 публикаций, и одна платформа процитировала помеченный материал в течение часа.",
+      "safe_en": "A preprint tested ten AI-search platforms: eight cited posts containing a fabricated concept within seven days. In one separate test, a $14 GEO purchase produced 13 posts, and one platform cited marked content within an hour.",
+      "cyber": true,
+      "jurisdictions": [],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+      ],
+      "numbers": {
+        "platforms_tested": 10,
+        "platforms_citing_fabricated_concept_within_7_days": 8,
+        "single_geo_purchase_usd": 14,
+        "posts_in_single_purchase": 13
+      },
+      "observation_period": "2026-03/2026-04",
+      "date_basis": "publication_date",
+      "artifact": "research",
+      "priority": 1
+    },
+    {
+      "id": "SIG_2026_MULTILINGUAL_RAG_RERANKING_BIAS",
+      "date": "2026-04-22",
+      "source_ids": [
+        "language",
+        "language_acl"
+      ],
+      "actors": [
+        "Dan Wang"
+      ],
+      "title_ru": "Многоязычный поиск: повторное ранжирование усиливало языковой перекос",
+      "title_en": "Multilingual retrieval: reranking amplified language bias",
+      "summary_ru": "All Languages Matter обнаружила в испытаниях многоязычного RAG предпочтение английского и языка запроса на этапе повторного ранжирования. Из-за этого важные для ответа документы на других языках могли выпадать; предложенный авторами метод уменьшал перекос.",
+      "summary_en": "All Languages Matter found preference for English and the query language during reranking in multilingual RAG tests. Answer-critical documents in other languages could be suppressed; the authors' proposed method reduced the bias.",
+      "caveat_ru": "Контролируемые наборы задач не дают рейтинга покрытия китайского интернета промышленными сервисами. Доступ, поиск, повторное ранжирование и генерация являются разными этапами.",
+      "caveat_en": "Controlled benchmarks do not rank commercial systems' coverage of the Chinese internet. Access, retrieval, reranking and generation are separate stages.",
+      "safe_ru": "All Languages Matter обнаружила в испытаниях многоязычного RAG предпочтение английского и языка запроса на этапе повторного ранжирования. Из-за этого важные для ответа документы на других языках могли выпадать; предложенный авторами метод уменьшал перекос.",
+      "safe_en": "All Languages Matter found preference for English and the query language during reranking in multilingual RAG tests. Answer-critical documents in other languages could be suppressed; the authors' proposed method reduced the bias.",
+      "cyber": true,
+      "jurisdictions": [],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+      ],
+      "numbers": {},
+      "observation_period": "",
+      "date_basis": "publication_date",
+      "artifact": "research",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2026_DELP_LANGUAGE_BIAS_BENCHMARK_CONTROLS",
+      "date": "2026-01-06",
+      "source_ids": [
+        "delp"
+      ],
+      "actors": [
+        "Jeonghyun Park"
+      ],
+      "title_ru": "DeLP: часть языкового перекоса объяснялась устройством оценки",
+      "title_en": "DeLP: part of language preference was explained by evaluation design",
+      "summary_ru": "Авторы DeLP отделили языковое предпочтение от доступности эталонного ответа, представленности языков и культурных предпосылок. После контроля этих факторов значительная часть кажущегося предпочтения английского объяснялась распределением свидетельств; важным оставалось совпадение языка запроса и документа.",
+      "summary_en": "DeLP separated language preference from gold-answer availability, language exposure and cultural priors. After controlling these factors, much apparent English preference was explained by evidence distribution; query-document language alignment remained important.",
+      "caveat_ru": "Это ограничение причинной интерпретации, а не опровержение любого языкового перекоса. Работа не устанавливает, что все реальные сервисы ищут одинаково; использована редакция от 13 апреля 2026 года.",
+      "caveat_en": "This limits causal interpretation rather than refuting all language bias. The work does not show that all deployed services search alike; the April 13, 2026 revision was reviewed.",
+      "safe_ru": "Авторы DeLP отделили языковое предпочтение от доступности эталонного ответа, представленности языков и культурных предпосылок. После контроля этих факторов значительная часть кажущегося предпочтения английского объяснялась распределением свидетельств; важным оставалось совпадение языка запроса и документа.",
+      "safe_en": "DeLP separated language preference from gold-answer availability, language exposure and cultural priors. After controlling these factors, much apparent English preference was explained by evidence distribution; query-document language alignment remained important.",
+      "cyber": true,
+      "jurisdictions": [],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+      ],
+      "numbers": {},
+      "observation_period": "",
+      "date_basis": "publication_date",
+      "artifact": "research",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2026_CHINESE_SEARCH_WEB_APP_SOURCE_DIFFERENCES",
+      "date": "2026-07-17",
+      "source_ids": [
+        "china_search"
+      ],
+      "actors": [
+        "Tao Zhen"
+      ],
+      "title_ru": "Китайскоязычный ИИ-поиск: веб- и мобильные интерфейсы выбирали разные источники",
+      "title_en": "Chinese-language AI search: web and app interfaces selected different sources",
+      "summary_ru": "Препринт сравнил 614 запросов в четырёх платформах, их веб- и мобильных интерфейсах, с тремя повторами. Авторы нашли систематические различия в источниках между интерфейсами. После очистки осталось 160 860 записей цитирования.",
+      "summary_en": "A preprint compared 614 queries across four platforms, their web and app interfaces, with three repetitions. The authors found systematic source differences between interfaces. Cleaning retained 160,860 citation records.",
+      "caveat_ru": "Разница интерфейсов не равна свойству базовой модели или доказательству цензуры. Это срез выбранных платформ и запросов; неполное извлечение текста источника нельзя автоматически считать галлюцинацией ответа.",
+      "caveat_en": "Interface differences are not a base-model property or proof of censorship. This is a snapshot of selected platforms and queries; incomplete source-text extraction cannot automatically be called answer hallucination.",
+      "safe_ru": "Препринт сравнил 614 запросов в четырёх платформах, их веб- и мобильных интерфейсах, с тремя повторами. Авторы нашли систематические различия в источниках между интерфейсами. После очистки осталось 160 860 записей цитирования.",
+      "safe_en": "A preprint compared 614 queries across four platforms, their web and app interfaces, with three repetitions. The authors found systematic source differences between interfaces. Cleaning retained 160,860 citation records.",
+      "cyber": false,
+      "jurisdictions": [
+        "China"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "numbers": {
+        "queries": 614,
+        "platforms": 4,
+        "interfaces_per_platform": 2,
+        "repetitions": 3,
+        "cleaned_citation_records": 160860
+      },
+      "observation_period": "",
+      "date_basis": "publication_date",
+      "artifact": "research",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2025_CLOUDFLARE_PAY_PER_CRAWL_BETA",
+      "date": "2025-07-01",
+      "source_ids": [
+        "cloudflare"
+      ],
+      "actors": [
+        "Cloudflare"
+      ],
+      "title_ru": "Cloudflare: издатель может разрешить обход, взимать плату или блокировать ИИ-бота",
+      "title_en": "Cloudflare: publishers can allow, charge for or block AI crawling",
+      "summary_ru": "Cloudflare запустила закрытую бета-версию Pay per Crawl: владелец сайта может разрешать, блокировать или назначать цену за запросы бота. Сервис использует HTTP 402 и посредничество Cloudflare в расчётах.",
+      "summary_en": "Cloudflare launched the Pay per Crawl private beta: a site owner can allow, block or price crawler requests. The service uses HTTP 402 and Cloudflare's payment intermediation.",
+      "caveat_ru": "Доступность механизма не означает повсеместную оплату или принятие всеми ботами. Он усиливает право издателя на отказ, но создаёт зависимость от посредника; экономический эффект отдельно не измерен.",
+      "caveat_en": "An available mechanism is not universal payment or acceptance by every crawler. It strengthens publisher refusal rights while introducing intermediary dependence; its economic effect is not separately measured.",
+      "safe_ru": "Cloudflare запустила закрытую бета-версию Pay per Crawl: владелец сайта может разрешать, блокировать или назначать цену за запросы бота. Сервис использует HTTP 402 и посредничество Cloudflare в расчётах.",
+      "safe_en": "Cloudflare launched the Pay per Crawl private beta: a site owner can allow, block or price crawler requests. The service uses HTTP 402 and Cloudflare's payment intermediation.",
+      "cyber": false,
+      "jurisdictions": [],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_QUIET_ACCESS_CONTROL"
+      ],
+      "numbers": {},
+      "observation_period": "",
+      "date_basis": "publication_date",
+      "artifact": "product_release",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2025_GFW_REGIONAL_DIRECTIONAL_FILTERING",
+      "date": "2025-05-11",
+      "source_ids": [
+        "gfw"
+      ],
+      "actors": [
+        "GFW Report"
+      ],
+      "title_ru": "Китай: сетевые фильтры различались по региону и направлению соединения",
+      "title_en": "China: network filtering varied by region and connection direction",
+      "summary_ru": "Измерения GFW Report выявили в Хэнани региональную фильтрацию HTTP Host и TLS SNI, отличавшуюся от общенационального GFW. В исследованных условиях фильтр затрагивал исходящие из провинции соединения. Доступность одного сайта зависела от точки и направления проверки.",
+      "summary_en": "GFW Report measurements identified regional HTTP Host and TLS SNI filtering in Henan that differed from the national GFW. Under tested conditions, the regional filter affected connections leaving the province. A site's accessibility depended on vantage point and direction.",
+      "caveat_ru": "Сеть измерена напрямую, ответы ИИ не проверялись. Из исходящей блокировки нельзя вывести симметричную недоступность китайского сайта зарубежному роботу. Исследование не описывает каждый регион и каждый момент времени.",
+      "caveat_en": "The network was measured directly; AI answers were not tested. Outbound blocking does not imply symmetrical inaccessibility of a Chinese site to a foreign crawler. The study does not cover every region or time.",
+      "safe_ru": "Измерения GFW Report выявили в Хэнани региональную фильтрацию HTTP Host и TLS SNI, отличавшуюся от общенационального GFW. В исследованных условиях фильтр затрагивал исходящие из провинции соединения. Доступность одного сайта зависела от точки и направления проверки.",
+      "safe_en": "GFW Report measurements identified regional HTTP Host and TLS SNI filtering in Henan that differed from the national GFW. Under tested conditions, the regional filter affected connections leaving the province. A site's accessibility depended on vantage point and direction.",
+      "cyber": false,
+      "jurisdictions": [
+        "China"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_QUIET_ACCESS_CONTROL"
+      ],
+      "numbers": {},
+      "observation_period": "2023/2025-03; interrupted observation intervals",
+      "date_basis": "publication_date",
+      "artifact": "research",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2022_RUSSIAN_DOMAIN_TLS_FRAGMENTATION_STUDY",
+      "date": "2022-10-25",
+      "source_ids": [
+        "ru_tls"
+      ],
+      "actors": [
+        "Mattijs Jonker"
+      ],
+      "title_ru": "Исследование .ru: отзывы сертификатов и переход к российской инфраструктуре доверия",
+      "title_en": "Russian-domain study: certificate revocations and domestic trust infrastructure",
+      "summary_ru": "Исследование IMC 2022 проследило изменения российских доменов и TLS на данных за 2017-2022 годы. Авторы зафиксировали повышенное число отзывов сертификатов санкционных доменов и раннее использование российского удостоверяющего центра, ещё не доверенного основными браузерами.",
+      "summary_en": "An IMC 2022 study traced Russian-domain and TLS changes using 2017-2022 data. It observed increased certificate revocations for sanctioned domains and early use of a Russian certificate authority not then trusted by major browsers.",
+      "caveat_ru": "Историческое измерение, не оценка размера российского сегмента в 2026 году. Исследование не проверяло ИИ-поиск и обучение. Отзыв сертификата, отсутствие корня доверия и неподдерживаемый криптоалгоритм являются разными причинами сбоя.",
+      "caveat_en": "A historical measurement, not a 2026 estimate of the Russian internet. The study did not test AI search or training. Revocation, a missing trust root and an unsupported cryptographic algorithm are different failure causes.",
+      "safe_ru": "Исследование IMC 2022 проследило изменения российских доменов и TLS на данных за 2017-2022 годы. Авторы зафиксировали повышенное число отзывов сертификатов санкционных доменов и раннее использование российского удостоверяющего центра, ещё не доверенного основными браузерами.",
+      "safe_en": "An IMC 2022 study traced Russian-domain and TLS changes using 2017-2022 data. It observed increased certificate revocations for sanctioned domains and early use of a Russian certificate authority not then trusted by major browsers.",
+      "cyber": false,
+      "jurisdictions": [
+        "Russia"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_QUIET_ACCESS_CONTROL"
+      ],
+      "numbers": {},
+      "observation_period": "2017-06/2022-05",
+      "date_basis": "conference_opening_date; month_precision_source",
+      "artifact": "research",
+      "priority": 2
+    },
+    {
+      "id": "SIG_2026_SFR_BROWSER_CERTIFICATE_GUIDANCE",
+      "date": "2026-09-01",
+      "source_ids": [
+        "sfr"
+      ],
+      "actors": [
+        "Social Fund of Russia"
+      ],
+      "title_ru": "СФР опубликовал рекомендации по браузерам и российским сертификатам",
+      "title_en": "Russia's Social Fund published browser and domestic-certificate guidance",
+      "summary_ru": "В рекомендациях по работе с сайтом с 1 сентября 2026 года СФР предупреждает о риске прекращения действия иностранных сертификатов и предлагает использовать Яндекс Браузер либо установить сертификаты Минцифры.",
+      "summary_en": "In website-access guidance effective September 1, 2026, Russia's Social Fund warns about foreign certificates becoming invalid and recommends Yandex Browser or installing Ministry of Digital Development certificates.",
+      "caveat_ru": "Это официальная рекомендация пользователям, не измерение фактического отказа всех клиентов. Она не доказывает, что иностранные ИИ-сервисы не индексируют сайт. Дата означает начало действия рекомендаций, а не установленный день публикации.",
+      "caveat_en": "This is official user guidance, not measurement of failure across clients. It does not prove that foreign AI services fail to index the site. The date is the guidance's effective date, not an established publication day.",
+      "safe_ru": "В рекомендациях по работе с сайтом с 1 сентября 2026 года СФР предупреждает о риске прекращения действия иностранных сертификатов и предлагает использовать Яндекс Браузер либо установить сертификаты Минцифры.",
+      "safe_en": "In website-access guidance effective September 1, 2026, Russia's Social Fund warns about foreign certificates becoming invalid and recommends Yandex Browser or installing Ministry of Digital Development certificates.",
+      "cyber": false,
+      "jurisdictions": [
+        "Russia"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_QUIET_ACCESS_CONTROL"
+      ],
+      "numbers": {},
+      "observation_period": "",
+      "date_basis": "guidance_effective_date; publication_date_unknown",
+      "artifact": "guidance",
+      "priority": 2
+    }
+  ]
+}

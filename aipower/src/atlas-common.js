@@ -257,6 +257,11 @@ function metadataBlock(e){
  if(e.actor_classification_status==='review_required')html+='<section class="block atlas-notice"><h3>'+tx('Актор требует уточнения','Actor needs review')+'</h3><p>'+esc(alist(e.actor_unclassified).join(' · '))+'</p><p>'+tx('Исходная метка сохранена и доступна поиском и фильтром «Не разобраны». Организация не угадана автоматически.','The raw label is searchable and included in the unresolved filter. No organisation was guessed.')+'</p></section>';
  return html;
 }
+function latestClarificationBlock(event){
+ var text=lf(event,'current_state');
+ if(typeof text!=='string'||!text.trim())return '';
+ return '<section class="block quote"><h3>'+tx('Последнее уточнение','Latest clarification')+(event.current_state_as_of?' · '+esc(event.current_state_as_of):'')+'</h3><p>'+esc(text)+'</p></section>';
+}
 function openDetail(k,id,options){
  if(ATLAS_RU&&k==='check')k='claimCheck';if(!ATLAS_RU&&k==='claimCheck')k='check';
  var maps={event:byEvent,arc:byArc,edge:byEdge,claim:byClaim,claimCheck:byCheck,check:byCheck,thesis:byThesis,counterargument:byCounter,gap:byGap};
@@ -264,7 +269,7 @@ function openDetail(k,id,options){
  if(!currentDetail)atlasReturnFocus=document.activeElement;
  _legacyOpenDetail(k,id,options);
  if(!currentDetail)return;
- var root=document.getElementById('detail'),h=root.querySelector('h2');if(h){h.id='detail-title';if(k==='event')h.insertAdjacentHTML('afterend',metadataBlock(byEvent[id]));}
+ var root=document.getElementById('detail'),h=root.querySelector('h2');if(h){h.id='detail-title';if(k==='event')h.insertAdjacentHTML('afterend',latestClarificationBlock(byEvent[id])+metadataBlock(byEvent[id]));}
  var modal=document.getElementById('modal');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
  var drawer=modal.querySelector('.drawer');drawer.setAttribute('role','dialog');drawer.setAttribute('aria-modal','true');drawer.setAttribute('aria-labelledby','detail-title');drawer.scrollTop=0;
  writeAtlasHash();

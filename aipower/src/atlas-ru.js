@@ -207,6 +207,19 @@ function statusShortRu(value){
 }
 function dateBasisLabelRu(value){
   return ({
+    'workload_resumption_date; disclosed_2026-10-23':'возобновление работ; сообщено 23 октября',
+    'announced_effective_date; enforcement_not_independently_observed':'объявленная дата применения; исполнение отдельно не проверено',
+    'official_correction_date; underlying_access_date_unknown':'дата официального уточнения; дата доступа неизвестна',
+    incident_month:'месяц эпизода; точный день не установлен',
+    observation_month:'месяц наблюдения',
+    investigation_finding_date:'дата итогов расследования',
+    publication_date:'дата публикации',
+    conference_publication_month:'месяц публикации в материалах конференции',
+    conference_proceedings_month:'месяц публикации в материалах конференции',
+    explicit_global_rollout_update:'дата сообщения о глобальном запуске',
+    'guidance_effective_date; publication_date_unknown':'начало действия рекомендаций; дата публикации неизвестна',
+    contract_signed_date:'дата подписания договора',
+    operational_milestone_date:'дата эксплуатационной вехи',
     source_publication_date:'дата официальной публикации',
     report_date_not_incident_date:'дата отчёта; точная дата испытания не указана',
     reported_event_month:'месяц события по сообщению источника',
@@ -283,6 +296,7 @@ function dateBasisLabelRu(value){
   })[value] || relationLabel(value);
 }
 function dateStatusLabelRu(value){
+  if (value === 'source_backed') return 'дата обоснована источником';
   if (value === 'month_known_day_unknown') return 'известен месяц; точный день неизвестен';
   if (value === 'exact') return 'точная дата';
   var reviewed = {verified_primary_date:'дата указана в первоисточнике',report_date_known_sample_mapping_unresolved:'дата отчёта известна; сопоставление примеров не установлено',disclosure_date_known_incident_date_unknown:'дата сообщения известна; дата эпизода неизвестна'};
@@ -292,7 +306,7 @@ function dateStatusLabelRu(value){
   return relationLabel(value);
 }
 function moneyStatusLabelRu(value){
-  return ({ contract_ceiling:'потолок рамочного контракта' })[value] || relationLabel(value);
+  return ({ contract_ceiling:'потолок рамочного контракта', 'binding_commitment; transaction_subject_to_closing':'обязательство по финансированию; сделка ещё не закрыта' })[value] || relationLabel(value);
 }
 function evidenceContextLabelRu(value){
   return ({
@@ -1318,6 +1332,8 @@ function renderEventDetail(event){
   return '<h2 id="detail-title">' + esc(event.title) + '</h2><div class="id">' + esc(event.id) + '</div>' +
     '<div class="tags">' + tag(event.date) + (event.date_basis ? tag(dateBasisLabelRu(event.date_basis)) : '') + (event.date_status ? tag(dateStatusLabelRu(event.date_status)) : '') + (event.status_update_date ? tag('обновлено: ' + event.status_update_date) : '') + (event.current_legal_status ? tag(event.current_legal_status) : '') + (event.money_status ? tag(moneyStatusLabelRu(event.money_status)) : '') + tag(confidenceLabelRu(event.confidence), confidenceClass(event.confidence)) + tag(statusLabelRu(event.status), 'status-' + event.status) + tag(event.source_type) + tags(event.jurisdictions) + '</div>' +
     distinctDetailBlock(seen, event.legal_update_ru || event.independent_review_summary_ru, event.status_update_date ? 'Обновление статуса · ' + event.status_update_date : 'Обновление статуса', 'quote') +
+    distinctDetailBlock(seen, event.attribution_summary_ru, 'Кто подтверждает и с какой уверенностью', '') +
+    distinctDetailBlock(seen, event.observation_period_ru, 'Период наблюдений', '') +
     distinctDetailBlock(seen, event.claim_supported, 'Что поддерживает', 'quote') +
     distinctDetailBlock(seen, event.claim_challenged, 'Что ограничивает или оспаривает', 'caveat') +
     distinctDetailBlock(seen, event.corroboration_needed, 'Что нужно добрать', 'caveat') +
