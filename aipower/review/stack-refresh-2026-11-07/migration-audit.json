@@ -1,0 +1,38 @@
+{
+  "version": "0.51",
+  "date": "2026-11-07",
+  "languages": {
+    "ru": {
+      "base_sha256": "e235753c5adb6d01a08e4786478e4a1e30f89e8940e4a13f82a05548625b2d0d",
+      "counts": {
+        "events": 510,
+        "claims": 76,
+        "claimChecks": 32,
+        "arcs": 26,
+        "edges": 1314,
+        "sourceIndex": 739
+      },
+      "preserved_event_ids": 469,
+      "preserved_edges": 1197,
+      "preserved_source_ids": 680,
+      "cyber": 252,
+      "core": 158
+    },
+    "en": {
+      "base_sha256": "900d6d45d77e1bd5c556a156b3f4b5504c25e65ab50ffd81b837bc81c004fb72",
+      "counts": {
+        "events": 510,
+        "claims": 76,
+        "claimChecks": 32,
+        "arcs": 26,
+        "edges": 1314,
+        "sourceIndex": 739
+      },
+      "preserved_event_ids": 469,
+      "preserved_edges": 1197,
+      "preserved_source_ids": 680,
+      "cyber": 252,
+      "core": 158
+    }
+  }
+}

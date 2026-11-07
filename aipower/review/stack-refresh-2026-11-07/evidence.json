@@ -1,0 +1,3150 @@
+{
+  "records": [
+    {
+      "id": "SIG_2026_PHP2SHELL_DISCOVERY_REMEDIATION",
+      "key": "PHP2SHELL_DISCOVERY_REMEDIATION",
+      "date": "2026-10-21",
+      "date_basis": "security_release_and_disclosure",
+      "date_status": "source_backed",
+      "title_ru": "PHP2Shell: ИИ помогает подтвердить эксплуатацию, а исправление упирается в ресурсы проекта",
+      "title_en": "PHP2Shell: AI-assisted validation meets a constrained repair pipeline",
+      "summary_ru": "PHP Foundation выпустила исправления CVE-2026-109618 и CVE-2026-109619. Первые признаки одной проблемы были известны с 2024 года; фонд объясняет задержку сложностью решения, совместимостью, процессом согласования и нехваткой экспертизы. Wiz описывает участие ИИ в поиске, разработке демонстраций эксплуатации и проверке исправлений. PHP Foundation сообщает о 15 CVE с 1 июля и более 100 невалидных, дублирующих или невоспроизводимых отчётах. Palo Alto Networks затем подтвердила эксплуатацию доступных интерфейсов управления PAN-OS; 3 ноября CSA описала цепочку с Fragnesia. 4 ноября MDDI сообщило о защитных мерах в госсистемах и критической инфраструктуре Сингапура и об отсутствии свидетельств эксплуатации в них.",
+      "summary_en": "PHP Foundation released fixes for CVE-2026-109618 and CVE-2026-109619. One issue had a research history dating to 2024; compatibility, agreement on the fix and scarce expertise delayed remediation. Wiz describes AI-assisted research, exploit demonstrations and patch validation. The Foundation reports 15 CVEs since July and over 100 invalid, duplicate or unreproducible reports. Palo Alto Networks subsequently confirmed exploitation of exposed PAN-OS management interfaces; Singapore's CSA described chaining with Fragnesia on November 3. On November 4, MDDI reported government/CII mitigation and no evidence of exploitation in those systems.",
+      "caveat_ru": "Не полностью автономная находка из ничего: есть длительная человеческая история исследования. Доля сайтов на PHP не равна доле скомпрометированных сайтов; это не доказательство, что все атаки используют ИИ. Дата уведомления не равна началу атак. Выпуск патча PHP не означает обновления всех зависимых продуктов. Ответ Сингапура не подтверждает взлом или отключение государственных сайтов.",
+      "caveat_en": "This was not an autonomous discovery without prior human work. PHP market share is not compromised-site share; attacker AI use is not established. November 3 dates the advisory, not the first attack. A PHP fix does not mean every dependent product is patched. Singapore's statement does not establish that government sites were breached or shut down.",
+      "safe_ru": "PHP Foundation выпустила исправления CVE-2026-109618 и CVE-2026-109619. Первые признаки одной проблемы были известны с 2024 года; фонд объясняет задержку сложностью решения, совместимостью, процессом согласования и нехваткой экспертизы. Wiz описывает участие ИИ в поиске, разработке демонстраций эксплуатации и проверке исправлений. PHP Foundation сообщает о 15 CVE с 1 июля и более 100 невалидных, дублирующих или невоспроизводимых отчётах. Palo Alto Networks затем подтвердила эксплуатацию доступных интерфейсов управления PAN-OS; 3 ноября CSA описала цепочку с Fragnesia. 4 ноября MDDI сообщило о защитных мерах в госсистемах и критической инфраструктуре Сингапура и об отсутствии свидетельств эксплуатации в них.",
+      "safe_en": "PHP Foundation released fixes for CVE-2026-109618 and CVE-2026-109619. One issue had a research history dating to 2024; compatibility, agreement on the fix and scarce expertise delayed remediation. Wiz describes AI-assisted research, exploit demonstrations and patch validation. The Foundation reports 15 CVEs since July and over 100 invalid, duplicate or unreproducible reports. Palo Alto Networks subsequently confirmed exploitation of exposed PAN-OS management interfaces; Singapore's CSA described chaining with Fragnesia on November 3. On November 4, MDDI reported government/CII mitigation and no evidence of exploitation in those systems.",
+      "source_ids": [
+        "PHP_FOUNDATION",
+        "WIZ_PHP",
+        "PAN_PHP",
+        "CSA_PHP",
+        "MDDI_PHP"
+      ],
+      "arcs": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "actors": [
+        "PHP Foundation",
+        "Wiz",
+        "Palo Alto Networks",
+        "CSA Singapore"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Global",
+        "Singapore"
+      ],
+      "stack_layers": [
+        "cyber_security_patch"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "artifact": "disclosure",
+      "force": "not_applicable",
+      "stage": "remediated",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "explicit_researcher_report_for_discovery_and_validation"
+    },
+    {
+      "id": "SIG_2026_OPENAI_KERNEL_PIPELINE",
+      "key": "OPENAI_KERNEL_PIPELINE",
+      "date": "2026-10",
+      "date_basis": "mid_october_research_run",
+      "date_status": "source_backed",
+      "title_ru": "OpenAI сообщает о массовой проверке уязвимостей Linux с помощью ИИ",
+      "title_en": "OpenAI reports a large AI-assisted Linux vulnerability-validation pipeline",
+      "summary_ru": "OpenAI описывает конвейер, динамически воспроизведший 1724 уязвимости и подготовивший эксплуатационные демонстрации для 948 различных случаев локального повышения привилегий. Полный прогон стоил около $1,21 млн в API-кредитах. Исследователи проверяли результаты перед отправкой. К окончанию десятидневного анализа 61 LPE уже был исправлен upstream, для 43 существовали staging-патчи, 299 публично обсуждались.",
+      "summary_en": "OpenAI reports 1,724 dynamically reproduced vulnerabilities and exploit demonstrations for 948 distinct local privilege-escalation cases, at about $1.21 million in API credits. Researchers reviewed findings before submission. At the end of the ten-day analysis, 61 LPE cases already had upstream fixes, 43 had staging patches and 299 were publicly discussed.",
+      "caveat_ru": "948 - не число ранее неизвестных CVE и не число удалённо взломанных систем. LPE предполагает исходный локальный доступ; экономическая оценка API не включает весь труд и эксплуатационные затраты. Числа и методика представлены OpenAI, независимая перепроверка всего корпуса не выполнена.",
+      "caveat_en": "948 is not a count of new CVEs or remotely breached systems. LPE assumes local access. API spending excludes total labour and operating costs. The corpus and methodology are reported by OpenAI, not independently reproduced here.",
+      "safe_ru": "OpenAI описывает конвейер, динамически воспроизведший 1724 уязвимости и подготовивший эксплуатационные демонстрации для 948 различных случаев локального повышения привилегий. Полный прогон стоил около $1,21 млн в API-кредитах. Исследователи проверяли результаты перед отправкой. К окончанию десятидневного анализа 61 LPE уже был исправлен upstream, для 43 существовали staging-патчи, 299 публично обсуждались.",
+      "safe_en": "OpenAI reports 1,724 dynamically reproduced vulnerabilities and exploit demonstrations for 948 distinct local privilege-escalation cases, at about $1.21 million in API credits. Researchers reviewed findings before submission. At the end of the ten-day analysis, 61 LPE cases already had upstream fixes, 43 had staging patches and 299 were publicly discussed.",
+      "source_ids": [
+        "OPENAI_KERNEL"
+      ],
+      "arcs": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "actors": [
+        "OpenAI",
+        "Linux kernel maintainers"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US",
+        "Global"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "finance_rent"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "artifact": "research",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "explicit_vendor_research_pipeline"
+    },
+    {
+      "id": "SIG_2026_GPT6_CYBER_RESTRICTED_RELEASE",
+      "key": "GPT6_CYBER_RESTRICTED_RELEASE",
+      "date": "2026-11-05",
+      "date_basis": "product_release",
+      "date_status": "source_backed",
+      "title_ru": "GPT-6 Cyber: усиленные кибервозможности доступны через проверяемый допуск",
+      "title_en": "GPT-6 Cyber: stronger capabilities behind verified-access requirements",
+      "summary_ru": "OpenAI присваивает GPT-6 Cyber категорию Critical по своей рамке кибервозможностей и ограничивает доступ программой Daybreak Red. Условия включают проверку личности, требования к безопасности организации, SSO, MFA и список разрешённых API IP-адресов. Компания сообщает об улучшении соблюдения границ задания в испытаниях.",
+      "summary_en": "OpenAI rates GPT-6 Cyber Critical under its own cyber-capability framework and limits access to Daybreak Red. Requirements include identity and organisational-security checks, SSO, MFA and allowed API IP addresses. The company reports improved compliance with task boundaries in evaluations.",
+      "caveat_ru": "Critical - классификация OpenAI, не решение государственного регулятора. Результаты контролируемой проверки границ не гарантируют отсутствия будущих выходов за полномочия.",
+      "caveat_en": "Critical is OpenAI's classification, not a regulator's determination. Controlled boundary tests do not guarantee the absence of future authority violations.",
+      "safe_ru": "OpenAI присваивает GPT-6 Cyber категорию Critical по своей рамке кибервозможностей и ограничивает доступ программой Daybreak Red. Условия включают проверку личности, требования к безопасности организации, SSO, MFA и список разрешённых API IP-адресов. Компания сообщает об улучшении соблюдения границ задания в испытаниях.",
+      "safe_en": "OpenAI rates GPT-6 Cyber Critical under its own cyber-capability framework and limits access to Daybreak Red. Requirements include identity and organisational-security checks, SSO, MFA and allowed API IP addresses. The company reports improved compliance with task boundaries in evaluations.",
+      "source_ids": [
+        "OPENAI_CYBER_CARD",
+        "OPENAI_CYBER_RELEASE"
+      ],
+      "arcs": [
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+      ],
+      "actors": [
+        "OpenAI"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "cyber_security_patch",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "artifact": "access_program",
+      "force": "contractual",
+      "stage": "limited_access",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [
+        "SIG_2026_ASTRA_CRITICAL_CYBER_ASSESSMENT",
+        "SIG_2026_DAYBREAK_FRONTLINE_SUBSIDIZED_ACCESS"
+      ],
+      "observation": null,
+      "ai_attribution": "not_applicable_access_regime"
+    },
+    {
+      "id": "SIG_2026_GEMINI_CARBON_DEFENDERS_FIRST",
+      "key": "GEMINI_CARBON_DEFENDERS_FIRST",
+      "date": "2026-10-28",
+      "date_basis": "vendor_announcement",
+      "date_status": "source_backed",
+      "title_ru": "Google начинает выдавать Gemini 4 Carbon защитникам и проверенным партнёрам",
+      "title_en": "Google starts Gemini 4 Carbon access with defenders and vetted partners",
+      "summary_ru": "Google объявляет первоначальный доступ к Carbon для части киберзащитников с дальнейшим расширением через Fairwind и участием в добровольном процессе предварительного государственного тестирования США.",
+      "summary_en": "Google announced initial Carbon access for selected cyber defenders, subsequent expansion through Fairwind and participation in the voluntary U.S. pre-release government-testing process.",
+      "caveat_ru": "Анонс не равен доступности для всех организаций или пользователей. Сравнительные результаты вендорских испытаний не переносим на все реальные атаки; государственный процесс назван добровольным.",
+      "caveat_en": "An announcement is not universal availability. Vendor comparisons do not generalise to all real attacks; the government process is described as voluntary.",
+      "safe_ru": "Google объявляет первоначальный доступ к Carbon для части киберзащитников с дальнейшим расширением через Fairwind и участием в добровольном процессе предварительного государственного тестирования США.",
+      "safe_en": "Google announced initial Carbon access for selected cyber defenders, subsequent expansion through Fairwind and participation in the voluntary U.S. pre-release government-testing process.",
+      "source_ids": [
+        "GOOGLE_CARBON"
+      ],
+      "arcs": [
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+      ],
+      "actors": [
+        "Google"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "cyber_security_patch",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "artifact": "access_program",
+      "force": "contractual",
+      "stage": "limited_access",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_applicable_access_regime"
+    },
+    {
+      "id": "SIG_2026_STORM0940_ARTEX_CONNECTWISE",
+      "key": "STORM0940_ARTEX_CONNECTWISE",
+      "date": "2026-09",
+      "date_basis": "earliest_campaign_observation",
+      "date_status": "source_backed",
+      "title_ru": "Microsoft связывает ARTEX с компрометацией доверенных облачных приложений ConnectWise",
+      "title_en": "Microsoft links ARTEX to compromised ConnectWise cloud-application trust",
+      "summary_ru": "Microsoft связывает кампанию с ориентированным на КНР Storm-0940 и сообщает об использовании ARTEX для ускорения атак и злоупотребления полномочиями приложений у клиентов ConnectWise. После компрометации выполнялись попытки входа более чем в 2250 tenants; в части сред наблюдались дальнейшие изменения учётных данных и привилегий.",
+      "summary_en": "Microsoft attributes the campaign to China-focused Storm-0940 and describes ARTEX-assisted attacks and abuse of application privileges at ConnectWise customers. Sign-in attempts targeted more than 2,250 tenants; follow-on credential and privilege changes were observed in some environments.",
+      "caveat_ru": "2250 tenants - цели попыток входа, не доказанное число утечек. В отдельно описанном массовом password-spray эпизоде Microsoft не увидела успешных входов. Атрибуция и вывод об агентной роли принадлежат исследователям Microsoft.",
+      "caveat_en": "2,250 is an attempted-sign-in target count, not confirmed breaches. Microsoft saw no successful sign-ins in the separately described password-spray episode. Attribution and the agent-tooling assessment belong to Microsoft.",
+      "safe_ru": "Microsoft связывает кампанию с ориентированным на КНР Storm-0940 и сообщает об использовании ARTEX для ускорения атак и злоупотребления полномочиями приложений у клиентов ConnectWise. После компрометации выполнялись попытки входа более чем в 2250 tenants; в части сред наблюдались дальнейшие изменения учётных данных и привилегий.",
+      "safe_en": "Microsoft attributes the campaign to China-focused Storm-0940 and describes ARTEX-assisted attacks and abuse of application privileges at ConnectWise customers. Sign-in attempts targeted more than 2,250 tenants; follow-on credential and privilege changes were observed in some environments.",
+      "source_ids": [
+        "MS_STORM0940"
+      ],
+      "arcs": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "actors": [
+        "Microsoft",
+        "ConnectWise",
+        "Storm-0940"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China",
+        "Global"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "cloud_inference"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "roles": [
+        "AI_ROLE_ATTACK_ENABLER"
+      ],
+      "artifact": "incident",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 1,
+      "delegation": "not_established",
+      "contexts": [
+        "production"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "explicit_investigator_report"
+    },
+    {
+      "id": "SIG_2026_VAPOR_PANDA_ARTEX",
+      "key": "VAPOR_PANDA_ARTEX",
+      "date": "2026-10-17",
+      "date_basis": "campaign_observation_start",
+      "date_status": "source_backed",
+      "title_ru": "CrowdStrike: ARTEX и модели используются для параллельных шпионских операций",
+      "title_en": "CrowdStrike describes human-directed parallel espionage with ARTEX",
+      "summary_ru": "CrowdStrike описывает VAPOR PANDA, ARTEX, DeepSeek и вторую коммерческую модель. Список целей охватывал более 200 организаций; постэксплуатационная активность подтверждена исследователем у девяти. Компания прямо отделяет эту кампанию от Storm-0940 и описывает параллельные действия, направляемые человеком.",
+      "summary_en": "CrowdStrike describes VAPOR PANDA using ARTEX, DeepSeek and a second commercial model. More than 200 organisations were targeted; the investigator confirmed post-exploitation activity at nine. It distinguishes this campaign from Storm-0940 and describes human-directed parallel activity.",
+      "caveat_ru": "Не 200 подтверждённых взломов и не самопроизвольный рой без людей. Общий инструмент не доказывает общую группировку; неизвестное пересечение жертв нельзя суммировать.",
+      "caveat_en": "Not 200 confirmed breaches or a spontaneous autonomous swarm. Shared tooling does not establish a shared actor; unknown victim overlaps must not be added together.",
+      "safe_ru": "CrowdStrike описывает VAPOR PANDA, ARTEX, DeepSeek и вторую коммерческую модель. Список целей охватывал более 200 организаций; постэксплуатационная активность подтверждена исследователем у девяти. Компания прямо отделяет эту кампанию от Storm-0940 и описывает параллельные действия, направляемые человеком.",
+      "safe_en": "CrowdStrike describes VAPOR PANDA using ARTEX, DeepSeek and a second commercial model. More than 200 organisations were targeted; the investigator confirmed post-exploitation activity at nine. It distinguishes this campaign from Storm-0940 and describes human-directed parallel activity.",
+      "source_ids": [
+        "CS_VAPOR"
+      ],
+      "arcs": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "actors": [
+        "CrowdStrike",
+        "VAPOR PANDA",
+        "DeepSeek"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China",
+        "Global"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "model_weights"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "roles": [
+        "AI_ROLE_ATTACK_ENABLER"
+      ],
+      "artifact": "incident",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_established",
+      "contexts": [
+        "production"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "explicit_investigator_report_with_agent_transcripts"
+    },
+    {
+      "id": "SIG_2026_ARTEX_CLOUD_SECRETS",
+      "key": "ARTEX_CLOUD_SECRETS",
+      "date": "2026-08",
+      "date_basis": "earliest_observation_in_report",
+      "date_status": "source_backed",
+      "title_ru": "Microsoft: от открытого секрета на GitHub до вывода данных из Azure Key Vault за пять минут",
+      "title_en": "Microsoft observes five minutes from a GitHub secret to Key Vault exfiltration",
+      "summary_ru": "Microsoft сообщает об агентном поиске секретов и последующих действиях в облаках; в одном наблюдении переход от поиска в GitHub до эксфильтрации из Key Vault занял пять минут. Отдельная фаза наблюдалась с 28 октября. 6 ноября Microsoft описывает применение ARTEX финансово мотивированным Storm-3358, ориентированным прежде всего на финансовые организации Юго-Восточной Азии.",
+      "summary_en": "Microsoft describes agent-assisted secret discovery and cloud activity; one observation took five minutes from a GitHub search to Azure Key Vault exfiltration. Another phase began on October 28. A November 6 report describes financially motivated Storm-3358 using ARTEX, primarily against Southeast Asian financial organisations.",
+      "caveat_ru": "Пять минут - отдельное наблюдение, не среднее время всех атак. Не считать каждый опубликованный отчёт независимой непересекающейся выборкой жертв; точная модель не установлена этой карточкой.",
+      "caveat_en": "Five minutes is one observation, not a mean. Related reports are not necessarily independent victim samples; this record does not establish the exact model.",
+      "safe_ru": "Microsoft сообщает об агентном поиске секретов и последующих действиях в облаках; в одном наблюдении переход от поиска в GitHub до эксфильтрации из Key Vault занял пять минут. Отдельная фаза наблюдалась с 28 октября. 6 ноября Microsoft описывает применение ARTEX финансово мотивированным Storm-3358, ориентированным прежде всего на финансовые организации Юго-Восточной Азии.",
+      "safe_en": "Microsoft describes agent-assisted secret discovery and cloud activity; one observation took five minutes from a GitHub search to Azure Key Vault exfiltration. Another phase began on October 28. A November 6 report describes financially motivated Storm-3358 using ARTEX, primarily against Southeast Asian financial organisations.",
+      "source_ids": [
+        "MS_SECRETS",
+        "MS_STORM3358"
+      ],
+      "arcs": [
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "actors": [
+        "Microsoft",
+        "Storm-3358"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Global"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "cloud_inference",
+        "data_telemetry"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "roles": [
+        "AI_ROLE_ATTACK_ENABLER"
+      ],
+      "artifact": "incident",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 1,
+      "delegation": "not_established",
+      "contexts": [
+        "production"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "explicit_investigator_report"
+    },
+    {
+      "id": "SIG_2026_GITBOOK_CREDENTIAL_CHAIN",
+      "key": "GITBOOK_CREDENTIAL_CHAIN",
+      "date": "2026-11-02",
+      "date_basis": "incident_date",
+      "date_status": "source_backed",
+      "title_ru": "GitBook признаёт взлом и остановку сервиса для отзыва инфраструктурного доступа",
+      "title_en": "GitBook acknowledges intrusion and service shutdown to revoke infrastructure access",
+      "summary_ru": "GitBook описывает цепочку от ошибки SSO через GitHub-интеграцию и облачный ключ к производственной инфраструктуре. Для прекращения доступа компания отозвала служебные полномочия, остановила сервис и провела ротацию секретов. В первоначальном сообщении атака названа использующей ИИ-агентов. Постмортем рассматривает все доступные клиентские данные как потенциально раскрытые, но не заявляет об их полной выгрузке.",
+      "summary_en": "GitBook describes an SSO flaw, GitHub integration and cloud credential leading into production infrastructure. It revoked service privileges, stopped the service and rotated secrets. The initial disclosure describes AI-agent involvement; the postmortem treats accessible customer data as potentially exposed rather than all proven exfiltrated.",
+      "caveat_ru": "Не установлены модель и степень автономии атакующего. Потенциальная доступность данных не равна доказанной эксфильтрации всех данных.",
+      "caveat_en": "The attacker's model and degree of autonomy are not established. Potential access is not proof that all customer data was downloaded.",
+      "safe_ru": "GitBook описывает цепочку от ошибки SSO через GitHub-интеграцию и облачный ключ к производственной инфраструктуре. Для прекращения доступа компания отозвала служебные полномочия, остановила сервис и провела ротацию секретов. В первоначальном сообщении атака названа использующей ИИ-агентов. Постмортем рассматривает все доступные клиентские данные как потенциально раскрытые, но не заявляет об их полной выгрузке.",
+      "safe_en": "GitBook describes an SSO flaw, GitHub integration and cloud credential leading into production infrastructure. It revoked service privileges, stopped the service and rotated secrets. The initial disclosure describes AI-agent involvement; the postmortem treats accessible customer data as potentially exposed rather than all proven exfiltrated.",
+      "source_ids": [
+        "GITBOOK"
+      ],
+      "arcs": [
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "actors": [
+        "GitBook"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Global"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "cloud_inference",
+        "data_telemetry"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS"
+      ],
+      "primary_domain": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "roles": [
+        "AI_ROLE_ATTACK_ENABLER"
+      ],
+      "artifact": "incident",
+      "force": "not_applicable",
+      "stage": "investigated",
+      "priority": 1,
+      "delegation": "not_established",
+      "contexts": [
+        "production"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "victim_claim_without_public_model_identification"
+    },
+    {
+      "id": "SIG_2026_EMUDHRA_TRUST_REVOCATION",
+      "key": "EMUDHRA_TRUST_REVOCATION",
+      "date": "2026-10-17",
+      "date_basis": "notification_and_revocation",
+      "date_status": "source_backed",
+      "title_ru": "Mozilla централизованно отзывает доверие после компрометации ключей eMudhra",
+      "title_en": "Mozilla revokes trust after compromised eMudhra intermediate keys",
+      "summary_ru": "Mozilla сообщает о компрометации восьми промежуточных ключей eMudhra и доставке блокировки через OneCRL пользователям стандартных конфигураций Firefox менее чем за три часа после уведомления.",
+      "summary_en": "Mozilla reports eight compromised eMudhra intermediate keys and OneCRL blocking delivered to standard Firefox configurations within three hours of notification.",
+      "caveat_ru": "Источник не доказывает ИИ-участие в компрометации. Быстрая доставка блокировки не означает одинаковое время восстановления всех клиентов и приложений; для части конфигураций потребовались обновления.",
+      "caveat_en": "The source does not establish AI involvement in the compromise. Blocking delivery is not identical to recovery across all clients; some configurations required updates.",
+      "safe_ru": "Mozilla сообщает о компрометации восьми промежуточных ключей eMudhra и доставке блокировки через OneCRL пользователям стандартных конфигураций Firefox менее чем за три часа после уведомления.",
+      "safe_en": "Mozilla reports eight compromised eMudhra intermediate keys and OneCRL blocking delivered to standard Firefox configurations within three hours of notification.",
+      "source_ids": [
+        "MOZILLA_EMUDHRA"
+      ],
+      "arcs": [
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "actors": [
+        "Mozilla",
+        "eMudhra"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Global"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "data_telemetry"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "roles": [],
+      "artifact": "incident",
+      "force": "not_applicable",
+      "stage": "remediated",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "production"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established"
+    },
+    {
+      "id": "SIG_2026_NIST_AGENT_IDENTITY_TENETS",
+      "key": "NIST_AGENT_IDENTITY_TENETS",
+      "date": "2026-10-27",
+      "date_basis": "guidance_publication",
+      "date_status": "source_backed",
+      "title_ru": "NIST предлагает отделить полномочия агента от его рассуждений",
+      "title_en": "NIST proposes separating agent permissions from agent reasoning",
+      "summary_ru": "NIST публикует десять исходных принципов идентичности агентов: отдельные идентификаторы, ограничиваемое делегирование, отзыв краткосрочных прав, независимые журналы и отделение политики доступа от рассуждений. Документ прямо предпочитает детерминированное управление доступом и отмечает недостаточность одних guardrails.",
+      "summary_en": "NIST sets out ten proposed agent-identity design tenets, including distinct identities, bounded delegation, short-lived revocable privileges, independent logs and access policy separate from reasoning. It favours deterministic access controls and notes that guardrails alone are insufficient.",
+      "caveat_ru": "Это предлагаемая архитектура в публикации NIST, не новый обязательный закон и не сертификат выполнения контролей.",
+      "caveat_en": "This is proposed architecture in a NIST publication, not a new binding law or certification of implemented controls.",
+      "safe_ru": "NIST публикует десять исходных принципов идентичности агентов: отдельные идентификаторы, ограничиваемое делегирование, отзыв краткосрочных прав, независимые журналы и отделение политики доступа от рассуждений. Документ прямо предпочитает детерминированное управление доступом и отмечает недостаточность одних guardrails.",
+      "safe_en": "NIST sets out ten proposed agent-identity design tenets, including distinct identities, bounded delegation, short-lived revocable privileges, independent logs and access policy separate from reasoning. It favours deterministic access controls and notes that guardrails alone are insufficient.",
+      "source_ids": [
+        "NIST_IDENTITY"
+      ],
+      "arcs": [
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+      ],
+      "actors": [
+        "NIST"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+        "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+      ],
+      "primary_domain": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "roles": [
+        "AI_ROLE_PROTECTED_SYSTEM"
+      ],
+      "artifact": "guidance",
+      "force": "advisory",
+      "stage": "published",
+      "priority": 1,
+      "delegation": "control_requirement",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [
+        "SIG_2026_NIST_AGENT_SECURITY_RFI",
+        "SIG_2026_NIST_AI_AGENT_STANDARDS_INITIATIVE"
+      ],
+      "observation": null,
+      "ai_attribution": "not_applicable_control_architecture"
+    },
+    {
+      "id": "SIG_2026_MISTRAL_OPEN_AND_VETTED_CYBER",
+      "key": "MISTRAL_OPEN_AND_VETTED_CYBER",
+      "date": "2026-10",
+      "date_basis": "release_month_confirmed_exact_day_needs_timestamp",
+      "date_status": "source_backed",
+      "title_ru": "Mistral сочетает открытые веса с отдельным допуском к специализированной кибермодели",
+      "title_en": "Mistral combines open weights with separately vetted cyber access",
+      "summary_ru": "Mistral опубликовала веса Large 4 и отдельно описала доступ проверенных корпоративных партнёров к специализированному киберварианту для согласованных целей. Лицензия весов требует отдельного коммерческого соглашения для указанных случаев Model-as-a-Service и содержит исключение для внутреннего использования.",
+      "summary_en": "Mistral released Large 4 weights after the October 6 API preview and separately describes vetted enterprise access to a specialised cyber variant for agreed purposes. Its weight licence requires a separate commercial agreement for specified Model-as-a-Service uses, with an internal-use exception.",
+      "caveat_ru": "Не называть modified MIT безусловной MIT или смешивать открытые веса основной модели с доступом к специализированному варианту. Точная дата первоначального выпуска требует машинного timestamp; относительное '9 days ago' не превращено в точную дату.",
+      "caveat_en": "Modified MIT is not unconditional MIT. Open weights for the base offering do not imply unrestricted access to the specialised variant. The exact first weight-release day is not established here; the record retains month precision.",
+      "safe_ru": "Mistral опубликовала веса Large 4 и отдельно описала доступ проверенных корпоративных партнёров к специализированному киберварианту для согласованных целей. Лицензия весов требует отдельного коммерческого соглашения для указанных случаев Model-as-a-Service и содержит исключение для внутреннего использования.",
+      "safe_en": "Mistral released Large 4 weights after the October 6 API preview and separately describes vetted enterprise access to a specialised cyber variant for agreed purposes. Its weight licence requires a separate commercial agreement for specified Model-as-a-Service uses, with an internal-use exception.",
+      "source_ids": [
+        "MISTRAL_RELEASE",
+        "MISTRAL_LICENSE",
+        "MISTRAL_INITIAL_COMMIT"
+      ],
+      "arcs": [
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+        "ARC_QUIET_ACCESS_CONTROL"
+      ],
+      "actors": [
+        "Mistral"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "France",
+        "EU"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "cyber_security_patch",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "artifact": "product",
+      "force": "contractual",
+      "stage": "available",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_applicable_release_regime"
+    },
+    {
+      "id": "SIG_2026_CHINA_AI_TECH_EXPORT_CATALOGUE",
+      "key": "CHINA_AI_TECH_EXPORT_CATALOGUE",
+      "date": "2026-10-16",
+      "date_basis": "notice_effective_and_consultation_opened",
+      "date_status": "source_backed",
+      "title_ru": "КНР предлагает контроль экспорта ИИ-кибертехнологий и вводит временную регистрацию",
+      "title_en": "China proposes AI cyber export controls and introduces interim registration",
+      "summary_ru": "MOFCOM/MOST вынесли на обсуждение 40 технологий, включая 23 ИИ-технологии. Разъяснение относит ИИ-генерацию и изменение вредоносного кода к предлагаемым запретам, ИИ-поиск уязвимостей - к ограничениям. Временная предэкспортная регистрация действует с объявления. Сам новый каталог ещё обсуждается до 15 ноября. В проекте выделены исключения и послабления для публичных технологий, открытых разработок и некоторых трансграничных форм использования; разъяснение отделяет зарубежное размещение ограниченных технологий от API-доступа.",
+      "summary_en": "MOFCOM and MOST consulted on 40 technologies, including 23 AI technologies. The explanation places AI malware generation/modification under proposed prohibitions and AI vulnerability discovery under restrictions. Interim pre-export registration applies from the announcement; consultation on the catalogue runs to November 15. Exemptions and distinctions cover public technologies, open development, overseas deployment and API access.",
+      "caveat_ru": "Не называть проект окончательно введённым запретом и не распространять его на все китайские модели или API. Точные пороги отдельных технологий требуют отдельного разбора приложений к объявлению.",
+      "caveat_en": "The draft catalogue is not a fully enacted general ban on Chinese models or APIs. Interim registration has a different legal stage. Detailed thresholds require separate examination of the annexes.",
+      "safe_ru": "MOFCOM/MOST вынесли на обсуждение 40 технологий, включая 23 ИИ-технологии. Разъяснение относит ИИ-генерацию и изменение вредоносного кода к предлагаемым запретам, ИИ-поиск уязвимостей - к ограничениям. Временная предэкспортная регистрация действует с объявления. Сам новый каталог ещё обсуждается до 15 ноября. В проекте выделены исключения и послабления для публичных технологий, открытых разработок и некоторых трансграничных форм использования; разъяснение отделяет зарубежное размещение ограниченных технологий от API-доступа.",
+      "safe_en": "MOFCOM and MOST consulted on 40 technologies, including 23 AI technologies. The explanation places AI malware generation/modification under proposed prohibitions and AI vulnerability discovery under restrictions. Interim pre-export registration applies from the announcement; consultation on the catalogue runs to November 15. Exemptions and distinctions cover public technologies, open development, overseas deployment and API access.",
+      "source_ids": [
+        "MOFCOM48",
+        "MOFCOM_QA"
+      ],
+      "arcs": [
+        "ARC_SOVEREIGN_FLOW_GATING",
+        "ARC_EXPORT_CHIPS_TO_MODELS",
+        "ARC_CYBER_CLAIM_TO_CAVEAT"
+      ],
+      "actors": [
+        "China Ministry of Commerce",
+        "China Ministry of Science and Technology"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "governance_law",
+        "cyber_security_patch"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "roles": [],
+      "artifact": "consultation",
+      "force": "conditional",
+      "stage": "partly_effective",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_applicable_state_control"
+    },
+    {
+      "id": "SIG_2026_CHINA_H200_IMPORT_GATE",
+      "key": "CHINA_H200_IMPORT_GATE",
+      "date": "2026-11-05",
+      "date_basis": "inventory_observation_reported_not_dated_independently",
+      "date_status": "source_backed",
+      "title_ru": "Reuters: около 600 тысяч H200 ожидают допуска в материковый Китай",
+      "title_en": "Reuters: roughly 600,000 H200 chips await mainland China import approval",
+      "summary_ru": "Reuters со ссылкой на двух осведомлённых собеседников сообщает о примерно 600 тысячах H200 в Гонконге в ожидании крупных поставок в материковый Китай. По сообщению, Пекин не дал широкого импортного допуска, хотя отдельные небольшие партии поступали.",
+      "summary_en": "Reuters, citing two informed people, reports roughly 600,000 H200 chips in Hong Kong awaiting large mainland shipments. Beijing reportedly has not granted broad import approval, although some small shipments arrived.",
+      "caveat_ru": "Анонимные источники Reuters, без независимой инвентаризации и публичного подтверждения компаний/ведомств. Чипы на складе не являются запущенными мощностями; не приписывать задержку исключительно американскому экспортному запрету.",
+      "caveat_en": "Anonymous reporting, without independent inventory or public company/regulator confirmation. Stored chips are not operating capacity; the delay is not attributed solely to U.S. export restrictions.",
+      "safe_ru": "Reuters со ссылкой на двух осведомлённых собеседников сообщает о примерно 600 тысячах H200 в Гонконге в ожидании крупных поставок в материковый Китай. По сообщению, Пекин не дал широкого импортного допуска, хотя отдельные небольшие партии поступали.",
+      "safe_en": "Reuters, citing two informed people, reports roughly 600,000 H200 chips in Hong Kong awaiting large mainland shipments. Beijing reportedly has not granted broad import approval, although some small shipments arrived.",
+      "source_ids": [
+        "REUTERS_H200"
+      ],
+      "arcs": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+        "ARC_TOLL_AND_THROTTLE"
+      ],
+      "actors": [
+        "NVIDIA",
+        "China Government"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China",
+        "Hong Kong",
+        "US"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "market_observation",
+      "force": "undetermined",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [
+        "SIG_2026_BIS_H200_MI325X_CASEBYCASE",
+        "SIG_2026_NVIDIA_H200_LICENSE_SMALL"
+      ],
+      "observation": null,
+      "ai_attribution": "not_applicable_hardware_access"
+    },
+    {
+      "id": "SIG_2026_NEW_YORK_DC_PERMIT_MORATORIUM",
+      "key": "NEW_YORK_DC_PERMIT_MORATORIUM",
+      "date": "2026-07-14",
+      "date_basis": "executive_order_signed",
+      "date_status": "source_backed",
+      "title_ru": "Нью-Йорк приостанавливает часть разрешений для крупных дата-центров",
+      "title_en": "New York pauses a defined class of large data-centre permits",
+      "summary_ru": "Executive Order 62 предписывает DEC приостановить рассмотрение указанных неполных заявок на дискреционные разрешения для строительства или расширения дата-центров до завершения общей экологической оценки. Определение включает порог 50 МВт и исключения для ряда исследовательских, образовательных и иных объектов; местные разрешения этим положением не охвачены.",
+      "summary_en": "Executive Order 62 directs DEC to pause specified incomplete discretionary permit applications for data-centre construction or expansion pending a generic environmental impact statement. The definition includes a 50 MW threshold and research, educational and other exceptions; local permits are outside this provision.",
+      "caveat_ru": "Это пропущенная июльская мера, не следствие ноябрьских выборов. Не общий запрет всех дата-центров США и не закрытие действующих объектов; заявление об ожидаемой годовой паузе следует отличать от условия завершения GEIS в самом указе.",
+      "caveat_en": "This July measure predates the November election. It is neither a U.S.-wide construction ban nor closure of existing sites. An anticipated one-year pause differs from the order's GEIS completion condition.",
+      "safe_ru": "Executive Order 62 предписывает DEC приостановить рассмотрение указанных неполных заявок на дискреционные разрешения для строительства или расширения дата-центров до завершения общей экологической оценки. Определение включает порог 50 МВт и исключения для ряда исследовательских, образовательных и иных объектов; местные разрешения этим положением не охвачены.",
+      "safe_en": "Executive Order 62 directs DEC to pause specified incomplete discretionary permit applications for data-centre construction or expansion pending a generic environmental impact statement. The definition includes a 50 MW threshold and research, educational and other exceptions; local permits are outside this provision.",
+      "source_ids": [
+        "NY_EO62",
+        "NY_ANNOUNCEMENT"
+      ],
+      "arcs": [
+        "ARC_ENERGY_GRID_POLITICS",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "actors": [
+        "New York State Government"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "government_order",
+      "force": "binding",
+      "stage": "effective",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_applicable_infrastructure_governance"
+    },
+    {
+      "id": "SIG_2026_TEXAS_ELECTION_DC_PAUSE_PLEDGE",
+      "key": "TEXAS_ELECTION_DC_PAUSE_PLEDGE",
+      "date": "2026-10-22",
+      "date_basis": "dated_campaign_pledge_reported_by_press",
+      "date_status": "source_backed",
+      "title_ru": "После выборов в Техасе продолжение ограничений дата-центров остаётся политическим обязательством",
+      "title_en": "Texas election follow-up: a data-centre pause remains a political commitment",
+      "summary_ru": "Gina Hinojosa выступала за мораторий на согласование дата-центров до законодательных гарантий для жителей. Texas Tribune после выборов описывает её как избранного губернатора и датирует отдельное обещание 22 октября. Пауза и аудит при Abbott предшествуют выборам. Новые обещания не являются уже принятыми актами новой администрации; вступление в должность ожидается 19 января 2027 года.",
+      "summary_en": "Gina Hinojosa supported a pause on data-centre approvals pending statutory protections for residents. The Texas Tribune describes her as governor-elect and dates a specific pledge to October 22. Abbott's pause and audit preceded the election; the incoming administration takes office on January 19, 2027.",
+      "caveat_ru": "Не доказано, что позиция по дата-центрам вызвала исход выборов. Не объявлять остановку строительства по всей стране и не смешивать обещание с действующим аудитом Abbott.",
+      "caveat_en": "New promises are not enacted measures. This does not establish that the data-centre position caused the election outcome, a nationwide halt, or a new version of the earlier Abbott audit.",
+      "safe_ru": "Gina Hinojosa выступала за мораторий на согласование дата-центров до законодательных гарантий для жителей. Texas Tribune после выборов описывает её как избранного губернатора и датирует отдельное обещание 22 октября. Пауза и аудит при Abbott предшествуют выборам. Новые обещания не являются уже принятыми актами новой администрации; вступление в должность ожидается 19 января 2027 года.",
+      "safe_en": "Gina Hinojosa supported a pause on data-centre approvals pending statutory protections for residents. The Texas Tribune describes her as governor-elect and dates a specific pledge to October 22. Abbott's pause and audit preceded the election; the incoming administration takes office on January 19, 2027.",
+      "source_ids": [
+        "HINOJOSA_PLATFORM",
+        "TEXAS_TRIBUNE"
+      ],
+      "arcs": [
+        "ARC_ENERGY_GRID_POLITICS",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "actors": [
+        "Gina Hinojosa",
+        "Texas State Government"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "political_declaration",
+      "force": "not_applicable",
+      "stage": "announced",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [
+        "SIG_2026_TEXAS_DATACENTER_INTERCONNECTION_AUDIT"
+      ],
+      "observation": null,
+      "ai_attribution": "not_applicable_political_position"
+    },
+    {
+      "id": "SIG_2026_ASML_CAPACITY_AND_SERVICE",
+      "key": "ASML_CAPACITY_AND_SERVICE",
+      "date": "2026-10-14",
+      "date_basis": "quarterly_disclosure",
+      "date_status": "source_backed",
+      "title_ru": "ASML: производственная мощность и обслуживание оборудования остаются отдельными ограничителями ИИ-стека",
+      "title_en": "ASML: manufacturing capacity and installed-base service constrain the stack",
+      "summary_ru": "ASML раскрыла EUR 3,289 млрд выручки от обслуживания установленного оборудования и полевых опций за III квартал. Компания ожидает, что запланированного объёма поставок на 2027-2028 годы не хватит для удовлетворения спроса клиентов.",
+      "summary_en": "ASML disclosed EUR 3.289 billion in Q3 installed-base service and field-option revenue. It expects planned 2027-2028 deliveries to fall short of customer demand.",
+      "caveat_ru": "Прогноз дефицита представлен поставщиком. Выручка от сервиса не доказывает право удалённого отключения станков или конкретное политическое воздействие.",
+      "caveat_en": "Shortage guidance comes from the supplier. Service revenue establishes neither remote shutdown rights nor specific political intervention.",
+      "safe_ru": "ASML раскрыла EUR 3,289 млрд выручки от обслуживания установленного оборудования и полевых опций за III квартал. Компания ожидает, что запланированного объёма поставок на 2027-2028 годы не хватит для удовлетворения спроса клиентов.",
+      "safe_en": "ASML disclosed EUR 3.289 billion in Q3 installed-base service and field-option revenue. It expects planned 2027-2028 deliveries to fall short of customer demand.",
+      "source_ids": [
+        "ASML_Q3",
+        "ASML_SEC"
+      ],
+      "arcs": [
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+      ],
+      "actors": [
+        "ASML"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Netherlands",
+        "EU",
+        "Global"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "finance_rent"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "market_observation",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": "2026-Q3",
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_TSMC_N2_REVENUE",
+      "key": "TSMC_N2_REVENUE",
+      "date": "2026-10-15",
+      "date_basis": "quarterly_disclosure",
+      "date_status": "source_backed",
+      "title_ru": "TSMC: 2-нм производство уже входит в фактическую выручку, а не только в дорожную карту",
+      "title_en": "TSMC reports 2 nm production in realised wafer revenue",
+      "summary_ru": "В квартальном раскрытии TSMC доля 2-нм процесса составляет 8% выручки от пластин, 3-нм - 33%; процессы 7 нм и новее вместе дают 79%.",
+      "summary_en": "In its Q3 disclosure, TSMC reports 2 nm at 8% of wafer revenue, 3 nm at 33%, and 7 nm and newer processes together at 79%.",
+      "caveat_ru": "Это доли выручки TSMC, не доли мирового рынка и не число ИИ-чипов. Раскрытие само по себе не измеряет зависимость каждой американской или китайской модели от TSMC.",
+      "caveat_en": "These are TSMC revenue shares, not global market shares or AI-chip counts. They do not measure each U.S. or Chinese model's dependence on TSMC.",
+      "safe_ru": "В квартальном раскрытии TSMC доля 2-нм процесса составляет 8% выручки от пластин, 3-нм - 33%; процессы 7 нм и новее вместе дают 79%.",
+      "safe_en": "In its Q3 disclosure, TSMC reports 2 nm at 8% of wafer revenue, 3 nm at 33%, and 7 nm and newer processes together at 79%.",
+      "source_ids": [
+        "TSMC_Q3"
+      ],
+      "arcs": [
+        "ARC_EXPORT_CHIPS_TO_MODELS",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "actors": [
+        "TSMC"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Taiwan",
+        "Global"
+      ],
+      "stack_layers": [
+        "energy_compute_chips"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "market_observation",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": "2026-Q3",
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_SKHYNIX_LONG_TERM_ALLOCATION",
+      "key": "SKHYNIX_LONG_TERM_ALLOCATION",
+      "date": "2026-10-28",
+      "date_basis": "quarterly_disclosure",
+      "date_status": "source_backed",
+      "title_ru": "SK hynix закрепила долгосрочными соглашениями более половины мощностей 2027-2028 годов",
+      "title_en": "SK hynix assigns more than half of 2027-2028 capacity through long-term agreements",
+      "summary_ru": "SK hynix сообщает о долгосрочных соглашениях, покрывающих более 50% производственной мощности на 2027-2028 годы, и росте поставок HBM4.",
+      "summary_en": "SK hynix reports long-term agreements covering over 50% of 2027-2028 production capacity and growing HBM4 shipments.",
+      "caveat_ru": "Не вся мощность продана и не вся указанная мощность относится только к HBM. Прогноз дальнейшего дефицита не является уже наступившим результатом.",
+      "caveat_en": "Not all capacity is sold, and the cited capacity is not exclusively HBM. Further shortages are guidance, not an already realised outcome.",
+      "safe_ru": "SK hynix сообщает о долгосрочных соглашениях, покрывающих более 50% производственной мощности на 2027-2028 годы, и росте поставок HBM4.",
+      "safe_en": "SK hynix reports long-term agreements covering over 50% of 2027-2028 production capacity and growing HBM4 shipments.",
+      "source_ids": [
+        "SKHYNIX_Q3"
+      ],
+      "arcs": [
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+      ],
+      "actors": [
+        "SK hynix"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "South Korea",
+        "Global"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "finance_rent"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "market_observation",
+      "force": "contractual",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_HUAWEI_COMMERCIAL_STACK_ROADMAP",
+      "key": "HUAWEI_COMMERCIAL_STACK_ROADMAP",
+      "date": "2026-09-17",
+      "date_basis": "vendor_keynote",
+      "date_status": "source_backed",
+      "title_ru": "Huawei заявляет о коммерческом применении Atlas 950 и расширении собственного вычислительного стека",
+      "title_en": "Huawei reports commercial Atlas 950 deployment and a broader domestic stack",
+      "summary_ru": "Huawei сообщает о развёртывании более 1000 Atlas 900 A3 SuperPoD и масштабном коммерческом применении Atlas 950. Компания представила портфель из 11 чипов на UnifiedBus; доступность Ascend 960DT обещана в I квартале 2027 года.",
+      "summary_en": "Huawei reports over 1,000 deployed Atlas 900 A3 SuperPoDs and large-scale commercial use of Atlas 950. It presented 11 UnifiedBus chips and scheduled Ascend 960DT availability for Q1 2027.",
+      "caveat_ru": "Масштаб развёртывания и результаты заявлены Huawei. Ascend 960DT ещё не следует считать поставленным; независимое равенство с NVIDIA по производительности, стоимости и надёжности не установлено.",
+      "caveat_en": "Deployment scale and results are Huawei's claims. Ascend 960DT is not counted as delivered; independent parity with NVIDIA on performance, cost and reliability is not established.",
+      "safe_ru": "Huawei сообщает о развёртывании более 1000 Atlas 900 A3 SuperPoD и масштабном коммерческом применении Atlas 950. Компания представила портфель из 11 чипов на UnifiedBus; доступность Ascend 960DT обещана в I квартале 2027 года.",
+      "safe_en": "Huawei reports over 1,000 deployed Atlas 900 A3 SuperPoDs and large-scale commercial use of Atlas 950. It presented 11 UnifiedBus chips and scheduled Ascend 960DT availability for Q1 2027.",
+      "source_ids": [
+        "HUAWEI_CONNECT"
+      ],
+      "arcs": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"
+      ],
+      "actors": [
+        "Huawei"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "cloud_inference"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "deployment",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "production"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [
+        "SIG_2026_HUAWEI_ATLAS950_PHYSICAL_DEMONSTRATION"
+      ],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_ALIBABA_STACK_EXPORT",
+      "key": "ALIBABA_STACK_EXPORT",
+      "date": "2026-09-25",
+      "date_basis": "conference_announcement",
+      "date_status": "source_backed",
+      "title_ru": "Alibaba связывает собственные чипы, облака, модели и агентные сервисы с зарубежной экспансией",
+      "title_en": "Alibaba links chips, cloud, models and agent services to overseas expansion",
+      "summary_ru": "Alibaba представила AgentCore и Agent Security Center, а также планы первых облачных регионов в Турции, Финляндии и Нидерландах. Zhenwu V900 назначен к массовому выпуску на I квартал 2027 года; цель более 20 ГВт относится к 2032 году.",
+      "summary_en": "Alibaba presented AgentCore and Agent Security Center and plans for its first cloud regions in Turkey, Finland and the Netherlands. Zhenwu V900 mass production is planned for Q1 2027; the capacity target above 20 GW refers to 2032.",
+      "caveat_ru": "Новые регионы, V900 и 20 ГВт - планы, не подтверждённая доступная ёмкость на дату проверки. Производительность и экономия из пресс-релиза не прошли независимую проверку.",
+      "caveat_en": "New regions, V900 and 20 GW are plans, not verified available capacity. A vendor announcement is not independent evidence of full-stack parity or dependency-free overseas deployment.",
+      "safe_ru": "Alibaba представила AgentCore и Agent Security Center, а также планы первых облачных регионов в Турции, Финляндии и Нидерландах. Zhenwu V900 назначен к массовому выпуску на I квартал 2027 года; цель более 20 ГВт относится к 2032 году.",
+      "safe_en": "Alibaba presented AgentCore and Agent Security Center and plans for its first cloud regions in Turkey, Finland and the Netherlands. Zhenwu V900 mass production is planned for Q1 2027; the capacity target above 20 GW refers to 2032.",
+      "source_ids": [
+        "ALIBABA_APSARA"
+      ],
+      "arcs": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "actors": [
+        "Alibaba"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China",
+        "EU",
+        "Global"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "cloud_inference",
+        "model_weights",
+        "decision_support_cognition"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "product",
+      "force": "not_applicable",
+      "stage": "announced",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_LUMI_AI_PROCUREMENT",
+      "key": "LUMI_AI_PROCUREMENT",
+      "date": "2026-08-31",
+      "date_basis": "contract_announcement",
+      "date_status": "source_backed",
+      "title_ru": "EuroHPC подписала контракт на LUMI-AI: общеевропейское распределение доступа к вычислениям",
+      "title_en": "EuroHPC signs LUMI-AI procurement with shared compute allocation",
+      "summary_ru": "EuroHPC подписала контракт с Bull на приобретение, поставку, установку и обслуживание LUMI-AI общим бюджетом EUR 387,8 млн, поровну финансируемым EuroHPC и консорциумом стран. Пользовательский доступ к новой системе ожидается в 2027 году; ресурсы распределяются совместно в соответствии с инвестициями.",
+      "summary_en": "EuroHPC signed with Bull to acquire, deliver, install and maintain LUMI-AI for EUR 387.8 million, funded equally by EuroHPC and the national consortium. User access is expected in 2027; resources are shared in proportion to investments.",
+      "caveat_ru": "Нельзя записывать будущую LUMI-AI как уже работающую. Существующая LUMI AI Factory предоставляет услуги с апреля 2025 года на другой системе LUMI.",
+      "caveat_en": "The new machine is not already operational. The existing LUMI AI Factory has offered services on the different LUMI system since April 2025.",
+      "safe_ru": "EuroHPC подписала контракт с Bull на приобретение, поставку, установку и обслуживание LUMI-AI общим бюджетом EUR 387,8 млн, поровну финансируемым EuroHPC и консорциумом стран. Пользовательский доступ к новой системе ожидается в 2027 году; ресурсы распределяются совместно в соответствии с инвестициями.",
+      "safe_en": "EuroHPC signed with Bull to acquire, deliver, install and maintain LUMI-AI for EUR 387.8 million, funded equally by EuroHPC and the national consortium. User access is expected in 2027; resources are shared in proportion to investments.",
+      "source_ids": [
+        "LUMI_CONTRACT"
+      ],
+      "arcs": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "actors": [
+        "EuroHPC Joint Undertaking",
+        "Bull"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "EU",
+        "Finland",
+        "Norway"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "cloud_inference",
+        "finance_rent"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "government_program",
+      "force": "contractual",
+      "stage": "signed",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_EUROHPC_GIGAFACTORY_DEADLINE",
+      "key": "EUROHPC_GIGAFACTORY_DEADLINE",
+      "date": "2026-11-05",
+      "date_basis": "tender_update",
+      "date_status": "source_backed",
+      "title_ru": "EuroHPC переносит срок первого лота AI Gigafactories из-за бюджетных процедур стран",
+      "title_en": "EuroHPC extends the first AI Gigafactory lot for national budget procedures",
+      "summary_ru": "В обновлении конкурса EUROHPC-2026-CEI-AIGF-01 срок лота 1 перенесён на 4 февраля 2027 года для завершения национальных бюджетных процедур и представления финансовых обязательств. Срок лота 2 остаётся 3 декабря 2026 года. Заказчики будут приобретать вычислительное время у выбранных консорциумов.",
+      "summary_en": "The November 5 amendment to EUROHPC-2026-CEI-AIGF-01 moves lot 1 to February 4, 2027 to complete national budget procedures and funding commitments. Lot 2 remains due December 3, 2026. Authorities will buy compute time from selected consortia.",
+      "caveat_ru": "Перенос одного лота не означает отмену программы. Исходный конкурс открыт 30 июля; ноябрьская карточка относится именно к изменению сроков.",
+      "caveat_en": "One lot's extension is not cancellation. The original call opened July 30; this event dates the amendment.",
+      "safe_ru": "В обновлении конкурса EUROHPC-2026-CEI-AIGF-01 срок лота 1 перенесён на 4 февраля 2027 года для завершения национальных бюджетных процедур и представления финансовых обязательств. Срок лота 2 остаётся 3 декабря 2026 года. Заказчики будут приобретать вычислительное время у выбранных консорциумов.",
+      "safe_en": "The November 5 amendment to EUROHPC-2026-CEI-AIGF-01 moves lot 1 to February 4, 2027 to complete national budget procedures and funding commitments. Lot 2 remains due December 3, 2026. Authorities will buy compute time from selected consortia.",
+      "source_ids": [
+        "EUROHPC_TENDER"
+      ],
+      "arcs": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "actors": [
+        "EuroHPC Joint Undertaking"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "EU"
+      ],
+      "stack_layers": [
+        "cloud_inference",
+        "finance_rent",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "government_program",
+      "force": "contractual",
+      "stage": "published",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_AWS_EU_DISCONNECTION_EXERCISE",
+      "key": "AWS_EU_DISCONNECTION_EXERCISE",
+      "date": "2026-10-24",
+      "date_basis": "exercise_date",
+      "date_status": "source_backed",
+      "title_ru": "AWS сообщила об испытании европейского облака без двух глобальных систем",
+      "title_en": "AWS reports a European cloud exercise without two global systems",
+      "summary_ru": "AWS сообщает, что во время многочасового испытания отключила глобальную магистраль и систему контролируемой передачи операционных данных. Трафик перенаправили через публичный интернет; европейские сотрудники продолжали эксплуатацию, доступность нагрузок и данных сохранилась.",
+      "summary_en": "AWS reports disabling its global backbone and controlled operational-data exchange for a multi-hour exercise. Traffic used the public internet while European staff continued operations and workloads and data remained available.",
+      "caveat_ru": "Отчёт самой AWS, не независимый аудит. Это не отключение от всего интернета, не бессрочная автономия, не переносимость к другому поставщику и не юридический иммунитет.",
+      "caveat_en": "AWS's report is not an independent audit. This was not disconnection from the entire internet, indefinite autonomy, portability to another supplier or legal immunity.",
+      "safe_ru": "AWS сообщает, что во время многочасового испытания отключила глобальную магистраль и систему контролируемой передачи операционных данных. Трафик перенаправили через публичный интернет; европейские сотрудники продолжали эксплуатацию, доступность нагрузок и данных сохранилась.",
+      "safe_en": "AWS reports disabling its global backbone and controlled operational-data exchange for a multi-hour exercise. Traffic used the public internet while European staff continued operations and workloads and data remained available.",
+      "source_ids": [
+        "AWS_EXERCISE"
+      ],
+      "arcs": [
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_SOVEREIGN_FLOW_GATING",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "actors": [
+        "Amazon / AWS"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "EU",
+        "Germany",
+        "US"
+      ],
+      "stack_layers": [
+        "cloud_inference",
+        "cyber_security_patch",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "roles": [
+        "AI_ROLE_PROTECTED_SYSTEM"
+      ],
+      "artifact": "evaluation",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [
+        "SIG_AWS_2026_EUROPEAN_SOVEREIGN_CLOUD"
+      ],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_UK_DATACENTRE_COVENANT",
+      "key": "UK_DATACENTRE_COVENANT",
+      "date": "2026-10-28",
+      "date_basis": "policy_publication",
+      "date_status": "source_backed",
+      "title_ru": "Великобритания связывает ускоренный доступ дата-центров к энергии с общественными и защитными обязательствами",
+      "title_en": "UK links prioritised data-centre support to energy, community and resilience conditions",
+      "summary_ru": "Data Centre Covenant связывает дополнительную государственную поддержку стратегических ЦОД с оплатой создаваемых энергетических затрат, местными выгодами, экологической отчётностью и устойчивостью. Правительство описывает приоритизацию сетевых подключений и будущий ограниченный режим временной генерации до подключения к сети.",
+      "summary_en": "The Data Centre Covenant ties additional support for strategic data centres to energy-cost coverage, local benefits, environmental reporting and resilience. It describes prioritised grid connections and a future limited temporary-generation regime before grid access.",
+      "caveat_ru": "Не все положения уже действующие универсальные юридические обязанности. Часть критериев и правил ещё предстоит определить; целевые 6 ГВт к 2030 году не являются текущей мощностью.",
+      "caveat_en": "Not every provision is an effective universal legal duty. Some criteria and rules remain to be defined; 6 GW by 2030 is a target, not current capacity.",
+      "safe_ru": "Data Centre Covenant связывает дополнительную государственную поддержку стратегических ЦОД с оплатой создаваемых энергетических затрат, местными выгодами, экологической отчётностью и устойчивостью. Правительство описывает приоритизацию сетевых подключений и будущий ограниченный режим временной генерации до подключения к сети.",
+      "safe_en": "The Data Centre Covenant ties additional support for strategic data centres to energy-cost coverage, local benefits, environmental reporting and resilience. It describes prioritised grid connections and a future limited temporary-generation regime before grid access.",
+      "source_ids": [
+        "UK_COVENANT"
+      ],
+      "arcs": [
+        "ARC_ENERGY_GRID_POLITICS",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "actors": [
+        "UK Government"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "UK"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "governance_law",
+        "cyber_security_patch"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "roles": [],
+      "artifact": "policy_framework",
+      "force": "conditional",
+      "stage": "announced",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_ARAMCO_HUMAIN_CLOSING",
+      "key": "ARAMCO_HUMAIN_CLOSING",
+      "date": "2026-11-01",
+      "date_basis": "transaction_closing_announcement",
+      "date_status": "source_backed",
+      "title_ru": "Aramco получила 49% HUMAIN: энергия, капитал и ИИ объединяются через собственность",
+      "title_en": "Aramco acquires 49% of HUMAIN, linking energy, capital and AI ownership",
+      "summary_ru": "PIF и Aramco объявили о закрытии сделки: PIF сохраняет 51% HUMAIN, Aramco получает 49%, внося ИИ-активы и около SAR 9,9 млрд ($2,6 млрд) денежных средств в 2026 году. Развёртывание 3 ГВт мощностей к 2030 году остаётся планом.",
+      "summary_en": "PIF and Aramco announced closing: PIF retains 51%, while Aramco receives 49% and contributes AI assets and about SAR 9.9 billion ($2.6 billion) in cash during 2026. Deployment of 3 GW by 2030 remains planned.",
+      "caveat_ru": "Закрытие сделки не доказывает создание всего независимого стека, выполнение всех денежных взносов или ввод заявленных 3 ГВт.",
+      "caveat_en": "Closing does not establish an independent full stack, completion of every cash contribution or commissioning of the planned 3 GW.",
+      "safe_ru": "PIF и Aramco объявили о закрытии сделки: PIF сохраняет 51% HUMAIN, Aramco получает 49%, внося ИИ-активы и около SAR 9,9 млрд ($2,6 млрд) денежных средств в 2026 году. Развёртывание 3 ГВт мощностей к 2030 году остаётся планом.",
+      "safe_en": "PIF and Aramco announced closing: PIF retains 51%, while Aramco receives 49% and contributes AI assets and about SAR 9.9 billion ($2.6 billion) in cash during 2026. Deployment of 3 GW by 2030 remains planned.",
+      "source_ids": [
+        "PIF_HUMAIN"
+      ],
+      "arcs": [
+        "ARC_GULF_CONDITIONAL_SOVEREIGNTY",
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+        "ARC_ENERGY_GRID_POLITICS"
+      ],
+      "actors": [
+        "PIF",
+        "Saudi Aramco",
+        "HUMAIN"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Saudi Arabia",
+        "Gulf"
+      ],
+      "stack_layers": [
+        "finance_rent",
+        "energy_compute_chips",
+        "cloud_inference"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "market_observation",
+      "force": "contractual",
+      "stage": "signed",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [
+        "SIG_SA_2026_HUMAIN_XAI",
+        "SIG_2026_HUMAIN_DATAVOLT_OXAGON_CONSTRUCTION"
+      ],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_JAIS3_OPEN_ARABIC_AGENTS",
+      "key": "JAIS3_OPEN_ARABIC_AGENTS",
+      "date": "2026-10-15",
+      "date_basis": "IFM_release",
+      "date_status": "source_backed",
+      "title_ru": "Jais 3: арабоязычные модели на K2 Horizon с открытыми этапами обучения",
+      "title_en": "Jais 3: Arabic models built on K2 Horizon, with inspectable training checkpoints",
+      "summary_ru": "IFM и партнёры выпустили шесть Jais 3, от 0,9 до 375 млрд параметров, на собственной базе K2 Horizon, а не Qwen. По данным разработчиков, продолженное предобучение использовало 201,45 млрд токенов (75% арабских, 25% повторных), SFT — 41,1 млрд; 59% арабских данных получены синтетическим переводом. Опубликованы веса Apache 2.0 и промежуточные состояния, а также образец, не весь корпус данных. В проверенной карточке 7B код всё ещё обозначен как готовящийся к публикации.",
+      "summary_en": "IFM and partners released six Jais 3 models, 0.9B-375B parameters, based on their K2 Horizon family rather than Qwen. The developer reports 201.45B continued-pretraining tokens (75% Arabic, 25% replay) and 41.1B SFT tokens; 59% of Arabic data was synthetically translated. Apache 2.0 weights and training-stage checkpoints are published, with a sample rather than the full corpus. The inspected 7B card still lists code as coming soon.",
+      "caveat_ru": "Происхождение, объёмы обучения и сравнительные результаты сообщены разработчиками; независимого аудита всего конвейера и качества арабского языка здесь нет. Не смешивать Jais 3 с прежним K2Think на Qwen. Открытые веса не доказывают аппаратную независимость, полную воспроизводимость или превосходство над передовыми моделями; крупнейшая модель не означает дешёвую автономию для каждого.",
+      "caveat_en": "Lineage, training figures and comparative results are developer reports, not an audit of all training or independent Arabic-quality evaluation. Do not conflate Jais 3 with older Qwen-based K2Think. Available weights do not establish hardware independence, full reproducibility or frontier superiority; the largest checkpoint is not economical autonomy for every user.",
+      "safe_ru": "IFM и партнёры выпустили шесть Jais 3, от 0,9 до 375 млрд параметров, на собственной базе K2 Horizon, а не Qwen. По данным разработчиков, продолженное предобучение использовало 201,45 млрд токенов (75% арабских, 25% повторных), SFT — 41,1 млрд; 59% арабских данных получены синтетическим переводом. Опубликованы веса Apache 2.0 и промежуточные состояния, а также образец, не весь корпус данных. В проверенной карточке 7B код всё ещё обозначен как готовящийся к публикации.",
+      "safe_en": "IFM and partners released six Jais 3 models, 0.9B-375B parameters, based on their K2 Horizon family rather than Qwen. The developer reports 201.45B continued-pretraining tokens (75% Arabic, 25% replay) and 41.1B SFT tokens; 59% of Arabic data was synthetically translated. Apache 2.0 weights and training-stage checkpoints are published, with a sample rather than the full corpus. The inspected 7B card still lists code as coming soon.",
+      "source_ids": [
+        "IFM_JAIS3",
+        "INCEPTION_JAIS3",
+        "IFM_K2",
+        "JAIS_CARD"
+      ],
+      "arcs": [
+        "ARC_GULF_CONDITIONAL_SOVEREIGNTY",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "actors": [
+        "IFM",
+        "MBZUAI",
+        "Inception42"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "UAE",
+        "Gulf"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "data_telemetry",
+        "decision_support_cognition"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "product",
+      "force": "contractual",
+      "stage": "available",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [
+        "SIG_2023_UAE_JAIS_US_OPERATED_COMPUTE"
+      ],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_ABUDHABI_MACHINE_READABLE_GOVERNMENT",
+      "key": "ABUDHABI_MACHINE_READABLE_GOVERNMENT",
+      "date": "2026-11-02",
+      "date_basis": "government_launch_announcement",
+      "date_status": "source_backed",
+      "title_ru": "Абу-Даби: локальное исполнение OpenAI входит в применение государственных правил",
+      "title_en": "Abu Dhabi embeds locally executed OpenAI in a government-rule pilot",
+      "summary_ru": "Правительство Абу-Даби сообщает о работающем пилоте Machine-Readable Government для импорта продуктов питания в ADAFSA: отдельные нормы переведены в машиночитаемую форму, вывод соотносится с правилом, окончательное решение остаётся за чиновником. Вычисления OpenAI выполняются в ОАЭ. В тот же день объявлены соглашения с ADNOC и Mubadala.",
+      "summary_en": "Abu Dhabi reports an operating Machine-Readable Government food-import pilot at ADAFSA. Selected rules are machine-readable, outputs trace to rules and officials retain final decisions. OpenAI compute runs in the UAE. ADNOC and Mubadala agreements were announced the same day.",
+      "caveat_ru": "Один заявленный пилот не равен переводу всего государства на ИИ. Нет опубликованного независимого аудита точности, переносимости и непрерывности. Не доказано, что OpenAI контролирует окончательные административные решения.",
+      "caveat_en": "One reported pilot is not a government-wide transition. Independent accuracy, portability and continuity audits are not published; OpenAI control of final administrative decisions is not established.",
+      "safe_ru": "Правительство Абу-Даби сообщает о работающем пилоте Machine-Readable Government для импорта продуктов питания в ADAFSA: отдельные нормы переведены в машиночитаемую форму, вывод соотносится с правилом, окончательное решение остаётся за чиновником. Вычисления OpenAI выполняются в ОАЭ. В тот же день объявлены соглашения с ADNOC и Mubadala.",
+      "safe_en": "Abu Dhabi reports an operating Machine-Readable Government food-import pilot at ADAFSA. Selected rules are machine-readable, outputs trace to rules and officials retain final decisions. OpenAI compute runs in the UAE. ADNOC and Mubadala agreements were announced the same day.",
+      "source_ids": [
+        "ABUDHABI_OPENAI"
+      ],
+      "arcs": [
+        "ARC_GULF_CONDITIONAL_SOVEREIGNTY",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "actors": [
+        "Abu Dhabi Government",
+        "ADAFSA",
+        "OpenAI"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "UAE",
+        "US"
+      ],
+      "stack_layers": [
+        "decision_support_cognition",
+        "data_telemetry",
+        "cloud_inference",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+      ],
+      "primary_domain": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "roles": [
+        "AI_ROLE_PROTECTED_SYSTEM"
+      ],
+      "artifact": "deployment",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "production"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_YANDEX_ALICE_FOUNDATION_RELEASE",
+      "key": "YANDEX_ALICE_FOUNDATION_RELEASE",
+      "date": "2026-09-21",
+      "date_basis": "release_announcement",
+      "date_status": "source_backed",
+      "title_ru": "Яндекс публикует Alice AI Foundation под Apache 2.0 и заявляет обучение с нуля",
+      "title_en": "Yandex publishes Apache-licensed Alice AI Foundation and reports training from scratch",
+      "summary_ru": "Яндекс опубликовал AliceAI-Foundation-80B-A3B-Base: 80 млрд параметров, 3 млрд активных, лицензия Apache 2.0. Компания и модельная карточка сообщают об обучении с нуля; это базовая экспериментальная модель, предназначенная также для дальнейшего дообучения.",
+      "summary_en": "Yandex released AliceAI-Foundation-80B-A3B-Base with 80B parameters, 3B active and Apache 2.0 licensing. The company and model card report training from scratch; this experimental base model is also intended for further training.",
+      "caveat_ru": "Происхождение обучения подтверждается заявлением разработчика, не аудитом полного конвейера. Не доказывает независимость от зарубежных ускорителей, готовность производственного агента или паритет со всеми передовыми моделями. Бенчмарки разработчика отдельно от факта выпуска.",
+      "caveat_en": "Training provenance is a developer statement, not a full pipeline audit. It does not establish independence from foreign accelerators, a production-ready agent or universal frontier parity. Vendor benchmarks are separate from the release itself.",
+      "safe_ru": "Яндекс опубликовал AliceAI-Foundation-80B-A3B-Base: 80 млрд параметров, 3 млрд активных, лицензия Apache 2.0. Компания и модельная карточка сообщают об обучении с нуля; это базовая экспериментальная модель, предназначенная также для дальнейшего дообучения.",
+      "safe_en": "Yandex released AliceAI-Foundation-80B-A3B-Base with 80B parameters, 3B active and Apache 2.0 licensing. The company and model card report training from scratch; this experimental base model is also intended for further training.",
+      "source_ids": [
+        "YANDEX_BASE_RELEASE",
+        "YANDEX_BASE_CARD"
+      ],
+      "arcs": [
+        "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "actors": [
+        "Yandex"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Russia"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "data_telemetry"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "product",
+      "force": "contractual",
+      "stage": "available",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_YANDEX_DATACENTRE_PHYSICAL_RESILIENCE",
+      "key": "YANDEX_DATACENTRE_PHYSICAL_RESILIENCE",
+      "date": "2026-10-08",
+      "date_basis": "operator_reported_incident_dates",
+      "date_status": "source_backed",
+      "title_ru": "Повреждение российских дата-центров показывает физическое ограничение локального суверенитета",
+      "title_en": "Russian data-centre damage exposes the physical limits of local sovereignty",
+      "summary_ru": "Yandex Cloud сообщил о серьёзном повреждении и остановке дата-центра в Сасово после атаки БПЛА в ночь на 8 октября и атаке на ЦОД в Калуге 9 октября. Mindbox описал собственное восстановление: 90% клиентов получили кассы и лояльность через 53 минуты после первого отказа; после следующего отказа 11 октября полная функциональность для 99% восстановилась за 20 часов.",
+      "summary_en": "Yandex Cloud reports severe damage and shutdown at Sasovo after a drone attack overnight on October 8, and an attack at Kaluga on October 9. Customer Mindbox reports restoring checkout/loyalty for 90% of customers in 53 minutes after the first outage; after another October 11 outage, 99% regained full functionality within 20 hours.",
+      "caveat_ru": "Не кибервзлом и не доказательство уничтожения всех российских ИИ-мощностей. Нет подтверждённого числа потерянных GPU. Восстановление Mindbox не означает восстановления всего оборудования Яндекса; отдельное сообщение клиента не является независимой атрибуцией атаки.",
+      "caveat_en": "Not a cyber intrusion or destruction of all Russian AI capacity. Lost GPU numbers are unconfirmed. Mindbox recovery is not restoration of all Yandex equipment; customer testimony is not independent attack attribution.",
+      "safe_ru": "Yandex Cloud сообщил о серьёзном повреждении и остановке дата-центра в Сасово после атаки БПЛА в ночь на 8 октября и атаке на ЦОД в Калуге 9 октября. Mindbox описал собственное восстановление: 90% клиентов получили кассы и лояльность через 53 минуты после первого отказа; после следующего отказа 11 октября полная функциональность для 99% восстановилась за 20 часов.",
+      "safe_en": "Yandex Cloud reports severe damage and shutdown at Sasovo after a drone attack overnight on October 8, and an attack at Kaluga on October 9. Customer Mindbox reports restoring checkout/loyalty for 90% of customers in 53 minutes after the first outage; after another October 11 outage, 99% regained full functionality within 20 hours.",
+      "source_ids": [
+        "YANDEX_DC_INCIDENT",
+        "MINDBOX_RECOVERY"
+      ],
+      "arcs": [
+        "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_ENERGY_GRID_POLITICS"
+      ],
+      "actors": [
+        "Yandex",
+        "Mindbox"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Russia"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "cloud_inference",
+        "cyber_security_patch"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "roles": [],
+      "artifact": "incident",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "production"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_UK_CST_SOVEREIGN_AGENCY",
+      "key": "UK_CST_SOVEREIGN_AGENCY",
+      "date": "2026-07-30",
+      "date_basis": "letter_date",
+      "date_status": "source_backed",
+      "title_ru": "Британский CST определяет ИИ-суверенитет через способность выбирать и сохранять работу под давлением",
+      "title_en": "UK CST defines AI sovereignty through agency and resilience under pressure",
+      "summary_ru": "CST рекомендует стратегию, различающую, где нужны собственные возможности, где приемлема зависимость и где есть шанс на лидерство. Суверенитет определяется через достаточную самостоятельность в цепочке создания стоимости и устойчивость под давлением.",
+      "summary_en": "CST recommends distinguishing capabilities the UK should own, dependencies it can accept and areas of potential leadership. Sovereignty is framed as sufficient agency across the value chain and resilience under pressure.",
+      "caveat_ru": "Письмо консультативного органа не равняется принятой государственной стратегии, закону или уже обеспеченной способности к выходу.",
+      "caveat_en": "An advisory letter is not an adopted government strategy, statute or already established exit capability.",
+      "safe_ru": "CST рекомендует стратегию, различающую, где нужны собственные возможности, где приемлема зависимость и где есть шанс на лидерство. Суверенитет определяется через достаточную самостоятельность в цепочке создания стоимости и устойчивость под давлением.",
+      "safe_en": "CST recommends distinguishing capabilities the UK should own, dependencies it can accept and areas of potential leadership. Sovereignty is framed as sufficient agency across the value chain and resilience under pressure.",
+      "source_ids": [
+        "UK_CST_SOVEREIGNTY"
+      ],
+      "arcs": [
+        "ARC_SOVEREIGN_FLOW_GATING",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+      ],
+      "actors": [
+        "UK Council for Science and Technology"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "UK"
+      ],
+      "stack_layers": [
+        "governance_law",
+        "decision_support_cognition"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY"
+      ],
+      "primary_domain": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+      "roles": [],
+      "artifact": "policy_letter",
+      "force": "advisory",
+      "stage": "published",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_UK_AI_DEFENCE_INCIDENT_READINESS",
+      "key": "UK_AI_DEFENCE_INCIDENT_READINESS",
+      "date": "2026-10-12",
+      "date_basis": "government_announcement",
+      "date_status": "source_backed",
+      "title_ru": "Великобритания соединяет ИИ-поиск уязвимостей, испытания моделей и готовность к агентным инцидентам",
+      "title_en": "UK links AI-assisted remediation, model evaluation and agent-incident readiness",
+      "summary_ru": "Правительство сообщает, что два пилота помогли найти и исправить более тысячи потенциальных киберуязвимостей государственных систем. Объявлено расширение применения передовых моделей в защите, испытания AISI и разработка подходов к серьёзным агентным инцидентам и сообщениям о почти случившихся инцидентах.",
+      "summary_en": "The government reports two pilots helped find and fix over 1,000 potential vulnerabilities in government systems. It announced wider defensive model use, AISI testing and work on serious agent incidents and near-miss reporting.",
+      "caveat_ru": "Это правительственный отчёт о пилотах, не опубликованный независимый реестр 1000 новых CVE. Рассмотрение изменений Cyber Security and Resilience Bill не означает, что все новые обязанности уже вступили в силу.",
+      "caveat_en": "A government pilot report is not an independently published corpus of 1,000 new CVEs. Considering Cyber Security and Resilience Bill changes does not make all proposed duties effective.",
+      "safe_ru": "Правительство сообщает, что два пилота помогли найти и исправить более тысячи потенциальных киберуязвимостей государственных систем. Объявлено расширение применения передовых моделей в защите, испытания AISI и разработка подходов к серьёзным агентным инцидентам и сообщениям о почти случившихся инцидентах.",
+      "safe_en": "The government reports two pilots helped find and fix over 1,000 potential vulnerabilities in government systems. It announced wider defensive model use, AISI testing and work on serious agent incidents and near-miss reporting.",
+      "source_ids": [
+        "UK_CYBER_DEFENCE"
+      ],
+      "arcs": [
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+      ],
+      "actors": [
+        "UK Government",
+        "UK AI Security Institute",
+        "UK National Cyber Security Centre"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "UK"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "governance_law",
+        "model_weights"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_03_NATIONAL_DEFENSE",
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "artifact": "government_program",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_COMMON_AI_TRAINING_SIGNAL",
+      "key": "COMMON_AI_TRAINING_SIGNAL",
+      "date": "2026-10-30",
+      "date_basis": "policy_commitment",
+      "date_status": "source_backed",
+      "title_ru": "OpenAI обещает учитывать общий сигнал об использовании сайтов для обучения ИИ",
+      "title_en": "OpenAI commits to a common website AI-training preference signal",
+      "summary_ru": "OpenAI объявила о намерении учитывать общий сигнал в robots.txt для предпочтений владельцев сайтов по обучению базовых генеративных моделей. Реализация обещана в последующие месяцы; существующие индивидуальные настройки роботов сохраняются.",
+      "summary_en": "OpenAI announced its intention to honour a shared robots.txt signal expressing website preferences for foundation generative-model training, with implementation in coming months. Existing crawler-specific controls remain.",
+      "caveat_ru": "Добровольное обязательство, не уже действующий всеобщий стандарт. Не устанавливает компенсацию, обязательное цитирование или запрет поискового извлечения; обучение и поиск нужно разделять.",
+      "caveat_en": "A voluntary commitment, not an already effective universal standard. It establishes neither compensation, mandatory citation nor a search-retrieval prohibition; training and retrieval are different uses.",
+      "safe_ru": "OpenAI объявила о намерении учитывать общий сигнал в robots.txt для предпочтений владельцев сайтов по обучению базовых генеративных моделей. Реализация обещана в последующие месяцы; существующие индивидуальные настройки роботов сохраняются.",
+      "safe_en": "OpenAI announced its intention to honour a shared robots.txt signal expressing website preferences for foundation generative-model training, with implementation in coming months. Existing crawler-specific controls remain.",
+      "source_ids": [
+        "OPENAI_ROBOTS_SIGNAL"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "actors": [
+        "OpenAI"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US",
+        "Global"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "governance_law"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "provider_policy",
+      "force": "advisory",
+      "stage": "announced",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [
+        "SIG_2025_ROBOTS_AI_EXCLUSION_ASYMMETRY"
+      ],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_ORACLE_OPENAI_ENTERPRISE_SECURITY",
+      "key": "ORACLE_OPENAI_ENTERPRISE_SECURITY",
+      "date": "2026-10-27",
+      "date_basis": "product_collaboration_announcement",
+      "date_status": "source_backed",
+      "title_ru": "Oracle и OpenAI соединяют интерфейс решений, корпоративные данные и управляемую киберзащиту",
+      "title_en": "Oracle and OpenAI combine decision interfaces, enterprise data and managed defence",
+      "summary_ru": "Oracle объявила AI Workspace, связывающий модели OpenAI и ChatGPT с приложениями, данными и OCI. Объявлен AI Security Mesh для поиска и исправления уязвимостей; заказчик задаёт разрешённый периметр испытаний, Oracle управляет проверкой и защитными мерами.",
+      "summary_en": "Oracle announced AI Workspace connecting OpenAI models and ChatGPT with applications, data and OCI, and AI Security Mesh for vulnerability discovery and remediation. Customers define authorised testing scope; Oracle manages verification and safeguards.",
+      "caveat_ru": "Анонс архитектуры и продуктов не измеряет масштаб реального внедрения, цену выхода или эффективность защиты. Источник не доказывает передачу Oracle окончательной власти над решениями заказчика.",
+      "caveat_en": "An architecture/product announcement does not measure deployment, exit cost or defensive effectiveness. It does not establish Oracle's final authority over customer decisions.",
+      "safe_ru": "Oracle объявила AI Workspace, связывающий модели OpenAI и ChatGPT с приложениями, данными и OCI. Объявлен AI Security Mesh для поиска и исправления уязвимостей; заказчик задаёт разрешённый периметр испытаний, Oracle управляет проверкой и защитными мерами.",
+      "safe_en": "Oracle announced AI Workspace connecting OpenAI models and ChatGPT with applications, data and OCI, and AI Security Mesh for vulnerability discovery and remediation. Customers define authorised testing scope; Oracle manages verification and safeguards.",
+      "source_ids": [
+        "ORACLE_OPENAI"
+      ],
+      "arcs": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "actors": [
+        "Oracle",
+        "OpenAI"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US",
+        "Global"
+      ],
+      "stack_layers": [
+        "decision_support_cognition",
+        "data_telemetry",
+        "cloud_inference",
+        "cyber_security_patch"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "roles": [
+        "AI_ROLE_PROTECTED_SYSTEM",
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "artifact": "product",
+      "force": "not_applicable",
+      "stage": "announced",
+      "priority": 2,
+      "delegation": "control_requirement",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_OPENAI_ONEGOV_EXPANSION",
+      "key": "OPENAI_ONEGOV_EXPANSION",
+      "date": "2026-09-10",
+      "date_basis": "agreement_announcement",
+      "date_status": "source_backed",
+      "title_ru": "OneGov расширяет субсидируемый доступ государственного сектора США к ИИ и кибермоделям",
+      "title_en": "OneGov expands subsidised public-sector AI and cyber access",
+      "summary_ru": "OpenAI и GSA объявили 27-месячное соглашение с отменой лицензионной платы за пользователя и скидкой 50% на использование; предложение распространено на штаты, муниципалитеты и племенные органы. Проверенные государственные организации получают допуск Daybreak Blue; Daybreak Red требует отдельного запроса и оплачивается по коммерческим тарифам.",
+      "summary_en": "OpenAI and GSA announced a 27-month agreement waiving per-user licence fees and discounting usage by 50%, extended to state, local and tribal bodies. Vetted government organisations can access Daybreak Blue; Red requires a separate request and commercial pricing.",
+      "caveat_ru": "Право подключения не равно фактическому числу активных пользователей. Бесплатная лицензия не означает бесплатного использования или отсутствия последующей зависимости. Условия взяты из сообщения поставщика, не полного контракта GSA.",
+      "caveat_en": "Eligibility is not active-user uptake. A free licence is not free usage or absence of later dependency. Terms come from the vendor announcement, not the complete GSA contract.",
+      "safe_ru": "OpenAI и GSA объявили 27-месячное соглашение с отменой лицензионной платы за пользователя и скидкой 50% на использование; предложение распространено на штаты, муниципалитеты и племенные органы. Проверенные государственные организации получают допуск Daybreak Blue; Daybreak Red требует отдельного запроса и оплачивается по коммерческим тарифам.",
+      "safe_en": "OpenAI and GSA announced a 27-month agreement waiving per-user licence fees and discounting usage by 50%, extended to state, local and tribal bodies. Vetted government organisations can access Daybreak Blue; Red requires a separate request and commercial pricing.",
+      "source_ids": [
+        "OPENAI_ONEGOV"
+      ],
+      "arcs": [
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "actors": [
+        "OpenAI",
+        "US General Services Administration"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US"
+      ],
+      "stack_layers": [
+        "finance_rent",
+        "model_weights",
+        "cyber_security_patch",
+        "decision_support_cognition"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "roles": [
+        "AI_ROLE_DEFENSIVE_TOOL"
+      ],
+      "artifact": "access_program",
+      "force": "contractual",
+      "stage": "effective",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_NVIDIA_SOVEREIGN_RUNTIME",
+      "key": "NVIDIA_SOVEREIGN_RUNTIME",
+      "date": "2026-10-21",
+      "date_basis": "reference_architecture_announcement",
+      "date_status": "source_backed",
+      "title_ru": "NVIDIA предлагает европейским облакам собственный стек аппаратного и программного контроля агентов",
+      "title_en": "NVIDIA proposes a hardware/software agent-control stack for European clouds",
+      "summary_ru": "NVIDIA описывает европейские облачные проекты на DSX и объявленную архитектуру OpenShell: исполнение моделей, среду для инструментов агента и контроль на BlueField-4/Sentry. Партнёры поддерживают архитектуру для ограничения разрешённых действий агентов.",
+      "summary_en": "NVIDIA describes European cloud projects using DSX and its announced OpenShell architecture: model execution, agent tool environments and BlueField-4/Sentry controls. Partners support the architecture for bounding permitted agent actions.",
+      "caveat_ru": "Референсная архитектура не является доказательством невозможности обхода или повсеместного внедрения. Не доказано, что NVIDIA сама управляет каждым ограничением заказчика. Nebius не следует классифицировать как российский облачный ресурс.",
+      "caveat_en": "Reference architecture is not proof of unbreakable containment or universal deployment. NVIDIA operation of every customer control is not established. Nebius is not Russian sovereign compute capacity.",
+      "safe_ru": "NVIDIA описывает европейские облачные проекты на DSX и объявленную архитектуру OpenShell: исполнение моделей, среду для инструментов агента и контроль на BlueField-4/Sentry. Партнёры поддерживают архитектуру для ограничения разрешённых действий агентов.",
+      "safe_en": "NVIDIA describes European cloud projects using DSX and its announced OpenShell architecture: model execution, agent tool environments and BlueField-4/Sentry controls. Partners support the architecture for bounding permitted agent actions.",
+      "source_ids": [
+        "NVIDIA_EU_RUNTIME"
+      ],
+      "arcs": [
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_QUIET_ACCESS_CONTROL"
+      ],
+      "actors": [
+        "NVIDIA"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "US",
+        "EU",
+        "UK",
+        "Global"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "cloud_inference",
+        "cyber_security_patch"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS"
+      ],
+      "primary_domain": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "roles": [
+        "AI_ROLE_PROTECTED_SYSTEM"
+      ],
+      "artifact": "product",
+      "force": "not_applicable",
+      "stage": "announced",
+      "priority": 2,
+      "delegation": "control_requirement",
+      "contexts": [
+        "governance_document"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_BIS_CIRCULAR_AI_FINANCE",
+      "key": "BIS_CIRCULAR_AI_FINANCE",
+      "date": "2026-10-01",
+      "date_basis": "research_publication",
+      "date_status": "source_backed",
+      "title_ru": "Исследование BIS связывает инвестиционные отношения ИИ-фирм с контрактами поставки",
+      "title_en": "BIS research links AI investment relationships with supply contracts",
+      "summary_ru": "Авторы BIS Bulletin 137 оценивают, что в 2021-2025 годах 46,4% стоимости инвестиционных сделок между ИИ-фирмами приходилось на пары, также связанные коммерческими поставками; по числу сделок доля составляла 16,1%.",
+      "summary_en": "BIS Bulletin 137 authors estimate that in 2021-2025, pairs also linked by commercial supply accounted for 46.4% of AI inter-firm investment deal value and 16.1% of deal count.",
+      "caveat_ru": "Это историческая выборка, не доля сделок 2026 года и не доказательство фиктивной выручки, сговора или неизбежного пузыря. Авторы отдельно указывают, что их выводы не обязательно выражают позицию BIS и центральных банков.",
+      "caveat_en": "A historical sample, not 2026 deal share or evidence of fictitious revenue, collusion or an inevitable bubble. The authors' findings need not represent BIS or central-bank positions.",
+      "safe_ru": "Авторы BIS Bulletin 137 оценивают, что в 2021-2025 годах 46,4% стоимости инвестиционных сделок между ИИ-фирмами приходилось на пары, также связанные коммерческими поставками; по числу сделок доля составляла 16,1%.",
+      "safe_en": "BIS Bulletin 137 authors estimate that in 2021-2025, pairs also linked by commercial supply accounted for 46.4% of AI inter-firm investment deal value and 16.1% of deal count.",
+      "source_ids": [
+        "BIS_CIRCULAR"
+      ],
+      "arcs": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "actors": [
+        "Bank for International Settlements"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Global"
+      ],
+      "stack_layers": [
+        "finance_rent",
+        "cloud_inference"
+      ],
+      "structures": [],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "research",
+      "force": "not_applicable",
+      "stage": "published",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "reviewed_public_sources; distinguish_observation_claim_and_roadmap",
+      "related": [],
+      "observation": "2021-2025",
+      "ai_attribution": "not_established_or_not_applicable"
+    },
+    {
+      "id": "SIG_2026_CXMT_G5_DRAM_PRODUCTION",
+      "key": "CXMT_G5_DRAM_PRODUCTION",
+      "date": "2026-09-20",
+      "date_basis": "publication_date",
+      "date_status": "source_backed",
+      "title_ru": "CXMT заявила о серийном производстве DRAM G5",
+      "title_en": "CXMT announces mass production of G5 DRAM",
+      "summary_ru": "CXMT сообщила о серийном производстве платформы G5 и линейки LPDDR5X с кристаллами 24 Гбит. Заявленный прирост числа кристаллов на пластине на 50% нормирован к ёмкости 8 Гбит; активный полушаг составляет 11,95 нм.",
+      "summary_en": "CXMT announced mass production of G5 and a 24 Gb LPDDR5X lineup. Its claimed 50% increase in dies per wafer is normalised to 8 Gb capacity; active half-pitch is 11.95 nm.",
+      "caveat_ru": "Данные производителя, не независимый аудит. Число кристаллов на пластине не равно выходу годных, а полушаг не является названием логического техпроцесса. DRAM G5 не доказывает зрелость HBM.",
+      "caveat_en": "Manufacturer data, not an independent audit. Gross dies per wafer are not good-die yield; half-pitch is not a logic-node designation. G5 DRAM does not establish HBM maturity.",
+      "safe_ru": "CXMT сообщила о серийном производстве платформы G5 и линейки LPDDR5X с кристаллами 24 Гбит. Заявленный прирост числа кристаллов на пластине на 50% нормирован к ёмкости 8 Гбит; активный полушаг составляет 11,95 нм.",
+      "safe_en": "CXMT announced mass production of G5 and a 24 Gb LPDDR5X lineup. Its claimed 50% increase in dies per wafer is normalised to 8 Gb capacity; active half-pitch is 11.95 nm.",
+      "source_ids": [
+        "CXMT_G5"
+      ],
+      "actors": [
+        "CXMT"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China",
+        "Global"
+      ],
+      "stack_layers": [
+        "energy_compute_chips"
+      ],
+      "structures": [
+        "production"
+      ],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "market_observation",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "attributed_source_review",
+      "arcs": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_applicable_hardware"
+    },
+    {
+      "id": "SIG_2026_CXMT_LPDDR6_COMMERCIAL_DEPLOYMENT",
+      "key": "CXMT_LPDDR6_COMMERCIAL_DEPLOYMENT",
+      "date": "2026-09-07",
+      "date_basis": "publication_date",
+      "date_status": "source_backed",
+      "title_ru": "CXMT заявила о коммерческом применении LPDDR6 в смартфоне Xiaomi",
+      "title_en": "CXMT reports commercial LPDDR6 deployment in a Xiaomi phone",
+      "summary_ru": "CXMT сообщает о серийной LPDDR6 ёмкостью 16 ГБ в Xiaomi 18 Fold. Максимальная заявленная скорость — 12800 Мбит/с, при работе с данной системой на кристалле — 10667 Мбит/с.",
+      "summary_en": "CXMT reports mass-produced 16 GB LPDDR6 in the Xiaomi 18 Fold. Claimed maximum speed is 12,800 Mbps, with 10,667 Mbps when operating with this SoC.",
+      "caveat_ru": "Первичное заявление поставщика без независимого теста. Это мобильная память, не HBM для серверных ускорителей; скорости нельзя переносить на весь китайский ИИ-стек.",
+      "caveat_en": "A supplier statement without independent testing. This is mobile memory, not server-accelerator HBM; speeds do not describe the entire Chinese AI stack.",
+      "safe_ru": "CXMT сообщает о серийной LPDDR6 ёмкостью 16 ГБ в Xiaomi 18 Fold. Максимальная заявленная скорость — 12800 Мбит/с, при работе с данной системой на кристалле — 10667 Мбит/с.",
+      "safe_en": "CXMT reports mass-produced 16 GB LPDDR6 in the Xiaomi 18 Fold. Claimed maximum speed is 12,800 Mbps, with 10,667 Mbps when operating with this SoC.",
+      "source_ids": [
+        "CXMT_LPDDR6"
+      ],
+      "actors": [
+        "CXMT",
+        "Xiaomi"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China",
+        "Global"
+      ],
+      "stack_layers": [
+        "energy_compute_chips"
+      ],
+      "structures": [
+        "production"
+      ],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "market_observation",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "attributed_source_review",
+      "arcs": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_applicable_hardware"
+    },
+    {
+      "id": "SIG_2026_YMTC_NAND_SHIPMENT_RANK",
+      "key": "YMTC_NAND_SHIPMENT_RANK",
+      "date": "2026-10-13",
+      "date_basis": "publication_date",
+      "date_status": "source_backed",
+      "title_ru": "Counterpoint: YMTC вышла на третье место по объёму поставок NAND",
+      "title_en": "Counterpoint ranks YMTC third by NAND shipment volume",
+      "summary_ru": "По оценке Counterpoint, во II квартале 2026 года YMTC заняла третье место в мире по объёму поставок NAND после Samsung и SK hynix с Solidigm. Наблюдение опубликовано 13 октября.",
+      "summary_en": "Counterpoint estimates that YMTC ranked third worldwide by NAND shipment volume in Q2 2026, after Samsung and SK hynix including Solidigm. The observation was published on October 13.",
+      "caveat_ru": "Оценка исследовательской фирмы, не перепроверенная здесь перепись поставок. Место по объёму не равно месту по выручке. NAND не заменяет DRAM или HBM.",
+      "caveat_en": "A market-research estimate, not a shipment census independently checked here. Volume rank is not revenue rank; NAND is not a substitute for DRAM or HBM.",
+      "safe_ru": "По оценке Counterpoint, во II квартале 2026 года YMTC заняла третье место в мире по объёму поставок NAND после Samsung и SK hynix с Solidigm. Наблюдение опубликовано 13 октября.",
+      "safe_en": "Counterpoint estimates that YMTC ranked third worldwide by NAND shipment volume in Q2 2026, after Samsung and SK hynix including Solidigm. The observation was published on October 13.",
+      "source_ids": [
+        "COUNTERPOINT_YMTC"
+      ],
+      "actors": [
+        "YMTC",
+        "Counterpoint Research"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China",
+        "Global"
+      ],
+      "stack_layers": [
+        "energy_compute_chips"
+      ],
+      "structures": [
+        "production"
+      ],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "market_observation",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "attributed_source_review",
+      "arcs": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "related": [],
+      "observation": "2026-Q2",
+      "ai_attribution": "not_applicable_hardware"
+    },
+    {
+      "id": "SIG_2026_CXMT_HBM3E_LIMITED_PRODUCTION_REPORTED",
+      "key": "CXMT_HBM3E_LIMITED_PRODUCTION_REPORTED",
+      "date": "2026-10-28",
+      "date_basis": "publication_date",
+      "date_status": "source_backed",
+      "title_ru": "Reuters: CXMT готовит ограниченный выпуск HBM3E при низком выходе годных",
+      "title_en": "Reuters: CXMT plans limited HBM3E production despite low yields",
+      "summary_ru": "Reuters со ссылкой на двух собеседников сообщает о передаче образцов HBM3E китайским разработчикам ИИ-чипов и плане ограниченного производства в ближайшие два месяца. Сообщаемый выход годных — 20–30%, против примерно 70% у SK hynix.",
+      "summary_en": "Reuters cites two people on HBM3E samples sent to Chinese AI-chip designers and plans for limited production within two months. Reported yields are 20-30%, versus roughly 70% at SK hynix.",
+      "caveat_ru": "Анонимные источники, не производственный аудит. Это образцы и план, не уже достигнутый массовый выпуск или паритет себестоимости. Показатели DRAM и NAND не подменяют этот отдельный барьер.",
+      "caveat_en": "Anonymous sources, not a production audit. Samples and plans are not established mass output or cost parity. DRAM and NAND progress does not remove this separate bottleneck.",
+      "safe_ru": "Reuters со ссылкой на двух собеседников сообщает о передаче образцов HBM3E китайским разработчикам ИИ-чипов и плане ограниченного производства в ближайшие два месяца. Сообщаемый выход годных — 20–30%, против примерно 70% у SK hynix.",
+      "safe_en": "Reuters cites two people on HBM3E samples sent to Chinese AI-chip designers and plans for limited production within two months. Reported yields are 20-30%, versus roughly 70% at SK hynix.",
+      "source_ids": [
+        "REUTERS_HBM"
+      ],
+      "actors": [
+        "CXMT"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "China",
+        "Global"
+      ],
+      "stack_layers": [
+        "energy_compute_chips"
+      ],
+      "structures": [
+        "production"
+      ],
+      "research_questions": [],
+      "numbers": {},
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "domains": [],
+      "primary_domain": null,
+      "roles": [],
+      "artifact": "market_observation",
+      "force": "not_applicable",
+      "stage": "reported",
+      "priority": 2,
+      "delegation": "not_applicable",
+      "contexts": [
+        "ecosystem_measurement"
+      ],
+      "method": "attributed_source_review",
+      "arcs": [
+        "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_applicable_hardware"
+    },
+    {
+      "id": "SIG_2026_DEBIAN_DSA6602_KERNEL_PATCH_BATCH",
+      "key": "DEBIAN_DSA6602_KERNEL_PATCH_BATCH",
+      "date": "2026-11-02",
+      "date_basis": "advisory_publication",
+      "date_status": "source_backed",
+      "title_ru": "Debian DSA-6602-1: один выпуск ядра объединяет 611 CVE",
+      "title_en": "Debian DSA-6602-1 bundles 611 CVEs in one kernel update",
+      "summary_ru": "В бюллетене DSA-6602-1 перечислены 611 уникальных CVE: 1 с префиксом 2024, 62 — 2025 и 548 — 2026. Трекер Debian указывает исправленную версию 6.12.115-2 для trixie. Это объём пакета исправлений, который предстоит проверить и развернуть операторам.",
+      "summary_en": "DSA-6602-1 lists 611 unique CVEs: one with a 2024 prefix, 62 with 2025 and 548 with 2026. Debian lists 6.12.115-2 as fixed for trixie. This is a patch-delivery batch for operators to assess and deploy.",
+      "caveat_ru": "Префикс CVE не является датой обнаружения. Бюллетень не атрибутирует находки ИИ и не устанавливает 611 новых уязвимостей за один день. Отдельный конвейер OpenAI подтверждает ИИ-участие в поиске, но пересечение двух списков не измерено.",
+      "caveat_en": "A CVE year prefix is not its discovery date. The bulletin does not attribute discoveries to AI or establish 611 new flaws found in one day. OpenAI separately documents AI-assisted discovery; overlap between the two sets has not been measured.",
+      "safe_ru": "В бюллетене DSA-6602-1 перечислены 611 уникальных CVE: 1 с префиксом 2024, 62 — 2025 и 548 — 2026. Трекер Debian указывает исправленную версию 6.12.115-2 для trixie. Это объём пакета исправлений, который предстоит проверить и развернуть операторам.",
+      "safe_en": "DSA-6602-1 lists 611 unique CVEs: one with a 2024 prefix, 62 with 2025 and 548 with 2026. Debian lists 6.12.115-2 as fixed for trixie. This is a patch-delivery batch for operators to assess and deploy.",
+      "source_ids": [
+        "DEBIAN_DSA",
+        "DEBIAN_TRACKER"
+      ],
+      "actors": [
+        "Debian",
+        "Linux kernel maintainers"
+      ],
+      "actor_types": [],
+      "jurisdictions": [
+        "Global"
+      ],
+      "stack_layers": [
+        "cyber_security_patch"
+      ],
+      "structures": [
+        "security"
+      ],
+      "research_questions": [],
+      "numbers": {
+        "unique_cve_ids": 611,
+        "cve_prefix_years": {
+          "2024": 1,
+          "2025": 62,
+          "2026": 548
+        }
+      },
+      "confidence": "A",
+      "status": "verified_as_reported",
+      "domains": [
+        "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+        "CYBER_DOMAIN_03_NATIONAL_DEFENSE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_04_SYSTEMIC_RESILIENCE",
+      "roles": [],
+      "artifact": "disclosure",
+      "force": "not_applicable",
+      "stage": "remediated",
+      "priority": 1,
+      "delegation": "not_applicable",
+      "contexts": [
+        "production"
+      ],
+      "method": "source_review; unique_CVE_identifier_count",
+      "arcs": [
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "related": [],
+      "observation": null,
+      "ai_attribution": "not_established_by_advisory"
+    }
+  ],
+  "sources": {
+    "PHP_FOUNDATION": {
+      "name": "PHP Foundation",
+      "date": "2026-10-21",
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+      "source_class": "maintainer_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "WIZ_PHP": {
+      "name": "Wiz",
+      "date": "2026-10-21",
+      "url": "https://www.wiz.io/blog/php2shell-php-rce",
+      "source_class": "researcher_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "PAN_PHP": {
+      "name": "Palo Alto Networks",
+      "date": "2026-10-21",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-109618",
+      "source_class": "vendor_advisory",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": "2026-10-29",
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "CSA_PHP": {
+      "name": "Cyber Security Agency of Singapore",
+      "date": "2026-11-03",
+      "url": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-157/",
+      "source_class": "government_advisory",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "OPENAI_KERNEL": {
+      "name": "OpenAI",
+      "date": "2026-11-04",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "source_class": "researcher_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "OPENAI_CYBER_CARD": {
+      "name": "OpenAI",
+      "date": "2026-11-05",
+      "url": "https://deploymentsafety.openai.com/gpt-6-cyber",
+      "source_class": "vendor_system_card",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "OPENAI_CYBER_RELEASE": {
+      "name": "OpenAI",
+      "date": "2026-11-05",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber/",
+      "source_class": "vendor_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "GOOGLE_CARBON": {
+      "name": "Google",
+      "date": "2026-10-28",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "source_class": "vendor_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MS_STORM0940": {
+      "name": "Microsoft Threat Intelligence",
+      "date": "2026-10-21",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
+      "source_class": "investigator_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "CS_VAPOR": {
+      "name": "CrowdStrike",
+      "date": "2026-10-29",
+      "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/",
+      "source_class": "investigator_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MS_SECRETS": {
+      "name": "Microsoft Threat Intelligence",
+      "date": "2026-11-05",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/",
+      "source_class": "investigator_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MS_STORM3358": {
+      "name": "Microsoft Threat Intelligence",
+      "date": "2026-11-06",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+      "source_class": "investigator_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "GITBOOK": {
+      "name": "GitBook",
+      "date": "2026-11-03",
+      "url": "https://www.gitbook.com/status/security-incident-2026-11-03",
+      "source_class": "victim_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": "2026-11-04",
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MOZILLA_EMUDHRA": {
+      "name": "Mozilla",
+      "date": "2026-10-20",
+      "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/",
+      "source_class": "platform_response_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": "2026-10-21",
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "NIST_IDENTITY": {
+      "name": "NIST",
+      "date": "2026-10-27",
+      "url": "https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems",
+      "source_class": "government_research_guidance",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MISTRAL_RELEASE": {
+      "name": "Mistral",
+      "date": null,
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "source_class": "vendor_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MISTRAL_LICENSE": {
+      "name": "Mistral",
+      "date": null,
+      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE",
+      "source_class": "license_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MISTRAL_INITIAL_COMMIT": {
+      "name": "Mistral",
+      "date": null,
+      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/commit/9bc535781e2938f0cc827614ba863070ccf44591",
+      "source_class": "release_repository_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MOFCOM48": {
+      "name": "MOFCOM / MOST",
+      "date": "2026-10-16",
+      "url": "https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_0a31a3c9ac404f7a9b0e917ce3412997.html",
+      "source_class": "government_notice",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MOFCOM_QA": {
+      "name": "MOFCOM",
+      "date": "2026-10-16",
+      "url": "https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_d7661dbf62794345a221404f82a25959.html",
+      "source_class": "government_explanation",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "REUTERS_H200": {
+      "name": "Reuters via CNA",
+      "date": "2026-11-05",
+      "url": "https://www.channelnewsasia.com/east-asia/nvidia-chips-pile-up-hong-kong-china-withhold-import-approval-6527371",
+      "source_class": "original_reporting_anonymous_sources",
+      "type": "Media / report",
+      "primary_or_secondary": "secondary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "NY_EO62": {
+      "name": "Governor of New York",
+      "date": "2026-07-14",
+      "url": "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops",
+      "source_class": "executive_order",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "NY_ANNOUNCEMENT": {
+      "name": "Governor of New York",
+      "date": "2026-07-14",
+      "url": "https://www.governor.ny.gov/news/first-statewide-moratorium-new-hyperscale-data-centers-launched-governor-kathy-hochul",
+      "source_class": "government_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "HINOJOSA_PLATFORM": {
+      "name": "Gina Hinojosa campaign",
+      "date": null,
+      "url": "https://ginafortexas.com/priority/data-centers/",
+      "source_class": "political_position_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "TEXAS_TRIBUNE": {
+      "name": "The Texas Tribune",
+      "date": "2026-11-04",
+      "url": "https://www.texastribune.org/2026/11/04/data-center-texas-pause-gina-hinojosa-governor-policies/",
+      "source_class": "original_reporting",
+      "type": "Media / report",
+      "primary_or_secondary": "secondary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "FBI_BINANCE": {
+      "name": "FBI",
+      "date": "2026-10-31",
+      "url": "https://www.fbi.gov/investigate/cyber/alerts/2026/north-korea-responsible-for-6-billion-binance-attack/layout_view",
+      "source_class": "government_attribution",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "SHIRYAEV": {
+      "name": "Denis Sexy IT",
+      "date": "2026-11-01",
+      "url": "https://t.me/denissexy/11769",
+      "source_class": "author_opinion_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "Оригинальная публичная embed-страница получена через HTTP GET после неудачного открытия веб-поиском; time datetime=2026-11-01T15:06:05+00:00. Сторонние пересказы не использованы как замена оригиналу.",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "ASML_Q3": {
+      "name": "ASML",
+      "date": "2026-10-14",
+      "url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+      "source_class": "issuer_financial_disclosure",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "ASML_SEC": {
+      "name": "ASML / SEC EDGAR",
+      "date": "2026-10-14",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/pressreleasefinancialresul.htm",
+      "source_class": "issuer_filing_copy",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "TSMC_Q3": {
+      "name": "TSMC",
+      "date": "2026-10-15",
+      "url": "https://pr.tsmc.com/chinese/news/3346",
+      "source_class": "issuer_financial_disclosure",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "Текст квартального раскрытия прочитан в поисковом индексе первичного сайта; повторные открытия языкового зеркала возвращали timeout.",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "SKHYNIX_Q3": {
+      "name": "SK hynix",
+      "date": "2026-10-28",
+      "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+      "source_class": "issuer_financial_disclosure",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "HUAWEI_CONNECT": {
+      "name": "Huawei",
+      "date": "2026-09-17",
+      "url": "https://www.huawei.com/en/news/2026/9/hc-wang-keynote",
+      "source_class": "vendor_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "ALIBABA_APSARA": {
+      "name": "Alibaba",
+      "date": "2026-09-25",
+      "url": "https://home.alibabagroup.com/en-US/document-2041268239081668608",
+      "source_class": "vendor_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "LUMI_CONTRACT": {
+      "name": "EuroHPC JU",
+      "date": "2026-08-31",
+      "url": "https://www.eurohpc-ju.europa.eu/eurohpc-ju-signs-contract-deploy-lumi-ai-supercomputer-2026-08-31_en",
+      "source_class": "procurement_authority_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "EUROHPC_TENDER": {
+      "name": "EuroHPC JU",
+      "date": "2026-07-30",
+      "url": "https://www.eurohpc-ju.europa.eu/call-tenders-selection-artificial-intelligence-gigafactory-consortia-and-establishment-ai_en",
+      "source_class": "procurement_authority_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": "2026-11-05",
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "AWS_EXERCISE": {
+      "name": "AWS",
+      "date": "2026-11-01",
+      "url": "https://aws.amazon.com/blogs/security/inside-a-successful-aws-european-sovereign-cloud-exercise-to-demonstrate-independent-operation/",
+      "source_class": "vendor_exercise_report",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "UK_COVENANT": {
+      "name": "UK Government",
+      "date": "2026-10-28",
+      "url": "https://www.gov.uk/government/publications/data-centre-covenant/the-data-centre-covenant",
+      "source_class": "government_policy_document",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "PIF_HUMAIN": {
+      "name": "PIF / Aramco",
+      "date": "2026-11-01",
+      "url": "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-and-aramco-close-humain-transaction-to-accelerate-humain-global-growth/",
+      "source_class": "transaction_participants_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "IFM_JAIS3": {
+      "name": "IFM / MBZUAI",
+      "date": "2026-10-15",
+      "url": "https://ifm.ai/blog/jais3/",
+      "source_class": "model_developer_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "INCEPTION_JAIS3": {
+      "name": "Inception42",
+      "date": "2026-10-16",
+      "url": "https://www.inception42.ai/news/Jais3-Launch",
+      "source_class": "model_developer_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "ABUDHABI_OPENAI": {
+      "name": "Abu Dhabi Media Office",
+      "date": "2026-11-02",
+      "url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
+      "source_class": "government_programme_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "YANDEX_BASE_RELEASE": {
+      "name": "Yandex",
+      "date": "2026-09-21",
+      "url": "https://www.yandex.ru/company/news/21-09-2026-03",
+      "source_class": "model_developer_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "YANDEX_BASE_CARD": {
+      "name": "Yandex / Hugging Face",
+      "date": null,
+      "url": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "source_class": "model_card_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "YANDEX_DC_INCIDENT": {
+      "name": "Yandex Cloud",
+      "date": "2026-10-09",
+      "url": "https://yandex.cloud/ru/blog/iron-hearts",
+      "source_class": "affected_operator_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MINDBOX_RECOVERY": {
+      "name": "Mindbox",
+      "date": "2026-10-09",
+      "url": "https://mindbox.ru/journal/news/results/datacenter-incident-oct26/",
+      "source_class": "affected_customer_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": "2026-10-19",
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "UK_CST_SOVEREIGNTY": {
+      "name": "Council for Science and Technology / UK Government",
+      "date": "2026-10-19",
+      "url": "https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world-web-version",
+      "source_class": "government_advisory_letter",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "UK_CYBER_DEFENCE": {
+      "name": "UK Government / AISI / NCSC",
+      "date": "2026-10-12",
+      "url": "https://www.gov.uk/government/news/britain-steps-up-national-defences-against-growing-ai-risks",
+      "source_class": "government_programme_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "OPENAI_ROBOTS_SIGNAL": {
+      "name": "OpenAI",
+      "date": "2026-10-30",
+      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences/",
+      "source_class": "vendor_policy_commitment",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "ORACLE_OPENAI": {
+      "name": "Oracle",
+      "date": "2026-10-27",
+      "url": "https://www.oracle.com/sg/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/",
+      "source_class": "vendor_product_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "OPENAI_ONEGOV": {
+      "name": "OpenAI",
+      "date": "2026-09-10",
+      "url": "https://openai.com/index/expanding-ai-access-us-government/",
+      "source_class": "vendor_agreement_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "NVIDIA_EU_RUNTIME": {
+      "name": "NVIDIA",
+      "date": "2026-10-21",
+      "url": "https://blogs.nvidia.com/blog/cloud-partners-europe-sovereign-safety-open-agents/",
+      "source_class": "vendor_reference_architecture_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "BIS_CIRCULAR": {
+      "name": "BIS Bulletin authors",
+      "date": "2026-10-01",
+      "url": "https://www.bis.org/publications/bulletin-137-circular-relationships-among-ai-firms",
+      "source_class": "institutional_research_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MOFCOM_EXPORT_QA": {
+      "name": "MOFCOM",
+      "date": null,
+      "url": "https://english.mofcom.gov.cn/News/SpokesmansRemarks/art/2026/art_74bf283f105a4b19a11f7430df3671ae.html",
+      "source_class": "government_policy_explanation",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "MDDI_PHP": {
+      "name": "Singapore MDDI",
+      "date": "2026-11-04",
+      "url": "https://www.mddi.gov.sg/newsroom/mddi-s-response-to-pq-on-disclosed-critical-php-software-vulnerabilities/",
+      "source_class": "government_response",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "IFM_K2": {
+      "name": "IFM",
+      "date": "2026-09-03",
+      "url": "https://ifm.ai/blog/k2/",
+      "source_class": "model_developer_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "JAIS_CARD": {
+      "name": "Inception42",
+      "date": null,
+      "url": "https://huggingface.co/inception42/Jais-3-7B",
+      "source_class": "model_card_primary",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "CXMT_G5": {
+      "name": "CXMT",
+      "date": "2026-09-20",
+      "url": "https://www.cxmt.com/en/news/info_22.html",
+      "source_class": "vendor_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "CXMT_LPDDR6": {
+      "name": "CXMT",
+      "date": "2026-09-07",
+      "url": "https://www.cxmt.com/en/news/info_21.html",
+      "source_class": "vendor_announcement",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "COUNTERPOINT_YMTC": {
+      "name": "Counterpoint Research",
+      "date": "2026-10-13",
+      "url": "https://counterpointresearch.com/en/insights/ymtc-files-for-landmark-ipo-after-climbing-to-no-3-in-global-nand-race-with-dram-next",
+      "source_class": "original_market_research",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "REUTERS_HBM": {
+      "name": "Reuters",
+      "date": "2026-10-28",
+      "url": "https://www.investing.com/news/stock-market-news/exclusivechinas-cxmt-to-start-advanced-ai-memory-production-despite-poor-yields-sources-say-4977472",
+      "source_class": "original_reporting_anonymous_sources",
+      "type": "Media / report",
+      "primary_or_secondary": "secondary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "DEBIAN_DSA": {
+      "name": "Debian",
+      "date": "2026-11-02",
+      "url": "https://lists.debian.org/debian-security-announce/2026/msg00521.html",
+      "source_class": "maintainer_advisory",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "DEBIAN_TRACKER": {
+      "name": "Debian",
+      "date": null,
+      "url": "https://security-tracker.debian.org/tracker/DSA-6602-1",
+      "source_class": "maintainer_tracker",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-07",
+      "updated_date": null,
+      "retrieval_note": "",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    }
+  }
+}

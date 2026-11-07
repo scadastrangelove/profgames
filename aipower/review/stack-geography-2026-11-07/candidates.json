@@ -1,0 +1,308 @@
+{
+  "schema": "aipower.research_candidates.v1",
+  "as_of": "2026-11-07",
+  "language": "ru",
+  "integration_status": "research_only_not_merged",
+  "validation": {
+    "checked_at": "2026-11-07",
+    "json_parse": "passed",
+    "candidate_count": 21,
+    "source_count": 26,
+    "covered_visual_lanes": 8,
+    "distinct_referenced_arcs": 14,
+    "unique_candidate_and_source_ids": "passed",
+    "source_candidate_and_prior_packet_references": "passed",
+    "arc_and_existing_event_references_in_both_languages": "passed",
+    "exact_normalized_source_url_matches_in_master_events": 0,
+    "baseline_json_and_html_hashes_unchanged": true,
+    "scope_note": "URL-дедупликация дополнена тематическими решениями, но не заменяет их. Проверки ссылок и хешей не означают независимого аудита заявлений источников."
+  },
+  "scope": "Восемь слоёв стека и пять актуальных семейств арок; США, Китай, Европа, Залив и Россия, с дополнительной проверкой производственных узлов Тайваня и Южной Кореи. Основное окно: 7 августа - 7 ноября 2026 года. Исторические арки 2016-2023 годов не заполняются современными событиями.",
+  "baseline": {
+    "repository_commit": "5afe12cf0b9adb287e2846de10da5316acd8f514",
+    "note": "Сравнение с локальными RU/EN-мастерами, включая существующие незакоммиченные изменения. Это не подтверждение состояния опубликованного сайта.",
+    "events": 469,
+    "arcs": 26,
+    "sha256": {
+      "ai_power_storygraph_ru.json": "e235753c5adb6d01a08e4786478e4a1e30f89e8940e4a13f82a05548625b2d0d",
+      "ai_power_storygraph_en.json": "900d6d45d77e1bd5c556a156b3f4b5504c25e65ab50ffd81b837bc81c004fb72",
+      "ai-power-atlas-ru.html": "e09aef5a3f8cd2dcd90874e433ded85eab177520b6af6a4050e6fd793593518b",
+      "ai-power-atlas.html": "252961d3f98569e1f22446badf39d0dcf5f1e9f08e5e3d77454b0f0a27acef7e"
+    }
+  },
+  "method": {
+    "sources": "Для отобранных карточек использованы первичные документы: закупки, государственные публикации, финансовые раскрытия, модельные карточки и сообщения разработчиков. Первичность не равна независимой проверке заявленного результата.",
+    "selection": "Отбирались изменения условий доступа, распределения ресурсов, самостоятельности эксплуатации и институционального применения. Релизы без нового механизма зависимости не включались автоматически.",
+    "dates": "Дата события отделена от публикации и будущего срока исполнения. Для квартальной отчётности указан период наблюдения; дата публикации не выдаётся за дату изменения производственных мощностей.",
+    "graph": "arc_ids означают тематическую принадлежность, а interpretation_ru - аналитическую интерпретацию. Эти поля не создают причинные связи и не подтверждают тезис автоматически.",
+    "limits": "Это целевой поисковый проход, не исчерпывающий мониторинг. Отсутствие найденного ввода мощности в эксплуатацию не доказывает, что ввода не было. Количество событий по стране не используется как показатель её силы. Доступность модели и заявленные бенчмарки не проверялись запуском весов."
+  },
+  "sources": [
+    {"id":"ASML_Q3","publisher":"ASML","type":"issuer_financial_disclosure","publication_date":"2026-10-14","url":"https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"},
+    {"id":"ASML_SEC","publisher":"ASML / SEC EDGAR","type":"issuer_filing_copy","publication_date":"2026-10-14","url":"https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/pressreleasefinancialresul.htm","note":"Копия того же раскрытия, не независимое подтверждение."},
+    {"id":"TSMC_Q3","publisher":"TSMC","type":"issuer_financial_disclosure","publication_date":"2026-10-15","url":"https://pr.tsmc.com/chinese/news/3346","retrieval_note":"Текст квартального раскрытия прочитан в поисковом индексе первичного сайта; повторные открытия языкового зеркала возвращали timeout."},
+    {"id":"SKHYNIX_Q3","publisher":"SK hynix","type":"issuer_financial_disclosure","publication_date":"2026-10-28","url":"https://news.skhynix.com/en/q3-2026-business-results/"},
+    {"id":"HUAWEI_CONNECT","publisher":"Huawei","type":"vendor_announcement","publication_date":"2026-09-17","url":"https://www.huawei.com/en/news/2026/9/hc-wang-keynote"},
+    {"id":"ALIBABA_APSARA","publisher":"Alibaba","type":"vendor_announcement","publication_date":"2026-09-25","url":"https://home.alibabagroup.com/en-US/document-2041268239081668608"},
+    {"id":"LUMI_CONTRACT","publisher":"EuroHPC JU","type":"procurement_authority_primary","publication_date":"2026-08-31","url":"https://www.eurohpc-ju.europa.eu/eurohpc-ju-signs-contract-deploy-lumi-ai-supercomputer-2026-08-31_en"},
+    {"id":"EUROHPC_TENDER","publisher":"EuroHPC JU","type":"procurement_authority_primary","publication_date":"2026-07-30","updated_date":"2026-11-05","url":"https://www.eurohpc-ju.europa.eu/call-tenders-selection-artificial-intelligence-gigafactory-consortia-and-establishment-ai_en"},
+    {"id":"AWS_EXERCISE","publisher":"AWS","type":"vendor_exercise_report","publication_date":"2026-11-01","url":"https://aws.amazon.com/blogs/security/inside-a-successful-aws-european-sovereign-cloud-exercise-to-demonstrate-independent-operation/"},
+    {"id":"UK_COVENANT","publisher":"UK Government","type":"government_policy_document","publication_date":"2026-10-28","url":"https://www.gov.uk/government/publications/data-centre-covenant/the-data-centre-covenant"},
+    {"id":"PIF_HUMAIN","publisher":"PIF / Aramco","type":"transaction_participants_primary","publication_date":"2026-11-01","url":"https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-and-aramco-close-humain-transaction-to-accelerate-humain-global-growth/"},
+    {"id":"IFM_JAIS3","publisher":"IFM / MBZUAI","type":"model_developer_primary","publication_date":"2026-10-15","url":"https://ifm.ai/blog/jais3/"},
+    {"id":"INCEPTION_JAIS3","publisher":"Inception42","type":"model_developer_primary","publication_date":"2026-10-16","url":"https://www.inception42.ai/news/Jais3-Launch","note":"Соавторский анонс на день позже публикации IFM; не отдельный релиз."},
+    {"id":"ABUDHABI_OPENAI","publisher":"Abu Dhabi Media Office","type":"government_programme_primary","publication_date":"2026-11-02","url":"https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/"},
+    {"id":"YANDEX_BASE_RELEASE","publisher":"Yandex","type":"model_developer_primary","publication_date":"2026-09-21","url":"https://www.yandex.ru/company/news/21-09-2026-03"},
+    {"id":"YANDEX_BASE_CARD","publisher":"Yandex / Hugging Face","type":"model_card_primary","publication_date":null,"accessed_date":"2026-11-07","url":"https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base"},
+    {"id":"YANDEX_DC_INCIDENT","publisher":"Yandex Cloud","type":"affected_operator_primary","publication_date":"2026-10-09","url":"https://yandex.cloud/ru/blog/iron-hearts"},
+    {"id":"MINDBOX_RECOVERY","publisher":"Mindbox","type":"affected_customer_primary","publication_date":"2026-10-09","updated_date":"2026-10-19","url":"https://mindbox.ru/journal/news/results/datacenter-incident-oct26/"},
+    {"id":"UK_CST_SOVEREIGNTY","publisher":"Council for Science and Technology / UK Government","type":"government_advisory_letter","publication_date":"2026-10-19","document_date":"2026-07-30","url":"https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world-web-version"},
+    {"id":"UK_CYBER_DEFENCE","publisher":"UK Government / AISI / NCSC","type":"government_programme_primary","publication_date":"2026-10-12","url":"https://www.gov.uk/government/news/britain-steps-up-national-defences-against-growing-ai-risks"},
+    {"id":"OPENAI_ROBOTS_SIGNAL","publisher":"OpenAI","type":"vendor_policy_commitment","publication_date":"2026-10-30","url":"https://openai.com/index/helping-websites-express-ai-training-preferences/"},
+    {"id":"ORACLE_OPENAI","publisher":"Oracle","type":"vendor_product_announcement","publication_date":"2026-10-27","url":"https://www.oracle.com/sg/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/"},
+    {"id":"OPENAI_ONEGOV","publisher":"OpenAI","type":"vendor_agreement_announcement","publication_date":"2026-09-10","url":"https://openai.com/index/expanding-ai-access-us-government/"},
+    {"id":"NVIDIA_EU_RUNTIME","publisher":"NVIDIA","type":"vendor_reference_architecture_announcement","publication_date":"2026-10-21","url":"https://blogs.nvidia.com/blog/cloud-partners-europe-sovereign-safety-open-agents/"},
+    {"id":"BIS_CIRCULAR","publisher":"BIS Bulletin authors","type":"institutional_research_primary","publication_date":"2026-10-01","url":"https://www.bis.org/publications/bulletin-137-circular-relationships-among-ai-firms"},
+    {"id":"MOFCOM_EXPORT_QA","publisher":"MOFCOM","type":"government_policy_explanation","publication_date":null,"accessed_date":"2026-11-07","url":"https://english.mofcom.gov.cn/News/SpokesmansRemarks/art/2026/art_74bf283f105a4b19a11f7430df3671ae.html"}
+  ],
+  "candidates": [
+    {
+      "id":"CAND_2026_ASML_CAPACITY_AND_SERVICE",
+      "title_ru":"ASML: производственная мощность и обслуживание оборудования остаются отдельными ограничителями ИИ-стека",
+      "event_date":"2026-10-14","date_basis":"quarterly_disclosure","observation_period":"2026-Q3","status":"reported_results_and_forward_guidance","priority":"high",
+      "facts_ru":["ASML раскрыла EUR 3,289 млрд выручки от обслуживания установленного оборудования и полевых опций за III квартал. Компания ожидает, что запланированного объёма поставок на 2027-2028 годы не хватит для удовлетворения спроса клиентов."],
+      "interpretation_ru":"Европейская роль не сводится к регулированию и покупке моделей: оборудование и его последующая модернизация образуют производственный узел зависимости.",
+      "caveats_ru":["Прогноз дефицита представлен поставщиком. Выручка от сервиса не доказывает право удалённого отключения станков или конкретное политическое воздействие."],
+      "geography":["Netherlands","EU","Global"],"visual_lanes":["energy_compute_chips","finance_rent"],"arc_ids":["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN","ARC_CAPITAL_MIX_PUBLIC_PRIVATE"],"source_ids":["ASML_Q3","ASML_SEC"],"related_existing_event_ids":[],"dedup_terms":["ASML","Installed Base Management","3,289"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_TSMC_N2_REVENUE",
+      "title_ru":"TSMC: 2-нм производство уже входит в фактическую выручку, а не только в дорожную карту",
+      "event_date":"2026-10-15","date_basis":"quarterly_disclosure","observation_period":"2026-Q3","status":"issuer_reported_result","priority":"medium",
+      "facts_ru":["В квартальном раскрытии TSMC доля 2-нм процесса составляет 8% выручки от пластин, 3-нм - 33%; процессы 7 нм и новее вместе дают 79%."],
+      "interpretation_ru":"Производственную географию следует показывать отдельно от географии штаб-квартир модельных лабораторий: Тайвань остаётся самостоятельным центром передового производства.",
+      "caveats_ru":["Это доли выручки TSMC, не доли мирового рынка и не число ИИ-чипов. Раскрытие само по себе не измеряет зависимость каждой американской или китайской модели от TSMC."],
+      "geography":["Taiwan","Global"],"visual_lanes":["energy_compute_chips"],"arc_ids":["ARC_EXPORT_CHIPS_TO_MODELS","ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],"source_ids":["TSMC_Q3"],"related_existing_event_ids":[],"dedup_terms":["TSMC","2-nanometer","2-нм"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_SKHYNIX_LONG_TERM_ALLOCATION",
+      "title_ru":"SK hynix закрепила долгосрочными соглашениями более половины мощностей 2027-2028 годов",
+      "event_date":"2026-10-28","date_basis":"quarterly_disclosure","status":"issuer_reported_contract_coverage","priority":"high",
+      "facts_ru":["SK hynix сообщает о долгосрочных соглашениях, покрывающих более 50% производственной мощности на 2027-2028 годы, и росте поставок HBM4."],
+      "interpretation_ru":"Доступ к будущей памяти определяется не только возможностью её изготовить, но и предварительным распределением мощностей по контрактам. Южная Корея не просто покупатель чужих моделей.",
+      "caveats_ru":["Не вся мощность продана и не вся указанная мощность относится только к HBM. Прогноз дальнейшего дефицита не является уже наступившим результатом."],
+      "geography":["South Korea","Global"],"visual_lanes":["energy_compute_chips","finance_rent"],"arc_ids":["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN","ARC_CAPITAL_MIX_PUBLIC_PRIVATE"],"source_ids":["SKHYNIX_Q3"],"related_existing_event_ids":[],"dedup_terms":["SK hynix","2027~2028","long-term agreements"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_HUAWEI_COMMERCIAL_STACK_ROADMAP",
+      "title_ru":"Huawei заявляет о коммерческом применении Atlas 950 и расширении собственного вычислительного стека",
+      "event_date":"2026-09-17","date_basis":"vendor_keynote","status":"vendor_report_and_roadmap","priority":"high",
+      "facts_ru":["Huawei сообщает о развёртывании более 1000 Atlas 900 A3 SuperPoD и масштабном коммерческом применении Atlas 950. Компания представила портфель из 11 чипов на UnifiedBus; доступность Ascend 960DT обещана в I квартале 2027 года."],
+      "interpretation_ru":"Китайский альтернативный стек нужно описывать через собственные взаимосвязанные компоненты и программную экосистему, а не только как обход американских запретов.",
+      "caveats_ru":["Масштаб развёртывания и результаты заявлены Huawei. Ascend 960DT ещё не следует считать поставленным; независимое равенство с NVIDIA по производительности, стоимости и надёжности не установлено."],
+      "geography":["China"],"visual_lanes":["energy_compute_chips","cloud_inference"],"arc_ids":["ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"],"source_ids":["HUAWEI_CONNECT"],"related_existing_event_ids":["SIG_2026_HUAWEI_ATLAS950_PHYSICAL_DEMONSTRATION"],"dedup_terms":["Atlas 950","Atlas 960E","Ascend 960DT"],"proposed_action":"new_followup_not_duplicate_july_demonstration"
+    },
+    {
+      "id":"CAND_2026_ALIBABA_STACK_EXPORT",
+      "title_ru":"Alibaba связывает собственные чипы, облака, модели и агентные сервисы с зарубежной экспансией",
+      "event_date":"2026-09-25","date_basis":"conference_announcement","status":"mixed_existing_products_and_roadmap","priority":"high",
+      "facts_ru":["Alibaba представила AgentCore и Agent Security Center, а также планы первых облачных регионов в Турции, Финляндии и Нидерландах. Zhenwu V900 назначен к массовому выпуску на I квартал 2027 года; цель более 20 ГВт относится к 2032 году."],
+      "interpretation_ru":"Конкуренция включает экспорт инфраструктуры исполнения агентов и организационных интерфейсов, а не только распространение весов китайских моделей.",
+      "caveats_ru":["Новые регионы, V900 и 20 ГВт - планы, не подтверждённая доступная ёмкость на дату проверки. Производительность и экономия из пресс-релиза не прошли независимую проверку."],
+      "geography":["China","EU","Global"],"visual_lanes":["energy_compute_chips","cloud_inference","model_weights","decision_support_cognition"],"arc_ids":["ARC_CHINA_COUNTERSTACK_ROUTE_AROUND","ARC_CLOUD_CAPACITY_VENDOR_LOCKIN","ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],"source_ids":["ALIBABA_APSARA"],"related_existing_event_ids":[],"dedup_terms":["Apsara","Zhenwu V900","AgentCore"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_LUMI_AI_PROCUREMENT",
+      "title_ru":"EuroHPC подписала контракт на LUMI-AI: общеевропейское распределение доступа к вычислениям",
+      "event_date":"2026-08-31","date_basis":"contract_announcement","status":"signed_procurement_future_delivery","priority":"high",
+      "facts_ru":["EuroHPC подписала контракт с Bull на приобретение, поставку, установку и обслуживание LUMI-AI общим бюджетом EUR 387,8 млн, поровну финансируемым EuroHPC и консорциумом стран. Пользовательский доступ к новой системе ожидается в 2027 году; ресурсы распределяются совместно в соответствии с инвестициями."],
+      "interpretation_ru":"Европа формирует публичный канал распределения вычислений. Однако европейская юрисдикция и право распределять ресурсы сосуществуют с использованием AMD GPU и CPU.",
+      "caveats_ru":["Нельзя записывать будущую LUMI-AI как уже работающую. Существующая LUMI AI Factory предоставляет услуги с апреля 2025 года на другой системе LUMI."],
+      "geography":["EU","Finland","Norway"],"visual_lanes":["energy_compute_chips","cloud_inference","finance_rent"],"arc_ids":["ARC_CAPITAL_MIX_PUBLIC_PRIVATE","ARC_CLOUD_CAPACITY_VENDOR_LOCKIN","ARC_SOVEREIGN_FLOW_GATING"],"source_ids":["LUMI_CONTRACT"],"related_existing_event_ids":[],"dedup_terms":["LUMI-AI","387","Bull"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_EUROHPC_GIGAFACTORY_DEADLINE",
+      "title_ru":"EuroHPC переносит срок первого лота AI Gigafactories из-за бюджетных процедур стран",
+      "event_date":"2026-11-05","date_basis":"tender_update","status":"operative_procurement_amendment","priority":"high",
+      "facts_ru":["В обновлении конкурса EUROHPC-2026-CEI-AIGF-01 срок лота 1 перенесён на 4 февраля 2027 года для завершения национальных бюджетных процедур и представления финансовых обязательств. Срок лота 2 остаётся 3 декабря 2026 года. Заказчики будут приобретать вычислительное время у выбранных консорциумов."],
+      "interpretation_ru":"Это одновременно конкретный механизм публичного спроса и свидетельство задержки его реализации. Нельзя превращать объявленную европейскую программу в уже введённый вычислительный блок.",
+      "caveats_ru":["Перенос одного лота не означает отмену программы. Исходный конкурс открыт 30 июля; ноябрьская карточка относится именно к изменению сроков."],
+      "geography":["EU"],"visual_lanes":["cloud_inference","finance_rent","governance_law"],"arc_ids":["ARC_CAPITAL_MIX_PUBLIC_PRIVATE","ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],"source_ids":["EUROHPC_TENDER"],"related_existing_event_ids":[],"dedup_terms":["EUROHPC-2026-CEI-AIGF-01","Gigafactories","4 February 2027"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_AWS_EU_DISCONNECTION_EXERCISE",
+      "title_ru":"AWS сообщила об испытании европейского облака без двух глобальных систем",
+      "event_date":"2026-10-24","date_basis":"exercise_date","publication_date":"2026-11-01","status":"vendor_reported_operational_exercise","priority":"high",
+      "facts_ru":["AWS сообщает, что во время многочасового испытания отключила глобальную магистраль и систему контролируемой передачи операционных данных. Трафик перенаправили через публичный интернет; европейские сотрудники продолжали эксплуатацию, доступность нагрузок и данных сохранилась."],
+      "interpretation_ru":"Контрпример к тезису, что иностранный поставщик исключает любую операционную автономию. Требуется измерять конкретную зависимость и длительность автономной работы.",
+      "caveats_ru":["Отчёт самой AWS, не независимый аудит. Это не отключение от всего интернета, не бессрочная автономия, не переносимость к другому поставщику и не юридический иммунитет."],
+      "geography":["EU","Germany","US"],"visual_lanes":["cloud_inference","cyber_security_patch","governance_law"],"arc_ids":["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN","ARC_SOVEREIGN_FLOW_GATING","ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"],"source_ids":["AWS_EXERCISE"],"related_existing_event_ids":["SIG_AWS_2026_EUROPEAN_SOVEREIGN_CLOUD"],"dedup_terms":["European Sovereign Cloud","October 24","exercise"],"proposed_action":"new_followup_qualifying_january_design_claim"
+    },
+    {
+      "id":"CAND_2026_UK_DATACENTRE_COVENANT",
+      "title_ru":"Великобритания связывает ускоренный доступ дата-центров к энергии с общественными и защитными обязательствами",
+      "event_date":"2026-10-28","date_basis":"policy_publication","status":"policy_framework_with_future_implementation","priority":"high",
+      "facts_ru":["Data Centre Covenant связывает дополнительную государственную поддержку стратегических ЦОД с оплатой создаваемых энергетических затрат, местными выгодами, экологической отчётностью и устойчивостью. Правительство описывает приоритизацию сетевых подключений и будущий ограниченный режим временной генерации до подключения к сети."],
+      "interpretation_ru":"Государство и местные сообщества получают рычаги не только через модельные лицензии: они определяют условия превращения капитала и чипов в доступные вычисления.",
+      "caveats_ru":["Не все положения уже действующие универсальные юридические обязанности. Часть критериев и правил ещё предстоит определить; целевые 6 ГВт к 2030 году не являются текущей мощностью."],
+      "geography":["UK"],"visual_lanes":["energy_compute_chips","governance_law","cyber_security_patch"],"arc_ids":["ARC_ENERGY_GRID_POLITICS","ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"],"source_ids":["UK_COVENANT"],"related_existing_event_ids":[],"dedup_terms":["Data Centre Covenant","Ministerial Control Centre"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_ARAMCO_HUMAIN_CLOSING",
+      "title_ru":"Aramco получила 49% HUMAIN: энергия, капитал и ИИ объединяются через собственность",
+      "event_date":"2026-11-01","date_basis":"transaction_closing_announcement","status":"closed_transaction_with_future_capacity_target","priority":"high",
+      "facts_ru":["PIF и Aramco объявили о закрытии сделки: PIF сохраняет 51% HUMAIN, Aramco получает 49%, внося ИИ-активы и около SAR 9,9 млрд ($2,6 млрд) денежных средств в 2026 году. Развёртывание 3 ГВт мощностей к 2030 году остаётся планом."],
+      "interpretation_ru":"Саудовский контур уже нельзя описывать только как внешнюю закупку: формируется внутренний центр собственности, промышленного спроса и финансирования.",
+      "caveats_ru":["Закрытие сделки не доказывает создание всего независимого стека, выполнение всех денежных взносов или ввод заявленных 3 ГВт."],
+      "geography":["Saudi Arabia","Gulf"],"visual_lanes":["finance_rent","energy_compute_chips","cloud_inference"],"arc_ids":["ARC_GULF_CONDITIONAL_SOVEREIGNTY","ARC_CAPITAL_MIX_PUBLIC_PRIVATE","ARC_ENERGY_GRID_POLITICS"],"source_ids":["PIF_HUMAIN"],"related_existing_event_ids":["SIG_SA_2026_HUMAIN_XAI","SIG_2026_HUMAIN_DATAVOLT_OXAGON_CONSTRUCTION"],"dedup_terms":["Aramco","HUMAIN","49%"],"proposed_action":"new_event_not_duplicate_investment_or_construction"
+    },
+    {
+      "id":"CAND_2026_JAIS3_OPEN_ARABIC_AGENTS",
+      "title_ru":"Jais 3: открытые арабоязычные модели дают организациям выбор места развёртывания",
+      "event_date":"2026-10-15","date_basis":"IFM_release","status":"developer_release_and_benchmark_report","priority":"high",
+      "facts_ru":["IFM и партнёры выпустили шесть арабоязычных моделей Jais 3 на основе K2 Horizon, от 0,9 до 375 млрд параметров. IFM заявляет Apache 2.0 для моделей и кода, публикацию весов, промежуточных состояний обучения, рецептов и оценочных материалов; опубликован образец обучающих данных, не весь корпус."],
+      "interpretation_ru":"ОАЭ развивают собственную модельную и языковую компетенцию, которая допускает локальное применение. Это уточняет образ Залива как исключительно покупателя закрытого доступа.",
+      "caveats_ru":["Сравнительные результаты принадлежат разработчикам. Это не доказательство общего превосходства над США и Китаем. Работа с Cerebras и требования к GPU сохраняют аппаратные зависимости; крупнейшая модель не равна доступной каждому автономии."],
+      "geography":["UAE","Gulf"],"visual_lanes":["model_weights","data_telemetry","decision_support_cognition"],"arc_ids":["ARC_GULF_CONDITIONAL_SOVEREIGNTY","ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"],"source_ids":["IFM_JAIS3","INCEPTION_JAIS3"],"related_existing_event_ids":["SIG_2023_UAE_JAIS_US_OPERATED_COMPUTE"],"dedup_terms":["Jais 3","K2 Horizon","Inception42"],"proposed_action":"new_followup_not_duplicate_jais_2023"
+    },
+    {
+      "id":"CAND_2026_ABUDHABI_MACHINE_READABLE_GOVERNMENT",
+      "title_ru":"Абу-Даби: локальное исполнение OpenAI входит в применение государственных правил",
+      "event_date":"2026-11-02","date_basis":"government_launch_announcement","status":"government_reported_live_pilot_and_signed_agreements","priority":"high",
+      "facts_ru":["Правительство Абу-Даби сообщает о работающем пилоте Machine-Readable Government для импорта продуктов питания в ADAFSA: отдельные нормы переведены в машиночитаемую форму, вывод соотносится с правилом, окончательное решение остаётся за чиновником. Вычисления OpenAI выполняются в ОАЭ. В тот же день объявлены соглашения с ADNOC и Mubadala."],
+      "interpretation_ru":"Локализация вычислений и государственное владение процессом сосуществуют с использованием внешней модели в интерпретации правил и подготовке решений. Это более точный пример селективного суверенитета, чем ярлык полной зависимости.",
+      "caveats_ru":["Один заявленный пилот не равен переводу всего государства на ИИ. Нет опубликованного независимого аудита точности, переносимости и непрерывности. Не доказано, что OpenAI контролирует окончательные административные решения."],
+      "geography":["UAE","US"],"visual_lanes":["decision_support_cognition","data_telemetry","cloud_inference","governance_law"],"arc_ids":["ARC_GULF_CONDITIONAL_SOVEREIGNTY","ARC_CORPORATE_DECISION_SUPPORT_ADOPTION","ARC_SOVEREIGN_FLOW_GATING"],"source_ids":["ABUDHABI_OPENAI"],"related_existing_event_ids":[],"dedup_terms":["Machine-Readable Government","ADAFSA","Mubadala"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_YANDEX_ALICE_FOUNDATION_RELEASE",
+      "title_ru":"Яндекс публикует Alice AI Foundation под Apache 2.0 и заявляет обучение с нуля",
+      "event_date":"2026-09-21","date_basis":"release_announcement","status":"model_release_and_developer_training_claim","priority":"high",
+      "facts_ru":["Яндекс опубликовал AliceAI-Foundation-80B-A3B-Base: 80 млрд параметров, 3 млрд активных, лицензия Apache 2.0. Компания и модельная карточка сообщают об обучении с нуля; это базовая экспериментальная модель, предназначенная также для дальнейшего дообучения."],
+      "interpretation_ru":"Российский контур нельзя свести к переупаковке иностранных весов: есть собственное обучение и выпуск доступных для локального применения весов.",
+      "caveats_ru":["Происхождение обучения подтверждается заявлением разработчика, не аудитом полного конвейера. Не доказывает независимость от зарубежных ускорителей, готовность производственного агента или паритет со всеми передовыми моделями. Бенчмарки разработчика отдельно от факта выпуска."],
+      "geography":["Russia"],"visual_lanes":["model_weights","data_telemetry"],"arc_ids":["ARC_RUSSIA_SELECTIVE_SOVEREIGNTY","ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"],"source_ids":["YANDEX_BASE_RELEASE","YANDEX_BASE_CARD"],"related_existing_event_ids":[],"dedup_terms":["AliceAI-Foundation","Alice AI Foundation","80B-A3B"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_YANDEX_DATACENTRE_PHYSICAL_RESILIENCE",
+      "title_ru":"Повреждение российских дата-центров показывает физическое ограничение локального суверенитета",
+      "event_date":"2026-10-08","event_end_date":"2026-10-09","date_basis":"operator_reported_incident_dates","publication_date":"2026-10-09","status":"affected_operator_disclosure_with_customer_recovery_report","priority":"high",
+      "facts_ru":["Yandex Cloud сообщил о серьёзном повреждении и остановке дата-центра в Сасово после атаки БПЛА в ночь на 8 октября и атаке на ЦОД в Калуге 9 октября. Mindbox описал собственное восстановление: 90% клиентов получили кассы и лояльность через 53 минуты после первого отказа; после следующего отказа 11 октября полная функциональность для 99% восстановилась за 20 часов."],
+      "interpretation_ru":"Собственные веса, дата-резидентность и национальная юрисдикция не обеспечивают непрерывность при физическом отказе инфраструктуры. Резервирование и восстановление - самостоятельная составляющая власти над работающим сервисом.",
+      "caveats_ru":["Не кибервзлом и не доказательство уничтожения всех российских ИИ-мощностей. Нет подтверждённого числа потерянных GPU. Восстановление Mindbox не означает восстановления всего оборудования Яндекса; отдельное сообщение клиента не является независимой атрибуцией атаки."],
+      "geography":["Russia"],"visual_lanes":["energy_compute_chips","cloud_inference","cyber_security_patch"],"arc_ids":["ARC_RUSSIA_SELECTIVE_SOVEREIGNTY","ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK","ARC_ENERGY_GRID_POLITICS"],"source_ids":["YANDEX_DC_INCIDENT","MINDBOX_RECOVERY"],"related_existing_event_ids":[],"dedup_terms":["Сасово","Калуге","iron-hearts","Mindbox"],"proposed_action":"new_incident_with_recovery_counterevidence"
+    },
+    {
+      "id":"CAND_2026_UK_CST_SOVEREIGN_AGENCY",
+      "title_ru":"Британский CST определяет ИИ-суверенитет через способность выбирать и сохранять работу под давлением",
+      "event_date":"2026-07-30","date_basis":"letter_date","publication_date":"2026-10-19","window_note":"Документ написан до основного окна, опубликован внутри него.","status":"advisory_letter_not_law","priority":"medium",
+      "facts_ru":["CST рекомендует стратегию, различающую, где нужны собственные возможности, где приемлема зависимость и где есть шанс на лидерство. Суверенитет определяется через достаточную самостоятельность в цепочке создания стоимости и устойчивость под давлением."],
+      "interpretation_ru":"Официальный экспертный язык поддерживает послойную карту зависимости вместо бинарного деления на полностью суверенных и несамостоятельных.",
+      "caveats_ru":["Письмо консультативного органа не равняется принятой государственной стратегии, закону или уже обеспеченной способности к выходу."],
+      "geography":["UK"],"visual_lanes":["governance_law","decision_support_cognition"],"arc_ids":["ARC_SOVEREIGN_FLOW_GATING","ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"],"source_ids":["UK_CST_SOVEREIGNTY"],"related_existing_event_ids":[],"dedup_terms":["preserving UK agency","Council for Science and Technology"],"proposed_action":"new_document_with_original_date"
+    },
+    {
+      "id":"CAND_2026_UK_AI_DEFENCE_INCIDENT_READINESS",
+      "title_ru":"Великобритания соединяет ИИ-поиск уязвимостей, испытания моделей и готовность к агентным инцидентам",
+      "event_date":"2026-10-12","date_basis":"government_announcement","status":"reported_pilots_and_policy_development","priority":"high",
+      "facts_ru":["Правительство сообщает, что два пилота помогли найти и исправить более тысячи потенциальных киберуязвимостей государственных систем. Объявлено расширение применения передовых моделей в защите, испытания AISI и разработка подходов к серьёзным агентным инцидентам и сообщениям о почти случившихся инцидентах."],
+      "interpretation_ru":"Кибер становится государственной способностью поддерживать работоспособность остального стека, а не только фильтром допуска к опасным моделям.",
+      "caveats_ru":["Это правительственный отчёт о пилотах, не опубликованный независимый реестр 1000 новых CVE. Рассмотрение изменений Cyber Security and Resilience Bill не означает, что все новые обязанности уже вступили в силу."],
+      "geography":["UK"],"visual_lanes":["cyber_security_patch","governance_law","model_weights"],"arc_ids":["ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK","ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"],"source_ids":["UK_CYBER_DEFENCE"],"related_existing_event_ids":[],"dedup_terms":["Britain steps up national defences","12 October","thousand"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_COMMON_AI_TRAINING_SIGNAL",
+      "title_ru":"OpenAI обещает учитывать общий сигнал об использовании сайтов для обучения ИИ",
+      "event_date":"2026-10-30","date_basis":"policy_commitment","status":"voluntary_commitment_implementation_pending","priority":"high",
+      "facts_ru":["OpenAI объявила о намерении учитывать общий сигнал в robots.txt для предпочтений владельцев сайтов по обучению базовых генеративных моделей. Реализация обещана в последующие месяцы; существующие индивидуальные настройки роботов сохраняются."],
+      "interpretation_ru":"Издатели и поставщики пытаются согласовать правила проницаемости информационного входа. Это частичное усиление возможности владельца сайта выражать ограничения, а не только односторонняя власть поисковой платформы.",
+      "caveats_ru":["Добровольное обязательство, не уже действующий всеобщий стандарт. Не устанавливает компенсацию, обязательное цитирование или запрет поискового извлечения; обучение и поиск нужно разделять."],
+      "geography":["US","Global"],"visual_lanes":["data_telemetry","governance_law"],"arc_ids":["ARC_DATA_LICENSING_AS_INPUT_LAYER","ARC_SOVEREIGN_FLOW_GATING"],"source_ids":["OPENAI_ROBOTS_SIGNAL"],"related_existing_event_ids":["SIG_2025_ROBOTS_AI_EXCLUSION_ASYMMETRY"],"dedup_terms":["common signal","training preferences","robots.txt"],"proposed_action":"new_policy_followup_not_duplicate_2025_measurement"
+    },
+    {
+      "id":"CAND_2026_ORACLE_OPENAI_ENTERPRISE_SECURITY",
+      "title_ru":"Oracle и OpenAI соединяют интерфейс решений, корпоративные данные и управляемую киберзащиту",
+      "event_date":"2026-10-27","date_basis":"product_collaboration_announcement","status":"announced_products_and_integration","priority":"high",
+      "facts_ru":["Oracle объявила AI Workspace, связывающий модели OpenAI и ChatGPT с приложениями, данными и OCI. Объявлен AI Security Mesh для поиска и исправления уязвимостей; заказчик задаёт разрешённый периметр испытаний, Oracle управляет проверкой и защитными мерами."],
+      "interpretation_ru":"Зависимость может возникать на уровне рабочего процесса и управляемого защитного сервиса, даже когда модель или место хранения данных формально заменяемы.",
+      "caveats_ru":["Анонс архитектуры и продуктов не измеряет масштаб реального внедрения, цену выхода или эффективность защиты. Источник не доказывает передачу Oracle окончательной власти над решениями заказчика."],
+      "geography":["US","Global"],"visual_lanes":["decision_support_cognition","data_telemetry","cloud_inference","cyber_security_patch"],"arc_ids":["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION","ARC_CLOUD_CAPACITY_VENDOR_LOCKIN","ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"],"source_ids":["ORACLE_OPENAI"],"related_existing_event_ids":[],"dedup_terms":["Oracle AI Workspace","AI Security Mesh"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_OPENAI_ONEGOV_EXPANSION",
+      "title_ru":"OneGov расширяет субсидируемый доступ государственного сектора США к ИИ и кибермоделям",
+      "event_date":"2026-09-10","date_basis":"agreement_announcement","effective_date":"2026-10-01","end_date":"2028-12-31","status":"vendor_reported_procurement_offer","priority":"high",
+      "facts_ru":["OpenAI и GSA объявили 27-месячное соглашение с отменой лицензионной платы за пользователя и скидкой 50% на использование; предложение распространено на штаты, муниципалитеты и племенные органы. Проверенные государственные организации получают допуск Daybreak Blue; Daybreak Red требует отдельного запроса и оплачивается по коммерческим тарифам."],
+      "interpretation_ru":"Публичные закупки, скидки, обучение и категории кибердопуска совместно формируют канал распространения американского платформенного стека.",
+      "caveats_ru":["Право подключения не равно фактическому числу активных пользователей. Бесплатная лицензия не означает бесплатного использования или отсутствия последующей зависимости. Условия взяты из сообщения поставщика, не полного контракта GSA."],
+      "geography":["US"],"visual_lanes":["finance_rent","model_weights","cyber_security_patch","decision_support_cognition"],"arc_ids":["ARC_QUIET_ACCESS_CONTROL","ARC_CORPORATE_DECISION_SUPPORT_ADOPTION","ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"],"source_ids":["OPENAI_ONEGOV"],"related_existing_event_ids":[],"dedup_terms":["OneGov","27 months","Daybreak Blue"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_NVIDIA_SOVEREIGN_RUNTIME",
+      "title_ru":"NVIDIA предлагает европейским облакам собственный стек аппаратного и программного контроля агентов",
+      "event_date":"2026-10-21","date_basis":"reference_architecture_announcement","status":"vendor_architecture_and_partner_plans","priority":"high",
+      "facts_ru":["NVIDIA описывает европейские облачные проекты на DSX и объявленную архитектуру OpenShell: исполнение моделей, среду для инструментов агента и контроль на BlueField-4/Sentry. Партнёры поддерживают архитектуру для ограничения разрешённых действий агентов."],
+      "interpretation_ru":"Локальная юрисдикция и открытые модели могут сочетаться с концентрацией у внешнего поставщика аппаратуры и механизмов исполнения. Безопасность становится ещё одним слоем поставляемой платформы.",
+      "caveats_ru":["Референсная архитектура не является доказательством невозможности обхода или повсеместного внедрения. Не доказано, что NVIDIA сама управляет каждым ограничением заказчика. Nebius не следует классифицировать как российский облачный ресурс."],
+      "geography":["US","EU","UK","Global"],"visual_lanes":["energy_compute_chips","cloud_inference","cyber_security_patch"],"arc_ids":["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN","ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK","ARC_QUIET_ACCESS_CONTROL"],"source_ids":["NVIDIA_EU_RUNTIME"],"related_existing_event_ids":[],"dedup_terms":["OpenShell Reference Architecture","DSX","Sentry"],"proposed_action":"new_event"
+    },
+    {
+      "id":"CAND_2026_BIS_CIRCULAR_AI_FINANCE",
+      "title_ru":"Исследование BIS связывает инвестиционные отношения ИИ-фирм с контрактами поставки",
+      "event_date":"2026-10-01","date_basis":"research_publication","observation_period":"2021-2025","status":"published_empirical_research","priority":"high",
+      "facts_ru":["Авторы BIS Bulletin 137 оценивают, что в 2021-2025 годах 46,4% стоимости инвестиционных сделок между ИИ-фирмами приходилось на пары, также связанные коммерческими поставками; по числу сделок доля составляла 16,1%."],
+      "interpretation_ru":"Финансовый и производственный слои соединены измеряемо: инвестиции могут закреплять доступ к критическим ресурсам и отношения поставщик-заказчик.",
+      "caveats_ru":["Это историческая выборка, не доля сделок 2026 года и не доказательство фиктивной выручки, сговора или неизбежного пузыря. Авторы отдельно указывают, что их выводы не обязательно выражают позицию BIS и центральных банков."],
+      "geography":["Global"],"visual_lanes":["finance_rent","cloud_inference"],"arc_ids":["ARC_CAPITAL_MIX_PUBLIC_PRIVATE","ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],"source_ids":["BIS_CIRCULAR"],"related_existing_event_ids":[],"dedup_terms":["Circular relationships among AI firms","Bulletin 137","46.4%"],"proposed_action":"new_research_event_not_2026_transaction_count"
+    }
+  ],
+  "carry_forward": {
+    "file":"../cyber-geopolitics-2026-11-07/candidates.json",
+    "candidate_ids":["CAND_2026_OPENAI_KERNEL_PIPELINE","CAND_2026_GPT6_CYBER_RESTRICTED_RELEASE","CAND_2026_GEMINI_CARBON_DEFENDERS_FIRST","CAND_2026_NIST_AGENT_IDENTITY_TENETS","CAND_2026_MISTRAL_OPEN_AND_VETTED_CYBER","CAND_2026_CHINA_AI_TECH_EXPORT_CATALOGUE","CAND_2026_CHINA_H200_IMPORT_GATE","CAND_2026_NEW_YORK_DC_PERMIT_MORATORIUM","CAND_2026_TEXAS_ELECTION_DC_PAUSE_PLEDGE"],
+    "new_verification_source_ids":["MOFCOM_EXPORT_QA"],
+    "notes_ru":["Эти карточки уже находятся в предыдущем исследовательском пакете и не пересоздаются как новые находки.","MOFCOM подтверждает отдельность проекта экспортного каталога и временной предэкспортной регистрации. Проект предусматривает облегчённые режимы и исключения для уже общедоступных технологий; это не всеобщий запрет китайских открытых моделей.","Ограничения ЦОД отдельных штатов и предвыборные обещания не означают федеральную остановку строительства в США."]
+  },
+  "geography_reassessment": [
+    {"geography":"US","proposed_label_ru":"Широкий платформенный центр с внешними производственными и внутренними энергетическими зависимостями","interpretation_ru":"В новом материале сильнее видны каналы внедрения через государственные закупки, корпоративные процессы и управляемую киберзащиту. Это не означает владения всеми звеньями производства или единой политики по энергии.","candidate_ids":["CAND_2026_OPENAI_ONEGOV_EXPANSION","CAND_2026_ORACLE_OPENAI_ENTERPRISE_SECURITY","CAND_2026_NVIDIA_SOVEREIGN_RUNTIME","CAND_2026_BIS_CIRCULAR_AI_FINANCE"]},
+    {"geography":"China","proposed_label_ru":"Альтернативный платформенно-производственный центр с собственной политикой допуска","interpretation_ru":"Huawei и Alibaba предлагают связанный стек и экспортную инфраструктуру, а не только обход санкций. Контроль собственных технологических потоков сочетается с поддержкой определённых форм открытости. Паритет по всем аппаратным и модельным метрикам не установлен.","candidate_ids":["CAND_2026_HUAWEI_COMMERCIAL_STACK_ROADMAP","CAND_2026_ALIBABA_STACK_EXPORT"]},
+    {"geography":"Europe","proposed_label_ru":"Неоднородный набор критических производственных узлов и публично-частных контуров доступа","interpretation_ru":"ASML, совместные вычислительные закупки, локальная эксплуатация облаков и собственные модели нельзя свести к одной категории периферии. Различать ЕС и Великобританию; местное распределение ресурсов не отменяет внешних компонентов.","candidate_ids":["CAND_2026_ASML_CAPACITY_AND_SERVICE","CAND_2026_LUMI_AI_PROCUREMENT","CAND_2026_EUROHPC_GIGAFACTORY_DEADLINE","CAND_2026_AWS_EU_DISCONNECTION_EXERCISE","CAND_2026_UK_CST_SOVEREIGN_AGENCY"]},
+    {"geography":"Gulf","proposed_label_ru":"Центры капитала, энергии, локальных моделей и применения при сохраняющихся внешних технологических зависимостях","interpretation_ru":"Разделять Саудовскую Аравию и ОАЭ. HUMAIN показывает внутреннюю концентрацию собственности; Jais 3 - модельную компетенцию; Абу-Даби - сочетание местных правил и вычислений с внешними моделями. Термин протекторат слишком категоричен для всех слоёв сразу.","candidate_ids":["CAND_2026_ARAMCO_HUMAIN_CLOSING","CAND_2026_JAIS3_OPEN_ARABIC_AGENTS","CAND_2026_ABUDHABI_MACHINE_READABLE_GOVERNMENT"]},
+    {"geography":"Russia","proposed_label_ru":"Селективная самостоятельность моделей и сервисов при аппаратных ограничениях и физическом риске инфраструктуры","interpretation_ru":"Собственная модельная разработка реальна на уровне выпуска и заявления о pretraining. Это не снимает вопроса доступа к ускорителям, производственного масштаба и устойчивости площадок. Атаки на ЦОД не следует превращать в утверждение о гибели всего российского ИИ.","candidate_ids":["CAND_2026_YANDEX_ALICE_FOUNDATION_RELEASE","CAND_2026_YANDEX_DATACENTRE_PHYSICAL_RESILIENCE"]},
+    {"geography":"Taiwan / South Korea","proposed_label_ru":"Самостоятельные критические узлы производства и памяти","interpretation_ru":"Два широких платформенных полюса не равны двум автономным мировым стекам. Производственная мощность и долгосрочные контракты требуют отдельного отображения на карте.","candidate_ids":["CAND_2026_TSMC_N2_REVENUE","CAND_2026_SKHYNIX_LONG_TERM_ALLOCATION"]}
+  ],
+  "framework_implications_ru": [
+    "Измерять отдельно право собственности, юрисдикцию, производство, локальную эксплуатацию, способность менять поставщика и способность восстанавливаться.",
+    "Власть проявляется не только в запретах: предварительное распределение мощности, условия закупки, субсидируемый доступ и совместные инвестиции также формируют зависимость.",
+    "Кибербезопасность входит в условия доступа и в базовую способность продолжать работу: контроль инструментов агента, защитный конвейер и восстановление не заменяют друг друга.",
+    "Граница проницаемости меняется по слою: местные данные и вычисления могут использовать иностранную модель; открытые веса могут работать внутри зависимой аппаратной платформы.",
+    "Контрсвидетельства сохраняются: локальные модели, открытые веса, испытание автономной эксплуатации и успешное восстановление ограничивают чрезмерно сильные тезисы о неизбежном полном контроле поставщика."
+  ],
+  "coverage": {
+    "visual_lanes":["energy_compute_chips","cloud_inference","model_weights","data_telemetry","cyber_security_patch","decision_support_cognition","governance_law","finance_rent"],
+    "current_arc_families":["ARC_FAMILY_ACCESS_CONTROL","ARC_FAMILY_COUNTERSTACK_SOVEREIGNTY","ARC_FAMILY_CYBER_COGNITION_WAR","ARC_FAMILY_INFRASTRUCTURE_CAPITAL","ARC_FAMILY_DECISION_DATA_FINANCE"],
+    "historical_family_excluded_from_new_event_search":"ARC_FAMILY_FORMATION_TIMELINE",
+    "cyber_domains_ru":{
+      "1_secure_systems":"OpenShell и заявленные границы испытаний Oracle; доказательство эффективности защитной конфигурации ещё требуется.",
+      "2_capability_governance":"OneGov и разные категории допуска; предыдущий пакет содержит GPT-6 Cyber, Gemini Carbon, Mistral и китайский экспортный проект.",
+      "3_defensive_lifecycle":"Британские пилоты и расширение защитного применения; предыдущий пакет содержит Linux-конвейер OpenAI.",
+      "4_systemic_resilience":"Испытание AWS, отказы и восстановление российских ЦОД, британский Data Centre Covenant.",
+      "5_cognitive_structural":"MRG и Oracle как интерфейсы применения правил и решений; Jais/Alice как частичные способы выхода. Новый лабораторный результат о внутреннем поведении моделей в этом пакете не заявляется."
+    },
+    "limitations_ru":["Покрытие всех слоёв не означает новых фактов в каждой из 26 арок.","По военному внедрению найдено продолжение истории Maven, но непосредственное открытие MARADMIN заблокировано; карточка оставлена в очереди, а не объявлена первично проверенной.","Полный пересмотр санкционного законодательства и всех российских источников не выполнялся; обнаруженный модельный релиз не меняет автоматически классификацию аппаратной зависимости."]
+  },
+  "followup_queue": [
+    {"topic":"USMC Maven licensing October 2026","status":"primary_fetch_blocked","url":"https://www.marines.mil/News/Messages/Messages-Display/Article/4627754/maven-smart-system-available-to-marine-corps-across-all-networks/","lead_url":"https://defensescoop.com/2026/10/20/marine-corps-maven-smart-system-access/","related_existing_event_ids":["SIG_2026_USMC_ODIN_AUTHORITATIVE_REPORTING"],"note_ru":"Вероятное расширение сетевого допуска по MARADMIN 505/26, не новая покупка и не доказательство фактического использования всеми. Официальный URL вернул 403; есть публичные воспроизведения, но они не подменены первичкой."},
+    {"topic":"Falcon-Emirati / ASR / OCR","status":"release_observed_not_selected_as_separate_card","url":"https://www.tii.ae/insights/tii-launches-falcon-emirati-alongside-new-arabic-ai-models-speech-and-visual-text","developer_url":"https://huggingface.co/blog/tiiuae/falcon-emirati","note_ru":"Анонс 6 октября дополняет Jais как пример языковой компетенции ОАЭ. Не считать доступное демо доказательством выпуска весов всех трёх моделей; правовой режим каждого артефакта требует отдельной проверки."},
+    {"topic":"Stargate UAE operational capacity","status":"not_established_in_this_pass","related_existing_event_ids":["SIG_UAE_2025_STARGATE_UAE"],"note_ru":"Не найдено достаточной первички для перевода планируемых 200 МВт в подтверждённую работающую мощность. Не делать обратный вывод, что проект не работает."},
+    {"topic":"Russian AI law enactment","status":"needs_legal_primary","note_ru":"Свежие официальные выступления о суверенных отраслевых инструментах не использованы для автоматического изменения стадии закона без номера и текста акта."}
+  ],
+  "dedup_decisions_ru": [
+    "AWS: январский запуск сохранён, октябрьское испытание выделено как новое проверяемое действие.",
+    "Huawei: сентябрьское заявление о развёртывании отделено от июльской физической демонстрации.",
+    "HUMAIN: сделка Aramco не смешивается с инвестициями xAI и началом стройки DataVolt.",
+    "Jais: релиз 2026 года не дублирует историю американских вычислений 2023 года; публикации IFM и Inception42 - один релиз.",
+    "Yandex и Mindbox: признание отказа и восстановление клиента сведены в один кейс с раздельной областью наблюдения.",
+    "MOFCOM, Mistral и ограничения ЦОД США уже отобраны в соседнем исследовательском пакете; здесь только ссылки и уточнение, без повторного счётчика новых событий.",
+    "ASML press release и SEC filing - один источник сведений, а не два независимых подтверждения."
+  ]
+}

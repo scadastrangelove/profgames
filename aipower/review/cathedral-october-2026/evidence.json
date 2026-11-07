@@ -1,0 +1,220 @@
+{
+  "version": "0.50",
+  "checked_at": "2026-10-28",
+  "sources": {
+    "post": {
+      "name": "The Washington Post",
+      "title": "How an AI start-up founded by ex-DOGE staffers broke into Anthropic",
+      "date": "2026-10-26",
+      "url": "https://www.washingtonpost.com/technology/2026/10/26/researchers-cybersecurity-start-up-cathedral-got-inside-anthropic/",
+      "source_class": "original reporting; unpublished Cathedral draft and attributed company response",
+      "type": "Media / report",
+      "primary_or_secondary": "secondary",
+      "checked_at": "2026-10-28",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "aa": {
+      "name": "Anadolu Agency",
+      "title": "Months-old US startup accessed Anthropic's sensitive data in under 12 hours: Report",
+      "date": "2026-10-27",
+      "url": "https://m.aa.com.tr/en/world/months-old-us-startup-accessed-anthropic-s-sensitive-data-in-under-12-hours-report/4102515",
+      "source_class": "secondary coverage of the same Washington Post report; not independent corroboration",
+      "type": "Media / report",
+      "primary_or_secondary": "secondary",
+      "checked_at": "2026-10-28",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "graham": {
+      "name": "Logan Graham / Anthropic",
+      "title": "Corrections on the Cathedral incident and third-party dependencies",
+      "date": "2026-10-26",
+      "url": "https://x.com/logangraham/status/2114849047953670635",
+      "source_class": "named company representative; statement read through a mirror and The Decoder; direct X fetch returned 403",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-28",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "decoder": {
+      "name": "The Decoder",
+      "title": "AI agents hacked Anthropic, maker of arguably the most capable AI models for cyberdefense",
+      "date": "2026-10-28",
+      "url": "https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense/",
+      "source_class": "secondary reporting linking the named representative's statement; not independent technical replication",
+      "type": "Media / report",
+      "primary_or_secondary": "secondary",
+      "checked_at": "2026-10-28",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "policy": {
+      "name": "Anthropic",
+      "title": "Responsible Disclosure Policy",
+      "date": "2025-02-14",
+      "url": "https://www.anthropic.com/responsible-disclosure-policy",
+      "source_class": "public programme terms; specific Cathedral engagement permissions unavailable",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-28",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "axios": {
+      "name": "Axios",
+      "title": "Exclusive: Anthropic breaches spark White House AI reporting mandate",
+      "date": "2026-10-09",
+      "url": "https://www.axios.com/2026/10/09/anthropic-ai-security-white-house",
+      "source_class": "official SI Force statement reproduced by publisher; no separate implementing instrument reviewed",
+      "type": "Media / report",
+      "primary_or_secondary": "secondary",
+      "checked_at": "2026-10-28",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "title": "Investigating unintended model actions in our evaluations and internal use",
+      "date": "2026-10-09",
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "source_class": "provider disclosure underlying the earlier notification demand; not the Cathedral incident",
+      "type": "Primary source",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-10-28",
+      "verification_method": "source_account_reviewed; no_independent_replication"
+    }
+  },
+  "records": [
+    {
+      "id": "SIG_2026_CATHEDRAL_ANTHROPIC_THIRD_PARTY_ACCESS",
+      "date": "2026-10-26",
+      "source_ids": [
+        "post",
+        "aa",
+        "graham",
+        "decoder",
+        "policy"
+      ],
+      "actors": [
+        "Cathedral",
+        "Anthropic"
+      ],
+      "title_ru": "Cathedral получила доступ к бизнес-системам Anthropic через стороннее ПО",
+      "title_en": "Cathedral reached Anthropic business systems through third-party software",
+      "summary_ru": "Anthropic признала ограниченный доступ Cathedral к системам продаж, кадров и ИТ через стороннее ПО. Исследователи использовали ИИ-агентов; компания оспорила полноту раскрытия и соблюдение границ программы. Анонимный чиновник связал эпизод с риском иностранного шпионажа, что добавляет политический контекст, но не доказывает государственный заказ исследования.",
+      "summary_en": "Anthropic acknowledged limited Cathedral access to sales, HR and IT systems through third-party software. Researchers used AI agents; the company disputed disclosure completeness and programme scope compliance. An anonymous official linked the episode to foreign-espionage risk, adding political context but not establishing a government-directed operation.",
+      "caveat_ru": "Дата карточки относится к публикации, не к началу доступа. Заявленные Cathedral менее 12 часов работы агентов не равны полной длительности: Логан Грэм сообщил о нескольких днях попыток и двух уязвимостях, из которых исследователи сообщили одну. Anthropic отрицает доступ к весам, коду и чатам клиентов; полный объём доступа спорен. Нет опубликованной трассы, версии модели и распределения решений между людьми и агентами: самостоятельный выход агента за полномочия не установлен. Стороннее ПО не обязательно означает взлом внутренних систем его разработчика. Публичная политика исключает системы третьих лиц; конкретные разрешения Cathedral неизвестны. Нарушение правил, уголовная квалификация и решение о вознаграждении не тождественны; умысел сокрытия и отказ в выплате не установлены. СМИ пересказывают один отчёт и заявления сторон, а не независимые технические проверки.",
+      "caveat_en": "The record dates publication, not initial access. Cathedral's claimed under-12-hour agent phase is not total duration: Logan Graham described several days of attempts and two vulnerabilities, only one reported by the researchers. Anthropic denies access to weights, code and customer chats; overall access remains disputed. No public trace, model version or human/agent decision breakdown establishes an autonomous authority-boundary failure. Third-party software does not necessarily mean the developer's internal systems were breached. Public policy excludes third-party systems; Cathedral's specific permissions are unknown. Programme compliance, criminal liability and bounty eligibility are distinct; intentional concealment and a denied payment are not established. Coverage repeats one report and party statements, not independent technical audits.",
+      "safe_ru": "Anthropic признала ограниченный доступ Cathedral к системам продаж, кадров и ИТ через стороннее ПО. Исследователи использовали ИИ-агентов; компания оспорила полноту раскрытия и соблюдение границ программы. Анонимный чиновник связал эпизод с риском иностранного шпионажа, что добавляет политический контекст, но не доказывает государственный заказ исследования.",
+      "safe_en": "Anthropic acknowledged limited Cathedral access to sales, HR and IT systems through third-party software. Researchers used AI agents; the company disputed disclosure completeness and programme scope compliance. An anonymous official linked the episode to foreign-espionage risk, adding political context but not establishing a government-directed operation.",
+      "arcs": [
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+        "ARC_CYBER_CLAIM_TO_CAVEAT",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "governance_law",
+        "data_telemetry"
+      ],
+      "structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_questions": [
+        "RQ5"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "actor_types": [
+        "company",
+        "research"
+      ],
+      "artifact": "disclosure",
+      "contexts": [
+        "evaluation_with_real_effect"
+      ],
+      "domains": [
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"
+      ],
+      "primary_domain": "CYBER_DOMAIN_01_SECURE_SYSTEMS",
+      "roles": [
+        "AI_ROLE_ATTACK_ENABLER",
+        "AI_ROLE_PROTECTED_SYSTEM"
+      ],
+      "force": "not_applicable",
+      "stage": "reported",
+      "delegation": "not_established",
+      "date_basis": "public_disclosure_date_incident_date_not_disclosed",
+      "date_status": "source_backed",
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "priority": 1,
+      "method": "attributed_source_review; no_public_attack_trace; no_independent_replication",
+      "numbers": {}
+    },
+    {
+      "id": "SIG_2026_US_SI_FORCE_INCIDENT_NOTIFICATION_DEMAND",
+      "date": "2026-10-09",
+      "source_ids": [
+        "axios",
+        "anthropic"
+      ],
+      "actors": [
+        "US Government",
+        "Anthropic"
+      ],
+      "title_ru": "SI Force потребовала сообщать об инцидентах с моделями и устранять последствия",
+      "title_en": "SI Force demanded model-incident notification and remediation",
+      "summary_ru": "SI Force заявила об обязательности уведомления и устранения последствий инцидентов с моделями.",
+      "summary_en": "SI Force declared model-incident notification and remediation obligatory.",
+      "caveat_ru": "Это заявление власти, опубликованное Axios, а не установленный здесь новый закон. Правовое основание принуждения, санкции и исполнение не установлены. Anthropic отдельно описала действия своих моделей на внешних, в том числе государственных, сайтах. Это другой набор событий, не доступ Cathedral к самой Anthropic. Требование опубликовано 9 октября, до новости Cathedral 26 октября; причинная связь с Cathedral не установлена. Позднее уточнение Джорджии относится к одному эпизоду и сохранено в исходной карточке раскрытия.",
+      "caveat_en": "This is a government statement published by Axios, not a new statute established here. Enforcing authority, sanctions and implementation are not established. Anthropic separately described its models acting on external sites, including government sites. These are different events from Cathedral accessing Anthropic. The demand was published on October 9, before the October 26 Cathedral news; a causal link to Cathedral is not established. Georgia's later correction concerns one episode and remains in the original disclosure record.",
+      "safe_ru": "SI Force заявила об обязательности уведомления и устранения последствий инцидентов с моделями.",
+      "safe_en": "SI Force declared model-incident notification and remediation obligatory.",
+      "arcs": [
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "stack_layers": [
+        "cyber_security_patch",
+        "governance_law",
+        "data_telemetry"
+      ],
+      "structures": [
+        "security",
+        "knowledge"
+      ],
+      "research_questions": [
+        "RQ5"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "actor_types": [
+        "government",
+        "company"
+      ],
+      "artifact": "supervisory_communication",
+      "contexts": [
+        "governance_document"
+      ],
+      "domains": [
+        "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+        "CYBER_DOMAIN_01_SECURE_SYSTEMS"
+      ],
+      "primary_domain": "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE",
+      "roles": [
+        "AI_ROLE_PROTECTED_SYSTEM"
+      ],
+      "force": "undetermined",
+      "stage": "reported",
+      "delegation": "control_requirement",
+      "date_basis": "publication_date",
+      "date_status": "source_backed",
+      "confidence": "B",
+      "status": "verified_as_reported",
+      "priority": 1,
+      "method": "attributed_source_review; no_public_attack_trace; no_independent_replication",
+      "numbers": {}
+    }
+  ]
+}

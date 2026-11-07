@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v0.49 references, data contracts, legacy preservation and embedded-data parity.
+"""Validate v0.51 references, data contracts, legacy preservation and embedded-data parity.
 No third-party dependencies. --refresh-metadata updates counts only; assertions always run.
 """
 from pathlib import Path
@@ -80,7 +80,7 @@ def dates_preserved_or_corrected(doc, baseline_dates):
  return True
 
 def validate(root=ROOT,refresh=False,skip_html=False):
- report={'version':'0.49','base_commit':'8167ef0142e996ba2a7131bf84b222edab6d4c32','languages':{},'tests':[]};data={}
+ report={'version':'0.51','base_commit':'8167ef0142e996ba2a7131bf84b222edab6d4c32','languages':{},'tests':[]};data={}
  candidate_ids={x['id'] for x in json.loads((root/'review/v031-agent-behavior/candidates.json').read_text())['new_event_candidates']}
  concealment_ids={x['id'] for x in json.loads((root/'review/agent-concealment-persistence/candidates.json').read_text())['events']}
  astra_ids={x['id'] for x in json.loads((root/'review/astra-monitorability/candidates.json').read_text())['events']}
@@ -109,7 +109,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   dates={e['id']:e['date'] for e in d['events']}
   ok(lang+': original dates preserved or source-backed corrections logged',dates_preserved_or_corrected(d,{e['id']:e['date'] for e in b['events']}))
   ev={e['id']:e for e in d['events']};cyber=[e for e in d['events'] if e.get('primary_domain_id')]
-  ok(lang+': exact v0.49 collection counts',len(d['events'])==467 and len(d['claims'])==76 and len(d['claimChecks'])==32 and len(d['arcs'])==26 and len(d['edges'])==1189 and len(d['sourceIndex'])==674)
+  ok(lang+': exact v0.51 collection counts',len(d['events'])==510 and len(d['claims'])==76 and len(d['claimChecks'])==32 and len(d['arcs'])==26 and len(d['edges'])==1314 and len(d['sourceIndex'])==739)
   hierarchy=d.get('arcHierarchy',{});arc_by_id={arc['id']:arc for arc in d['arcs']}
   expected_roles={'mechanism':13,'submechanism':1,'qualifier':1,'case':5,'sector_case':2,'timeline_lens':3,'timeline_marker':1}
   expected_parents={
@@ -120,7 +120,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
    'ARC_FINANCE_GOVERNED_SHUTDOWN':'ARC_CORPORATE_DECISION_SUPPORT_ADOPTION',
    'ARC_WAR_DATA_FLYWHEEL':'ARC_CORPORATE_DECISION_SUPPORT_ADOPTION',
    'ARC_2023_GOVERNANCE_SHOCK':'ARC_2022_2023_FORMATION_PHASE'}
-  ok(lang+': v0.49 hierarchy metadata complete',d['meta']['version']=='0.49' and hierarchy.get('version')=='1.0' and hierarchy.get('default_mode')=='mechanisms' and hierarchy.get('role_counts')==expected_roles)
+  ok(lang+': v0.51 hierarchy metadata complete',d['meta']['version']=='0.51' and hierarchy.get('version')=='1.0' and hierarchy.get('default_mode')=='mechanisms' and hierarchy.get('role_counts')==expected_roles)
   ok(lang+': hierarchy summary is exact',d['summary'].get('arc_hierarchy')=={'families':6,'core_mechanisms':13,'nested_cases_and_qualifiers':9,'timeline_records':4,'total_arc_records':26})
   ok(lang+': every arc has a presentation role and order',all(arc.get('display_role') in expected_roles and isinstance(arc.get('display_order'),int) and isinstance(arc.get('default_visible'),bool) and 'parent_arc_id' in arc for arc in d['arcs']))
   ok(lang+': nested parent map is exact',{arc['id']:arc['parent_arc_id'] for arc in d['arcs'] if arc.get('parent_arc_id')}==expected_parents)
@@ -130,12 +130,12 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   ok(lang+': editorial migration changes no semantic edge',audit['semantic_edge_changes']==0 and audit['removed_ids']==[])
   ok(lang+': war family metadata reassignment is explicit',audit['edge_family_metadata_reassignments']==14 and audit['arc_family_membership_recomputations']=={'events':8,'claims':3,'claimChecks':1})
   displayed=[event for event in d['events'] if event.get('story_primary_arc_id')]
-  ok(lang+': one primary reading route for 427 facts',len(displayed)==427 and hierarchy.get('primary_event_assignments')==427 and hierarchy.get('events_with_secondary_arcs')==214)
+  ok(lang+': one primary reading route for 470 facts',len(displayed)==470 and hierarchy.get('primary_event_assignments')==470 and hierarchy.get('events_with_secondary_arcs')==255)
   ok(lang+': reading routes contain no duplicates',all(event['story_primary_arc_id'] not in event.get('story_secondary_arc_ids',[]) and len(event.get('story_secondary_arc_ids',[]))==len(set(event.get('story_secondary_arc_ids',[]))) for event in displayed))
   ok(lang+': primary and secondary routes resolve',all(event['story_primary_arc_id'] in arc_by_id and set(event.get('story_secondary_arc_ids',[]))<=set(arc_by_id) for event in displayed))
   ok(lang+': named examples have the intended hierarchy',arc_by_id['ARC_A800_H800_WORKAROUND_CLOSURE']['display_role']=='case' and arc_by_id['ARC_TOLL_AND_THROTTLE']['display_role']=='submechanism' and arc_by_id['ARC_CONTROL_LEAKS_BUT_POLICES']['display_role']=='qualifier' and arc_by_id['ARC_CYBER_CLAIM_TO_CAVEAT']['display_role']=='mechanism')
-  ok(lang+': exactly 228 reviewed cyber facts',len(cyber)==228)
-  ok(lang+': exactly 141 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==141)
+  ok(lang+': exactly 252 reviewed cyber facts',len(cyber)==252)
+  ok(lang+': exactly 158 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==158)
   ok(lang+': all 22 candidate records present',candidate_ids<={e['id'] for e in d['events']} and len(candidate_ids)==22)
   ok(lang+': all 12 concealment records present',concealment_ids<={e['id'] for e in d['events']} and len(concealment_ids)==12)
   ok(lang+': both Astra monitorability records present',astra_ids<={e['id'] for e in d['events']} and len(astra_ids)==2)
@@ -162,7 +162,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   ok(lang+': actor registry matches selector',set(d['entityRegistry']['actors'])==set(actor_counts))
   ok(lang+': actor selector has no case-fold duplicates',not folded_duplicates(actor_counts))
   ok(lang+': jurisdiction selector has no case-fold duplicates',not folded_duplicates(d['counts']['jurisdictions']))
-  ok(lang+': known actor aliases collapsed','Nvidia' not in actor_counts and 'US DOJ' not in actor_counts and actor_counts['NVIDIA']==15 and actor_counts['US Department of Justice']==4)
+  ok(lang+': known actor aliases collapsed','Nvidia' not in actor_counts and 'US DOJ' not in actor_counts and actor_counts['NVIDIA']==17 and actor_counts['US Department of Justice']==4)
   ok(lang+': no uncategorised geography',not any(e.get('geography_unclassified') for e in d['events']))
   unresolved=[e for e in d['events'] if e.get('actor_classification_status')=='review_required']
   ok(lang+': unresolved actors exposed, not guessed',len(unresolved)==16 and all(e.get('actor_unclassified') for e in unresolved))
@@ -202,7 +202,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   ok(lang+': Astra comparison is length-banded',astra_control['numbers']['cot_token_band_min']==750 and astra_control['numbers']['cot_token_band_max']==1250 and astra_control['numbers']['astra_control_percent']==60.9 and astra_control['numbers']['sol_control_percent']==16.1)
   ok(lang+': Astra evasion remains explicitly prompted',astra_evasion['behavior_origin']=='evaluation_prompted' and astra_evasion['goal_source']=='explicit_prompt' and astra_evasion['numbers']['honeypot_full_context_recall_percent']==100)
   ok(lang+': Astra records use official sources only',all(source['url'].startswith(('https://openai.com/','https://deploymentsafety.openai.com/')) for event_id in astra_ids for source in ev[event_id]['sources']) and not any('youtube.com' in source['url'] for event_id in astra_ids for source in ev[event_id]['sources']))
-  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==492)
+  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==588)
   ok(lang+': relation definitions complete',set(x['relation'] for x in d['edges'])<=set(d['relationTypes']))
   ok(lang+': exact claim denominators',d['summary']['claim_status_counts']=={'verified':50,'partially_verified':24,'disputed':2} and d['summary']['stats']['total_claims']==76 and d['summary']['stats']['partially_verified']==24 and 'pass_rate_short' not in d['summary'])
   if lang=='ru':ok('ru: every event headline localised',all(re.search('[А-Яа-яЁё]',e['title']) for e in d['events']))
@@ -292,7 +292,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   ok(lang+': frontier artifacts preserve distinct evidence types',speed['artifact_kind']=='strategy' and continuity['artifact_kind']=='memorandum' and proposal['artifact_kind']=='policy_framework' and endorsements['artifact_kind']=='commentary' and response['artifact_kind']=='political_declaration')
   ok(lang+': Amodei forecast remains a forecast',proposal['numbers']['internet_takeover_risk_forecast_months_min']==6 and proposal['numbers']['internet_takeover_risk_forecast_months_max']==12 and ('risk forecast' in proposal['caveat_en']))
   pacing=next(item for item in d['claimChecks'] if item['id']=='CLM_031_FRONTIER_PACING_AUTHORITY')
-  ok(lang+': pacing claim remains scoped partial',pacing['status']=='partially_verified' and pacing['confidence']=='A/B' and len(pacing['supporting_evidence'])==15 and pacing['qualifying_evidence']==['export-14'])
+  ok(lang+': pacing claim remains scoped partial',pacing['status']=='partially_verified' and pacing['confidence']=='A/B' and len(pacing['supporting_evidence'])==16 and pacing['qualifying_evidence']==['export-14'])
   pacing_arc=next(item for item in d['arcs'] if item['id']=='ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL')
   expected_order=['SIG_2023_CHINA_GENAI_INTERIM_MEASURES','SIG_2024_SEOUL_FRONTIER_SAFETY_COMMITMENTS','SIG_2024_UK_AISI_PREDEPLOYMENT_MODEL_ACCESS','SIG_2026_DOW_AI_STRATEGY_SPEED_WINS','SIG_2026_KOREA_NAVER_SOVEREIGN_MODEL_EXCLUSION','SIG_2026_CN_AGENT_GOVERNANCE_OPINIONS','SIG_2026_CN_GENAI_FILING_IMPLEMENTATION_SCALE','SIG_2026_US_NSPM11_PROVIDER_CONTINUITY_CONTROL','export-13','SIG_2026_KOREA_SOVEREIGN_CYBER_AI_MODEL','SIG_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE','SIG_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE','export-14','SIG_2026_AMODEI_PACE_FRONTIER_PROPOSAL','SIG_2026_FRONTIER_LAB_PACING_ENDORSEMENTS','SIG_2026_TRUMP_REJECTS_FRONTIER_PACING','CLM_031_FRONTIER_PACING_AUTHORITY']
   expected_order.insert(-1,'SIG_2026_GATES_MANDATORY_AI_OVERSIGHT_INTERVIEW')
@@ -301,8 +301,10 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   expected_order.append('SIG_2026_UK_RAID_AI_DELIVERY_EXCEPTIONS')
   expected_order.append('SIG_2026_ANTHROPIC_GLM53_CAPABILITY_ACCESS_POLICY')
   expected_order.append('SIG_2026_OPENAI_FRONTIER_RL_RESUMPTION_OFFLINE')
+  expected_order.extend(['SIG_2026_CATHEDRAL_ANTHROPIC_THIRD_PARTY_ACCESS','SIG_2026_US_SI_FORCE_INCIDENT_NOTIFICATION_DEMAND'])
+  expected_order.extend(['SIG_2026_GPT6_CYBER_RESTRICTED_RELEASE','SIG_2026_GEMINI_CARBON_DEFENDERS_FIRST','SIG_2026_UK_CST_SOVEREIGN_AGENCY','SIG_2026_UK_AI_DEFENCE_INCIDENT_READINESS'])
   pacing_dates=[ev[id]['date'] for id in pacing_arc['key_nodes'] if id in ev]
-  ok(lang+': pacing arc follows global event chronology',len(pacing_arc['key_nodes'])==len(expected_order) and set(pacing_arc['key_nodes'])==set(expected_order) and pacing_dates==sorted(pacing_dates) and pacing_arc['start_date']=='2023-07-13' and pacing_arc['end_date']=='2026-10-01')
+  ok(lang+': pacing arc follows global event chronology',len(pacing_arc['key_nodes'])==len(expected_order) and set(pacing_arc['key_nodes'])==set(expected_order) and pacing_dates==sorted(pacing_dates) and pacing_arc['start_date']=='2023-07-13' and pacing_arc['end_date']=='2026-11-05')
   v036edges=[edge for edge in d['edges'] if edge['id'] in d['migrationAudit']['v036_added_edge_ids']]
   ok(lang+': 35 v0.36 links include 17 thematic memberships',len(v036edges)==35 and sum(edge['relation']=='part_of_arc' for edge in v036edges)==17 and all(edge['relationship_class']=='thematic' for edge in v036edges if edge['relation']=='part_of_arc'))
   pacing_targets={edge['target'] for edge in v036edges if edge['source']==pacing['id']}
@@ -360,10 +362,10 @@ def validate(root=ROOT,refresh=False,skip_html=False):
  ok('RU/EN v0.39 military-AI signature parity',[(x['id'],x['date'],x['artifact_kind'],x['normative_force'],x['story_primary_arc_id']) for x in r['events'] if x['id'] in war_ids]==[(x['id'],x['date'],x['artifact_kind'],x['normative_force'],x['story_primary_arc_id']) for x in e['events'] if x['id'] in war_ids])
  ok('RU/EN hierarchy parity',r['arcHierarchy']==e['arcHierarchy'] and [(x['id'],x['family_id'],x['display_role'],x['display_order'],x['parent_arc_id'],x['default_visible']) for x in r['arcs']]==[(x['id'],x['family_id'],x['display_role'],x['display_order'],x['parent_arc_id'],x['default_visible']) for x in e['arcs']] and [(x['id'],x.get('story_primary_arc_id'),x.get('story_secondary_arc_ids',[])) for x in r['events']]==[(x['id'],x.get('story_primary_arc_id'),x.get('story_secondary_arc_ids',[])) for x in e['events']])
  index=(root/'index.html').read_text();readme=(root/'README.md').read_text()
- ok('index: current release marker','AI Power Atlas · v0.49' in index and 'AI POWER ATLAS · V0.49' in index)
- ok('index: current collection counts',all(x in index for x in ['467 событий','76 тезисов','32 проверки тезисов','26 сюжетных арок','1189 связей','228 записей','141 опорную']))
+ ok('index: current release marker','AI Power Atlas · v0.51' in index and 'AI POWER ATLAS · V0.51' in index)
+ ok('index: current collection counts',all(x in index for x in ['510 событий','76 тезисов','32 проверки тезисов','26 сюжетных арок','1314 связей','252 записи','158 опорных']))
  ok('index: bilingual atlas and current schema links',all(x in index for x in ['href="ai-power-atlas-ru.html"','href="ai-power-atlas.html"','href="SCHEMA_v038.md"']))
- ok('README: current release summary','# AI Power Atlas — v0.49' in readme and '467 событий, 76 тезисов и 32 проверяемых утверждения' in readme and '`SCHEMA_v038.md`' in readme)
+ ok('README: current release summary','# AI Power Atlas — v0.51' in readme and '510 событий, 76 тезисов и 32 проверяемых утверждения' in readme and '`SCHEMA_v038.md`' in readme)
  report['passed']=True;report['assertions']=len(report['tests']);(root/'review/validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  print(json.dumps({k:v for k,v in report.items() if k!='tests'},ensure_ascii=False,indent=2));return report
 if __name__=='__main__':
