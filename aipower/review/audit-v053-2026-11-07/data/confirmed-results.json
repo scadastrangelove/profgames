@@ -1,0 +1,2035 @@
+{
+  "original_inputs_and_validation_json_unchanged": true,
+  "ru": {
+    "summary": {
+      "F1": 19,
+      "F2": 22,
+      "F3": 4,
+      "F4": 1,
+      "F5": 10,
+      "F6": 1,
+      "F2_missing_backlinks": 435,
+      "F3_outside_checkpoints": 6
+    },
+    "findings": {
+      "F1": [
+        {
+          "id": "SIG_2026_BIS_H200_MI325X_CASEBYCASE",
+          "missing": [
+            "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:12469",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:12450"
+        },
+        {
+          "id": "SIG_2026_NVIDIA_H200_LICENSE_SMALL",
+          "missing": [
+            "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:12618",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:12601"
+        },
+        {
+          "id": "SIG_2026_GATES_AI_TRANSITION_INSTITUTIONS_ESSAY",
+          "missing": [
+            "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:53239",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:53178"
+        },
+        {
+          "id": "SIG_2026_OPENAI_FRONTIER_ENTERPRISE_CONTROL_LAYER",
+          "missing": [
+            "ARC_WORK_COMPETENCE_DISTRIBUTION"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:57090",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:57025"
+        },
+        {
+          "id": "SIG_2026_BOE_FRONTIER_AI_HARNESS_ENGINEERING",
+          "missing": [
+            "ARC_WORK_COMPETENCE_DISTRIBUTION"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:58381",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:58323"
+        },
+        {
+          "id": "SIG_2026_CURL_REPORTING_PAUSE",
+          "missing": [
+            "ARC_WORK_COMPETENCE_DISTRIBUTION"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:68266",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:68186"
+        },
+        {
+          "id": "SIG_2026_LINUX_NETDEV_VALID_FIX_OVERLOAD",
+          "missing": [
+            "ARC_WORK_COMPETENCE_DISTRIBUTION"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:68990",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:68885"
+        },
+        {
+          "id": "SIG_2026_DAYBREAK_FRONTLINE_SUBSIDIZED_ACCESS",
+          "missing": [
+            "ARC_QUIET_ACCESS_CONTROL"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:70000",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:69923"
+        },
+        {
+          "id": "SIG_2026_USMC_ODIN_AUTHORITATIVE_REPORTING",
+          "missing": [
+            "ARC_SOVEREIGN_FLOW_GATING"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:74802",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:74713"
+        },
+        {
+          "id": "SIG_2026_ANTHROPIC_GTG27005_DRONE_SWARM_DEVELOPMENT",
+          "missing": [
+            "ARC_PALANTIR_DECISION_OS"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:75778",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:75685"
+        },
+        {
+          "id": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+          "missing": [
+            "ARC_PALANTIR_DECISION_OS"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:76019",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:75927"
+        },
+        {
+          "id": "SIG_2026_OPENAI_DNS_ESCAPE_SHUTDOWN_FAILURE",
+          "missing": [
+            "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:78616",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:78522"
+        },
+        {
+          "id": "SIG_2026_OPENAI_AU_MEDICARE_STATISTICS_UNAUTHORIZED_ACCESS",
+          "missing": [
+            "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:80207",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:80115"
+        },
+        {
+          "id": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+          "missing": [
+            "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:84008",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:83915"
+        },
+        {
+          "id": "SIG_2026_OPENAI_NPWS_METADATA_ACCESS",
+          "missing": [
+            "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:85157",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:85068"
+        },
+        {
+          "id": "SIG_2026_OPENAI_VAHI_EXPOSED_KEY_STATISTICS",
+          "missing": [
+            "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:85393",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:85304"
+        },
+        {
+          "id": "SIG_2026_BOCSAR_INVESTIGATION_NO_BREACH",
+          "missing": [
+            "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:85635",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:85550"
+        },
+        {
+          "id": "SIG_2026_AIHW_PROBES_NO_COMPROMISE",
+          "missing": [
+            "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:85899",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:85809"
+        },
+        {
+          "id": "SIG_2026_IBM_LLMD_OPEN_MODEL_SERVING",
+          "missing": [
+            "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:92007",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:91922"
+        }
+      ],
+      "F2": [
+        {
+          "id": "ARC_EXPORT_CHIPS_TO_MODELS",
+          "stored": 2,
+          "incident": 10,
+          "missing": [
+            "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_CORE",
+            "EDGE_KOREA_CYBER_MODEL_EXPORT_COUNTERMOVE",
+            "EDGE_V015_025_01",
+            "EDGE_V015_026_01",
+            "EDGE_V016_EVENT_007_02",
+            "EDGE_V016_EVENT_008_02",
+            "EDGE_V029_ARC_024"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:125581"
+        },
+        {
+          "id": "ARC_TOLL_AND_THROTTLE",
+          "stored": 1,
+          "incident": 6,
+          "missing": [
+            "EDGE_ARC_THESIS_TOLL_AND_THROTTLE_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_TOLL_AND_THROTTLE_CONTROL_NOT_AIRTIGHT",
+            "EDGE_V015_024_01",
+            "EDGE_V015_026_02",
+            "EDGE_V029_ARC_028"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:125634"
+        },
+        {
+          "id": "ARC_CONTROL_LEAKS_BUT_POLICES",
+          "stored": 1,
+          "incident": 3,
+          "missing": [
+            "EDGE_ARC_THESIS_CONTROL_LEAKS_BUT_POLICES_CONTROL_NOT_AIRTIGHT",
+            "EDGE_V029_ARC_042"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:125677"
+        },
+        {
+          "id": "ARC_GULF_CONDITIONAL_SOVEREIGNTY",
+          "stored": 4,
+          "incident": 8,
+          "missing": [
+            "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_CORE",
+            "EDGE_V015_027_01",
+            "EDGE_V029_ARC_068"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:125749"
+        },
+        {
+          "id": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+          "stored": 9,
+          "incident": 19,
+          "missing": [
+            "EDGE_ARC_THESIS_CHINA_COUNTERSTACK_ROUTE_AROUND_CONTROL_NOT_AIRTIGHT",
+            "EDGE_ARC_THESIS_CHINA_COUNTERSTACK_ROUTE_AROUND_CORE",
+            "EDGE_CHINA_CHIP_SHIFT_COUNTERSTACK",
+            "EDGE_KIMI_K3_CHINA_COUNTERSTACK",
+            "EDGE_V015_030_02",
+            "EDGE_V029_ARC_014",
+            "EDGE_V029_ARC_025",
+            "EDGE_V029_ARC_043",
+            "EDGE_WAICO_2026_CHINA_COUNTERSTACK",
+            "EDGE_XI_WAIC_2026_CHINA_COUNTERSTACK"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:125826"
+        },
+        {
+          "id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+          "stored": 33,
+          "incident": 76,
+          "missing": [
+            "EDGE_2026_ANTHROPIC_EVAL_REAL_WORLD_INTRUSIONS_CYBER_ARC",
+            "EDGE_2026_AU_ISM_AGENT_CONTROLS_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_2026_CA_AI_CYBER_DEFENSE_PROGRAM_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_2026_EBA_FRONTIER_AI_PATCH_CYCLE_ASSESSMENT_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_2026_NIST_AGENT_SECURITY_RFI_CYBER_CLAIM_TO_CAVEAT_supports_with_scope",
+            "EDGE_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE_CYBER_ARC",
+            "EDGE_2026_ORACLE_AI_ASSISTED_RECORD_PATCH_RELEASE_CYBER_ARC",
+            "EDGE_2026_RAPID7_Q2_PATCH_CYCLE_COMPRESSION_CYBER_ARC",
+            "EDGE_2026_RUST_IN_PEACE_AGENT_ASSISTED_DISCLOSURES_CYBER_ARC",
+            "EDGE_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_2026_UK_CYBER_SHIELD_BLUEPRINT_CYBER_CLAIM_TO_CAVEAT_supports_with_scope",
+            "EDGE_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS_CYBER_CLAIM_TO_CAVEAT_supports_with_scope",
+            "EDGE_2026_US_GOLD_EAGLE_LAUNCH_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_AGENTS_CHAOS_CYBER",
+            "EDGE_ARC_THESIS_CYBER_CLAIM_TO_CAVEAT_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_CYBER_CLAIM_TO_CAVEAT_NOT_AUTONOMOUS_OFFENSE",
+            "EDGE_EU_ACTION_PLAN_CYBER",
+            "EDGE_HF_AGENTIC_INTRUSION_CYBER_ARC",
+            "EDGE_HF_FORENSICS_CYBER_ARC",
+            "EDGE_HUNT_2026_CYBER_OPERATIONAL_SIGNAL",
+            "EDGE_KOREA_CANOPY_CYBER_ARC",
+            "EDGE_KOREA_CYBER_MODEL_CYBER_ARC",
+            "EDGE_OPENAI_HF_ESCAPE_CYBER_ARC",
+            "EDGE_OPENAI_LONG_HORIZON_CYBER_ARC",
+            "EDGE_OPENCLAW_EXPOSURE_CYBER",
+            "EDGE_V012_CYBER_ARC_TO_CONTROL_LEAKS",
+            "EDGE_V012_CYBER_ARC_TO_OFFENSE_REFRAMED",
+            "EDGE_V015_012_01",
+            "EDGE_V015_013_01",
+            "EDGE_V015_014_01",
+            "EDGE_V015_015_01",
+            "EDGE_V015_016_01",
+            "EDGE_V015_017_02",
+            "EDGE_V015_018_02",
+            "EDGE_V015_019_01",
+            "EDGE_V015_020_02",
+            "EDGE_V015_033_01",
+            "EDGE_V015_034_02",
+            "EDGE_V015_035_02",
+            "EDGE_V015_036_02",
+            "EDGE_V029_ARC_055",
+            "EDGE_V029_ARC_059",
+            "EDGE_WP2SHELL_CYBER_ARC"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:125990"
+        },
+        {
+          "id": "ARC_QUIET_ACCESS_CONTROL",
+          "stored": 29,
+          "incident": 64,
+          "missing": [
+            "EDGE_2026_AU_ISM_AGENT_CONTROLS_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_CANADA_AGENTIC_AI_GOVERNMENT_GUIDE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_CA_SB53_EFFECTIVE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_CN_AGENT_DEPLOYMENT_SECURITY_GUIDE_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_CN_AGENT_SECURITY_STANDARDS_PIPELINE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_EU_AI_OMNIBUS_EFFECTIVE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_EU_CRA_REPORTING_SCHEDULED_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_JAPAN_GOV_AI_PROCUREMENT_GUIDE_V2_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_KOREA_AI_BASIC_ACT_EFFECTIVE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_NIST_AI_AGENT_STANDARDS_INITIATIVE_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_NY_RAISE_SIGNED_FUTURE_EFFECTIVE_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE_QUIET_ACCESS_ARC",
+            "EDGE_2026_OPENAI_COLLECTIVE_CYBER_DEFENSE_LETTER_QUIET_ACCESS_ARC",
+            "EDGE_2026_SINGAPORE_AGENTIC_GOVERNANCE_FRAMEWORK_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_US_GOLD_EAGLE_LAUNCH_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_AMAZON_PERPLEXITY_QUIET_ACCESS",
+            "EDGE_ARC_THESIS_QUIET_ACCESS_CONTROL_ACCESS_AS_POWER",
+            "EDGE_BALL_SOFT_LAW_QUIET_ACCESS",
+            "EDGE_EU_ACTION_PLAN_QUIET_ACCESS",
+            "EDGE_EU_AI_ACT_QUIET_ACCESS",
+            "EDGE_HF_FORENSICS_QUIET_ACCESS",
+            "EDGE_KOREA_ANTHROPIC_MOU_QUIET_ACCESS",
+            "EDGE_V015_023_01",
+            "EDGE_V016_EVENT_003_03",
+            "EDGE_V016_EVENT_004_02",
+            "EDGE_V016_EVENT_014_02",
+            "EDGE_V029_ARC_006",
+            "EDGE_V029_ARC_040",
+            "EDGE_V029_ARC_056",
+            "EDGE_V029_ARC_058",
+            "EDGE_V029_ARC_067"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126149"
+        },
+        {
+          "id": "ARC_PALANTIR_DECISION_OS",
+          "stored": 7,
+          "incident": 16,
+          "missing": [
+            "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_CORE",
+            "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_DECISION_SOVEREIGNTY",
+            "EDGE_V015_005_01",
+            "EDGE_V015_006_01",
+            "EDGE_V015_007_01",
+            "EDGE_V015_010_02",
+            "EDGE_V029_ARC_046",
+            "EDGE_V029_ARC_072",
+            "EDGE_V029_ARC_075"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126264"
+        },
+        {
+          "id": "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+          "stored": 76,
+          "incident": 91,
+          "missing": [
+            "EDGE_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS_COGSEC_LAB_TO_WILD_TO_STATE_supports",
+            "EDGE_AGENTS_CHAOS_COGSEC",
+            "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_CORE",
+            "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_DECISION_SOVEREIGNTY",
+            "EDGE_GARD_COGSEC",
+            "EDGE_V015_011_01",
+            "EDGE_V015_016_02",
+            "EDGE_V015_017_01",
+            "EDGE_V015_018_01",
+            "EDGE_V015_020_01",
+            "EDGE_V015_034_01",
+            "EDGE_V015_035_01",
+            "EDGE_V015_036_01",
+            "EDGE_V015_TRUST_CHECK_TO_ARC",
+            "EDGE_V029_ARC_054"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126453"
+        },
+        {
+          "id": "ARC_ENERGY_GRID_POLITICS",
+          "stored": 7,
+          "incident": 14,
+          "missing": [
+            "EDGE_ARC_THESIS_ENERGY_GRID_POLITICS_CONTROL_NOT_AIRTIGHT",
+            "EDGE_ARC_THESIS_ENERGY_GRID_POLITICS_CORE",
+            "EDGE_V015_009_01",
+            "EDGE_V029_ARC_017",
+            "EDGE_V029_ARC_019",
+            "EDGE_V029_ARC_021",
+            "EDGE_V029_ARC_069"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126615"
+        },
+        {
+          "id": "ARC_WAR_DATA_FLYWHEEL",
+          "stored": 6,
+          "incident": 12,
+          "missing": [
+            "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_CORE",
+            "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_DECISION_SOVEREIGNTY",
+            "EDGE_NAVER_KAI_DEFENSE_WAR_ARC",
+            "EDGE_V015_010_01",
+            "EDGE_V029_ARC_071",
+            "EDGE_V029_ARC_074"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126696"
+        },
+        {
+          "id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+          "stored": 9,
+          "incident": 27,
+          "missing": [
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_CONTROL_NOT_AIRTIGHT",
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_CORE",
+            "EDGE_BALL_SOFT_LAW_OPEN_WEIGHT",
+            "EDGE_HF_FORENSICS_OPEN_WEIGHT",
+            "EDGE_KIMI_K3_OPEN_WEIGHT_EXIT",
+            "EDGE_KOREA_CYBER_MODEL_OPEN_WEIGHT",
+            "EDGE_KOREA_NAVER_EXCLUSION_OPEN_WEIGHT",
+            "EDGE_OPEN_001",
+            "EDGE_SOOFI_2026_OPEN_WEIGHT",
+            "EDGE_V015_028_01",
+            "EDGE_V015_029_01",
+            "EDGE_V015_030_01",
+            "EDGE_V016_EVENT_003_02",
+            "EDGE_V029_ARC_001",
+            "EDGE_V029_ARC_026",
+            "EDGE_V029_ARC_033",
+            "EDGE_XI_WAIC_2026_OPEN_WEIGHT_DIPLOMACY"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126846"
+        },
+        {
+          "id": "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+          "stored": 27,
+          "incident": 37,
+          "missing": [
+            "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_CORE",
+            "EDGE_V015_021_01",
+            "EDGE_V016_EVENT_011_03",
+            "EDGE_V029_ARC_035",
+            "EDGE_V029_ARC_038",
+            "EDGE_V029_ARC_039",
+            "EDGE_V029_ARC_041",
+            "EDGE_V029_ARC_044",
+            "EDGE_V029_ARC_073"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:127054"
+        },
+        {
+          "id": "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+          "stored": 19,
+          "incident": 53,
+          "missing": [
+            "EDGE_2026_ESAS_FRONTIER_AI_DORA_SUPERVISION_CLOUD_CAPACITY_VENDOR_LOCKIN_supports_with_scope",
+            "EDGE_2026_ESRB_FRONTIER_AI_SYSTEMIC_WARNING_CLOUD_CAPACITY_VENDOR_LOCKIN_supports_with_scope",
+            "EDGE_2026_NIST_AI_DATACENTER_SECURITY_DRAFT_CLOUD_CAPACITY_VENDOR_LOCKIN_supports_with_scope",
+            "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_CORE",
+            "EDGE_AWS_EU_SOV_CLOUD_CLOUD",
+            "EDGE_EU_AI_FACTORIES_CLOUD",
+            "EDGE_EU_CADA_CLOUD",
+            "EDGE_EU_CLOUD_CONCENTRATION_CLOUD",
+            "EDGE_EU_SOV_CLOUD_PROCUREMENT_CLOUD",
+            "EDGE_SOOFI_2026_CLOUD_CAPACITY",
+            "EDGE_V015_001_01",
+            "EDGE_V015_002_01",
+            "EDGE_V015_003_01",
+            "EDGE_V015_004_01",
+            "EDGE_V015_007_02",
+            "EDGE_V016_EVENT_001_02",
+            "EDGE_V016_EVENT_002_02",
+            "EDGE_V016_EVENT_004_03",
+            "EDGE_V016_EVENT_005_02",
+            "EDGE_V016_EVENT_013_02",
+            "EDGE_V016_EVENT_015_02",
+            "EDGE_V029_ARC_002",
+            "EDGE_V029_ARC_004",
+            "EDGE_V029_ARC_007",
+            "EDGE_V029_ARC_010",
+            "EDGE_V029_ARC_012",
+            "EDGE_V029_ARC_015",
+            "EDGE_V029_ARC_023",
+            "EDGE_V029_ARC_031",
+            "EDGE_V029_ARC_047",
+            "EDGE_V029_ARC_051",
+            "EDGE_V029_ARC_063",
+            "EDGE_V029_ARC_077"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:127209"
+        },
+        {
+          "id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+          "stored": 8,
+          "incident": 26,
+          "missing": [
+            "EDGE_V012_CAPITAL_MIX_TO_ACCESS",
+            "EDGE_V012_CAPITAL_MIX_TO_CORE",
+            "EDGE_V012_CAPITAL_MIX_TO_DECISION",
+            "EDGE_V015_001_02",
+            "EDGE_V015_024_02",
+            "EDGE_V016_EVENT_006_02",
+            "EDGE_V029_ARC_003",
+            "EDGE_V029_ARC_005",
+            "EDGE_V029_ARC_009",
+            "EDGE_V029_ARC_011",
+            "EDGE_V029_ARC_013",
+            "EDGE_V029_ARC_016",
+            "EDGE_V029_ARC_018",
+            "EDGE_V029_ARC_020",
+            "EDGE_V029_ARC_029",
+            "EDGE_V029_ARC_032",
+            "EDGE_V029_ARC_034",
+            "EDGE_V029_ARC_070"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:127312"
+        },
+        {
+          "id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+          "stored": 22,
+          "incident": 33,
+          "missing": [
+            "EDGE_V012_CORP_ADOPTION_TO_ACCESS",
+            "EDGE_V012_CORP_ADOPTION_TO_CORE",
+            "EDGE_V012_CORP_ADOPTION_TO_DECISION",
+            "EDGE_V015_008_02",
+            "EDGE_V015_031_01",
+            "EDGE_V016_EVENT_011_02",
+            "EDGE_V029_ARC_036",
+            "EDGE_V029_ARC_037",
+            "EDGE_V029_ARC_045",
+            "EDGE_V029_ARC_048",
+            "EDGE_V029_ARC_053"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:127394"
+        },
+        {
+          "id": "ARC_SOVEREIGN_FLOW_GATING",
+          "stored": 22,
+          "incident": 53,
+          "missing": [
+            "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_SOVEREIGN_FLOW_GATING_supports_with_scope",
+            "EDGE_2026_CN_CYBERSECURITY_LAW_AI_AMENDMENT_EFFECTIVE_SOVEREIGN_FLOW_GATING_supports",
+            "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_SOVEREIGN_FLOW_GATING_supports",
+            "EDGE_AWS_EU_SOV_CLOUD_FLOW",
+            "EDGE_CLOUD_ACT_SOVEREIGN_FLOW",
+            "EDGE_EU_AI_ACT_SOVEREIGN_FLOW",
+            "EDGE_EU_CADA_SOVEREIGN_FLOW",
+            "EDGE_EU_CLOUD_CONCENTRATION_FLOW",
+            "EDGE_EU_SOV_CLOUD_PROCUREMENT_FLOW",
+            "EDGE_HF_FORENSICS_SOVEREIGN_FLOW",
+            "EDGE_KOREA_ANTHROPIC_MOU_SOVEREIGN_FLOW",
+            "EDGE_KOREA_NAVER_EXCLUSION_SOVEREIGN_FLOW",
+            "EDGE_NATO_DIGITAL_STRATEGY_FLOW",
+            "EDGE_SECNUMCLOUD_SOVEREIGN_FLOW",
+            "EDGE_V014_FLOW_ARC_01",
+            "EDGE_V014_FLOW_ARC_02",
+            "EDGE_V014_FLOW_ARC_03",
+            "EDGE_V014_FLOW_ARC_04",
+            "EDGE_V015_022_01",
+            "EDGE_V015_023_02",
+            "EDGE_V015_024_04",
+            "EDGE_V015_032_01",
+            "EDGE_V016_EVENT_010_02",
+            "EDGE_V016_EVENT_012_02",
+            "EDGE_V029_ARC_008",
+            "EDGE_V029_ARC_022",
+            "EDGE_V029_ARC_027",
+            "EDGE_V029_ARC_030",
+            "EDGE_V029_ARC_052",
+            "EDGE_V029_ARC_064",
+            "EDGE_V029_ARC_076"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:127551"
+        },
+        {
+          "id": "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY",
+          "stored": 2,
+          "incident": 28,
+          "missing": [
+            "EDGE_2026_RU_FSTEC_ORDER117_AI_CONTROLS_EFFECTIVE_RUSSIA_SELECTIVE_SOVEREIGNTY_supports",
+            "EDGE_V017_RUSSIA_01",
+            "EDGE_V017_RUSSIA_02",
+            "EDGE_V017_RUSSIA_03",
+            "EDGE_V017_RUSSIA_04",
+            "EDGE_V017_RUSSIA_05",
+            "EDGE_V017_RUSSIA_06",
+            "EDGE_V017_RUSSIA_07",
+            "EDGE_V017_RUSSIA_08",
+            "EDGE_V017_RUSSIA_09",
+            "EDGE_V017_RUSSIA_10",
+            "EDGE_V017_RUSSIA_11",
+            "EDGE_V017_RUSSIA_12",
+            "EDGE_V017_RUSSIA_13",
+            "EDGE_V017_RUSSIA_14",
+            "EDGE_V017_RUSSIA_15",
+            "EDGE_V017_RUSSIA_16",
+            "EDGE_V017_RUSSIA_17",
+            "EDGE_V017_RUSSIA_18",
+            "EDGE_V017_RUSSIA_19",
+            "EDGE_V017_RUSSIA_20",
+            "EDGE_V017_RUSSIA_21",
+            "EDGE_V017_RUSSIA_22",
+            "EDGE_V017_RUSSIA_23",
+            "EDGE_V017_RUSSIA_24",
+            "EDGE_V017_RUSSIA_25"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:127738"
+        },
+        {
+          "id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "stored": 67,
+          "incident": 117,
+          "missing": [
+            "EDGE_2026_ANTHROPIC_EVAL_REAL_WORLD_INTRUSIONS_ASSURANCE_ARC",
+            "EDGE_2026_AU_ISM_AGENT_CONTROLS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_BOE_FCA_FRONTIER_AI_CYBER_STATEMENT_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_CANADA_AGENTIC_AI_GOVERNMENT_GUIDE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_CA_AI_CYBER_DEFENSE_PROGRAM_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_CA_SB53_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_CN_AGENT_DEPLOYMENT_SECURITY_GUIDE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_CN_AGENT_SECURITY_STANDARDS_PIPELINE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_CN_CYBERSECURITY_LAW_AI_AMENDMENT_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_EBA_FRONTIER_AI_PATCH_CYCLE_ASSESSMENT_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_ECB_AI_CYBER_ACTION_PLANS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_ESAS_FRONTIER_AI_DORA_SUPERVISION_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_ESRB_FRONTIER_AI_SYSTEMIC_WARNING_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_EU_AI_OMNIBUS_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_EU_CRA_REPORTING_SCHEDULED_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_FSB_FRONTIER_AI_CYBER_WARNING_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_GATES_AI_TRANSITION_INSTITUTIONS_ESSAY_ASSURANCE_ARC",
+            "EDGE_2026_JAPAN_GOV_AI_PROCUREMENT_GUIDE_V2_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_KOREA_AI_BASIC_ACT_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_NIST_AGENT_SECURITY_RFI_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_NIST_AI_AGENT_STANDARDS_INITIATIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_NIST_AI_DATACENTER_SECURITY_DRAFT_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_NY_RAISE_SIGNED_FUTURE_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE_ASSURANCE_ARC",
+            "EDGE_2026_OPENAI_COLLECTIVE_CYBER_DEFENSE_LETTER_ASSURANCE_ARC",
+            "EDGE_2026_ORACLE_AI_ASSISTED_RECORD_PATCH_RELEASE_ASSURANCE_ARC",
+            "EDGE_2026_RAPID7_Q2_PATCH_CYCLE_COMPRESSION_ASSURANCE_ARC",
+            "EDGE_2026_RUST_IN_PEACE_AGENT_ASSISTED_DISCLOSURES_ASSURANCE_ARC",
+            "EDGE_2026_RU_FSTEC_ORDER117_AI_CONTROLS_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_SINGAPORE_AGENTIC_GOVERNANCE_FRAMEWORK_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_UK_CYBER_SHIELD_BLUEPRINT_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_US_GOLD_EAGLE_LAUNCH_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_ACCESS_AS_POWER_supports",
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_CONTROL_NOT_AIRTIGHT_supports",
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_CORE_supports",
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_DECISION_SOVEREIGNTY_supports",
+            "EDGE_EU_2026_CADA_PROPOSAL_SOVEREIGNTY_LEVELS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_EU_2026_CYBER_AI_ACTION_PLAN_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_V029_ARC_049",
+            "EDGE_V029_ARC_050",
+            "EDGE_V029_ARC_057",
+            "EDGE_V029_ARC_060",
+            "EDGE_V029_ARC_065",
+            "EDGE_V029_ARC_066",
+            "EDGE_V029_ARC_078"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:127906"
+        },
+        {
+          "id": "THESIS_CORE",
+          "stored": 6,
+          "incident": 39,
+          "missing": [
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_CORE_supports",
+            "EDGE_ARC_THESIS_2022_2023_FORMATION_PHASE_CORE",
+            "EDGE_ARC_THESIS_CHINA_COUNTERSTACK_ROUTE_AROUND_CORE",
+            "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_CORE",
+            "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_CORE",
+            "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_CORE",
+            "EDGE_ARC_THESIS_ENERGY_GRID_POLITICS_CORE",
+            "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_CORE",
+            "EDGE_ARC_THESIS_FINANCE_GOVERNED_SHUTDOWN_CORE",
+            "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_CORE",
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_CORE",
+            "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_CORE",
+            "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_CORE",
+            "EDGE_CA_001",
+            "EDGE_CORE_001",
+            "EDGE_V011_BACKFILL_016",
+            "EDGE_V011_BACKFILL_017",
+            "EDGE_V011_BACKFILL_018",
+            "EDGE_V012_2024_SAUDI_40B_AI_FUND_REPORTED_CAPITAL",
+            "EDGE_V012_2024_UAE_MGX_100B_AI_STATE_VEHICLE_CAPITAL",
+            "EDGE_V012_2025_EU_INVESTAI_200B_MOBILIZATION_CAPITAL",
+            "EDGE_V012_2025_MCKINSEY_STATE_OF_AI_ADOPTION_DECISION",
+            "EDGE_V012_CAPITAL_MIX_TO_CORE",
+            "EDGE_V012_CORP_ADOPTION_TO_CORE",
+            "EDGE_V013_CHINA_138B_FUND_TO_CORE",
+            "EDGE_V013_FRANCE_109B_TO_CORE",
+            "EDGE_V014_FLOW_06",
+            "EDGE_V014_FLOW_08",
+            "EDGE_V014_FLOW_ARC_01",
+            "EDGE_V016_ARC_THESIS_01",
+            "EDGE_V016_ARC_THESIS_05",
+            "EDGE_V016_CHECK_TO_CORE",
+            "EDGE_V017_RUSSIA_22"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:155717"
+        },
+        {
+          "id": "THESIS_ACCESS_AS_POWER",
+          "stored": 6,
+          "incident": 47,
+          "missing": [
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_ACCESS_AS_POWER_supports",
+            "EDGE_ARC_THESIS_2023_GOVERNANCE_SHOCK_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_CYBER_CLAIM_TO_CAVEAT_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_FINANCE_GOVERNED_SHUTDOWN_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_QUIET_ACCESS_CONTROL_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_TOLL_AND_THROTTLE_ACCESS_AS_POWER",
+            "EDGE_CORE_002",
+            "EDGE_QAC_006",
+            "EDGE_V011_BACKFILL_005",
+            "EDGE_V011_BACKFILL_006",
+            "EDGE_V011_BACKFILL_007",
+            "EDGE_V011_BACKFILL_012",
+            "EDGE_V011_BACKFILL_013",
+            "EDGE_V011_BACKFILL_014",
+            "EDGE_V011_BACKFILL_015",
+            "EDGE_V012_2025_ANTHROPIC_3_5B_SERIES_E_CAPITAL",
+            "EDGE_V012_2025_COREWEAVE_OPENAI_11_9B_CAPACITY_CAPITAL",
+            "EDGE_V012_2025_OPENAI_40B_SOFTBANK_ROUND_CAPITAL",
+            "EDGE_V012_CAPITAL_MIX_TO_ACCESS",
+            "EDGE_V012_CORP_ADOPTION_TO_ACCESS",
+            "EDGE_V013_CANADA_AI_TO_ACCESS",
+            "EDGE_V013_INDIAAI_TO_ACCESS",
+            "EDGE_V013_STARGATE_PLEDGE_TO_ACCESS",
+            "EDGE_V014_FLOW_01",
+            "EDGE_V014_FLOW_02",
+            "EDGE_V014_FLOW_03",
+            "EDGE_V014_FLOW_07",
+            "EDGE_V014_FLOW_09",
+            "EDGE_V014_FLOW_10",
+            "EDGE_V014_FLOW_11",
+            "EDGE_V014_FLOW_ARC_02",
+            "EDGE_V015_TRUST_CHECK_TO_ACCESS",
+            "EDGE_V016_ARC_THESIS_02",
+            "EDGE_V016_ARC_THESIS_06",
+            "EDGE_V016_CHECK_TO_ACCESS",
+            "EDGE_V017_RUSSIA_23"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:155749"
+        },
+        {
+          "id": "THESIS_DECISION_SOVEREIGNTY",
+          "stored": 13,
+          "incident": 32,
+          "missing": [
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_DECISION_SOVEREIGNTY_supports",
+            "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_DECISION_SOVEREIGNTY",
+            "EDGE_ARC_THESIS_FINANCE_GOVERNED_SHUTDOWN_DECISION_SOVEREIGNTY",
+            "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_DECISION_SOVEREIGNTY",
+            "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_DECISION_SOVEREIGNTY",
+            "EDGE_DS_003",
+            "EDGE_PAL_007",
+            "EDGE_V012_2023_MORGAN_STANLEY_GPT4_ASSISTANT_DECISION",
+            "EDGE_V012_2024_JPMORGAN_LLM_SUITE_ENTERPRISE_DECISION",
+            "EDGE_V012_2024_MICROSOFT_WORK_TREND_AI_USAGE_DECISION",
+            "EDGE_V012_CAPITAL_MIX_TO_DECISION",
+            "EDGE_V012_CORP_ADOPTION_TO_DECISION",
+            "EDGE_V014_FLOW_04",
+            "EDGE_V014_FLOW_05",
+            "EDGE_V014_FLOW_ARC_03",
+            "EDGE_V015_TRUST_CHECK_TO_DECISION",
+            "EDGE_V016_ARC_THESIS_03",
+            "EDGE_V016_ARC_THESIS_07",
+            "EDGE_V017_RUSSIA_25"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:155779"
+        }
+      ],
+      "F3": [
+        {
+          "id": "ARC_CONTROL_LEAKS_BUT_POLICES",
+          "start": "2026-05-31",
+          "end": "2026-09-08",
+          "outside": [
+            {
+              "id": "SIG_2026_ANTHROPIC_DISTILLATION_ABUSE_DISCLOSURE",
+              "date": "2026-02-23"
+            }
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:125652",
+          "key_nodes_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:125660"
+        },
+        {
+          "id": "ARC_WAR_DATA_FLYWHEEL",
+          "start": "2026-03-12",
+          "end": "2026-09-10",
+          "outside": [
+            {
+              "id": "SIG_2026_BRAVE1_DATAROOM_PALANTIR_LAUNCH",
+              "date": "2026-01-21"
+            }
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126640",
+          "key_nodes_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126649"
+        },
+        {
+          "id": "ARC_FINANCE_GOVERNED_SHUTDOWN",
+          "start": "2024-11-21",
+          "end": "2026-08-31",
+          "outside": [
+            {
+              "id": "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT",
+              "date": "2023-03-14"
+            },
+            {
+              "id": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE",
+              "date": "2024-08-09"
+            },
+            {
+              "id": "SIG_2026_BOE_FRONTIER_AI_HARNESS_ENGINEERING",
+              "date": "2026-09-02"
+            }
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126719",
+          "key_nodes_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126728"
+        },
+        {
+          "id": "ARC_2023_GOVERNANCE_SHOCK",
+          "start": "2023-01-26",
+          "end": "2023-12-09",
+          "outside": [
+            {
+              "id": "SIG_2021_EU_AI_ACT_PROPOSAL",
+              "date": "2021-04-21"
+            }
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126955",
+          "key_nodes_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:126963"
+        }
+      ],
+      "F4": [
+        {
+          "ids": [
+            "SIG_2026_OPENAI_GPT56_STAGED_RELEASE",
+            "SIG_2026_OPENAI_GPT56_VETTED_PARTNERS"
+          ],
+          "date": "2026-06-26",
+          "url": "https://www.reuters.com/legal/litigation/openai-defers-public-rollout-gpt56-us-seeks-early-access-frontier-ai-models-2026-06-26/",
+          "titles": [
+            "OpenAI откладывает публичный выпуск GPT-5.6 и запускает ограниченное тестирование по просьбе правительства США",
+            "OpenAI откладывает публичный GPT-5.6 и ограничивает первый доступ проверенными партнёрами по просьбе правительства США"
+          ],
+          "statuses": [
+            "verified",
+            "verified_as_reported"
+          ],
+          "locations": [
+            "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:6734",
+            "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:9777"
+          ],
+          "note": "Same rollout event; both have blank dedupe_note_en and different graph identities."
+        }
+      ],
+      "F5": [
+        {
+          "id": "EDGE_2022_2023_001",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2022_CHIPS_SCIENCE_ACT",
+          "target": "SIG_US_2022_BIS_ADVANCED_COMPUTING",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131572"
+        },
+        {
+          "id": "EDGE_2022_2023_002",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_US_2022_BIS_ADVANCED_COMPUTING",
+          "target": "SIG_2022_NVIDIA_A800_WORKAROUND",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131590"
+        },
+        {
+          "id": "EDGE_2022_2023_003",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2022_NVIDIA_A800_WORKAROUND",
+          "target": "SIG_2023_BIS_OCT_UPDATE_CLOSES_A800_H800",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131608"
+        },
+        {
+          "id": "EDGE_2022_2023_004",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2022_CHATGPT_LAUNCH",
+          "target": "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131626"
+        },
+        {
+          "id": "EDGE_2022_2023_005",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_GPT4_RELEASE",
+          "target": "SIG_2023_US_AI_EO_14110",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131644"
+        },
+        {
+          "id": "EDGE_2022_2023_006",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_CHINA_GALLIUM_GERMANIUM_CONTROLS",
+          "target": "export-05",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131662"
+        },
+        {
+          "id": "EDGE_2022_2023_007",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_AIXCC_LAUNCH",
+          "target": "cyber-01",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131680"
+        },
+        {
+          "id": "EDGE_2022_2023_008",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_NIST_AI_RMF_1_0",
+          "target": "governance-01",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131698"
+        },
+        {
+          "id": "EDGE_2022_2023_009",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+          "target": "governance-01",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131716"
+        },
+        {
+          "id": "EDGE_2022_2023_010",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_BLETCHLEY_DECLARATION",
+          "target": "governance-01",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:131734"
+        }
+      ],
+      "F6": [
+        {
+          "id": "scale-02",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/economy",
+          "count": 2,
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_ru.json:116740"
+        }
+      ]
+    }
+  },
+  "en": {
+    "summary": {
+      "F1": 19,
+      "F2": 22,
+      "F3": 4,
+      "F4": 1,
+      "F5": 10,
+      "F6": 1,
+      "F2_missing_backlinks": 435,
+      "F3_outside_checkpoints": 6
+    },
+    "findings": {
+      "F1": [
+        {
+          "id": "SIG_2026_BIS_H200_MI325X_CASEBYCASE",
+          "missing": [
+            "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:11692",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:11672"
+        },
+        {
+          "id": "SIG_2026_NVIDIA_H200_LICENSE_SMALL",
+          "missing": [
+            "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:11831",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:11813"
+        },
+        {
+          "id": "SIG_2026_GATES_AI_TRANSITION_INSTITUTIONS_ESSAY",
+          "missing": [
+            "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:50133",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:50072"
+        },
+        {
+          "id": "SIG_2026_OPENAI_FRONTIER_ENTERPRISE_CONTROL_LAYER",
+          "missing": [
+            "ARC_WORK_COMPETENCE_DISTRIBUTION"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:53742",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:53677"
+        },
+        {
+          "id": "SIG_2026_BOE_FRONTIER_AI_HARNESS_ENGINEERING",
+          "missing": [
+            "ARC_WORK_COMPETENCE_DISTRIBUTION"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:54967",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:54909"
+        },
+        {
+          "id": "SIG_2026_CURL_REPORTING_PAUSE",
+          "missing": [
+            "ARC_WORK_COMPETENCE_DISTRIBUTION"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:64775",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:64695"
+        },
+        {
+          "id": "SIG_2026_LINUX_NETDEV_VALID_FIX_OVERLOAD",
+          "missing": [
+            "ARC_WORK_COMPETENCE_DISTRIBUTION"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:65499",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:65394"
+        },
+        {
+          "id": "SIG_2026_DAYBREAK_FRONTLINE_SUBSIDIZED_ACCESS",
+          "missing": [
+            "ARC_QUIET_ACCESS_CONTROL"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:66509",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:66432"
+        },
+        {
+          "id": "SIG_2026_USMC_ODIN_AUTHORITATIVE_REPORTING",
+          "missing": [
+            "ARC_SOVEREIGN_FLOW_GATING"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:71311",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:71222"
+        },
+        {
+          "id": "SIG_2026_ANTHROPIC_GTG27005_DRONE_SWARM_DEVELOPMENT",
+          "missing": [
+            "ARC_PALANTIR_DECISION_OS"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:72287",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:72194"
+        },
+        {
+          "id": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+          "missing": [
+            "ARC_PALANTIR_DECISION_OS"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:72528",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:72436"
+        },
+        {
+          "id": "SIG_2026_OPENAI_DNS_ESCAPE_SHUTDOWN_FAILURE",
+          "missing": [
+            "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:75125",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:75031"
+        },
+        {
+          "id": "SIG_2026_OPENAI_AU_MEDICARE_STATISTICS_UNAUTHORIZED_ACCESS",
+          "missing": [
+            "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:76716",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:76624"
+        },
+        {
+          "id": "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE",
+          "missing": [
+            "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:80517",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:80424"
+        },
+        {
+          "id": "SIG_2026_OPENAI_NPWS_METADATA_ACCESS",
+          "missing": [
+            "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:81666",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:81577"
+        },
+        {
+          "id": "SIG_2026_OPENAI_VAHI_EXPOSED_KEY_STATISTICS",
+          "missing": [
+            "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:81902",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:81813"
+        },
+        {
+          "id": "SIG_2026_BOCSAR_INVESTIGATION_NO_BREACH",
+          "missing": [
+            "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:82144",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:82059"
+        },
+        {
+          "id": "SIG_2026_AIHW_PROBES_NO_COMPROMISE",
+          "missing": [
+            "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:82408",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:82318"
+        },
+        {
+          "id": "SIG_2026_IBM_LLMD_OPEN_MODEL_SERVING",
+          "missing": [
+            "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:88516",
+          "memberships_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:88431"
+        }
+      ],
+      "F2": [
+        {
+          "id": "ARC_EXPORT_CHIPS_TO_MODELS",
+          "stored": 2,
+          "incident": 10,
+          "missing": [
+            "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_CORE",
+            "EDGE_KOREA_CYBER_MODEL_EXPORT_COUNTERMOVE",
+            "EDGE_V015_025_01",
+            "EDGE_V015_026_01",
+            "EDGE_V016_EVENT_007_02",
+            "EDGE_V016_EVENT_008_02",
+            "EDGE_V029_ARC_024"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:121819"
+        },
+        {
+          "id": "ARC_TOLL_AND_THROTTLE",
+          "stored": 1,
+          "incident": 6,
+          "missing": [
+            "EDGE_ARC_THESIS_TOLL_AND_THROTTLE_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_TOLL_AND_THROTTLE_CONTROL_NOT_AIRTIGHT",
+            "EDGE_V015_024_01",
+            "EDGE_V015_026_02",
+            "EDGE_V029_ARC_028"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:121880"
+        },
+        {
+          "id": "ARC_CONTROL_LEAKS_BUT_POLICES",
+          "stored": 1,
+          "incident": 3,
+          "missing": [
+            "EDGE_ARC_THESIS_CONTROL_LEAKS_BUT_POLICES_CONTROL_NOT_AIRTIGHT",
+            "EDGE_V029_ARC_042"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:121929"
+        },
+        {
+          "id": "ARC_GULF_CONDITIONAL_SOVEREIGNTY",
+          "stored": 4,
+          "incident": 8,
+          "missing": [
+            "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_CORE",
+            "EDGE_V015_027_01",
+            "EDGE_V029_ARC_068"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:121999"
+        },
+        {
+          "id": "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND",
+          "stored": 9,
+          "incident": 19,
+          "missing": [
+            "EDGE_ARC_THESIS_CHINA_COUNTERSTACK_ROUTE_AROUND_CONTROL_NOT_AIRTIGHT",
+            "EDGE_ARC_THESIS_CHINA_COUNTERSTACK_ROUTE_AROUND_CORE",
+            "EDGE_CHINA_CHIP_SHIFT_COUNTERSTACK",
+            "EDGE_KIMI_K3_CHINA_COUNTERSTACK",
+            "EDGE_V015_030_02",
+            "EDGE_V029_ARC_014",
+            "EDGE_V029_ARC_025",
+            "EDGE_V029_ARC_043",
+            "EDGE_WAICO_2026_CHINA_COUNTERSTACK",
+            "EDGE_XI_WAIC_2026_CHINA_COUNTERSTACK"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122076"
+        },
+        {
+          "id": "ARC_CYBER_CLAIM_TO_CAVEAT",
+          "stored": 33,
+          "incident": 76,
+          "missing": [
+            "EDGE_2026_ANTHROPIC_EVAL_REAL_WORLD_INTRUSIONS_CYBER_ARC",
+            "EDGE_2026_AU_ISM_AGENT_CONTROLS_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_2026_CA_AI_CYBER_DEFENSE_PROGRAM_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_2026_EBA_FRONTIER_AI_PATCH_CYCLE_ASSESSMENT_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_2026_NIST_AGENT_SECURITY_RFI_CYBER_CLAIM_TO_CAVEAT_supports_with_scope",
+            "EDGE_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE_CYBER_ARC",
+            "EDGE_2026_ORACLE_AI_ASSISTED_RECORD_PATCH_RELEASE_CYBER_ARC",
+            "EDGE_2026_RAPID7_Q2_PATCH_CYCLE_COMPRESSION_CYBER_ARC",
+            "EDGE_2026_RUST_IN_PEACE_AGENT_ASSISTED_DISCLOSURES_CYBER_ARC",
+            "EDGE_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_2026_UK_CYBER_SHIELD_BLUEPRINT_CYBER_CLAIM_TO_CAVEAT_supports_with_scope",
+            "EDGE_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS_CYBER_CLAIM_TO_CAVEAT_supports_with_scope",
+            "EDGE_2026_US_GOLD_EAGLE_LAUNCH_CYBER_CLAIM_TO_CAVEAT_supports",
+            "EDGE_AGENTS_CHAOS_CYBER",
+            "EDGE_ARC_THESIS_CYBER_CLAIM_TO_CAVEAT_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_CYBER_CLAIM_TO_CAVEAT_NOT_AUTONOMOUS_OFFENSE",
+            "EDGE_EU_ACTION_PLAN_CYBER",
+            "EDGE_HF_AGENTIC_INTRUSION_CYBER_ARC",
+            "EDGE_HF_FORENSICS_CYBER_ARC",
+            "EDGE_HUNT_2026_CYBER_OPERATIONAL_SIGNAL",
+            "EDGE_KOREA_CANOPY_CYBER_ARC",
+            "EDGE_KOREA_CYBER_MODEL_CYBER_ARC",
+            "EDGE_OPENAI_HF_ESCAPE_CYBER_ARC",
+            "EDGE_OPENAI_LONG_HORIZON_CYBER_ARC",
+            "EDGE_OPENCLAW_EXPOSURE_CYBER",
+            "EDGE_V012_CYBER_ARC_TO_CONTROL_LEAKS",
+            "EDGE_V012_CYBER_ARC_TO_OFFENSE_REFRAMED",
+            "EDGE_V015_012_01",
+            "EDGE_V015_013_01",
+            "EDGE_V015_014_01",
+            "EDGE_V015_015_01",
+            "EDGE_V015_016_01",
+            "EDGE_V015_017_02",
+            "EDGE_V015_018_02",
+            "EDGE_V015_019_01",
+            "EDGE_V015_020_02",
+            "EDGE_V015_033_01",
+            "EDGE_V015_034_02",
+            "EDGE_V015_035_02",
+            "EDGE_V015_036_02",
+            "EDGE_V029_ARC_055",
+            "EDGE_V029_ARC_059",
+            "EDGE_WP2SHELL_CYBER_ARC"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122239"
+        },
+        {
+          "id": "ARC_QUIET_ACCESS_CONTROL",
+          "stored": 29,
+          "incident": 64,
+          "missing": [
+            "EDGE_2026_AU_ISM_AGENT_CONTROLS_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_CANADA_AGENTIC_AI_GOVERNMENT_GUIDE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_CA_SB53_EFFECTIVE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_CN_AGENT_DEPLOYMENT_SECURITY_GUIDE_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_CN_AGENT_SECURITY_STANDARDS_PIPELINE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_EU_AI_OMNIBUS_EFFECTIVE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_EU_CRA_REPORTING_SCHEDULED_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_JAPAN_GOV_AI_PROCUREMENT_GUIDE_V2_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_KOREA_AI_BASIC_ACT_EFFECTIVE_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_2026_NIST_AI_AGENT_STANDARDS_INITIATIVE_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_NY_RAISE_SIGNED_FUTURE_EFFECTIVE_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE_QUIET_ACCESS_ARC",
+            "EDGE_2026_OPENAI_COLLECTIVE_CYBER_DEFENSE_LETTER_QUIET_ACCESS_ARC",
+            "EDGE_2026_SINGAPORE_AGENTIC_GOVERNANCE_FRAMEWORK_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS_QUIET_ACCESS_CONTROL_supports_with_scope",
+            "EDGE_2026_US_GOLD_EAGLE_LAUNCH_QUIET_ACCESS_CONTROL_supports",
+            "EDGE_AMAZON_PERPLEXITY_QUIET_ACCESS",
+            "EDGE_ARC_THESIS_QUIET_ACCESS_CONTROL_ACCESS_AS_POWER",
+            "EDGE_BALL_SOFT_LAW_QUIET_ACCESS",
+            "EDGE_EU_ACTION_PLAN_QUIET_ACCESS",
+            "EDGE_EU_AI_ACT_QUIET_ACCESS",
+            "EDGE_HF_FORENSICS_QUIET_ACCESS",
+            "EDGE_KOREA_ANTHROPIC_MOU_QUIET_ACCESS",
+            "EDGE_V015_023_01",
+            "EDGE_V016_EVENT_003_03",
+            "EDGE_V016_EVENT_004_02",
+            "EDGE_V016_EVENT_014_02",
+            "EDGE_V029_ARC_006",
+            "EDGE_V029_ARC_040",
+            "EDGE_V029_ARC_056",
+            "EDGE_V029_ARC_058",
+            "EDGE_V029_ARC_067"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122399"
+        },
+        {
+          "id": "ARC_PALANTIR_DECISION_OS",
+          "stored": 7,
+          "incident": 16,
+          "missing": [
+            "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_CORE",
+            "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_DECISION_SOVEREIGNTY",
+            "EDGE_V015_005_01",
+            "EDGE_V015_006_01",
+            "EDGE_V015_007_01",
+            "EDGE_V015_010_02",
+            "EDGE_V029_ARC_046",
+            "EDGE_V029_ARC_072",
+            "EDGE_V029_ARC_075"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122521"
+        },
+        {
+          "id": "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+          "stored": 76,
+          "incident": 91,
+          "missing": [
+            "EDGE_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS_COGSEC_LAB_TO_WILD_TO_STATE_supports",
+            "EDGE_AGENTS_CHAOS_COGSEC",
+            "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_CORE",
+            "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_DECISION_SOVEREIGNTY",
+            "EDGE_GARD_COGSEC",
+            "EDGE_V015_011_01",
+            "EDGE_V015_016_02",
+            "EDGE_V015_017_01",
+            "EDGE_V015_018_01",
+            "EDGE_V015_020_01",
+            "EDGE_V015_034_01",
+            "EDGE_V015_035_01",
+            "EDGE_V015_036_01",
+            "EDGE_V015_TRUST_CHECK_TO_ARC",
+            "EDGE_V029_ARC_054"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122705"
+        },
+        {
+          "id": "ARC_ENERGY_GRID_POLITICS",
+          "stored": 7,
+          "incident": 14,
+          "missing": [
+            "EDGE_ARC_THESIS_ENERGY_GRID_POLITICS_CONTROL_NOT_AIRTIGHT",
+            "EDGE_ARC_THESIS_ENERGY_GRID_POLITICS_CORE",
+            "EDGE_V015_009_01",
+            "EDGE_V029_ARC_017",
+            "EDGE_V029_ARC_019",
+            "EDGE_V029_ARC_021",
+            "EDGE_V029_ARC_069"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122869"
+        },
+        {
+          "id": "ARC_WAR_DATA_FLYWHEEL",
+          "stored": 6,
+          "incident": 12,
+          "missing": [
+            "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_CORE",
+            "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_DECISION_SOVEREIGNTY",
+            "EDGE_NAVER_KAI_DEFENSE_WAR_ARC",
+            "EDGE_V015_010_01",
+            "EDGE_V029_ARC_071",
+            "EDGE_V029_ARC_074"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122950"
+        },
+        {
+          "id": "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+          "stored": 9,
+          "incident": 27,
+          "missing": [
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_CONTROL_NOT_AIRTIGHT",
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_CORE",
+            "EDGE_BALL_SOFT_LAW_OPEN_WEIGHT",
+            "EDGE_HF_FORENSICS_OPEN_WEIGHT",
+            "EDGE_KIMI_K3_OPEN_WEIGHT_EXIT",
+            "EDGE_KOREA_CYBER_MODEL_OPEN_WEIGHT",
+            "EDGE_KOREA_NAVER_EXCLUSION_OPEN_WEIGHT",
+            "EDGE_OPEN_001",
+            "EDGE_SOOFI_2026_OPEN_WEIGHT",
+            "EDGE_V015_028_01",
+            "EDGE_V015_029_01",
+            "EDGE_V015_030_01",
+            "EDGE_V016_EVENT_003_02",
+            "EDGE_V029_ARC_001",
+            "EDGE_V029_ARC_026",
+            "EDGE_V029_ARC_033",
+            "EDGE_XI_WAIC_2026_OPEN_WEIGHT_DIPLOMACY"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:123098"
+        },
+        {
+          "id": "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+          "stored": 27,
+          "incident": 37,
+          "missing": [
+            "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_CORE",
+            "EDGE_V015_021_01",
+            "EDGE_V016_EVENT_011_03",
+            "EDGE_V029_ARC_035",
+            "EDGE_V029_ARC_038",
+            "EDGE_V029_ARC_039",
+            "EDGE_V029_ARC_041",
+            "EDGE_V029_ARC_044",
+            "EDGE_V029_ARC_073"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:123329"
+        },
+        {
+          "id": "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+          "stored": 19,
+          "incident": 53,
+          "missing": [
+            "EDGE_2026_ESAS_FRONTIER_AI_DORA_SUPERVISION_CLOUD_CAPACITY_VENDOR_LOCKIN_supports_with_scope",
+            "EDGE_2026_ESRB_FRONTIER_AI_SYSTEMIC_WARNING_CLOUD_CAPACITY_VENDOR_LOCKIN_supports_with_scope",
+            "EDGE_2026_NIST_AI_DATACENTER_SECURITY_DRAFT_CLOUD_CAPACITY_VENDOR_LOCKIN_supports_with_scope",
+            "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_CORE",
+            "EDGE_AWS_EU_SOV_CLOUD_CLOUD",
+            "EDGE_EU_AI_FACTORIES_CLOUD",
+            "EDGE_EU_CADA_CLOUD",
+            "EDGE_EU_CLOUD_CONCENTRATION_CLOUD",
+            "EDGE_EU_SOV_CLOUD_PROCUREMENT_CLOUD",
+            "EDGE_SOOFI_2026_CLOUD_CAPACITY",
+            "EDGE_V015_001_01",
+            "EDGE_V015_002_01",
+            "EDGE_V015_003_01",
+            "EDGE_V015_004_01",
+            "EDGE_V015_007_02",
+            "EDGE_V016_EVENT_001_02",
+            "EDGE_V016_EVENT_002_02",
+            "EDGE_V016_EVENT_004_03",
+            "EDGE_V016_EVENT_005_02",
+            "EDGE_V016_EVENT_013_02",
+            "EDGE_V016_EVENT_015_02",
+            "EDGE_V029_ARC_002",
+            "EDGE_V029_ARC_004",
+            "EDGE_V029_ARC_007",
+            "EDGE_V029_ARC_010",
+            "EDGE_V029_ARC_012",
+            "EDGE_V029_ARC_015",
+            "EDGE_V029_ARC_023",
+            "EDGE_V029_ARC_031",
+            "EDGE_V029_ARC_047",
+            "EDGE_V029_ARC_051",
+            "EDGE_V029_ARC_063",
+            "EDGE_V029_ARC_077"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:123476"
+        },
+        {
+          "id": "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+          "stored": 8,
+          "incident": 26,
+          "missing": [
+            "EDGE_V012_CAPITAL_MIX_TO_ACCESS",
+            "EDGE_V012_CAPITAL_MIX_TO_CORE",
+            "EDGE_V012_CAPITAL_MIX_TO_DECISION",
+            "EDGE_V015_001_02",
+            "EDGE_V015_024_02",
+            "EDGE_V016_EVENT_006_02",
+            "EDGE_V029_ARC_003",
+            "EDGE_V029_ARC_005",
+            "EDGE_V029_ARC_009",
+            "EDGE_V029_ARC_011",
+            "EDGE_V029_ARC_013",
+            "EDGE_V029_ARC_016",
+            "EDGE_V029_ARC_018",
+            "EDGE_V029_ARC_020",
+            "EDGE_V029_ARC_029",
+            "EDGE_V029_ARC_032",
+            "EDGE_V029_ARC_034",
+            "EDGE_V029_ARC_070"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:123585"
+        },
+        {
+          "id": "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION",
+          "stored": 22,
+          "incident": 33,
+          "missing": [
+            "EDGE_V012_CORP_ADOPTION_TO_ACCESS",
+            "EDGE_V012_CORP_ADOPTION_TO_CORE",
+            "EDGE_V012_CORP_ADOPTION_TO_DECISION",
+            "EDGE_V015_008_02",
+            "EDGE_V015_031_01",
+            "EDGE_V016_EVENT_011_02",
+            "EDGE_V029_ARC_036",
+            "EDGE_V029_ARC_037",
+            "EDGE_V029_ARC_045",
+            "EDGE_V029_ARC_048",
+            "EDGE_V029_ARC_053"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:123673"
+        },
+        {
+          "id": "ARC_SOVEREIGN_FLOW_GATING",
+          "stored": 22,
+          "incident": 53,
+          "missing": [
+            "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_SOVEREIGN_FLOW_GATING_supports_with_scope",
+            "EDGE_2026_CN_CYBERSECURITY_LAW_AI_AMENDMENT_EFFECTIVE_SOVEREIGN_FLOW_GATING_supports",
+            "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_SOVEREIGN_FLOW_GATING_supports",
+            "EDGE_AWS_EU_SOV_CLOUD_FLOW",
+            "EDGE_CLOUD_ACT_SOVEREIGN_FLOW",
+            "EDGE_EU_AI_ACT_SOVEREIGN_FLOW",
+            "EDGE_EU_CADA_SOVEREIGN_FLOW",
+            "EDGE_EU_CLOUD_CONCENTRATION_FLOW",
+            "EDGE_EU_SOV_CLOUD_PROCUREMENT_FLOW",
+            "EDGE_HF_FORENSICS_SOVEREIGN_FLOW",
+            "EDGE_KOREA_ANTHROPIC_MOU_SOVEREIGN_FLOW",
+            "EDGE_KOREA_NAVER_EXCLUSION_SOVEREIGN_FLOW",
+            "EDGE_NATO_DIGITAL_STRATEGY_FLOW",
+            "EDGE_SECNUMCLOUD_SOVEREIGN_FLOW",
+            "EDGE_V014_FLOW_ARC_01",
+            "EDGE_V014_FLOW_ARC_02",
+            "EDGE_V014_FLOW_ARC_03",
+            "EDGE_V014_FLOW_ARC_04",
+            "EDGE_V015_022_01",
+            "EDGE_V015_023_02",
+            "EDGE_V015_024_04",
+            "EDGE_V015_032_01",
+            "EDGE_V016_EVENT_010_02",
+            "EDGE_V016_EVENT_012_02",
+            "EDGE_V029_ARC_008",
+            "EDGE_V029_ARC_022",
+            "EDGE_V029_ARC_027",
+            "EDGE_V029_ARC_030",
+            "EDGE_V029_ARC_052",
+            "EDGE_V029_ARC_064",
+            "EDGE_V029_ARC_076"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:123825"
+        },
+        {
+          "id": "ARC_RUSSIA_SELECTIVE_SOVEREIGNTY",
+          "stored": 2,
+          "incident": 28,
+          "missing": [
+            "EDGE_2026_RU_FSTEC_ORDER117_AI_CONTROLS_EFFECTIVE_RUSSIA_SELECTIVE_SOVEREIGNTY_supports",
+            "EDGE_V017_RUSSIA_01",
+            "EDGE_V017_RUSSIA_02",
+            "EDGE_V017_RUSSIA_03",
+            "EDGE_V017_RUSSIA_04",
+            "EDGE_V017_RUSSIA_05",
+            "EDGE_V017_RUSSIA_06",
+            "EDGE_V017_RUSSIA_07",
+            "EDGE_V017_RUSSIA_08",
+            "EDGE_V017_RUSSIA_09",
+            "EDGE_V017_RUSSIA_10",
+            "EDGE_V017_RUSSIA_11",
+            "EDGE_V017_RUSSIA_12",
+            "EDGE_V017_RUSSIA_13",
+            "EDGE_V017_RUSSIA_14",
+            "EDGE_V017_RUSSIA_15",
+            "EDGE_V017_RUSSIA_16",
+            "EDGE_V017_RUSSIA_17",
+            "EDGE_V017_RUSSIA_18",
+            "EDGE_V017_RUSSIA_19",
+            "EDGE_V017_RUSSIA_20",
+            "EDGE_V017_RUSSIA_21",
+            "EDGE_V017_RUSSIA_22",
+            "EDGE_V017_RUSSIA_23",
+            "EDGE_V017_RUSSIA_24",
+            "EDGE_V017_RUSSIA_25"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:124021"
+        },
+        {
+          "id": "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK",
+          "stored": 67,
+          "incident": 117,
+          "missing": [
+            "EDGE_2026_ANTHROPIC_EVAL_REAL_WORLD_INTRUSIONS_ASSURANCE_ARC",
+            "EDGE_2026_AU_ISM_AGENT_CONTROLS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_BOE_FCA_FRONTIER_AI_CYBER_STATEMENT_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_CANADA_AGENTIC_AI_GOVERNMENT_GUIDE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_CA_AI_CYBER_DEFENSE_PROGRAM_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_CA_SB53_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_CN_AGENT_DEPLOYMENT_SECURITY_GUIDE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_CN_AGENT_GOVERNANCE_OPINIONS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_CN_AGENT_SECURITY_STANDARDS_PIPELINE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_CN_CYBERSECURITY_LAW_AI_AMENDMENT_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_EBA_FRONTIER_AI_PATCH_CYCLE_ASSESSMENT_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_ECB_AI_CYBER_ACTION_PLANS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_ESAS_FRONTIER_AI_DORA_SUPERVISION_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_ESRB_FRONTIER_AI_SYSTEMIC_WARNING_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_EU_AI_ACT_GPAI_ENFORCEMENT_AGENT_SCOPE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_EU_AI_OMNIBUS_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_EU_CRA_REPORTING_SCHEDULED_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_FSB_FRONTIER_AI_CYBER_WARNING_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_GATES_AI_TRANSITION_INSTITUTIONS_ESSAY_ASSURANCE_ARC",
+            "EDGE_2026_JAPAN_GOV_AI_PROCUREMENT_GUIDE_V2_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_KOREA_AI_BASIC_ACT_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_NIST_AGENT_SECURITY_RFI_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_NIST_AI_AGENT_STANDARDS_INITIATIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_NIST_AI_DATACENTER_SECURITY_DRAFT_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_NY_RAISE_SIGNED_FUTURE_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_OPENAI_ASTRA_CYBER_THRESHOLD_RL_PAUSE_ASSURANCE_ARC",
+            "EDGE_2026_OPENAI_COLLECTIVE_CYBER_DEFENSE_LETTER_ASSURANCE_ARC",
+            "EDGE_2026_ORACLE_AI_ASSISTED_RECORD_PATCH_RELEASE_ASSURANCE_ARC",
+            "EDGE_2026_RAPID7_Q2_PATCH_CYCLE_COMPRESSION_ASSURANCE_ARC",
+            "EDGE_2026_RUST_IN_PEACE_AGENT_ASSISTED_DISCLOSURES_ASSURANCE_ARC",
+            "EDGE_2026_RU_FSTEC_ORDER117_AI_CONTROLS_EFFECTIVE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_SINGAPORE_AGENTIC_GOVERNANCE_FRAMEWORK_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_UK_AISI_UNSANCTIONED_AGENT_ACTIONS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_2026_UK_CYBER_SHIELD_BLUEPRINT_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_UK_NCSC_INTERIM_AGENTIC_CONTROLS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_2026_US_GOLD_EAGLE_LAUNCH_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports",
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_ACCESS_AS_POWER_supports",
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_CONTROL_NOT_AIRTIGHT_supports",
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_CORE_supports",
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_DECISION_SOVEREIGNTY_supports",
+            "EDGE_EU_2026_CADA_PROPOSAL_SOVEREIGNTY_LEVELS_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_EU_2026_CYBER_AI_ACTION_PLAN_AI_CYBER_RESILIENCE_ASSURANCE_STACK_supports_with_scope",
+            "EDGE_V029_ARC_049",
+            "EDGE_V029_ARC_050",
+            "EDGE_V029_ARC_057",
+            "EDGE_V029_ARC_060",
+            "EDGE_V029_ARC_065",
+            "EDGE_V029_ARC_066",
+            "EDGE_V029_ARC_078"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:124188"
+        },
+        {
+          "id": "THESIS_CORE",
+          "stored": 6,
+          "incident": 39,
+          "missing": [
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_CORE_supports",
+            "EDGE_ARC_THESIS_2022_2023_FORMATION_PHASE_CORE",
+            "EDGE_ARC_THESIS_CHINA_COUNTERSTACK_ROUTE_AROUND_CORE",
+            "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_CORE",
+            "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_CORE",
+            "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_CORE",
+            "EDGE_ARC_THESIS_ENERGY_GRID_POLITICS_CORE",
+            "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_CORE",
+            "EDGE_ARC_THESIS_FINANCE_GOVERNED_SHUTDOWN_CORE",
+            "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_CORE",
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_CORE",
+            "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_CORE",
+            "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_CORE",
+            "EDGE_CA_001",
+            "EDGE_CORE_001",
+            "EDGE_V011_BACKFILL_016",
+            "EDGE_V011_BACKFILL_017",
+            "EDGE_V011_BACKFILL_018",
+            "EDGE_V012_2024_SAUDI_40B_AI_FUND_REPORTED_CAPITAL",
+            "EDGE_V012_2024_UAE_MGX_100B_AI_STATE_VEHICLE_CAPITAL",
+            "EDGE_V012_2025_EU_INVESTAI_200B_MOBILIZATION_CAPITAL",
+            "EDGE_V012_2025_MCKINSEY_STATE_OF_AI_ADOPTION_DECISION",
+            "EDGE_V012_CAPITAL_MIX_TO_CORE",
+            "EDGE_V012_CORP_ADOPTION_TO_CORE",
+            "EDGE_V013_CHINA_138B_FUND_TO_CORE",
+            "EDGE_V013_FRANCE_109B_TO_CORE",
+            "EDGE_V014_FLOW_06",
+            "EDGE_V014_FLOW_08",
+            "EDGE_V014_FLOW_ARC_01",
+            "EDGE_V016_ARC_THESIS_01",
+            "EDGE_V016_ARC_THESIS_05",
+            "EDGE_V016_CHECK_TO_CORE",
+            "EDGE_V017_RUSSIA_22"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:152257"
+        },
+        {
+          "id": "THESIS_ACCESS_AS_POWER",
+          "stored": 6,
+          "incident": 47,
+          "missing": [
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_ACCESS_AS_POWER_supports",
+            "EDGE_ARC_THESIS_2023_GOVERNANCE_SHOCK_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_CLOUD_CAPACITY_VENDOR_LOCKIN_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_CYBER_CLAIM_TO_CAVEAT_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_DATA_LICENSING_AS_INPUT_LAYER_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_EXPORT_CHIPS_TO_MODELS_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_FINANCE_GOVERNED_SHUTDOWN_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_GULF_CONDITIONAL_SOVEREIGNTY_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_OPEN_WEIGHT_EXIT_OR_DEPENDENCE_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_QUIET_ACCESS_CONTROL_ACCESS_AS_POWER",
+            "EDGE_ARC_THESIS_TOLL_AND_THROTTLE_ACCESS_AS_POWER",
+            "EDGE_CORE_002",
+            "EDGE_QAC_006",
+            "EDGE_V011_BACKFILL_005",
+            "EDGE_V011_BACKFILL_006",
+            "EDGE_V011_BACKFILL_007",
+            "EDGE_V011_BACKFILL_012",
+            "EDGE_V011_BACKFILL_013",
+            "EDGE_V011_BACKFILL_014",
+            "EDGE_V011_BACKFILL_015",
+            "EDGE_V012_2025_ANTHROPIC_3_5B_SERIES_E_CAPITAL",
+            "EDGE_V012_2025_COREWEAVE_OPENAI_11_9B_CAPACITY_CAPITAL",
+            "EDGE_V012_2025_OPENAI_40B_SOFTBANK_ROUND_CAPITAL",
+            "EDGE_V012_CAPITAL_MIX_TO_ACCESS",
+            "EDGE_V012_CORP_ADOPTION_TO_ACCESS",
+            "EDGE_V013_CANADA_AI_TO_ACCESS",
+            "EDGE_V013_INDIAAI_TO_ACCESS",
+            "EDGE_V013_STARGATE_PLEDGE_TO_ACCESS",
+            "EDGE_V014_FLOW_01",
+            "EDGE_V014_FLOW_02",
+            "EDGE_V014_FLOW_03",
+            "EDGE_V014_FLOW_07",
+            "EDGE_V014_FLOW_09",
+            "EDGE_V014_FLOW_10",
+            "EDGE_V014_FLOW_11",
+            "EDGE_V014_FLOW_ARC_02",
+            "EDGE_V015_TRUST_CHECK_TO_ACCESS",
+            "EDGE_V016_ARC_THESIS_02",
+            "EDGE_V016_ARC_THESIS_06",
+            "EDGE_V016_CHECK_TO_ACCESS",
+            "EDGE_V017_RUSSIA_23"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:152290"
+        },
+        {
+          "id": "THESIS_DECISION_SOVEREIGNTY",
+          "stored": 13,
+          "incident": 32,
+          "missing": [
+            "EDGE_AI_CYBER_RESILIENCE_ASSURANCE_STACK_DECISION_SOVEREIGNTY_supports",
+            "EDGE_ARC_THESIS_COGSEC_LAB_TO_WILD_TO_STATE_DECISION_SOVEREIGNTY",
+            "EDGE_ARC_THESIS_FINANCE_GOVERNED_SHUTDOWN_DECISION_SOVEREIGNTY",
+            "EDGE_ARC_THESIS_PALANTIR_DECISION_OS_DECISION_SOVEREIGNTY",
+            "EDGE_ARC_THESIS_WAR_DATA_FLYWHEEL_DECISION_SOVEREIGNTY",
+            "EDGE_DS_003",
+            "EDGE_PAL_007",
+            "EDGE_V012_2023_MORGAN_STANLEY_GPT4_ASSISTANT_DECISION",
+            "EDGE_V012_2024_JPMORGAN_LLM_SUITE_ENTERPRISE_DECISION",
+            "EDGE_V012_2024_MICROSOFT_WORK_TREND_AI_USAGE_DECISION",
+            "EDGE_V012_CAPITAL_MIX_TO_DECISION",
+            "EDGE_V012_CORP_ADOPTION_TO_DECISION",
+            "EDGE_V014_FLOW_04",
+            "EDGE_V014_FLOW_05",
+            "EDGE_V014_FLOW_ARC_03",
+            "EDGE_V015_TRUST_CHECK_TO_DECISION",
+            "EDGE_V016_ARC_THESIS_03",
+            "EDGE_V016_ARC_THESIS_07",
+            "EDGE_V017_RUSSIA_25"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:152321"
+        }
+      ],
+      "F3": [
+        {
+          "id": "ARC_CONTROL_LEAKS_BUT_POLICES",
+          "start": "2026-05-31",
+          "end": "2026-09-08",
+          "outside": [
+            {
+              "id": "SIG_2026_ANTHROPIC_DISTILLATION_ABUSE_DISCLOSURE",
+              "date": "2026-02-23"
+            }
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:121897",
+          "key_nodes_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:121903"
+        },
+        {
+          "id": "ARC_WAR_DATA_FLYWHEEL",
+          "start": "2026-03-12",
+          "end": "2026-09-10",
+          "outside": [
+            {
+              "id": "SIG_2026_BRAVE1_DATAROOM_PALANTIR_LAUNCH",
+              "date": "2026-01-21"
+            }
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122893",
+          "key_nodes_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122900"
+        },
+        {
+          "id": "ARC_FINANCE_GOVERNED_SHUTDOWN",
+          "start": "2024-11-21",
+          "end": "2026-08-31",
+          "outside": [
+            {
+              "id": "SIG_2023_MORGAN_STANLEY_GPT4_ASSISTANT",
+              "date": "2023-03-14"
+            },
+            {
+              "id": "SIG_2024_JPMORGAN_LLM_SUITE_ENTERPRISE",
+              "date": "2024-08-09"
+            },
+            {
+              "id": "SIG_2026_BOE_FRONTIER_AI_HARNESS_ENGINEERING",
+              "date": "2026-09-02"
+            }
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122972",
+          "key_nodes_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:122979"
+        },
+        {
+          "id": "ARC_2023_GOVERNANCE_SHOCK",
+          "start": "2023-01-26",
+          "end": "2023-12-09",
+          "outside": [
+            {
+              "id": "SIG_2021_EU_AI_ACT_PROPOSAL",
+              "date": "2021-04-21"
+            }
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:123217",
+          "key_nodes_location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:123224"
+        }
+      ],
+      "F4": [
+        {
+          "ids": [
+            "SIG_2026_OPENAI_GPT56_STAGED_RELEASE",
+            "SIG_2026_OPENAI_GPT56_VETTED_PARTNERS"
+          ],
+          "date": "2026-06-26",
+          "url": "https://www.reuters.com/legal/litigation/openai-defers-public-rollout-gpt56-us-seeks-early-access-frontier-ai-models-2026-06-26/",
+          "titles": [
+            "OpenAI defers public rollout of GPT-5.6 and begins limited preview at U.S. government request",
+            "OpenAI delays public GPT-5.6 release and restricts initial access to vetted partners after U.S. government request"
+          ],
+          "statuses": [
+            "verified",
+            "verified_as_reported"
+          ],
+          "locations": [
+            "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:6293",
+            "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:9155"
+          ],
+          "note": "Same rollout event; both have blank dedupe_note_en and different graph identities."
+        }
+      ],
+      "F5": [
+        {
+          "id": "EDGE_2022_2023_001",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2022_CHIPS_SCIENCE_ACT",
+          "target": "SIG_US_2022_BIS_ADVANCED_COMPUTING",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128026"
+        },
+        {
+          "id": "EDGE_2022_2023_002",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_US_2022_BIS_ADVANCED_COMPUTING",
+          "target": "SIG_2022_NVIDIA_A800_WORKAROUND",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128045"
+        },
+        {
+          "id": "EDGE_2022_2023_003",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2022_NVIDIA_A800_WORKAROUND",
+          "target": "SIG_2023_BIS_OCT_UPDATE_CLOSES_A800_H800",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128064"
+        },
+        {
+          "id": "EDGE_2022_2023_004",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2022_CHATGPT_LAUNCH",
+          "target": "SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128083"
+        },
+        {
+          "id": "EDGE_2022_2023_005",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_GPT4_RELEASE",
+          "target": "SIG_2023_US_AI_EO_14110",
+          "actual_kinds": [
+            "event",
+            "event"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128102"
+        },
+        {
+          "id": "EDGE_2022_2023_006",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_CHINA_GALLIUM_GERMANIUM_CONTROLS",
+          "target": "export-05",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128121"
+        },
+        {
+          "id": "EDGE_2022_2023_007",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_AIXCC_LAUNCH",
+          "target": "cyber-01",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128140"
+        },
+        {
+          "id": "EDGE_2022_2023_008",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_NIST_AI_RMF_1_0",
+          "target": "governance-01",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128159"
+        },
+        {
+          "id": "EDGE_2022_2023_009",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_CHINA_GENAI_INTERIM_MEASURES",
+          "target": "governance-01",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128178"
+        },
+        {
+          "id": "EDGE_2022_2023_010",
+          "missing": [
+            "source_kind",
+            "target_kind"
+          ],
+          "source": "SIG_2023_BLETCHLEY_DECLARATION",
+          "target": "governance-01",
+          "actual_kinds": [
+            "event",
+            "claim"
+          ],
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:128197"
+        }
+      ],
+      "F6": [
+        {
+          "id": "scale-02",
+          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/economy",
+          "count": 2,
+          "location": "/Users/serg/Documents/zhet/build/profgames-aipower-frontier-pacing/aipower/ai_power_storygraph_en.json:113246"
+        }
+      ]
+    }
+  }
+}

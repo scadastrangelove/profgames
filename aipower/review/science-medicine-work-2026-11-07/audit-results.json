@@ -1,0 +1,5069 @@
+{
+  "status": "pass",
+  "checked_at": "2026-11-07",
+  "scope": "Structural integrity, exact-source aliases and master preservation; not automated fact verification or exhaustive semantic dedup.",
+  "counts": {
+    "candidates": 47,
+    "science": 31,
+    "medicine": 8,
+    "work": 6,
+    "education": 2,
+    "geo_profiled": 15,
+    "astronomy": 3,
+    "history_archaeology": 7,
+    "reused_prior_candidates": 5,
+    "corrections": 4,
+    "checks": 940,
+    "passed": 940
+  },
+  "baseline": [
+    {
+      "file": "aipower/ai_power_storygraph_ru.json",
+      "sha256": "6e59265525ba0e2e3871843221b81c07daed3ac2cc98852ef9e68c8251888863",
+      "events": 510,
+      "claims": 76,
+      "arcs": 26,
+      "edges": 1314
+    },
+    {
+      "file": "aipower/ai_power_storygraph_en.json",
+      "sha256": "43e01a8ae286c5a0d3d0551c431874bfcd35403ed36c96effad95698befca9db",
+      "events": 510,
+      "claims": 76,
+      "arcs": 26,
+      "edges": 1314
+    }
+  ],
+  "files_scanned": [
+    "aipower/ai_power_storygraph_ru.json",
+    "aipower/ai_power_storygraph_en.json",
+    "profgames_ai_signals.jsonl",
+    "factcheck.json",
+    "aimind/aimind_signals.jsonl",
+    "aimind/atlas.json",
+    "aimind/aimind_factcheck.json",
+    "aipower/review/agent-boundaries-september-2026/candidates.json",
+    "aipower/review/agent-concealment-persistence/candidates.json",
+    "aipower/review/ai-discovery-gates/candidates.json",
+    "aipower/review/anthropic-threat-intel-september-2026/candidates.json",
+    "aipower/review/astra-monitorability/candidates.json",
+    "aipower/review/cve-quality-era/candidates.json",
+    "aipower/review/cyber-geopolitics-2026-11-07/candidates.json",
+    "aipower/review/expansion-2026-09-27/candidates.json",
+    "aipower/review/frontier-pacing-september-2026/candidates.json",
+    "aipower/review/global-pacing-access-regimes/candidates.json",
+    "aipower/review/pult-software-production/candidates.json",
+    "aipower/review/resilience-throughput/candidates.json",
+    "aipower/review/stack-geography-2026-11-07/candidates.json",
+    "aipower/review/state-ai-decision-power-2026-10-04/candidates.json",
+    "aipower/review/v031-agent-behavior/candidates.json",
+    "aipower/review/war-ai-operations-september-2026/candidates.json"
+  ],
+  "checks": [
+    {
+      "name": "review baseline matches: aipower/ai_power_storygraph_ru.json",
+      "ok": true,
+      "details": {
+        "actual": "6e59265525ba0e2e3871843221b81c07daed3ac2cc98852ef9e68c8251888863",
+        "commit": "5b725eda3f0066fdbd8ddaa5523f9ef05bedacfc"
+      }
+    },
+    {
+      "name": "review baseline matches: aipower/ai_power_storygraph_en.json",
+      "ok": true,
+      "details": {
+        "actual": "43e01a8ae286c5a0d3d0551c431874bfcd35403ed36c96effad95698befca9db",
+        "commit": "5b725eda3f0066fdbd8ddaa5523f9ef05bedacfc"
+      }
+    },
+    {
+      "name": "unique candidate IDs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE valid stack layers",
+      "ok": true,
+      "details": [
+        "model_weights",
+        "governance_law"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2024_ALPHAPROOF_IMO",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO valid stack layers",
+      "ok": true,
+      "details": [
+        "model_weights",
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS valid stack layers",
+      "ok": true,
+      "details": [
+        "energy_compute_chips",
+        "cloud_inference",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_MATTERGEN_SYNTHESIS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS valid stack layers",
+      "ok": true,
+      "details": [
+        "model_weights",
+        "data_telemetry"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT valid stack layers",
+      "ok": true,
+      "details": [
+        "model_weights",
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2026_GOOGLE_WETLAB_AGENTS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS valid stack layers",
+      "ok": true,
+      "details": [
+        "model_weights",
+        "data_telemetry"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE valid stack layers",
+      "ok": true,
+      "details": [
+        "governance_law",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: MED_CAND_2026_MASAI_INTERVAL_CANCER",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: MED_CAND_2026_GOLDENBRIDGE_II",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: MED_CAND_2025_RENTOSERTIB_PHASE2A",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A valid stack layers",
+      "ok": true,
+      "details": [
+        "model_weights",
+        "data_telemetry",
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: MED_CAND_2026_KENYA_LLM_CDSS_NULL",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: MED_CAND_2026_JAMA_SCRIBE_WORKFLOW",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: profgames_ai_signals.jsonl#SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: factcheck.json#med-31",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: MED_CAND_2025_THERABOT_TRIAL",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: aimind/aimind_signals.jsonl#SIG_2025_DARTMOUTH_THERABOT_RCT",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: aimind/aimind_factcheck.json#case-therabot-01",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: WORK_CAND_2026_STANFORD_CANARIES_UPDATE",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: factcheck.json#ai-22",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: profgames_ai_signals.jsonl#SIG_2025_STANFORD_CANARIES_AI_ENTRY_LEVEL",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: WORK_CAND_2026_DENMARK_LABOR_REVISION",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: WORK_CAND_2025_ILO_TASK_EXPOSURE",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: WORK_CAND_2026_NBER_FIRM_DATA",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA valid stack layers",
+      "ok": true,
+      "details": [
+        "decision_support_cognition"
+      ]
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: profgames_ai_signals.jsonl#SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: factcheck.json#ai-26",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2021_EXOMINER_301_VALIDATIONS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2022_ITHACA_EPIGRAPHY",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2026_VESUVIUS_PHERC1667",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667 date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667 date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667 valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667 valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667 valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667 valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667 primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_AENEAS_CONTEXTUALIZATION",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_ECMWF_AIFS_OPERATIONS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2023_PANGU_WEATHER_ERA5",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2023_USTC_ROBOT_CATALYST",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2022_TCV_RL_PLASMA_CONTROL",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2024_DIIID_TEARING_AVOIDANCE",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE valid related candidates",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2024_LUCAPROT_RNA_VIROME",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2025_JAPAN_SNET_TREMORS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: EDU_CAND_2025_NIGERIA_COPILOT_RCT",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "new candidate ID: SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION.title_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION.title_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION.summary_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION.summary_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION.caveat_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION.caveat_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION.mechanism_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION.mechanism_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION date shape",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION date not retrieval substitution",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION valid arcs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION valid stack layers",
+      "ok": true,
+      "details": [
+        "data_telemetry",
+        "model_weights"
+      ]
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION valid related events",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION primary sources",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION geo developer_organizations",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION geo data_inputs",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION geo upstream_models",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION geo developer_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION geo validation_country_codes",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION geo access_notes_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION geo access_notes_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION geo interpretation_limit_ru",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION geo interpretation_limit_en",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION sources disclose access",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: aipower/review/pult-software-production/candidates.json#PULT_CAND_2026_STRONGDM_VALIDATION_ENVIRONMENT",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: aipower/review/pult-software-production/candidates.json#PULT_CAND_2026_OPENAI_HARNESS_ENGINEERING",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: aipower/review/pult-software-production/candidates.json#PULT_CAND_2026_FAROS_DELIVERY_REVIEW_PRESSURE",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: aipower/review/pult-software-production/candidates.json#PULT_CAND_2025_METR_PRODUCTIVITY_RCT",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: aipower/review/pult-software-production/candidates.json#PULT_CAND_2026_METR_PRODUCTIVITY_SELECTION_UPDATE",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: factcheck.json#ai-22",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "CORR_CANARIES_CAUSALITY candidate",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: factcheck.json#corp-29e",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: profgames_ai_signals.jsonl#SIG_2024_KLARNA_700_AGENT_EQUIVALENT",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: factcheck.json#med-31",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: profgames_ai_signals.jsonl#SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "CORR_JAMA_AFTER_HOURS_AND_DATE candidate",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: factcheck.json#ai-26",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "reference: profgames_ai_signals.jsonl#SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "CORR_NBER_PUBLICATION_MONTH candidate",
+      "ok": true,
+      "details": null
+    },
+    {
+      "name": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2024_ALPHAPROOF_IMO source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_MATTERGEN_SYNTHESIS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "MED_CAND_2026_MASAI_INTERVAL_CANCER source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "MED_CAND_2026_GOLDENBRIDGE_II source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "MED_CAND_2025_RENTOSERTIB_PHASE2A source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "MED_CAND_2026_KENYA_LLM_CDSS_NULL source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW source duplicates declared",
+      "ok": true,
+      "details": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW",
+          "urls": [
+            "https://jamanetwork.com/journals/jama/article-abstract/2847319"
+          ]
+        },
+        {
+          "file": "factcheck.json",
+          "id": "med-31",
+          "urls": [
+            "https://jamanetwork.com/journals/jama/article-abstract/2847319"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MED_CAND_2025_THERABOT_TRIAL source duplicates declared",
+      "ok": true,
+      "details": [
+        {
+          "file": "aimind/aimind_signals.jsonl",
+          "id": "SIG_2025_DARTMOUTH_THERABOT_RCT",
+          "urls": [
+            "https://home.dartmouth.edu/news/2025/03/first-therapy-chatbot-trial-yields-mental-health-benefits"
+          ]
+        },
+        {
+          "file": "aimind/aimind_factcheck.json",
+          "id": "case-therabot-01",
+          "urls": [
+            "https://home.dartmouth.edu/news/2025/03/first-therapy-chatbot-trial-yields-mental-health-benefits"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE source duplicates declared",
+      "ok": true,
+      "details": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2025_STANFORD_CANARIES_AI_ENTRY_LEVEL",
+          "urls": [
+            "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "WORK_CAND_2026_DENMARK_LABOR_REVISION source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "WORK_CAND_2025_ILO_TASK_EXPOSURE source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "WORK_CAND_2026_NBER_FIRM_DATA source duplicates declared",
+      "ok": true,
+      "details": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+          "urls": [
+            "https://www.nber.org/papers/w34836",
+            "https://www.nber.org/system/files/working_papers/w34836/w34836.pdf"
+          ]
+        },
+        {
+          "file": "factcheck.json",
+          "id": "ai-26",
+          "urls": [
+            "https://www.nber.org/papers/w34836",
+            "https://www.nber.org/system/files/working_papers/w34836/w34836.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2022_ITHACA_EPIGRAPHY source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2026_VESUVIUS_PHERC1667 source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2023_PANGU_WEATHER_ERA5 source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2023_USTC_ROBOT_CATALYST source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2024_LUCAPROT_RNA_VIROME source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2025_JAPAN_SNET_TREMORS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "EDU_CAND_2025_NIGERIA_COPILOT_RCT source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION source duplicates declared",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "no undeclared shared primary sources within new candidates",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "source_collisions": [
+    {
+      "candidate_id": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW",
+      "declared_prior_records": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW"
+        },
+        {
+          "file": "factcheck.json",
+          "id": "med-31"
+        }
+      ],
+      "matches": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW",
+          "urls": [
+            "https://jamanetwork.com/journals/jama/article-abstract/2847319"
+          ]
+        },
+        {
+          "file": "factcheck.json",
+          "id": "med-31",
+          "urls": [
+            "https://jamanetwork.com/journals/jama/article-abstract/2847319"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "MED_CAND_2025_THERABOT_TRIAL",
+      "declared_prior_records": [
+        {
+          "file": "aimind/aimind_signals.jsonl",
+          "id": "SIG_2025_DARTMOUTH_THERABOT_RCT"
+        },
+        {
+          "file": "aimind/aimind_factcheck.json",
+          "id": "case-therabot-01"
+        }
+      ],
+      "matches": [
+        {
+          "file": "aimind/aimind_signals.jsonl",
+          "id": "SIG_2025_DARTMOUTH_THERABOT_RCT",
+          "urls": [
+            "https://home.dartmouth.edu/news/2025/03/first-therapy-chatbot-trial-yields-mental-health-benefits"
+          ]
+        },
+        {
+          "file": "aimind/aimind_factcheck.json",
+          "id": "case-therabot-01",
+          "urls": [
+            "https://home.dartmouth.edu/news/2025/03/first-therapy-chatbot-trial-yields-mental-health-benefits"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE",
+      "declared_prior_records": [
+        {
+          "file": "factcheck.json",
+          "id": "ai-22"
+        },
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2025_STANFORD_CANARIES_AI_ENTRY_LEVEL"
+        }
+      ],
+      "matches": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2025_STANFORD_CANARIES_AI_ENTRY_LEVEL",
+          "urls": [
+            "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "WORK_CAND_2026_NBER_FIRM_DATA",
+      "declared_prior_records": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP"
+        },
+        {
+          "file": "factcheck.json",
+          "id": "ai-26"
+        }
+      ],
+      "matches": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+          "urls": [
+            "https://www.nber.org/papers/w34836",
+            "https://www.nber.org/system/files/working_papers/w34836/w34836.pdf"
+          ]
+        },
+        {
+          "file": "factcheck.json",
+          "id": "ai-26",
+          "urls": [
+            "https://www.nber.org/papers/w34836",
+            "https://www.nber.org/system/files/working_papers/w34836/w34836.pdf"
+          ]
+        }
+      ]
+    }
+  ],
+  "internal_source_collisions": []
+}

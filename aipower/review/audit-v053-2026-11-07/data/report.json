@@ -1,0 +1,9 @@
+{
+  "hashes_before": {
+    "ai_power_storygraph_ru.json": "4dd804406c45b3d269e3e7583b283eab9bf931f905ca6813a0c6f147c7a7a15c",
+    "ai_power_storygraph_en.json": "c8a1f77e26c90c4a324118121793e50ec457bfaa252e56b1f709c09f3b59f8fc",
+    "scripts/build.py": "497c18880bfa4c485d049ad229b382bb7df438788b7cb7dbdc6f73ecbdc200b9",
+    "scripts/validate.py": "e9552274b16f5ec344bd4fc651c1983b5264d404c1cd20733e3d90f6b5d9b638",
+    "review/validation.json": "c01e255c6811544658c0bb27c8bc66e32318e2ef4041ca531e4742bfe803d47b"
+  }
+}

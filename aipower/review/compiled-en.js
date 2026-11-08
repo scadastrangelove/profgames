@@ -88,7 +88,7 @@ function factsForArc(arc){
     if(byEvent[e.source]) ids.add(e.source);
     if(byEvent[e.target]) ids.add(e.target);
   });
-  return Array.from(ids).map(function(id){return byEvent[id];}).sort(function(a,b){return String(a.date||'').localeCompare(String(b.date||''))||a.id.localeCompare(b.id);});
+  return Array.from(new Set(Array.from(ids).filter(function(id){return !arr(arc.context_nodes).includes(id);}).map(canonicalEventId))).map(function(id){return byEvent[id];}).sort(function(a,b){return String(a.date||'').localeCompare(String(b.date||''))||a.id.localeCompare(b.id);});
 }
 function storyBounds(){
   var years=arr(D.summary.years).map(Number).filter(Number.isFinite);
@@ -111,7 +111,7 @@ function titleOf(id){ return (byEvent[id]&&byEvent[id].title)||(byArc[id]&&arcTi
 function linkButton(id){ var k=kind(id); return k ? '<button class="btn" data-kind="'+esc(k)+'" data-id="'+esc(id)+'">'+esc(trunc(titleOf(id),58))+'</button>' : tag(id); }
 function renderHeader(){
   document.getElementById('subtitle').textContent = D.meta.subtitle || 'A research atlas of AI stack power.';
-  document.getElementById('top-pills').innerHTML = ['v'+D.meta.version,D.summary.total_events+' facts',D.summary.total_claims+' claims',D.summary.total_edges+' edges'].map(tag).join('');
+  document.getElementById('top-pills').innerHTML = ['v'+D.meta.version,EV.length+' events'+(D.events.length>EV.length?' · '+(D.events.length-EV.length)+' archived ID':''),D.summary.total_claims+' claims',D.summary.total_edges+' edges'].map(tag).join('');
   document.getElementById('footer').innerHTML = '<b>'+esc(D.meta.title)+'</b><br>Source pack: <code>'+esc(D.meta.source_pack)+'</code>. Connectivity: '+esc(D.connectivity.computed_arc_count || D.summary.total_arcs)+' arcs, without a direct thesis link: '+esc((D.connectivity.computed_hanging_arcs || []).length)+'. Reference integrity: '+esc(D.referenceIntegrity.checked_references)+' checked, '+esc(D.referenceIntegrity.unresolved_count)+' unresolved. JSON: <a href="ai_power_storygraph_en.json">ai_power_storygraph_en.json</a>.';
 }
 function renderNav(){
@@ -153,7 +153,7 @@ function drawCyberLinks(){
 function bindCyberHover(root,edges){
   var cards=Array.from(root.querySelectorAll('.cyber-event'));cards.forEach(function(card){card.onmouseenter=function(){var related=edges.filter(function(edge){return edge.source===card.dataset.id||edge.target===card.dataset.id;}),connected=new Set();related.forEach(function(edge){connected.add(edge.source);connected.add(edge.target);});cards.forEach(function(item){item.classList.toggle('is-active',item===card);item.classList.toggle('is-connected',item!==card&&connected.has(item.dataset.id));item.classList.toggle('is-dimmed',related.length>0&&!connected.has(item.dataset.id));});document.querySelectorAll('#cyber-links [data-edge-id]').forEach(function(path){var active=related.some(function(edge){return edge.id===path.dataset.edgeId;});path.classList.toggle('is-active',active);path.classList.toggle('is-dimmed',related.length>0&&!active);});};card.onmouseleave=function(){cards.forEach(function(item){item.classList.remove('is-active','is-connected','is-dimmed');});document.querySelectorAll('#cyber-links [data-edge-id]').forEach(function(path){path.classList.remove('is-active','is-dimmed');});};});
 }
-function _legacySwitchTab(id){ if(!document.getElementById('view-'+id)) return; document.querySelectorAll('#nav button').forEach(function(b){ b.classList.toggle('active',b.dataset.tab===id); }); document.querySelectorAll('.view').forEach(function(v){ v.classList.toggle('active',v.id==='view-'+id); });  if(id==='story') renderStory('story-svg'); if(id==='cyber') renderCyber(); if(id==='timeline') renderTimeline(); }
+function _legacySwitchTab(id){ if(!document.getElementById('view-'+id)) return; document.querySelectorAll('#nav button').forEach(function(b){ b.classList.toggle('active',b.dataset.tab===id); }); document.querySelectorAll('.view').forEach(function(v){ v.classList.toggle('active',v.id==='view-'+id); });  if(id==='overview') renderStory('overview-svg'); if(id==='story') renderStory('story-svg'); if(id==='cyber') renderCyber(); if(id==='timeline') renderTimeline(); }
 
 function moneyB(value){ var n=Number(value||0); if(!n) return '$0B'; if(n>=1000) return '$'+(n/1000).toFixed(n%1000?2:0)+'T'; return '$'+(n>=100?Math.round(n):n.toFixed(n>=10?1:2).replace(/0$/,'').replace(/\.0$/,''))+'B'; }
 function renderCapitalLedger(){
@@ -184,14 +184,15 @@ function renderStory(id){
   var svg=document.getElementById(id); if(!svg) return;
   var arcs=graphArcs(),top=62,labelX=28,bandStartX=480,bandEndX=1000,pathStartX=1022,thesisX=1138,width=1400,rows=[],familyIds=hierarchyFamilyIds(arcs),cursor=top,arcY={};
   familyIds.forEach(function(familyId){var family=byFamily[familyId];if(!family)return;rows.push({type:'family',family:family});arcs.filter(function(arc){return arc.family_id===familyId;}).forEach(function(arc){rows.push({type:'arc',arc:arc});});});
-  rows.forEach(function(row){if(row.type==='family'){row.top=cursor;row.y=cursor+19;cursor+=43;}else{row.top=cursor;row.y=cursor+30;arcY[row.arc.id]=row.y;cursor+=62;}});
-  var thesisBottom=THESIS.length?150+(THESIS.length-1)*124+58:0,height=Math.max(620,cursor+34,thesisBottom),edges=graphEdges(),thesisEdges=displayedThesisEdges(edges),bounds=storyBounds();
+  var bounds=storyBounds(),axis=atlasTimeAxis(bounds.min,bounds.max,bandStartX,bandEndX);
+  rows.forEach(function(row){if(row.type==='family'){row.top=cursor;row.y=cursor+19;cursor+=43;}else{row.layout=packDatedFacts(factsForArc(row.arc),axis,12);row.height=Math.max(62,row.layout.levels*12+20);row.top=cursor;row.y=cursor+row.height/2;arcY[row.arc.id]=row.y;cursor+=row.height;}});
+  var thesisBottom=THESIS.length?150+(THESIS.length-1)*124+58:0,height=Math.max(620,cursor+34,thesisBottom),edges=graphEdges(),thesisEdges=displayedThesisEdges(edges);
   if(document.getElementById('edge-count')) document.getElementById('edge-count').textContent='arc→thesis: '+thesisEdges.length+' · graph: '+edges.length+' / '+EDGES.length;
   var hierarchySummary=document.getElementById('story-hierarchy-summary');if(hierarchySummary)hierarchySummary.textContent=hierarchySummaryText();
   var thesisY={}; THESIS.forEach(function(t,i){ thesisY[t.id]=150+i*124; });
   svg.setAttribute('viewBox','0 0 '+width+' '+height);
   var out='<rect width="'+width+'" height="'+height+'" fill="transparent"/><text x="'+labelX+'" y="30" class="svg-label">families and mechanisms</text><text x="'+bandStartX+'" y="30" class="svg-label">facts by event date</text><text x="'+thesisX+'" y="30" class="svg-label">thesis nodes</text>';
-  for(var year=bounds.min;year<=bounds.max;year+=1){var yearX=storyDateX(String(year)+'-01-01',bounds.min,bounds.max,bandStartX,bandEndX);out+='<line class="story-grid" x1="'+yearX.toFixed(1)+'" y1="48" x2="'+yearX.toFixed(1)+'" y2="'+(height-36)+'"/><text class="story-year" x="'+(yearX+4).toFixed(1)+'" y="44">'+year+'</text>';}
+  out+=timeAxisSvg(axis,52,height-36);
   out+='<line class="story-grid" x1="'+bandEndX+'" y1="48" x2="'+bandEndX+'" y2="'+(height-36)+'"/>';
   rows.forEach(function(row,i){
     if(row.type==='family'){
@@ -200,9 +201,8 @@ function renderStory(id){
       out+='<g class="family-row" data-family-filter="'+esc(family.id)+'" tabindex="0" role="button"><rect x="18" y="'+row.top+'" width="'+(width-42)+'" height="34" rx="6" fill="'+familyColor(family.id)+'" opacity=".09"/><rect x="18" y="'+row.top+'" width="5" height="34" rx="2" fill="'+familyColor(family.id)+'"/><text x="'+labelX+'" y="'+(row.y+2)+'" class="family-title">'+esc(trunc(familyTitle(family),54))+'</text><text x="'+bandStartX+'" y="'+(row.y+2)+'" class="family-sub">'+esc(meta)+'</text></g>';return;
     }
     var a=row.arc,y=row.y,c=familyColor(a.family_id),facts=factsForArc(a),first=facts[0],last=facts[facts.length-1],firstX=first?storyDateX(first.date,bounds.min,bounds.max,bandStartX,bandEndX):bandStartX,lastX=last?storyDateX(last.date,bounds.min,bounds.max,bandStartX,bandEndX):bandStartX,range=first&&last?String(first.date).slice(0,4)+'-'+String(last.date).slice(0,4):'undated',nested=Boolean(a.parent_arc_id)||a.display_role!=='mechanism',titleX=labelX+(nested?22:0);
-    out+='<g class="arc-row '+(nested?'is-nested':'is-root')+'" data-kind="arc" data-id="'+esc(a.id)+'"><rect x="16" y="'+(y-28)+'" width="'+(width-38)+'" height="56" rx="7" fill="'+(i%2?'rgba(255,255,255,.26)':'rgba(255,255,255,.48)')+'"/>'+(nested?'<path class="hierarchy-branch" d="M'+(labelX+7)+','+(y-21)+' V'+(y-7)+' H'+(titleX-5)+'" stroke="'+c+'"/>':'')+'<text x="'+titleX+'" y="'+(y-7)+'" class="arc-title">'+esc(trunc(arcTitle(a),nested?47:52))+'</text><text x="'+titleX+'" y="'+(y+13)+'" class="arc-sub">'+esc(arcRoleLabel(a))+' · '+facts.length+' facts · '+range+'</text>'+(facts.length?'<rect class="arc-band" x="'+firstX.toFixed(1)+'" y="'+(y-20)+'" width="'+Math.max(8,lastX-firstX).toFixed(1)+'" height="40" rx="8" fill="'+c+'" opacity=".14"/>':'')+'</g>';
-    var levelEnds=[-Infinity,-Infinity,-Infinity,-Infinity,-Infinity],levelOffsets=[-14,-7,0,7,14];
-    facts.forEach(function(e){var dotX=storyDateX(e.date,bounds.min,bounds.max,bandStartX,bandEndX),level=levelEnds.findIndex(function(previousX){return dotX-previousX>=10;});if(level<0)level=levelEnds.indexOf(Math.min.apply(null,levelEnds));levelEnds[level]=dotX;var dotY=y+levelOffsets[level],confidence=confidenceClass(e.confidence);out+='<circle class="event-dot '+esc(confidence)+'" data-kind="event" data-id="'+esc(e.id)+'" data-arc="'+esc(a.id)+'" data-date="'+esc(e.date)+'" cx="'+dotX.toFixed(1)+'" cy="'+dotY+'" r="4.7"><title>'+esc(e.date+' · '+e.title)+'</title></circle>';});
+    out+='<g class="arc-row '+(nested?'is-nested':'is-root')+'" data-kind="arc" data-id="'+esc(a.id)+'"><rect x="16" y="'+(row.top+3)+'" width="'+(width-38)+'" height="'+(row.height-6)+'" rx="7" fill="'+(i%2?'rgba(255,255,255,.26)':'rgba(255,255,255,.48)')+'"/>'+(nested?'<path class="hierarchy-branch" d="M'+(labelX+7)+','+(y-21)+' V'+(y-7)+' H'+(titleX-5)+'" stroke="'+c+'"/>':'')+'<text x="'+titleX+'" y="'+(y-7)+'" class="arc-title">'+esc(trunc(arcTitle(a),nested?47:52))+'</text><text x="'+titleX+'" y="'+(y+13)+'" class="arc-sub">'+esc(arcRoleLabel(a))+' · '+facts.length+' facts · '+range+'</text>'+(facts.length?'<rect class="arc-band" x="'+firstX.toFixed(1)+'" y="'+(row.top+6)+'" width="'+Math.max(8,lastX-firstX).toFixed(1)+'" height="'+(row.height-12)+'" rx="8" fill="'+c+'" opacity=".14"/>':'')+'</g>';
+    row.layout.points.forEach(function(p){var e=p.event,dotX=p.x,dotY=y+packedLevelOffset(p.level)*12,confidence=confidenceClass(e.confidence);out+='<circle class="event-dot '+esc(confidence)+'" data-kind="event" data-id="'+esc(e.id)+'" data-arc="'+esc(a.id)+'" data-date="'+esc(e.date)+'" cx="'+dotX.toFixed(1)+'" cy="'+dotY+'" r="4.7"><title>'+esc(e.date+' · '+e.title)+'</title></circle>';});
   });
   THESIS.forEach(function(t){ var y=thesisY[t.id]; out+='<g data-kind="thesis" data-id="'+esc(t.id)+'"><rect x="'+(thesisX-18)+'" y="'+(y-32)+'" width="238" height="66" rx="10" fill="#fffefa" stroke="rgba(28,32,38,.18)"/><text x="'+(thesisX-2)+'" y="'+(y-8)+'" class="arc-title">'+esc(trunc(thesisLabel(t),30))+'</text><text x="'+(thesisX-2)+'" y="'+(y+12)+'" class="arc-sub">'+esc(t.id)+'</text></g>'; });
   thesisEdges.forEach(function(e){var y1=arcY[edgeArcId(e)];if(y1==null)return;y1-=8;var tid=byThesis[e.target]?e.target:e.source,y2=thesisY[tid]||120;out+='<path class="edge-path '+esc(e.style||'')+(e.is_auto?' thin':'')+'" data-kind="edge" data-id="'+esc(e.id)+'" data-arc="'+esc(edgeArcId(e))+'" d="M'+pathStartX+','+y1+' C1070,'+y1+' 1085,'+y2+' '+(thesisX-22)+','+y2+'" stroke="'+edgeArcColor(e)+'" opacity="'+(e.is_auto?'.22':'.5')+'"><title>'+esc(edgeTitle(e))+'</title></path>'; });
@@ -214,29 +214,8 @@ function renderRecipes(){
   document.querySelectorAll('.recipe-card').forEach(function(card){card.onclick=function(){graphState.preset=graphState.preset===card.dataset.recipe?'':card.dataset.recipe;graphState.family='';graphState.arc='';graphState.relation='';document.getElementById('family-select').value='';document.getElementById('arc-select').value='';document.getElementById('relation-select').value='';renderStory('story-svg');renderRecipes();};});
 }
 function confidenceClass(v){ return String(v || 'D').slice(0,1).toUpperCase(); }
-function renderTimeline(){
-  var svg=document.getElementById('timeline-svg'); if(!svg) return;
-  var lanes=(D.visualLanes&&D.visualLanes.length)?D.visualLanes:[{id:'governance_law',label:'Governance and law'},{id:'energy_compute_chips',label:'Energy, compute and chips'},{id:'model_weights',label:'Models, weights and access'},{id:'decision_support_cognition',label:'Decision support and cognition'}];
-  var years=(D.summary.years&&D.summary.years.length)?D.summary.years:[2022,2026], minY=Math.min.apply(null,years), maxY=Math.max.apply(null,years);
-  var rowH=70, top=68, left=250, width=1240, height=Math.max(720,top+lanes.length*rowH+72);
-  var laneIds=lanes.map(function(l){return l.id;}), laneIndex=Object.fromEntries(lanes.map(function(l,i){return [l.id,i];}));
-  function xFor(date){ var s=String(date||''), y=Number(s.slice(0,4))||minY, m=Number(s.slice(5,7))||1, d=Number(s.slice(8,10))||1, start=Date.UTC(minY,0,1), end=Date.UTC(maxY+1,0,1), cur=Date.UTC(y,m-1,d); return left+((cur-start)/(end-start))*(width-left-54); }
-  function lanesFor(e){ var hits=arr(e.stack_layer).filter(function(l){return laneIds.indexOf(l)!==-1;}); return hits.length?hits:[lanes[0].id]; }
-  svg.setAttribute('viewBox','0 0 '+width+' '+height);
-  var out='<rect width="'+width+'" height="'+height+'" fill="transparent"/>';
-  for(var y=minY;y<=maxY+1;y+=1){ var xx=left+((Date.UTC(y,0,1)-Date.UTC(minY,0,1))/(Date.UTC(maxY+1,0,1)-Date.UTC(minY,0,1)))*(width-left-54); out+='<line class="axis" x1="'+xx+'" y1="28" x2="'+xx+'" y2="'+(height-42)+'"/>'; if(y<=maxY) out+='<text class="svg-id" x="'+(xx+5)+'" y="22">'+y+'</text>'; }
-  lanes.forEach(function(l,i){ var yy=top+i*rowH; out+='<line class="axis" x1="'+left+'" y1="'+yy+'" x2="'+(width-54)+'" y2="'+yy+'"/><text class="svg-label" x="24" y="'+(yy-6)+'">'+esc(trunc(laneLabel(l.id),34))+'</text><text class="svg-id" x="24" y="'+(yy+13)+'">'+esc(l.id)+'</text>'; });
-  var offsets={};
-  EV.slice().sort(function(a,b){return String(a.date).localeCompare(String(b.date));}).forEach(function(e){
-    lanesFor(e).forEach(function(l){
-      var i=laneIndex[l]||0, key=l+'-'+e.date;
-      offsets[key]=(offsets[key]||0)+1;
-      var c=confidenceClass(e.confidence), r=c==='A'?6:c==='B'?5.4:4.8, xx=xFor(e.date), yy=top+i*rowH-8+Math.min(offsets[key],7)*7;
-      out+='<circle class="timeline-dot '+esc(c)+'" data-kind="event" data-id="'+esc(e.id)+'" data-lane="'+esc(l)+'" cx="'+xx.toFixed(1)+'" cy="'+yy.toFixed(1)+'" r="'+r+'"><title>'+esc(laneLabel(l)+': '+e.title)+'</title></circle>';
-    });
-  });
-  svg.innerHTML=out; bindClicks(svg);
-}
+function renderTimeline(){ renderLayerTimeline(); }
+
 function renderStack(){
   var years=D.summary.years||[], layers=Object.keys(D.counts.stack_layers||{}).sort(), heat=function(c){return c===0?0:c===1?1:c<=3?2:c<=6?3:c<=10?4:5;};
   var html='<thead><tr><th>Layer</th>'+years.map(function(y){return '<th>'+y+'</th>';}).join('')+'<th>Total</th></tr></thead><tbody>';
@@ -272,8 +251,11 @@ function eventText(e){ return [e.id,e.title,e.date,e.actor,e.source_name,e.sourc
 function eventPass(e){ if(factState.q && eventText(e).indexOf(factState.q)===-1) return false; if(factState.jurisdiction && arr(e.jurisdictions).indexOf(factState.jurisdiction)===-1) return false; if(factState.actor && (factState.actor==='__unresolved__'?e.actor_classification_status!=='review_required':arr(e.actor_entities).indexOf(factState.actor)===-1))return false; if(factState.family && arr(e.arcFamilyIds).indexOf(factState.family)===-1) return false; if(factState.layer && arr(e.stack_layer).indexOf(factState.layer)===-1) return false; if(factState.year && String(e.year)!==factState.year) return false; if(factState.arc && arr(e.arcIds).indexOf(factState.arc)===-1) return false; if(factState.status && e.status!==factState.status) return false; if(factState.confidence && e.confidence!==factState.confidence) return false; if(factState.region && arr(e.regions).indexOf(factState.region)===-1) return false; if(factState.location && arr(e.locations).indexOf(factState.location)===-1) return false; if(factState.institution && arr(e.institutional_scopes).indexOf(factState.institution)===-1) return false; if(factState.geoContext && arr(e.geo_context).indexOf(factState.geoContext)===-1) return false; if(factState.geoScope && arr(e.geographic_scopes).indexOf(factState.geoScope)===-1) return false; if(factState.actorType && arr(e.actor_types).indexOf(factState.actorType)===-1) return false; if(factState.actorJurisdiction && arr(e.actor_jurisdictions).indexOf(factState.actorJurisdiction)===-1) return false; if(factState.source && e.source_type!==factState.source) return false; return true; }
 function renderFacts(){ var list=EV.filter(eventPass).sort(function(a,b){return String(b.date).localeCompare(String(a.date));}); document.getElementById('fact-count').textContent=list.length+' of '+EV.length+' facts'; document.getElementById('fact-list').innerHTML=list.map(function(e){ return '<article class="row" data-kind="event" data-id="'+esc(e.id)+'"><div class="id">'+esc(e.date)+'<br>'+esc(confidenceLabel(e.confidence))+' · '+esc(statusShort(e.status))+'</div><div><div class="row-title">'+esc(e.title)+'</div><div>'+tag(e.source_type)+arr(e.stack_layer).slice(0,3).map(function(l){return tag(laneLabel(l));}).join('')+tags(e.jurisdictions)+'</div></div><div class="badge">arcs: '+arr(e.arcIds).length+' · edges: '+arr(e.edgeIds).length+'</div></article>'; }).join('') || '<p class="small">No matching facts.</p>'; bindClicks(document.getElementById('fact-list')); }
 function renderClaims(){ document.getElementById('check-cards').innerHTML=CHECKS.map(function(c){return '<article class="card" data-kind="check" data-id="'+esc(c.id)+'"><div class="id">'+esc(c.id)+'</div><h3>'+esc(c.claim||c.title)+'</h3><div>'+tag(statusLabel(c.status))+tag(c.confidence)+tag(arr(c.supporting_evidence).length+' facts')+'</div><p class="small">'+esc(c.safe_wording||'')+'</p></article>';}).join(''); document.getElementById('claim-cards').innerHTML=CLAIMS.map(function(c){return '<article class="card" data-kind="claim" data-id="'+esc(c.id)+'"><div class="id">'+esc(c.id)+'</div><h3>'+esc(c.claim||c.title)+'</h3><div>'+tag(statusLabel(c.status))+tag(c.evidence_level||c.confidence)+'</div><p class="small">'+esc(c.recommended_phrasing||'')+'</p></article>';}).join(''); bindClicks(document.getElementById('check-cards')); bindClicks(document.getElementById('claim-cards')); }
-function renderSources(){ var groups=SOURCE_GROUPS.length?SOURCE_GROUPS:SOURCES.map(function(s){return {family:s.name||s.title||host(s.url),sources:[s],types:[s.type],used_by:s.used_by||[]};}); document.getElementById('source-list').innerHTML=groups.map(function(g){ var links=arr(g.sources).slice(0,5).map(function(s){ var label=s.name||s.title||host(s.url); return s.url?'<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(trunc(label,90))+'</a>':esc(label); }).join('<br>'); return '<div class="source-item"><b>'+esc(g.family)+'</b><br><span class="small">'+esc(arr(g.types).slice(0,3).join(', ')||'source')+' · materials: '+arr(g.sources).length+' · uses: '+arr(g.used_by).length+'</span><div class="block">'+links+'</div></div>'; }).join(''); }
-function taxonomyDetail(e){ var groups=[['Regions',e.regions],['Places / territories',e.locations],['Institutional scopes',e.institutional_scopes],['Context tags',e.geo_context],['Geographic scope',e.geographic_scopes],['Actors',e.actors],['Actor types',arr(e.actor_types).map(actorTypeLabel)]]; return groups.filter(function(g){return arr(g[1]).length;}).map(function(g){return '<div class="block"><h4>'+esc(g[0])+'</h4>'+tags(g[1])+'</div>';}).join(''); }
+function renderSources(){
+ var groups=SOURCE_GROUPS.length?SOURCE_GROUPS:SOURCES.map(function(s){return {family:s.name||s.title||host(s.url),sources:[s],types:[s.type],used_by:s.used_by||[]};});
+ document.getElementById('source-list').innerHTML=groups.map(function(g){return '<div class="source-item"><b>'+esc(g.family)+'</b><br><span class="small">'+esc(arr(g.types).slice(0,3).join(', ')||'source')+' · materials: '+arr(g.sources).length+' · uses: '+arr(g.used_by).length+'</span>'+sourceGroupLinks(g)+'</div>';}).join('');
+}
+function taxonomyDetail(e){ var groups=[['Regions',e.regions],['Places / territories',e.locations],['Institutional scopes',e.institutional_scopes],['Context tags',e.geo_context],['Geographic scope',e.geographic_scopes],['Actors',e.actor_entities],['Actor types',arr(e.actor_types).map(actorTypeLabel)]]; return groups.filter(function(g){return arr(g[1]).length;}).map(function(g){return '<div class="block"><h4>'+esc(g[0])+'</h4>'+tags(g[1])+'</div>';}).join(''); }
 function eventMeta(e){ return tag(e.date)+(e.date_basis?tag(dateBasisLabel(e.date_basis)):'')+(e.date_status?tag(dateStatusLabel(e.date_status)):'')+(e.status_update_date?tag('updated: '+e.status_update_date):'')+(e.current_legal_status?tag(e.current_legal_status):'')+(e.money_status?tag(moneyStatusLabel(e.money_status)):'')+tag(confidenceLabel(e.confidence))+tag(statusLabel(e.status))+tag(e.source_type)+tags(e.jurisdictions); }
 function primaryArcBlockEn(e){
   if(!e.story_primary_arc_id)return '';
@@ -295,7 +277,7 @@ function detailHtml(k,id){
   }
   if(k==='arc'){
     var a=byArc[id],facts=factsForArc(a),arcEdges=EDGES.filter(function(e){return e.arc_id===a.id;}),children=ARCS.filter(function(item){return item.parent_arc_id===a.id;}).sort(function(left,right){return(left.display_order||999)-(right.display_order||999);});
-    return '<h2>'+esc(arcTitle(a))+'</h2><div class="id">'+esc(a.id)+'</div><div>'+tag(familyTitle(a.family_id))+tag(arcRoleLabel(a))+tag(a.arc_type)+tag(a.status)+tags(arr(a.visual_lanes).map(laneLabel))+'</div>'+(a.parent_arc_id?'<div class="block hierarchy-detail"><h4>Parent story</h4>'+linkButton(a.parent_arc_id)+'</div>':'')+(children.length?'<div class="block hierarchy-detail"><h4>Nested stories</h4>'+children.map(function(item){return linkButton(item.id);}).join(' ')+'</div>':'')+'<div class="block"><h4>Arc thesis</h4><p>'+esc(a.thesis_en||a.thesis||'')+'</p></div><div class="quote block"><h4>Limits of the inference</h4><p>'+esc(a.safe_wording_en||a.safe_wording||'')+'</p></div><div class="block"><h4>Dated facts</h4>'+facts.map(function(e){return linkButton(e.id);}).join(' ')+'</div><div class="block"><h4>What the evidence does not establish</h4><p>'+esc(arr(a.counterpoints_en||a.counterpoints).join(' · '))+'</p></div><details class="block"><summary>Technical graph links ('+arcEdges.length+')</summary><div class="block">'+arcEdges.slice(0,36).map(function(e){return linkButton(e.id);}).join(' ')+'</div></details>';
+    return '<h2>'+esc(arcTitle(a))+'</h2><div class="id">'+esc(a.id)+'</div><div>'+tag(familyTitle(a.family_id))+tag(arcRoleLabel(a))+tag(arcMetadataLabel(a.arc_type))+tag(arcMetadataLabel(a.status))+tags(arr(a.visual_lanes).map(laneLabel))+'</div>'+(a.parent_arc_id?'<div class="block hierarchy-detail"><h4>Parent story</h4>'+linkButton(a.parent_arc_id)+'</div>':'')+(children.length?'<div class="block hierarchy-detail"><h4>Nested stories</h4>'+children.map(function(item){return linkButton(item.id);}).join(' ')+'</div>':'')+'<div class="block"><h4>Arc thesis</h4><p>'+esc(a.thesis_en||a.thesis||'')+'</p></div><div class="quote block"><h4>Limits of the inference</h4><p>'+esc(a.safe_wording_en||a.safe_wording||'')+'</p></div><div class="block"><h4>Dated facts</h4>'+facts.map(function(e){return linkButton(e.id);}).join(' ')+'</div><div class="block"><h4>What the evidence does not establish</h4><p>'+esc(arr(a.counterpoints_en||a.counterpoints).join(' · '))+'</p></div><details class="block"><summary>Technical graph links ('+arcEdges.length+')</summary><div class="block">'+arcEdges.slice(0,36).map(function(e){return linkButton(e.id);}).join(' ')+'</div></details>';
   }
   if(k==='edge'){
     var ed=byEdge[id];
@@ -308,7 +290,7 @@ function detailHtml(k,id){
   }
   if(k==='check'){
     var cc=byCheck[id];
-    return '<h2>'+esc(cc.claim||cc.title)+'</h2><div class="id">'+esc(cc.id)+'</div><div>'+tag(statusLabel(cc.status))+tag(confidenceLabel(cc.confidence))+'</div><div class="quote block"><h4>Safe wording</h4><p>'+esc(cc.safe_wording||'')+'</p></div><div class="block"><h4>Supporting evidence</h4>'+arr(cc.supporting_evidence).map(linkButton).join(' ')+'</div>';
+    return '<h2>'+esc(cc.claim||cc.title)+'</h2><div class="id">'+esc(cc.id)+'</div><div>'+tag(statusLabel(cc.status))+tag(confidenceLabel(cc.confidence))+'</div><div class="quote block"><h4>Safe wording</h4><p>'+esc(cc.safe_wording_en||cc.safe_wording||'')+'</p></div>'+(cc.what_could_break_it?'<div class="quote block"><h4>What could weaken the claim</h4><p>'+esc(cc.what_could_break_it)+'</p></div>':'')+claimEvidenceSections(cc,linkButton);
   }
   if(k==='thesis'){
     var t=byThesis[id];
@@ -337,13 +319,34 @@ function bindDetailActions(root){ if(!root) return; root.querySelectorAll('[data
 var atlasRestoring = true;
 var atlasReturnFocus = null;
 var atlasReady = false;
+var atlasDefaults = null;
+var atlasHashWrite = null;
+var atlasAppliedHash = null;
 var resilienceState = { track:'RES_TRACK_MAINTENANCE_CAPACITY', open:false };
 var behaviorState = { subdomain:'all', track:'', mechanism:'' };
+// Keep archived IDs addressable while presenting one event with all its provenance.
+function canonicalEventId(id){return byEvent[id]&&byEvent[id].canonical_event_id||id;}
+function initCanonicalPresentation(){
+ EV=EV.filter(function(e){return !e.exclude_from_presentation;}).map(function(e){
+  var aliases=alist(e.alias_event_ids).map(function(id){return byEvent[id];}).filter(Boolean);
+  if(!aliases.length)return e;
+  var out=Object.assign({},e);
+  ['sources','caveats','edgeIds','arcIds','story_secondary_arc_ids'].forEach(function(key){
+   var seen=new Set();out[key]=[e].concat(aliases).flatMap(function(item){return alist(item[key]);}).filter(function(item){var value=JSON.stringify(item);if(seen.has(value))return false;seen.add(value);return true;});
+  });
+  byEvent[e.id]=out;return out;
+ });
+ EDGES=EDGES.map(function(edge){return Object.assign({},edge,{source:canonicalEventId(edge.source),target:canonicalEventId(edge.target)});});
+}
 function tx(ru,en){ return ATLAS_RU ? ru : en; }
 function alist(x){ return Array.isArray(x) ? x : (x == null ? [] : [x]); }
 function lf(x,key){ return x && (x[key+'_'+(ATLAS_RU?'ru':'en')] || x[key] || '') || ''; }
 function vocab(group,id){ var x=alist(CYBER_FRAMEWORK[group]).find(function(v){return v.id===id;}); return x?lf(x,'label'):String(id||''); }
 function relationLabel(id){var label=(D.relationLabels||{})[id];return label?label[ATLAS_RU?'ru':'en']:String(id||'').replace(/_/g,' ');}
+function arcMetadataLabel(value){
+ var labels={knowledge_and_institutional_outcomes:tx('Знание и институциональные результаты','Knowledge and institutional outcomes'),scoped_mixed_evidence:tx('Разные методы и границы проверки','Mixed methods and bounded evidence')};
+ return labels[value]||String(value||'').replace(/_/g,' ');
+}
 function arcRoleLabel(arcOrRole){
  var role=typeof arcOrRole==='string'?arcOrRole:(arcOrRole&&arcOrRole.display_role)||'mechanism';
  var item=alist((D.arcHierarchy||{}).role_definitions).find(function(x){return x.id===role;});
@@ -558,8 +561,27 @@ function renderOverview(){
  document.getElementById('thesis-grid').innerHTML=THESIS.map(function(n){return'<article class="card" data-kind="thesis" data-id="'+esc(n.id)+'"><h3>'+esc(lf(n,'label'))+'</h3><p class="small">'+esc(lf(n,'summary'))+'</p></article>';}).join('');
  renderAtlasStats();renderStory('overview-svg');bindAtlasCards(document.getElementById('thesis-grid'));
 }
+function researchMetadata(e){
+ if(!e.research_track)return '';
+ var labels={science:tx('Научное знание','Scientific knowledge'),medicine:tx('Медицина','Medicine'),work:tx('Труд и производство','Work and production'),education:tx('Обучение','Education')};
+ var pending=/pending|discrepancy/.test(e.research_review_status||'');
+ var method=e.research_evidence_kind||'';
+ var methodLabel=/randomized/.test(method)?tx('Рандомизированное исследование или сообщение о нём','Randomized study or a report of one'):/observational|survey|bibliometric|metascience|field_study/.test(method)?tx('Наблюдения или опрос; ограничения причинного вывода указаны в карточке','Observational study or survey; causal limits are stated in the record'):/report|disclosure|company|operator|infrastructure|policy|access/.test(method)?tx('Раскрытие, документация или сообщение участника','Disclosure, documentation or participant report'):tx('Исследование; метод и границы результата указаны в карточке','Research; methods and limits are stated in the record');
+ var html='<section class="block research-metadata"><h3>'+esc(labels[e.research_track])+'</h3><p>'+esc(methodLabel)+'</p>';
+ if(pending)html+='<p class="atlas-notice">'+tx('Проверка ограничена: полный методический разбор не завершён или источники расходятся. Подробности указаны в оговорках.','Limited review: full methods review is pending or sources disagree. See the caveats.')+'</p>';
+ if(e.date_basis==='source_observation_not_publication')html+='<p class="atlas-notice">'+tx('Дата на шкале обозначает наблюдение страницы. Дата публикации не установлена.','The timeline date records observation of the page. Publication date is unknown.')+'</p>';
+ if(e.research_revision_date)html+='<p>'+tx('Обновление исследования: ','Study revision: ')+esc(e.research_revision_date)+'. '+esc(lf(e,'date_note'))+'</p>';
+ if(e.geo_roles){
+  var g=e.geo_roles, countryNames=function(codes){return alist(codes).map(function(code){try{return new Intl.DisplayNames([ATLAS_RU?'ru':'en'],{type:'region'}).of(code);}catch(_){return code;}}).join(' · ');};
+  var rows=[[tx('Организации','Organizations'),alist(g.developer_organizations).join(' · ')],[tx('Аффилиации разработчиков','Developer affiliations'),countryNames(g.developer_country_codes)],[tx('Где проверяли','Validation locations'),countryNames(g.validation_country_codes)],[tx('Модели и методы','Models and methods'),alist(g.upstream_models).join(' · ')]];
+  html+='<details class="research-geography"><summary>'+tx('География и условия доступа','Geography and access terms')+'</summary><dl class="behavior-metadata-grid">'+rows.filter(function(x){return x[1];}).map(function(x){return'<div><dt>'+esc(x[0])+'</dt><dd>'+esc(x[1])+'</dd></div>';}).join('')+'</dl><p>'+esc(lf(g,'access_notes'))+'</p><p class="small">'+esc(lf(g,'interpretation_limit'))+'</p></details>';
+ }
+ if(lf(e,'mechanism'))html+='<details><summary>'+tx('Связь с рамкой: интерпретация','Framework connection: interpretation')+'</summary><p>'+esc(lf(e,'mechanism'))+'</p></details>';
+ if(alist(e.historical_versions).length)html+='<details><summary>'+tx('Предыдущая версия исследования','Previous study version')+'</summary>'+e.historical_versions.map(function(v){return'<p><b>'+esc(v.date)+'</b> '+esc(lf(v,'summary'))+'</p>';}).join('')+'</details>';
+ return html+'</section>';
+}
 function metadataBlock(e){
- var html='';
+ var html=researchMetadata(e);
  if(e.primary_domain_id){
   html+='<section class="block governance-card"><h3>'+tx('Тип, сила и область применения','Type, force and scope')+'</h3><dl class="governance-grid">';
   [[tx('Документ / событие','Document / event'),vocab('artifact_kinds',e.artifact_kind)],[tx('Нормативная сила','Normative force'),vocab('normative_forces',e.normative_force)],[tx('Стадия','Stage'),vocab('implementation_stages',e.implementation_stage)],[tx('Основной домен','Primary domain'),lf(cyberDomainMeta(e.primary_domain_id),'label')]].forEach(function(x){html+='<div><dt>'+esc(x[0])+'</dt><dd>'+esc(x[1])+'</dd></div>';});
@@ -586,25 +608,30 @@ function metadataBlock(e){
   ].filter(function(row){return row[1];});
   html+='<section class="block behavior-metadata"><h3>'+tx('Поведение, контроль и автономия','Behaviour, control and autonomy')+'</h3><dl class="behavior-metadata-grid">'+rows.map(function(row){return'<div><dt>'+esc(row[0])+'</dt><dd>'+esc(row[1])+'</dd></div>';}).join('')+'</dl>'+(e.evidence_method?'<p class="small"><b>'+tx('Метод: ','Method: ')+'</b>'+esc(String(e.evidence_method).replace(/_/g,' '))+'</p>':'')+'</section>';
  }
- if(e.current_state){var st=e.current_state;var note=lf(st,'date_note')||(e.id==='SIG_2026_KIMI_K3_OPEN_WEIGHT_ANNOUNCEMENT'?tx('Дата первого выпуска весов не установлена. Наблюдение не переносится на июльскую точку.','First weight-release date is not established. This observation does not backdate availability to July.'):tx('Наблюдение не меняет дату исходного события.','The observation does not change the original event date.'));html+='<section class="block state-card"><h3>'+tx('Наблюдение состояния · ','State observed · ')+esc(st.observed_at)+'</h3><p>'+esc(lf(st,'summary'))+'</p><p class="small">'+tx('Исходная запись: ','Original record: ')+esc(e.date)+'. '+esc(note)+'</p></section>';}
+ var st=stateObservation(e);if(st){html+='<section class="block state-card"><h3>'+tx('Уточнение · ','Update · ')+esc(st.date)+'</h3><p>'+esc(st.summary)+'</p><p class="small">'+tx('Исходное событие: ','Original event: ')+esc(e.date)+'. '+esc(st.note)+'</p></section>';}
  html+=resilienceMetadata(e);
  if(alist(e.mechanism_effects).length)html+='<section class="block effect-card"><h3>'+tx('Эффект на конкретный механизм','Effect on a specific mechanism')+'</h3>'+e.mechanism_effects.map(function(x){return'<p><b>'+esc(relationLabel(x.direction))+' · '+esc(x.actor)+'</b></p><p>'+esc(lf(x,'interpretation'))+'</p>';}).join('')+'<p class="small">'+tx('Редакционная интерпретация, не измеренный причинный эффект.','Editorial interpretation, not a measured causal effect.')+'</p></section>';
  if(e.actor_classification_status==='review_required')html+='<section class="block atlas-notice"><h3>'+tx('Актор требует уточнения','Actor needs review')+'</h3><p>'+esc(alist(e.actor_unclassified).join(' · '))+'</p><p>'+tx('Исходная метка сохранена и доступна поиском и фильтром «Не разобраны». Организация не угадана автоматически.','The raw label is searchable and included in the unresolved filter. No organisation was guessed.')+'</p></section>';
  return html;
 }
-function latestClarificationBlock(event){
- var text=lf(event,'current_state');
- if(typeof text!=='string'||!text.trim())return '';
- return '<section class="block quote"><h3>'+tx('Последнее уточнение','Latest clarification')+(event.current_state_as_of?' · '+esc(event.current_state_as_of):'')+'</h3><p>'+esc(text)+'</p></section>';
-}
 function openDetail(k,id,options){
+ if(k==='event')id=canonicalEventId(id);
  if(ATLAS_RU&&k==='check')k='claimCheck';if(!ATLAS_RU&&k==='claimCheck')k='check';
  var maps={event:byEvent,arc:byArc,edge:byEdge,claim:byClaim,claimCheck:byCheck,check:byCheck,thesis:byThesis,counterargument:byCounter,gap:byGap};
  if(maps[k]&&!maps[k][id])return;
  if(!currentDetail)atlasReturnFocus=document.activeElement;
  _legacyOpenDetail(k,id,options);
  if(!currentDetail)return;
- var root=document.getElementById('detail'),h=root.querySelector('h2');if(h){h.id='detail-title';if(k==='event')h.insertAdjacentHTML('afterend',latestClarificationBlock(byEvent[id])+metadataBlock(byEvent[id]));}
+ var root=document.getElementById('detail'),h=root.querySelector('h2');if(h){h.id='detail-title';if(k==='event')h.insertAdjacentHTML('afterend',metadataBlock(byEvent[id]));}
+ var link=ATLAS_RU?detailLink:linkButton;
+ if(k==='arc'&&alist(byArc[id].context_nodes).length)root.insertAdjacentHTML('beforeend','<section class="block historical-context"><h4>'+tx('Исторические предпосылки вне периода','Historical context outside this period')+'</h4>'+byArc[id].context_nodes.map(link).join(' ')+'</section>');
+ if(k==='event'){
+  var event=byEvent[id],review=event.audit_actor_types;
+  if(alist(event.alias_event_ids).length)root.insertAdjacentHTML('beforeend','<section class="block alias-provenance"><h4>'+tx('Объединённая запись','Consolidated record')+'</h4><p>'+esc(lf(event,'dedupe_note'))+'</p><code>'+esc(event.alias_event_ids.join(', '))+'</code></section>');
+  if(alist(event.context_arc_ids).length)root.insertAdjacentHTML('beforeend','<section class="block context-arcs"><h4>'+tx('Контекстные связи','Contextual associations')+'</h4>'+event.context_arc_ids.map(link).join(' ')+'</section>');
+  if(review&&review.status!=='resolved')root.insertAdjacentHTML('beforeend','<section class="block actor-review"><h4>'+tx('Тип актора требует уточнения','Actor type needs review')+'</h4><p>'+esc(alist(review.unresolved_entities).join(' · ')||tx('В справочнике этой карточки нет именованного актора.','This record has no named actor in its entity registry.'))+'</p></section>');
+ }
+ bindAtlasCards(root);
  var modal=document.getElementById('modal');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
  var drawer=modal.querySelector('.drawer');drawer.setAttribute('role','dialog');drawer.setAttribute('aria-modal','true');drawer.setAttribute('aria-labelledby','detail-title');drawer.scrollTop=0;
  writeAtlasHash();
@@ -615,40 +642,73 @@ function closeDetail(){var had=!!currentDetail;_legacyCloseDetail();document.bod
 function switchTab(id){if(!document.getElementById('view-'+id))return;_legacySwitchTab(id);writeAtlasHash();}
 function filterMap(){return {'filter-jurisdiction':'jurisdiction','filter-actor':'actor','filter-family':'family','filter-lane':'lane','filter-layer':'layer','filter-year':'year','filter-arc':'arc','filter-relation':'relation','filter-status':'status','filter-confidence':'confidence','filter-region':'region','filter-location':'location','filter-institution':'institution','filter-geo-context':'geoContext','filter-geo-scope':'geoScope','filter-actor-type':'actorType','filter-actor-jurisdiction':'actorJurisdiction','filter-source':'source'};}
 function activeFacts(){return ATLAS_RU?catalogState:factState;}
-function writeAtlasHash(){
+function atlasStateGroups(){return [['c.',cyberState],['b.',behaviorState],['r.',resilienceState],['f.',activeFacts()],['g.',graphState]];}
+function atlasLanguageParams(params,ru){
+ var p=new URLSearchParams(params),nativeKey=ru?'f.lane':'f.layer',otherKey=ru?'f.layer':'f.lane';
+ if(!p.has(nativeKey)&&p.has(otherKey))p.set(nativeKey,p.get(otherKey));p.delete(otherKey);
+ var tab=p.get('tab');if(ru&&tab==='facts')p.set('tab','catalog');if(!ru&&tab==='catalog')p.set('tab','facts');if(ru&&tab==='overview')p.set('tab','story');
+ if(ru&&p.get('kind')==='check')p.set('kind','claimCheck');if(!ru&&p.get('kind')==='claimCheck')p.set('kind','check');
+ return p;
+}
+function initAtlasNavigation(){
+ var view=document.querySelector('.view.active');atlasDefaults={tab:view?view.id.slice(5):tx('story','overview'),states:{}};
+ atlasStateGroups().forEach(function(pair){atlasDefaults.states[pair[0]]=Object.assign({},pair[1]);});
+ document.addEventListener('change',function(e){writeAtlasHash(e.target.id==='search'?'replace':'push');});
+ document.addEventListener('input',function(e){if(e.target.id==='search')writeAtlasHash('replace');});
+ document.addEventListener('click',function(e){if(e.target.closest('button'))writeAtlasHash();});
+ window.addEventListener('popstate',restoreAtlasHash);window.addEventListener('hashchange',restoreAtlasHash);
+ atlasReady=true;restoreAtlasHash();
+}
+function writeAtlasHash(mode){
+ if(atlasRestoring||!atlasReady)return;
+ mode=mode==='replace'?'replace':'push';
+ // A drawer action can change filters, close the drawer and switch tabs together.
+ if(atlasHashWrite){if(mode==='push')atlasHashWrite.mode=mode;return;}
+ var pending={mode:mode};atlasHashWrite=pending;
+ queueMicrotask(function(){if(atlasHashWrite!==pending)return;atlasHashWrite=null;commitAtlasHash(pending.mode);});
+}
+function commitAtlasHash(mode){
  if(atlasRestoring||!atlasReady)return;
  var p=new URLSearchParams(),view=document.querySelector('.view.active');p.set('tab',view?view.id.slice(5):tx('story','overview'));
- [['c.',cyberState],['b.',behaviorState],['r.',resilienceState],['f.',activeFacts()],['g.',graphState]].forEach(function(pair){Object.keys(pair[1]).sort().forEach(function(k){var v=pair[1][k];if(v!==''&&v!=null)p.set(pair[0]+k,String(v));});});
+ atlasStateGroups().forEach(function(pair){Object.keys(pair[1]).sort().forEach(function(k){var v=pair[1][k];if(v!==''&&v!=null)p.set(pair[0]+k,String(v));});});
  if(currentDetail){p.set('kind',currentDetail.kind||currentDetail.k);p.set('id',currentDetail.id);if((currentDetail.kind||currentDetail.k)==='event')p.set('event',currentDetail.id);}
- var hash='#'+p.toString();if(location.hash!==hash){try{history.replaceState(null,'',hash);}catch(e){/* embedding sandboxes may prohibit history */}}
- document.querySelectorAll('a[data-language-link]').forEach(function(a){a.setAttribute('href',(a.getAttribute('href')||'').split('#')[0]+hash);});
+ var hash='#'+p.toString(),saved={hash:hash,detailHistory:detailHistory.map(function(item){return Object.assign({},item);})};
+ try{
+  if(location.hash!==hash)history[mode==='replace'?'replaceState':'pushState'](Object.assign({},history.state,{atlasNavigation:saved}),'',hash);
+  else if(JSON.stringify(history.state&&history.state.atlasNavigation)!==JSON.stringify(saved))history.replaceState(Object.assign({},history.state,{atlasNavigation:saved}),'',hash);
+  atlasAppliedHash=hash;
+ }catch(e){console.warn('Atlas navigation history could not be updated.',e);}
+ document.querySelectorAll('a[data-language-link]').forEach(function(a){var base=(a.getAttribute('href')||'').split('#')[0],ru=base.split('?')[0].endsWith('ai-power-atlas-ru.html');a.setAttribute('href',base+'#'+atlasLanguageParams(p,ru).toString());});
 }
-function restoreAtlasHash(){
- atlasRestoring=true;
- var raw=location.hash.slice(1),p=new URLSearchParams(raw.includes('=')?raw:''),tab=p.get('tab')||(raw&&!raw.includes('=')?raw:'');
- [['c.',cyberState],['b.',behaviorState],['r.',resilienceState],['f.',activeFacts()],['g.',graphState]].forEach(function(pair){Object.keys(pair[1]).forEach(function(k){if(!p.has(pair[0]+k))return;var v=p.get(pair[0]+k);pair[1][k]=typeof pair[1][k]==='boolean'?v==='true':v;});});
+function restoreAtlasHash(event){
+ if(event&&location.hash===atlasAppliedHash)return;
+ atlasHashWrite=null;atlasRestoring=true;
+ var raw=location.hash.slice(1),p=new URLSearchParams(raw.includes('=')?raw:'');if(raw&&!raw.includes('='))p.set('tab',raw);p=atlasLanguageParams(p,ATLAS_RU);
+ var tab=p.get('tab')||atlasDefaults.tab,saved=history.state&&history.state.atlasNavigation;
+ if(!document.getElementById('view-'+tab))tab=atlasDefaults.tab;
+ atlasStateGroups().forEach(function(pair){var defaults=atlasDefaults.states[pair[0]];Object.keys(defaults).forEach(function(k){var key=pair[0]+k,v=p.has(key)?p.get(key):defaults[k];pair[1][k]=typeof defaults[k]==='boolean'?(p.has(key)?v==='true':v):v;});});
  var map=filterMap(),f=activeFacts();Object.keys(map).forEach(function(id){var n=document.getElementById(id);if(n)n.value=f[map[id]]||'';});
  var search=document.getElementById('search');if(search)search.value=f.q||'';
  ['family','arc','relation'].forEach(function(k){var n=document.getElementById(k+'-select');if(n)n.value=graphState[k]||'';});
- syncGraphControls();
+ syncGraphControls();renderRecipes();
  syncCyberControls();if(ATLAS_RU){renderCatalog();renderStoryMap();}else{renderFacts();renderStory('story-svg');renderStory('overview-svg');}
  renderCyber();
- if(tab==='facts'&&ATLAS_RU)tab='catalog';if(tab==='catalog'&&!ATLAS_RU)tab='facts';if(tab==='overview'&&ATLAS_RU)tab='story';
- if(tab)switchTab(tab);
+ switchTab(tab);
  var id=p.get('event')||p.get('id'),kind=p.get('event')?'event':p.get('kind');
- if(id&&kind)openDetail(kind,id,{replace:true});else if(currentDetail)closeDetail();
- atlasRestoring=false;writeAtlasHash();
+ // URL restoration must not inherit a previous drawer or its internal Back chain.
+ if(currentDetail)closeDetail();detailHistory=[];
+ if(id&&kind){if(saved&&saved.hash===location.hash&&Array.isArray(saved.detailHistory))detailHistory=saved.detailHistory.map(function(item){return Object.assign({},item);});openDetail(kind,id,{replace:true});if(!currentDetail)detailHistory=[];}
+ atlasRestoring=false;commitAtlasHash('replace');
 }
 function initAtlasReview(){
  var actor=document.getElementById('filter-actor');
  if(actor&&!actor.querySelector('[value="__unresolved__"]'))actor.insertAdjacentHTML('beforeend','<option value="__unresolved__">'+tx('Не разобраны · ','Unresolved · ')+(D.classificationReviewQueue||[]).length+'</option>');
  var notice=document.getElementById('actor-review-notice');if(notice)notice.innerHTML=tx('Неразобранные исходные обозначения: ','Unresolved raw labels: ')+(D.classificationReviewQueue||[]).length+'. '+tx('Они сохранены в поиске и отдельном фильтре, а не исключены из набора.','They remain searchable and have a dedicated filter rather than disappearing.');
- var state=document.getElementById('state-observations');if(state)state.innerHTML=EV.filter(function(e){return e.current_state;}).map(function(e){return'<article class="block state-card" data-kind="event" data-id="'+esc(e.id)+'"><h3>'+esc(e.current_state.observed_at)+' · '+esc(lf(e.current_state,'title'))+'</h3><p>'+esc(lf(e.current_state,'summary'))+'</p><p class="small">'+tx('Отдельное наблюдение состояния. Исходный анонс: ','Separate state observation. Original announcement: ')+esc(e.date)+'</p></article>';}).join('');bindAtlasCards(state);
+ renderChronologyUpdates();
  var modal=document.getElementById('modal'),tools=modal.querySelector('.drawer-tools');var btn=document.createElement('button');btn.type='button';btn.id='copy-record-link';btn.className=tx('ghost-btn','btn');btn.textContent=tx('Ссылка на запись','Copy record link');btn.onclick=async function(){var u=location.href;try{await navigator.clipboard.writeText(u);btn.textContent=tx('Скопировано','Copied');}catch(e){var box=document.getElementById('permalink-fallback');if(!box){box=document.createElement('input');box.id='permalink-fallback';box.readOnly=true;box.setAttribute('aria-label',tx('Постоянная ссылка','Permalink'));tools.after(box);}box.value=u;box.focus();box.select();}setTimeout(function(){btn.textContent=tx('Ссылка на запись','Copy record link');},1500);};tools.insertBefore(btn,tools.lastElementChild);
  document.querySelectorAll('a[href$="ai-power-atlas.html"],a[href$="ai-power-atlas-ru.html"]').forEach(function(a){a.dataset.languageLink='1';});
- document.addEventListener('change',function(){setTimeout(writeAtlasHash,0);});document.addEventListener('input',function(e){if(e.target.id==='search')setTimeout(writeAtlasHash,0);});document.addEventListener('click',function(e){if(e.target.closest('button'))setTimeout(writeAtlasHash,0);});
  document.addEventListener('keydown',function(e){if(e.key!=='Tab'||!currentDetail)return;var nodes=Array.from(modal.querySelectorAll('button:not([disabled]),a[href],input,[tabindex="0"]')).filter(function(n){return n.getClientRects().length;});if(!nodes.length)return;var first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}});
- window.addEventListener('hashchange',restoreAtlasHash);atlasReady=true;restoreAtlasHash();
+ initAtlasNavigation();
 }
 
 
@@ -669,7 +729,7 @@ function renderResilienceLayer(events,all){
  var claimIds=selected&&alist(selected.claim_ids).length?selected.claim_ids:[CYBER_FRAMEWORK.resilience_claim_id];
  document.getElementById('resilience-claim').innerHTML=claimIds.map(function(id){var claim=alist(D.claims).find(function(c){return c.id===id;});if(!claim)return '';return '<button type="button" class="resilience-claim" data-kind="claim" data-id="'+esc(id)+'">'+tx('Тезис: ','Claim: ')+esc(lf(claim,'title'))+'</button>';}).join('');
  var cards=document.getElementById('resilience-events');
- cards.innerHTML=shown.length?shown.map(function(e){var m=resMeta('defense_evidence_kinds',e.defense_evidence_kind);return '<article class="resilience-evidence-card" data-kind="event" data-id="'+esc(e.id)+'"><div class="resilience-card-meta"><time>'+esc(e.date)+'</time><span>'+esc(m?lf(m,'label'):tx('Ранее проверенная запись','Previously reviewed record'))+'</span></div><h4>'+esc(e.title)+'</h4><p>'+esc(lf(e,'summary'))+'</p><small>'+esc(vocab('implementation_stages',e.implementation_stage))+(e.current_state?' · '+tx('обновлено наблюдением ','state observed ')+esc(e.current_state.observed_at):'')+(e.editorial_priority===3?' · '+tx('предыстория','historical context'):'')+(e.date_basis==='observation_date_publication_unknown'?' · '+tx('дата наблюдения','observation date'):'')+'</small></article>';}).join(''):'<p class="atlas-notice">'+tx('В этой дорожке нет совпадений с верхними фильтрами.','This track has no matches under the current filters.')+'</p>';
+ cards.innerHTML=shown.length?shown.map(function(e){var m=resMeta('defense_evidence_kinds',e.defense_evidence_kind);return '<article class="resilience-evidence-card" data-kind="event" data-id="'+esc(e.id)+'"><div class="resilience-card-meta"><time>'+esc(e.date)+'</time><span>'+esc(m?lf(m,'label'):tx('Ранее проверенная запись','Previously reviewed record'))+'</span></div><h4>'+esc(e.title)+'</h4><p>'+esc(lf(e,'summary'))+'</p><small>'+esc(vocab('implementation_stages',e.implementation_stage))+(stateObservation(e)?' · '+tx('обновлено наблюдением ','state observed ')+esc(stateObservation(e).date):'')+(e.editorial_priority===3?' · '+tx('предыстория','historical context'):'')+(e.date_basis==='observation_date_publication_unknown'?' · '+tx('дата наблюдения','observation date'):'')+'</small></article>';}).join(''):'<p class="atlas-notice">'+tx('В этой дорожке нет совпадений с верхними фильтрами.','This track has no matches under the current filters.')+'</p>';
  box.ontoggle=function(){if(resilienceState.open!==box.open){resilienceState.open=box.open;writeAtlasHash();}};
  bindAtlasCards(cards);bindAtlasCards(document.getElementById('resilience-claim'));
 }
@@ -687,6 +747,88 @@ function resilienceMetadata(e){
  return h;
 }
 
+function stateObservation(event){
+ var raw=event.current_state,object=raw&&typeof raw==='object'&&!Array.isArray(raw)?raw:null;
+ var summary=object?lf(object,'summary'):lf(event,'current_state');
+ if(typeof summary!=='string'||!summary.trim())return null;
+ return {event:event,date:(object?object.observed_at:event.current_state_as_of)||'',title:(object&&lf(object,'title'))||event.title,summary:summary,
+  note:(object&&lf(object,'date_note'))||tx('Дата уточнения не заменяет дату исходного события.','The update date does not replace the original event date.')};
+}
+function renderChronologyUpdates(){
+ var box=document.getElementById('state-observations');
+ if(box){
+  var updates=EV.map(stateObservation).filter(Boolean).sort(function(a,b){return b.date.localeCompare(a.date)||a.event.id.localeCompare(b.event.id);});
+  box.innerHTML=updates.map(function(s){return '<article class="block state-card" data-kind="event" data-id="'+esc(s.event.id)+'"><h3><time>'+esc(s.date||tx('Дата не установлена','Date unknown'))+'</time> · '+esc(s.title)+'</h3><p>'+esc(s.summary)+'</p><p class="small">'+tx('Исходное событие: ','Original event: ')+esc(s.event.date)+'. '+esc(s.note)+'</p></article>';}).join('');
+  bindAtlasCards(box);
+ }
+ var recent=document.getElementById('recent-events');if(!recent)return;
+ var events=EV.slice().sort(function(a,b){return String(b.date).localeCompare(String(a.date))||a.id.localeCompare(b.id);}),limit=24;
+ function draw(){
+  recent.innerHTML=events.slice(0,limit).map(function(e){return '<button type="button" class="chronology-row" data-kind="event" data-id="'+esc(e.id)+'"><time>'+esc(e.date)+'</time><span>'+esc(e.title)+'</span></button>';}).join('');bindAtlasCards(recent);
+  var more=document.getElementById('recent-more');if(more){more.hidden=limit>=events.length;more.textContent=tx('Показать ещё 24','Show 24 more')+' · '+Math.min(limit,events.length)+' / '+events.length;more.onclick=function(){limit+=24;draw();};}
+ }
+ draw();
+}
+
+// Piecewise time is linear inside each labelled segment; the latest year has four wider quarters.
+function atlasTimeAxis(minYear,maxYear,left,right){
+ var segments=[],span=maxYear-minYear;
+ function add(start,end,label,weight){segments.push({start:start,end:end,label:label,weight:weight});}
+ if(span>3){add(Date.UTC(minYear,0,1),Date.UTC(maxYear-3,0,1),String(minYear)+'–'+String(maxYear-4).slice(2),1.25);}
+ for(var year=Math.max(minYear,maxYear-3);year<maxYear;year++)add(Date.UTC(year,0,1),Date.UTC(year+1,0,1),String(year),.85);
+ for(var q=0;q<4;q++)add(Date.UTC(maxYear,q*3,1),Date.UTC(maxYear,(q+1)*3,1),String(maxYear)+' '+tx(['I','II','III','IV'][q],'Q'+(q+1)),2.2);
+ var total=segments.reduce(function(n,s){return n+s.weight;},0),cursor=left;
+ segments.forEach(function(s){s.x0=cursor;s.x1=cursor+(right-left)*s.weight/total;cursor=s.x1;});
+ function x(date){
+  var value=String(date||''),time=Date.UTC(Number(value.slice(0,4))||minYear,(Number(value.slice(5,7))||1)-1,Number(value.slice(8,10))||1);
+  var s=segments.find(function(item){return time>=item.start&&time<item.end;})||(time<segments[0].start?segments[0]:segments[segments.length-1]);
+  return Math.max(left,Math.min(right,s.x0+(time-s.start)/(s.end-s.start)*(s.x1-s.x0)));
+ }
+ return {segments:segments,x:x,left:left,right:right};
+}
+function storyDateX(date,minYear,maxYear,startX,endX){return atlasTimeAxis(minYear,maxYear,startX,endX).x(date);}
+function timeAxisSvg(axis,top,bottom){
+ return axis.segments.map(function(s,i){return '<rect class="time-segment" x="'+s.x0.toFixed(2)+'" y="'+top+'" width="'+(s.x1-s.x0).toFixed(2)+'" height="'+(bottom-top)+'" fill="'+(i%2?'#edf3f8':'#fafbfc')+'" opacity=".55"/><line class="story-grid" x1="'+s.x0.toFixed(2)+'" y1="'+top+'" x2="'+s.x0.toFixed(2)+'" y2="'+bottom+'"/><text class="time-label" text-anchor="middle" x="'+((s.x0+s.x1)/2).toFixed(2)+'" y="'+(top-10)+'">'+esc(s.label)+'</text>';}).join('');
+}
+function packDatedFacts(events,axis,gap){
+ var ends=[],points=events.slice().sort(function(a,b){return String(a.date).localeCompare(String(b.date))||a.id.localeCompare(b.id);}).map(function(event){
+  var x=axis.x(event.date),level=ends.findIndex(function(previous){return x-previous>=gap;});
+  if(level<0)level=ends.length;
+  ends[level]=x;return {event:event,x:x,level:level};
+ });
+ return {points:points,levels:Math.max(1,ends.length)};
+}
+function packedLevelOffset(level){return level===0?0:Math.ceil(level/2)*(level%2?-1:1);}
+function renderLayerTimeline(){
+ var svg=document.getElementById('timeline-svg');if(!svg)return;
+ var bounds=storyBounds(),width=1400,left=310,right=width-30,axis=atlasTimeAxis(bounds.min,bounds.max,left,right),cursor=70;
+ var rows=alist(D.visualLanes).map(function(lane){
+  var facts=EV.filter(function(e){return alist(e.stack_layer).includes(lane.id);}),layout=packDatedFacts(facts,axis,16),height=Math.max(82,layout.levels*16+28);
+  var row={lane:lane,layout:layout,top:cursor,height:height,y:cursor+height/2};cursor+=height;return row;
+ });
+ var height=cursor+20;svg.setAttribute('viewBox','0 0 '+width+' '+height);
+ var out=timeAxisSvg(axis,50,height-20);
+ rows.forEach(function(row){
+  var label=ATLAS_RU?laneLabelRu(row.lane):laneLabel(row.lane.id);
+  out+='<line class="axis" x1="'+left+'" y1="'+row.y+'" x2="'+right+'" y2="'+row.y+'"/>';
+  out+='<foreignObject x="18" y="'+(row.y-28)+'" width="272" height="70"><div xmlns="http://www.w3.org/1999/xhtml" class="timeline-lane-label">'+esc(label)+'<small>'+row.layout.points.length+' '+tx('событий','events')+'</small></div></foreignObject>';
+  row.layout.points.forEach(function(p){var e=p.event,y=row.y+packedLevelOffset(p.level)*16;
+   out+='<circle class="timeline-dot '+esc(confidenceClass(e.confidence))+'" data-kind="event" data-id="'+esc(e.id)+'" data-lane="'+esc(row.lane.id)+'" data-date="'+esc(e.date)+'" cx="'+p.x.toFixed(2)+'" cy="'+y.toFixed(2)+'" r="6"><title>'+esc(e.date+' · '+e.title)+'</title></circle>';
+  });
+ });
+ svg.innerHTML=out;bindAtlasCards(svg);if(ATLAS_RU)bindSvgTooltips(svg);
+}
+function claimEvidenceSections(claim,link){
+ return [['supporting_evidence',tx('Связанные свидетельства','Linked evidence')],['qualifying_evidence',tx('Уточнения и ограничения','Qualifying evidence')]].map(function(pair){
+  var ids=alist(claim[pair[0]]);return ids.length?'<section class="block '+pair[0]+'"><h4>'+pair[1]+'</h4>'+ids.map(link).join(' ')+'</section>':'';
+ }).join('');
+}
+function sourceGroupLinks(group){
+ var sources=alist(group.sources),link=function(s){var label=s.title||s.name||host(s.url);return '<p>'+(s.url?'<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(label)+'</a>':esc(label))+'</p>';};
+ return '<div class="source-links">'+sources.slice(0,4).map(link).join('')+'</div>'+(sources.length>4?'<details class="source-more"><summary>'+tx('Ещё источники','More sources')+' · '+(sources.length-4)+'</summary><div class="source-links">'+sources.slice(4).map(link).join('')+'</div></details>':'');
+}
+
+initCanonicalPresentation();
 document.getElementById('detail-back').onclick=function(){ var previous=detailHistory.pop(); if(previous) openDetail(previous.k,previous.id,{replace:true}); };
 document.getElementById('modal').onclick=function(e){ if(e.target.dataset.close) closeDetail(); };
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeDetail(); });

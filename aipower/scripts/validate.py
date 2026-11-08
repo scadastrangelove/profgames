@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate v0.51 references, data contracts, legacy preservation and embedded-data parity.
+"""Validate v0.54 references, data contracts, legacy preservation and embedded-data parity.
 No third-party dependencies. --refresh-metadata updates counts only; assertions always run.
 """
 from pathlib import Path
@@ -21,17 +21,27 @@ def references(d):
   elif expected and id in typed and typed[id]!=expected:mismatch.append((field,id,expected,typed[id]))
  for a in d['arcs']:
   for x in a.get('key_nodes',[]):check('arc.key_nodes',x)
+  for x in a.get('context_nodes',[]):check('arc.context_nodes',x,'event')
   if a.get('family_id'):check('arc.family_id',a['family_id'],'arcFamily')
   if a.get('parent_arc_id'):check('arc.parent_arc_id',a['parent_arc_id'],'arc')
  for event in d['events']:
+  if event.get('canonical_event_id'):check('event.canonical_event_id',event['canonical_event_id'],'event')
+  for x in event.get('alias_event_ids',[]):check('event.alias_event_ids',x,'event')
+  for x in event.get('canonical_provenance_event_ids',[]):check('event.canonical_provenance_event_ids',x,'event')
+  for x in event.get('canonical_edge_ids',[]):check('event.canonical_edge_ids',x,'edge')
+  for x in event.get('context_arc_ids',[]):check('event.context_arc_ids',x,'arc')
+  for x in event.get('route_eligible_arc_ids',[]):check('event.route_eligible_arc_ids',x,'arc')
   if event.get('story_primary_arc_id'):check('event.story_primary_arc_id',event['story_primary_arc_id'],'arc')
   for x in event.get('story_secondary_arc_ids',[]):check('event.story_secondary_arc_ids',x,'arc')
  for x in d.get('arcHierarchy',{}).get('family_order',[]):check('arcHierarchy.family_order',x,'arcFamily')
  for e in d['edges']:
   for ep in ['source','target']:check('edge.'+ep,e[ep],e.get(ep+'_kind'))
+  for ep in ['canonical_source','canonical_target']:
+   if e.get(ep):check('edge.'+ep,e[ep],'event')
+  for x in e.get('polarity_basis_edge_ids',[]):check('edge.polarity_basis_edge_ids',x,'edge')
   if e.get('arc_id'):check('edge.arc_id',e['arc_id'])
   if e.get('arc_family_id'):check('edge.arc_family_id',e['arc_family_id'],'arcFamily')
- for name,prefix,fields in [('claims','claim',['supporting_evidence','qualifying_evidence']),('claimChecks','claim_check',['supporting_evidence']),('counterarguments','counterargument',['evidence'])]:
+ for name,prefix,fields in [('claims','claim',['supporting_evidence','qualifying_evidence']),('claimChecks','claim_check',['supporting_evidence','qualifying_evidence']),('counterarguments','counterargument',['evidence'])]:
   for c in d[name]:
    for field in fields:
     for x in c.get(field,[]):check(prefix+'.'+field,x)
@@ -39,6 +49,16 @@ def references(d):
   for field in ['strongest_supporting_evidence','strongest_counter_evidence']:
    for x in c.get(field,[]):
     if x in typed or re.match(r'^(SIG_|TL_|CLM_|THESIS_|ARC_|GAP_|ca-)',str(x)):check('country.'+field,x)
+ for c in d['claimChecks']:
+  for item in c.get('evidence_relations',[]):
+   check('claim_check.evidence_relations.event_id',item['event_id'])
+   for x in item.get('edge_ids',[]):check('claim_check.evidence_relations.edge_ids',x,'edge')
+ for alias,canonical in d.get('record_aliases',{}).items():
+  check('record_aliases.alias',alias,'event');check('record_aliases.canonical',canonical,'event')
+ for item in d.get('entityRegistry',{}).get('audit_actor_type_entries',[]):
+  for x in item.get('evidence_event_ids',[]):check('actor_type_entry.evidence_event_ids',x,'event')
+ for field in ('actor_event_ids','research_editorial_ids'):
+  for x in d.get('auditCompletion',{}).get(field,[]):check('auditCompletion.'+field,x,'event')
  for c in d['recipes']:
   for x in c.get('recommended_filters',{}).get('hide_arc_ids',[]):check('recipe.recommended_filters.hide_arc_ids',x)
   for x in c.get('recommended_arc_ids',[]):check('recipe.recommended_arc_ids',x)
@@ -80,7 +100,7 @@ def dates_preserved_or_corrected(doc, baseline_dates):
  return True
 
 def validate(root=ROOT,refresh=False,skip_html=False):
- report={'version':'0.51','base_commit':'8167ef0142e996ba2a7131bf84b222edab6d4c32','languages':{},'tests':[]};data={}
+ report={'version':'0.54','base_commit':'5b725eda3f0066fdbd8ddaa5523f9ef05bedacfc','languages':{},'tests':[]};data={}
  candidate_ids={x['id'] for x in json.loads((root/'review/v031-agent-behavior/candidates.json').read_text())['new_event_candidates']}
  concealment_ids={x['id'] for x in json.loads((root/'review/agent-concealment-persistence/candidates.json').read_text())['events']}
  astra_ids={x['id'] for x in json.loads((root/'review/astra-monitorability/candidates.json').read_text())['events']}
@@ -109,9 +129,14 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   dates={e['id']:e['date'] for e in d['events']}
   ok(lang+': original dates preserved or source-backed corrections logged',dates_preserved_or_corrected(d,{e['id']:e['date'] for e in b['events']}))
   ev={e['id']:e for e in d['events']};cyber=[e for e in d['events'] if e.get('primary_domain_id')]
-  ok(lang+': exact v0.51 collection counts',len(d['events'])==510 and len(d['claims'])==76 and len(d['claimChecks'])==32 and len(d['arcs'])==26 and len(d['edges'])==1314 and len(d['sourceIndex'])==739)
+  completion=d.get('auditCompletion',{})
+  ok(lang+': exact v0.54 stored collection counts',len(d['events'])==567 and len(d['claims'])==76 and len(d['claimChecks'])==32 and len(d['arcs'])==30 and len(d['edges'])==1411 and len(d['sourceIndex'])==824+len(completion.get('added_source_urls',[])))
+  ok(lang+': source-reviewed actor completion present',len(completion.get('actor_event_ids',[]))==13 and d['auditRepair']['actor_type_review_queue']==[])
+  ok(lang+': actor identity evidence indexed',all(a.get('basis') and a.get('source_urls') and set(a['source_urls'])<=urls for e in d['events'] for a in e.get('actor_identity_review',{}).get('actors',[])))
+  ok(lang+': scientific rationale is specific',all(not e.get('editorial_rationale_en','').startswith('The record separates a binding directive, proposal, public commitment or rhetoric') for e in d['events'] if e.get('research_evidence_kind')))
+  ok(lang+': canonical presentation count',sum(not e.get('exclude_from_presentation') for e in d['events'])==566)
   hierarchy=d.get('arcHierarchy',{});arc_by_id={arc['id']:arc for arc in d['arcs']}
-  expected_roles={'mechanism':13,'submechanism':1,'qualifier':1,'case':5,'sector_case':2,'timeline_lens':3,'timeline_marker':1}
+  expected_roles={'mechanism':14,'submechanism':1,'qualifier':1,'case':5,'sector_case':5,'timeline_lens':3,'timeline_marker':1}
   expected_parents={
    'ARC_TOLL_AND_THROTTLE':'ARC_EXPORT_CHIPS_TO_MODELS',
    'ARC_CONTROL_LEAKS_BUT_POLICES':'ARC_EXPORT_CHIPS_TO_MODELS',
@@ -119,9 +144,12 @@ def validate(root=ROOT,refresh=False,skip_html=False):
    'ARC_PALANTIR_DECISION_OS':'ARC_CORPORATE_DECISION_SUPPORT_ADOPTION',
    'ARC_FINANCE_GOVERNED_SHUTDOWN':'ARC_CORPORATE_DECISION_SUPPORT_ADOPTION',
    'ARC_WAR_DATA_FLYWHEEL':'ARC_CORPORATE_DECISION_SUPPORT_ADOPTION',
-   'ARC_2023_GOVERNANCE_SHOCK':'ARC_2022_2023_FORMATION_PHASE'}
-  ok(lang+': v0.51 hierarchy metadata complete',d['meta']['version']=='0.51' and hierarchy.get('version')=='1.0' and hierarchy.get('default_mode')=='mechanisms' and hierarchy.get('role_counts')==expected_roles)
-  ok(lang+': hierarchy summary is exact',d['summary'].get('arc_hierarchy')=={'families':6,'core_mechanisms':13,'nested_cases_and_qualifiers':9,'timeline_records':4,'total_arc_records':26})
+   'ARC_2023_GOVERNANCE_SHOCK':'ARC_2022_2023_FORMATION_PHASE',
+   'ARC_MEDICAL_AI_TRANSLATION':'ARC_KNOWLEDGE_PRODUCTION_VALIDATION',
+   'ARC_EDUCATION_COMPETENCE':'ARC_KNOWLEDGE_PRODUCTION_VALIDATION',
+   'ARC_WORK_COMPETENCE_DISTRIBUTION':'ARC_CORPORATE_DECISION_SUPPORT_ADOPTION'}
+  ok(lang+': v0.54 hierarchy metadata complete',d['meta']['version']=='0.54' and hierarchy.get('version')=='1.0' and hierarchy.get('default_mode')=='mechanisms' and hierarchy.get('role_counts')==expected_roles)
+  ok(lang+': hierarchy summary is exact',d['summary'].get('arc_hierarchy')=={'families':6,'core_mechanisms':14,'nested_cases_and_qualifiers':12,'timeline_records':4,'total_arc_records':30})
   ok(lang+': every arc has a presentation role and order',all(arc.get('display_role') in expected_roles and isinstance(arc.get('display_order'),int) and isinstance(arc.get('default_visible'),bool) and 'parent_arc_id' in arc for arc in d['arcs']))
   ok(lang+': nested parent map is exact',{arc['id']:arc['parent_arc_id'] for arc in d['arcs'] if arc.get('parent_arc_id')}==expected_parents)
   ok(lang+': timeline records are hidden by default',all(not arc['default_visible'] for arc in d['arcs'] if arc['display_role'] in {'timeline_lens','timeline_marker'}))
@@ -130,12 +158,15 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   ok(lang+': editorial migration changes no semantic edge',audit['semantic_edge_changes']==0 and audit['removed_ids']==[])
   ok(lang+': war family metadata reassignment is explicit',audit['edge_family_metadata_reassignments']==14 and audit['arc_family_membership_recomputations']=={'events':8,'claims':3,'claimChecks':1})
   displayed=[event for event in d['events'] if event.get('story_primary_arc_id')]
-  ok(lang+': one primary reading route for 470 facts',len(displayed)==470 and hierarchy.get('primary_event_assignments')==470 and hierarchy.get('events_with_secondary_arcs')==255)
+  ok(lang+': exact primary/secondary route counters',len(displayed)==hierarchy.get('primary_event_assignments') and sum(bool(e.get('story_secondary_arc_ids')) for e in d['events'])==hierarchy.get('events_with_secondary_arcs'))
+  from migrate_audit_repair import check_document
+  check_document(d)
+  ok(lang+': audit data contracts, polarity references, aliases and exact backlinks',True)
   ok(lang+': reading routes contain no duplicates',all(event['story_primary_arc_id'] not in event.get('story_secondary_arc_ids',[]) and len(event.get('story_secondary_arc_ids',[]))==len(set(event.get('story_secondary_arc_ids',[]))) for event in displayed))
   ok(lang+': primary and secondary routes resolve',all(event['story_primary_arc_id'] in arc_by_id and set(event.get('story_secondary_arc_ids',[]))<=set(arc_by_id) for event in displayed))
   ok(lang+': named examples have the intended hierarchy',arc_by_id['ARC_A800_H800_WORKAROUND_CLOSURE']['display_role']=='case' and arc_by_id['ARC_TOLL_AND_THROTTLE']['display_role']=='submechanism' and arc_by_id['ARC_CONTROL_LEAKS_BUT_POLICES']['display_role']=='qualifier' and arc_by_id['ARC_CYBER_CLAIM_TO_CAVEAT']['display_role']=='mechanism')
-  ok(lang+': exactly 252 reviewed cyber facts',len(cyber)==252)
-  ok(lang+': exactly 158 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==158)
+  ok(lang+': exactly 253 reviewed cyber facts',len(cyber)==253)
+  ok(lang+': exactly 159 curated cyber facts',sum(e['editorial_priority']==1 for e in cyber)==159)
   ok(lang+': all 22 candidate records present',candidate_ids<={e['id'] for e in d['events']} and len(candidate_ids)==22)
   ok(lang+': all 12 concealment records present',concealment_ids<={e['id'] for e in d['events']} and len(concealment_ids)==12)
   ok(lang+': both Astra monitorability records present',astra_ids<={e['id'] for e in d['events']} and len(astra_ids)==2)
@@ -202,7 +233,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   ok(lang+': Astra comparison is length-banded',astra_control['numbers']['cot_token_band_min']==750 and astra_control['numbers']['cot_token_band_max']==1250 and astra_control['numbers']['astra_control_percent']==60.9 and astra_control['numbers']['sol_control_percent']==16.1)
   ok(lang+': Astra evasion remains explicitly prompted',astra_evasion['behavior_origin']=='evaluation_prompted' and astra_evasion['goal_source']=='explicit_prompt' and astra_evasion['numbers']['honeypot_full_context_recall_percent']==100)
   ok(lang+': Astra records use official sources only',all(source['url'].startswith(('https://openai.com/','https://deploymentsafety.openai.com/')) for event_id in astra_ids for source in ev[event_id]['sources']) and not any('youtube.com' in source['url'] for event_id in astra_ids for source in ev[event_id]['sources']))
-  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==588)
+  ok(lang+': thematic edges explicitly separated',sum(x['relation']=='part_of_arc' for x in d['edges'])==657)
   ok(lang+': relation definitions complete',set(x['relation'] for x in d['edges'])<=set(d['relationTypes']))
   ok(lang+': exact claim denominators',d['summary']['claim_status_counts']=={'verified':50,'partially_verified':24,'disputed':2} and d['summary']['stats']['total_claims']==76 and d['summary']['stats']['partially_verified']==24 and 'pass_rate_short' not in d['summary'])
   if lang=='ru':ok('ru: every event headline localised',all(re.search('[А-Яа-яЁё]',e['title']) for e in d['events']))
@@ -277,7 +308,7 @@ def validate(root=ROOT,refresh=False,skip_html=False):
   ok(lang+': February distillation numbers and date preserved',distillation['date']=='2026-02-23' and distillation['numbers']=={'attributed_accounts_approx':24000,'interactions_more_than':16000000})
   ok(lang+': September distillation state is a separate observation',distillation['current_state']['observed_at']=='2026-09-10' and distillation['current_state']['event_date'] is None and distillation['current_state']['numbers']['alibaba_exchanges_gt']==151000000)
   gate_claim=next(item for item in d['claimChecks'] if item['id']=='CLM_PROVIDER_OBSERVABILITY_ACCESS_GATE')
-  ok(lang+': provider observability claim remains scoped partial',gate_claim['status']=='partially_verified' and gate_claim['confidence']=='B' and len(gate_claim['supporting_evidence'])==3 and len(gate_claim['qualifying_evidence'])==1)
+  ok(lang+': provider observability claim remains scoped partial',gate_claim['status']=='partially_verified' and gate_claim['confidence']=='B' and len(gate_claim['supporting_evidence'])==4 and 'SIG_2026_ANTHROPIC_BIOLOGY_DUAL_USE_ACCESS_DISCLOSURE' in gate_claim['supporting_evidence'] and len(gate_claim['qualifying_evidence'])==1)
   v035edges=[edge for edge in d['edges'] if edge['id'] in d['migrationAudit']['v035_added_edge_ids']]
   ok(lang+': 39 v0.35 links include 21 thematic memberships',len(v035edges)==39 and sum(edge['relation']=='part_of_arc' for edge in v035edges)==21 and all(edge['relationship_class']=='thematic' for edge in v035edges if edge['relation']=='part_of_arc'))
   ok(lang+': observability claim reaches arcs and thesis nodes',set(gate_claim['arcIds'])>={'ARC_QUIET_ACCESS_CONTROL','ARC_SOVEREIGN_FLOW_GATING','ARC_COGSEC_LAB_TO_WILD_TO_STATE'} and {'THESIS_ACCESS_AS_POWER','THESIS_CORE'}<={edge['target'] for edge in v035edges if edge['source']==gate_claim['id']})
@@ -362,10 +393,10 @@ def validate(root=ROOT,refresh=False,skip_html=False):
  ok('RU/EN v0.39 military-AI signature parity',[(x['id'],x['date'],x['artifact_kind'],x['normative_force'],x['story_primary_arc_id']) for x in r['events'] if x['id'] in war_ids]==[(x['id'],x['date'],x['artifact_kind'],x['normative_force'],x['story_primary_arc_id']) for x in e['events'] if x['id'] in war_ids])
  ok('RU/EN hierarchy parity',r['arcHierarchy']==e['arcHierarchy'] and [(x['id'],x['family_id'],x['display_role'],x['display_order'],x['parent_arc_id'],x['default_visible']) for x in r['arcs']]==[(x['id'],x['family_id'],x['display_role'],x['display_order'],x['parent_arc_id'],x['default_visible']) for x in e['arcs']] and [(x['id'],x.get('story_primary_arc_id'),x.get('story_secondary_arc_ids',[])) for x in r['events']]==[(x['id'],x.get('story_primary_arc_id'),x.get('story_secondary_arc_ids',[])) for x in e['events']])
  index=(root/'index.html').read_text();readme=(root/'README.md').read_text()
- ok('index: current release marker','AI Power Atlas · v0.51' in index and 'AI POWER ATLAS · V0.51' in index)
- ok('index: current collection counts',all(x in index for x in ['510 событий','76 тезисов','32 проверки тезисов','26 сюжетных арок','1314 связей','252 записи','158 опорных']))
+ ok('index: current release marker','AI Power Atlas · v0.54' in index and 'AI POWER ATLAS · V0.54' in index)
+ ok('index: current collection counts',all(x in index for x in ['566 событий','567 исходных ID','76 тезисов','32 проверки тезисов','30 сюжетных арок','1411 связей']))
  ok('index: bilingual atlas and current schema links',all(x in index for x in ['href="ai-power-atlas-ru.html"','href="ai-power-atlas.html"','href="SCHEMA_v038.md"']))
- ok('README: current release summary','# AI Power Atlas — v0.51' in readme and '510 событий, 76 тезисов и 32 проверяемых утверждения' in readme and '`SCHEMA_v038.md`' in readme)
+ ok('README: current release summary','# AI Power Atlas — v0.54' in readme and '567 записей событий, 76 тезисов и 32 проверяемых утверждения' in readme and '`SCHEMA_v038.md`' in readme)
  report['passed']=True;report['assertions']=len(report['tests']);(root/'review/validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  print(json.dumps({k:v for k,v in report.items() if k!='tests'},ensure_ascii=False,indent=2));return report
 if __name__=='__main__':

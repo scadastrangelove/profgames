@@ -1,0 +1,2707 @@
+{
+  "meta": {
+    "schema": "aipower.research_candidates.v1",
+    "reviewed_at": "2026-11-07",
+    "atlas_version_reviewed": "0.51",
+    "atlas_commit_reviewed": "5b725eda3f0066fdbd8ddaa5523f9ef05bedacfc",
+    "merged_into_atlas": true,
+    "atlas_version_merged": "0.52",
+    "scope_ru": "Целевой сбор по научному знанию, медицине, труду и образованию с разбором географических ролей. Не систематический обзор, не рейтинг стран и не измерение общего темпа ускорения.",
+    "scope_en": "Targeted collection on scientific knowledge, medicine, work and education with geographical roles. Not a systematic review, country ranking or estimate of overall acceleration.",
+    "master_sha256": {
+      "aipower/ai_power_storygraph_ru.json": "6e59265525ba0e2e3871843221b81c07daed3ac2cc98852ef9e68c8251888863",
+      "aipower/ai_power_storygraph_en.json": "43e01a8ae286c5a0d3d0551c431874bfcd35403ed36c96effad95698befca9db"
+    },
+    "dedup_method": "Study families, existing IDs and canonicalized source URLs across the two masters, companion JSON/JSONL and review candidates. Audit reports exact URL collisions; semantic matches require judgement.",
+    "date_policy": "Publication/revision dates are separate from study periods. Month precision is retained where no exact day was verified.",
+    "arc_policy": "proposed_arc_ids denotes thematic membership only, never automatic support for an entire thesis.",
+    "mechanism_policy": "All mechanism_ru/en fields are analytical interpretations, not additional measured results.",
+    "geo_policy": "GEO means research geography, not generative-engine optimization. geo_roles separates developers, validation, data inputs and upstream models. Country codes use ISO 3166-1 alpha-2. Empty arrays mean multinational or unassigned, not absence. Affiliations are not ownership. Reach is not national capability. The 15 newest records are profiled; older candidates have not been retroactively classified."
+  },
+  "candidates": [
+    {
+      "id": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS",
+      "date": "2022-07-28",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "title_ru": "AlphaFold открывает доступ к более чем 200 млн предсказанных структур",
+      "title_en": "AlphaFold opens access to over 200 million predicted structures",
+      "summary_ru": "EMBL-EBI и DeepMind расширили свободно доступную базу до более чем 200 млн структур белков.",
+      "summary_en": "EMBL-EBI and DeepMind expanded their freely accessible database to over 200 million protein structures.",
+      "caveat_ru": "Это вычислительные предсказания, а не столько же экспериментальных измерений. Доступность базы не означает клиническую полезность каждого результата.",
+      "caveat_en": "These are computational predictions, not that many experimental measurements. Database access does not establish clinical utility for every result.",
+      "sources": [
+        {
+          "url": "https://www.ebi.ac.uk/about/news/technology-and-innovation/alphafold-200-million/",
+          "publisher": "EMBL-EBI",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "infrastructure_release",
+      "outcome_stage": "public_research_resource",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global"
+      ],
+      "mechanism_ru": "Расширение доступа к научному ресурсу может снижать входной барьер; это противовес тезису о неизбежном закрытии знания.",
+      "mechanism_en": "A shared scientific resource can lower entry barriers, qualifying a blanket enclosure thesis."
+    },
+    {
+      "id": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE",
+      "date": "2024-11-11",
+      "date_precision": "day",
+      "date_kind": "release_announcement_update",
+      "track": "science",
+      "title_ru": "AlphaFold 3: академический доступ к коду и весам",
+      "title_en": "AlphaFold 3: academic access to code and weights",
+      "summary_ru": "Google объявил публикацию кода и весов AlphaFold 3 для академического использования после майского запуска сервера.",
+      "summary_en": "Google announced academic access to AlphaFold 3 code and weights following the May server launch.",
+      "caveat_ru": "У кода и весов разные условия. Нельзя называть этот исторический выпуск неограниченным открытым доступом или переносить его условия на любую последующую версию.",
+      "caveat_en": "Code and weights have separate terms. This historical release is not unrestricted access; its terms cannot be assumed for all later versions.",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/products/google-deepmind-isomorphic-alphafold-3-ai-model/",
+          "publisher": "Google",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        },
+        {
+          "url": "https://github.com/google-deepmind/alphafold3",
+          "publisher": "Google DeepMind",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "repository_current_terms"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "governance_law"
+      ],
+      "evidence_kind": "access_policy_release",
+      "outcome_stage": "research_tool_access",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global"
+      ],
+      "mechanism_ru": "Контроль над инструментом и открытость его результатов следует учитывать отдельно.",
+      "mechanism_en": "Control of the tool and openness of its outputs are separate dimensions."
+    },
+    {
+      "id": "SCI_CAND_2024_ALPHAPROOF_IMO",
+      "date": "2024-07-25",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "title_ru": "AlphaProof и AlphaGeometry 2 решают четыре задачи IMO",
+      "title_en": "AlphaProof and AlphaGeometry 2 solve four IMO problems",
+      "summary_ru": "Системы решили четыре из шести задач IMO 2024, получив оценку 28 из 42 баллов по проверке математиков.",
+      "summary_en": "The systems solved four of six IMO 2024 problems, assessed by mathematicians at 28 of 42 points.",
+      "caveat_ru": "Условия отличались от олимпиады: формализацию выполняли люди, вычисления могли занимать до трёх дней. Это не четыре новых научных теоремы.",
+      "caveat_en": "Conditions differed from the competition: humans formalized problems and computation could take three days. These are not four new research theorems.",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/ai-solves-imo-problems-at-silver-medal-level/",
+          "publisher": "Google DeepMind",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "developer_report_expert_scored_evaluation",
+      "outcome_stage": "mathematical_benchmark",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global"
+      ],
+      "mechanism_ru": "Важна способность строить проверяемые доказательства, а не только убедительные объяснения.",
+      "mechanism_en": "The relevant capability is producing checkable proofs, not merely persuasive explanations."
+    },
+    {
+      "id": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS",
+      "date": "2025-05-14",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "title_ru": "AlphaEvolve: поиск алгоритмов и улучшение вычислительной инфраструктуры",
+      "title_en": "AlphaEvolve: algorithm discovery and compute improvements",
+      "summary_ru": "DeepMind сообщил, что найденная агентом эвристика планирования возвращает в использование около 0,7% глобальных вычислительных ресурсов Google.",
+      "summary_en": "DeepMind reported that an agent-discovered scheduling heuristic recovers about 0.7% of Google's global compute resources.",
+      "caveat_ru": "Операционный показатель сообщён разработчиком, независимого аудита здесь нет. Результат конкретной оптимизации не равен общему коэффициенту ускорения науки.",
+      "caveat_en": "The operational metric is developer-reported, not independently audited here. One optimization is not a general scientific speedup factor.",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+          "publisher": "Google DeepMind",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "energy_compute_chips",
+        "cloud_inference",
+        "model_weights"
+      ],
+      "evidence_kind": "developer_report_production_deployment",
+      "outcome_stage": "reported_operational_result",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global"
+      ],
+      "mechanism_ru": "Возникает обратная связь: вычисления помогают искать алгоритмы, которые высвобождают вычисления. Концентрацию этого выигрыша надо измерять отдельно.",
+      "mechanism_en": "Compute helps discover algorithms that free compute; concentration of the gains requires separate measurement."
+    },
+    {
+      "id": "SCI_CAND_2025_MATTERGEN_SYNTHESIS",
+      "date": "2025-01",
+      "date_precision": "month",
+      "date_kind": "publication",
+      "track": "science",
+      "title_ru": "MatterGen: генерация неорганических материалов с лабораторной проверкой",
+      "title_en": "MatterGen: inorganic material generation with laboratory validation",
+      "summary_ru": "Авторы представили генеративную модель материалов и синтезировали предложенную структуру; измеренное свойство оказалось в пределах 20% от цели.",
+      "summary_en": "The authors presented a generative materials model and synthesized a proposed structure, measuring a property within 20% of its target.",
+      "caveat_ru": "Лабораторная демонстрация не доказывает промышленный выход, себестоимость, долговечность или готовность массового производства.",
+      "caveat_en": "A laboratory demonstration does not establish industrial yield, cost, durability or mass-production readiness.",
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/en-us/research/publication/a-generative-model-for-inorganic-materials-design/",
+          "publisher": "Microsoft Research",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-025-08628-5",
+          "publisher": "Nature",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "data_telemetry"
+      ],
+      "evidence_kind": "peer_reviewed_study",
+      "outcome_stage": "physical_validation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [],
+      "geography_note": "Research collaboration; not assigned to a country solely from the publisher.",
+      "mechanism_ru": "Ценность появляется при соединении генерации с физической проверкой; лаборатории остаются существенной частью производственной цепочки.",
+      "mechanism_en": "Value depends on coupling generation with physical testing; laboratories remain part of the production chain."
+    },
+    {
+      "id": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT",
+      "date": "2026-02-11",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "title_ru": "Aletheia: агент для математической работы с проверкой и пересмотром решений",
+      "title_en": "Aletheia: a mathematics agent with verification and revision",
+      "summary_ru": "DeepMind описал исследовательские применения Gemini Deep Think и агент Aletheia, который генерирует, проверяет и пересматривает решения с участием специалистов.",
+      "summary_en": "DeepMind described research uses of Gemini Deep Think and Aletheia, an agent that generates, checks and revises solutions with expert involvement.",
+      "caveat_ru": "Проверка естественно-языкового рассуждения не равна формальной верификации. Здесь подтверждено раскрытие метода, не независимая проверка всех заявленных научных результатов.",
+      "caveat_en": "Natural-language checking is not formal verification. This review establishes the method disclosure, not independent validation of every claimed result.",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/",
+          "publisher": "Google DeepMind",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "developer_research_disclosure",
+      "outcome_stage": "research_workflow",
+      "integration_status": "disclosure_not_independent_result_validation",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global"
+      ],
+      "mechanism_ru": "Проверка, отбор задач и доступ к инструментам становятся частью организации научного труда.",
+      "mechanism_en": "Verification, task selection and tool access become part of organizing scientific work."
+    },
+    {
+      "id": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS",
+      "date": "2026-10-16",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "title_ru": "Google описывает замкнутый цикл агента и биологической лаборатории",
+      "title_en": "Google describes a closed agent-and-wet-lab loop",
+      "summary_ru": "В исследовательской публикации описаны агентное проектирование и экспериментальная проверка связывающих молекул, включая связыватели FAP с наномолярной аффинностью.",
+      "summary_en": "The research disclosure describes agent-assisted design and experimental testing of binders, including nanomolar-affinity FAP binders.",
+      "caveat_ru": "Это лабораторные результаты разработчиков. Связывание мишени не означает доказанного лечения рака, клинической безопасности или одобренного препарата.",
+      "caveat_en": "These are developer-reported laboratory results. Target binding does not establish cancer treatment, clinical safety or an approved drug.",
+      "sources": [
+        {
+          "url": "https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/",
+          "publisher": "Google Research",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "data_telemetry"
+      ],
+      "evidence_kind": "developer_report_physical_experiments",
+      "outcome_stage": "physical_validation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [],
+      "mechanism_ru": "Физическая лаборатория и экспериментальные данные дополняют вычислительный стек; один доступ к модели их не заменяет.",
+      "mechanism_en": "Physical labs and experimental data complement the compute stack; model access alone does not replace them."
+    },
+    {
+      "id": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE",
+      "date": "2026-10-26",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "title_ru": "OpenAI выбирает разные режимы проверки и публикации научных результатов",
+      "title_en": "OpenAI selects different scientific validation and release arrangements",
+      "summary_ru": "OpenAI описала передачу результатов по математике, информатике и физике академическим группам с разными условиями проверки и публикации.",
+      "summary_en": "OpenAI described handing mathematics, computing and physics results to academic groups under different validation and publication arrangements.",
+      "caveat_ru": "Факт здесь: организация доступа и проверки. Само объявление не доказывает правильность всех рукописей или независимое признание каждого результата.",
+      "caveat_en": "The fact is the access and validation arrangement. The announcement does not establish the correctness or independent acceptance of every manuscript.",
+      "sources": [
+        {
+          "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+          "publisher": "OpenAI",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_QUIET_ACCESS_CONTROL"
+      ],
+      "stack_layers": [
+        "governance_law",
+        "model_weights"
+      ],
+      "evidence_kind": "company_research_release_policy",
+      "outcome_stage": "institutional_practice",
+      "integration_status": "disclosure_not_independent_result_validation",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global"
+      ],
+      "mechanism_ru": "Разработчик получает влияние на первичный доступ к знанию и выбор проверяющих; это отдельный механизм, не доказательство монополии.",
+      "mechanism_en": "The developer influences early access and verifier selection, a mechanism distinct from proof of monopoly."
+    },
+    {
+      "id": "MED_CAND_2026_MASAI_INTERVAL_CANCER",
+      "date": "2026-01-31",
+      "date_precision": "day",
+      "date_kind": "journal_issue_publication",
+      "track": "medicine",
+      "title_ru": "MASAI: рандомизированная проверка ИИ в скрининге рака груди",
+      "title_en": "MASAI: randomized evaluation of AI-supported breast screening",
+      "summary_ru": "В Швеции рандомизировали 105 934 участницы. Чувствительность составила 80,5% против 73,8%; по интервальным ракам установлена не меньшая эффективность.",
+      "summary_en": "Sweden randomized 105,934 participants. Sensitivity was 80.5% versus 73.8%; interval cancer results met non-inferiority.",
+      "caveat_ru": "Частоты 1,55 против 1,76 на тысячу не доказывают превосходство по интервальным ракам. Это не доказательство снижения смертности и не LLM.",
+      "caveat_en": "Rates of 1.55 versus 1.76 per thousand do not establish superiority for interval cancers. This is not mortality evidence or an LLM.",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41620232/",
+          "publisher": "The Lancet / PubMed",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract_indexed"
+        },
+        {
+          "url": "https://doi.org/10.1016/S0140-6736(25)02464-X",
+          "publisher": "The Lancet",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "doi_identity"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "randomized_noninferiority_trial",
+      "outcome_stage": "clinical_screening_endpoint",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "study_period": {
+        "enrollment_from": "2021-04-12",
+        "enrollment_through": "2022-12-07"
+      },
+      "study_family": "MASAI_NCT04838756",
+      "geography": [
+        "Sweden"
+      ],
+      "mechanism_ru": "Перераспределение чтения снимков меняет использование дефицитной врачебной экспертизы.",
+      "mechanism_en": "Redistributing image reading changes how scarce clinical expertise is used."
+    },
+    {
+      "id": "MED_CAND_2026_GOLDENBRIDGE_II",
+      "date": "2026-03",
+      "date_precision": "month",
+      "date_kind": "publication",
+      "track": "medicine",
+      "title_ru": "GOLDENBRIDGE II: поддержка лечения инсульта снижает повторные сосудистые события",
+      "title_en": "GOLDENBRIDGE II: decision support reduces subsequent vascular events",
+      "summary_ru": "В кластерном испытании 77 больниц Китая и 21 603 пациентов трёхмесячные сосудистые события составили 2,9% против 3,9%; скорректированное отношение рисков 0,74.",
+      "summary_en": "In a cluster trial across 77 Chinese hospitals and 21,603 patients, three-month vascular events were 2.9% versus 3.9%; adjusted hazard ratio 0.74.",
+      "caveat_ru": "Оценивали комплекс анализа изображений и рекомендаций, а не изолированную LLM. Смертность и инвалидизация значимо не различались. Предварительный доклад 2024 года относится к тому же испытанию.",
+      "caveat_en": "The intervention combined imaging and recommendations, not an isolated LLM. Mortality and disability did not differ significantly. The 2024 preliminary report concerns the same trial.",
+      "sources": [
+        {
+          "url": "https://www.bmj.com/content/392/bmj-2025-085810",
+          "publisher": "The BMJ",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41862204/",
+          "publisher": "The BMJ / PubMed",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract_indexed"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "cluster_randomized_trial",
+      "outcome_stage": "patient_vascular_outcome",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "study_period": {
+        "enrollment_from": "2021-01-13",
+        "enrollment_through": "2023-06-25"
+      },
+      "date_note": "March 2026 journal publication; HTML and PDF display adjacent dates, so no artificial exact day.",
+      "study_family": "GOLDENBRIDGE_II",
+      "geography": [
+        "China"
+      ],
+      "mechanism_ru": "Алгоритм может стандартизировать применение экспертизы; клинический выигрыш надо отделять от зависимости больницы от поставщика.",
+      "mechanism_en": "Algorithms can standardize expertise; clinical gains and hospital vendor dependence must be assessed separately."
+    },
+    {
+      "id": "MED_CAND_2025_RENTOSERTIB_PHASE2A",
+      "date": "2025-06-03",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "medicine",
+      "title_ru": "Рентосертиб: препарат из ИИ-процесса разработки проходит фазу 2a",
+      "title_en": "Rentosertib: an AI-discovered drug reaches phase 2a",
+      "summary_ru": "Опубликовано 12-недельное рандомизированное испытание на 71 пациенте с лёгочным фиброзом. ИИ участвовал в выборе TNIK и проектировании молекулы.",
+      "summary_en": "A 12-week randomized trial enrolled 71 pulmonary fibrosis patients. AI contributed to TNIK target identification and molecule design.",
+      "caveat_ru": "Основная цель: безопасность и переносимость. Сигнал по функции лёгких вторичный; небольшая выборка не устанавливает долгосрочную эффективность или превосходство ИИ-разработки над обычной.",
+      "caveat_en": "The primary objective was safety and tolerability. Lung-function findings are secondary; the small sample establishes neither long-term efficacy nor superiority of AI discovery.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41591-025-03743-2",
+          "publisher": "Nature Medicine",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "model_weights",
+        "data_telemetry",
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "randomized_phase2a_trial",
+      "outcome_stage": "early_clinical_translation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "study_period": {
+        "from": "2023-07-19",
+        "through": "2024-06-11"
+      },
+      "geography": [
+        "China"
+      ],
+      "mechanism_ru": "Между вычислительным открытием и лекарством сохраняется дорогая экспериментальная и клиническая цепочка.",
+      "mechanism_en": "A costly experimental and clinical chain remains between computational discovery and a medicine."
+    },
+    {
+      "id": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS",
+      "date": "2024-01-11",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "medicine",
+      "title_ru": "ACCESS: автономный анализ снимков увеличивает доступ к обследованию глаз",
+      "title_en": "ACCESS: autonomous image analysis increases eye-exam access",
+      "summary_ru": "В испытании 164 молодых пациентов с диабетом обследование прошли 100% участников группы ИИ в точке оказания помощи против 22% при стандартном направлении.",
+      "summary_en": "In a trial of 164 young patients with diabetes, eye-exam completion was 100% with point-of-care autonomous AI versus 22% with standard referral.",
+      "caveat_ru": "Измерен доступ к обследованию, не сохранение зрения. Эффект относится к целому маршруту помощи, включая обследование на месте, а не только алгоритму.",
+      "caveat_en": "The outcome is exam access, not preserved vision. The effect concerns the whole care pathway, including on-site testing, not just the algorithm.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41467-023-44676-z",
+          "publisher": "Nature Communications",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract_indexed"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "randomized_trial",
+      "outcome_stage": "care_access",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "US"
+      ],
+      "mechanism_ru": "ИИ способен не только сжимать посредников, но и открывать доступ к ранее недоступной услуге.",
+      "mechanism_en": "AI can expand access to a previously unavailable service, not only compress intermediaries."
+    },
+    {
+      "id": "MED_CAND_2026_KENYA_LLM_CDSS_NULL",
+      "date": "2026-06-26",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "medicine",
+      "title_ru": "Кения: LLM-помощник не улучшил основной клинический исход значимо",
+      "title_en": "Kenya: LLM support did not significantly improve the primary clinical outcome",
+      "summary_ru": "В 16 клиниках рандомизировали 103 клинических специалиста. Среди 9347 пациентов с данными исхода неудача лечения за 14 дней составила 2,2% против 2,0%; различие незначимо.",
+      "summary_en": "Across 16 clinics, 103 clinical officers were randomized. Among 9,347 patients with outcomes, 14-day treatment failure was 2.2% versus 2.0%, not significantly different.",
+      "caveat_ru": "Это не доказательство бесполезности всех моделей. Отсутствие связанных серьёзных нежелательных событий в этой выборке не устанавливает универсальную безопасность.",
+      "caveat_en": "This does not establish that all models are useless. No intervention-related serious adverse events in this sample does not prove universal safety.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41591-026-04503-6",
+          "publisher": "Nature Medicine",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "randomized_clinical_trial",
+      "outcome_stage": "patient_outcome_null",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "study_period": {
+        "from": "2025-04-22",
+        "through": "2025-07-16"
+      },
+      "geography": [
+        "Kenya"
+      ],
+      "mechanism_ru": "Доступ к модели и улучшение медицинского результата не равнозначны: нужны проверка местного контекста и качество внедрения.",
+      "mechanism_en": "Model access and better patient outcomes are not equivalent; local validation and implementation matter."
+    },
+    {
+      "id": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES",
+      "date": "2026-10-15",
+      "date_precision": "day",
+      "date_kind": "paper_publication",
+      "track": "medicine",
+      "title_ru": "AI-INFOCARE: понятные пациенту ИИ-сводки перед консультацией",
+      "title_en": "AI-INFOCARE: patient-readable AI summaries before consultation",
+      "summary_ru": "По сообщению TU Dresden, испытание с 300 пациентами и 17 врачами улучшило оценку консультации пациентами при использовании проверенных понятных сводок.",
+      "summary_en": "TU Dresden reports that a trial with 300 patients and 17 physicians improved patient-rated consultations using checked plain-language summaries.",
+      "caveat_ru": "Проверено сообщение участвующего университета; полный протокол статьи здесь не разобран. Один центр, контроль качества человеком; долгосрочный клинический эффект не установлен.",
+      "caveat_en": "The participating university's report was checked, not the full paper protocol. Single center and human quality control; no established long-term clinical benefit.",
+      "sources": [
+        {
+          "url": "https://tu-dresden.de/med/mf/die-fakultaet/newsuebersicht/dresdner-forschende-zeigen-nutzen-ki-generierter-befundzusammenfassungen-fuer-arztgespraeche",
+          "publisher": "TU Dresden",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        },
+        {
+          "url": "https://doi.org/10.1056/AIoa2600136",
+          "publisher": "NEJM AI",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "publication_metadata_only"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "institutional_report_of_randomized_trial",
+      "outcome_stage": "patient_experience",
+      "integration_status": "full_paper_methods_review_pending",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "disclosure_date": "2026-10-23",
+      "geography": [
+        "Germany"
+      ],
+      "mechanism_ru": "У пациента может уменьшаться информационная зависимость от профессионального посредника.",
+      "mechanism_en": "Patients may become less informationally dependent on a professional intermediary."
+    },
+    {
+      "id": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW",
+      "date": "2026-04-01",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "medicine",
+      "title_ru": "ИИ-ведение записей: меньше времени в медицинской системе, немного больше приёмов",
+      "title_en": "AI scribes: less EHR time and slightly more visits",
+      "summary_ru": "Анализ 8581 медицинского специалиста связывает ИИ-записи с сокращением времени в EHR на 13,4 минуты, документации на 16 минут на восемь часов приёма и дополнительными 0,49 приёма в неделю.",
+      "summary_en": "An analysis of 8,581 clinicians associates AI scribes with 13.4 fewer EHR minutes, 16 fewer documentation minutes per eight scheduled patient hours, and 0.49 additional weekly visits.",
+      "caveat_ru": "Общего значимого сокращения внерабочего времени не было. Это не рандомизированная оценка увольнений или качества лечения; старую формулировку о снижении работы после смены надо исправить.",
+      "caveat_en": "No significant overall reduction in after-hours work was found. This is not a randomized estimate of layoffs or care quality; the old after-hours claim needs correction.",
+      "sources": [
+        {
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/2847319",
+          "publisher": "JAMA",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "observational_difference_in_differences",
+      "outcome_stage": "clinical_workflow",
+      "integration_status": "reuse_with_correction",
+      "prior_record_refs": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW"
+        },
+        {
+          "file": "factcheck.json",
+          "id": "med-31"
+        }
+      ],
+      "related_existing_event_ids": [],
+      "geography": [
+        "US"
+      ],
+      "mechanism_ru": "Высвобождённое время может превращаться в дополнительные приёмы, а не в сокращение смены или штата.",
+      "mechanism_en": "Saved time can become additional visits rather than shorter shifts or fewer staff."
+    },
+    {
+      "id": "MED_CAND_2025_THERABOT_TRIAL",
+      "date": "2025-03-27",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "medicine",
+      "title_ru": "Therabot: контролируемое испытание генеративного помощника для психического здоровья",
+      "title_en": "Therabot: controlled evaluation of a generative mental-health assistant",
+      "summary_ru": "В исследовании 210 участников сравнивали доступ к Therabot с ожиданием лечения; сообщены улучшения симптомов за период наблюдения.",
+      "summary_en": "A 210-participant study compared Therabot access with a waitlist and reported symptom improvements during follow-up.",
+      "caveat_ru": "Специализированная система под клиническим надзором, не любой чатбот. Сравнение с листом ожидания не доказывает равенство человеческой психотерапии.",
+      "caveat_en": "A specialized system under clinical oversight, not any chatbot. A waitlist comparison does not establish equivalence to human psychotherapy.",
+      "sources": [
+        {
+          "url": "https://home.dartmouth.edu/news/2025/03/first-therapy-chatbot-trial-yields-mental-health-benefits",
+          "publisher": "Dartmouth",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        },
+        {
+          "url": "https://doi.org/10.1056/AIoa2400802",
+          "publisher": "NEJM AI",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "randomized_trial_institutional_report_and_abstract",
+      "outcome_stage": "patient_reported_symptoms",
+      "integration_status": "reuse_existing_companion_record",
+      "prior_record_refs": [
+        {
+          "file": "aimind/aimind_signals.jsonl",
+          "id": "SIG_2025_DARTMOUTH_THERABOT_RCT"
+        },
+        {
+          "file": "aimind/aimind_factcheck.json",
+          "id": "case-therabot-01"
+        }
+      ],
+      "related_existing_event_ids": [],
+      "geography": [
+        "US"
+      ],
+      "mechanism_ru": "Расширение доступности поддержки требует отделять результат конкретной системы от обещания заменить профессию.",
+      "mechanism_en": "Expanding support requires separating a specific system's results from promises to replace a profession."
+    },
+    {
+      "id": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK",
+      "date": "2025-02-04",
+      "date_precision": "day",
+      "date_kind": "journal_online_publication",
+      "track": "work",
+      "title_ru": "Поддержка клиентов: производительность выросла сильнее у новичков",
+      "title_en": "Customer support: productivity gains are larger for novices",
+      "summary_ru": "Исследование поэтапного внедрения помощника у 5172 работников оценивает рост числа решённых обращений в час примерно на 15%, с большим выигрышем у менее опытных.",
+      "summary_en": "A study of staggered assistant deployment across 5,172 workers estimates roughly 15% more resolved issues per hour, with larger gains for less experienced workers.",
+      "caveat_ru": "Полевое исследование одной рабочей среды, не общеэкономическая оценка занятости, зарплат или универсальный результат всех моделей.",
+      "caveat_en": "A field study in one work setting, not an economy-wide estimate of employment, wages or all models' performance.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1093/qje/qjae044",
+          "publisher": "Quarterly Journal of Economics",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_paper"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "field_study_staggered_deployment",
+      "outcome_stage": "worker_productivity",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "study_family": "GENERATIVE_AI_AT_WORK",
+      "geography": [],
+      "geography_note": "Multinational customer-support setting; not assigned to author-country.",
+      "mechanism_ru": "Практики лучших работников могут распространяться через инструмент; рост производительности не говорит, кому достанется доход.",
+      "mechanism_en": "Tools can diffuse stronger workers' practices; productivity gains do not identify who captures the income."
+    },
+    {
+      "id": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE",
+      "date": "2026-08-12",
+      "date_precision": "day",
+      "date_kind": "research_revision",
+      "track": "work",
+      "title_ru": "Canaries: давление на найм молодых работников, не доказанный общий обвал занятости",
+      "title_en": "Canaries: pressure on young-worker hiring, not a proven general jobs collapse",
+      "summary_ru": "Обновление анализа ADP до июня 2026 сообщает: занятость 22–25-летних в наиболее затронутых профессиях на 19% ниже сравнительного темпа; основной канал связан с наймом.",
+      "summary_en": "An ADP analysis updated through June 2026 reports employment of 22–25-year-olds in highly exposed occupations 19% below a comparison trajectory, mainly through hiring.",
+      "caveat_ru": "Авторы называют результат описательным, не причинным. Это обновление исследования 2025 года, а не независимая новая выборка; общеэкономическое вытеснение не установлено.",
+      "caveat_en": "The authors describe the result as descriptive, not causal. This updates the 2025 study rather than adding independent evidence; broad displacement is not established.",
+      "sources": [
+        {
+          "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+          "publisher": "Stanford Digital Economy Lab",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "observational_payroll_analysis",
+      "outcome_stage": "employment_hiring_distribution",
+      "integration_status": "reuse_with_correction",
+      "prior_record_refs": [
+        {
+          "file": "factcheck.json",
+          "id": "ai-22"
+        },
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2025_STANFORD_CANARIES_AI_ENTRY_LEVEL"
+        }
+      ],
+      "related_existing_event_ids": [],
+      "study_family": "CANARIES_ADP",
+      "geography": [
+        "US"
+      ],
+      "mechanism_ru": "Вход в профессию может сужаться без немедленных массовых увольнений; это риск воспроизводства квалификации.",
+      "mechanism_en": "Entry into a profession may narrow without immediate mass layoffs, threatening skill reproduction."
+    },
+    {
+      "id": "WORK_CAND_2026_DENMARK_LABOR_REVISION",
+      "date": "2026-03",
+      "date_precision": "month",
+      "date_kind": "working_paper_revision",
+      "track": "work",
+      "title_ru": "Дания: меняются задачи, но значимого среднего эффекта на заработки и часы не найдено",
+      "title_en": "Denmark: tasks change without a significant average earnings or hours effect",
+      "summary_ru": "Обновлённое исследование связывает опросы использования ИИ с административными данными. За первые два года после ChatGPT не выявлено заметного среднего эффекта на заработки и часы.",
+      "summary_en": "The revised study links AI-use surveys with administrative records. It finds no notable average earnings or hours effect in the first two years after ChatGPT.",
+      "caveat_ru": "В пределах дизайна исключаются эффекты больше 2%. Это не доказательство отсутствия изменений задач или последующих эффектов более новых инструментов.",
+      "caveat_en": "The design rules out effects above 2%. This does not show that tasks are unchanged or that newer tools cannot have later effects.",
+      "sources": [
+        {
+          "url": "https://www.nber.org/papers/w33777",
+          "publisher": "NBER",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "survey_linked_administrative_data",
+      "outcome_stage": "earnings_hours_null",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "study_family": "HUMLUM_VESTERGAARD_W33777",
+      "geography": [
+        "Denmark"
+      ],
+      "mechanism_ru": "Перестройка работы может опережать изменения зарплаты и численности; эти показатели нельзя подменять друг другом.",
+      "mechanism_en": "Work reorganization can precede wage and headcount changes; these outcomes are not interchangeable."
+    },
+    {
+      "id": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE",
+      "date": "2026-06-12",
+      "date_precision": "day",
+      "date_kind": "journal_online_publication",
+      "track": "work",
+      "title_ru": "P&G: отдельный специалист с ИИ сопоставим с командой без ИИ в эксперименте",
+      "title_en": "P&G: individuals with AI match unaided teams in an experiment",
+      "summary_ru": "В пререгистрированном эксперименте продуктовых задач участвовал 791 специалист. Индивидуальная работа с ИИ достигала уровня команд без ИИ и чаще соединяла разные виды экспертизы.",
+      "summary_en": "A preregistered product-task experiment involved 791 professionals. Individuals with AI matched unaided teams and more often combined different kinds of expertise.",
+      "caveat_ru": "Это публикация того же исследования, чей препринт вышел в 2025 году. Ограниченные задания не доказывают возможность вдвое сократить штат.",
+      "caveat_en": "This is the journal publication of the study preprinted in 2025. Bounded tasks do not establish that staffing can be halved.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1287/orsc.2025.20702",
+          "publisher": "Organization Science",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_paper"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "preregistered_randomized_field_experiment",
+      "outcome_stage": "team_task_performance",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "study_family": "CYBERNETIC_TEAMMATE_PG",
+      "geography": [],
+      "geography_note": "P&G experiment; no inferred national employment effect.",
+      "sample_note": "791 completed the workshop; 776 completed post-task surveys. Do not mix the denominators.",
+      "mechanism_ru": "Проверяется изменение границ специализации и координации, а не только скорость одного исполнителя.",
+      "mechanism_en": "The experiment tests boundaries of specialization and coordination, not only individual speed."
+    },
+    {
+      "id": "WORK_CAND_2025_ILO_TASK_EXPOSURE",
+      "date": "2025-05-20",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "work",
+      "title_ru": "ILO и NASK: под воздействием генеративного ИИ около четверти рабочих мест",
+      "title_en": "ILO and NASK: roughly one quarter of jobs have GenAI exposure",
+      "summary_ru": "Глобальный индекс оценивает задачи профессий и показывает широкую потенциальную трансформацию работы, а не наблюдаемое число исчезнувших рабочих мест.",
+      "summary_en": "The global index assesses occupational tasks and indicates broad potential work transformation, not an observed count of eliminated jobs.",
+      "caveat_ru": "Экспозиция не равна автоматизации, внедрению или увольнению. Оценка зависит от состава задач, стран и принятой классификации.",
+      "caveat_en": "Exposure is not automation, adoption or layoffs. Estimates depend on task composition, country and classification.",
+      "sources": [
+        {
+          "url": "https://www.ilo.org/resource/news/one-four-jobs-risk-being-transformed-genai-new-ilo%E2%80%93nask-global-index-shows",
+          "publisher": "ILO / NASK",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "modeled_task_exposure_index",
+      "outcome_stage": "exposure_not_realized_effect",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global"
+      ],
+      "mechanism_ru": "Неравномерность по профессиям и странам требует отдельного измерения распределения выигрышей и потерь.",
+      "mechanism_en": "Uneven occupational and national exposure calls for separate measurement of how gains and losses are distributed."
+    },
+    {
+      "id": "WORK_CAND_2026_NBER_FIRM_DATA",
+      "date": "2026-02",
+      "date_precision": "month",
+      "date_kind": "working_paper_release",
+      "track": "work",
+      "title_ru": "Опрос компаний: широкое использование ИИ при небольшом сообщённом эффекте",
+      "title_en": "Firm survey: broad AI use with limited reported impact",
+      "summary_ru": "Почти 6000 руководителей из четырёх стран: ИИ используют 69% компаний; свыше 90% не видят влияния на занятость, 89% на производительность за предыдущие три года.",
+      "summary_en": "Almost 6,000 executives in four countries: 69% of firms use AI; over 90% report no employment impact and 89% no productivity impact over the previous three years.",
+      "caveat_ru": "Самоотчёт руководителей, не причинная оценка и не административное измерение эффекта. Прогнозы на следующие три года нельзя записывать как уже реализованный результат.",
+      "caveat_en": "Executive self-reports, not causal estimates or administrative measurement of effects. Three-year forecasts are not realized outcomes.",
+      "sources": [
+        {
+          "url": "https://wfhresearch.com/wp-content/uploads/2026/03/Firm-Data-on-AI-16-February-2026.pdf",
+          "publisher": "Authors / NBER",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_paper"
+        },
+        {
+          "url": "https://www.nber.org/papers/w34836",
+          "publisher": "NBER",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "paper_identity"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "stack_layers": [
+        "decision_support_cognition"
+      ],
+      "evidence_kind": "executive_survey_working_paper",
+      "outcome_stage": "reported_firm_effects_and_expectations",
+      "integration_status": "reuse_with_correction",
+      "prior_record_refs": [
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP"
+        },
+        {
+          "file": "factcheck.json",
+          "id": "ai-26"
+        }
+      ],
+      "related_existing_event_ids": [],
+      "study_period": {
+        "survey_from": "2025-11",
+        "survey_through": "2026-01"
+      },
+      "geography": [
+        "US",
+        "UK",
+        "Germany",
+        "Australia"
+      ],
+      "mechanism_ru": "Следует различать внедрение, ожидания работодателя и измеренное перераспределение дохода и занятости.",
+      "mechanism_en": "Adoption, employer expectations and measured redistribution of income and jobs are distinct."
+    },
+    {
+      "id": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS",
+      "date": "2021-11-22",
+      "date_precision": "day",
+      "date_kind": "institutional_result_announcement",
+      "track": "science",
+      "subdomain": "astronomy",
+      "title_ru": "ExoMiner: статистическая валидация 301 экзопланеты",
+      "title_en": "ExoMiner: statistical validation of 301 exoplanets",
+      "summary_ru": "NASA сообщило о валидации 301 ранее выявленного кандидата Kepler с помощью нейросетевого классификатора ExoMiner.",
+      "summary_en": "NASA reported statistical validation of 301 previously identified Kepler planet candidates using the ExoMiner neural classifier.",
+      "caveat_ru": "Сигналы ранее нашёл конвейер Kepler. Статистическая валидация отличается от подтверждения независимыми наблюдательными методами. Это результат до нынешнего бума LLM.",
+      "caveat_en": "Kepler's pipeline had already detected the signals. Statistical validation differs from confirmation with independent observing techniques. This predates the current LLM boom.",
+      "sources": [
+        {
+          "url": "https://www.jpl.nasa.gov/news/new-deep-learning-method-adds-301-planets-to-keplers-total-count/",
+          "publisher": "NASA JPL",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        },
+        {
+          "url": "https://arxiv.org/abs/2111.10009",
+          "publisher": "Study authors / arXiv",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "research_paper_and_institutional_report",
+      "outcome_stage": "statistical_validation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [],
+      "geography": [
+        "US"
+      ],
+      "study_family": "EXOMINER_KEPLER_301",
+      "geography_basis": "NASA-led research infrastructure, not location of celestial objects.",
+      "mechanism_ru": "Вычислительная обработка повышает отдачу от накопленного государственного наблюдательного ресурса.",
+      "mechanism_en": "Computational analysis increases the return from accumulated public observing infrastructure."
+    },
+    {
+      "id": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES",
+      "date": "2025-05-19",
+      "date_precision": "day",
+      "date_kind": "research_revision",
+      "track": "science",
+      "subdomain": "astronomy",
+      "title_ru": "ExoMiner++: отбор транзитных сигналов для последующих наблюдений",
+      "title_en": "ExoMiner++: prioritizing transit signals for follow-up",
+      "summary_ru": "Версия v4 выделяет 7330 сигналов-кандидатов из 147 568 неразмеченных событий TESS. Они соответствуют преимущественно уже известным объектам; добавлены 50 новых CTOI.",
+      "summary_en": "Version v4 selects 7,330 candidate signals from 147,568 unlabeled TESS events. Most map to existing objects; 50 new CTOIs were introduced.",
+      "caveat_ru": "Это не 7330 уникальных новых планет. Кандидат требует дальнейшей проверки. Сообщение NASA января 2026 года описывает работу, опубликованную ранее.",
+      "caveat_en": "These are not 7,330 unique new planets. Candidates need further validation. NASA's January 2026 report describes previously published work.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2502.09790v4",
+          "publisher": "Study authors / arXiv",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract"
+        },
+        {
+          "url": "https://science.nasa.gov/open-science/deep-learning-exoplanets-tess/",
+          "publisher": "NASA",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "research_preprint_and_institutional_report",
+      "outcome_stage": "candidate_catalog_not_confirmed_discoveries",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [
+        "SCI_CAND_2021_EXOMINER_301_VALIDATIONS"
+      ],
+      "geography": [
+        "US"
+      ],
+      "first_publication_date": "2025-02-13",
+      "institutional_announcement_date": "2026-01-22",
+      "study_family": "EXOMINER_PLUS_TESS_2MIN",
+      "geography_basis": "NASA-led research infrastructure.",
+      "mechanism_ru": "Открытые данные и инструменты расширяют участие; отбор одновременно определяет, на что потратят дефицитное время телескопов.",
+      "mechanism_en": "Open data and tools broaden participation; selection also directs scarce telescope follow-up time."
+    },
+    {
+      "id": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE",
+      "date": "2025-10-30",
+      "date_precision": "day",
+      "date_kind": "research_revision",
+      "track": "science",
+      "subdomain": "astronomy",
+      "title_ru": "AnomalyMatch: редкие объекты в архиве Hubble",
+      "title_en": "AnomalyMatch: rare objects in the Hubble archive",
+      "summary_ru": "Исследователи применили полуавтоматический поиск к 99,6 млн фрагментов изображений. В опубликованной версии перечислены, в частности, 138 новых кандидатов в гравитационные линзы.",
+      "summary_en": "Researchers applied semi-automated search to 99.6 million image cutouts. The published version includes 138 new gravitational-lens candidates.",
+      "caveat_ru": "Аномалия не равна новой физике; некоторые классы требуют подтверждения. Архивный поиск и экспертная проверка совместны. Релиз ESA 2026 года не означает, что исследование началось в 2026-м.",
+      "caveat_en": "An anomaly is not new physics; some classes need confirmation. Archive search and expert inspection work together. ESA's 2026 release does not date the research to 2026.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2505.03508v3",
+          "publisher": "Study authors / A&A",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract"
+        },
+        {
+          "url": "https://esahubble.org/news/heic2603/",
+          "publisher": "ESA/Hubble",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "accepted_paper_and_institutional_report",
+      "outcome_stage": "expert_reviewed_catalog_with_candidate_classes",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [],
+      "geography": [
+        "US",
+        "Europe"
+      ],
+      "first_publication_date": "2025-05-06",
+      "institutional_announcement_date": "2026-01-27",
+      "study_family": "HUBBLE_ANOMALYMATCH",
+      "geography_basis": "NASA/ESA archive and ESA research, not locations of astronomical objects.",
+      "mechanism_ru": "Уже собранные данные становятся источником новых результатов благодаря средствам поиска; владение архивом и возможность его анализировать различаются.",
+      "mechanism_en": "Existing data yield new results through better search; owning an archive and being able to analyze it are distinct."
+    },
+    {
+      "id": "SCI_CAND_2022_ITHACA_EPIGRAPHY",
+      "date": "2022-03-09",
+      "date_precision": "day",
+      "date_kind": "journal_online_publication",
+      "track": "science",
+      "subdomain": "history_archaeology",
+      "title_ru": "Ithaca помогает восстанавливать и атрибутировать греческие надписи",
+      "title_en": "Ithaca assists Greek inscription restoration and attribution",
+      "summary_ru": "В испытании точность восстановления составила 62% у модели; у историков с её помощью выросла с 25% до 72%. Система также оценивает место и время создания.",
+      "summary_en": "In the evaluation, model restoration accuracy was 62%; assisted historians improved from 25% to 72%. The system also estimates origin and date.",
+      "caveat_ru": "Восстановление пропуска является гипотезой по корпусу, не считыванием исчезнувших чернил. Результат испытания не гарантирует правильность любой новой реконструкции.",
+      "caveat_en": "Filling a gap is a corpus-based hypothesis, not reading vanished ink. Evaluation performance does not guarantee every new reconstruction.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41586-022-04448-z",
+          "publisher": "Nature",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_paper"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_study",
+      "outcome_stage": "expert_assistance_evaluation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [],
+      "geography": [],
+      "study_family": "ITHACA_EPIGRAPHY",
+      "mechanism_ru": "Доступ к корпусу и способ ранжирования вариантов влияют на историческую интерпретацию; гипотезы должны оставаться отличимы от оригинала.",
+      "mechanism_en": "Corpus access and ranking shape historical interpretation; hypotheses must remain distinguishable from the original."
+    },
+    {
+      "id": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES",
+      "date": "2024-02-05",
+      "date_precision": "day",
+      "date_kind": "result_announcement",
+      "track": "science",
+      "subdomain": "history_archaeology",
+      "title_ru": "Vesuvius Challenge: чтение фрагментов закрытого обугленного свитка",
+      "title_en": "Vesuvius Challenge: reading passages inside a sealed carbonized scroll",
+      "summary_ru": "Томография и машинное распознавание чернил позволили получить читаемые участки PHerc. Paris. 4; результат проверили папирологи и техническая команда конкурса.",
+      "summary_en": "Tomography and machine-learning ink detection recovered readable passages of PHerc. Paris. 4, reviewed by papyrologists and the competition's technical team.",
+      "caveat_ru": "Прочитаны участки, а не вся библиотека и не весь свиток. Название премии 2023 года не заменяет дату объявления результатов в феврале 2024-го.",
+      "caveat_en": "Passages were read, not the whole library or scroll. The 2023 prize label does not replace its February 2024 result-announcement date.",
+      "sources": [
+        {
+          "url": "https://scrollprize.org/grandprize",
+          "publisher": "Vesuvius Challenge",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "competition_result_with_expert_review",
+      "outcome_stage": "physical_source_text_recovery",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [],
+      "geography": [
+        "Italy",
+        "France",
+        "UK"
+      ],
+      "study_period": {
+        "submissions_through": "2023-12",
+        "review_through": "2024-01"
+      },
+      "study_family": "VESUVIUS_PHERC_PARIS4",
+      "geography_basis": "Artifact provenance, holding institution and scan infrastructure.",
+      "mechanism_ru": "Общий доступ к сканам и конкурсная кооперация позволяют извлекать знание из физически недоступного оригинала.",
+      "mechanism_en": "Shared scans and collaborative competition recover knowledge from a physically inaccessible original."
+    },
+    {
+      "id": "SCI_CAND_2026_VESUVIUS_PHERC1667",
+      "date": "2026-06-25",
+      "date_precision": "day",
+      "date_kind": "result_announcement",
+      "track": "science",
+      "subdomain": "history_archaeology",
+      "title_ru": "PHerc. 1667: непрерывное чтение сохранившейся части свитка",
+      "title_en": "PHerc. 1667: continuous reading of the surviving scroll portion",
+      "summary_ru": "Команда сообщила о виртуальной развёртке и чтении сохранившегося внутреннего участка PHerc. 1667: нижних частей примерно 22 греческих колонок.",
+      "summary_en": "The team reported virtual unwrapping and reading of PHerc. 1667's surviving inner portion: lower sections of approximately 22 Greek columns.",
+      "caveat_ru": "Внешние части были утрачены ранее. «Полностью» относится к сохранившемуся участку, не к первоначальной книге. Проверена первичная публикация и препринт, не независимая репликация всей процедуры.",
+      "caveat_en": "Outer portions were previously lost. 'Complete' refers to the surviving portion, not the original book. This review checks the primary disclosure and preprint, not a full independent replication.",
+      "sources": [
+        {
+          "url": "https://scrollprize.org/firstscroll",
+          "publisher": "Vesuvius Challenge",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        },
+        {
+          "url": "https://arxiv.org/abs/2606.29085",
+          "publisher": "Study authors / arXiv",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "research_preprint_and_expert_reading_report",
+      "outcome_stage": "physical_source_text_recovery",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [
+        "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES"
+      ],
+      "geography": [
+        "Italy",
+        "France"
+      ],
+      "preprint_date": "2026-06-27",
+      "study_family": "VESUVIUS_PHERC1667",
+      "geography_basis": "Holding institution and ESRF scanning infrastructure.",
+      "mechanism_ru": "Экспертиза, приборы, код и исходные сканы совместно создают проверяемое знание; одной языковой модели недостаточно.",
+      "mechanism_en": "Expertise, instruments, code and original scans jointly produce checkable knowledge; a language model alone is insufficient."
+    },
+    {
+      "id": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION",
+      "date": "2025-07-23",
+      "date_precision": "day",
+      "date_kind": "journal_online_publication",
+      "track": "science",
+      "subdomain": "history_archaeology",
+      "title_ru": "Aeneas: поиск параллелей и контекста латинских надписей",
+      "title_en": "Aeneas: retrieving parallels and context for Latin inscriptions",
+      "summary_ru": "В исследовании историки сочли найденные Aeneas параллели полезной отправной точкой в 90% случаев. Совместная работа улучшала восстановление и географическую атрибуцию.",
+      "summary_en": "Historians found Aeneas's retrieved parallels useful starting points in 90% of cases. Human-model collaboration improved restoration and geographical attribution.",
+      "caveat_ru": "Полезность для исследователя не означает 90% доказанной исторической истины. Предлагаемые дополнения текста и датировки остаются проверяемыми гипотезами.",
+      "caveat_en": "Usefulness to researchers does not mean 90% proven historical truth. Proposed text completions and dates remain hypotheses to test.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41586-025-09292-5",
+          "publisher": "Nature",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_paper"
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/aeneas/",
+          "publisher": "Google DeepMind",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_study",
+      "outcome_stage": "expert_assistance_evaluation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [
+        "SCI_CAND_2022_ITHACA_EPIGRAPHY"
+      ],
+      "geography": [],
+      "study_family": "AENEAS_EPIGRAPHY",
+      "mechanism_ru": "Система влияет на видимый исследователю круг аналогий. Открытый корпус и проверка первоисточника позволяют оспаривать её выводы.",
+      "mechanism_en": "The system shapes which analogies researchers see. An open corpus and original-source checks make its suggestions contestable."
+    },
+    {
+      "id": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING",
+      "date": "2025-06-04",
+      "date_precision": "day",
+      "date_kind": "journal_online_publication",
+      "track": "science",
+      "subdomain": "history_archaeology",
+      "title_ru": "Enoch соединяет радиоуглеродную датировку и анализ почерка",
+      "title_en": "Enoch combines radiocarbon dating and handwriting analysis",
+      "summary_ru": "Модель обучена на 24 датированных рукописях и даёт вероятностные оценки возраста по признакам письма. Работа предлагает пересмотр части датировок свитков Мёртвого моря.",
+      "summary_en": "Trained on 24 dated manuscripts, the model estimates probable dates from handwriting features. The study proposes revisions to some Dead Sea Scroll dates.",
+      "caveat_ru": "Это датировка, не расшифровка неизвестного языка. Возраст материальной копии не доказывает время сочинения или личность автора; малая обучающая выборка ограничивает переносимость.",
+      "caveat_en": "This is dating, not decipherment of an unknown language. A copy's age establishes neither composition date nor authorship; the small training set limits generalization.",
+      "sources": [
+        {
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0323185",
+          "publisher": "PLOS ONE",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_paper"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_study",
+      "outcome_stage": "probabilistic_historical_dating",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [],
+      "geography": [
+        "Netherlands"
+      ],
+      "study_family": "ENOCH_RADIOCARBON_HANDWRITING",
+      "geography_basis": "Lead research institution; not a territorial attribution of manuscript provenance.",
+      "mechanism_ru": "Цифровая экспертиза опирается на физически датированные образцы; модель не становится независимым источником хронологии.",
+      "mechanism_en": "Digital expertise depends on physically dated specimens; the model is not an independent source of chronology."
+    },
+    {
+      "id": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION",
+      "date": "2025-03-17",
+      "date_precision": "day",
+      "date_kind": "journal_online_publication",
+      "track": "science",
+      "subdomain": "history_archaeology",
+      "title_ru": "Гимн Вавилону: восстановление текста через сопоставление рукописей",
+      "title_en": "Hymn to Babylon: reconstruction through manuscript comparison",
+      "summary_ru": "Исследователи Багдадского университета и LMU издали ранее неизвестный гимн. Позднее LMU сообщил, что ИИ-платформа помогла найти дополнительные связанные рукописи.",
+      "summary_en": "University of Baghdad and LMU researchers published a previously unknown hymn. LMU later reported that an AI-supported platform helped find further related manuscripts.",
+      "caveat_ru": "Статья описывает 20 рукописей и около двух третей текста; пресс-релиз говорит о 30 дополнительных рукописях и полном чтении. Масштаб не сводим в одно число без уточнения.",
+      "caveat_en": "The paper describes 20 manuscripts and roughly two thirds of the text; the release claims 30 additional manuscripts and complete reading. These scopes cannot be collapsed without clarification.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1017/irq.2024.23",
+          "publisher": "IRAQ / Cambridge University Press",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_paper"
+        },
+        {
+          "url": "https://www.lmu.de/de/die-lmu/struktur/zentrale-universitaetsverwaltung/presse-und-kommunikation-puk/press-room/pressemitteilung/lmu-altorientalist-enrique-jimenez-entdeckt-hymne-auf-babylon-8e671888.html",
+          "publisher": "LMU",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "scholarly_edition_and_institutional_ai_attribution",
+      "outcome_stage": "historical_text_reconstruction",
+      "integration_status": "ready_scoped_with_source_discrepancy",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [],
+      "geography": [
+        "Iraq",
+        "Germany"
+      ],
+      "institutional_announcement_date": "2025-07-01",
+      "study_family": "BABYLON_HYMN_SIPPAR_V",
+      "geography_basis": "Research collaboration.",
+      "mechanism_ru": "Сопоставление разбросанных источников даёт новое знание; вклад ИИ здесь сообщён университетом, а не измерен контролируемым сравнением.",
+      "mechanism_en": "Linking dispersed sources produces knowledge; AI's contribution is institution-reported, not measured in a controlled comparison."
+    },
+    {
+      "id": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY",
+      "date": "2024-09-23",
+      "date_precision": "day",
+      "date_kind": "journal_online_publication",
+      "track": "science",
+      "subdomain": "history_archaeology",
+      "title_ru": "Наска: ИИ-направленный поиск и полевая проверка новых геоглифов",
+      "title_en": "Nazca: AI-guided search and field validation of new geoglyphs",
+      "summary_ru": "Сезон 2022–2023 дал 303 новых фигуративных геоглифа. Из них 178 были непосредственно предложены ИИ, ещё 66 найдены в связанных группах и 59 без такой подсказки.",
+      "summary_en": "The 2022–2023 season found 303 new figurative geoglyphs: 178 individually suggested by AI, 66 in related groups and 59 without such a lead.",
+      "caveat_ru": "Нельзя приписать все 303 автономному ИИ. Это совместный результат предварительного отбора и обследования местности; гипотезы о назначении рисунков отличаются от факта обнаружения.",
+      "caveat_en": "All 303 cannot be credited to autonomous AI. This combines triage and fieldwork; hypotheses about the figures' purpose differ from their discovery.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1073/pnas.2407652121",
+          "publisher": "PNAS",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_paper"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_study",
+      "outcome_stage": "field_validated_discovery",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "related_candidate_ids": [],
+      "geography": [
+        "Peru"
+      ],
+      "study_period": {
+        "fieldwork_from": "2022-09",
+        "fieldwork_through": "2023-02"
+      },
+      "study_family": "NAZCA_2022_2023_AI_FIELD_SURVEY",
+      "geography_basis": "Fieldwork location; researchers also from Japan, France, Germany and the US.",
+      "mechanism_ru": "Алгоритм направляет ограниченный ресурс полевой проверки; подтверждение остаётся связано с материальным объектом.",
+      "mechanism_en": "The algorithm directs scarce field-validation capacity; confirmation remains tied to physical objects."
+    },
+    {
+      "id": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS",
+      "date": "2025-02-25",
+      "date_precision": "day",
+      "date_kind": "operational_launch",
+      "track": "science",
+      "subdomain": "weather_climate",
+      "title_ru": "ECMWF вводит AIFS в эксплуатацию",
+      "title_en": "ECMWF puts AIFS into operations",
+      "summary_ru": "ECMWF запустил AIFS рядом с физической системой IFS. Документация фиксирует запуск ансамбля 1 июля 2025 года и переход обеих систем на v2 12 мая 2026 года. Выходные данные допускают коммерческое повторное использование с атрибуцией.",
+      "summary_en": "ECMWF launched AIFS alongside its physics-based IFS. Documentation records the ensemble launch on 1 July 2025 and both systems' v2 upgrade on 12 May 2026. Output data permit commercial reuse with attribution.",
+      "caveat_ru": "Европейская межгосударственная организация, не орган ЕС. Экономия энергии на прогнозе не включает весь цикл обучения и наблюдений. Условия выходных данных не равны лицензиям всех компонентов.",
+      "caveat_en": "A European intergovernmental organization, not an EU body. Forecast energy savings exclude the full training and observation lifecycle. Output terms are not every component's licence.",
+      "sources": [
+        {
+          "url": "https://www.ecmwf.int/en/about/media-centre/news/2025/ecmwfs-ai-forecasts-become-operational",
+          "publisher": "ECMWF",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        },
+        {
+          "url": "https://www.ecmwf.int/en/forecasts/dataset/aifs-machine-learning-data",
+          "publisher": "ECMWF",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_current_documentation"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "operator_documentation",
+      "outcome_stage": "operational_service",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "ECMWF"
+        ],
+        "developer_country_codes": [],
+        "validation_country_codes": [],
+        "data_inputs": [
+          "ERA5 and ECMWF operational analyses; international observations"
+        ],
+        "upstream_models": [
+          "AIFS"
+        ],
+        "access_notes_ru": "Данные CC BY 4.0 плюс условия ECMWF; архивы требуют регистрации. Организация межгосударственная.",
+        "access_notes_en": "Outputs: CC BY 4.0 plus ECMWF terms; archives require registration. Intergovernmental organization.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Публичная инфраструктура может удерживать научную компетенцию и расширять доступ.",
+      "mechanism_en": "Public infrastructure can retain scientific capability while widening access.",
+      "subsequent_milestones": [
+        {
+          "date": "2025-07-01",
+          "kind": "ensemble_launch"
+        },
+        {
+          "date": "2026-05-12",
+          "kind": "v2_upgrade"
+        }
+      ]
+    },
+    {
+      "id": "SCI_CAND_2023_PANGU_WEATHER_ERA5",
+      "date": "2023-07-05",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "subdomain": "weather_climate",
+      "title_ru": "Pangu-Weather: китайская модель на данных ERA5",
+      "title_en": "Pangu-Weather: a Chinese model built on ERA5",
+      "summary_ru": "Huawei описала нейросетевой прогноз погоды, обученный на ERA5, с улучшением исследованных показателей относительно использованной версии IFS.",
+      "summary_en": "Huawei described a neural weather forecaster trained on ERA5, with gains on studied metrics against its IFS comparison.",
+      "caveat_ru": "Сравнение ограничено версиями и метриками, не доказывает постоянное лидерство. Происхождение модели и международных наблюдений в ERA5 различается.",
+      "caveat_en": "The comparison is version- and metric-specific, not permanent leadership. Model origin differs from the provenance of ERA5's international observations.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41586-023-06185-3",
+          "publisher": "Nature",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        },
+        {
+          "url": "https://arxiv.org/abs/2211.02556",
+          "publisher": "Authors / arXiv",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "abstract_and_version_history"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_research",
+      "outcome_stage": "research_validation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "China",
+        "Global"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "Huawei"
+        ],
+        "developer_country_codes": [
+          "CN"
+        ],
+        "validation_country_codes": [],
+        "data_inputs": [
+          "ECMWF / Copernicus ERA5 global reanalysis"
+        ],
+        "upstream_models": [
+          "Pangu-Weather"
+        ],
+        "access_notes_ru": "Текущие коммерческие условия модели не проверялись.",
+        "access_notes_en": "Current commercial model terms were not audited.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Собственная модель и использование общей инфраструктуры данных совместимы; это ещё не отношение подчинения.",
+      "mechanism_en": "An original model can use shared data infrastructure; this does not itself establish subordination.",
+      "first_publication_date": "2022-11-03"
+    },
+    {
+      "id": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS",
+      "date": "2024-03-20",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "subdomain": "weather_climate",
+      "title_ru": "ИИ улучшает прогноз паводков без локальной сети гидропостов",
+      "title_en": "AI improves flood forecasts in ungauged basins",
+      "summary_ru": "Прогноз экстремальных речных событий за срок до пяти дней показал надёжность, сопоставимую с прогнозом на текущий день GloFAS. Метод вошёл в бесплатный сервис более чем для 80 стран.",
+      "summary_en": "Up-to-five-day extreme river-event forecasts achieved reliability comparable to GloFAS nowcasts. The method entered a free service covering over 80 countries.",
+      "caveat_ru": "Это качество прогноза, не измеренные спасённые жизни. Семидневный горизонт сервиса не означает одинакового качества на всех сроках или для всех видов наводнений.",
+      "caveat_en": "This measures forecast skill, not lives saved. A seven-day service horizon does not imply equal skill at every lead time or for all flood types.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41586-024-07145-1",
+          "publisher": "Nature",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_research",
+      "outcome_stage": "forecast_validation_and_operational_service",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "Google Research",
+          "ECMWF",
+          "JKU",
+          "RAND"
+        ],
+        "developer_country_codes": [
+          "US",
+          "IL",
+          "AT"
+        ],
+        "validation_country_codes": [],
+        "data_inputs": [
+          "Open global streamflow and weather datasets"
+        ],
+        "upstream_models": [
+          "LSTM flood model"
+        ],
+        "access_notes_ru": "Прогнозы бесплатны без регистрации; исследовательская реализация описана в NeuralHydrology. Полный список стран команды не кодировался.",
+        "access_notes_en": "Forecasts were free without registration; a research implementation is described in NeuralHydrology. Team country codes are not exhaustive.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Общие данные могут уменьшать географическое неравенство прогнозов, не снимая вопроса управления сервисом.",
+      "mechanism_en": "Shared data can reduce geographic forecast inequality without settling service governance."
+    },
+    {
+      "id": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION",
+      "date": "2025-09-15",
+      "date_precision": "day",
+      "date_kind": "deployment_report",
+      "track": "science",
+      "subdomain": "agriculture",
+      "title_ru": "Индия: ИИ-прогноз муссона довели до 38 млн фермеров",
+      "title_en": "India: AI monsoon forecasts reached 38 million farmers",
+      "summary_ru": "Google и партнёры сообщили о рассылке прогнозов примерно 38 млн фермеров. Реестр PxD указывает 13 штатов и SMS министерства сельского хозяйства в мае–июне 2025 года.",
+      "summary_en": "Google and partners reported forecast distribution to about 38 million farmers. PxD's registry specifies 13 states and agriculture-ministry SMS delivery in May–June 2025.",
+      "caveat_ru": "Рассылка не равна прочтению, изменению посевов или измеренному росту доходов. NeuralGCM был частью системы, а не единственным источником результата.",
+      "caveat_en": "Distribution is not reading, changed planting or measured income gains. NeuralGCM was part of the system, not the sole source of the result.",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/research/indian-farmers-monsoon-prediction/",
+          "publisher": "Google",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_announcement"
+        },
+        {
+          "url": "https://registry.precisiondev.org/registry_entry/monsoon-onset-forecast-dissemination-to-farmers-in-india-kharif-2025/",
+          "publisher": "Precision Development",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_registry"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "participant_report_and_registry",
+      "outcome_stage": "reported_large_scale_deployment",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "India",
+        "US"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "Google Research",
+          "University of Chicago",
+          "Precision Development",
+          "India Ministry of Agriculture and Farmers Welfare"
+        ],
+        "developer_country_codes": [
+          "US",
+          "IN"
+        ],
+        "validation_country_codes": [
+          "IN"
+        ],
+        "data_inputs": [
+          "Weather forecasts and local agricultural distribution infrastructure"
+        ],
+        "upstream_models": [
+          "NeuralGCM (part of system)"
+        ],
+        "access_notes_ru": "Государственный канал SMS; модель и доставка находятся у разных организаций.",
+        "access_notes_en": "Government SMS channel; model and delivery are controlled by different organizations.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Местная способность довести прогноз до решения является ресурсом наряду с моделью.",
+      "mechanism_en": "Local capacity to deliver forecasts for decisions is a resource alongside the model.",
+      "study_period": "2025-05/2025-06"
+    },
+    {
+      "id": "SCI_CAND_2023_USTC_ROBOT_CATALYST",
+      "date": "2023-11-13",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "subdomain": "chemistry_materials",
+      "title_ru": "Робот-химик USTC синтезирует катализатор из метеоритного материала",
+      "title_en": "USTC robot chemist synthesizes a meteorite-derived catalyst",
+      "summary_ru": "Китайская команда объединила расчёты, машинное обучение и роботизированные эксперименты для поиска и проверки катализатора выделения кислорода из воды.",
+      "summary_en": "A Chinese team combined computation, machine learning and robotic experiments to search for and test an oxygen-evolution catalyst.",
+      "caveat_ru": "Марсианские метеориты исследовали на Земле. Это не действующая установка на Марсе; сравнение с тысячами лет перебора не является измеренным ускорением труда.",
+      "caveat_en": "Martian meteorites were studied on Earth. This is not a working installation on Mars; comparisons with millennia of exhaustive search are not measured labour speedups.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s44160-023-00424-1",
+          "publisher": "Nature Synthesis",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        },
+        {
+          "url": "https://news.ustc.edu.cn/info/1048/85245.htm",
+          "publisher": "USTC",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_institutional_report"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_research",
+      "outcome_stage": "physical_lab_validation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "China"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "USTC and collaborating Chinese institutions"
+        ],
+        "developer_country_codes": [
+          "CN"
+        ],
+        "validation_country_codes": [
+          "CN"
+        ],
+        "data_inputs": [
+          "First-principles calculations and robotic measurements"
+        ],
+        "upstream_models": [
+          "Task-specific neural predictor and optimization"
+        ],
+        "access_notes_ru": "Опубликованы данные и код предиктора; физическая лаборатория остаётся отдельным ресурсом.",
+        "access_notes_en": "Data and predictor code are shared; the physical laboratory is a separate resource.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Воспроизводство результата требует образцов, роботики и измерений, не только весов.",
+      "mechanism_en": "Reproduction requires samples, robotics and measurements, not just weights."
+    },
+    {
+      "id": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL",
+      "date": "2022-02-16",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "subdomain": "fusion_physics",
+      "title_ru": "Обучение с подкреплением управляет плазмой в токамаке TCV",
+      "title_en": "Reinforcement learning controls plasma in the TCV tokamak",
+      "summary_ru": "DeepMind и Швейцарский центр плазмы EPFL испытали контроллер, обученный в симуляторе, на реальном токамаке TCV. Он управлял магнитными катушками и воспроизводил разные конфигурации плазмы.",
+      "summary_en": "DeepMind and EPFL's Swiss Plasma Center tested a simulator-trained controller on the real TCV tokamak. It controlled magnetic coils and produced multiple plasma configurations.",
+      "caveat_ru": "Это эксперимент управления плазмой, не демонстрация коммерческого термоядерного реактора или положительного энергетического баланса. Перенос на другие установки требует отдельной проверки.",
+      "caveat_en": "This is a plasma-control experiment, not a demonstration of commercial fusion or net energy gain. Transfer to other devices needs separate validation.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41586-021-04301-9",
+          "publisher": "Nature / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_physical_experiment",
+      "outcome_stage": "experimental_control",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "UK",
+        "Switzerland"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "DeepMind",
+          "EPFL Swiss Plasma Center"
+        ],
+        "developer_country_codes": [
+          "GB",
+          "CH"
+        ],
+        "validation_country_codes": [
+          "CH"
+        ],
+        "data_inputs": [
+          "Physics simulator and TCV experimental measurements"
+        ],
+        "upstream_models": [
+          "Reinforcement-learning plasma controller"
+        ],
+        "access_notes_ru": "Открытая публикация не означает открытый доступ к токамаку или всей экспериментальной инфраструктуре.",
+        "access_notes_en": "An open paper does not imply open access to the tokamak or all experimental infrastructure.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Научный результат возникает при соединении алгоритмов и дорогостоящей физической установки; доступ к модели не заменяет доступ к эксперименту.",
+      "mechanism_en": "Scientific capability combines algorithms with an expensive physical facility; model access does not replace experimental access."
+    },
+    {
+      "id": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE",
+      "date": "2024-02-21",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "subdomain": "fusion_physics",
+      "title_ru": "ИИ-контроллер снижает риск тиринг-неустойчивости на DIII-D",
+      "title_en": "AI control reduces tearing-instability risk on DIII-D",
+      "summary_ru": "В эксперименте на DIII-D контроллер с обучением с подкреплением изменял нагрев и форму плазмы, снижая вероятность тиринг-неустойчивости при работе в исследованных режимах.",
+      "summary_en": "In DIII-D experiments, a reinforcement-learning controller adjusted heating and plasma shape to reduce tearing-instability likelihood in the tested operating regimes.",
+      "caveat_ru": "Результат относится к определённым неустойчивостям и режимам одной установки. Он не означает устранение всех срывов плазмы или решение задачи промышленного термоядерного синтеза.",
+      "caveat_en": "The result concerns particular instabilities and operating regimes on one device. It does not mean elimination of all disruptions or a solution to commercial fusion.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41586-024-07024-9",
+          "publisher": "Nature / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_physical_experiment",
+      "outcome_stage": "experimental_control",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "US",
+        "South Korea"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "Princeton University",
+          "Princeton Plasma Physics Laboratory",
+          "DIII-D collaborators",
+          "Chung-Ang University"
+        ],
+        "developer_country_codes": [
+          "US",
+          "KR"
+        ],
+        "validation_country_codes": [
+          "US"
+        ],
+        "data_inputs": [
+          "DIII-D tokamak measurements and predictive models"
+        ],
+        "upstream_models": [
+          "Reinforcement-learning controller"
+        ],
+        "access_notes_ru": "Доступность публикации не устанавливает переносимость контроллера или доступность физической установки.",
+        "access_notes_en": "Paper availability does not establish controller portability or access to the physical facility.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Международное участие в алгоритмах сочетается с концентрацией экспериментальной проверки на специализированной установке.",
+      "mechanism_en": "International algorithmic collaboration coexists with concentrated experimental validation at a specialized facility.",
+      "related_candidate_ids": [
+        "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL"
+      ]
+    },
+    {
+      "id": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION",
+      "date": "2026-07-31",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "subdomain": "comparative_biology",
+      "title_ru": "KAUST Unify сопоставляет типы клеток разных видов",
+      "title_en": "KAUST Unify compares cell types across species",
+      "summary_ru": "Unify объединяет представления белков ESM2 и текстовые представления Llama 2 для сопоставления клеток. Авторы исследовали 125 типов клеток семи видов, разделённых примерно 700 млн лет эволюции, и перенос предсказаний клеточного ответа между видами.",
+      "summary_en": "Unify combines ESM2 protein representations and Llama 2 text representations to compare cells. The authors studied 125 cell types across seven species spanning approximately 700 million years of evolution and cross-species transfer of cellular-response predictions.",
+      "caveat_ru": "Это вычислительная проверка метода, не клиническое доказательство универсального переноса. Собственный метод поверх внешних моделей является научным вкладом, но не доказывает независимость всего вычислительного стека. В статье проверены и другие сочетания языковых моделей, поэтому зависимость от единственного поставщика не установлена.",
+      "caveat_en": "This is computational method validation, not clinical proof of universal transfer. An original method built on external models is a scientific contribution but does not establish independence of the entire compute stack. The paper tests other model pairings, so dependence on one specific supplier is not established.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41467-026-76230-y",
+          "publisher": "Nature Communications / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        },
+        {
+          "url": "https://discovery.kaust.edu.sa/en/article/27301/tracing-700-million-years-of-cell-evolution/",
+          "publisher": "KAUST",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_research",
+      "outcome_stage": "computational_validation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Saudi Arabia"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "KAUST"
+        ],
+        "developer_country_codes": [
+          "SA"
+        ],
+        "validation_country_codes": [],
+        "data_inputs": [
+          "Cross-species single-cell datasets",
+          "Protein sequences and annotations"
+        ],
+        "upstream_models": [
+          "ESM2",
+          "Llama 2",
+          "Other protein/text encoder pairings tested"
+        ],
+        "access_notes_ru": "Авторы публикуют код и архивируют его в Zenodo; условия внешних моделей следует рассматривать отдельно.",
+        "access_notes_en": "Authors publish code and archive it in Zenodo; upstream model terms need separate treatment.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Научная специализация может усиливаться без владения базовой моделью: суверенность и зависимость различаются по слоям.",
+      "mechanism_en": "Scientific specialization can grow without ownership of the foundation model: autonomy and dependence differ by layer.",
+      "subsequent_milestones": [
+        {
+          "date": "2026-09-02",
+          "kind": "institutional_announcement"
+        }
+      ]
+    },
+    {
+      "id": "SCI_CAND_2024_LUCAPROT_RNA_VIROME",
+      "date": "2024-10-09",
+      "date_precision": "day",
+      "date_kind": "online_publication",
+      "track": "science",
+      "subdomain": "microbiology",
+      "title_ru": "LucaProt расширяет каталог потенциальных РНК-вирусов",
+      "title_en": "LucaProt expands the catalogue of potential RNA viruses",
+      "summary_ru": "Исследование LucaProt обработало 10 487 метатранскриптомов и выявило 161 979 потенциальных видов РНК-вирусов. Для части новых результатов авторы провели лабораторную проверку. Работа объединяет исследователей из Китая, Гонконга и Австралии.",
+      "summary_en": "The LucaProt study analyzed 10,487 metatranscriptomes and identified 161,979 potential RNA virus species. The authors performed laboratory validation for a subset of novel results. The collaboration spans China, Hong Kong and Australia.",
+      "caveat_ru": "Потенциальные виды не равны 161 979 новым подтверждённым патогенам человека. Вычислительный каталог, новизна последовательностей и лабораторная проверка части результатов являются разными уровнями доказательств.",
+      "caveat_en": "Potential species are not 161,979 newly confirmed human pathogens. A computational catalogue, sequence novelty and laboratory validation of a subset are different evidence levels.",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39389057/",
+          "publisher": "PubMed / Cell authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_abstract_and_metadata"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.cell.2024.09.027",
+          "publisher": "Cell / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_abstract"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_research",
+      "outcome_stage": "computational_discovery_with_subset_lab_validation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "China",
+        "Hong Kong",
+        "Australia"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "Sun Yat-sen University",
+          "Alibaba Cloud Apsara Lab",
+          "University of Sydney",
+          "Hong Kong collaborators"
+        ],
+        "developer_country_codes": [
+          "CN",
+          "AU"
+        ],
+        "validation_country_codes": [],
+        "data_inputs": [
+          "10,487 metatranscriptomes across diverse global ecosystems"
+        ],
+        "upstream_models": [
+          "LucaProt"
+        ],
+        "access_notes_ru": "Проверены публикация и метаданные; лицензии всей цепочки данных и программ отдельно не аудированы.",
+        "access_notes_en": "Publication and metadata checked; licences across the full data/software pipeline have not been audited.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Распознавание в больших корпусах превращает накопленные данные в новые научные кандидаты; подтверждение остаётся отдельной работой.",
+      "mechanism_en": "Recognition across large corpora turns accumulated data into new scientific candidates; confirmation remains separate work."
+    },
+    {
+      "id": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY",
+      "date": "2024-05-11",
+      "date_precision": "day",
+      "date_kind": "first_preprint",
+      "track": "science",
+      "subdomain": "materials",
+      "title_ru": "Магнитные межатомные потенциалы: точность зависит от состава обучения",
+      "title_en": "Magnetic interatomic potentials: reliability depends on training targets",
+      "summary_ru": "Работа с участием Сколтеха, МФТИ, ВШЭ, РАН и зарубежных коллег показывает, что включение магнитных сил в обучение магнитных моментных тензорных потенциалов улучшает надёжность магнитной релаксации. Проверка включает систему Fe-Al и сравнение с первопринципными расчётами.",
+      "summary_en": "Work involving Skoltech, MIPT, HSE, RAS and international collaborators shows that including magnetic forces in magnetic moment tensor potential training improves magnetic-relaxation reliability. Validation includes Fe-Al and comparisons with first-principles calculations.",
+      "caveat_ru": "Это результат по специализированному методу, не готовый промышленный сплав и не общая оценка российского ИИ. Дата карточки соответствует первому препринту 2024 года; пресс-релиз 2025 года не является датой открытия.",
+      "caveat_en": "This is a specialized methodological result, not an industrial alloy or a general assessment of Russian AI. The card uses the first 2024 preprint date; the 2025 press release is not the discovery date.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2405.07069",
+          "publisher": "Study authors / arXiv",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_abstract"
+        },
+        {
+          "url": "https://www.skoltech.ru/news/magnetic-materials-taken-charge-ai",
+          "publisher": "Skoltech",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_page"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.commatsci.2024.113331",
+          "publisher": "Computational Materials Science / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_research",
+      "outcome_stage": "computational_validation",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Russia",
+        "Germany",
+        "Norway",
+        "US",
+        "Austria"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "Skoltech",
+          "MIPT",
+          "HSE",
+          "Russian Academy of Sciences",
+          "International collaborators"
+        ],
+        "developer_country_codes": [
+          "RU",
+          "DE",
+          "NO",
+          "US",
+          "AT"
+        ],
+        "validation_country_codes": [],
+        "data_inputs": [
+          "First-principles calculations and Fe-Al benchmarks"
+        ],
+        "upstream_models": [
+          "Magnetic moment tensor potentials"
+        ],
+        "access_notes_ru": "Препринт открыт. Независимость программной и аппаратной инфраструктуры из этой работы не следует.",
+        "access_notes_en": "The preprint is open. Software and hardware infrastructure independence does not follow from this work.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Прикладная научная компетенция сохраняет значение вне гонки универсальных LLM; международная кооперация видна на уровне метода.",
+      "mechanism_en": "Specialized scientific capability matters outside the general-purpose LLM race; international cooperation operates at the method level.",
+      "subsequent_milestones": [
+        {
+          "date": "2025-04-16",
+          "kind": "institutional_announcement"
+        }
+      ]
+    },
+    {
+      "id": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY",
+      "date": "2026-09-08",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "subdomain": "ecology",
+      "title_ru": "Бразильская работа корректирует перекос наблюдений в моделях биоразнообразия",
+      "title_en": "Brazilian study corrects observation bias in biodiversity models",
+      "summary_ru": "Исследователи UFMG объединили коррекцию интенсивности отбора образцов USSE с глубокими нейросетями для оценки видового богатства тропиков. Проверка использовала 107 независимых опубликованных полевых описей.",
+      "summary_en": "UFMG researchers combined USSE sampling-effort correction with deep neural networks to estimate tropical species richness. Validation used 107 independent published field inventories.",
+      "caveat_ru": "Это оценка по неполным наблюдениям, не полная перепись видов и не доказанный результат природоохранной политики. Коррекция одного перекоса не устраняет все ограничения данных.",
+      "caveat_en": "This is estimation from incomplete observations, not a complete species census or demonstrated conservation-policy outcome. Correcting one bias does not remove every data limitation.",
+      "sources": [
+        {
+          "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2026.1927830/full",
+          "publisher": "Frontiers in Ecology and Evolution / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_article"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_research",
+      "outcome_stage": "computational_validation_against_field_inventories",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Brazil"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "Universidade Federal de Minas Gerais"
+        ],
+        "developer_country_codes": [
+          "BR"
+        ],
+        "validation_country_codes": [],
+        "data_inputs": [
+          "GBIF occurrence records",
+          "Environmental predictors",
+          "107 independent tropical field inventories"
+        ],
+        "upstream_models": [
+          "Deep-learning species-richness models with USSE correction"
+        ],
+        "access_notes_ru": "Публикация указывает репозитории данных и кода. Источники наблюдений и покрытие полевой валидации не совпадают с местом работы авторов.",
+        "access_notes_en": "The paper identifies data and code repositories. Observation sources and field-validation coverage are not identical to author affiliations.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Наблюдаемость сама является фильтром знания: коррекция плотности сбора данных может ослабить преимущество лучше обследованных мест.",
+      "mechanism_en": "Observability is itself a knowledge filter: correcting collection density can reduce the advantage of better-surveyed places."
+    },
+    {
+      "id": "SCI_CAND_2025_JAPAN_SNET_TREMORS",
+      "date": "2025-05-31",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "subdomain": "geoscience",
+      "title_ru": "Японская сеть S-net и глубокое обучение выявляют больше эпизодов тремора",
+      "title_en": "Japan's S-net and deep learning identify more tremor episodes",
+      "summary_ru": "Работа AIST и Университета Тохоку применяет глубокое обучение к данным донной сейсмической сети S-net за август 2016 - август 2024 года. Авторы обнаружили примерно в семь раз больше эпизодов тремора, чем в предыдущем исследовании методом корреляции огибающих.",
+      "summary_en": "AIST and Tohoku University applied deep learning to S-net ocean-bottom seismic data from August 2016 to August 2024. The authors identified approximately seven times as many tremor episodes as a previous envelope-correlation study.",
+      "caveat_ru": "Это расширение каталога слабых сигналов, не доказательство предсказания будущих разрушительных землетрясений. Кратность относится к конкретному сравнению, не к эффективности сейсмологии вообще.",
+      "caveat_en": "This expands a catalogue of weak signals; it does not demonstrate prediction of future destructive earthquakes. The multiplier concerns a specific comparison, not seismology as a whole.",
+      "sources": [
+        {
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025JB031348",
+          "publisher": "Journal of Geophysical Research: Solid Earth / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_article"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_research",
+      "outcome_stage": "retrospective_signal_detection",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Japan"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "AIST",
+          "Tohoku University"
+        ],
+        "developer_country_codes": [
+          "JP"
+        ],
+        "validation_country_codes": [
+          "JP"
+        ],
+        "data_inputs": [
+          "S-net ocean-bottom seismometer records, 2016-2024"
+        ],
+        "upstream_models": [
+          "Deep-learning tremor detector"
+        ],
+        "access_notes_ru": "Открытая статья проверена; текущие условия доступа ко всей измерительной сети отдельно не изучались.",
+        "access_notes_en": "The open paper was checked; current access terms for the complete measurement network were not separately reviewed.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Собственная измерительная инфраструктура может быть научным преимуществом, которое нельзя заменить покупкой доступа к универсальной модели.",
+      "mechanism_en": "Domestic measurement infrastructure can provide a scientific advantage that buying general-model access cannot replace.",
+      "observation_period": {
+        "start": "2016-08",
+        "end": "2024-08"
+      }
+    },
+    {
+      "id": "EDU_CAND_2025_NIGERIA_COPILOT_RCT",
+      "date": "2025-01-09",
+      "date_precision": "day",
+      "date_kind": "initial_results_announcement",
+      "track": "education",
+      "subdomain": "education",
+      "title_ru": "Нигерия: занятия с учителем и Copilot улучшили результаты тестов",
+      "title_en": "Nigeria: teacher-led Copilot sessions improved test outcomes",
+      "summary_ru": "Авторы рандомизированного исследования в штате Эдо сообщают об улучшении примерно на 0,3 стандартного отклонения по составному тесту после шести недель дополнительных занятий с учителем и Microsoft Copilot на GPT-4. Занятия проходили в 2024 году; первые результаты опубликованы в январе 2025 года.",
+      "summary_en": "Authors of a randomized trial in Edo State report an approximately 0.3-standard-deviation improvement on a composite test after six weeks of additional teacher-led sessions using GPT-4-based Microsoft Copilot. Sessions took place in 2024; initial results were published in January 2025.",
+      "caveat_ru": "Измерен пакет из дополнительных занятий, учителя, компьютеров и ИИ, а не изолированный эффект модели. Сравнение с двумя годами обычного прогресса является калибровкой размера эффекта, не освоением двухлетней программы. Полный PDF рабочего доклада не был доступен через инструмент чтения; подробный аудит методов отложен.",
+      "caveat_en": "The intervention bundles extra instruction, teachers, computers and AI; it does not isolate the model effect. Comparison with two years of typical progress calibrates effect size rather than demonstrating mastery of a two-year curriculum. The full working-paper PDF was not accessible through the reading tool; detailed methods review remains pending.",
+      "sources": [
+        {
+          "url": "https://blogs.worldbank.org/en/education/From-chalkboards-to-chatbots-Transforming-learning-in-Nigeria",
+          "publisher": "World Bank / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_results_post"
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099548105192529324/pdf/IDU-c09f40d8-9ff8-42dc-b315-591157499be7.pdf",
+          "publisher": "World Bank / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_metadata_only_full_pdf_fetch_failed"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "researcher_report_of_randomized_trial",
+      "outcome_stage": "measured_learning_outcomes",
+      "integration_status": "source_verified_methods_review_pending",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Nigeria"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "World Bank research team",
+          "Edo State education partners"
+        ],
+        "developer_country_codes": [],
+        "validation_country_codes": [
+          "NG"
+        ],
+        "data_inputs": [
+          "Student assessments from Edo State school trial"
+        ],
+        "upstream_models": [
+          "Microsoft Copilot",
+          "GPT-4"
+        ],
+        "access_notes_ru": "Практика использовала внешний сервис вместе с местными учителями и инфраструктурой. Устойчивость результата и будущие условия доступа из краткого отчёта не следуют.",
+        "access_notes_en": "The intervention combined an external service with local teachers and infrastructure. Durability and future access terms do not follow from the short report.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Результат зависит от организации обучения, а не только от страны разработчика модели; полезность внешнего сервиса не равна технологической независимости.",
+      "mechanism_en": "Outcomes depend on instructional organization, not only the model developer's country; service usefulness is not technological independence.",
+      "observation_period": {
+        "start": "2024-06",
+        "end": "2024-07"
+      },
+      "subsequent_milestones": [
+        {
+          "date": "2025-05",
+          "kind": "working_paper"
+        }
+      ]
+    },
+    {
+      "id": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS",
+      "date": "2025-06-25",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "education",
+      "subdomain": "education",
+      "title_ru": "Турция: обычный чат-бот помогал решать задачи, но ухудшал самостоятельный экзамен",
+      "title_en": "Turkey: a general chatbot helped practice but hurt unaided exam performance",
+      "summary_ru": "В рандомизированном школьном исследовании GPT-4 помогал выполнять тренировочные математические задания. После отключения ИИ группа с обычным интерфейсом GPT Base показала результат примерно на 17% ниже контроля; версия GPT Tutor с педагогическими ограничениями устраняла этот отрицательный эффект.",
+      "summary_en": "In a randomized school study, GPT-4 helped students complete mathematics practice problems. After AI was removed, the standard GPT Base group scored approximately 17% below the control group; the pedagogically constrained GPT Tutor removed this negative effect.",
+      "caveat_ru": "Одна школа и краткосрочный эксперимент не устанавливают общий эффект ИИ на образование. Отсутствие вреда у GPT Tutor не означает доказанное улучшение самостоятельного обучения. Исследование проведено в 2023 году, статья опубликована в 2025-м.",
+      "caveat_en": "One school and a short-term experiment do not establish AI's general educational effect. GPT Tutor's absence of harm does not establish improved unaided learning. The study ran in 2023 and was published in 2025.",
+      "sources": [
+        {
+          "url": "https://hamsabastani.github.io/education_llm.pdf",
+          "publisher": "Study authors / PNAS author manuscript",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_author_manuscript"
+        },
+        {
+          "url": "https://doi.org/10.1073/pnas.2422633122",
+          "publisher": "PNAS / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_publication_metadata"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "peer_reviewed_randomized_trial",
+      "outcome_stage": "measured_learning_outcomes",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Turkey",
+        "US"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "University of Pennsylvania research team",
+          "Participating Turkish school"
+        ],
+        "developer_country_codes": [
+          "US"
+        ],
+        "validation_country_codes": [
+          "TR"
+        ],
+        "data_inputs": [
+          "Randomized mathematics practice and unaided examinations"
+        ],
+        "upstream_models": [
+          "GPT-4",
+          "GPT Base",
+          "GPT Tutor"
+        ],
+        "access_notes_ru": "Сопоставлены разные режимы использования одной базовой модели. Это не сравнение национальных моделей или систем образования.",
+        "access_notes_en": "The study compares different uses of one foundation model, not national models or education systems.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Доступ к готовому ответу и воспроизводство собственной компетенции могут расходиться; посредник меняет не только доступ, но и способ освоения знания.",
+      "mechanism_en": "Access to answers and development of independent competence can diverge; the intermediary changes not only access but how knowledge is learned.",
+      "observation_period": {
+        "year": "2023",
+        "season": "autumn"
+      }
+    },
+    {
+      "id": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION",
+      "date": "2026-01-14",
+      "date_precision": "day",
+      "date_kind": "publication",
+      "track": "science",
+      "subdomain": "metascience",
+      "title_ru": "ИИ связан с ростом индивидуальной результативности и сужением коллективного поля исследований",
+      "title_en": "AI is associated with individual gains and narrower collective research focus",
+      "summary_ru": "Анализ 41,3 млн научных работ связывает использование ИИ с большей публикационной и цитатной результативностью отдельных исследователей, но с более узким коллективным тематическим охватом и смещением к областям, богатым данными.",
+      "summary_en": "An analysis of 41.3 million scientific papers associates AI use with higher individual publication and citation performance, but a narrower collective topical scope and movement toward data-rich areas.",
+      "caveat_ru": "Наблюдательное исследование не доказывает, что ИИ вызвал все различия: отбор исследователей и направлений может влиять на результат. Корпус охватывает разные поколения ИИ, не только современные LLM; классификация применения ИИ также имеет ошибки.",
+      "caveat_en": "This observational study does not prove AI caused all differences: researcher and field selection may matter. The corpus covers multiple AI generations, not just current LLMs; AI-use classification is also imperfect.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41586-025-09922-y",
+          "publisher": "Nature / study authors",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_text"
+        },
+        {
+          "url": "https://arxiv.org/abs/2412.07727",
+          "publisher": "Study authors / arXiv",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "full_primary_abstract_and_version_history"
+        },
+        {
+          "url": "https://fi.ee.tsinghua.edu.cn/public/publications/35f947be-f27c-11f0-b382-2aaffa21d846.pdf",
+          "publisher": "Study authors / Tsinghua University",
+          "type": "primary",
+          "checked_at": "2026-11-07",
+          "access": "primary_indexed_author_manuscript"
+        }
+      ],
+      "proposed_arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "stack_layers": [
+        "data_telemetry",
+        "model_weights"
+      ],
+      "evidence_kind": "observational_metascience",
+      "outcome_stage": "bibliometric_association",
+      "integration_status": "ready_scoped",
+      "prior_record_refs": [],
+      "related_existing_event_ids": [],
+      "geography": [
+        "Global",
+        "China",
+        "US"
+      ],
+      "geo_roles": {
+        "developer_organizations": [
+          "Tsinghua University",
+          "University of Chicago",
+          "Santa Fe Institute"
+        ],
+        "developer_country_codes": [
+          "CN",
+          "US"
+        ],
+        "validation_country_codes": [],
+        "data_inputs": [
+          "OpenAlex bibliographic corpus",
+          "Web of Science cross-checks"
+        ],
+        "upstream_models": [
+          "BERT-based paper classifier"
+        ],
+        "access_notes_ru": "Открытый библиографический корпус и лицензируемая база имеют разные режимы доступа; сама работа не измеряет государственный контроль над наукой.",
+        "access_notes_en": "An open bibliographic corpus and a licensed database have different access regimes; the study does not measure state control over science.",
+        "interpretation_limit_ru": "Перечислены проверенные роли и аффилиации, не обязательно все участники. Место работы не устанавливает собственника, юрисдикцию всего проекта или технологическую независимость. Пустой список стран означает отсутствие присвоенной географии, а не отсутствие деятельности.",
+        "interpretation_limit_en": "Listed roles and affiliations are verified but not necessarily exhaustive. Affiliation does not establish ownership, jurisdiction over the whole project or technological independence. An empty country list means unassigned geography, not absence of activity."
+      },
+      "mechanism_ru": "Селективность проявляется в выборе исследуемого: ускорение внутри доступных данных может сосуществовать с меньшим разнообразием научного поиска.",
+      "mechanism_en": "Selection affects what gets researched: acceleration within available data can coexist with less diversity in scientific exploration.",
+      "subsequent_milestones": [],
+      "prior_milestones": [
+        {
+          "date": "2024-12-10",
+          "kind": "first_preprint"
+        }
+      ]
+    }
+  ],
+  "reuse_candidates": [
+    {
+      "file": "aipower/review/pult-software-production/candidates.json",
+      "id": "PULT_CAND_2026_STRONGDM_VALIDATION_ENVIRONMENT"
+    },
+    {
+      "file": "aipower/review/pult-software-production/candidates.json",
+      "id": "PULT_CAND_2026_OPENAI_HARNESS_ENGINEERING"
+    },
+    {
+      "file": "aipower/review/pult-software-production/candidates.json",
+      "id": "PULT_CAND_2026_FAROS_DELIVERY_REVIEW_PRESSURE"
+    },
+    {
+      "file": "aipower/review/pult-software-production/candidates.json",
+      "id": "PULT_CAND_2025_METR_PRODUCTIVITY_RCT"
+    },
+    {
+      "file": "aipower/review/pult-software-production/candidates.json",
+      "id": "PULT_CAND_2026_METR_PRODUCTIVITY_SELECTION_UPDATE"
+    }
+  ],
+  "correction_queue": [
+    {
+      "id": "CORR_CANARIES_CAUSALITY",
+      "refs": [
+        {
+          "file": "factcheck.json",
+          "id": "ai-22"
+        }
+      ],
+      "candidate_id": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE",
+      "change_ru": "Убрать causal-tier и отделить исторические оценки 2025 года от описательного обновления августа 2026.",
+      "change_en": "Remove causal-tier language; separate 2025 historical estimates from the descriptive August 2026 update.",
+      "status": "proposed_not_applied"
+    },
+    {
+      "id": "CORR_KLARNA_EQUIVALENT_NOT_LAYOFF_COUNT",
+      "refs": [
+        {
+          "file": "factcheck.json",
+          "id": "corp-29e"
+        },
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2024_KLARNA_700_AGENT_EQUIVALENT"
+        }
+      ],
+      "change_ru": "700 эквивалентов работы службы поддержки по заявлению компании не являются 700 подтверждёнными увольнениями.",
+      "change_en": "The company's 700-worker workload equivalent is not 700 verified layoffs.",
+      "status": "proposed_not_applied",
+      "verification": "Existing more carefully scoped primary-linked companion record; no new workforce census."
+    },
+    {
+      "id": "CORR_JAMA_AFTER_HOURS_AND_DATE",
+      "refs": [
+        {
+          "file": "factcheck.json",
+          "id": "med-31"
+        },
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW"
+        }
+      ],
+      "candidate_id": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW",
+      "change_ru": "Дата 1 апреля 2026; общего значимого сокращения внерабочего времени нет.",
+      "change_en": "Use April 1, 2026; no significant overall reduction in after-hours work.",
+      "status": "proposed_not_applied"
+    },
+    {
+      "id": "CORR_NBER_PUBLICATION_MONTH",
+      "refs": [
+        {
+          "file": "factcheck.json",
+          "id": "ai-26"
+        },
+        {
+          "file": "profgames_ai_signals.jsonl",
+          "id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP"
+        }
+      ],
+      "candidate_id": "WORK_CAND_2026_NBER_FIRM_DATA",
+      "change_ru": "Публикация датирована февралем 2026; мартовский путь PDF не является датой исследования.",
+      "change_en": "The paper is dated February 2026; a March PDF path is not the study publication date.",
+      "status": "proposed_not_applied"
+    }
+  ],
+  "proposed_tracks": [
+    {
+      "id": "SCI_KNOWLEDGE_PRODUCTION",
+      "title_ru": "Производство и проверка знания",
+      "title_en": "Knowledge production and validation",
+      "status": "proposal_not_graph_node"
+    },
+    {
+      "id": "MED_CLINICAL_TRANSLATION",
+      "title_ru": "От вычислительного результата к помощи пациенту",
+      "title_en": "From computational results to patient care",
+      "status": "proposal_not_graph_node"
+    },
+    {
+      "id": "WORK_REORGANIZATION_DISTRIBUTION",
+      "title_ru": "Задачи, занятость и распределение выигрыша",
+      "title_en": "Tasks, employment and distribution of gains",
+      "status": "proposal_not_graph_node"
+    },
+    {
+      "id": "EDU_KNOWLEDGE_TRANSMISSION",
+      "title_ru": "Обучение и воспроизводство компетенций",
+      "title_en": "Learning and reproduction of expertise",
+      "status": "proposal_not_graph_node"
+    }
+  ],
+  "research_hypotheses": [
+    {
+      "id": "HYP_KNOWLEDGE_PRODUCTIVE_ADVANTAGE",
+      "text_ru": "Контроль над стеком ценен не только как право запрета: он даёт доступ к производству новых результатов. Надо измерять также распространение этих результатов за пределы владельца.",
+      "text_en": "Stack control matters beyond exclusion: it enables productive discovery. Diffusion beyond the owner must also be measured.",
+      "needed_evidence": "Independent replication, adoption, prices, access terms, real scientific or industrial outputs."
+    },
+    {
+      "id": "HYP_EXPERTISE_REORGANIZATION",
+      "text_ru": "ИИ может расширять доступ к экспертизе и менять границы профессий, не вызывая немедленного сокращения общей занятости.",
+      "text_en": "AI may expand access to expertise and reshape professional boundaries without an immediate aggregate employment decline.",
+      "needed_evidence": "Tasks, hiring, separations, wages, working hours, responsibility and service access measured separately."
+    },
+    {
+      "id": "HYP_DISTRIBUTION_OF_GAINS",
+      "text_ru": "Выигрыш может достаться пациенту, работнику, работодателю или поставщику модели. Сам рост производительности не определяет получателя.",
+      "text_en": "Patients, workers, employers or model suppliers may capture gains. Productivity growth alone does not identify the beneficiary.",
+      "needed_evidence": "Prices, wages, profits, procurement conditions, portability and switching costs."
+    }
+  ],
+  "excluded_inferences": [
+    "All science and medicine are accelerating at the same measured rate.",
+    "Every AI-enabled scientific result is an independently accepted discovery.",
+    "A laboratory or diagnostic benchmark is a demonstrated patient benefit.",
+    "A positive clinical trial proves provider monopoly or geopolitical dominance.",
+    "Every job exposed to AI is a job eliminated by AI.",
+    "One person matching a team on a task proves a proportionate staffing reduction.",
+    "An association between AI exposure and employment proves AI caused it.",
+    "A new journal publication is a new independent experiment when its preprint already exists.",
+    "More citations or arc memberships mean stronger evidence."
+  ]
+}

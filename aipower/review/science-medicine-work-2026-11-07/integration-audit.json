@@ -1,0 +1,668 @@
+{
+  "version": "0.52",
+  "date": "2026-11-07",
+  "languages": {
+    "ru": {
+      "base_sha256": "6e59265525ba0e2e3871843221b81c07daed3ac2cc98852ef9e68c8251888863",
+      "counts": {
+        "events": 562,
+        "claims": 76,
+        "claimChecks": 32,
+        "arcs": 30,
+        "edges": 1390,
+        "sourceIndex": 818
+      },
+      "mapping": [
+        {
+          "candidate_id": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS",
+          "event_id": "SIG_2022_ALPHAFOLD_DATABASE_ACCESS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE",
+          "event_id": "SIG_2024_ALPHAFOLD3_ACADEMIC_RELEASE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_ALPHAPROOF_IMO",
+          "event_id": "SIG_2024_ALPHAPROOF_IMO",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS",
+          "event_id": "SIG_2025_ALPHAEVOLVE_ALGORITHMS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_MATTERGEN_SYNTHESIS",
+          "event_id": "SIG_2025_MATTERGEN_SYNTHESIS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT",
+          "event_id": "SIG_2026_ALETHEIA_RESEARCH_AGENT",
+          "action": "added",
+          "review_status": "disclosure_not_independent_result_validation"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS",
+          "event_id": "SIG_2026_GOOGLE_WETLAB_AGENTS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE",
+          "event_id": "SIG_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE",
+          "action": "added",
+          "review_status": "disclosure_not_independent_result_validation"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_MASAI_INTERVAL_CANCER",
+          "event_id": "SIG_2026_MASAI_INTERVAL_CANCER",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_GOLDENBRIDGE_II",
+          "event_id": "SIG_2026_GOLDENBRIDGE_II",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2025_RENTOSERTIB_PHASE2A",
+          "event_id": "SIG_2025_RENTOSERTIB_PHASE2A",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS",
+          "event_id": "SIG_2024_ACCESS_DIABETIC_EYE_EXAMS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_KENYA_LLM_CDSS_NULL",
+          "event_id": "SIG_2026_KENYA_LLM_CDSS_NULL",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES",
+          "event_id": "SIG_2026_AI_INFOCARE_PATIENT_SUMMARIES",
+          "action": "added",
+          "review_status": "full_paper_methods_review_pending"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW",
+          "event_id": "SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW",
+          "action": "added",
+          "review_status": "reuse_with_correction"
+        },
+        {
+          "candidate_id": "MED_CAND_2025_THERABOT_TRIAL",
+          "event_id": "SIG_2025_DARTMOUTH_THERABOT_RCT",
+          "action": "added",
+          "review_status": "reuse_existing_companion_record"
+        },
+        {
+          "candidate_id": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK",
+          "event_id": "SIG_2023_NBER_GENAI_TACIT_KNOWLEDGE",
+          "action": "merged_study_revision",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE",
+          "event_id": "SIG_2026_STANFORD_CANARIES_UPDATE",
+          "action": "added",
+          "review_status": "reuse_with_correction"
+        },
+        {
+          "candidate_id": "WORK_CAND_2026_DENMARK_LABOR_REVISION",
+          "event_id": "SIG_2026_DENMARK_LABOR_REVISION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE",
+          "event_id": "SIG_2026_PG_CYBERNETIC_TEAMMATE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "WORK_CAND_2025_ILO_TASK_EXPOSURE",
+          "event_id": "SIG_2025_ILO_TASK_EXPOSURE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "WORK_CAND_2026_NBER_FIRM_DATA",
+          "event_id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+          "action": "added",
+          "review_status": "reuse_with_correction"
+        },
+        {
+          "candidate_id": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS",
+          "event_id": "SIG_2021_EXOMINER_301_VALIDATIONS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES",
+          "event_id": "SIG_2025_EXOMINER_PLUS_TESS_CANDIDATES",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE",
+          "event_id": "SIG_2025_HUBBLE_ANOMALYMATCH_ARCHIVE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2022_ITHACA_EPIGRAPHY",
+          "event_id": "SIG_2022_ITHACA_EPIGRAPHY",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES",
+          "event_id": "SIG_2024_VESUVIUS_FIRST_PASSAGES",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_VESUVIUS_PHERC1667",
+          "event_id": "SIG_2026_VESUVIUS_PHERC1667",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION",
+          "event_id": "SIG_2025_AENEAS_CONTEXTUALIZATION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING",
+          "event_id": "SIG_2025_ENOCH_MANUSCRIPT_DATING",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION",
+          "event_id": "SIG_2025_BABYLON_HYMN_RECONSTRUCTION",
+          "action": "added",
+          "review_status": "ready_scoped_with_source_discrepancy"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY",
+          "event_id": "SIG_2024_NAZCA_AI_FIELD_SURVEY",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS",
+          "event_id": "SIG_2025_ECMWF_AIFS_OPERATIONS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2023_PANGU_WEATHER_ERA5",
+          "event_id": "SIG_2023_PANGU_WEATHER_ERA5",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS",
+          "event_id": "SIG_2024_GLOBAL_FLOOD_UNGAUGED_BASINS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION",
+          "event_id": "SIG_2025_INDIA_MONSOON_DISSEMINATION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2023_USTC_ROBOT_CATALYST",
+          "event_id": "SIG_2023_USTC_ROBOT_CATALYST",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL",
+          "event_id": "SIG_2022_TCV_RL_PLASMA_CONTROL",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE",
+          "event_id": "SIG_2024_DIIID_TEARING_AVOIDANCE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION",
+          "event_id": "SIG_2026_KAUST_UNIFY_CELL_EVOLUTION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_LUCAPROT_RNA_VIROME",
+          "event_id": "SIG_2024_LUCAPROT_RNA_VIROME",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY",
+          "event_id": "SIG_2024_MAGNETIC_MTP_RELIABILITY",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY",
+          "event_id": "SIG_2026_BRAZIL_USSE_BIODIVERSITY",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_JAPAN_SNET_TREMORS",
+          "event_id": "SIG_2025_JAPAN_SNET_TREMORS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "EDU_CAND_2025_NIGERIA_COPILOT_RCT",
+          "event_id": "SIG_2025_NIGERIA_COPILOT_RCT",
+          "action": "added",
+          "review_status": "source_verified_methods_review_pending"
+        },
+        {
+          "candidate_id": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS",
+          "event_id": "SIG_2025_TURKEY_GPT_TUTOR_GUARDRAILS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION",
+          "event_id": "SIG_2026_AI_SCIENCE_FOCUS_CONTRACTION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "PULT_CAND_2026_STRONGDM_VALIDATION_ENVIRONMENT",
+          "event_id": "SIG_2026_STRONGDM_VALIDATION_ENVIRONMENT",
+          "action": "added",
+          "review_status": "primary_source_checked_scope_limited"
+        },
+        {
+          "candidate_id": "PULT_CAND_2026_OPENAI_HARNESS_ENGINEERING",
+          "event_id": "SIG_2026_OPENAI_HARNESS_ENGINEERING",
+          "action": "added",
+          "review_status": "primary_source_checked_scope_limited"
+        },
+        {
+          "candidate_id": "PULT_CAND_2026_FAROS_DELIVERY_REVIEW_PRESSURE",
+          "event_id": "SIG_2026_FAROS_DELIVERY_REVIEW_PRESSURE",
+          "action": "added",
+          "review_status": "primary_page_checked_methodology_and_date_pending"
+        },
+        {
+          "candidate_id": "PULT_CAND_2025_METR_PRODUCTIVITY_RCT",
+          "event_id": "SIG_2025_METR_PRODUCTIVITY_RCT",
+          "action": "added",
+          "review_status": "primary_source_checked_scope_limited"
+        },
+        {
+          "candidate_id": "PULT_CAND_2026_METR_PRODUCTIVITY_SELECTION_UPDATE",
+          "event_id": "SIG_2026_METR_PRODUCTIVITY_SELECTION_UPDATE",
+          "action": "added",
+          "review_status": "primary_source_checked_scope_limited"
+        },
+        {
+          "candidate_id": "WORK_CAND_2024_KLARNA_WORKLOAD_EQUIVALENT",
+          "event_id": "SIG_2024_KLARNA_WORKLOAD_EQUIVALENT",
+          "action": "added",
+          "review_status": "reuse_with_correction"
+        }
+      ]
+    },
+    "en": {
+      "base_sha256": "43e01a8ae286c5a0d3d0551c431874bfcd35403ed36c96effad95698befca9db",
+      "counts": {
+        "events": 562,
+        "claims": 76,
+        "claimChecks": 32,
+        "arcs": 30,
+        "edges": 1390,
+        "sourceIndex": 818
+      },
+      "mapping": [
+        {
+          "candidate_id": "SCI_CAND_2022_ALPHAFOLD_DATABASE_ACCESS",
+          "event_id": "SIG_2022_ALPHAFOLD_DATABASE_ACCESS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_ALPHAFOLD3_ACADEMIC_RELEASE",
+          "event_id": "SIG_2024_ALPHAFOLD3_ACADEMIC_RELEASE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_ALPHAPROOF_IMO",
+          "event_id": "SIG_2024_ALPHAPROOF_IMO",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_ALPHAEVOLVE_ALGORITHMS",
+          "event_id": "SIG_2025_ALPHAEVOLVE_ALGORITHMS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_MATTERGEN_SYNTHESIS",
+          "event_id": "SIG_2025_MATTERGEN_SYNTHESIS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_ALETHEIA_RESEARCH_AGENT",
+          "event_id": "SIG_2026_ALETHEIA_RESEARCH_AGENT",
+          "action": "added",
+          "review_status": "disclosure_not_independent_result_validation"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_GOOGLE_WETLAB_AGENTS",
+          "event_id": "SIG_2026_GOOGLE_WETLAB_AGENTS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE",
+          "event_id": "SIG_2026_OPENAI_SCIENTIFIC_RELEASE_GOVERNANCE",
+          "action": "added",
+          "review_status": "disclosure_not_independent_result_validation"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_MASAI_INTERVAL_CANCER",
+          "event_id": "SIG_2026_MASAI_INTERVAL_CANCER",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_GOLDENBRIDGE_II",
+          "event_id": "SIG_2026_GOLDENBRIDGE_II",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2025_RENTOSERTIB_PHASE2A",
+          "event_id": "SIG_2025_RENTOSERTIB_PHASE2A",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2024_ACCESS_DIABETIC_EYE_EXAMS",
+          "event_id": "SIG_2024_ACCESS_DIABETIC_EYE_EXAMS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_KENYA_LLM_CDSS_NULL",
+          "event_id": "SIG_2026_KENYA_LLM_CDSS_NULL",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_AI_INFOCARE_PATIENT_SUMMARIES",
+          "event_id": "SIG_2026_AI_INFOCARE_PATIENT_SUMMARIES",
+          "action": "added",
+          "review_status": "full_paper_methods_review_pending"
+        },
+        {
+          "candidate_id": "MED_CAND_2026_JAMA_SCRIBE_WORKFLOW",
+          "event_id": "SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW",
+          "action": "added",
+          "review_status": "reuse_with_correction"
+        },
+        {
+          "candidate_id": "MED_CAND_2025_THERABOT_TRIAL",
+          "event_id": "SIG_2025_DARTMOUTH_THERABOT_RCT",
+          "action": "added",
+          "review_status": "reuse_existing_companion_record"
+        },
+        {
+          "candidate_id": "WORK_CAND_2025_QJE_GENERATIVE_AI_AT_WORK",
+          "event_id": "SIG_2023_NBER_GENAI_TACIT_KNOWLEDGE",
+          "action": "merged_study_revision",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "WORK_CAND_2026_STANFORD_CANARIES_UPDATE",
+          "event_id": "SIG_2026_STANFORD_CANARIES_UPDATE",
+          "action": "added",
+          "review_status": "reuse_with_correction"
+        },
+        {
+          "candidate_id": "WORK_CAND_2026_DENMARK_LABOR_REVISION",
+          "event_id": "SIG_2026_DENMARK_LABOR_REVISION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "WORK_CAND_2026_PG_CYBERNETIC_TEAMMATE",
+          "event_id": "SIG_2026_PG_CYBERNETIC_TEAMMATE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "WORK_CAND_2025_ILO_TASK_EXPOSURE",
+          "event_id": "SIG_2025_ILO_TASK_EXPOSURE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "WORK_CAND_2026_NBER_FIRM_DATA",
+          "event_id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+          "action": "added",
+          "review_status": "reuse_with_correction"
+        },
+        {
+          "candidate_id": "SCI_CAND_2021_EXOMINER_301_VALIDATIONS",
+          "event_id": "SIG_2021_EXOMINER_301_VALIDATIONS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_EXOMINER_PLUS_TESS_CANDIDATES",
+          "event_id": "SIG_2025_EXOMINER_PLUS_TESS_CANDIDATES",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_HUBBLE_ANOMALYMATCH_ARCHIVE",
+          "event_id": "SIG_2025_HUBBLE_ANOMALYMATCH_ARCHIVE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2022_ITHACA_EPIGRAPHY",
+          "event_id": "SIG_2022_ITHACA_EPIGRAPHY",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_VESUVIUS_FIRST_PASSAGES",
+          "event_id": "SIG_2024_VESUVIUS_FIRST_PASSAGES",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_VESUVIUS_PHERC1667",
+          "event_id": "SIG_2026_VESUVIUS_PHERC1667",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_AENEAS_CONTEXTUALIZATION",
+          "event_id": "SIG_2025_AENEAS_CONTEXTUALIZATION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_ENOCH_MANUSCRIPT_DATING",
+          "event_id": "SIG_2025_ENOCH_MANUSCRIPT_DATING",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_BABYLON_HYMN_RECONSTRUCTION",
+          "event_id": "SIG_2025_BABYLON_HYMN_RECONSTRUCTION",
+          "action": "added",
+          "review_status": "ready_scoped_with_source_discrepancy"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_NAZCA_AI_FIELD_SURVEY",
+          "event_id": "SIG_2024_NAZCA_AI_FIELD_SURVEY",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_ECMWF_AIFS_OPERATIONS",
+          "event_id": "SIG_2025_ECMWF_AIFS_OPERATIONS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2023_PANGU_WEATHER_ERA5",
+          "event_id": "SIG_2023_PANGU_WEATHER_ERA5",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_GLOBAL_FLOOD_UNGAUGED_BASINS",
+          "event_id": "SIG_2024_GLOBAL_FLOOD_UNGAUGED_BASINS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_INDIA_MONSOON_DISSEMINATION",
+          "event_id": "SIG_2025_INDIA_MONSOON_DISSEMINATION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2023_USTC_ROBOT_CATALYST",
+          "event_id": "SIG_2023_USTC_ROBOT_CATALYST",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2022_TCV_RL_PLASMA_CONTROL",
+          "event_id": "SIG_2022_TCV_RL_PLASMA_CONTROL",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_DIIID_TEARING_AVOIDANCE",
+          "event_id": "SIG_2024_DIIID_TEARING_AVOIDANCE",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_KAUST_UNIFY_CELL_EVOLUTION",
+          "event_id": "SIG_2026_KAUST_UNIFY_CELL_EVOLUTION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_LUCAPROT_RNA_VIROME",
+          "event_id": "SIG_2024_LUCAPROT_RNA_VIROME",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2024_MAGNETIC_MTP_RELIABILITY",
+          "event_id": "SIG_2024_MAGNETIC_MTP_RELIABILITY",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_BRAZIL_USSE_BIODIVERSITY",
+          "event_id": "SIG_2026_BRAZIL_USSE_BIODIVERSITY",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2025_JAPAN_SNET_TREMORS",
+          "event_id": "SIG_2025_JAPAN_SNET_TREMORS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "EDU_CAND_2025_NIGERIA_COPILOT_RCT",
+          "event_id": "SIG_2025_NIGERIA_COPILOT_RCT",
+          "action": "added",
+          "review_status": "source_verified_methods_review_pending"
+        },
+        {
+          "candidate_id": "EDU_CAND_2025_TURKEY_GPT_TUTOR_GUARDRAILS",
+          "event_id": "SIG_2025_TURKEY_GPT_TUTOR_GUARDRAILS",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "SCI_CAND_2026_AI_SCIENCE_FOCUS_CONTRACTION",
+          "event_id": "SIG_2026_AI_SCIENCE_FOCUS_CONTRACTION",
+          "action": "added",
+          "review_status": "ready_scoped"
+        },
+        {
+          "candidate_id": "PULT_CAND_2026_STRONGDM_VALIDATION_ENVIRONMENT",
+          "event_id": "SIG_2026_STRONGDM_VALIDATION_ENVIRONMENT",
+          "action": "added",
+          "review_status": "primary_source_checked_scope_limited"
+        },
+        {
+          "candidate_id": "PULT_CAND_2026_OPENAI_HARNESS_ENGINEERING",
+          "event_id": "SIG_2026_OPENAI_HARNESS_ENGINEERING",
+          "action": "added",
+          "review_status": "primary_source_checked_scope_limited"
+        },
+        {
+          "candidate_id": "PULT_CAND_2026_FAROS_DELIVERY_REVIEW_PRESSURE",
+          "event_id": "SIG_2026_FAROS_DELIVERY_REVIEW_PRESSURE",
+          "action": "added",
+          "review_status": "primary_page_checked_methodology_and_date_pending"
+        },
+        {
+          "candidate_id": "PULT_CAND_2025_METR_PRODUCTIVITY_RCT",
+          "event_id": "SIG_2025_METR_PRODUCTIVITY_RCT",
+          "action": "added",
+          "review_status": "primary_source_checked_scope_limited"
+        },
+        {
+          "candidate_id": "PULT_CAND_2026_METR_PRODUCTIVITY_SELECTION_UPDATE",
+          "event_id": "SIG_2026_METR_PRODUCTIVITY_SELECTION_UPDATE",
+          "action": "added",
+          "review_status": "primary_source_checked_scope_limited"
+        },
+        {
+          "candidate_id": "WORK_CAND_2024_KLARNA_WORKLOAD_EQUIVALENT",
+          "event_id": "SIG_2024_KLARNA_WORKLOAD_EQUIVALENT",
+          "action": "added",
+          "review_status": "reuse_with_correction"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "version": "0.53",
+  "date": "2026-11-07",
+  "languages": {
+    "ru": {
+      "base_sha256": "b60b1edf1b0a11787cc937d468001d1dd67c5294d707c947a24547849cf955c4",
+      "counts": {
+        "events": 567,
+        "claims": 76,
+        "claimChecks": 32,
+        "arcs": 30,
+        "edges": 1411,
+        "sourceIndex": 824
+      }
+    },
+    "en": {
+      "base_sha256": "cb730ec2014607c0fc7f0e8a53c175095618e1120564a09ad4798f5ae16bfe67",
+      "counts": {
+        "events": 567,
+        "claims": 76,
+        "claimChecks": 32,
+        "arcs": 30,
+        "edges": 1411,
+        "sourceIndex": 824
+      }
+    }
+  }
+}

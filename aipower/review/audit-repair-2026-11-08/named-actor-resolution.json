@@ -1,0 +1,122 @@
+{
+  "records": [
+    {
+      "event_id": "SIG_2026_TEXAS_ELECTION_DC_PAUSE_PLEDGE",
+      "actors": [
+        {
+          "name": "Gina Hinojosa",
+          "types": ["public_official"],
+          "jurisdictions": ["US"],
+          "basis": "Identity verified on 2026-11-08: the named individual Gina Hinojosa, identified by the Texas House as Representative for District 49 and by her campaign as a Texas gubernatorial candidate. US is the existing jurisdiction token; Texas is her public-office and campaign jurisdiction, not a new country token or a citizenship finding. Taxonomy extension: use public_official with the explicit Politician / public official label in classifierTaxonomy.actors.type_labels, rather than the generic person type. The current EN/RU taxonomy has no suitable person label; government means Government body and must not be assigned to her personally. Retain the exact canonical name and all original raw aliases; do not merge her with Texas State Government or the campaign publisher. Uncertainty/scope: these sources establish identity and role, not the card's governor-elect assertion, election result, pledge date, inauguration date, or any enacted policy. The campaign page is undated and still uses candidate language. Its identity evidence does not upgrade the political declaration to governmental action.",
+          "source_urls": [
+            "https://www.house.texas.gov/index.php/members/3210",
+            "https://www.house.texas.gov/members/3210/biography",
+            "https://ginafortexas.com/priority/data-centers/"
+          ]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.house.texas.gov/index.php/members/3210",
+          "title": "Rep. Hinojosa, Gina - District 49",
+          "publisher": "Texas House of Representatives",
+          "basis": "Primary official member profile read on 2026-11-08. Identifies the person, representative role, District 49 and Texas location. This index.php URL was readable; the equivalent /members/3210 route returned 403 during this check. No election-result inference is made."
+        },
+        {
+          "url": "https://www.house.texas.gov/members/3210/biography",
+          "title": "Rep. Hinojosa, Gina - Biography",
+          "publisher": "Texas House of Representatives",
+          "basis": "Primary official biography read on 2026-11-08. Identifies Gina Hinojosa as a Texas state representative for central Austin and describes her public service. Supports individual identity and public-office role, not classification as a government body."
+        },
+        {
+          "url": "https://ginafortexas.com/priority/data-centers/",
+          "title": "Data Centers | Gina Hinojosa for Texas Governor",
+          "publisher": "Gina Hinojosa campaign",
+          "basis": "Existing canonical primary source read on 2026-11-08. Names Hinojosa as running for Texas governor and presents her campaign position. The page is undated and uses pre-election language; it is not primary verification of the stored governor-elect description."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2026_JAIS3_OPEN_ARABIC_AGENTS",
+      "actors": [
+        {
+          "name": "IFM",
+          "types": ["research"],
+          "jurisdictions": ["UAE"],
+          "basis": "Identity verified on 2026-11-08: Institute of Foundation Models at Mohamed bin Zayed University of Artificial Intelligence (MBZUAI). The institute's own About page explicitly expands IFM and identifies its university affiliation; the existing Jais 3 primary sources connect that institution to this exact card. This is not an acronym guess. research is the existing Research / university type. UAE denotes its Abu Dhabi headquarters and university affiliation. Its own sources also identify research hubs in Silicon Valley, US, and Paris, France; those operational locations do not by themselves establish additional legal domiciles or justify expanding this event's jurisdiction. Retain IFM as the canonical name and preserve all original aliases; the full institutional identity belongs in this basis. Do not collapse IFM into the separately listed parent MBZUAI. Uncertainty/scope: separate incorporation or legal personality of the institute and its overseas hubs was not established; no new event, compute-location claim, or capability verification is proposed.",
+          "source_urls": [
+            "https://ifm.ai/about/",
+            "https://ifm.ai/",
+            "https://ifm.ai/blog/jais3/",
+            "https://www.inception42.ai/news/Jais3-Launch"
+          ]
+        },
+        {
+          "name": "Inception42",
+          "types": ["company"],
+          "jurisdictions": ["UAE"],
+          "basis": "Identity verified on 2026-11-08: Inception42, the G42-associated applied-AI company/brand named in the existing Jais 3 announcement. Its own corporate About page and G42's current recruitment page independently of the acronym identify the commercial organization; company is the existing Company / platform type, not research merely because it develops models. UAE is supported by the site's Abu Dhabi company disclosure and the G42 Abu Dhabi, AE listing. Retain Inception42 as the canonical name and preserve all original aliases; do not rename it to G42 or merge it with IFM/MBZUAI. Uncertainty: the current site's terms identify Inception Institute of Artificial Intelligence Ltd in ADGM and retain a 2023 update date and legacy domain, whereas its privacy notice names INCEPTION ARTIFICIAL INTELLIGENCE LLC - OPC. These disclosures do not establish one unambiguous current registered legal name or a formal renaming history. Keep the legal-name discrepancy in provenance; it does not undermine the company classification or UAE affiliation. No ownership percentage, government-body status, or new event is inferred.",
+          "source_urls": [
+            "https://www.inception42.ai/news/Jais3-Launch",
+            "https://www.inception42.ai/about",
+            "https://jobs.g42.ai/Inception42/job/Abu-Dhabi-Data-Engineer-Abu/733373322/",
+            "https://www.inception42.ai/terms-of-use",
+            "https://www.inception42.ai/privacy-notice"
+          ]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://ifm.ai/about/",
+          "title": "About IFM - Institute of Foundation Models - MBZUAI",
+          "publisher": "Institute of Foundation Models / MBZUAI",
+          "basis": "Primary institutional About page read on 2026-11-08. Explicitly expands IFM as Institute of Foundation Models, places it at MBZUAI, describes academic research, and identifies Abu Dhabi headquarters with Silicon Valley and Paris research hubs."
+        },
+        {
+          "url": "https://ifm.ai/",
+          "title": "Homepage - Institute of Foundation Models - MBZUAI",
+          "publisher": "Institute of Foundation Models / MBZUAI",
+          "basis": "Primary institutional homepage read on 2026-11-08. Lists the Abu Dhabi site at MBZUAI Campus, Masdar City, United Arab Emirates, plus US and French research locations. Supports UAE affiliation while preserving the distinction between headquarters and international operations."
+        },
+        {
+          "url": "https://ifm.ai/blog/jais3/",
+          "title": "Jais 3: Introducing Arabic-centric Agentic AI",
+          "publisher": "Institute of Foundation Models / MBZUAI",
+          "basis": "Existing canonical primary source read on 2026-11-08. The 2026-10-15 article attributes itself to Institute of Foundation Models, MBZUAI, tying the expanded identity to this card. Model performance and release claims are outside this identity-only verification."
+        },
+        {
+          "url": "https://www.inception42.ai/news/Jais3-Launch",
+          "title": "Inception42 and IFM Launches Jais 3: the world's leading Arabic-native AI for Speech, Writing and Agents",
+          "publisher": "Inception42",
+          "basis": "Existing canonical primary source read on 2026-11-08; dated 2026-10-16. Explicitly identifies Institute of Foundation Models as part of MBZUAI and names Inception42 as the other developer. Confirms the intended identities together without merging them or treating the two announcements as separate events."
+        },
+        {
+          "url": "https://www.inception42.ai/about",
+          "title": "About Inception42",
+          "publisher": "Inception42",
+          "basis": "Primary corporate About page read on 2026-11-08. Describes Inception42's AI products, company leadership, commercial activity and role within the G42 ecosystem. Supports company classification; research activity alone does not make this actor a university or independent research institute."
+        },
+        {
+          "url": "https://jobs.g42.ai/Inception42/job/Abu-Dhabi-Data-Engineer-Abu/733373322/",
+          "title": "Data Engineer Job Details | G Forty Two General Trading LLC",
+          "publisher": "G42 careers",
+          "basis": "Primary group recruitment page read on 2026-11-08; dated 2026-11-07. Explicitly calls Inception42 a G42 company and gives Abu Dhabi, AE as the role location. Used only to corroborate commercial identity, group affiliation and operational location, not to equate the recruitment publisher's legal name with Inception42."
+        },
+        {
+          "url": "https://www.inception42.ai/terms-of-use",
+          "title": "Terms of Use",
+          "publisher": "Inception42 website",
+          "basis": "Primary website legal disclosure read on 2026-11-08. Names Inception Institute of Artificial Intelligence Ltd as a company established in Abu Dhabi Global Markets, Abu Dhabi, UAE. The page still references inceptionai.ai and says it was last updated on 2023-08-30; treat its exact legal name as potentially stale, not as a canonical rename instruction."
+        },
+        {
+          "url": "https://www.inception42.ai/privacy-notice",
+          "title": "Privacy Notice",
+          "publisher": "Inception42 website",
+          "basis": "Primary website privacy disclosure read on 2026-11-08. Names INCEPTION ARTIFICIAL INTELLIGENCE LLC - OPC and retains the legacy inceptionai.ai domain. This differs from the terms-of-use entity name; record the discrepancy rather than assert an unverified legal-entity equivalence."
+        }
+      ],
+      "unresolved": []
+    }
+  ]
+}

@@ -1,0 +1,744 @@
+[
+  {
+    "language": "ru",
+    "scenario": "browser_history_restores_prior_unfiltered_URL",
+    "observed": {
+      "unfiltered": "http://127.0.0.1:58928/ai-power-atlas-ru.html#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false",
+      "filtered": "http://127.0.0.1:58928/ai-power-atlas-ru.html#tab=catalog&f.actor=NVIDIA",
+      "back": {
+        "hash": "#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.actor=NVIDIA&g.scope=core&g.showAuto=false",
+        "detail": null,
+        "history": [],
+        "view": "view-catalog",
+        "actor": "NVIDIA",
+        "rows": 17
+      },
+      "forward": {
+        "hash": "#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.actor=NVIDIA&g.scope=core&g.showAuto=false",
+        "detail": null,
+        "history": [],
+        "view": "view-catalog",
+        "actor": "NVIDIA",
+        "rows": 17
+      }
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "same_date_story_pointer_1440",
+    "observed": {
+      "candidate": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+      "hitTest": {
+        "box": {
+          "x": 1072.583984375,
+          "y": 838.789794921875,
+          "width": 7.39892578125,
+          "height": 7.3990478515625
+        },
+        "same": [
+          {
+            "id": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+            "date": "2026-09-10",
+            "r": "4.7"
+          },
+          {
+            "id": "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE",
+            "date": "2026-09-10",
+            "r": "4.7"
+          },
+          {
+            "id": "SIG_2026_OPENAI_ONEGOV_EXPANSION",
+            "date": "2026-09-10",
+            "r": "4.7"
+          }
+        ],
+        "top": "SIG_2026_ANTHROPIC_CVP_TIERED_CAPABILITY_ACCESS"
+      },
+      "opened": {
+        "kind": "event",
+        "id": "SIG_2026_ANTHROPIC_CVP_TIERED_CAPABILITY_ACCESS"
+      }
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "same_date_story_pointer_390",
+    "observed": {
+      "candidate": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+      "hitTest": {
+        "box": {
+          "x": 194.89907836914062,
+          "y": 422.29151916503906,
+          "width": 6.98284912109375,
+          "height": 6.982818603515625
+        },
+        "same": [
+          {
+            "id": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+            "date": "2026-09-10",
+            "r": "4.7"
+          },
+          {
+            "id": "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE",
+            "date": "2026-09-10",
+            "r": "4.7"
+          },
+          {
+            "id": "SIG_2026_OPENAI_ONEGOV_EXPANSION",
+            "date": "2026-09-10",
+            "r": "4.7"
+          }
+        ],
+        "top": "SIG_2026_ANTHROPIC_CVP_TIERED_CAPABILITY_ACCESS"
+      },
+      "opened": {
+        "kind": "event",
+        "id": "SIG_2026_ANTHROPIC_CVP_TIERED_CAPABILITY_ACCESS"
+      }
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "knowledge_growth_and_dates",
+    "observed": {
+      "arc": "ARC_KNOWLEDGE_PRODUCTION_VALIDATION",
+      "datedFacts": 35,
+      "renderedDots": 35,
+      "dateBounds": {
+        "min": 2015,
+        "max": 2026
+      },
+      "allDateXWithinBounds": true,
+      "dotLabelsMatch": true,
+      "linkedFacts": 35,
+      "technicalEdges": 36,
+      "allEdges": 40
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "claimcheck_event_arc_back_1440",
+    "observed": {
+      "chain": [
+        {
+          "kind": "claimCheck",
+          "id": "CLM_001_INFRA_RACE"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        {
+          "kind": "arc",
+          "id": "ARC_GULF_CONDITIONAL_SOVEREIGNTY"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        {
+          "kind": "claimCheck",
+          "id": "CLM_001_INFRA_RACE"
+        }
+      ],
+      "sourceLinks": [
+        "https://www.reuters.com/business/media-telecom/stargate-uae-ai-datacenter-begin-operation-2026-2025-05-22/"
+      ],
+      "fit": {
+        "scrollWidth": 820,
+        "clientWidth": 820
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "claimcheck_event_arc_back_390",
+    "observed": {
+      "chain": [
+        {
+          "kind": "claimCheck",
+          "id": "CLM_001_INFRA_RACE"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        {
+          "kind": "arc",
+          "id": "ARC_GULF_CONDITIONAL_SOVEREIGNTY"
+        },
+        {
+          "kind": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        {
+          "kind": "claimCheck",
+          "id": "CLM_001_INFRA_RACE"
+        }
+      ],
+      "sourceLinks": [
+        "https://www.reuters.com/business/media-telecom/stargate-uae-ai-datacenter-begin-operation-2026-2025-05-22/"
+      ],
+      "fit": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "heatmap_matches_counts",
+    "observed": [
+      {
+        "layer": "cloud_inference",
+        "expected": 161,
+        "total": 161,
+        "sum": 161,
+        "match": true
+      },
+      {
+        "layer": "cyber_security_patch",
+        "expected": 219,
+        "total": 219,
+        "sum": 219,
+        "match": true
+      },
+      {
+        "layer": "data_telemetry",
+        "expected": 200,
+        "total": 200,
+        "sum": 200,
+        "match": true
+      },
+      {
+        "layer": "decision_support_cognition",
+        "expected": 260,
+        "total": 260,
+        "sum": 260,
+        "match": true
+      },
+      {
+        "layer": "energy_compute_chips",
+        "expected": 112,
+        "total": 112,
+        "sum": 112,
+        "match": true
+      },
+      {
+        "layer": "finance_rent",
+        "expected": 91,
+        "total": 91,
+        "sum": 91,
+        "match": true
+      },
+      {
+        "layer": "governance_law",
+        "expected": 265,
+        "total": 265,
+        "sum": 265,
+        "match": true
+      },
+      {
+        "layer": "model_weights",
+        "expected": 191,
+        "total": 191,
+        "sum": 191,
+        "match": true
+      }
+    ]
+  },
+  {
+    "language": "ru",
+    "scenario": "counterargument_cold_reload_mobile",
+    "observed": {
+      "id": "ca-01",
+      "title": "The tier taxonomy already exists (New America, TBI, RAND, Forrester).",
+      "before": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=counterargument&id=ca-01",
+        "detail": {
+          "kind": "counterargument",
+          "id": "ca-01"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "restored": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=counterargument&id=ca-01",
+        "detail": {
+          "kind": "counterargument",
+          "id": "ca-01"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "gap_cold_reload_mobile",
+    "observed": {
+      "id": "GAP_001_STANFORD_AI_INDEX_TABLES",
+      "title": "Exact Stanford AI Index 2026 investment numbers",
+      "before": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=gap&id=GAP_001_STANFORD_AI_INDEX_TABLES",
+        "detail": {
+          "kind": "gap",
+          "id": "GAP_001_STANFORD_AI_INDEX_TABLES"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "restored": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=gap&id=GAP_001_STANFORD_AI_INDEX_TABLES",
+        "detail": {
+          "kind": "gap",
+          "id": "GAP_001_STANFORD_AI_INDEX_TABLES"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "claim_cold_reload_mobile",
+    "observed": {
+      "id": "scale-01",
+      "title": "US private AI investment reached $285.9B in 2025 versus China's $12.4B, roughly a 23x gap; in 2024 the figures were $109.1B vs $9.3B.",
+      "before": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=claim&id=scale-01",
+        "detail": {
+          "kind": "claim",
+          "id": "scale-01"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "restored": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=claim&id=scale-01",
+        "detail": {
+          "kind": "claim",
+          "id": "scale-01"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "invalid_detail_id_after_valid",
+    "observed": {
+      "requested": "DOES_NOT_EXIST",
+      "actual": {
+        "hash": "#tab=story&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=event&id=SIG_UAE_2025_STARGATE_UAE&event=SIG_UAE_2025_STARGATE_UAE",
+        "detail": {
+          "kind": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        "history": [],
+        "view": "view-story",
+        "actor": "",
+        "rows": 567
+      },
+      "title": "Stargate UAE планирует начало работы в 2026 году в рамках более широкого проекта на 5 ГВт"
+    }
+  },
+  {
+    "language": "ru",
+    "scenario": "recipe_URL_active_visual",
+    "observed": {
+      "preset": "VIEW_06_RUSSIA_SELECTIVE_SOVEREIGNTY",
+      "active": 0,
+      "arcs": 1
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "browser_history_restores_prior_unfiltered_URL",
+    "observed": {
+      "unfiltered": "http://127.0.0.1:58928/ai-power-atlas.html#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false",
+      "filtered": "http://127.0.0.1:58928/ai-power-atlas.html#tab=facts&f.actor=NVIDIA",
+      "back": {
+        "hash": "#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.actor=NVIDIA&g.scope=core&g.showAuto=false",
+        "detail": null,
+        "history": [],
+        "view": "view-facts",
+        "actor": "NVIDIA",
+        "rows": 17
+      },
+      "forward": {
+        "hash": "#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.actor=NVIDIA&g.scope=core&g.showAuto=false",
+        "detail": null,
+        "history": [],
+        "view": "view-facts",
+        "actor": "NVIDIA",
+        "rows": 17
+      }
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "same_date_story_pointer_1440",
+    "observed": {
+      "candidate": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+      "hitTest": {
+        "box": {
+          "x": 1085.2748413085938,
+          "y": 572.9072265625,
+          "width": 7.5198974609375,
+          "height": 7.519775390625
+        },
+        "same": [
+          {
+            "id": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+            "date": "2026-09-10",
+            "r": "4.7"
+          },
+          {
+            "id": "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE",
+            "date": "2026-09-10",
+            "r": "4.7"
+          },
+          {
+            "id": "SIG_2026_OPENAI_ONEGOV_EXPANSION",
+            "date": "2026-09-10",
+            "r": "4.7"
+          }
+        ],
+        "top": "SIG_2026_ANTHROPIC_CVP_TIERED_CAPABILITY_ACCESS"
+      },
+      "opened": {
+        "k": "event",
+        "id": "SIG_2026_ANTHROPIC_CVP_TIERED_CAPABILITY_ACCESS"
+      }
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "same_date_story_pointer_390",
+    "observed": {
+      "candidate": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+      "hitTest": {
+        "box": {
+          "x": 194.61871337890625,
+          "y": 422.324462890625,
+          "width": 6.5799560546875,
+          "height": 6.5799560546875
+        },
+        "same": [
+          {
+            "id": "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+            "date": "2026-09-10",
+            "r": "4.7"
+          },
+          {
+            "id": "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE",
+            "date": "2026-09-10",
+            "r": "4.7"
+          },
+          {
+            "id": "SIG_2026_OPENAI_ONEGOV_EXPANSION",
+            "date": "2026-09-10",
+            "r": "4.7"
+          }
+        ],
+        "top": "SIG_2026_ANTHROPIC_CVP_TIERED_CAPABILITY_ACCESS"
+      },
+      "opened": {
+        "k": "event",
+        "id": "SIG_2026_ANTHROPIC_CVP_TIERED_CAPABILITY_ACCESS"
+      }
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "knowledge_growth_and_dates",
+    "observed": {
+      "arc": "ARC_KNOWLEDGE_PRODUCTION_VALIDATION",
+      "datedFacts": 35,
+      "renderedDots": 35,
+      "dateBounds": {
+        "min": 2015,
+        "max": 2026
+      },
+      "allDateXWithinBounds": true,
+      "dotLabelsMatch": true,
+      "linkedFacts": 35,
+      "technicalEdges": 36,
+      "allEdges": 40
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "claimcheck_event_arc_back_1440",
+    "observed": {
+      "chain": [
+        {
+          "k": "check",
+          "id": "CLM_001_INFRA_RACE"
+        },
+        {
+          "k": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        {
+          "k": "arc",
+          "id": "ARC_GULF_CONDITIONAL_SOVEREIGNTY"
+        },
+        {
+          "k": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        {
+          "k": "check",
+          "id": "CLM_001_INFRA_RACE"
+        }
+      ],
+      "sourceLinks": [
+        "https://www.reuters.com/business/media-telecom/stargate-uae-ai-datacenter-begin-operation-2026-2025-05-22/"
+      ],
+      "fit": {
+        "scrollWidth": 643,
+        "clientWidth": 643
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "claimcheck_event_arc_back_390",
+    "observed": {
+      "chain": [
+        {
+          "k": "check",
+          "id": "CLM_001_INFRA_RACE"
+        },
+        {
+          "k": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        {
+          "k": "arc",
+          "id": "ARC_GULF_CONDITIONAL_SOVEREIGNTY"
+        },
+        {
+          "k": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        {
+          "k": "check",
+          "id": "CLM_001_INFRA_RACE"
+        }
+      ],
+      "sourceLinks": [
+        "https://www.reuters.com/business/media-telecom/stargate-uae-ai-datacenter-begin-operation-2026-2025-05-22/"
+      ],
+      "fit": {
+        "scrollWidth": 353,
+        "clientWidth": 353
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "heatmap_matches_counts",
+    "observed": [
+      {
+        "layer": "cloud_inference",
+        "expected": 161,
+        "total": 161,
+        "sum": 161,
+        "match": true
+      },
+      {
+        "layer": "cyber_security_patch",
+        "expected": 219,
+        "total": 219,
+        "sum": 219,
+        "match": true
+      },
+      {
+        "layer": "data_telemetry",
+        "expected": 200,
+        "total": 200,
+        "sum": 200,
+        "match": true
+      },
+      {
+        "layer": "decision_support_cognition",
+        "expected": 260,
+        "total": 260,
+        "sum": 260,
+        "match": true
+      },
+      {
+        "layer": "energy_compute_chips",
+        "expected": 112,
+        "total": 112,
+        "sum": 112,
+        "match": true
+      },
+      {
+        "layer": "finance_rent",
+        "expected": 91,
+        "total": 91,
+        "sum": 91,
+        "match": true
+      },
+      {
+        "layer": "governance_law",
+        "expected": 265,
+        "total": 265,
+        "sum": 265,
+        "match": true
+      },
+      {
+        "layer": "model_weights",
+        "expected": 191,
+        "total": 191,
+        "sum": 191,
+        "match": true
+      }
+    ]
+  },
+  {
+    "language": "en",
+    "scenario": "counterargument_cold_reload_mobile",
+    "observed": {
+      "id": "ca-01",
+      "title": "The tier taxonomy already exists (New America, TBI, RAND, Forrester).",
+      "before": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=counterargument&id=ca-01",
+        "detail": {
+          "k": "counterargument",
+          "id": "ca-01"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "restored": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=counterargument&id=ca-01",
+        "detail": {
+          "k": "counterargument",
+          "id": "ca-01"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "gap_cold_reload_mobile",
+    "observed": {
+      "id": "GAP_001_STANFORD_AI_INDEX_TABLES",
+      "title": "Exact Stanford AI Index 2026 investment numbers",
+      "before": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=gap&id=GAP_001_STANFORD_AI_INDEX_TABLES",
+        "detail": {
+          "k": "gap",
+          "id": "GAP_001_STANFORD_AI_INDEX_TABLES"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "restored": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=gap&id=GAP_001_STANFORD_AI_INDEX_TABLES",
+        "detail": {
+          "k": "gap",
+          "id": "GAP_001_STANFORD_AI_INDEX_TABLES"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "claim_cold_reload_mobile",
+    "observed": {
+      "id": "scale-01",
+      "title": "US private AI investment reached $285.9B in 2025 versus China's $12.4B, roughly a 23x gap; in 2024 the figures were $109.1B vs $9.3B.",
+      "before": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=claim&id=scale-01",
+        "detail": {
+          "k": "claim",
+          "id": "scale-01"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "restored": {
+        "hash": "#tab=sources&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=claim&id=scale-01",
+        "detail": {
+          "k": "claim",
+          "id": "scale-01"
+        },
+        "history": [],
+        "view": "view-sources",
+        "actor": "",
+        "rows": 567
+      },
+      "closed": "true"
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "invalid_detail_id_after_valid",
+    "observed": {
+      "requested": "DOES_NOT_EXIST",
+      "actual": {
+        "hash": "#tab=story&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=event&id=SIG_UAE_2025_STARGATE_UAE&event=SIG_UAE_2025_STARGATE_UAE",
+        "detail": {
+          "k": "event",
+          "id": "SIG_UAE_2025_STARGATE_UAE"
+        },
+        "history": [],
+        "view": "view-story",
+        "actor": "",
+        "rows": 567
+      },
+      "title": "Stargate UAE AI datacenter to begin operation in 2026, with broader 5GW plan"
+    }
+  },
+  {
+    "language": "en",
+    "scenario": "recipe_URL_active_visual",
+    "observed": {
+      "preset": "VIEW_06_RUSSIA_SELECTIVE_SOVEREIGNTY",
+      "active": 0,
+      "arcs": 1
+    }
+  }
+]

@@ -1,0 +1,343 @@
+{
+  "records": [
+    {
+      "event_id": "SIG_2026_MASAI_INTERVAL_CANCER",
+      "actors": [
+        {
+          "name": "Lund University",
+          "types": ["research"],
+          "jurisdictions": ["Sweden"],
+          "basis": "Lund identifies MASAI as its trial and Kristina Lang as study lead. The cited paper places the corresponding investigator in Lund's diagnostic-radiology department in Sweden. Other affiliations and screening providers are not treated as additional research leads.",
+          "source_urls": [
+            "https://pubmed.ncbi.nlm.nih.gov/41620232/",
+            "https://www.lunduniversity.lu.se/article/ai-support-breast-cancer-screening-fewer-missed-cancer-cases"
+          ]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41620232/",
+          "title": "MASAI final screening-accuracy trial: author metadata",
+          "publisher": "The Lancet; indexed by PubMed",
+          "basis": "Checked 2026-11-08. Existing citation; corresponding-author affiliation identifies Lund University, Sweden. PubMed and the journal are not assigned as actors."
+        },
+        {
+          "url": "https://www.lunduniversity.lu.se/article/ai-support-breast-cancer-screening-fewer-missed-cancer-cases",
+          "title": "Lund announcement of final MASAI results",
+          "publisher": "Lund University",
+          "basis": "Checked 2026-11-08. New primary institutional citation explicitly names the study lead and links the same Lancet DOI. Used for institutional leadership, not to reassess outcomes."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2026_GOLDENBRIDGE_II",
+      "actors": [
+        {
+          "name": "Beijing Tiantan Hospital, Capital Medical University",
+          "types": ["research"],
+          "jurisdictions": ["China"],
+          "basis": "The hospital's own trial page names Yongjun Wang as principal investigator. The protocol identifies Wang and Zixiao Li as corresponding investigators at Beijing Tiantan Hospital. Classified as an academic clinical-research institution; participating hospitals and funders are not added.",
+          "source_urls": [
+            "https://www.bmj.com/content/392/bmj-2025-085810",
+            "https://www.bjtth.cn/Html/News/Articles/211742.html",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC11791641/"
+          ]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.bmj.com/content/392/bmj-2025-085810",
+          "title": "GOLDEN BRIDGE II outcome paper",
+          "publisher": "The BMJ",
+          "basis": "Checked 2026-11-08. Existing citation; indexed primary text confirms trial identity and central oversight at Beijing Tiantan Hospital. Direct HTML/PDF requests returned 403, so leadership was cross-checked against the protocol and hospital page."
+        },
+        {
+          "url": "https://www.bjtth.cn/Html/News/Articles/211742.html",
+          "title": "GOLDEN BRIDGE II institutional trial record",
+          "publisher": "Beijing Tiantan Hospital, Capital Medical University",
+          "basis": "Checked 2026-11-08. Accessible primary institutional page identifies the principal investigator and the hospital's Beijing, China address."
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11791641/",
+          "title": "GOLDEN BRIDGE II trial protocol",
+          "publisher": "Stroke and Vascular Neurology; archived in PubMed Central",
+          "basis": "Checked 2026-11-08. Accessible primary protocol for NCT04524624 confirms the lead investigators' hospital affiliation. The hospital and its university are represented as one named academic hospital, not duplicate actors."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2025_RENTOSERTIB_PHASE2A",
+      "actors": [
+        {
+          "name": "Peking Union Medical College Hospital",
+          "types": ["research"],
+          "jurisdictions": ["China"],
+          "basis": "Corresponding investigator Zuojun Xu and clinical co-designer Ping Wang belong to this Beijing academic hospital. Their documented design and trial-conduct roles support clinical leadership beyond affiliation alone.",
+          "source_urls": ["https://www.nature.com/articles/s41591-025-03743-2"]
+        },
+        {
+          "name": "Insilico Medicine",
+          "types": ["company"],
+          "jurisdictions": ["China", "US"],
+          "basis": "Explicit study sponsor; Alex Zhavoronkov, Feng Ren and Sujata Rao co-designed the trial. China and US identify the documented Shanghai and Cambridge clinical-design operations, not an exhaustive corporate footprint or an incorporation determination.",
+          "source_urls": ["https://www.nature.com/articles/s41591-025-03743-2"]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.nature.com/articles/s41591-025-03743-2",
+          "title": "Rentosertib phase 2a trial",
+          "publisher": "Nature Medicine",
+          "basis": "Checked 2026-11-08. Existing full primary paper; inspected author contributions, corresponding authors, sponsor disclosure and institutional addresses. Other enrolling hospitals and additional corporate affiliations are not promoted to lead actors."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2024_ACCESS_DIABETIC_EYE_EXAMS",
+      "actors": [
+        {
+          "name": "Johns Hopkins University",
+          "types": ["research"],
+          "jurisdictions": ["US"],
+          "basis": "Risa Wolf is first and corresponding investigator at Johns Hopkins School of Medicine in Baltimore, with study-design, data-collection and analysis roles. The university's pediatric diabetes service hosted the trial; its school and clinical units are normalized to one university actor.",
+          "source_urls": ["https://www.nature.com/articles/s41467-023-44676-z"]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.nature.com/articles/s41467-023-44676-z",
+          "title": "ACCESS randomized trial of autonomous diabetic eye screening",
+          "publisher": "Nature Communications",
+          "basis": "Checked 2026-11-08. Existing primary paper accessed after the initial cookie redirect; affiliations, contributions and correspondence confirm the lead. Digital Diagnostics supplied in-kind interpretations; that alone does not establish study leadership."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2026_KENYA_LLM_CDSS_NULL",
+      "actors": [
+        {
+          "name": "Kenya Medical Research Institute-Wellcome Trust Research Programme",
+          "types": ["research"],
+          "jurisdictions": ["Kenya"],
+          "basis": "First author Ambrose Agweyu's Nairobi research programme; he co-conceived and supervised the trial and wrote the initial manuscript.",
+          "source_urls": ["https://www.nature.com/articles/s41591-026-04503-6"]
+        },
+        {
+          "name": "University of Birmingham",
+          "types": ["research"],
+          "jurisdictions": ["UK"],
+          "basis": "Corresponding investigator Bilal Mateen and supervising investigators Xiaoxuan Liu and Alastair Denniston are affiliated with Birmingham; contributions document their design and supervision roles.",
+          "source_urls": ["https://www.nature.com/articles/s41591-026-04503-6"]
+        },
+        {
+          "name": "PATH",
+          "types": ["civil_society"],
+          "jurisdictions": ["US", "UK"],
+          "basis": "Explicit trial sponsor in Seattle, with corresponding investigator Mateen and supervisory staff at PATH London. PATH's own institutional description confirms nonprofit status.",
+          "source_urls": [
+            "https://www.nature.com/articles/s41591-026-04503-6",
+            "https://www.path.org/who-we-are/"
+          ]
+        },
+        {
+          "name": "Penda Health",
+          "types": ["company"],
+          "jurisdictions": ["Kenya"],
+          "basis": "Nairobi clinical operator and intervention co-designer: Robert Korom supervised the study and implemented AI Consult with Najib Adan. The disclosures confirm company stock options.",
+          "source_urls": ["https://www.nature.com/articles/s41591-026-04503-6"]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.nature.com/articles/s41591-026-04503-6",
+          "title": "Kenyan primary-care trial of LLM decision support",
+          "publisher": "Nature Medicine",
+          "basis": "Checked 2026-11-08. Existing full primary paper: leadership, sponsor, implementation roles and addresses verified. Secondary affiliations and funders are excluded; OpenAI explicitly had no study-design or analysis role."
+        },
+        {
+          "url": "https://www.path.org/who-we-are/",
+          "title": "PATH institutional identity",
+          "publisher": "PATH",
+          "basis": "Checked 2026-11-08. New primary institutional citation verifies nonprofit identity for the existing civil_society classifier; not used to infer trial participation."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2026_JAMA_AMBIENT_AI_SCRIBE_WORKFLOW",
+      "actors": [
+        {
+          "name": "University of California, San Francisco",
+          "types": ["research"],
+          "jurisdictions": ["US"],
+          "basis": "Lisa Rotenstein and A. Jay Holmgren, the equally contributing first investigators responsible for all study data and analysis integrity, are at UCSF. Rotenstein is corresponding author. This supports UCSF as the lead research institution without assigning every participating medical center.",
+          "source_urls": ["https://jamanetwork.com/journals/jama/fullarticle/2847319"]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/2847319",
+          "title": "Multisite study of clinician time and AI scribes",
+          "publisher": "JAMA",
+          "basis": "Checked 2026-11-08. Existing full primary paper; affiliations and Article Information explicitly establish equal first-author responsibility and correspondence. This is a conservative lead-institution mapping, not an exhaustive list of study sites or senior collaborators."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2026_DENMARK_LABOR_REVISION",
+      "actors": [
+        {
+          "name": "University of Chicago",
+          "types": ["research"],
+          "jurisdictions": ["US"],
+          "basis": "The March 13, 2026 manuscript names Anders Humlum as one of two authors and places him at Chicago Booth. University-level naming reuses the existing registry entity.",
+          "source_urls": ["https://www.rfberlin.com/wp-content/uploads/2026/03/26078.pdf"]
+        },
+        {
+          "name": "University of Copenhagen",
+          "types": ["research"],
+          "jurisdictions": ["Denmark"],
+          "basis": "The same revision names Emilie Vestergaard as the other author, based in Copenhagen's economics department. Both authors' principal universities represent the research team; Denmark is not assigned to Chicago merely because it is the study setting.",
+          "source_urls": ["https://www.rfberlin.com/wp-content/uploads/2026/03/26078.pdf"]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.nber.org/papers/w33777",
+          "title": "NBER working paper 33777",
+          "publisher": "National Bureau of Economic Research",
+          "basis": "Checked 2026-11-08. Existing citation; direct page and current PDF returned 403. Not used alone to assign an actor, and NBER is not selected merely because it publishes the working paper."
+        },
+        {
+          "url": "https://www.rfberlin.com/wp-content/uploads/2026/03/26078.pdf",
+          "title": "Still Waters, Rapid Currents: March 2026 author manuscript",
+          "publisher": "ROCKWOOL Foundation Berlin",
+          "basis": "Checked 2026-11-08. New accessible primary manuscript, dated March 13, 2026, identifies both authors and principal university affiliations on PDF page 3. It explicitly identifies the earlier title, linking it to the stored study family. Neither repository publisher nor secondary NBER affiliation is treated as institutional leadership."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2026_PG_CYBERNETIC_TEAMMATE",
+      "actors": [
+        {
+          "name": "Harvard Business School",
+          "types": ["research"],
+          "jurisdictions": ["US"],
+          "basis": "First and corresponding author Fabrizio Dell'Acqua is based at Harvard Business School in Boston; the paper also identifies HBS research funding. Selects the lead institutional home, not every coauthor's university.",
+          "source_urls": ["https://doi.org/10.1287/orsc.2025.20702"]
+        },
+        {
+          "name": "Procter & Gamble",
+          "types": ["company"],
+          "jurisdictions": ["US"],
+          "basis": "Named corporate research partner: its leadership jointly developed the experimental design and its professionals performed the tasks. Corporate authors are based in Cincinnati, Ohio. US describes the institution, not all participants' locations.",
+          "source_urls": ["https://doi.org/10.1287/orsc.2025.20702"]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://doi.org/10.1287/orsc.2025.20702",
+          "title": "Cybernetic Teammate field experiment",
+          "publisher": "Organization Science / INFORMS",
+          "basis": "Checked 2026-11-08. Existing DOI resolves to the full primary journal paper. Correspondence, funding, institutional addresses and experiment-design sections support HBS and P&G. No additional actor is inferred solely from coauthorship or model supply."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2025_ENOCH_MANUSCRIPT_DATING",
+      "actors": [
+        {
+          "name": "University of Groningen",
+          "types": ["research"],
+          "jurisdictions": ["Netherlands"],
+          "basis": "Corresponding first author Mladen Popovic holds project-administration, funding and supervision roles at Groningen's Qumran Institute. The AI and isotope-research leads are also at Groningen. These units are represented as one university, not separate institutional actors.",
+          "source_urls": ["https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0323185"]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0323185",
+          "title": "Enoch manuscript-dating study",
+          "publisher": "PLOS ONE",
+          "basis": "Checked 2026-11-08. Existing full primary paper explicitly supplies contributor roles, correspondence and Dutch institutional addresses. Partner laboratories and the funder are not equated with project leadership; manuscript origin is not used as actor jurisdiction."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2025_BABYLON_HYMN_RECONSTRUCTION",
+      "actors": [
+        {
+          "name": "University of Baghdad",
+          "types": ["research"],
+          "jurisdictions": ["Iraq"],
+          "basis": "The scholarly edition has two authors, including Anmar A. Fadhil of the University of Baghdad in Iraq. LMU's institutional account explicitly identifies the discovery as an LMU-Baghdad collaboration.",
+          "source_urls": [
+            "https://doi.org/10.1017/irq.2024.23",
+            "https://www.lmu.de/de/die-lmu/struktur/zentrale-universitaetsverwaltung/presse-und-kommunikation-puk/press-room/pressemitteilung/lmu-altorientalist-enrique-jimenez-entdeckt-hymne-auf-babylon-8e671888.html"
+          ]
+        },
+        {
+          "name": "LMU Munich",
+          "types": ["research"],
+          "jurisdictions": ["Germany"],
+          "basis": "Coauthor Enrique Jimenez is identified by LMU as its professor leading the electronic-text project and the collaboration with Baghdad. LMU is selected as a research participant, not simply as the announcement publisher.",
+          "source_urls": [
+            "https://doi.org/10.1017/irq.2024.23",
+            "https://www.lmu.de/de/die-lmu/struktur/zentrale-universitaetsverwaltung/presse-und-kommunikation-puk/press-room/pressemitteilung/lmu-altorientalist-enrique-jimenez-entdeckt-hymne-auf-babylon-8e671888.html"
+          ]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://doi.org/10.1017/irq.2024.23",
+          "title": "Scholarly edition of the Babylon hymn",
+          "publisher": "IRAQ / Cambridge University Press",
+          "basis": "Checked 2026-11-08. Existing DOI resolves to the primary edition; the two-author research partnership and Baghdad affiliation are explicit. Cambridge is not an actor."
+        },
+        {
+          "url": "https://www.lmu.de/de/die-lmu/struktur/zentrale-universitaetsverwaltung/presse-und-kommunikation-puk/press-room/pressemitteilung/lmu-altorientalist-enrique-jimenez-entdeckt-hymne-auf-babylon-8e671888.html",
+          "title": "LMU announcement of the Babylon hymn discovery",
+          "publisher": "LMU Munich",
+          "basis": "Checked 2026-11-08. Existing primary institutional release directly names the collaboration. The stored discrepancy about manuscript counts is outside this actor-only review and remains unchanged."
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "event_id": "SIG_2024_NAZCA_AI_FIELD_SURVEY",
+      "actors": [
+        {
+          "name": "Yamagata University",
+          "types": ["research"],
+          "jurisdictions": ["Japan"],
+          "basis": "Masato Sakai is first and corresponding author at Yamagata University, Japan, with research-design and execution roles. The paper identifies a joint study with IBM Research, supporting university leadership rather than inference from fieldwork location.",
+          "source_urls": ["https://doi.org/10.1073/pnas.2407652121"]
+        },
+        {
+          "name": "IBM",
+          "types": ["company"],
+          "jurisdictions": ["US"],
+          "basis": "Corresponding author Marcus Freitag and research designer Hendrik Hamann are at IBM's Thomas J. Watson Research Center in New York. The explicit joint-study agreement establishes institutional partnership. Reuses the existing IBM entity and company type, rather than adding a duplicate research-center actor.",
+          "source_urls": ["https://doi.org/10.1073/pnas.2407652121"]
+        }
+      ],
+      "source_checks": [
+        {
+          "url": "https://doi.org/10.1073/pnas.2407652121",
+          "title": "AI-assisted Nazca geoglyph survey",
+          "publisher": "PNAS",
+          "basis": "Checked 2026-11-08. Existing full primary paper; inspected correspondence, contributions, joint-study acknowledgment and institutional addresses. Peru remains the fieldwork geography, not the jurisdiction of either selected lead institution. Other coauthor affiliations are not promoted to leads."
+        }
+      ],
+      "unresolved": []
+    }
+  ]
+}

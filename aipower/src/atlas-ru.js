@@ -207,6 +207,23 @@ function statusShortRu(value){
 }
 function dateBasisLabelRu(value){
   return ({
+    publication:'дата публикации',
+    journal_online_publication:'онлайн-публикация в журнале',
+    research_revision:'обновление исследования',
+    result_announcement:'объявление результата',
+    release_announcement_update:'обновление условий выпуска',
+    journal_issue_publication:'выпуск журнала',
+    paper_publication:'публикация статьи',
+    working_paper_revision:'обновление рабочего доклада',
+    working_paper_release:'публикация рабочего доклада',
+    institutional_result_announcement:'сообщение исследовательской организации',
+    operational_launch:'начало эксплуатации',
+    deployment_report:'сообщение о внедрении',
+    online_publication:'онлайн-публикация',
+    first_preprint:'первая версия препринта',
+    initial_results_announcement:'первые объявленные результаты',
+    source_observation_not_publication:'наблюдение страницы, не дата публикации',
+    reporting_date:'дата сообщения',
     'workload_resumption_date; disclosed_2026-10-23':'возобновление работ; сообщено 23 октября',
     'announced_effective_date; enforcement_not_independently_observed':'объявленная дата применения; исполнение отдельно не проверено',
     'official_correction_date; underlying_access_date_unknown':'дата официального уточнения; дата доступа неизвестна',
@@ -292,10 +309,16 @@ function dateBasisLabelRu(value){
     statutory_reporting_effective_date:'дата начала обязательной отчётности',
     incident_detection_date:'дата обнаружения инцидента',
     interim_guidance_publication_date:'дата публикации промежуточной методики',
-    statutory_enforcement_application_date:'дата начала правоприменения'
+    statutory_enforcement_application_date:'дата начала правоприменения',
+    provider_policy_publication:'дата публикации правил поставщика',
+    first_contemporaneous_reporting:'дата первого сообщения о событии',
+    provider_disclosure_date:'дата раскрытия поставщиком',
+    access_program_announcement:'дата объявления программы доступа',
+    system_card_publication:'дата публикации карточки модели'
   })[value] || relationLabel(value);
 }
 function dateStatusLabelRu(value){
+  if (value === 'publication_date_unknown') return 'дата публикации не установлена';
   if (value === 'source_backed') return 'дата обоснована источником';
   if (value === 'month_known_day_unknown') return 'известен месяц; точный день неизвестен';
   if (value === 'exact') return 'точная дата';
@@ -417,7 +440,7 @@ function factsForArc(arc){
     if (byEvent[edge.source]) ids.add(edge.source);
     if (byEvent[edge.target]) ids.add(edge.target);
   });
-  return Array.from(ids).map(function(id){ return byEvent[id]; }).sort(function(a, b){
+  return Array.from(new Set(Array.from(ids).filter(function(id){return !(arc.context_nodes||[]).includes(id);}).map(canonicalEventId))).map(function(id){ return byEvent[id]; }).sort(function(a, b){
     return String(a.date || '').localeCompare(String(b.date || '')) || a.id.localeCompare(b.id);
   });
 }
@@ -584,7 +607,7 @@ function initHeader(){
   document.getElementById('meta').innerHTML = [
     'v' + (D.meta.version || 'n/a'),
     D.meta.updated_at || D.meta.created_at || '',
-    D.summary.total_events + ' фактов',
+    EV.length + ' событий' + (D.events.length > EV.length ? ' · ' + (D.events.length - EV.length) + ' архивный ID' : ''),
     D.summary.total_claims + ' ' + ruPlural(D.summary.total_claims, 'тезис', 'тезиса', 'тезисов'),
     D.summary.total_edges + ' ' + ruPlural(D.summary.total_edges, 'связь', 'связи', 'связей')
   ].filter(Boolean).map(function(item){ return '<span class="pill">' + esc(item) + '</span>'; }).join('');
@@ -937,16 +960,17 @@ function renderStoryMap(){
     visibleArcs.filter(function(arc){ return arc.family_id === familyId; }).forEach(function(arc){ rows.push({ type:'arc', arc:arc }); });
   });
   var cursor = top;
+  var bounds = storyBounds();
+  var axis = atlasTimeAxis(bounds.min, bounds.max, bandStartX, bandEndX);
   var arcY = {};
   rows.forEach(function(row){
     if (row.type === 'family') { row.top = cursor; row.y = cursor + 19; cursor += 43; }
-    else { row.top = cursor; row.y = cursor + 30; arcY[row.arc.id] = row.y; cursor += 62; }
+    else { row.layout = packDatedFacts(factsForArc(row.arc), axis, 12); row.height = Math.max(62, row.layout.levels * 12 + 20); row.top = cursor; row.y = cursor + row.height / 2; arcY[row.arc.id] = row.y; cursor += row.height; }
   });
   var thesisBottom = THESIS.length ? 150 + (THESIS.length - 1) * 124 + 58 : 0;
   var height = Math.max(620, cursor + 34, thesisBottom);
   var visibleEdges = graphEdges();
   var thesisEdges = displayedThesisEdges(visibleEdges);
-  var bounds = storyBounds();
   document.getElementById('edge-count').textContent = 'дуга→тезис: ' + thesisEdges.length + ' · граф: ' + visibleEdges.length + ' / ' + EDGES.length;
   var hierarchySummary = document.getElementById('story-hierarchy-summary');
   if (hierarchySummary) hierarchySummary.textContent = hierarchySummaryText();
@@ -957,11 +981,7 @@ function renderStoryMap(){
   svg.setAttribute('viewBox', '0 0 ' + widthAll + ' ' + height);
   var out = '<rect width="' + widthAll + '" height="' + height + '" fill="transparent"/>';
   out += '<text x="' + labelX + '" y="30" class="svg-label">семейства и механизмы</text><text x="' + bandStartX + '" y="30" class="svg-label">факты по дате события</text><text x="' + thesisX + '" y="30" class="svg-label">опорные тезисы</text>';
-  for (var year = bounds.min; year <= bounds.max; year += 1) {
-    var yearX = storyDateX(String(year) + '-01-01', bounds.min, bounds.max, bandStartX, bandEndX);
-    out += '<line class="story-grid" x1="' + yearX.toFixed(1) + '" y1="48" x2="' + yearX.toFixed(1) + '" y2="' + (height - 36) + '"/>';
-    out += '<text class="story-year" x="' + (yearX + 4).toFixed(1) + '" y="44">' + year + '</text>';
-  }
+  out += timeAxisSvg(axis, 52, height - 36);
   out += '<line class="story-grid" x1="' + bandEndX + '" y1="48" x2="' + bandEndX + '" y2="' + (height - 36) + '"/>';
   rows.forEach(function(row, index){
     if (row.type === 'family') {
@@ -990,20 +1010,15 @@ function renderStoryMap(){
     var nested = Boolean(arc.parent_arc_id) || arc.display_role !== 'mechanism';
     var titleX = labelX + (nested ? 22 : 0);
     out += '<g class="arc-row ' + (nested ? 'is-nested' : 'is-root') + '" data-kind="arc" data-id="' + esc(arc.id) + '">';
-    out += '<rect x="18" y="' + (y - 28) + '" width="' + (widthAll - 42) + '" height="56" rx="7" fill="' + (index % 2 ? 'rgba(255,255,255,.26)' : 'rgba(255,255,255,.48)') + '"/>';
+    out += '<rect x="18" y="' + (row.top + 3) + '" width="' + (widthAll - 42) + '" height="'+(row.height-6)+'" rx="7" fill="' + (index % 2 ? 'rgba(255,255,255,.26)' : 'rgba(255,255,255,.48)') + '"/>';
     if (nested) out += '<path class="hierarchy-branch" d="M' + (labelX + 7) + ',' + (y - 21) + ' V' + (y - 7) + ' H' + (titleX - 5) + '" stroke="' + color + '"/>';
     out += '<text x="' + titleX + '" y="' + (y - 7) + '" class="arc-title">' + esc(truncate(arcTitleRu(arc), nested ? 45 : 50)) + '</text>';
     out += '<text x="' + titleX + '" y="' + (y + 13) + '" class="arc-sub">' + esc(arcRoleLabel(arc)) + ' · ' + facts.length + ' ' + ruPlural(facts.length, 'факт', 'факта', 'фактов') + ' · ' + range + '</text>';
-    if (facts.length) out += '<rect class="arc-band" x="' + firstX.toFixed(1) + '" y="' + (y - 20) + '" width="' + Math.max(8, lastX - firstX).toFixed(1) + '" height="40" rx="8" fill="' + color + '" opacity=".14"/>';
+    if (facts.length) out += '<rect class="arc-band" x="' + firstX.toFixed(1) + '" y="' + (row.top + 6) + '" width="' + Math.max(8, lastX - firstX).toFixed(1) + '" height="'+(row.height-12)+'" rx="8" fill="' + color + '" opacity=".14"/>';
     out += '</g>';
-    var levelEnds = [-Infinity, -Infinity, -Infinity, -Infinity, -Infinity];
-    var levelOffsets = [-14, -7, 0, 7, 14];
-    facts.forEach(function(event){
-      var dotX = storyDateX(event.date, bounds.min, bounds.max, bandStartX, bandEndX);
-      var level = levelEnds.findIndex(function(previousX){ return dotX - previousX >= 10; });
-      if (level < 0) level = levelEnds.indexOf(Math.min.apply(null, levelEnds));
-      levelEnds[level] = dotX;
-      var dotY = y + levelOffsets[level];
+    row.layout.points.forEach(function(point){
+      var event = point.event, dotX = point.x;
+      var dotY = y + packedLevelOffset(point.level) * 12;
       var confidence = confidenceClass(event.confidence);
       out += '<circle class="event-dot ' + esc(confidence) + '" data-kind="event" data-id="' + esc(event.id) + '" data-arc="' + esc(arc.id) + '" data-date="' + esc(event.date) + '" cx="' + dotX.toFixed(1) + '" cy="' + dotY + '" r="4.7"><title>' + esc(event.date + ' · ' + event.title) + '</title></circle>';
     });
@@ -1065,66 +1080,7 @@ function renderRecipes(){
   });
 }
 
-function renderTimeline(){
-  var svg = document.getElementById('timeline-svg');
-  var lanes = D.visualLanes && D.visualLanes.length ? D.visualLanes : [
-    { id:'governance_law', label_ru:'Управление и право' },
-    { id:'energy_compute_chips', label_ru:'Энергия, вычисления и чипы' },
-    { id:'model_weights', label_ru:'Модели, веса и доступ' },
-    { id:'decision_support_cognition', label_ru:'Поддержка решений и когнитивный слой' }
-  ];
-  var years = D.summary.years && D.summary.years.length ? D.summary.years : [2022,2026];
-  var minY = Math.min.apply(null, years);
-  var maxY = Math.max.apply(null, years);
-  var rowH = 70;
-  var top = 68;
-  var left = 238;
-  var width = 1180;
-  var height = Math.max(720, top + lanes.length * rowH + 72);
-  svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
-  function xFor(date){
-    var y = Number(String(date || '').slice(0,4)) || minY;
-    var m = Number(String(date || '').slice(5,7)) || 1;
-    var d = Number(String(date || '').slice(8,10)) || 1;
-    var start = Date.UTC(minY,0,1);
-    var end = Date.UTC(maxY + 1,0,1);
-    var current = Date.UTC(y,m - 1,d);
-    return left + ((current - start) / (end - start)) * (width - left - 54);
-  }
-  function lanesFor(event){
-    var hits = lanes.filter(function(lane){ return (event.stack_layer || []).indexOf(lane.id) !== -1; }).map(function(lane){ return lane.id; });
-    return hits.length ? hits : [lanes[0].id];
-  }
-  var laneIndex = Object.fromEntries(lanes.map(function(lane, index){ return [lane.id, index]; }));
-  var out = '<rect width="' + width + '" height="' + height + '" fill="transparent"/>';
-  for (var year = minY; year <= maxY + 1; year += 1) {
-    var xx = left + ((Date.UTC(year,0,1) - Date.UTC(minY,0,1)) / (Date.UTC(maxY + 1,0,1) - Date.UTC(minY,0,1))) * (width - left - 54);
-    out += '<line class="axis" x1="' + xx + '" y1="28" x2="' + xx + '" y2="' + (height - 42) + '"/>';
-    if (year <= maxY) out += '<text class="svg-id" x="' + (xx + 5) + '" y="22">' + year + '</text>';
-  }
-  lanes.forEach(function(lane, index){
-    var y = top + index * rowH;
-    out += '<line class="axis" x1="' + left + '" y1="' + y + '" x2="' + (width - 54) + '" y2="' + y + '"/>';
-    out += '<text class="svg-label" x="24" y="' + (y - 6) + '">' + esc(truncate(laneLabelRu(lane), 30)) + '</text>';
-    out += '<text class="svg-id" x="24" y="' + (y + 13) + '">' + esc(lane.id) + '</text>';
-  });
-  var offsets = {};
-  EV.slice().sort(function(a,b){ return String(a.date).localeCompare(String(b.date)); }).forEach(function(event){
-    lanesFor(event).forEach(function(lane){
-      var index = laneIndex[lane] || 0;
-      var key = lane + '-' + event.date;
-      offsets[key] = (offsets[key] || 0) + 1;
-      var x = xFor(event.date);
-      var y = top + index * rowH - 8 + Math.min(offsets[key], 7) * 7;
-      var c = confidenceClass(event.confidence);
-      var r = c === 'A' ? 6 : c === 'B' ? 5.4 : 4.8;
-      out += '<circle class="timeline-dot ' + esc(c) + '" data-kind="event" data-id="' + esc(event.id) + '" data-lane="' + esc(lane) + '" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + r + '"><title>' + esc(laneLabelRu(lane) + ': ' + event.title) + '</title></circle>';
-    });
-  });
-  svg.innerHTML = out;
-  bindClickable(svg);
-  bindSvgTooltips(svg);
-}
+function renderTimeline(){ renderLayerTimeline(); }
 
 function initCatalogFilters(){
   document.getElementById('filter-jurisdiction').innerHTML = optionList(Object.keys(D.counts.jurisdictions || {}).sort(), 'Юрисдикция: все', '');
@@ -1275,14 +1231,9 @@ function renderSources(){
   document.getElementById('source-list').innerHTML = (SOURCE_GROUPS.length ? SOURCE_GROUPS : SOURCES.map(function(source){
     return { family: source.name || source.title || host(source.url), sources:[source], used_by:source.used_by || [], types:[source.type || 'источник'] };
   })).map(function(group){
-    var topSources = (group.sources || []).slice(0, 4);
-    var links = topSources.map(function(source){
-      var label = source.name || source.title || host(source.url);
-      return source.url ? '<a href="' + esc(source.url) + '" target="_blank" rel="noopener">' + esc(truncate(label, 82)) + '</a>' : esc(truncate(label, 82));
-    }).join('');
     return '<div class="source-item"><b>' + esc(group.family) + '</b><br><span class="small">' +
       esc((group.types || []).slice(0, 3).join(', ') || 'источник') + ' · материалов: ' + esc((group.sources || []).length) +
-      ' · использований: ' + esc((group.used_by || []).length) + '</span><div class="source-links">' + links + '</div></div>';
+      ' · использований: ' + esc((group.used_by || []).length) + '</span>' + sourceGroupLinks(group) + '</div>';
   }).join('');
   bindClickable(document.getElementById('gap-cards'));
 }
@@ -1354,7 +1305,7 @@ function renderArcDetail(arc){
   var facts = factsForArc(arc);
   var children = ARCS.filter(function(item){ return item.parent_arc_id === arc.id; }).sort(function(a,b){ return (a.display_order || 999) - (b.display_order || 999); });
   return '<h2 id="detail-title">' + esc(arcTitleRu(arc)) + '</h2><div class="id">' + esc(arc.id) + '</div>' +
-    '<div class="tags">' + tag(familyTitleRu(arc.family_id)) + tag(arcRoleLabel(arc)) + tag(arc.arc_type) + tag(arc.status) + tag(arc.start_date) + tag(arc.end_date) + tags(arc.visual_lanes) + '</div>' +
+    '<div class="tags">' + tag(familyTitleRu(arc.family_id)) + tag(arcRoleLabel(arc)) + tag(arcMetadataLabel(arc.arc_type)) + tag(arcMetadataLabel(arc.status)) + tag(arc.start_date) + tag(arc.end_date) + tags(alist(arc.visual_lanes).map(laneLabelRu)) + '</div>' +
     (arc.parent_arc_id ? '<div class="block hierarchy-detail"><h4>Родительский сюжет</h4>' + detailLink(arc.parent_arc_id) + '</div>' : '') +
     (children.length ? '<div class="block hierarchy-detail"><h4>Вложенные сюжеты</h4>' + children.map(function(item){ return detailLink(item.id); }).join(' ') + '</div>' : '') +
     '<div class="block quote"><h4>Тезис дуги</h4><p>' + esc(arc.thesis_ru || '') + '</p></div>' +
@@ -1386,7 +1337,7 @@ function renderClaimCheckDetail(claim){
     '<div class="tags">' + tag(statusLabelRu(claim.status), 'status-' + claim.status) + tag(confidenceLabelRu(claim.confidence), confidenceClass(claim.confidence)) + '</div>' +
     '<div class="block quote"><h4>Осторожная формулировка</h4><p>' + esc(claim.safe_wording_ru || '') + '</p></div>' +
     '<div class="block caveat"><h4>Что может сломать тезис</h4><p>' + esc(claim.what_could_break_it || '') + '</p></div>' +
-    '<div class="block"><h4>Поддерживающие факты</h4>' + (claim.supporting_evidence || []).map(detailLink).join(' ') + '</div>';
+    claimEvidenceSections(claim, detailLink);
 }
 function renderThesisDetail(node){
   var related = EDGES.filter(function(edge){ return edge.source === node.id || edge.target === node.id; });
@@ -1522,6 +1473,7 @@ function hideTip(){
 }
 
 /* COMMON_RUNTIME */
+initCanonicalPresentation();
 document.getElementById('modal').addEventListener('click', function(event){
   if (event.target.dataset.close) closeDetail();
 });

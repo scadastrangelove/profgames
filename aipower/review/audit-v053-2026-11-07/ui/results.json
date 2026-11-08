@@ -1,0 +1,1823 @@
+{
+  "build": {
+    "ru": {
+      "full_html_matches_in_memory_build": true,
+      "runtime_exactly_embedded": true,
+      "sha256": "c769645947fb53fb03e4c3b2539b5bcd9a31578c2babd997e375f3408fbdf915",
+      "version": "0.53"
+    },
+    "en": {
+      "full_html_matches_in_memory_build": true,
+      "runtime_exactly_embedded": true,
+      "sha256": "c6101ef7d934b75c19c1f8eb16a96e46c4d91c6e8c8bb53e8b7958a32cef161a",
+      "version": "0.53"
+    }
+  },
+  "scenarios": [
+    {
+      "language": "ru",
+      "scenario": "missing_filter_in_same_document_url",
+      "observed": {
+        "filtered": {
+          "url": "#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.actor=NVIDIA&g.scope=core&g.showAuto=false",
+          "view": "view-catalog",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "NVIDIA",
+            "family": "",
+            "lane": "",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 17,
+          "recipeActive": null,
+          "storyArcs": 19,
+          "overviewArcs": 0
+        },
+        "warm_bare_hash": {
+          "url": "#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.actor=NVIDIA&g.scope=core&g.showAuto=false",
+          "view": "view-catalog",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "NVIDIA",
+            "family": "",
+            "lane": "",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 17,
+          "recipeActive": null,
+          "storyArcs": 19,
+          "overviewArcs": 0
+        },
+        "cold_bare_hash": {
+          "url": "#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false",
+          "view": "view-catalog",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "lane": "",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 19,
+          "overviewArcs": 0
+        }
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "URL_query_case",
+      "observed": {
+        "from_url": {
+          "url": "#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.q=OpenAI&g.scope=core&g.showAuto=false",
+          "view": "view-catalog",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "OpenAI",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "lane": "",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 0,
+          "recipeActive": null,
+          "storyArcs": 19,
+          "overviewArcs": 0
+        },
+        "same_text_typed": {
+          "url": "#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.q=openai&g.scope=core&g.showAuto=false",
+          "view": "view-catalog",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "openai",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "lane": "",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 95,
+          "recipeActive": null,
+          "storyArcs": 19,
+          "overviewArcs": 0
+        }
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "browser_back_forward_after_UI_tabs",
+      "observed": {
+        "before_back": {
+          "url": "#tab=stack&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false",
+          "view": "view-stack",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "lane": "",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 19,
+          "overviewArcs": 0
+        },
+        "back_url": "http://127.0.0.1:58655/README.md",
+        "forward_url": "http://127.0.0.1:58655/ai-power-atlas-ru.html#tab=stack&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false"
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "recipe_restored_from_URL",
+      "observed": {
+        "recipe": {
+          "id": "VIEW_01_TIMELINE_LANES",
+          "label_ru": "Timeline lanes",
+          "description_ru": "Разложить story_arcs по времени и lanes от proprietary compute 2016 года до права, chips, models, cyber и decision-support 2026-го.",
+          "recommended_filters": {
+            "edge_styles": [
+              "solid",
+              "dashed"
+            ],
+            "hide_arc_ids": [
+              "AUTO_CLAIMCHECK_SUPPORT",
+              "AUTO_COUNTERARGUMENTS"
+            ],
+            "min_strength": "medium"
+          },
+          "description_en": "Lay out story arcs over time and stack lanes, from proprietary compute in 2016 to law, chips, models, cyber and decision-support in 2026."
+        },
+        "state": {
+          "url": "#tab=story&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.preset=VIEW_01_TIMELINE_LANES&g.scope=core&g.showAuto=false",
+          "view": "view-story",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "VIEW_01_TIMELINE_LANES",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "lane": "",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 35,
+          "overviewArcs": 0
+        },
+        "rendered_title": ""
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "recipe_by_click",
+      "observed": {
+        "url": "#tab=story&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.preset=VIEW_01_TIMELINE_LANES&g.scope=core&g.showAuto=false",
+        "view": "view-story",
+        "detail": null,
+        "history": [],
+        "graph": {
+          "showAuto": false,
+          "scope": "core",
+          "preset": "VIEW_01_TIMELINE_LANES",
+          "family": "",
+          "arc": "",
+          "relation": ""
+        },
+        "facts": {
+          "q": "",
+          "jurisdiction": "",
+          "actor": "",
+          "family": "",
+          "lane": "",
+          "arc": "",
+          "relation": "",
+          "confidence": "",
+          "status": "",
+          "region": "",
+          "location": "",
+          "institution": "",
+          "geoContext": "",
+          "geoScope": "",
+          "actorType": "",
+          "actorJurisdiction": "",
+          "source": ""
+        },
+        "rows": 567,
+        "recipeActive": {
+          "preset": "VIEW_01_TIMELINE_LANES"
+        },
+        "storyArcs": 35,
+        "overviewArcs": 0
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "stack_layer_filter_then_language",
+      "observed": {
+        "layer": "model_weights",
+        "opened": {
+          "url": "#tab=stack&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=layer&id=model_weights",
+          "view": "view-stack",
+          "detail": {
+            "kind": "layer",
+            "id": "model_weights"
+          },
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "lane": "",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 19,
+          "overviewArcs": 0
+        },
+        "filtered": {
+          "url": "#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.lane=model_weights&g.scope=core&g.showAuto=false",
+          "view": "view-catalog",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "lane": "model_weights",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 191,
+          "recipeActive": null,
+          "storyArcs": 19,
+          "overviewArcs": 0
+        },
+        "other_language": {
+          "url": "#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false",
+          "view": "view-facts",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        }
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "timeline_exact_coordinate_collisions",
+      "observed": [
+        {
+          "position": "1058.3|417.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+            "SIG_2026_PALANTIR_REVENUE_AIP_GROWTH"
+          ]
+        },
+        {
+          "position": "1064.0|417.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_GOLDENBRIDGE_II",
+            "SIG_2026_RU_FSTEC_ORDER117_AI_CONTROLS_EFFECTIVE"
+          ]
+        },
+        {
+          "position": "1076.4|137.0|cloud_inference",
+          "ids": [
+            "SIG_2026_GOOGLE_GEMINI_THREE_UNNAMED_COMPANIES",
+            "SIG_2026_PENTAGON_SEVEN_AI_COMPANIES_CLASSIFIED_NETWORKS"
+          ]
+        },
+        {
+          "position": "1076.4|347.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_GOOGLE_GEMINI_THREE_UNNAMED_COMPANIES",
+            "SIG_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE"
+          ]
+        },
+        {
+          "position": "1076.4|417.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_GOOGLE_GEMINI_THREE_UNNAMED_COMPANIES",
+            "SIG_2026_PENTAGON_SEVEN_AI_COMPANIES_CLASSIFIED_NETWORKS"
+          ]
+        },
+        {
+          "position": "1076.4|144.0|cloud_inference",
+          "ids": [
+            "SIG_2026_WIKIMEDIA_AGENT_ACTIVITY_INVESTIGATION",
+            "SIG_2026_MICROSOFT_AGENT365_GENERAL_AVAILABILITY"
+          ]
+        },
+        {
+          "position": "1076.4|354.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_WIKIMEDIA_AGENT_ACTIVITY_INVESTIGATION",
+            "SIG_2026_MICROSOFT_AGENT365_GENERAL_AVAILABILITY"
+          ]
+        },
+        {
+          "position": "1076.4|424.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_WIKIMEDIA_AGENT_ACTIVITY_INVESTIGATION",
+            "SIG_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE"
+          ]
+        },
+        {
+          "position": "1088.7|137.0|cloud_inference",
+          "ids": [
+            "SIG_2026_META_MUSE_SPARK_REAL_WORLD_DATABASE_CHANGES",
+            "SIG_2026_JADEPUFFER_AGENTIC_EXTORTION"
+          ]
+        },
+        {
+          "position": "1088.7|347.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_META_MUSE_SPARK_REAL_WORLD_DATABASE_CHANGES",
+            "SIG_2026_JADEPUFFER_AGENTIC_EXTORTION"
+          ]
+        },
+        {
+          "position": "1088.7|417.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_META_MUSE_SPARK_REAL_WORLD_DATABASE_CHANGES",
+            "SIG_2026_UK_ATAS_AI_RESEARCH_ACCESS"
+          ]
+        },
+        {
+          "position": "1101.3|347.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_SANS_AI_SECURITY_WORKFORCE_SNAPSHOT",
+            "SIG_2026_ANTHROPIC_ENTERPRISE_FRONTIER_SAFEGUARDS"
+          ]
+        },
+        {
+          "position": "1101.3|487.0|governance_law",
+          "ids": [
+            "SIG_2026_SANS_AI_SECURITY_WORKFORCE_SNAPSHOT",
+            "SIG_2026_ASTRA_CRITICAL_CYBER_ASSESSMENT"
+          ]
+        },
+        {
+          "position": "1101.3|137.0|cloud_inference",
+          "ids": [
+            "SIG_2026_STORM0940_ARTEX_CONNECTWISE",
+            "SIG_2026_ANTHROPIC_ENTERPRISE_FRONTIER_SAFEGUARDS"
+          ]
+        },
+        {
+          "position": "1101.3|354.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_STORM0940_ARTEX_CONNECTWISE",
+            "SIG_2026_ASTRA_CRITICAL_CYBER_ASSESSMENT"
+          ]
+        },
+        {
+          "position": "1103.1|319.0|data_telemetry",
+          "ids": [
+            "SIG_2026_ANTHROPIC_GTG27005_DRONE_SWARM_DEVELOPMENT",
+            "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+            "SIG_2026_ANTHROPIC_BIOLOGY_DUAL_USE_ACCESS_DISCLOSURE"
+          ]
+        },
+        {
+          "position": "1103.1|459.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+            "SIG_2026_OPENAI_ONEGOV_EXPANSION"
+          ]
+        },
+        {
+          "position": "1107.4|347.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_OPENAI_KERNEL_PIPELINE",
+            "SIG_2026_OPENAI_FRONTIER_RL_RESUMPTION_OFFLINE"
+          ]
+        },
+        {
+          "position": "1107.4|557.0|finance_rent",
+          "ids": [
+            "SIG_2026_OPENAI_KERNEL_PIPELINE",
+            "SIG_2026_BIS_CIRCULAR_AI_FINANCE"
+          ]
+        },
+        {
+          "position": "1107.4|207.0|model_weights",
+          "ids": [
+            "SIG_2026_MISTRAL_OPEN_AND_VETTED_CYBER",
+            "SIG_2026_OPENAI_FRONTIER_RL_RESUMPTION_OFFLINE"
+          ]
+        },
+        {
+          "position": "1107.4|487.0|governance_law",
+          "ids": [
+            "SIG_2026_MISTRAL_OPEN_AND_VETTED_CYBER",
+            "SIG_2026_OPENAI_FRONTIER_RL_RESUMPTION_OFFLINE"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "ru",
+      "scenario": "timeline_collision_click",
+      "observed": {
+        "intended_id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+        "overlapping_ids": [
+          "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+          "SIG_2026_PALANTIR_REVENUE_AIP_GROWTH"
+        ],
+        "opened": {
+          "kind": "event",
+          "id": "SIG_RUSSIA_2026_GOV_AI_ASSISTANT_PILOT"
+        }
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "expanded_story_geometry",
+      "observed": {
+        "viewBox": "0 0 1400 1966",
+        "bounds": {
+          "x": 296,
+          "y": 743.546875,
+          "width": 1102,
+          "height": 1547.515625
+        },
+        "arcRows": 31,
+        "thesisNodes": 5,
+        "exactCollisions": [
+          [
+            "986.6|369|ARC_QUIET_ACCESS_CONTROL",
+            [
+              "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+              "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE",
+              "SIG_2026_OPENAI_ONEGOV_EXPANSION"
+            ]
+          ],
+          [
+            "986.6|1013|ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+            [
+              "SIG_2026_ANTHROPIC_GTG10007_EXPLOIT_FOUNDRY",
+              "SIG_2026_ANTHROPIC_STATE_SURVEILLANCE_BUREAUCRACY",
+              "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE"
+            ]
+          ]
+        ],
+        "dotCount": 870,
+        "dates": [
+          {
+            "date": "2024-01-11",
+            "x": "871.2"
+          },
+          {
+            "date": "2025-03-27",
+            "x": "923.5"
+          },
+          {
+            "date": "2025-06-03",
+            "x": "931.5"
+          },
+          {
+            "date": "2026-01-31",
+            "x": "960.3"
+          },
+          {
+            "date": "2026-03",
+            "x": "963.7"
+          },
+          {
+            "date": "2026-04-01",
+            "x": "967.4"
+          },
+          {
+            "date": "2026-06-26",
+            "x": "977.6"
+          },
+          {
+            "date": "2026-10-15",
+            "x": "990.7"
+          },
+          {
+            "date": "2025-01-09",
+            "x": "914.3"
+          },
+          {
+            "date": "2025-06-25",
+            "x": "934.2"
+          }
+        ]
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "expanded_story_mobile",
+      "observed": {
+        "width": 1040,
+        "height": 1460.453125,
+        "scrollWidth": 1040,
+        "clientWidth": 330
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "source_and_gap_discoverability",
+      "observed": {
+        "totalSources": 824,
+        "sourceLinks": 577,
+        "groups": 358,
+        "truncatedGroups": [
+          {
+            "family": "aisi.gov.uk",
+            "count": 8
+          },
+          {
+            "family": "alignment.openai.com",
+            "count": 9
+          },
+          {
+            "family": "anthropic.com",
+            "count": 31
+          },
+          {
+            "family": "apnews.com",
+            "count": 6
+          },
+          {
+            "family": "arxiv.org",
+            "count": 42
+          },
+          {
+            "family": "axios.com",
+            "count": 14
+          },
+          {
+            "family": "bankofengland.co.uk",
+            "count": 5
+          },
+          {
+            "family": "bis.gov",
+            "count": 6
+          },
+          {
+            "family": "blog.google",
+            "count": 9
+          },
+          {
+            "family": "blogs.nvidia.com",
+            "count": 5
+          },
+          {
+            "family": "congress.gov",
+            "count": 8
+          },
+          {
+            "family": "daniel.haxx.se",
+            "count": 7
+          },
+          {
+            "family": "digital-strategy.ec.europa.eu",
+            "count": 15
+          },
+          {
+            "family": "doi.org",
+            "count": 10
+          },
+          {
+            "family": "github.com",
+            "count": 13
+          },
+          {
+            "family": "gov.uk",
+            "count": 17
+          },
+          {
+            "family": "huggingface.co",
+            "count": 9
+          },
+          {
+            "family": "justice.gov",
+            "count": 6
+          },
+          {
+            "family": "metr.org",
+            "count": 5
+          },
+          {
+            "family": "microsoft.com",
+            "count": 7
+          },
+          {
+            "family": "nature.com",
+            "count": 13
+          },
+          {
+            "family": "nist.gov",
+            "count": 8
+          },
+          {
+            "family": "openai.com",
+            "count": 42
+          },
+          {
+            "family": "reuters.com",
+            "count": 41
+          },
+          {
+            "family": "whitehouse.gov",
+            "count": 7
+          },
+          {
+            "family": "x.com",
+            "count": 8
+          }
+        ],
+        "gaps": 25,
+        "gapEntries": 25,
+        "counters": 11,
+        "counterEntries": 1
+      }
+    },
+    {
+      "language": "ru",
+      "scenario": "country_detail_language_link",
+      "observed": {
+        "before": {
+          "detail": {
+            "url": "#tab=actors&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=country&id=0",
+            "view": "view-actors",
+            "detail": {
+              "kind": "country",
+              "id": "0"
+            },
+            "history": [],
+            "graph": {
+              "showAuto": false,
+              "scope": "core",
+              "preset": "",
+              "family": "",
+              "arc": "",
+              "relation": ""
+            },
+            "facts": {
+              "q": "",
+              "jurisdiction": "",
+              "actor": "",
+              "family": "",
+              "lane": "",
+              "arc": "",
+              "relation": "",
+              "confidence": "",
+              "status": "",
+              "region": "",
+              "location": "",
+              "institution": "",
+              "geoContext": "",
+              "geoScope": "",
+              "actorType": "",
+              "actorJurisdiction": "",
+              "source": ""
+            },
+            "rows": 567,
+            "recipeActive": null,
+            "storyArcs": 19,
+            "overviewArcs": 0
+          },
+          "title": "US"
+        },
+        "after": {
+          "url": "#tab=overview&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=country&id=0",
+          "view": "view-overview",
+          "detail": {
+            "k": "country",
+            "id": "0"
+          },
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        },
+        "detail_text": "Not found."
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "missing_filter_in_same_document_url",
+      "observed": {
+        "filtered": {
+          "url": "#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.actor=NVIDIA&g.scope=core&g.showAuto=false",
+          "view": "view-facts",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "NVIDIA",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 17,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        },
+        "warm_bare_hash": {
+          "url": "#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.actor=NVIDIA&g.scope=core&g.showAuto=false",
+          "view": "view-facts",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "NVIDIA",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 17,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        },
+        "cold_bare_hash": {
+          "url": "#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false",
+          "view": "view-facts",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        }
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "URL_query_case",
+      "observed": {
+        "from_url": {
+          "url": "#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.q=OpenAI&g.scope=core&g.showAuto=false",
+          "view": "view-facts",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "OpenAI",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 0,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        },
+        "same_text_typed": {
+          "url": "#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.q=openai&g.scope=core&g.showAuto=false",
+          "view": "view-facts",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "openai",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 95,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        }
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "browser_back_forward_after_UI_tabs",
+      "observed": {
+        "before_back": {
+          "url": "#tab=stack&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false",
+          "view": "view-stack",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        },
+        "back_url": "http://127.0.0.1:58655/README.md",
+        "forward_url": "http://127.0.0.1:58655/ai-power-atlas.html#tab=stack&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false"
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "recipe_restored_from_URL",
+      "observed": {
+        "recipe": {
+          "id": "VIEW_01_TIMELINE_LANES",
+          "recommended_filters": {
+            "edge_styles": [
+              "solid",
+              "dashed"
+            ],
+            "hide_arc_ids": [
+              "AUTO_CLAIMCHECK_SUPPORT",
+              "AUTO_COUNTERARGUMENTS"
+            ],
+            "min_strength": "medium"
+          },
+          "description_en": "Lay the arcs out from proprietary compute in 2016 to law, chips, models, cyber and decision-support in 2026.",
+          "title_en": "Timeline lanes",
+          "title": "Timeline lanes",
+          "description": "Lay the arcs out from proprietary compute in 2016 to law, chips, models, cyber and decision-support in 2026."
+        },
+        "state": {
+          "url": "#tab=story&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.preset=VIEW_01_TIMELINE_LANES&g.scope=core&g.showAuto=false",
+          "view": "view-story",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "VIEW_01_TIMELINE_LANES",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 30,
+          "overviewArcs": 30
+        },
+        "rendered_title": "Timeline lanes"
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "recipe_then_overview",
+      "observed": {
+        "chosen": {
+          "url": "#tab=story&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.preset=VIEW_01_TIMELINE_LANES&g.scope=core&g.showAuto=false",
+          "view": "view-story",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "VIEW_01_TIMELINE_LANES",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": {
+            "recipe": "VIEW_01_TIMELINE_LANES"
+          },
+          "storyArcs": 30,
+          "overviewArcs": 14
+        },
+        "overview": {
+          "url": "#tab=overview&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.preset=VIEW_01_TIMELINE_LANES&g.scope=core&g.showAuto=false",
+          "view": "view-overview",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "VIEW_01_TIMELINE_LANES",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": {
+            "recipe": "VIEW_01_TIMELINE_LANES"
+          },
+          "storyArcs": 30,
+          "overviewArcs": 14
+        }
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "stack_layer_filter_then_language",
+      "observed": {
+        "layer": "model_weights",
+        "opened": {
+          "url": "#tab=stack&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false&kind=layer&id=model_weights",
+          "view": "view-stack",
+          "detail": {
+            "k": "layer",
+            "id": "model_weights"
+          },
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        },
+        "filtered": {
+          "url": "#tab=facts&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&f.layer=model_weights&g.scope=core&g.showAuto=false",
+          "view": "view-facts",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "layer": "model_weights",
+            "year": "",
+            "arc": "",
+            "status": "",
+            "confidence": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 191,
+          "recipeActive": null,
+          "storyArcs": 14,
+          "overviewArcs": 14
+        },
+        "other_language": {
+          "url": "#tab=catalog&c.mode=core&c.principalOnly=false&c.showLinks=true&b.subdomain=all&r.open=false&r.track=RES_TRACK_MAINTENANCE_CAPACITY&g.scope=core&g.showAuto=false",
+          "view": "view-catalog",
+          "detail": null,
+          "history": [],
+          "graph": {
+            "showAuto": false,
+            "scope": "core",
+            "preset": "",
+            "family": "",
+            "arc": "",
+            "relation": ""
+          },
+          "facts": {
+            "q": "",
+            "jurisdiction": "",
+            "actor": "",
+            "family": "",
+            "lane": "",
+            "arc": "",
+            "relation": "",
+            "confidence": "",
+            "status": "",
+            "region": "",
+            "location": "",
+            "institution": "",
+            "geoContext": "",
+            "geoScope": "",
+            "actorType": "",
+            "actorJurisdiction": "",
+            "source": ""
+          },
+          "rows": 567,
+          "recipeActive": null,
+          "storyArcs": 19,
+          "overviewArcs": 0
+        }
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "timeline_exact_coordinate_collisions",
+      "observed": [
+        {
+          "position": "1114.7|417.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+            "SIG_2026_PALANTIR_REVENUE_AIP_GROWTH"
+          ]
+        },
+        {
+          "position": "1120.7|417.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_GOLDENBRIDGE_II",
+            "SIG_2026_RU_FSTEC_ORDER117_AI_CONTROLS_EFFECTIVE"
+          ]
+        },
+        {
+          "position": "1133.7|347.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_GOOGLE_GEMINI_THREE_UNNAMED_COMPANIES",
+            "SIG_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE"
+          ]
+        },
+        {
+          "position": "1133.7|137.0|cloud_inference",
+          "ids": [
+            "SIG_2026_GOOGLE_GEMINI_THREE_UNNAMED_COMPANIES",
+            "SIG_2026_PENTAGON_SEVEN_AI_COMPANIES_CLASSIFIED_NETWORKS"
+          ]
+        },
+        {
+          "position": "1133.7|417.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_GOOGLE_GEMINI_THREE_UNNAMED_COMPANIES",
+            "SIG_2026_PENTAGON_SEVEN_AI_COMPANIES_CLASSIFIED_NETWORKS"
+          ]
+        },
+        {
+          "position": "1133.7|354.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_WIKIMEDIA_AGENT_ACTIVITY_INVESTIGATION",
+            "SIG_2026_MICROSOFT_AGENT365_GENERAL_AVAILABILITY"
+          ]
+        },
+        {
+          "position": "1133.7|144.0|cloud_inference",
+          "ids": [
+            "SIG_2026_WIKIMEDIA_AGENT_ACTIVITY_INVESTIGATION",
+            "SIG_2026_MICROSOFT_AGENT365_GENERAL_AVAILABILITY"
+          ]
+        },
+        {
+          "position": "1133.7|424.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_WIKIMEDIA_AGENT_ACTIVITY_INVESTIGATION",
+            "SIG_2026_FIVE_EYES_AGENTIC_AI_GUIDANCE"
+          ]
+        },
+        {
+          "position": "1146.7|347.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_META_MUSE_SPARK_REAL_WORLD_DATABASE_CHANGES",
+            "SIG_2026_JADEPUFFER_AGENTIC_EXTORTION"
+          ]
+        },
+        {
+          "position": "1146.7|137.0|cloud_inference",
+          "ids": [
+            "SIG_2026_META_MUSE_SPARK_REAL_WORLD_DATABASE_CHANGES",
+            "SIG_2026_JADEPUFFER_AGENTIC_EXTORTION"
+          ]
+        },
+        {
+          "position": "1146.7|417.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_META_MUSE_SPARK_REAL_WORLD_DATABASE_CHANGES",
+            "SIG_2026_UK_ATAS_AI_RESEARCH_ACCESS"
+          ]
+        },
+        {
+          "position": "1159.9|347.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_SANS_AI_SECURITY_WORKFORCE_SNAPSHOT",
+            "SIG_2026_ANTHROPIC_ENTERPRISE_FRONTIER_SAFEGUARDS"
+          ]
+        },
+        {
+          "position": "1159.9|487.0|governance_law",
+          "ids": [
+            "SIG_2026_SANS_AI_SECURITY_WORKFORCE_SNAPSHOT",
+            "SIG_2026_ASTRA_CRITICAL_CYBER_ASSESSMENT"
+          ]
+        },
+        {
+          "position": "1159.9|354.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_STORM0940_ARTEX_CONNECTWISE",
+            "SIG_2026_ASTRA_CRITICAL_CYBER_ASSESSMENT"
+          ]
+        },
+        {
+          "position": "1159.9|137.0|cloud_inference",
+          "ids": [
+            "SIG_2026_STORM0940_ARTEX_CONNECTWISE",
+            "SIG_2026_ANTHROPIC_ENTERPRISE_FRONTIER_SAFEGUARDS"
+          ]
+        },
+        {
+          "position": "1161.9|319.0|data_telemetry",
+          "ids": [
+            "SIG_2026_ANTHROPIC_GTG27005_DRONE_SWARM_DEVELOPMENT",
+            "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+            "SIG_2026_ANTHROPIC_BIOLOGY_DUAL_USE_ACCESS_DISCLOSURE"
+          ]
+        },
+        {
+          "position": "1161.9|459.0|decision_support_cognition",
+          "ids": [
+            "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+            "SIG_2026_OPENAI_ONEGOV_EXPANSION"
+          ]
+        },
+        {
+          "position": "1166.4|347.0|cyber_security_patch",
+          "ids": [
+            "SIG_2026_OPENAI_KERNEL_PIPELINE",
+            "SIG_2026_OPENAI_FRONTIER_RL_RESUMPTION_OFFLINE"
+          ]
+        },
+        {
+          "position": "1166.4|557.0|finance_rent",
+          "ids": [
+            "SIG_2026_OPENAI_KERNEL_PIPELINE",
+            "SIG_2026_BIS_CIRCULAR_AI_FINANCE"
+          ]
+        },
+        {
+          "position": "1166.4|207.0|model_weights",
+          "ids": [
+            "SIG_2026_MISTRAL_OPEN_AND_VETTED_CYBER",
+            "SIG_2026_OPENAI_FRONTIER_RL_RESUMPTION_OFFLINE"
+          ]
+        },
+        {
+          "position": "1166.4|487.0|governance_law",
+          "ids": [
+            "SIG_2026_MISTRAL_OPEN_AND_VETTED_CYBER",
+            "SIG_2026_OPENAI_FRONTIER_RL_RESUMPTION_OFFLINE"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "scenario": "timeline_collision_click",
+      "observed": {
+        "intended_id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+        "overlapping_ids": [
+          "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+          "SIG_2026_PALANTIR_REVENUE_AIP_GROWTH"
+        ],
+        "opened": {
+          "k": "event",
+          "id": "SIG_RUSSIA_2026_GOV_AI_ASSISTANT_PILOT"
+        }
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "expanded_story_geometry",
+      "observed": {
+        "viewBox": "0 0 1400 1966",
+        "bounds": {
+          "x": 296,
+          "y": 476.109375,
+          "width": 1120,
+          "height": 1572.796875
+        },
+        "arcRows": 26,
+        "thesisNodes": 5,
+        "exactCollisions": [
+          [
+            "986.6|369|ARC_QUIET_ACCESS_CONTROL",
+            [
+              "SIG_2026_ANTHROPIC_GTG30005_NAVAL_RECONNAISSANCE",
+              "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE",
+              "SIG_2026_OPENAI_ONEGOV_EXPANSION"
+            ]
+          ],
+          [
+            "986.6|1013|ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+            [
+              "SIG_2026_ANTHROPIC_GTG10007_EXPLOIT_FOUNDRY",
+              "SIG_2026_ANTHROPIC_STATE_SURVEILLANCE_BUREAUCRACY",
+              "SIG_2026_ANTHROPIC_THREAT_INTEL_OBSERVABILITY_GATE"
+            ]
+          ]
+        ],
+        "dotCount": 870,
+        "dates": [
+          {
+            "date": "2024-01-11",
+            "x": "871.2"
+          },
+          {
+            "date": "2025-03-27",
+            "x": "923.5"
+          },
+          {
+            "date": "2025-06-03",
+            "x": "931.5"
+          },
+          {
+            "date": "2026-01-31",
+            "x": "960.3"
+          },
+          {
+            "date": "2026-03",
+            "x": "963.7"
+          },
+          {
+            "date": "2026-04-01",
+            "x": "967.4"
+          },
+          {
+            "date": "2026-06-26",
+            "x": "977.6"
+          },
+          {
+            "date": "2026-10-15",
+            "x": "990.7"
+          },
+          {
+            "date": "2025-01-09",
+            "x": "914.3"
+          },
+          {
+            "date": "2025-06-25",
+            "x": "934.2"
+          }
+        ]
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "expanded_story_mobile",
+      "observed": {
+        "width": 980,
+        "height": 1376.1875,
+        "scrollWidth": 980,
+        "clientWidth": 330
+      }
+    },
+    {
+      "language": "en",
+      "scenario": "source_and_gap_discoverability",
+      "observed": {
+        "totalSources": 824,
+        "sourceLinks": 603,
+        "groups": 358,
+        "truncatedGroups": [
+          {
+            "family": "aisi.gov.uk",
+            "count": 8
+          },
+          {
+            "family": "alignment.openai.com",
+            "count": 9
+          },
+          {
+            "family": "anthropic.com",
+            "count": 31
+          },
+          {
+            "family": "apnews.com",
+            "count": 6
+          },
+          {
+            "family": "arxiv.org",
+            "count": 42
+          },
+          {
+            "family": "axios.com",
+            "count": 14
+          },
+          {
+            "family": "bis.gov",
+            "count": 6
+          },
+          {
+            "family": "blog.google",
+            "count": 9
+          },
+          {
+            "family": "congress.gov",
+            "count": 8
+          },
+          {
+            "family": "daniel.haxx.se",
+            "count": 7
+          },
+          {
+            "family": "digital-strategy.ec.europa.eu",
+            "count": 15
+          },
+          {
+            "family": "doi.org",
+            "count": 10
+          },
+          {
+            "family": "github.com",
+            "count": 13
+          },
+          {
+            "family": "gov.uk",
+            "count": 17
+          },
+          {
+            "family": "huggingface.co",
+            "count": 9
+          },
+          {
+            "family": "justice.gov",
+            "count": 6
+          },
+          {
+            "family": "microsoft.com",
+            "count": 7
+          },
+          {
+            "family": "nature.com",
+            "count": 13
+          },
+          {
+            "family": "nist.gov",
+            "count": 8
+          },
+          {
+            "family": "openai.com",
+            "count": 42
+          },
+          {
+            "family": "reuters.com",
+            "count": 41
+          },
+          {
+            "family": "whitehouse.gov",
+            "count": 7
+          },
+          {
+            "family": "x.com",
+            "count": 8
+          }
+        ],
+        "gaps": 25,
+        "gapEntries": 0,
+        "counters": 11,
+        "counterEntries": 0
+      }
+    }
+  ],
+  "errors": [],
+  "external_requests": [],
+  "repository_files_changed_during_run": []
+}
