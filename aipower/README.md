@@ -1,9 +1,41 @@
-# AI Power Atlas — v0.54
+# AI Power Atlas — v0.57
 
-**Двуязычный исследовательский атлас структурной власти и киберустойчивости ИИ. Выпуск: 8 ноября 2026 года.**
-База ремонта: v0.53. Обратимый журнал сохраняет изменённые поля, ID, даты событий, исходные концы рёбер и цитаты. Повторное применение ремонта идемпотентно.
+**Двуязычный исследовательский атлас структурной власти и киберустойчивости ИИ. Сборка: 10 ноября 2026 года.**
+Четыре новых сквозных среза, проверенные исследовательские дополнения и наблюдение скрытого ограничения помощи Astra.
 
-В JSON сохранены **567 записей событий, 76 тезисов и 32 проверяемых утверждения, 30 сюжетных арок, 1411 связей и 837 уникальных URL источников**. На экране 566 событий: один дублирующий ID сохранён как совместимая ссылка. Статусы тезисов: 50 подтверждены, 24 подтверждены частично, 2 спорны.
+В JSON сохранены **592 записи событий, 76 тезисов и 32 проверяемых утверждения, 30 сюжетных арок, 1453 связей и 907 уникальных URL источников**. На экране 591 событие: один дублирующий ID сохранён как совместимая ссылка. Статусы тезисов: 50 подтверждены, 24 подтверждены частично, 2 спорны.
+
+## Что изменено в v0.57
+
+Добавлено скрытое ограничение помощи Astra в исследованиях безопасности. Дата первого внутреннего наблюдения (20 августа) отделена от обновления отчёта (4 ноября). Эпизод связан с когнитивной безопасностью, производством знания и доступом к исследованиям тремя тематическими связями. Предыдущие испытания с явно заданным уклонением от мониторинга сохранены как отдельные события. Намеренная политика компании и стратегический саботаж не установлены.
+
+English: one source-reviewed record on Astra's covert safety-research underperformance joins the cyber, knowledge and delegation views. Internal observation, paired evaluation and causal hypotheses remain distinct. All previous records and links are preserved.
+
+[Источники, оговорки и проверки](review/astra-underperformance-2026-11-10/README.md). Текущие команды: `python3 -B scripts/build.py`, `python3 -B scripts/validate.py`, `python3 -B tests/astra_underperformance_test.py`, `node --test tests/lenses_test.js tests/audit_navigation_test.js tests/audit_visuals_test.js`.
+
+## Что изменено в v0.56
+
+Добавлены «Суверенитет и возможность выхода» и «Делегирование решений»: общие фильтры, временная матрица, переходы к событиям и связям, постоянные ссылки и переключение языка. Темы отделяют юрисдикцию от технической переносимости, а совет модели от разрешённого действия и права принимать решение.
+
+Четыре исследовательских пакета прошли редакционный разбор: 24 новых события, одно уточнение существующей карточки MatterGen, один контекстный пример оставлен вне атласа. Добавлены 39 тематических связей и 68 URL. Сохранены все 567 прежних ID и 1411 рёбер. Новых тезисов и автоматического повышения их статусов нет.
+
+Включены CMA, Apertus, IndiaAI, правила и практики делегирования в США, ЕС и Великобритании, исследования труда, финансовые раскрытия, открытые данные и научные результаты. Снижение облачных цен и ограниченные/неоднородные эффекты ИИ сохранены наряду со свидетельствами зависимости. Критика MatterGen датирована отдельно от исходной работы; дата последней уточнена с месяца до 16 января 2025 года.
+
+English: Sovereignty and Exit and Delegation of Decisions extend the shared views. Source review and study-family deduplication yield 24 new events and one existing-record correction. Twenty-six candidates receive explicit decisions; no new claims, synthetic sovereignty scores or financial totals.
+
+[Отбор и проверка](review/crosscutting-expansion-2026-11-10/README.md) · [Контракт v0.56](SCHEMA_v056.md).
+Проверка исторического слоя: `python3 -B tests/crosscutting_expansion_test.py --snapshot-v057`. Браузерная проверка текущих срезов: `python3 -B tests/lenses_browser_test.py`. Версионные тесты прежних выпусков запускаются на их снимках.
+
+## Что изменено в v0.55
+
+Общий переключатель срезов объединяет прежнюю киберустойчивость, «Знание и доступ» и «Экономику ИИ». Два новых вида используют тематические связи существующих событий с арками, без копий карточек и без автоматического вывода о причинности. Временная матрица, география, тип свидетельства, поиск и пагинация сохраняются в URL и при переключении языка. Даты последних событий разделены по кварталам; исторический контекст доступен отдельно.
+
+Научные результаты, медицина, обучение, распространение информации и исследовательский допуск представлены раздельно. Экономический срез охватывает капитал, вычисления и энергию, труд, внедрение и финансовые операции. Числа в матрице обозначают события, а не размер рынка, успешность исследований или уровень суверенитета. Суммы сделок не агрегируются. Темы пересекаются; общий счётчик дедуплицирован по ID.
+
+English: Knowledge and Access and AI Economy joined the existing cyber view in v0.55. Shared canonical evidence, thematic membership, quarterly time filters, geography, evidence context and explicit inter-event links; no synthetic causal edges or financial totals. The original research packets were subsequently reviewed for v0.56.
+
+[Исследовательские пакеты и проверка](review/crosscutting-views-2026-11-09/README.md) · [контракт срезов](SCHEMA_v055.md).
+Историческая проверка v0.55: `python3 tests/lenses_preservation_test.py` на соответствующем снимке.
 
 ## Что изменено в v0.54
 
@@ -17,7 +49,7 @@
 
 English: quarterly recent-year views, complete chronological updates, canonical event aliases, exact backlinks and explicit evidence polarity. Navigation history, bilingual filters and complete sources are covered by regression tests. This is an integrity repair, not a new independent fact-check of all sources.
 
-Текущие проверки: `python3 scripts/build.py`, `python3 scripts/validate.py`, `python3 -B tests/audit_data_test.py`, `python3 -B tests/audit_completion_test.py`, `node tests/audit_navigation_test.js`, `node tests/audit_visuals_test.js`, `python3 tests/audit_repair_browser_test.py --chromium /path/to/chrome`. [Отчёт](review/audit-repair-2026-11-08/README.md), [контракт данных](SCHEMA_v054.md).
+Проверки исторического v0.54: `python3 -B tests/audit_data_test.py`, `python3 -B tests/audit_completion_test.py` на соответствующем снимке. [Отчёт](review/audit-repair-2026-11-08/README.md), [контракт данных](SCHEMA_v054.md).
 
 ## Что изменено в v0.53
 

@@ -322,10 +322,10 @@ function openDetail(k,id,options){
  var focus=modal.querySelector('button[data-close]');if(focus)focus.focus({preventScroll:true});
 }
 function closeDetail(){var had=!!currentDetail;_legacyCloseDetail();document.body.style.overflow='';document.getElementById('modal').setAttribute('aria-hidden','true');writeAtlasHash();if(had&&atlasReturnFocus&&atlasReturnFocus.isConnected)atlasReturnFocus.focus({preventScroll:true});}
-function switchTab(id){if(!document.getElementById('view-'+id))return;_legacySwitchTab(id);writeAtlasHash();}
+function switchTab(id){if(!document.getElementById('view-'+id))return;_legacySwitchTab(id);if(typeof syncLensNavigation==='function')syncLensNavigation(id);writeAtlasHash();}
 function filterMap(){return {'filter-jurisdiction':'jurisdiction','filter-actor':'actor','filter-family':'family','filter-lane':'lane','filter-layer':'layer','filter-year':'year','filter-arc':'arc','filter-relation':'relation','filter-status':'status','filter-confidence':'confidence','filter-region':'region','filter-location':'location','filter-institution':'institution','filter-geo-context':'geoContext','filter-geo-scope':'geoScope','filter-actor-type':'actorType','filter-actor-jurisdiction':'actorJurisdiction','filter-source':'source'};}
 function activeFacts(){return ATLAS_RU?catalogState:factState;}
-function atlasStateGroups(){return [['c.',cyberState],['b.',behaviorState],['r.',resilienceState],['f.',activeFacts()],['g.',graphState]];}
+function atlasStateGroups(){return [['c.',cyberState],['b.',behaviorState],['r.',resilienceState],['f.',activeFacts()],['g.',graphState],['s.',lensState]];}
 function atlasLanguageParams(params,ru){
  var p=new URLSearchParams(params),nativeKey=ru?'f.lane':'f.layer',otherKey=ru?'f.layer':'f.lane';
  if(!p.has(nativeKey)&&p.has(otherKey))p.set(nativeKey,p.get(otherKey));p.delete(otherKey);
@@ -370,12 +370,14 @@ function restoreAtlasHash(event){
  var tab=p.get('tab')||atlasDefaults.tab,saved=history.state&&history.state.atlasNavigation;
  if(!document.getElementById('view-'+tab))tab=atlasDefaults.tab;
  atlasStateGroups().forEach(function(pair){var defaults=atlasDefaults.states[pair[0]];Object.keys(defaults).forEach(function(k){var key=pair[0]+k,v=p.has(key)?p.get(key):defaults[k];pair[1][k]=typeof defaults[k]==='boolean'?(p.has(key)?v==='true':v):v;});});
+ if(!p.has('s.active')&&p.has('s.view'))lensState.active='lenses';
  var map=filterMap(),f=activeFacts();Object.keys(map).forEach(function(id){var n=document.getElementById(id);if(n)n.value=f[map[id]]||'';});
  var search=document.getElementById('search');if(search)search.value=f.q||'';
  ['family','arc','relation'].forEach(function(k){var n=document.getElementById(k+'-select');if(n)n.value=graphState[k]||'';});
  syncGraphControls();renderRecipes();
  syncCyberControls();if(ATLAS_RU){renderCatalog();renderStoryMap();}else{renderFacts();renderStory('story-svg');renderStory('overview-svg');}
  renderCyber();
+ renderLens();
  switchTab(tab);
  var id=p.get('event')||p.get('id'),kind=p.get('event')?'event':p.get('kind');
  // URL restoration must not inherit a previous drawer or its internal Back chain.
@@ -384,6 +386,7 @@ function restoreAtlasHash(event){
  atlasRestoring=false;commitAtlasHash('replace');
 }
 function initAtlasReview(){
+ initLenses();
  var actor=document.getElementById('filter-actor');
  if(actor&&!actor.querySelector('[value="__unresolved__"]'))actor.insertAdjacentHTML('beforeend','<option value="__unresolved__">'+tx('Не разобраны · ','Unresolved · ')+(D.classificationReviewQueue||[]).length+'</option>');
  var notice=document.getElementById('actor-review-notice');if(notice)notice.innerHTML=tx('Неразобранные исходные обозначения: ','Unresolved raw labels: ')+(D.classificationReviewQueue||[]).length+'. '+tx('Они сохранены в поиске и отдельном фильтре, а не исключены из набора.','They remain searchable and have a dedicated filter rather than disappearing.');

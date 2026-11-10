@@ -1,0 +1,556 @@
+{
+  "packet_id": "knowledge-access-2026-11-09",
+  "status": "research_only_not_integrated",
+  "cutoff_date": "2026-11-09",
+  "reviewed_on": "2026-11-09",
+  "scope": "Knowledge circulation and access; search/GEO; publisher and data economics; multilingual coverage; censorship versus technical access barriers.",
+  "write_boundary": "Only this research packet. No canonical data, code, generated Atlas assets, logs or commits changed.",
+  "baseline_audit": {
+    "path": "aipower/ai_power_storygraph_en.json",
+    "version": "0.54",
+    "updated_at": "2026-11-08",
+    "sha256": "53183ca871b712252ed7af9463d2ffccf686e81350c84bc10ed3ae29b4d53e08",
+    "events": 567,
+    "claims": 76,
+    "claim_checks": 32,
+    "arcs": 30,
+    "source_index_entries": 837,
+    "method": [
+      "Read parent CLAUDE.md and zhet/BIBLE.md; no repository-local AGENTS.md or CLAUDE.md was found by file inventory.",
+      "Read the Atlas README and the prior knowledge-gatekeeping packet README before primary-source research.",
+      "Audited knowledge/access events and their sources, then searched every string in the canonical JSON for candidate names, paper identifiers and URL families.",
+      "Dedup operates on events, study/programme families and normalized URLs, not just proposed IDs. URL normalization removes tracking parameters, fragments and trailing slashes; arXiv abs/html/pdf and version variants collapse to one paper family.",
+      "Existing records were used as a novelty baseline, not as external proof. The historical corpus was not globally fact-checked in this task.",
+      "Independent research strands used batched web queries. No additional chat or subagent was created; no parallel-agent tool was available in this session."
+    ],
+    "already_covered": [
+      "SIG_2023_GEO_VISIBILITY_EXPERIMENT",
+      "SIG_2025_PEW_AI_SUMMARY_CLICK_OBSERVATION",
+      "SIG_2025_CLOUDFLARE_PAY_PER_CRAWL_BETA",
+      "SIG_2026_MICROSOFT_PUBLISHER_CONTENT_MARKETPLACE",
+      "SIG_2026_BING_AI_CITATION_ANALYTICS",
+      "SIG_2026_CMA_GOOGLE_PUBLISHER_CONDUCT_REQUIREMENT",
+      "SIG_2026_GOOGLE_AI_SEARCH_OPTOUT_GLOBAL_ROLLOUT",
+      "SIG_2025_MEDIA_IDENTITY_CITATION_BIAS",
+      "SIG_2025_ROBOTS_AI_EXCLUSION_ASYMMETRY",
+      "SIG_2026_MULTILINGUAL_RAG_RERANKING_BIAS",
+      "SIG_2026_DELP_LANGUAGE_BIAS_BENCHMARK_CONTROLS",
+      "SIG_2026_CHINESE_SEARCH_WEB_APP_SOURCE_DIFFERENCES",
+      "SIG_2026_PUBLIC_POSTS_AI_SEARCH_CITATION_EXPERIMENT",
+      "SIG_2025_GFW_REGIONAL_DIRECTIONAL_FILTERING",
+      "SIG_2022_RUSSIAN_DOMAIN_TLS_FRAGMENTATION_STUDY",
+      "SIG_2026_SFR_BROWSER_CERTIFICATE_GUIDANCE",
+      "SIG_2026_COMMON_AI_TRAINING_SIGNAL"
+    ]
+  },
+  "selection": {
+    "candidate_count": 4,
+    "new_event_or_study_families": 4,
+    "pending_candidate_count": 2,
+    "updates_to_existing_records": 0,
+    "summary_ru": "Четыре кандидата по окончательному лимиту пользователя: экономика открытого источника, исследование поисковых переходов, международная проверка новостных ответов и открыто лицензированный корпус. FineWeb2 и R1dacted сохранены отдельно как резерв, не рекомендации к текущему включению.",
+    "summary_en": "Four candidates in this bounded pass: open-source economics, a search-referral study, an international news-answer audit and an openly licensed corpus. FineWeb2 and R1dacted are retained separately as reserve material, not recommended for this integration.",
+    "integration_rule": "Use one record per family below. Related milestones and source variants are supporting material, not additional independent evidence counts."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "proposed_id": "SIG_2025_WIKIMEDIA_ENTERPRISE_REVENUE_OPEN_ACCESS",
+      "study_family": "wikimedia_enterprise_fy2024_2025_financial_results",
+      "date": "2025-11-24",
+      "date_basis": "Public financial-report disclosure and audit-file upload, not revenue accrual date. Fiscal period: 2024-07-01 through 2025-06-30; auditor opinion dated 2025-09-30. The blog also displays an update dated 2026-11-04; the original audit PDF independently anchors the figures.",
+      "title_ru": "Wikimedia Enterprise: доход от сервиса при свободном доступе к контенту",
+      "title_en": "Wikimedia Enterprise: service revenue alongside freely accessible content",
+      "summary_ru": "Аудит за FY2024-25 фиксирует $8,297,917 признанной выручки Enterprise и $7,467,500 денежных поступлений. Платный продукт предоставляет API и сервисные гарантии, а не исключительное владение знаниями Wikipedia.",
+      "summary_en": "The FY2024-25 audit records $8,297,917 in recognized Enterprise revenue and $7,467,500 in cash collected. The paid offering supplies APIs and service guarantees, not exclusive ownership of Wikipedia knowledge.",
+      "caveat_ru": "Это не оценка всего рынка лицензирования и не выручка исключительно от ИИ. Не приписывать январским партнёрам 2026 года платежи предыдущего финансового года.",
+      "caveat_en": "This is neither the whole licensing market nor AI-only revenue. Do not attribute prior-fiscal-year payments to partners announced in January 2026.",
+      "evidence_stage": "realized_financial_results_with_independent_audit; public_access_policy; later_partner_disclosure",
+      "observed_stage": ["content_delivery_service", "recognized_revenue", "cash_collection"],
+      "numbers": {
+        "currency": "USD",
+        "recognized_revenue_fy2025": 8297917,
+        "cash_collected_fy2025": 7467500,
+        "recognized_revenue_fy2024": 3351250,
+        "money_status": "recognized_revenue_and_cash_collected_are_separate",
+        "source_locator": "Audit, printed page 10, note 1(o); revenue also on printed page 4."
+      },
+      "structural_power_inference": "Paid infrastructure can fund an open knowledge supplier without granting exclusive content or editorial control. Supplier bargaining power and long-run financial independence are not measured by the revenue total.",
+      "arc_ids": ["ARC_DATA_LICENSING_AS_INPUT_LAYER"],
+      "stack_layers": ["data_telemetry", "finance_rent", "governance_law"],
+      "view_relevance": ["Knowledge and Access", "AI Economy"],
+      "sources": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/foundation/3/3f/Wikimedia_Foundation_FY_24-25_Audit_Report.pdf",
+          "title": "Wikimedia Foundation, Inc. Consolidated Financial Statements, June 30, 2025 and 2024",
+          "date": "2025-09-30",
+          "date_basis": "Independent auditor report date; public file uploaded 2025-11-24.",
+          "publisher": "Wikimedia Foundation / KPMG LLP",
+          "primary_or_secondary": "primary",
+          "verification": "Opened the official PDF and checked note 1(o), including the cash/revenue distinction."
+        },
+        {
+          "url": "https://diff.wikimedia.org/2025/11/24/wikimedia-enterprise-financial-report-fiscal-year-2024-2025/",
+          "title": "Wikimedia Enterprise Financial Report: Fiscal Year 2024 - 2025",
+          "date": "2025-11-24",
+          "updated_date": "2026-11-04",
+          "publisher": "Wikimedia / Liam Wyatt",
+          "primary_or_secondary": "primary",
+          "verification": "Read financial narrative, fiscal-period footnote and link to the audit."
+        },
+        {
+          "url": "https://meta.wikimedia.org/wiki/Wikimedia_Enterprise/Principles",
+          "title": "Wikimedia Enterprise/Principles",
+          "date": "2026-03-05",
+          "date_basis": "Last-edited date of inspected revision 30178240, not policy inception.",
+          "publisher": "Wikimedia",
+          "primary_or_secondary": "primary",
+          "verification": "Checked free-use, non-exclusivity and no-editorial-influence provisions."
+        },
+        {
+          "url": "https://enterprise.wikimedia.com/blog/wikipedia-25-enterprise-partners/",
+          "title": "Announcing New Wikimedia Enterprise Partners for Wikipedia's 25th Birthday",
+          "date": "2026-01-15",
+          "publisher": "Wikimedia Enterprise",
+          "primary_or_secondary": "primary",
+          "verification": "Explicit date and named users; agreements were formalized over the preceding year, not necessarily signed on announcement day."
+        }
+      ],
+      "related_milestone": {
+        "date": "2026-01-15",
+        "type": "later_public_partner_disclosure_not_a_separate_candidate",
+        "detail": "Amazon, Meta, Microsoft, Mistral AI and Perplexity were publicly named as Enterprise partners. Individual terms and payments were not disclosed."
+      },
+      "counterevidence": [
+        {
+          "claim_ru": "Принципы Enterprise сохраняют бесплатное использование и запрещают эксклюзивные договоры и влияние клиентов на редактуру.",
+          "claim_en": "Enterprise principles preserve free reuse and prohibit exclusive contracts and customer editorial influence.",
+          "source_url": "https://meta.wikimedia.org/wiki/Wikimedia_Enterprise/Principles",
+          "implication": "Counterexample to treating every paid data relationship as enclosure or supplier capture."
+        }
+      ],
+      "dedup": {
+        "verdict": "genuinely_new",
+        "event_match": [],
+        "study_family_match": [],
+        "normalized_url_match": [],
+        "nearest_existing_ids": ["SIG_2024_NEWS_CORP_OPENAI_PARTNERSHIP", "SIG_2026_MICROSOFT_PUBLISHER_CONTENT_MARKETPLACE", "SIG_2026_WIKIMEDIA_AGENT_ACTIVITY_INVESTIGATION"],
+        "reason": "No Enterprise financial result or API-service economics family exists. News Corp is a different deal; Microsoft Marketplace is a different programme; the Wikimedia agent investigation is an unrelated incident."
+      }
+    },
+    {
+      "rank": 2,
+      "proposed_id": "SIG_2026_WIKIPEDIA_AIO_REFERRAL_DID",
+      "study_family": "khosravi_yoganarasimhan_wikipedia_aio_2602_18455",
+      "date": "2026-02-05",
+      "date_basis": "First preprint submission. All retained estimates are from v7, dated 2026-10-25, using December 2023-December 2024 observations. Neither the data window nor the latest revision is silently substituted for first publication.",
+      "reviewed_version": "arXiv:2602.18455v7",
+      "title_ru": "Wikipedia: новая версия исследования оценивает снижение поисковых переходов примерно на 5%",
+      "title_en": "Wikipedia: revised study estimates roughly 5% lower search referrals",
+      "summary_ru": "Модель difference-in-differences оценивает снижение поисковых переходов к английским статьям на 5,45% относительно немецких и 4,82% относительно французских после внедрения AI Overviews в США.",
+      "summary_en": "A difference-in-differences model estimates English-article search referrals falling 5.45% relative to German and 4.82% relative to French after the US AI Overviews rollout.",
+      "caveat_ru": "Препринт, не рандомизированный эксперимент; вывод зависит от сопоставимости трендов и языкового приближения экспозиции. Это не весь трафик и не измеренная потеря выручки. Версия v2 была отозвана.",
+      "caveat_en": "A preprint, not a randomized trial; inference depends on parallel trends and language-based exposure proxies. This is not total traffic or measured revenue loss. Version v2 was withdrawn.",
+      "evidence_stage": "observational_quasi_experiment_preprint_revised_after_withdrawal; not_independently_replicated",
+      "observed_stage": ["external_search_referrals"],
+      "structural_power_inference": "Attention reallocation is estimated. Publisher bargaining power, content-supply collapse and monetary losses are downstream hypotheses, not observed outcomes here.",
+      "arc_ids": ["ARC_DATA_LICENSING_AS_INPUT_LAYER"],
+      "stack_layers": ["data_telemetry", "decision_support_cognition", "finance_rent"],
+      "view_relevance": ["Knowledge and Access", "AI Economy"],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2602.18455v7",
+          "full_text_url": "https://arxiv.org/html/2602.18455v7",
+          "title": "Impact of AI Search Summaries on Website Traffic: Evidence from Google AI Overviews and Wikipedia",
+          "date": "2026-10-25",
+          "first_publication_date": "2026-02-05",
+          "publisher": "Mehrzad Khosravi and Hema Yoganarasimhan / arXiv",
+          "primary_or_secondary": "primary",
+          "verification": "Opened current submission history and v7 full text, including design, robustness and monetization sections."
+        },
+        {
+          "url": "https://arxiv.org/abs/2602.18455v2",
+          "title": "Impact of AI Search Summaries on Website Traffic: withdrawn version 2",
+          "date": "2026-03-26",
+          "publisher": "Mehrzad Khosravi and Hema Yoganarasimhan / arXiv",
+          "primary_or_secondary": "primary",
+          "verification": "Explicit withdrawal notice. Historical 15% estimate is not retained as the current result."
+        },
+        {
+          "url": "https://wikimediafoundation.org/news/2025/10/17/new-user-trends-on-wikipedia/",
+          "title": "New user trends on Wikipedia",
+          "date": "2025-10-17",
+          "publisher": "Wikimedia Foundation / Marshall Miller",
+          "primary_or_secondary": "primary",
+          "verification": "Read operator account of traffic reclassification and its explicitly interpretive attribution."
+        }
+      ],
+      "counterevidence": [
+        {
+          "claim_ru": "Wikimedia предупреждает, что пересмотр детекции ботов меняет сравнимость человеческих просмотров; влияние ИИ и социальных платформ в её сообщении является интерпретацией.",
+          "claim_en": "Wikimedia warns that revised bot detection changes human-pageview comparability; its attribution to AI and social platforms is interpretive.",
+          "source_url": "https://wikimediafoundation.org/news/2025/10/17/new-user-trends-on-wikipedia/",
+          "implication": "Do not combine operator-wide pageview changes with this study's search-referral effect or treat them as independent causal replications."
+        }
+      ],
+      "dedup": {
+        "verdict": "genuinely_new_study_not_an_update_to_pew",
+        "event_match": [],
+        "study_family_match": [],
+        "normalized_url_match": [],
+        "nearest_existing_ids": ["SIG_2025_PEW_AI_SUMMARY_CLICK_OBSERVATION", "SIG_2023_GEO_VISIBILITY_EXPERIMENT"],
+        "reason": "Pew tracks user click behavior; this family estimates publisher-side referrals from a different dataset and design. All seven versions and commentary on the same paper count as one family."
+      }
+    },
+    {
+      "rank": 3,
+      "proposed_id": "SIG_2025_EBU_BBC_MULTILINGUAL_NEWS_INTEGRITY",
+      "study_family": "bbc_ebu_news_integrity_2025_two_rounds",
+      "date": "2025-10-22",
+      "date_basis": "International report launch. Responses were generated 2025-05-24 through 2025-06-10; the release date is not a test date. Earlier BBC-only work belongs to this study family.",
+      "title_ru": "BBC/EBU: международная проверка выявила ошибки источников в новостных ответах",
+      "title_en": "BBC/EBU: international audit finds sourcing failures in news answers",
+      "summary_ru": "Проверка четырёх ассистентов на 14 языках в 18 странах выявила существенные проблемы в 45% ответов на основные вопросы; показатель проблем с источниками составил 31%.",
+      "summary_en": "An audit of four assistants across 14 languages and 18 countries found significant issues in 45% of core-question answers; the sourcing-problem measure was 31%.",
+      "caveat_ru": "Основная выборка: 2709 ответов; ещё 353 ответа относятся к дополнительным вопросам. Журналисты оценивали заданные запросы с предпочтением источников своей организации. Это не частота ошибок всего использования ИИ и не доказательство цензуры.",
+      "caveat_en": "The core sample contains 2,709 answers; another 353 address custom questions. Journalists rated specified prompts favoring their organization's sources. This is not an all-use AI error rate or proof of censorship.",
+      "evidence_stage": "multi_organization_human_rated_product_audit; historical_deployment_snapshot; not_peer_reviewed_experiment",
+      "observed_stage": ["citation_attribution", "answer_accuracy", "news_context"],
+      "structural_power_inference": "Answer interfaces mediate source attribution, but this audit does not measure intentional suppression, political control or publisher revenue.",
+      "arc_ids": ["ARC_DATA_LICENSING_AS_INPUT_LAYER"],
+      "stack_layers": ["data_telemetry", "decision_support_cognition"],
+      "view_relevance": ["Knowledge and Access"],
+      "sources": [
+        {
+          "url": "https://www.ebu.ch/news/2025/10/ai-s-systemic-distortion-of-news-is-consistent-across-languages-and-territories-international-study-by-public-service-broadcaste",
+          "title": "Largest study of its kind shows AI assistants misrepresent news content 45% of the time - regardless of language or territory",
+          "date": "2025-10-22",
+          "publisher": "European Broadcasting Union",
+          "primary_or_secondary": "primary",
+          "verification": "Dated launch release and named participating organizations; the broad headline is narrowed to the report's actual sample."
+        },
+        {
+          "url": "https://www.ebu.ch/Report/MIS-BBC/NI_AI_2025.pdf",
+          "title": "News Integrity in AI Assistants: An international PSM study",
+          "date": "2025-10",
+          "date_basis": "Report cover month; exact launch day supplied by EBU's release.",
+          "publisher": "BBC / EBU",
+          "primary_or_secondary": "primary",
+          "verification": "Read methods on printed pages 63-65, denominators, sourcing definition and BBC-only comparison on page 19."
+        }
+      ],
+      "counterevidence": [
+        {
+          "claim_ru": "В сравнении только BBC доля существенных проблем снизилась с 51% до 37%; разные раунды не являются полностью одинаковым тестом.",
+          "claim_en": "The BBC-only comparison fell from 51% to 37% with significant issues; the rounds are not identical tests.",
+          "source_url": "https://www.ebu.ch/Report/MIS-BBC/NI_AI_2025.pdf",
+          "implication": "Retain improvement alongside failures; neither 45% nor any provider ranking is a November 2026 performance estimate."
+        }
+      ],
+      "dedup": {
+        "verdict": "genuinely_new_study_family",
+        "event_match": [],
+        "study_family_match": [],
+        "normalized_url_match": [],
+        "nearest_existing_ids": ["SIG_2025_MEDIA_IDENTITY_CITATION_BIAS", "SIG_2026_CHINESE_SEARCH_WEB_APP_SOURCE_DIFFERENCES", "SIG_2026_PUBLIC_POSTS_AI_SEARCH_CITATION_EXPERIMENT"],
+        "reason": "No BBC/EBU audit exists. This measures attribution/accuracy, not outlet preference, interface differences or fabricated-concept uptake. Do not add the earlier BBC round as another independent family."
+      }
+    },
+    {
+      "rank": 4,
+      "proposed_id": "SIG_2025_COMMON_PILE_OPEN_LICENSED_PRETRAINING",
+      "study_family": "common_pile_v0_1_comma",
+      "date": "2025-06-05",
+      "date_basis": "First arXiv publication describing released corpus and models; official project announcement followed on June 6. NeurIPS proceedings are a later publication of the same study.",
+      "title_ru": "Common Pile: обучение на открыто лицензированных данных проверено на моделях 7B",
+      "title_en": "Common Pile: openly licensed training data tested with 7B models",
+      "summary_ru": "Common Pile объединил около 8 ТБ текстов из 30 источников. Две модели Comma 7B на его данных показали сопоставимые с Llama 1/2 7B результаты при близких вычислительных бюджетах.",
+      "summary_en": "Common Pile assembled about 8 TB of text from 30 sources. Two Comma 7B models trained on it performed competitively with Llama 1/2 7B at similar compute budgets.",
+      "caveat_ru": "Преимущественно английский корпус и ограниченный масштаб сравнения. Это не паритет с frontier-моделями 2026 года, не отмена стоимости обучения и не универсальное юридическое заключение о каждом документе.",
+      "caveat_en": "Predominantly English, with a limited comparison scale. This is not parity with 2026 frontier models, removal of training costs or a universal legal ruling on every document.",
+      "evidence_stage": "released_dataset_and_model_artifacts; author_training_evaluations; peer_reviewed_neurips_2025_dataset_paper",
+      "observed_stage": ["training_data_supply", "model_training_evaluation"],
+      "structural_power_inference": "A reproducible alternative weakens the claim that competitive smaller models necessarily require private publisher deals. It does not establish independence from compute or distribution providers.",
+      "arc_ids": ["ARC_DATA_LICENSING_AS_INPUT_LAYER", "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"],
+      "stack_layers": ["data_telemetry", "model_weights"],
+      "view_relevance": ["Knowledge and Access", "AI Economy"],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2506.05209",
+          "full_text_url": "https://arxiv.org/html/2506.05209v1",
+          "title": "The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text",
+          "date": "2025-06-05",
+          "publisher": "Kandpal et al. / arXiv",
+          "primary_or_secondary": "primary",
+          "verification": "Submission date, full text, comparison scale and English filtering checked."
+        },
+        {
+          "url": "https://proceedings.nips.cc/paper_files/paper/2025/hash/52acc050138d6f40dad6f12f91a4ce22-Abstract-Datasets_and_Benchmarks_Track.html",
+          "title": "Common Pile v0.1 (NeurIPS 2025 proceedings entry)",
+          "date": "2025",
+          "date_basis": "NeurIPS 2025 proceedings year; exact posting date not asserted.",
+          "publisher": "NeurIPS 2025 Datasets and Benchmarks Track",
+          "primary_or_secondary": "primary",
+          "verification": "Official proceedings entry opened; same study, not independent replication."
+        },
+        {
+          "url": "https://huggingface.co/common-pile",
+          "title": "Common Pile: official datasets, models and code",
+          "date": null,
+          "date_basis": "Living artifact index inspected at cutoff; it displays a June 6, 2025 announcement.",
+          "publisher": "Common Pile project",
+          "primary_or_secondary": "primary",
+          "verification": "Official inventory links raw data, training mixture, checkpoints and collection code."
+        }
+      ],
+      "counterevidence": [
+        {
+          "claim_ru": "Сам результат является контрдоказательством необходимости закрытого лицензирования для каждого конкурентоспособного корпуса; английский фокус ограничивает его многоязычную применимость.",
+          "claim_en": "The result counters the necessity of closed licensing for every competitive corpus; its English focus limits multilingual applicability.",
+          "source_url": "https://arxiv.org/html/2506.05209v1",
+          "implication": "Show as a bounded open alternative, not the disappearance of all data-access constraints."
+        }
+      ],
+      "dedup": {
+        "verdict": "genuinely_new_study_and_artifact_family",
+        "event_match": [],
+        "study_family_match": [],
+        "normalized_url_match": [],
+        "nearest_existing_ids": ["SIG_2025_BARTZ_ANTHROPIC_SPLIT_FAIR_USE", "SIG_2024_OSI_OPEN_SOURCE_AI_DEFINITION"],
+        "reason": "Legal doctrine and openness definitions are not a released, trained-and-evaluated corpus. Common Pile, Comma checkpoints and the NeurIPS paper are one family."
+      }
+    }
+  ],
+  "pending_candidates": [
+    {
+      "pending_reason": "Reserve outside the four-candidate shortlist. Primary text and artifact verified; conference-status verification remained blocked. Do not integrate automatically.",
+      "rank": 5,
+      "proposed_id": "SIG_2025_FINEWEB2_MULTILINGUAL_CURATION_STUDY",
+      "study_family": "fineweb2_2506_20920",
+      "date": "2025-06-26",
+      "date_basis": "First research-paper publication, not first dataset launch. An author-team community post already discussed FineWeb2 on 2024-12-23. The paper's crawl window ends in April 2024.",
+      "title_ru": "FineWeb2: широкий языковой охват не означает равную глубину данных",
+      "title_en": "FineWeb2: broad language coverage does not imply equal data depth",
+      "summary_ru": "Исследование описывает адаптивную обработку Common Crawl: 20 ТБ и 1868 пар язык-письменность. Только 203 пары имеют не менее 10 тысяч документов.",
+      "summary_en": "The study describes adaptive Common Crawl processing: 20 TB across 1,868 language-script pairs. Only 203 pairs have at least 10,000 documents.",
+      "caveat_ru": "Это состав корпуса, не качество ответов на всех языках. Авторы отмечают узкий набор источников для многих малоресурсных языков; классификатор может путать близкие языки. Пропуски не доказывают цензуру.",
+      "caveat_en": "This is corpus coverage, not answer quality in every language. The authors report narrow sources for many low-resource languages; identification can confuse related languages. Missing coverage is not proof of censorship.",
+      "evidence_stage": "released_dataset_and_processing_pipeline; author_ablation_study; arxiv_full_text_verified",
+      "observed_stage": ["crawl_corpus", "language_identification", "filtering", "pretraining_evaluation"],
+      "structural_power_inference": "Representation depends partly on upstream collection and curation, not only provider output rules. A multilingual label alone cannot establish equal epistemic access.",
+      "arc_ids": ["ARC_DATA_LICENSING_AS_INPUT_LAYER", "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"],
+      "stack_layers": ["data_telemetry", "model_weights"],
+      "view_relevance": ["Knowledge and Access"],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2506.20920",
+          "full_text_url": "https://arxiv.org/html/2506.20920v1",
+          "title": "FineWeb2: One Pipeline to Scale Them All -- Adapting Pre-Training Data Processing to Every Language",
+          "date": "2025-06-26",
+          "publisher": "Penedo et al. / arXiv",
+          "primary_or_secondary": "primary",
+          "verification": "Read sections 5-6, including language-script counts, uneven volume and limitations."
+        },
+        {
+          "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2",
+          "title": "HuggingFaceFW/fineweb-2 dataset card",
+          "date": null,
+          "date_basis": "Living dataset card; no publication day invented.",
+          "publisher": "Hugging Face FineWeb team",
+          "primary_or_secondary": "primary",
+          "verification": "Checked language-identification limitations and licensing section; dataset licensing is not treated as proof of every source document's copyright status."
+        },
+        {
+          "url": "https://huggingface.co/blog/davanstrien/fineweb2-community",
+          "title": "FineWeb2-C: Help Build Better Language Models in Your Language",
+          "date": "2024-12-23",
+          "publisher": "FineWeb2 contributors / Hugging Face",
+          "primary_or_secondary": "primary",
+          "verification": "Dated author-team post establishes that FineWeb2 predates the June 2025 paper."
+        }
+      ],
+      "counterevidence": [
+        {
+          "claim_ru": "Открытые данные и код дают возможность пересматривать фильтрацию; это техническая альтернатива, а не неизменный языковой барьер.",
+          "claim_en": "Released data and code allow filtering to be revisited: a technical alternative exists, not an immutable language barrier.",
+          "source_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2",
+          "implication": "Do not recast uneven corpus depth as deliberate exclusion or permanent incapacity."
+        }
+      ],
+      "dedup": {
+        "verdict": "genuinely_new_upstream_data_family",
+        "event_match": [],
+        "study_family_match": [],
+        "normalized_url_match": [],
+        "nearest_existing_ids": ["SIG_2026_MULTILINGUAL_RAG_RERANKING_BIAS", "SIG_2026_DELP_LANGUAGE_BIAS_BENCHMARK_CONTROLS"],
+        "reason": "Existing records measure downstream retrieval/reranking and evaluation design. FineWeb2 measures upstream corpus curation. Distinct from Common Pile's open-license-first corpus and Comma experiments."
+      }
+    },
+    {
+      "pending_reason": "Reserve outside the four-candidate shortlist. Primary preprint verified, but selected-prompt design limits generalization. Do not integrate automatically.",
+      "rank": 6,
+      "proposed_id": "SIG_2025_R1DACTED_SELECTIVE_REFUSAL_STUDY",
+      "study_family": "r1dacted_2505_12625",
+      "date": "2025-05-19",
+      "date_basis": "First preprint submission. Exact experiment dates are not established here; findings describe tested 2025 model versions, not every later DeepSeek service.",
+      "title_ru": "R1dacted: избирательные отказы зависят от языка и варианта модели",
+      "title_en": "R1dacted: selective refusals vary with language and model variant",
+      "summary_ru": "На специально отобранных 10 030 запросах исследователи изучили политически чувствительные отказы и шаблонные ответы DeepSeek-R1, различия между переводами и дистиллированными моделями.",
+      "summary_en": "Using 10,030 purpose-selected prompts, researchers studied politically sensitive refusals and template responses in DeepSeek-R1, including differences across translations and distilled models.",
+      "caveat_ru": "Выборка отобрана по отказам R1: 100% для английского не является частотой в обычном использовании. Оценка модельная и версионная; сетевую доступность и государственные указания работа не устанавливает.",
+      "caveat_en": "Prompts were selected for R1 refusals: 100% in English is not ordinary-use prevalence. Assessment is model-graded and version-specific; network accessibility and state instructions are not established.",
+      "evidence_stage": "controlled_selected_prompt_preprint; not_population_measurement; not_independently_replicated",
+      "observed_stage": ["generation", "selective_refusal", "model_variant_comparison"],
+      "structural_power_inference": "Output policy can restrict access even when a model is technically available. This does not prove that every missing source or language gap is intentional censorship.",
+      "arc_ids": ["ARC_DATA_LICENSING_AS_INPUT_LAYER", "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE", "ARC_CHINA_COUNTERSTACK_ROUTE_AROUND"],
+      "stack_layers": ["model_weights", "decision_support_cognition"],
+      "view_relevance": ["Knowledge and Access"],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2505.12625",
+          "full_text_url": "https://arxiv.org/html/2505.12625v1",
+          "title": "R1dacted: Investigating Local Censorship in DeepSeek's R1 Language Model",
+          "date": "2025-05-19",
+          "publisher": "Naseh et al. / arXiv",
+          "primary_or_secondary": "primary",
+          "verification": "Read dataset-selection procedure, language comparison, distilled-model table and QwQ comparison. 'Local censorship' is the authors' model-specific category, not a network-geolocation measurement."
+        }
+      ],
+      "counterevidence": [
+        {
+          "claim_ru": "На той же выборке дистиллированные варианты показывали гораздо меньше отказов; QwQ-32B тоже не повторял сильный шаблон R1.",
+          "claim_en": "Distilled variants showed far fewer refusals on the same prompts; QwQ-32B also lacked R1's strong pattern.",
+          "source_url": "https://arxiv.org/html/2505.12625v1",
+          "implication": "Avoid generalizing from R1 to all Chinese models, all open weights or every deployment."
+        }
+      ],
+      "dedup": {
+        "verdict": "genuinely_new_controlled_study",
+        "event_match": [],
+        "study_family_match": [],
+        "normalized_url_match": [],
+        "nearest_existing_ids": ["SIG_2025_DEEPSEEK_R1_OPEN_SOURCE_RELEASE", "SIG_2025_GFW_REGIONAL_DIRECTIONAL_FILTERING", "SIG_2026_CHINESE_SEARCH_WEB_APP_SOURCE_DIFFERENCES"],
+        "reason": "The R1 launch is not a refusal audit; network filtering and search-interface citation differences concern other mechanisms. This study adds tested response behavior, not another model release."
+      }
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "topic": "Pew AI-summary click rates as a new event",
+      "source_url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "verdict": "duplicate_event_and_url",
+      "existing_ids": ["SIG_2025_PEW_AI_SUMMARY_CLICK_OBSERVATION"],
+      "reason": "Already contains 900 adults, 8% versus 15%, citation clicks and observational caveats. No material update established."
+    },
+    {
+      "topic": "GEO's up-to-40% visibility result",
+      "source_url": "https://arxiv.org/abs/2311.09735",
+      "verdict": "duplicate_study_family",
+      "existing_ids": ["SIG_2023_GEO_VISIBILITY_EXPERIMENT"],
+      "reason": "KDD publication and later retellings do not make a second experiment; visibility is not traffic or revenue."
+    },
+    {
+      "topic": "Cloudflare Pay per Crawl and Microsoft Publisher Content Marketplace launch",
+      "source_urls": ["https://blog.cloudflare.com/introducing-pay-per-crawl/", "https://about.ads.microsoft.com/en/blog/post/february-2026/building-toward-a-sustainable-content-economy-for-the-agentic-web"],
+      "verdict": "duplicate_events",
+      "existing_ids": ["SIG_2025_CLOUDFLARE_PAY_PER_CRAWL_BETA", "SIG_2026_MICROSOFT_PUBLISHER_CONTENT_MARKETPLACE"],
+      "reason": "Launches are already represented. This search did not establish new realized publisher income for those programmes."
+    },
+    {
+      "topic": "All Languages Matter and DeLP as fresh multilingual evidence",
+      "source_urls": ["https://arxiv.org/abs/2604.20199", "https://arxiv.org/abs/2601.02956"],
+      "verdict": "duplicate_study_families",
+      "existing_ids": ["SIG_2026_MULTILINGUAL_RAG_RERANKING_BIAS", "SIG_2026_DELP_LANGUAGE_BIAS_BENCHMARK_CONTROLS"],
+      "reason": "Already include the bias result and benchmark-design counterevidence. Conference or version aliases are not new studies."
+    },
+    {
+      "topic": "The old 15% Wikipedia AI Overviews traffic estimate",
+      "source_url": "https://arxiv.org/abs/2602.18455v2",
+      "verdict": "superseded_withdrawn_version_not_current_evidence",
+      "existing_ids": [],
+      "reason": "The explicitly withdrawn March version and stale search snippets still circulate. Retained candidate uses October v7's different outcome, comparison groups and estimates; never combine the versions as corroborating studies."
+    },
+    {
+      "topic": "Wikipedia's 2025 human-pageview decline as an additional causal AI event",
+      "source_url": "https://wikimediafoundation.org/news/2025/10/17/new-user-trends-on-wikipedia/",
+      "verdict": "supporting_context_only",
+      "existing_ids": [],
+      "reason": "Useful first-party measurement caveat, retained beside the referral paper. Bot reclassification and concurrent social-media change prevent treating the aggregate decline as identified AI causation."
+    },
+    {
+      "topic": "January 2026 Wikimedia partnerships as exclusive AI training licences",
+      "source_url": "https://enterprise.wikimedia.com/blog/wikipedia-25-enterprise-partners/",
+      "verdict": "misframing_rejected_related_milestone_retained",
+      "existing_ids": [],
+      "reason": "The service concerns high-volume API access; content remains free and contracts are nonexclusive under published principles. Kept as one later milestone in the financial family, without invented deal values or signing dates."
+    },
+    {
+      "topic": "FineWeb2 launched for the first time in June 2025",
+      "source_url": "https://huggingface.co/blog/davanstrien/fineweb2-community",
+      "verdict": "incorrect_event_date",
+      "existing_ids": [],
+      "reason": "A dated December 2024 author-team post predates the paper. Candidate is explicitly the June 2025 research publication, not a fabricated dataset-launch event."
+    },
+    {
+      "topic": "OpenReview conference status for FineWeb2",
+      "source_url": "https://openreview.net/forum?id=jnRBe6zatP",
+      "verdict": "not_used_as_verified_source",
+      "existing_ids": [],
+      "reason": "Both forum and PDF requests returned browser-verification pages. ArXiv full text and official dataset documentation were accessible; no acceptance-date claim was inferred from a search snippet."
+    },
+    {
+      "topic": "Russian TLS recommendations or Chinese regional filtering prove foreign AI search exclusion",
+      "source_urls": ["https://sfr.gov.ru/info/podderzhka_raboty_sayta/", "https://gfw.report/publications/sp25/en/"],
+      "verdict": "duplicate_context_and_unmeasured_causal_extension",
+      "existing_ids": ["SIG_2026_SFR_BROWSER_CERTIFICATE_GUIDANCE", "SIG_2025_GFW_REGIONAL_DIRECTIONAL_FILTERING"],
+      "reason": "No matched crawler/retrieval study was established. Certificate trust, connection direction, crawl eligibility, index inclusion and answer refusal cannot be substituted for one another."
+    },
+    {
+      "topic": "Additional DeepSeek censorship headlines as independent evidence",
+      "source_url": "https://arxiv.org/abs/2506.12349",
+      "verdict": "not_selected_lower_verification_depth",
+      "existing_ids": [],
+      "reason": "A separate candidate surfaced, but this pass did not audit its full methods. One fully inspected selective-refusal study with explicit counterexamples was preferred over adding another similarly framed headline for volume."
+    }
+  ],
+  "crosscutting_counterevidence": [
+    {
+      "point": "Licensing is not a universal prerequisite for useful model training.",
+      "candidate_ids": ["SIG_2025_COMMON_PILE_OPEN_LICENSED_PRETRAINING"],
+      "existing_context_ids": ["SIG_2025_BARTZ_ANTHROPIC_SPLIT_FAIR_USE"],
+      "scope_limit": "Technical feasibility at a defined scale is distinct from legal permission in a specific jurisdiction; the existing legal record is context, not newly reverified legal advice."
+    },
+    {
+      "point": "A paid delivery service can coexist with open content and nonexclusive access.",
+      "candidate_ids": ["SIG_2025_WIKIMEDIA_ENTERPRISE_REVENUE_OPEN_ACCESS"],
+      "scope_limit": "A single supplier's finances do not establish an economy-wide sustainable replacement for lost referral traffic."
+    },
+    {
+      "point": "Language coverage, source selection, answer correctness and selective refusal are separate dimensions.",
+      "candidate_ids": ["SIG_2025_FINEWEB2_MULTILINGUAL_CURATION_STUDY", "SIG_2025_EBU_BBC_MULTILINGUAL_NEWS_INTEGRITY", "SIG_2025_R1DACTED_SELECTIVE_REFUSAL_STUDY"],
+      "scope_limit": "Do not label every absence as censorship; do not label selective political refusal as merely a small corpus without testing it."
+    }
+  ],
+  "final_local_validation": {
+    "json_parsed": true,
+    "selected_candidates": 4,
+    "reserve_candidates": 2,
+    "rejected_candidates": 11,
+    "proposed_id_collisions": 0,
+    "normalized_source_url_matches_in_canonical": 0,
+    "existing_arc_layer_and_neighbor_ids_resolve": true,
+    "initial_baseline_hash_matches_git_HEAD": true,
+    "canonical_evidence_arrays_unchanged_during_research": true,
+    "current_canonical_sha256": "90591cdefcce9ec0bc550dd5480af1db8dad323b25761291562715da15739b1b",
+    "concurrent_change": "Another task added the top-level crosscuttingViews configuration during research. Events, claims, claimChecks, arcs and sourceIndex were compared against the initial HEAD snapshot and remain identical. This task did not edit or revert concurrent UI/data changes.",
+    "checks": "JSON parsing, date cutoff, required bilingual fields, candidate IDs, all arc/layer/neighbor references and normalized source URL dedup were checked locally. No Atlas build or canonical validation file was written."
+  },
+  "verification_limits": [
+    "Every retained candidate has an opened primary publication or official artifact page with a date basis at or before cutoff. Relative search labels and snippets were not used as event dates.",
+    "Research findings are attributed to their authors; experiments, financial audits and product tests were not independently reproduced.",
+    "Current pages may contain later edits: inspected revision dates are recorded where available, and living artifact pages do not define event dates.",
+    "Source URL aliases and same-family revisions are not independent corroboration. No source after 2026-11-09 was used as evidence.",
+    "No new quantified GEO efficacy result or proven Russian/Chinese cross-border AI coverage loss survived the novelty and evidence screen.",
+    "Structural-power interpretations are explicitly separated from measured referrals, ratings, corpus statistics, refusal behavior and accounting results."
+  ]
+}

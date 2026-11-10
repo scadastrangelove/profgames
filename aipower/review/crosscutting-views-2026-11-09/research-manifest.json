@@ -1,0 +1,344 @@
+{
+  "date": "2026-11-09",
+  "status": "research_candidates_not_integrated",
+  "canonical_event_count": 567,
+  "packets": [
+    {
+      "file": "knowledge-research.json",
+      "sha256": "cdd6e5932d967578d1ee4603f04847ff7bcd7cc24106183920d656029a88863f",
+      "candidates": 4
+    },
+    {
+      "file": "knowledge-access.json",
+      "sha256": "8d40b0e922c7485a04482774f0a9a7d6ddf3f2319a836b1b1a6e04d312f542da",
+      "candidates": 4
+    },
+    {
+      "file": "economy-infrastructure.json",
+      "sha256": "c7710806ac3c9a641e5165661d6246d453e8e55217be69054f3cbd61281f8395",
+      "candidates": 4
+    },
+    {
+      "file": "economy-work.json",
+      "sha256": "79acb442a214dc175ecaa988cc8ebbc5f713568f270d5f9b7d60a1427ea9f1da",
+      "candidates": 4
+    }
+  ],
+  "candidates": [
+    {
+      "id": "SIG_2026_FIRST_PROOF_BATCH3_EXTERNAL_EVALUATION",
+      "packet": "knowledge-research.json",
+      "date": "2026-10-14",
+      "date_basis": "Dated First Proof results release and version 1 of the Third Batch report. Tests occurred October 2-5; expert review occurred October 8-9. This is the results-publication date, not the date a new theorem was first discovered.",
+      "title_ru": "First Proof: независимая проверка доказательств отделяет правильность от качества изложения",
+      "title_en": "First Proof: external proof review separates correctness from exposition",
+      "arc_ids": [
+        "ARC_KNOWLEDGE_PRODUCTION_VALIDATION",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "source_urls": [
+        "https://hexagonmath.org/2610.00244",
+        "https://1stproof.org/third-batch-press-release.html",
+        "https://1stproof.org/third-batch.html"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_event_and_new_evaluation_family",
+      "action": "add_new_event"
+    },
+    {
+      "id": "SIG_2026_MATTERGEN_NOVELTY_REANALYSIS",
+      "packet": "knowledge-research.json",
+      "date": "2026-04-20",
+      "date_basis": "The publisher's indexed PDF explicitly dates publication to 20 April 2026, not receipt or acceptance.",
+      "title_ru": "MatterGen: независимая работа оспаривает новизну экспериментального примера",
+      "title_en": "MatterGen: independent analysis challenges the experimental example's novelty",
+      "arc_ids": [
+        "ARC_KNOWLEDGE_PRODUCTION_VALIDATION"
+      ],
+      "source_urls": [
+        "https://pubs.rsc.org/en/content/articlehtml/2026/mh/d6mh00268d",
+        "https://www.nature.com/articles/s41586-025-08628-5"
+      ],
+      "existing_source_urls": [
+        "https://www.nature.com/articles/s41586-025-08628-5"
+      ],
+      "dedup_verdict": "material_update_same_study_family_not_another_discovery",
+      "action": "material_update_to_existing_event"
+    },
+    {
+      "id": "SIG_2026_RAVEN_TESS_STATISTICAL_VALIDATION",
+      "packet": "knowledge-research.json",
+      "date": "2026-03-25",
+      "date_basis": "Warwick's institutional repository lists 25 March 2026 as the official available date of the peer-reviewed article, also the university release date. The preprint was submitted 23 March; the May journal issue and 24 April preprint revision are not new discoveries.",
+      "title_ru": "RAVEN: 118 новых статистических валидаций экзопланет на открытых данных TESS",
+      "title_en": "RAVEN: 118 new statistical exoplanet validations from public TESS data",
+      "arc_ids": [
+        "ARC_KNOWLEDGE_PRODUCTION_VALIDATION"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2603.22597",
+        "https://wrap.warwick.ac.uk/id/eprint/199487/",
+        "https://zenodo.org/records/19661443",
+        "https://arxiv.org/abs/2509.17645"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_event_and_new_study_family_shared_observational_archive",
+      "action": "add_new_event"
+    },
+    {
+      "id": "SIG_2025_GENERATIVE_ANTIBIOTICS_PRECLINICAL_VALIDATION",
+      "packet": "knowledge-research.json",
+      "date": "2025-08-14",
+      "date_basis": "Cell electronic publication date, corroborated by the dated MIT release. The 16 October 2025 issue date and a February 2026 interview refer to the same study.",
+      "title_ru": "Генеративный дизайн антибиотиков: активность проверена в лаборатории и на мышах",
+      "title_en": "Generative antibiotic design reaches laboratory and mouse-model validation",
+      "arc_ids": [
+        "ARC_KNOWLEDGE_PRODUCTION_VALIDATION",
+        "ARC_MEDICAL_AI_TRANSLATION"
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40816267/",
+        "https://news.mit.edu/2025/using-generative-ai-researchers-design-compounds-kill-drug-resistant-bacteria-0814",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12790861/"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_event_and_new_study_family",
+      "action": "add_new_event"
+    },
+    {
+      "id": "SIG_2025_WIKIMEDIA_ENTERPRISE_REVENUE_OPEN_ACCESS",
+      "packet": "knowledge-access.json",
+      "date": "2025-11-24",
+      "date_basis": "Public financial-report disclosure and audit-file upload, not revenue accrual date. Fiscal period: 2024-07-01 through 2025-06-30; auditor opinion dated 2025-09-30. The blog also displays an update dated 2026-11-04; the original audit PDF independently anchors the figures.",
+      "title_ru": "Wikimedia Enterprise: доход от сервиса при свободном доступе к контенту",
+      "title_en": "Wikimedia Enterprise: service revenue alongside freely accessible content",
+      "arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "source_urls": [
+        "https://upload.wikimedia.org/wikipedia/foundation/3/3f/Wikimedia_Foundation_FY_24-25_Audit_Report.pdf",
+        "https://diff.wikimedia.org/2025/11/24/wikimedia-enterprise-financial-report-fiscal-year-2024-2025/",
+        "https://meta.wikimedia.org/wiki/Wikimedia_Enterprise/Principles",
+        "https://enterprise.wikimedia.com/blog/wikipedia-25-enterprise-partners/"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "genuinely_new",
+      "action": "candidate_for_editorial_review"
+    },
+    {
+      "id": "SIG_2026_WIKIPEDIA_AIO_REFERRAL_DID",
+      "packet": "knowledge-access.json",
+      "date": "2026-02-05",
+      "date_basis": "First preprint submission. All retained estimates are from v7, dated 2026-10-25, using December 2023-December 2024 observations. Neither the data window nor the latest revision is silently substituted for first publication.",
+      "title_ru": "Wikipedia: новая версия исследования оценивает снижение поисковых переходов примерно на 5%",
+      "title_en": "Wikipedia: revised study estimates roughly 5% lower search referrals",
+      "arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2602.18455v7",
+        "https://arxiv.org/abs/2602.18455v2",
+        "https://wikimediafoundation.org/news/2025/10/17/new-user-trends-on-wikipedia/"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "genuinely_new_study_not_an_update_to_pew",
+      "action": "candidate_for_editorial_review"
+    },
+    {
+      "id": "SIG_2025_EBU_BBC_MULTILINGUAL_NEWS_INTEGRITY",
+      "packet": "knowledge-access.json",
+      "date": "2025-10-22",
+      "date_basis": "International report launch. Responses were generated 2025-05-24 through 2025-06-10; the release date is not a test date. Earlier BBC-only work belongs to this study family.",
+      "title_ru": "BBC/EBU: международная проверка выявила ошибки источников в новостных ответах",
+      "title_en": "BBC/EBU: international audit finds sourcing failures in news answers",
+      "arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "source_urls": [
+        "https://www.ebu.ch/news/2025/10/ai-s-systemic-distortion-of-news-is-consistent-across-languages-and-territories-international-study-by-public-service-broadcaste",
+        "https://www.ebu.ch/Report/MIS-BBC/NI_AI_2025.pdf"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "genuinely_new_study_family",
+      "action": "candidate_for_editorial_review"
+    },
+    {
+      "id": "SIG_2025_COMMON_PILE_OPEN_LICENSED_PRETRAINING",
+      "packet": "knowledge-access.json",
+      "date": "2025-06-05",
+      "date_basis": "First arXiv publication describing released corpus and models; official project announcement followed on June 6. NeurIPS proceedings are a later publication of the same study.",
+      "title_ru": "Common Pile: обучение на открыто лицензированных данных проверено на моделях 7B",
+      "title_en": "Common Pile: openly licensed training data tested with 7B models",
+      "arc_ids": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2506.05209",
+        "https://proceedings.nips.cc/paper_files/paper/2025/hash/52acc050138d6f40dad6f12f91a4ce22-Abstract-Datasets_and_Benchmarks_Track.html",
+        "https://huggingface.co/common-pile"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "genuinely_new_study_and_artifact_family",
+      "action": "candidate_for_editorial_review"
+    },
+    {
+      "id": "SIG_2026_COREWEAVE_Q2_CASH_CAPEX_DEBT",
+      "packet": "economy-infrastructure.json",
+      "date": "2026-08-11",
+      "date_basis": "Publication of Q2 results; balance-sheet date 2026-06-30, cash-flow period 2026-01-01 through 2026-06-30. Supporting 10-Q was accepted August 11 and has SEC filing date August 12.",
+      "title_ru": "CoreWeave: реальные расходы на инфраструктуру и долг за контрактным ростом",
+      "title_en": "CoreWeave: actual infrastructure spending and debt behind contract growth",
+      "arc_ids": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "source_urls": [
+        "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+        "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm",
+        "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/0001769628-26-000366-index.html"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_reporting_event_with_material_operational_finance_evidence",
+      "action": "candidate_for_editorial_review"
+    },
+    {
+      "id": "SIG_2026_MICROSOFT_Q1FY27_CAPEX_LEASE_BOUNDARY",
+      "packet": "economy-infrastructure.json",
+      "date": "2026-10-28",
+      "date_basis": "Q1 FY2027 earnings publication for the quarter ended 2026-09-30; accounting context was disclosed 2026-07-29, effective from the start of FY2027.",
+      "title_ru": "Microsoft: денежные вложения, аренда и прогноз CapEx требуют разных шкал",
+      "title_en": "Microsoft: cash investment, leases and CapEx guidance need separate measures",
+      "arc_ids": [
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE",
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"
+      ],
+      "source_urls": [
+        "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast",
+        "https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1",
+        "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_financial_reporting_event",
+      "action": "candidate_for_editorial_review"
+    },
+    {
+      "id": "SIG_2025_AEP_OHIO_DATACENTER_MINIMUM_BILLING",
+      "packet": "economy-infrastructure.json",
+      "date": "2025-07-09",
+      "date_basis": "PUCO order date, independently stated by regulator and utility. Compliance tariff filed July 11; effective July 23 according to utility implementation page.",
+      "title_ru": "Огайо закрепляет за дата-центрами риск недозагрузки электросетей",
+      "title_en": "Ohio assigns data centers the risk of underused grid investment",
+      "arc_ids": [
+        "ARC_ENERGY_GRID_POLITICS",
+        "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"
+      ],
+      "source_urls": [
+        "https://content.govdelivery.com/accounts/OHPUC/bulletins/3e8bb79",
+        "https://www.aepohio.com/company/news/view?releaseID=10326",
+        "https://www.aepohio.com/company/about/rates/data-center-tariff/",
+        "https://www.occ.ohio.gov/content/data-center-costs-24-0508-el-ata"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_enacted_local_cost_allocation_mechanism",
+      "action": "candidate_for_editorial_review"
+    },
+    {
+      "id": "SIG_2025_AWS_P4_P5_GPU_PRICE_CUT",
+      "packet": "economy-infrastructure.json",
+      "date": "2025-06-01",
+      "date_basis": "Effective date for On-Demand purchases, stated in the June 5 announcement. Savings Plan changes apply to purchases effective after June 4; announcement date is not substituted for effective date.",
+      "title_ru": "AWS снижает цены аренды GPU: контрпример неизбежному росту ренты",
+      "title_en": "AWS cuts GPU rental prices: a counterexample to inevitably rising rent",
+      "arc_ids": [
+        "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+        "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"
+      ],
+      "source_urls": [
+        "https://aws.amazon.com/blogs/aws/announcing-up-to-45-price-reduction-for-amazon-ec2-nvidia-gpu-accelerated-instances/",
+        "https://aws.amazon.com/about-aws/whats-new/2025/06/pricing-usage-model-ec2-instances-nvidia-gpus/"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_pricing_event_and_substantive_counterevidence",
+      "action": "candidate_for_editorial_review"
+    },
+    {
+      "id": "SIG_2026_KENYA_AI_BUSINESS_ADVICE_HETEROGENEITY",
+      "packet": "economy-work.json",
+      "date": "2026-07-10",
+      "date_basis": "Journal online publication, explicitly dated by Management Science. Not the experiment date or first circulation of the study.",
+      "title_ru": "Кения: ИИ-советник не улучшил средний результат малого бизнеса",
+      "title_en": "Kenya: AI advice did not improve average small-business performance",
+      "arc_ids": [
+        "ARC_WORK_COMPETENCE_DISTRIBUTION",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "source_urls": [
+        "https://pubsonline.informs.org/doi/10.1287/mnsc.2024.06909",
+        "https://newsroom.haas.berkeley.edu/research/gen-ai-experiment-shows-mixed-results-in-helping-small-businesses-grow/"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_to_canonical_event_and_study_family",
+      "action": "add_new_study_family"
+    },
+    {
+      "id": "SIG_2025_FREELANCE_GENAI_DEMAND_DECLINE",
+      "packet": "economy-work.json",
+      "date": "2025-01-24",
+      "date_basis": "Journal online publication; the October 2025 issue and August 2024 working paper are not separate empirical events.",
+      "title_ru": "Фриланс: спрос на задания по текстам и коду снизился относительно контрольных категорий",
+      "title_en": "Freelancing: writing and coding demand fell relative to comparison categories",
+      "arc_ids": [
+        "ARC_WORK_COMPETENCE_DISTRIBUTION",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "source_urls": [
+        "https://pubsonline.informs.org/doi/10.1287/mnsc.2024.05420",
+        "https://www.ifo.de/sites/default/files/docbase/docs/cesifo1_wp11276.pdf"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_to_canonical_event_and_study_family",
+      "action": "add_new_study_family"
+    },
+    {
+      "id": "SIG_2026_COPILOT_THREE_FIRM_PRODUCTIVITY_RCTS",
+      "packet": "economy-work.json",
+      "date": "2026-02-27",
+      "date_basis": "Management Science online publication. Earlier manuscripts and the November 2026 issue are the same study, not new replications.",
+      "title_ru": "Три компании: Copilot увеличил выполнение задач, особенно у менее опытных разработчиков",
+      "title_en": "Three firms: Copilot increased task completion, especially for less-experienced developers",
+      "arc_ids": [
+        "ARC_WORK_COMPETENCE_DISTRIBUTION",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "source_urls": [
+        "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535",
+        "https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_to_canonical_event_and_study_family",
+      "action": "add_new_study_family"
+    },
+    {
+      "id": "SIG_2025_COPILOT_66_FIRMS_WORK_PATTERNS",
+      "packet": "economy-work.json",
+      "date": "2025-04-15",
+      "date_basis": "First public arXiv submission of this research family. Figures below describe the later verified version, not necessarily the first manuscript. No dated journal-publication event is asserted.",
+      "title_ru": "66 компаний: ИИ сократил время на почту, но не изменил состав задач",
+      "title_en": "66 firms: AI reduced email time without changing the task mix",
+      "arc_ids": [
+        "ARC_WORK_COMPETENCE_DISTRIBUTION",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2504.11436",
+        "https://www.aeaweb.org/articles?id=10.1257/aeri.20250275"
+      ],
+      "existing_source_urls": [],
+      "dedup_verdict": "new_to_canonical_event_and_study_family",
+      "action": "add_new_study_family_with_version_note"
+    }
+  ],
+  "candidate_count": 16,
+  "passed": true
+}

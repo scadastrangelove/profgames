@@ -1,0 +1,11 @@
+{
+  "base": "89919b6029900446ff81426c2664db71c046d25f",
+  "checks": 64,
+  "files": {
+    "ai-power-atlas-ru.html": "fc39326d902571187dcc9d9a9b804780e0c19dcf2e3339213d8bce535b6b1200",
+    "ai-power-atlas.html": "77c898d32ba16c7c39bf041db04440f460f000f4c93b64a963cbec4bdb6f2eb8",
+    "review/compiled-ru.js": "2076acbda262fcd661cfeecd362f9be51f66d9df10a935035f71c6cfb768e706",
+    "review/compiled-en.js": "67fdf0f5512e8f835a1641c786340165befdb2cd09acc33e67f3fbbfff61eba6"
+  },
+  "passed": true
+}

@@ -6,6 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def build(root:Path=ROOT)->None:
  css=(root/'src/review.css').read_text(encoding='utf-8')
  common=(root/'src/atlas-common.js').read_text(encoding='utf-8')
+ common+='\n'+(root/'src/atlas-lenses.js').read_text(encoding='utf-8')
  for lang,name in [('ru','ai-power-atlas-ru.html'),('en','ai-power-atlas.html')]:
   data=json.loads((root/f'ai_power_storygraph_{lang}.json').read_text(encoding='utf-8'))
   payload=json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')

@@ -1,0 +1,13 @@
+{
+  "version": "0.55",
+  "files": {
+    "ru": {
+      "sha256": "e5664dd9bbb6798905d2bfe94a16d81161f9aa56249a0fd33ed9b572e222c12f",
+      "path": "baseline-ru.json.gz"
+    },
+    "en": {
+      "sha256": "2d7f80a70901c5c783760a2ceae72085748234057ee27b2a0c11d8b78f01567a",
+      "path": "baseline-en.json.gz"
+    }
+  }
+}

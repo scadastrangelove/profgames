@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "membership_semantics": "thematic_not_causal",
+  "views": [
+    {
+      "id": "knowledge",
+      "label_ru": "Знание и доступ",
+      "label_en": "Knowledge and Access",
+      "question_ru": "Кто производит знания, проверяет результаты и определяет доступ к ним?",
+      "question_en": "Who produces knowledge, validates results and determines access?",
+      "tracks": [
+        {"id":"discovery","label_ru":"Наука и открытия","label_en":"Science and discovery","color":"#365f9d","arc_ids":["ARC_KNOWLEDGE_PRODUCTION_VALIDATION"]},
+        {"id":"medicine","label_ru":"Медицина и клинические результаты","label_en":"Medicine and clinical outcomes","color":"#107052","arc_ids":["ARC_MEDICAL_AI_TRANSLATION"]},
+        {"id":"learning","label_ru":"Обучение и компетенции","label_en":"Learning and skills","color":"#86611f","arc_ids":["ARC_EDUCATION_COMPETENCE"]},
+        {"id":"circulation","label_ru":"Источники и распространение","label_en":"Sources and circulation","color":"#8d4b64","arc_ids":["ARC_DATA_LICENSING_AS_INPUT_LAYER"]},
+        {"id":"research_access","label_ru":"Допуск к исследованиям","label_en":"Research access","color":"#24727a","arc_ids":["ARC_QUIET_ACCESS_CONTROL"],"required_arc_ids":["ARC_KNOWLEDGE_PRODUCTION_VALIDATION"]}
+      ]
+    },
+    {
+      "id": "economy",
+      "label_ru": "Экономика ИИ",
+      "label_en": "AI Economy",
+      "question_ru": "Кто оплачивает вычисления, получает результат и несёт издержки?",
+      "question_en": "Who pays for compute, captures the gains and bears the costs?",
+      "tracks": [
+        {"id":"capital","label_ru":"Капитал и финансирование","label_en":"Capital and financing","color":"#86611f","arc_ids":["ARC_CAPITAL_MIX_PUBLIC_PRIVATE"]},
+        {"id":"infrastructure","label_ru":"Вычисления, энергия и зависимость","label_en":"Compute, energy and dependence","color":"#365f9d","arc_ids":["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN","ARC_ENERGY_GRID_POLITICS"]},
+        {"id":"work","label_ru":"Труд и производительность","label_en":"Work and productivity","color":"#107052","arc_ids":["ARC_WORK_COMPETENCE_DISTRIBUTION"]},
+        {"id":"adoption","label_ru":"Внедрение и организация работы","label_en":"Adoption and organization","color":"#8d4b64","arc_ids":["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"]},
+        {"id":"transactions","label_ru":"Финансовые операции и контроль","label_en":"Financial operations and control","color":"#24727a","arc_ids":["ARC_FINANCE_GOVERNED_SHUTDOWN"]}
+      ]
+    },
+    {
+      "id": "sovereignty",
+      "label_ru": "Суверенитет и возможность выхода",
+      "label_en": "Sovereignty and Exit",
+      "question_ru": "Кто определяет условия доступа и что требуется для смены поставщика?",
+      "question_en": "Who sets access conditions and what does switching providers require?",
+      "tracks": [
+        {"id":"jurisdiction","label_ru":"Юрисдикция и доступ","label_en":"Jurisdiction and access","color":"#86611f","arc_ids":["ARC_SOVEREIGN_FLOW_GATING","ARC_EXPORT_CHIPS_TO_MODELS"]},
+        {"id":"cloud_exit","label_ru":"Облака и стоимость выхода","label_en":"Clouds and switching costs","color":"#365f9d","arc_ids":["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"]},
+        {"id":"model_portability","label_ru":"Открытые веса и переносимость","label_en":"Open weights and portability","color":"#107052","arc_ids":["ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"]},
+        {"id":"national_capacity","label_ru":"Национальные мощности и зависимости","label_en":"National capacity and dependencies","color":"#8d4b64","arc_ids":["ARC_GULF_CONDITIONAL_SOVEREIGNTY","ARC_CHINA_COUNTERSTACK_ROUTE_AROUND","ARC_RUSSIA_SELECTIVE_SOVEREIGNTY"]},
+        {"id":"resource_base","label_ru":"Энергия и инфраструктура","label_en":"Energy and infrastructure","color":"#24727a","arc_ids":["ARC_ENERGY_GRID_POLITICS"]}
+      ]
+    },
+    {
+      "id": "delegation",
+      "label_ru": "Делегирование решений",
+      "label_en": "Delegation of Decisions",
+      "question_ru": "Где ИИ советует, где действует и кто отвечает за решение?",
+      "question_en": "Where does AI advise, where does it act and who is accountable?",
+      "tracks": [
+        {"id":"institutional_work","label_ru":"Организационные решения","label_en":"Institutional decisions","color":"#365f9d","arc_ids":["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"]},
+        {"id":"command","label_ru":"Командование и операционный цикл","label_en":"Command and operational workflows","color":"#8d4b64","arc_ids":["ARC_PALANTIR_DECISION_OS","ARC_WAR_DATA_FLYWHEEL"]},
+        {"id":"financial_authority","label_ru":"Финансовые полномочия","label_en":"Financial authority","color":"#86611f","arc_ids":["ARC_FINANCE_GOVERNED_SHUTDOWN"]},
+        {"id":"human_verification","label_ru":"Проверка человеком и компетенции","label_en":"Human verification and competence","color":"#107052","arc_ids":["ARC_MEDICAL_AI_TRANSLATION","ARC_EDUCATION_COMPETENCE","ARC_WORK_COMPETENCE_DISTRIBUTION"],"outcome_stages":["clinical_screening_endpoint","patient_vascular_outcome","care_access","patient_outcome_null","patient_experience","clinical_workflow","patient_reported_symptoms","team_task_performance","measured_learning_outcomes","engineering_workflow","self_reported_firm_performance","completed_development_tasks","application_time_and_task_activity"]},
+        {"id":"agent_boundaries","label_ru":"Полномочия агентов и надзор","label_en":"Agent authority and oversight","color":"#24727a","arc_ids":["ARC_COGSEC_LAB_TO_WILD_TO_STATE"]}
+      ]
+    }
+  ]
+}

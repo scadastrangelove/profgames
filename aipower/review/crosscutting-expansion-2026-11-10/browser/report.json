@@ -1,0 +1,31 @@
+{
+  "assertions": 129,
+  "screenshots": [
+    "review/crosscutting-expansion-2026-11-10/browser/ru-knowledge-1440.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-knowledge-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-knowledge-matrix-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-economy-1440.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-economy-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-economy-matrix-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-sovereignty-1440.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-sovereignty-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-sovereignty-matrix-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-delegation-1440.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-delegation-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/ru-delegation-matrix-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-knowledge-1440.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-knowledge-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-knowledge-matrix-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-economy-1440.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-economy-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-economy-matrix-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-sovereignty-1440.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-sovereignty-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-sovereignty-matrix-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-delegation-1440.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-delegation-390.png",
+    "review/crosscutting-expansion-2026-11-10/browser/en-delegation-matrix-390.png"
+  ],
+  "errors": [],
+  "passed": true
+}

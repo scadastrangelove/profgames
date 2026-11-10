@@ -1,0 +1,567 @@
+{
+  "schema_version": "atlas.delegation_research.v1",
+  "as_of": "2026-11-10",
+  "scope": "Delegation of decisions: civilian authorization, deployment approval, accountability, human review and operational decision workflows.",
+  "status": "researcher_recommended_pending_lead_source_review_and_ingestion",
+  "integration_schema": "scripts/migrate_crosscutting_expansion.py",
+  "canonical_edits": false,
+  "method": {
+    "instructions_read": [
+      "/Users/serg/Documents/zhet/build/AGENTS.md",
+      "/Users/serg/Documents/zhet/build/CLAUDE.md",
+      "/Users/serg/Documents/zhet/build/zhet/BIBLE.md"
+    ],
+    "parallelism": "This is the assigned delegation research slice. No nested multi-agent tool was available in this session; no independent agent review is claimed.",
+    "canonical_baseline": {
+      "version": "0.55",
+      "events_per_language": 567,
+      "arcs_per_language": 30,
+      "en_sha256": "2d7f80a70901c5c783760a2ceae72085748234057ee27b2a0c11d8b78f01567a",
+      "ru_sha256": "e5664dd9bbb6798905d2bfe94a16d81161f9aa56249a0fd33ed9b572e222c12f"
+    },
+    "dedup": "Reviewed canonical EN event titles, relevant institutional/finance/medicine summaries and caveats, corresponding RU records, both-language full-record keyword matches, and arc theses. Compared substantive workflows and institutional/study families, not merely URLs. None of the six selected event families appears in either canonical file.",
+    "selection": "Six mechanism-distinct recommendations, not a quota: public-sector deployment responsibility, payment review, conditional prescribing authority, explanation/contestability, legal permission for automated decisions, and operational triage with retained human adjudication.",
+    "authority_rule": "Suggestion, case selection, legal permission, conditional future autonomy and exercised final-decision authority are separate. The existing coarse delegation enum is supplemented by authority_boundary below.",
+    "source_rule": "Sources are primary unless explicitly marked otherwise. Official or vendor descriptions establish what was authorized, required or reported, not independent effectiveness. Undated live pages have an empty source date; access date is not substituted for publication date.",
+    "limitations": [
+      "The Utah signed-agreement PDFs returned HTTP 403 through the browsing tool. Nolla's recommendation rests on the inspected regulator register and dated company launch account, not a claimed full-contract review.",
+      "The UK legislation HTML was not parseable through the browsing tool; the official Act and commencement PDFs were inspected instead.",
+      "No patient-level records, internal decision logs or independent operational audits were inspected. No causal edge or performance validation is proposed.",
+      "Several existing military and agent-misbehavior families already cover reversals; no additional military candidate met the novelty threshold in this bounded pass."
+    ]
+  },
+  "sources": {
+    "DEL_OMB_M2521": {
+      "name": "US Office of Management and Budget",
+      "title": "M-25-21: Accelerating Federal Use of AI through Innovation, Governance, and Public Trust",
+      "date": "2025-04-03",
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf",
+      "type": "Government / policy",
+      "source_class": "official_agency_memorandum",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_OMB_FACTSHEET": {
+      "name": "White House",
+      "title": "Fact Sheet: Eliminating Barriers for Federal Artificial Intelligence Use and Procurement",
+      "date": "2025-04-03",
+      "url": "https://www.whitehouse.gov/fact-sheets/2025/04/fact-sheet-eliminating-barriers-for-federal-artificial-intelligence-use-and-procurement/",
+      "type": "Government / policy",
+      "source_class": "official_policy_explanation",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_CMS_WISER_FAQ": {
+      "name": "Centers for Medicare & Medicaid Services",
+      "title": "WISeR Model Frequently Asked Questions",
+      "date": "",
+      "url": "https://www.cms.gov/priorities/innovation/files/document/wiser-model-frequently-asked-questions",
+      "type": "Government / policy",
+      "source_class": "official_operational_faq",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_CMS_WISER_REGISTER": {
+      "name": "Centers for Medicare & Medicaid Services",
+      "title": "WISeR (Wasteful and Inappropriate Service Reduction) Model",
+      "date": "",
+      "url": "https://www.cms.gov/priorities/innovation/innovation-models/wiser",
+      "type": "Government / policy",
+      "source_class": "official_program_register",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_CMS_WISER_ANNOUNCEMENT": {
+      "name": "Centers for Medicare & Medicaid Services",
+      "title": "CMS Launches New Model to Target Wasteful, Inappropriate Services in Original Medicare",
+      "date": "2025-06-27",
+      "url": "https://www.cms.gov/newsroom/press-releases/cms-launches-new-model-target-wasteful-inappropriate-services-original-medicare",
+      "type": "Government / policy",
+      "source_class": "official_program_announcement",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_NOLLA_LAUNCH": {
+      "name": "Nolla Health",
+      "title": "Nolla Health Launches the Nation's First AI-Powered Prescriptions, Starting in Utah",
+      "date": "2026-10-05",
+      "url": "https://www.nollahealth.com/blog/ai-prescriptions-utah",
+      "type": "Company / primary",
+      "source_class": "operator_launch_and_protocol_description",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_UTAH_PILOT_REGISTER": {
+      "name": "Utah Office of Artificial Intelligence Policy",
+      "title": "Authorized AI Pilots",
+      "date": "",
+      "url": "https://commerce.utah.gov/ai/regulatory-relief-4/authorized-pilots/",
+      "type": "Government / policy",
+      "source_class": "official_regulatory_mitigation_register",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_CJEU_DNB_JUDGMENT": {
+      "name": "Court of Justice of the European Union",
+      "title": "Judgment of 27 February 2025, CK v Magistrat der Stadt Wien, C-203/22, ECLI:EU:C:2025:117",
+      "date": "2025-02-27",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0203",
+      "type": "Court / primary",
+      "source_class": "official_judgment",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_CJEU_DNB_RELEASE": {
+      "name": "Court of Justice of the European Union",
+      "title": "Press Release 22/25: Automated credit assessment",
+      "date": "2025-02-27",
+      "url": "https://curia.europa.eu/site/upload/docs/application/pdf/2025-02/cp250022en.pdf",
+      "type": "Court / primary",
+      "source_class": "court_press_release_not_binding_judgment",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_UK_DUAA_ACT": {
+      "name": "UK Parliament",
+      "title": "Data (Use and Access) Act 2025, section 80",
+      "date": "2025-06-19",
+      "url": "https://www.legislation.gov.uk/ukpga/2025/18/pdfs/ukpga_20250018_en.pdf",
+      "type": "Government / policy",
+      "source_class": "primary_legislation_as_enacted",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_UK_DUAA_COMMENCEMENT": {
+      "name": "UK Secretary of State",
+      "title": "Data (Use and Access) Act 2025 (Commencement No. 6 and Transitional and Saving Provisions) Regulations 2026, SI 2026/82",
+      "date": "2026-01-29",
+      "url": "https://www.legislation.gov.uk/uksi/2026/82/pdfs/uksi_20260082_en.pdf",
+      "type": "Government / policy",
+      "source_class": "commencement_regulations_date_made",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_ICO_DUAA_EXPLANATION": {
+      "name": "Information Commissioner's Office",
+      "title": "The Data (Use and Access) Act 2025: summary of changes, data protection",
+      "date": "",
+      "url": "https://ico.org.uk/about-the-ico/what-we-do/legislation-we-cover/data-use-and-access-act-2025/the-data-use-and-access-act-2025-duaa-summary-of-the-changes/data-protection/",
+      "type": "Government / policy",
+      "source_class": "regulator_explanation_indexed_text_only",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_DWP_ADVANCES_2026": {
+      "name": "UK Department for Work and Pensions",
+      "title": "Effectiveness Assessment of Universal Credit Advances Model",
+      "date": "2026-07-09",
+      "url": "https://www.gov.uk/government/publications/effectiveness-assessment-including-statistical-analysis-of-the-universal-credit-advances-machine-learning-model-1-april-2025-to-31-march-2026/effectiveness-assessment-of-universal-credit-advances-model",
+      "type": "Government / policy",
+      "source_class": "operator_effectiveness_assessment_with_statistical_annex",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_DOCTRONIC_ANNOUNCEMENT": {
+      "name": "Utah Department of Commerce",
+      "title": "Utah and Doctronic Announce Partnership for AI Prescription Medication Renewals",
+      "date": "2026-01-06",
+      "url": "https://commerce.utah.gov/2026/01/06/news-release-utah-and-doctronic-announce-groundbreaking-partnership-for-ai-prescription-medication-renewals/",
+      "type": "Government / policy",
+      "source_class": "official_pilot_announcement",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_DOCTRONIC_OVERSIGHT": {
+      "name": "Utah Office of Artificial Intelligence Policy",
+      "title": "Doctronic AI Regulatory Mitigation Agreement: status and safeguards",
+      "date": "",
+      "url": "https://commerce.utah.gov/ai/regulatory-relief-4/authorized-pilots/doctronic/",
+      "type": "Government / policy",
+      "source_class": "regulator_pilot_status_and_faq",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_UTAH_BOARD_LETTER": {
+      "name": "Utah Medical Licensing Board",
+      "title": "Letter to Utah Department of Commerce concerning Doctronic",
+      "date": "2026-04-20",
+      "url": "https://commerce.utah.gov/wp-content/uploads/2026/04/doctronic-letter-from-medical-board.pdf",
+      "type": "Government / policy",
+      "source_class": "professional_board_recommendation_indexed_text_only",
+      "primary_or_secondary": "primary"
+    },
+    "DEL_KLARNA_PROSPECTUS": {
+      "name": "Klarna Group plc / SEC EDGAR",
+      "title": "Klarna Group plc Form 424B4 prospectus, Artificial Intelligence section",
+      "date": "",
+      "url": "https://www.sec.gov/Archives/edgar/data/2003292/000200329225000052/klarnagroupplc424b4.htm",
+      "type": "Company / primary",
+      "source_class": "company_securities_filing",
+      "primary_or_secondary": "primary"
+    }
+  },
+  "candidates": [
+    {
+      "id": "SIG_2025_OMB_HIGH_IMPACT_AI_DEPLOYMENT_ACCOUNTABILITY",
+      "date": "2025-04-03",
+      "date_basis": "Memorandum's issue date on page 1; the February directory is not its publication date. Implementation deadlines are separate.",
+      "title_ru": "OMB закрепляет ответственность за внедрение ИИ с существенным воздействием",
+      "title_en": "OMB assigns accountability for high-impact AI deployment",
+      "summary_ru": "M-25-21 распределяет принятие рисков между ответственными должностными лицами и требует проверки, надзора и прекращения несоответствующего применения ИИ.",
+      "summary_en": "M-25-21 distributes risk acceptance to accountable officials and requires testing, oversight and termination of non-compliant AI uses.",
+      "caveat_ru": "Это требования к ведомствам, не доказательство соблюдения. Предусмотрены исключения; системы национальной безопасности вне этой сферы.",
+      "caveat_en": "Agency requirements, not demonstrated compliance. Waivers exist; national-security systems are outside this scope.",
+      "mechanism_ru": "Полномочия внедрять модель и ответственность за риск остаются у людей.",
+      "mechanism_en": "Deployment permission and responsibility for accepting risk remain human institutional functions.",
+      "actors": ["US Office of Management and Budget", "US federal agencies", "Agency Chief AI Officers"],
+      "actor_types": ["government"],
+      "jurisdictions": ["US"],
+      "layers": ["governance_law", "decision_support_cognition"],
+      "arcs": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "source_ids": ["DEL_OMB_M2521", "DEL_OMB_FACTSHEET"],
+      "evidence_kind": "binding_deployment_governance",
+      "artifact": "memorandum",
+      "force": "binding",
+      "stage": "adopted",
+      "delegation": "control_requirement",
+      "contexts": ["governance_document"],
+      "outcome_stage": "requirements_issued_not_compliance_measured",
+      "authority_boundary": "Risk acceptance by officials is not delegated machine authority over citizens.",
+      "source_claims": [
+        {
+          "source_id": "DEL_OMB_M2521",
+          "classification": "normative_fact",
+          "locator": "Appendix sections 3(b)(i), 4(a), 4(b)(ii)(G) and 4(b)(v), printed pages 12-17",
+          "excerpt": "risk acceptance, supported by a signature from the individual accepting the risk.",
+          "claim": "Human oversight, signed acceptance and CAIO-controlled waivers belong to the approval workflow. Minimum-practice implementation has a 365-day deadline."
+        },
+        {
+          "source_id": "DEL_OMB_FACTSHEET",
+          "classification": "official_policy_framing",
+          "locator": "Promoting rapid and responsible AI adoption",
+          "claim": "The administration describes a consolidated high-impact category and accelerated adoption; this is policy intent, not an outcome evaluation."
+        }
+      ],
+      "dedup": {
+        "decision": "accept_new_event",
+        "family_key": "omb_m25_21_agency_deployment_risk_acceptance",
+        "nearest_existing_ids": ["SIG_2025_OMB_AI_PROCUREMENT_PORTABILITY", "SIG_2026_CANADA_AGENTIC_AI_GOVERNMENT_GUIDE"],
+        "reason": "The existing US record covers M-25-22 procurement/IP portability, not M-25-21 deployment acceptance and waiver authority. Canadian agent guidance is another jurisdiction and instrument."
+      }
+    },
+    {
+      "id": "SIG_2026_CMS_WISER_REVIEW_WORKFLOW",
+      "date": "2026-01-05",
+      "date_basis": "CMS FAQ retrospectively dates request intake to January 5. Announcement: 2025-06-27; formal model start: 2026-01-01; covered-service cutoff: 2026-01-15. FAQ publication date is unspecified.",
+      "title_ru": "WISeR начинает приём запросов: технологии проверяют, клиницисты отвечают за отрицательные заключения",
+      "title_en": "WISeR starts request intake with technology-assisted review and clinician-controlled adverse recommendations",
+      "summary_ru": "CMS передаёт проверку отдельных услуг Original Medicare технологическим подрядчикам в шести штатах. Отрицательные рекомендации требуют лицензированного клинициста; оплата подрядчиков связана с предотвращёнными расходами.",
+      "summary_en": "CMS assigns selected Original Medicare service reviews to technology contractors in six states. Adverse recommendations require licensed clinicians; contractor compensation is linked to averted expenditure.",
+      "caveat_ru": "Установленный порядок не подтверждает качество человеческой проверки. Предварительное отрицательное заключение не тождественно окончательному отказу в оплате; сохраняется процедура обжалования.",
+      "caveat_en": "The prescribed process does not establish effective human review. Prior non-affirmation is not the final payment denial; administrative appeals remain available.",
+      "mechanism_ru": "Автоматизация меняет маршрут допуска к оплате и стимулы проверяющих, не передавая машине право окончательного отказа.",
+      "mechanism_en": "Automation changes the payment-review pathway and reviewer incentives without granting machines final denial authority.",
+      "actors": ["Centers for Medicare & Medicaid Services", "WISeR technology participants", "Medicare Administrative Contractors", "Licensed reviewing clinicians"],
+      "actor_types": ["government", "company", "workforce_users"],
+      "jurisdictions": ["US"],
+      "geographic_scope_basis": "Original Medicare in New Jersey, Ohio, Oklahoma, Texas, Arizona and Washington; not Medicare Advantage.",
+      "layers": ["decision_support_cognition", "governance_law", "finance_rent"],
+      "arcs": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION", "ARC_MEDICAL_AI_TRANSLATION"],
+      "source_ids": ["DEL_CMS_WISER_FAQ", "DEL_CMS_WISER_REGISTER", "DEL_CMS_WISER_ANNOUNCEMENT"],
+      "evidence_kind": "officially_reported_operational_payment_review",
+      "artifact": "government_program",
+      "force": "contractual",
+      "stage": "launched",
+      "delegation": "control_requirement",
+      "contexts": ["production", "governance_document"],
+      "outcome_stage": "workflow_started_no_causal_outcome_claim",
+      "authority_boundary": "Organizations receive review duties; licensed clinicians determine adverse recommendations and MAC claim denials trigger appeal rights. No claim of autonomous machine denials.",
+      "source_claims": [
+        {
+          "source_id": "DEL_CMS_WISER_FAQ",
+          "classification": "official_operational_fact",
+          "locator": "Transition for patients whose care began in 2025; appeal questions",
+          "excerpt": "began accepting prior authorization requests from WISeR providers and suppliers on January 5, 2026",
+          "claim": "Intake and covered-service dates differ; a MAC claim denial, rather than prior non-affirmation itself, is the appealable initial payment determination."
+        },
+        {
+          "source_id": "DEL_CMS_WISER_REGISTER",
+          "classification": "program_design_fact",
+          "locator": "Design; Participant Information",
+          "claim": "Non-payment recommendations are clinician-determined. Participants receive a performance-adjusted share of expenditures associated with averted inappropriate care. This creates an incentive, not proof of wrongful denial."
+        },
+        {
+          "source_id": "DEL_CMS_WISER_ANNOUNCEMENT",
+          "classification": "forecast_or_program_objective",
+          "locator": "June 27, 2025 announcement",
+          "claim": "Faster review, lower spending and improved experience are program objectives, not measured results in this announcement."
+        }
+      ],
+      "dedup": {
+        "decision": "accept_new_event",
+        "family_key": "cms_wiser_prior_authorization_and_prepayment_review",
+        "nearest_existing_ids": ["SIG_2026_PALANTIR_NHS_FDP_ACCESS_EFFECTIVENESS", "SIG_2026_GOLDENBRIDGE_II"],
+        "reason": "Neither health-data infrastructure nor bedside clinical decision-support trials covers payment-review delegation and its compensation incentives. Treat WISeR launch, intake and later evaluations as one program family unless an independently verified material intervention merits a new event."
+      }
+    },
+    {
+      "id": "SIG_2026_UTAH_NOLLA_STAGED_INITIAL_PRESCRIPTIONS",
+      "date": "2026-10-05",
+      "date_basis": "Regulator register's demonstration-term start and company's launch publication agree on October 5. Agreement signature: 2026-09-22, not the launch date.",
+      "title_ru": "Юта запускает пилот Nolla для первичных рецептов с условиями сокращения врачебной проверки",
+      "title_en": "Utah launches Nolla initial-prescription pilot with gates for reducing physician review",
+      "summary_ru": "Пилот допускает первичные рецепты на ограниченные местные средства от акне. Сначала каждый рецепт проверяют два врача; переход к последующему и выборочному контролю требует письменного согласия штата.",
+      "summary_en": "The pilot permits initial prescriptions for a limited topical-acne formulary. Two physicians initially review every prescription; retrospective and sampled review require written state approval.",
+      "caveat_ru": "Разрешённая траектория автономии не доказывает переход на поздние этапы. Нет независимых данных об исходах; полный договор не удалось получить.",
+      "caveat_en": "An authorized autonomy pathway is not proof of later-stage operation. No independent outcomes were established; the full agreement could not be retrieved.",
+      "mechanism_ru": "Регулятор меняет момент обязательной врачебной проверки, сохраняя разрешение перехода между этапами.",
+      "mechanism_en": "The regulator controls when mandatory clinical review may move from before issuance to after it.",
+      "actors": ["Utah Office of Artificial Intelligence Policy", "Utah Division of Professional Licensing", "Nolla Health", "Magic Health, Inc.", "Magic Health Services, LLC", "Utah-licensed physicians"],
+      "actor_types": ["regulator", "government", "company", "workforce_users"],
+      "jurisdictions": ["US"],
+      "geographic_scope_basis": "Utah adults with mild-to-moderate acne; a state-scoped pilot, not nationwide prescribing authority.",
+      "layers": ["governance_law", "decision_support_cognition"],
+      "arcs": ["ARC_MEDICAL_AI_TRANSLATION", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "source_ids": ["DEL_NOLLA_LAUNCH", "DEL_UTAH_PILOT_REGISTER"],
+      "evidence_kind": "conditional_regulatory_authorization_and_operator_launch",
+      "artifact": "government_program",
+      "force": "contractual",
+      "stage": "launched",
+      "delegation": "control_requirement",
+      "contexts": ["governance_document", "production"],
+      "outcome_stage": "initial_review_phase_with_conditional_future_autonomy",
+      "authority_boundary": "First-stage output is a proposal requiring physician approval. Later direct issuance is permitted only after a separate written regulatory gate; no such approval was located.",
+      "source_claims": [
+        {
+          "source_id": "DEL_UTAH_PILOT_REGISTER",
+          "classification": "official_authorization_fact",
+          "locator": "Nolla Health: term, relief granted and company commitments",
+          "excerpt": "each requires written approval from this office",
+          "claim": "Relief concerns specified licensing/telehealth enforcement under an agreed protocol, not general immunity. The register requires liability coverage and bars contractual limitations on liability for harm."
+        },
+        {
+          "source_id": "DEL_NOLLA_LAUNCH",
+          "classification": "operator_reported_protocol_not_independent_validation",
+          "locator": "How it works",
+          "claim": "The operator describes initial review of 100 patients, subsequent review of up to 500, then at least 10% monthly sampling; transitions depend on safety criteria and state approval. Its clinical-agreement claims are not treated as independently validated outcomes."
+        }
+      ],
+      "source_review_limitations": [
+        "Signed agreement linked by the register: https://commerce.utah.gov/wp-content/uploads/2026/10/RMA-Nolla-Health.pdf ; retrieval returned 403. Review its complete liability, termination and federal-law clauses before making stronger legal claims.",
+        "The company calls this the nation's first; that priority claim is not adopted."
+      ],
+      "dedup": {
+        "decision": "accept_new_event",
+        "family_key": "utah_healthcare_sandbox_staged_prescribing_authority",
+        "nearest_existing_ids": ["SIG_2024_ACCESS_DIABETIC_EYE_EXAMS", "SIG_2025_DARTMOUTH_THERABOT_RCT"],
+        "reason": "Autonomous screening and chatbot trials are not prescribing authorization. Nolla and Doctronic are absent from both canonical files. Select the newer initial-prescription mechanism; retain refill pilots as context rather than populate this packet with every Utah agreement."
+      }
+    },
+    {
+      "id": "SIG_2025_CJEU_DNB_AUTOMATED_DECISION_EXPLANATION",
+      "date": "2025-02-27",
+      "date_basis": "Judgment delivery date and court press-release date. Not the date of the earlier mobile-contract refusal or Austrian proceedings.",
+      "title_ru": "Суд ЕС требует понятного объяснения автоматизированной кредитной оценки",
+      "title_en": "CJEU requires intelligible explanations of automated credit assessment",
+      "summary_ru": "В деле C-203/22 Суд ЕС разъяснил, что человек должен понимать использование его данных в автоматизированном решении, чтобы оспорить результат. Ссылка на коммерческую тайну не закрывает доступ автоматически.",
+      "summary_en": "In C-203/22, the CJEU required explanations that let people understand how their data produced an automated result and challenge it. Trade-secret claims cannot automatically defeat access.",
+      "caveat_ru": "Преюдициальное толкование GDPR, не запрет кредитного скоринга, не всеобщее раскрытие кода и не окончательное решение национального спора.",
+      "caveat_en": "A preliminary GDPR interpretation, not a credit-scoring ban, universal source-code disclosure or final resolution of the national dispute.",
+      "mechanism_ru": "Ответственность за результат требует доступного объяснения, а спор о тайне разрешает суд или надзорный орган.",
+      "mechanism_en": "Accountability requires usable reasons; courts or supervisors arbitrate competing secrecy claims.",
+      "actors": ["Court of Justice of the European Union", "Dun & Bradstreet Austria GmbH", "Administrative Court of Vienna"],
+      "actor_types": ["court", "company"],
+      "jurisdictions": ["EU", "Austria"],
+      "layers": ["governance_law", "decision_support_cognition", "data_telemetry"],
+      "arcs": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION", "ARC_FINANCE_GOVERNED_SHUTDOWN"],
+      "source_ids": ["DEL_CJEU_DNB_JUDGMENT", "DEL_CJEU_DNB_RELEASE"],
+      "evidence_kind": "binding_judicial_interpretation",
+      "artifact": "regulatory_rule",
+      "force": "binding",
+      "stage": "adopted",
+      "delegation": "control_requirement",
+      "contexts": ["governance_document"],
+      "outcome_stage": "explanation_right_clarified_not_remedy_outcome_observed",
+      "authority_boundary": "Concerns accountability for automated scoring used in a consequential decision, not generative-agent autonomy.",
+      "source_claims": [
+        {
+          "source_id": "DEL_CJEU_DNB_JUDGMENT",
+          "classification": "judicial_holding",
+          "locator": "Paragraphs 55-66 and 74-76; operative ruling",
+          "excerpt": "the procedure and principles actually applied",
+          "claim": "An algorithm alone is insufficient. Authorities must balance access against protected information case by case."
+        },
+        {
+          "source_id": "DEL_CJEU_DNB_RELEASE",
+          "classification": "official_case_context",
+          "locator": "Page 1; preliminary-ruling note on page 2",
+          "claim": "The underlying dispute followed a mobile operator's refusal based on D&B's credit assessment; the national court must dispose of the dispute."
+        }
+      ],
+      "dedup": {
+        "decision": "accept_new_event",
+        "family_key": "cjeu_c203_22_dnb_explanation",
+        "nearest_existing_ids": ["SIG_2024_EU_AI_ACT_ENTERS_FORCE_GPAI", "SIG_2026_RBI_AI_KILL_SWITCH_FINANCE"],
+        "reason": "A specific GDPR explanation/contestability holding, not another AI Act milestone or model-risk framework. No SCHUFA/D&B event family was found in either canonical file."
+      }
+    },
+    {
+      "id": "SIG_2026_UK_DUAA_AUTOMATED_DECISIONS_COMMENCE",
+      "date": "2026-02-05",
+      "date_basis": "SI 2026/82 regulation 2(j) commences section 80 on February 5; the instrument was made January 29 and the Act received Royal Assent June 19, 2025.",
+      "title_ru": "В Великобритании расширяется допустимость автоматизированных решений с правом человеческого пересмотра",
+      "title_en": "UK broadens permitted automated decisions while retaining routes to human review",
+      "summary_ru": "Вступает в силу раздел 80 DUAA: для обычных персональных данных расширяются основания значимых полностью автоматизированных решений, но сохраняются информирование, возражения, вмешательство человека и оспаривание.",
+      "summary_en": "DUAA section 80 takes effect: significant solely automated decisions using ordinary personal data gain broader lawful grounds, with information, representations, human intervention and contestability safeguards.",
+      "caveat_ru": "Не безусловное разрешение: особые категории данных и основание Article 6(1)(ea) ограничены. Изменение закона не доказывает фактическое внедрение.",
+      "caveat_en": "Not blanket permission: special-category data and the Article 6(1)(ea) basis remain restricted. A legal change does not demonstrate deployment.",
+      "mechanism_ru": "Контроль смещается от узкого перечня разрешений к обязательным средствам пересмотра результата.",
+      "mechanism_en": "Control shifts from narrow permissions toward safeguards for challenging automated outcomes.",
+      "actors": ["UK Parliament", "UK Secretary of State", "Information Commissioner's Office", "UK data controllers"],
+      "actor_types": ["government", "regulator"],
+      "jurisdictions": ["UK"],
+      "layers": ["governance_law", "decision_support_cognition", "data_telemetry"],
+      "arcs": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION", "ARC_FINANCE_GOVERNED_SHUTDOWN"],
+      "source_ids": ["DEL_UK_DUAA_COMMENCEMENT", "DEL_UK_DUAA_ACT", "DEL_ICO_DUAA_EXPLANATION"],
+      "evidence_kind": "statutory_authorization_regime_change",
+      "artifact": "law",
+      "force": "binding",
+      "stage": "effective",
+      "delegation": "control_requirement",
+      "contexts": ["governance_document"],
+      "outcome_stage": "legal_permissions_changed_no_adoption_measurement",
+      "authority_boundary": "Legal permission for specified automated decisions is distinct from any institution actually delegating its decisions.",
+      "source_claims": [
+        {
+          "source_id": "DEL_UK_DUAA_COMMENCEMENT",
+          "classification": "commencement_fact",
+          "locator": "Regulations 2(j) and 5, PDF pages 2-3",
+          "claim": "Section 80 commences on February 5; savings preserve the previous rules for earlier decisions."
+        },
+        {
+          "source_id": "DEL_UK_DUAA_ACT",
+          "classification": "statutory_requirement",
+          "locator": "Section 80; new UK GDPR Articles 22A-22C, printed pages 96-97",
+          "excerpt": "no meaningful human involvement in the taking of the decision",
+          "claim": "The statute defines solely automated decisions and requires contestability and human intervention safeguards."
+        },
+        {
+          "source_id": "DEL_ICO_DUAA_EXPLANATION",
+          "classification": "regulator_interpretation",
+          "locator": "Automated decision-making; indexed primary text",
+          "claim": "ICO describes wider circumstances for solely automated decisions. Direct page fetch returned 403; the statutory sources independently support the candidate."
+        }
+      ],
+      "dedup": {
+        "decision": "accept_new_event",
+        "family_key": "uk_duaa_section80_commencement",
+        "nearest_existing_ids": ["SIG_2025_UK_CONSULT_PUBLIC_POLICY_PILOT", "SIG_2026_UK_FINANCE_AI_STRESS_TESTS"],
+        "reason": "A change in legal permission for consequential automated decisions, not consultation summarization or a nonbinding financial stress-test proposal. Keep enactment and commencement in one family."
+      }
+    },
+    {
+      "id": "SIG_2026_DWP_ADVANCES_REVIEW_CONTINUATION",
+      "date": "2026-07-09",
+      "date_basis": "Assessment publication date; observation window 2025-04-01 through 2026-03-31, not deployment start.",
+      "title_ru": "DWP сохраняет алгоритмический отбор проверок при человеческом решении по авансам",
+      "title_en": "DWP retains algorithmic triage with human decisions on benefit advances",
+      "summary_ru": "DWP сохраняет модель отбора авансов Universal Credit для проверки. Сотрудники решают по существу, не видя оценки риска или алгоритмического происхождения направления.",
+      "summary_en": "DWP retains its Universal Credit advance-review triage model. Staff decide referred requests without seeing risk scores or whether the model selected them.",
+      "caveat_ru": "Самооценка оператора; различия между группами сохраняются, данные неполны, переобученная модель ещё требует испытаний.",
+      "caveat_en": "Operator assessment; group disparities remain, data are incomplete, and the retrained replacement still requires testing.",
+      "mechanism_ru": "Отбор определяет, кого проверяют, без передачи права отказа машине.",
+      "mechanism_en": "Selection controls who faces scrutiny without delegating refusal authority.",
+      "actors": ["UK Department for Work and Pensions", "DWP human decision-makers"],
+      "actor_types": ["government", "workforce_users"],
+      "jurisdictions": ["UK"],
+      "layers": ["decision_support_cognition", "data_telemetry", "governance_law"],
+      "arcs": ["ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "source_ids": ["DEL_DWP_ADVANCES_2026"],
+      "evidence_kind": "operator_operational_effectiveness_assessment",
+      "artifact": "evaluation",
+      "force": "not_applicable",
+      "stage": "published",
+      "delegation": "not_established",
+      "contexts": ["production", "governance_document"],
+      "outcome_stage": "continued_triage_operation_with_replacement_testing_pending",
+      "authority_boundary": "Operational triage, not autonomous benefit denial.",
+      "source_claims": [
+        {
+          "source_id": "DEL_DWP_ADVANCES_2026",
+          "classification": "operator_report_not_independent_validation",
+          "locator": "Executive summary; paragraphs 10-11, 21, 25-27; statistical annex",
+          "excerpt": "the model is only used to support prioritisation",
+          "claim": "Non-UK nationals had higher referral rates without correspondingly higher rejection rates among referrals. Human decisions are the assessment's outcome labels."
+        }
+      ],
+      "dedup": {
+        "decision": "accept_new_event",
+        "family_key": "dwp_universal_credit_advances_model_assessment",
+        "nearest_existing_ids": ["SIG_2025_UK_CONSULT_PUBLIC_POLICY_PILOT", "SIG_2026_COURTS_OF_TOMORROW_RANDOMIZED_STUDY"],
+        "reason": "An operating public-benefit review workflow, not text synthesis or a judicial-assistance experiment. Consolidate the 2025 and 2026 DWP assessments into this one model family."
+      }
+    }
+  ],
+  "rejected_deferred": [
+    {
+      "item": "Doctronic refill pilot as another new event",
+      "decision": "defer_separate_node_keep_precursor_context",
+      "urls": [
+        "https://commerce.utah.gov/2026/01/06/news-release-utah-and-doctronic-announce-groundbreaking-partnership-for-ai-prescription-medication-renewals/",
+        "https://commerce.utah.gov/ai/regulatory-relief-4/authorized-pilots/doctronic/"
+      ],
+      "source_ids": ["DEL_DOCTRONIC_ANNOUNCEMENT", "DEL_DOCTRONIC_OVERSIGHT"],
+      "reason": "Not a canonical duplicate, but the bounded packet selects Nolla's later first-prescription authority mechanism. Doctronic remains a useful precursor: Phase 1 physician approval, stricter medication-group progression and formulary narrowing. Do not claim independent prescribing merely from the January announcement.",
+      "chronology_warning": "January 6 is the announcement date, not the agreement start. The official register lists signature and term start on 2025-10-24, and term end on 2026-10-24 while still labeling the entry Active. No renewal instrument was established; do not assert continued legal authorization as of November 10."
+    },
+    {
+      "item": "Utah Medical Licensing Board request to suspend Doctronic",
+      "decision": "reject_as_operational_shutdown",
+      "urls": ["https://commerce.utah.gov/wp-content/uploads/2026/04/doctronic-letter-from-medical-board.pdf"],
+      "source_ids": ["DEL_UTAH_BOARD_LETTER"],
+      "reason": "The April 20, 2026 letter recommends suspension; it is not evidence that suspension occurred. The primary indexed text supports the recommendation only. Keep within the prescribing-pilot accountability family, not as an established operational reversal."
+    },
+    {
+      "item": "Klarna abandoned AI and returned decisions to humans",
+      "decision": "reject_overclaim_defer_precise_staffing_change",
+      "existing_ids": ["SIG_2024_KLARNA_WORKLOAD_EQUIVALENT"],
+      "urls": ["https://www.sec.gov/Archives/edgar/data/2003292/000200329225000052/klarnagroupplc424b4.htm"],
+      "source_ids": ["DEL_KLARNA_PROSPECTUS"],
+      "reason": "The reviewed prospectus describes continued AI deployment plus a human-contact option, not wholesale reversal. It separates traditional ML underwriting from generative AI and says it does not use generative AI for credit underwriting. A dated, independently supported change in operational authority was not established."
+    },
+    {
+      "item": "WISeR inappropriate-denial rates and corrective-action outcomes",
+      "decision": "defer_primary_records_review",
+      "urls": [
+        "https://arstechnica.com/health/2026/09/trump-admin-using-ai-to-deny-medical-care-for-seniors-in-disastrous-experiment/",
+        "https://www.medicarerights.org/medicare-watch/2026/09/24/new-records-show-medicare-wiser-ai-prior-authorization-model-causing-inappropriate-denials-of-care"
+      ],
+      "reason": "Secondary reports identify FOIA records and corrective actions. The underlying case records were not reviewed in this bounded pass, so no denial rate, causal harm estimate or claim that machines made final denials is accepted. Reconcile any later evidence with the same WISeR family."
+    },
+    {
+      "item": "Singapore and Canada agent-governance frameworks",
+      "decision": "reject_canonical_duplicate",
+      "existing_ids": ["SIG_2026_SINGAPORE_AGENTIC_GOVERNANCE_FRAMEWORK", "SIG_2026_CANADA_AGENTIC_AI_GOVERNMENT_GUIDE"],
+      "urls": [
+        "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2026/new-model-ai-governance-framework-for-agentic-ai",
+        "https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai/guide-use-agentic-artificial-intelligence.html"
+      ],
+      "reason": "Existing records already cover bounded autonomy, accountability, permissions and recoverability. No separate new implementation mechanism was established. URLs taken from the canonical sources; not freshly reverified here."
+    },
+    {
+      "item": "Maven/ODIN authority and Anthropic live-internet evaluation pause",
+      "decision": "reject_canonical_duplicate",
+      "existing_ids": ["SIG_2026_USMC_ODIN_AUTHORITATIVE_REPORTING", "SIG_2026_ANTHROPIC_UNINTENDED_ACTIONS_INTERNET_PAUSE"],
+      "urls": [
+        "https://www.mcicom.marines.mil/News/News-Article/Article/4523871/us-marine-corps-announces-odin-reporting-system/",
+        "https://www.anthropic.com/research/investigating-unintended-model-actions"
+      ],
+      "reason": "The canonical corpus already captures authoritative military reporting and a concrete operational reversal after agent boundary failures. Repeating them would add no substantive event. URLs taken from canonical records, not independently reverified in this pass."
+    },
+    {
+      "item": "Additional Utah agreements and health-system master agreements",
+      "decision": "defer_not_yet_operational_or_same_program_family",
+      "urls": ["https://commerce.utah.gov/ai/regulatory-relief-4/authorized-pilots/"],
+      "reason": "The register distinguishes approved pilots not yet started from active pilots. Master agreements authorize no specific pilot by themselves. Do not turn agreement counts into autonomous clinical deployments; Nolla is the selected substantive case."
+    }
+  ],
+  "handoff": {
+    "accepted_candidate_count": 6,
+    "canonical_ingestion_performed": false,
+    "publish_or_commit_performed": false,
+    "editorial_relationships": "Thematic arc membership only. No causal connection between the UK legal reform and DWP continuation is asserted.",
+    "ingestion_notes": [
+      "The six entries can be copied from candidates into the lead package's events array after source review; sources is keyed by source_id as requested.",
+      "The existing artifact vocabulary has no judicial_judgment value. The CJEU candidate uses regulatory_rule as a coarse compatibility category; evidence_kind and source_class preserve that it is a court judgment, not regulator-made legislation.",
+      "All optional force/stage/delegation/context values use the existing vocabulary. Retain authority_boundary because not_established for DWP concerns final refusal authority, not absence of operational triage.",
+      "The Nolla protocol thresholds are operator-reported. Preserve the distinction between contractual thresholds and observed progression.",
+      "Read the missing Utah agreement and current continuation/phase documents before upgrading historical pilot reporting to claims of current autonomous prescribing."
+    ],
+    "anti_overfit": "Selection follows transferable mechanisms and authority boundaries across jurisdictions; source count, publicity and military/agent incident volume are not acceptance criteria."
+  }
+}

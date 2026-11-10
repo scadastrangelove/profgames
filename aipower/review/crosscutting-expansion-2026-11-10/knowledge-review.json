@@ -1,0 +1,622 @@
+{
+  "packet_id": "knowledge-adversarial-review-2026-11-10",
+  "reviewed_on": "2026-11-10",
+  "cutoff_date": "2026-11-10",
+  "status": "review_complete_not_ingested",
+  "scope": "Adversarial source and canonical-family review of the eight selected candidates in the two 2026-11-09 knowledge packets. No new discovery search.",
+  "input_files": [
+    "review/crosscutting-views-2026-11-09/knowledge-research.json",
+    "review/crosscutting-views-2026-11-09/knowledge-access.json"
+  ],
+  "decision_counts": {"accept": 5, "update_existing": 1, "defer": 2, "reject": 0},
+  "selection_policy": "Six prioritized integration actions: five new records and one correction to an existing family. RAVEN and the antibiotic study are evidence-supported editorial reserves, not disproven results or substantive duplicates. The two original reserve candidates were not promoted into this eight-item review.",
+  "integration_contract": {
+    "script_reviewed": "scripts/migrate_crosscutting_expansion.py",
+    "new_event_mapping": "Copy ready_records into package.events and merge the keyed sources dictionary. Copy updates into package.updates. Do not ingest decisions or source_audit as new events.",
+    "update_semantics": "The migration's pair() writes field_ru, field_en and the language-specific base field for every name in bilingual_fields. fields contains exact shared field replacements. source_ids appends previously absent URLs.",
+    "no_automatic_ingestion": true,
+    "no_commit_or_publication": true
+  },
+  "method": {
+    "instructions_read": ["/Users/serg/Documents/zhet/build/CLAUDE.md", "/Users/serg/Documents/zhet/build/zhet/BIBLE.md", "/Users/serg/Documents/zhet/build/zhet/PROJECT_REFERENCE.md:146"],
+    "local_instructions": "No additional AGENTS.md or CLAUDE.md found under the target repository.",
+    "parallel_agents": "Unavailable in this session: tool discovery exposed no multi-agent execution tool. No parallel-agent or independent-second-review claim is made.",
+    "source_review": "Opened primary reports, version histories, official financial statements, author abstracts and institutional repositories. Narrow searches were limited to the supplied studies, publication dates, access mirrors and a possible MatterGen author response.",
+    "dedup": "Parsed both canonical languages; checked IDs, normalized source URLs, DOI/arXiv families, relevant event text and existing arc theses. Related mechanisms alone were not treated as duplicate studies.",
+    "inference_policy": "Reported empirical results remain author or organizer claims. Mechanism text is editorial inference. No forecast is promoted to an observed outcome; no experiment was independently reproduced."
+  },
+  "canonical_snapshot": {
+    "en": {"file": "ai_power_storygraph_en.json", "sha256": "2d7f80a70901c5c783760a2ceae72085748234057ee27b2a0c11d8b78f01567a", "events": 567, "sources": 837, "arcs": 30},
+    "ru": {"file": "ai_power_storygraph_ru.json", "sha256": "e5664dd9bbb6798905d2bfe94a16d81161f9aa56249a0fd33ed9b572e222c12f", "events": 567, "sources": 837, "arcs": 30},
+    "write_boundary": "Only this knowledge-review.json is authored. Pre-existing canonical, HTML, generator and UI changes belong to other work and were not modified or reverted."
+  },
+  "sources": {
+    "KR_FIRST_REPORT": {
+      "name": "First Proof Foundation / Hexagon",
+      "title": "First Proof Third Batch, version 1",
+      "date": "2026-10-14",
+      "url": "https://hexagonmath.org/pdf/2610.00244v1",
+      "type": "Research / technical",
+      "source_class": "external_benchmark_report",
+      "primary_or_secondary": "primary"
+    },
+    "KR_FIRST_RELEASE": {
+      "name": "First Proof Foundation",
+      "title": "Third Batch results press release",
+      "date": "2026-10-14",
+      "url": "https://1stproof.org/third-batch-press-release.html",
+      "type": "Research / technical",
+      "source_class": "organizer_results_release",
+      "primary_or_secondary": "primary"
+    },
+    "KR_FIRST_ARTIFACTS": {
+      "name": "First Proof Foundation",
+      "title": "Third Batch benchmark: systems and evidence artifacts",
+      "date": null,
+      "url": "https://1stproof.org/third-batch.html",
+      "type": "Research / technical",
+      "source_class": "living_project_documentation",
+      "primary_or_secondary": "primary"
+    },
+    "KR_MATTERGEN_ORIGINAL": {
+      "name": "Zeni et al. / Nature",
+      "title": "A generative model for inorganic materials design",
+      "date": "2025-01-16",
+      "url": "https://www.nature.com/articles/s41586-025-08628-5",
+      "type": "Research / technical",
+      "source_class": "peer_reviewed_study",
+      "primary_or_secondary": "primary"
+    },
+    "KR_MATTERGEN_CROSSMARK": {
+      "name": "Nature publisher metadata / Crossmark",
+      "title": "Publication history and update status for 10.1038/s41586-025-08628-5",
+      "date": "2025-01-16",
+      "url": "https://crossmark.crossref.org/dialog/?doi=10.1038/s41586-025-08628-5",
+      "type": "Research / technical",
+      "source_class": "publisher_publication_metadata",
+      "primary_or_secondary": "primary"
+    },
+    "KR_MATTERGEN_REANALYSIS": {
+      "name": "Mikkel Juelsholt / Materials Horizons / Humboldt repository",
+      "title": "Continued challenges in high-throughput materials predictions: MatterGen predicts compounds from the training dataset",
+      "date": "2026-04-20",
+      "url": "https://edoc.hu-berlin.de/bitstreams/09d6e492-2266-4a06-bce2-5c45b82f6f07/download",
+      "type": "Research / technical",
+      "source_class": "peer_reviewed_independent_reanalysis",
+      "primary_or_secondary": "primary",
+      "doi": "10.1039/d6mh00268d",
+      "publisher_url": "https://pubs.rsc.org/en/content/articlehtml/2026/mh/d6mh00268d"
+    },
+    "KR_MATTERGEN_REPOSITORY": {
+      "name": "Humboldt University repository",
+      "title": "Repository record for the MatterGen reanalysis",
+      "date": "2026-04-20",
+      "url": "https://edoc.hu-berlin.de/items/2081bca4-f044-43d3-a5f5-1d7c39f9e3e7",
+      "type": "Research / technical",
+      "source_class": "institutional_repository_metadata",
+      "primary_or_secondary": "primary"
+    },
+    "KR_MATTERGEN_PREPRINT": {
+      "name": "Mikkel Juelsholt / ChemRxiv",
+      "title": "MatterGen reanalysis preprint, version 2 and version history",
+      "date": "2026-01-05",
+      "url": "https://www.cambridge.org/engage/chemrxiv/article-details/694d24f36e8e74030e9067de",
+      "type": "Research / technical",
+      "source_class": "research_preprint_version_history",
+      "primary_or_secondary": "primary"
+    },
+    "KR_WMF_REPORT": {
+      "name": "Wikimedia Enterprise / Liam Wyatt",
+      "title": "Wikimedia Enterprise Financial Report: Fiscal Year 2024-2025",
+      "date": "2025-11-24",
+      "url": "https://diff.wikimedia.org/2025/11/24/wikimedia-enterprise-financial-report-fiscal-year-2024-2025/",
+      "type": "Primary source",
+      "source_class": "operator_financial_report",
+      "primary_or_secondary": "primary"
+    },
+    "KR_WMF_AUDIT": {
+      "name": "Wikimedia Foundation / KPMG LLP",
+      "title": "Consolidated Financial Statements, June 30, 2025 and 2024",
+      "date": "2025-09-30",
+      "url": "https://upload.wikimedia.org/wikipedia/foundation/3/3f/Wikimedia_Foundation_FY_24-25_Audit_Report.pdf",
+      "type": "Primary source",
+      "source_class": "independently_audited_financial_statements",
+      "primary_or_secondary": "primary"
+    },
+    "KR_WMF_PRINCIPLES": {
+      "name": "Wikimedia Enterprise",
+      "title": "Operating principles, inspected revision 30178240",
+      "date": "2026-03-05",
+      "url": "https://meta.wikimedia.org/wiki/Wikimedia_Enterprise/Principles",
+      "type": "Primary source",
+      "source_class": "operator_governance_principles",
+      "primary_or_secondary": "primary"
+    },
+    "KR_WMF_PARTNERS": {
+      "name": "Wikimedia Enterprise",
+      "title": "Announcing New Wikimedia Enterprise Partners for Wikipedia's 25th Birthday",
+      "date": "2026-01-15",
+      "url": "https://enterprise.wikimedia.com/blog/wikipedia-25-enterprise-partners/",
+      "type": "Primary source",
+      "source_class": "operator_partner_disclosure",
+      "primary_or_secondary": "primary"
+    },
+    "KR_WIKI_V7": {
+      "name": "Mehrzad Khosravi and Hema Yoganarasimhan / arXiv",
+      "title": "Impact of AI Search Summaries on Website Traffic, version 7",
+      "date": "2026-10-25",
+      "url": "https://arxiv.org/html/2602.18455v7",
+      "type": "Research / technical",
+      "source_class": "observational_difference_in_differences_preprint",
+      "primary_or_secondary": "primary"
+    },
+    "KR_WIKI_HISTORY": {
+      "name": "Khosravi and Yoganarasimhan / arXiv",
+      "title": "arXiv:2602.18455v7 submission history",
+      "date": "2026-10-25",
+      "url": "https://arxiv.org/abs/2602.18455v7",
+      "type": "Research / technical",
+      "source_class": "research_version_history",
+      "primary_or_secondary": "primary"
+    },
+    "KR_WIKI_V2": {
+      "name": "Khosravi and Yoganarasimhan / arXiv",
+      "title": "arXiv:2602.18455v2 withdrawal notice",
+      "date": "2026-03-26",
+      "url": "https://arxiv.org/abs/2602.18455v2",
+      "type": "Research / technical",
+      "source_class": "withdrawal_notice_historical_context_only",
+      "primary_or_secondary": "primary"
+    },
+    "KR_WIKI_V5": {
+      "name": "Khosravi and Yoganarasimhan / arXiv",
+      "title": "arXiv:2602.18455v5 revised abstract",
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2602.18455v5",
+      "type": "Research / technical",
+      "source_class": "research_preprint_prior_version",
+      "primary_or_secondary": "primary"
+    },
+    "KR_WIKI_OPERATOR": {
+      "name": "Wikimedia Foundation / Marshall Miller",
+      "title": "New user trends on Wikipedia",
+      "date": "2025-10-17",
+      "url": "https://wikimediafoundation.org/news/2025/10/17/new-user-trends-on-wikipedia/",
+      "type": "Primary source",
+      "source_class": "operator_traffic_measurement_and_interpretation",
+      "primary_or_secondary": "primary"
+    },
+    "KR_EBU_LAUNCH": {
+      "name": "European Broadcasting Union",
+      "title": "International news-integrity study launch",
+      "date": "2025-10-22",
+      "url": "https://www.ebu.ch/news/2025/10/ai-s-systemic-distortion-of-news-is-consistent-across-languages-and-territories-international-study-by-public-service-broadcaste",
+      "type": "Research / technical",
+      "source_class": "study_organizer_release",
+      "primary_or_secondary": "primary"
+    },
+    "KR_EBU_REPORT": {
+      "name": "BBC / European Broadcasting Union",
+      "title": "News Integrity in AI Assistants: An international PSM study",
+      "date": "2025-10",
+      "url": "https://www.ebu.ch/Report/MIS-BBC/NI_AI_2025.pdf",
+      "type": "Research / technical",
+      "source_class": "human_rated_product_audit",
+      "primary_or_secondary": "primary"
+    },
+    "KR_COMMON_ABSTRACT": {
+      "name": "Kandpal et al. / arXiv",
+      "title": "The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text",
+      "date": "2025-06-05",
+      "url": "https://arxiv.org/abs/2506.05209",
+      "type": "Research / technical",
+      "source_class": "research_preprint_and_release",
+      "primary_or_secondary": "primary"
+    },
+    "KR_COMMON_PAPER": {
+      "name": "Kandpal et al. / arXiv",
+      "title": "Common Pile v0.1 full text, version 1",
+      "date": "2025-06-05",
+      "url": "https://arxiv.org/html/2506.05209v1",
+      "type": "Research / technical",
+      "source_class": "author_training_evaluation",
+      "primary_or_secondary": "primary"
+    },
+    "KR_COMMON_ARTIFACTS": {
+      "name": "Common Pile project",
+      "title": "Official Common Pile data, Comma models and collection code",
+      "date": null,
+      "url": "https://huggingface.co/common-pile",
+      "type": "Research / technical",
+      "source_class": "living_artifact_index",
+      "primary_or_secondary": "primary"
+    },
+    "KR_RAVEN_PAPER": {
+      "name": "Lafarga et al. / arXiv",
+      "title": "Automatic search for transiting planets in TESS-SPOC FFIs with RAVEN, version 1",
+      "date": "2026-03-23",
+      "url": "https://arxiv.org/html/2603.22597v1",
+      "type": "Research / technical",
+      "source_class": "accepted_research_paper",
+      "primary_or_secondary": "primary"
+    },
+    "KR_RAVEN_HISTORY": {
+      "name": "Lafarga et al. / arXiv",
+      "title": "RAVEN catalogue paper submission history",
+      "date": "2026-04-24",
+      "url": "https://arxiv.org/abs/2603.22597",
+      "type": "Research / technical",
+      "source_class": "research_version_history",
+      "primary_or_secondary": "primary"
+    },
+    "KR_RAVEN_WRAP": {
+      "name": "University of Warwick / WRAP",
+      "title": "RAVEN catalogue article: journal publication metadata",
+      "date": "2026-03-25",
+      "url": "https://wrap.warwick.ac.uk/id/eprint/199487/",
+      "type": "Research / technical",
+      "source_class": "institutional_repository_metadata",
+      "primary_or_secondary": "primary"
+    },
+    "KR_RAVEN_DATA": {
+      "name": "Lafarga et al. / Zenodo",
+      "title": "RAVEN catalogue tables and diagnostic plots",
+      "date": "2026-03-25",
+      "url": "https://zenodo.org/records/19661443",
+      "type": "Research / technical",
+      "source_class": "author_deposited_data",
+      "primary_or_secondary": "primary"
+    },
+    "KR_ANTIBIOTICS_ABSTRACT": {
+      "name": "Krishnan et al. / Cell / Europe PMC",
+      "title": "A generative deep learning approach to de novo antibiotic design",
+      "date": "2025-08-14",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:40816267%20AND%20SRC:MED&format=json&resultType=core",
+      "type": "Research / technical",
+      "source_class": "indexed_author_abstract_and_publication_metadata",
+      "primary_or_secondary": "primary",
+      "doi": "10.1016/j.cell.2025.07.033",
+      "human_readable_url": "https://pubmed.ncbi.nlm.nih.gov/40816267/"
+    },
+    "KR_ANTIBIOTICS_MIT": {
+      "name": "MIT / Anne Trafton",
+      "title": "Using generative AI, researchers design compounds that can kill drug-resistant bacteria",
+      "date": "2025-08-14",
+      "url": "https://news.mit.edu/2025/using-generative-ai-researchers-design-compounds-kill-drug-resistant-bacteria-0814",
+      "type": "Research / technical",
+      "source_class": "institutional_research_account",
+      "primary_or_secondary": "primary"
+    }
+  },
+  "decisions": [
+    {
+      "candidate_id": "SIG_2026_FIRST_PROOF_BATCH3_EXTERNAL_EVALUATION",
+      "decision": "accept",
+      "reason": "Adds external review institutions, separate assessment dimensions and inspectable artifacts, rather than another developer capability announcement.",
+      "dedup": {"exact_existing_ids": [], "same_family_existing_ids": [], "related_existing_ids": ["SIG_2026_ALETHEIA_RESEARCH_AGENT", "SIG_2024_ALPHAPROOF_IMO", "SIG_2025_ALPHAEVOLVE_ALGORITHMS"], "decision": "new_evaluation_family; one node for Batch 3, not one per harness"},
+      "claim_audit": [
+        {"claim": "Correctness totals are ProofCouncil 9/10, direct GPT-6 Astra 7/10, Humanize using Kimi K3 0/10.", "result": "verified_as_organizer_scoring", "source_ids": ["KR_FIRST_REPORT"], "locator": "Table 2, printed p.26; threshold is mean score at least 0.5, which permits minor repairable errors."},
+        {"claim": "Testing October 2-5; reviewer meeting October 8-9; results October 14, 2026.", "result": "verified", "source_ids": ["KR_FIRST_REPORT", "KR_FIRST_RELEASE"], "locator": "Sections 2.2-2.3 and dated release."},
+        {"claim": "Reported run costs $1,888 versus $36; adequate citations 7/10 versus 4/10 for ProofCouncil and direct Astra.", "result": "verified_but_not_headline", "source_ids": ["KR_FIRST_REPORT", "KR_FIRST_RELEASE"], "locator": "Tables 4-5; costs have differing accounting bases and exclude full research/training/review costs."},
+        {"claim": "The open-weight result measures all open models or a national capability gap.", "result": "rejected_generalization", "source_ids": ["KR_FIRST_ARTIFACTS", "KR_FIRST_REPORT"], "locator": "Only Humanize/Kimi K3 represented open weights; it lacked web search. ProofCouncil is a multi-model harness, not simply a bare Astra run."}
+      ],
+      "review_corrections": ["Name the tested open-weight system, not Kimi K3 in isolation.", "Describe external expert scoring, not formal proof certification or newly discovered unsolved theorems.", "External evaluation does not imply financial independence: organizer discloses industry funding."],
+      "ready_record_id": "SIG_2026_FIRST_PROOF_BATCH3_EXTERNAL_EVALUATION"
+    },
+    {
+      "candidate_id": "SIG_2026_MATTERGEN_NOVELTY_REANALYSIS",
+      "decision": "update_existing",
+      "existing_id": "SIG_2025_MATTERGEN_SYNTHESIS",
+      "reason": "Same experimental example and research family. Correct the existing synthesis account and add the independent challenge, rather than count another discovery.",
+      "dedup": {"exact_existing_ids": ["SIG_2025_MATTERGEN_SYNTHESIS"], "same_family_existing_ids": ["SIG_2025_MATTERGEN_SYNTHESIS"], "decision": "update_only; no new SIG_2026_MATTERGEN_NOVELTY_REANALYSIS event"},
+      "claim_audit": [
+        {"claim": "Original online publication day.", "result": "resolved_to_2025-01-16", "source_ids": ["KR_MATTERGEN_CROSSMARK"], "locator": "Published Online / First Online; print date is 2025-03-20."},
+        {"claim": "The critique first appeared in April 2026.", "result": "corrected", "source_ids": ["KR_MATTERGEN_PREPRINT", "KR_MATTERGEN_REPOSITORY"], "locator": "Preprint v1 2025-06-19; v2 2026-01-05; journal online 2026-04-20. April is peer-reviewed publication, not first criticism."},
+        {"claim": "The material's novelty is disputed.", "result": "verified_as_independent_reanalysis_claim", "source_ids": ["KR_MATTERGEN_REANALYSIS"], "locator": "Printed pp.5673-5676: known rutile solid-solution family, training/reference structures, and disputed composition. The analysis itself notes instrumental uncertainty and recommends remeasurement."},
+        {"claim": "Measured property within 20% of target.", "result": "requires_precision", "source_ids": ["KR_MATTERGEN_ORIGINAL"], "locator": "Experimental validation: target 200 GPa; estimated bulk modulus maximum 169 GPa, reported mean 158 +/- 11 GPa. Bulk modulus uses nanoindentation plus a DFT-derived Poisson ratio, not a direct bulk-modulus measurement."},
+        {"claim": "Novelty criticism retracts all MatterGen results.", "result": "rejected", "source_ids": ["KR_MATTERGEN_CROSSMARK", "KR_MATTERGEN_REANALYSIS"], "locator": "Crossmark reports document current. This is a reanalysis, not a retraction or new independent synthesis."}
+      ],
+      "review_corrections": ["Do not retain the unqualified statement that the proposed structure was synthesized.", "Keep original reported property testing separate from novelty and composition disputes.", "No direct author response was established by the bounded source-validation search; absence of a located response is not evidence that none exists."],
+      "update_index": 0
+    },
+    {
+      "candidate_id": "SIG_2026_RAVEN_TESS_STATISTICAL_VALIDATION",
+      "decision": "defer",
+      "deferral_kind": "editorial_reserve_evidence_supported",
+      "reason": "Valid distinct study, but the bounded shortlist prioritizes verification institutions, correction mechanisms and access economics. Existing ExoMiner records already illustrate archive-based statistical validation. This is not a claim that RAVEN duplicates ExoMiner.",
+      "dedup": {"exact_existing_ids": [], "same_family_existing_ids": [], "related_existing_ids": ["SIG_2025_EXOMINER_PLUS_TESS_CANDIDATES", "SIG_2021_EXOMINER_301_VALIDATIONS"], "decision": "distinct_study_family_deferred_not_duplicate"},
+      "verified_date": "2026-03-25",
+      "date_basis": "Journal availability recorded by Warwick; first preprint 2026-03-23, revision v2 2026-04-24. Neither acceptance 2026-03-07 nor the later issue is the result-publication day.",
+      "claim_audit": [
+        {"claim": "Over 2.2 million main-sequence stars, sectors 1-55, target periods 0.5-16 days.", "result": "verified", "source_ids": ["KR_RAVEN_PAPER", "KR_RAVEN_HISTORY"], "locator": "Abstract and Data."},
+        {"claim": "118 newly validated planets, including 31 newly detected here.", "result": "verified", "source_ids": ["KR_RAVEN_PAPER"], "locator": "Sections 4.2 and 5.2: 143 total validated includes 25 already known; 118 = 87 prior candidates + 31 new detections."},
+        {"claim": "Over 2,000 candidates are additional confirmed planets.", "result": "rejected", "source_ids": ["KR_RAVEN_PAPER"], "locator": "Conclusion: vetted sample 2,170 includes the validated sample. These nested samples must not be summed."},
+        {"claim": "Zenodo files were publicly available on March 25.", "result": "not_established", "source_ids": ["KR_RAVEN_DATA"], "locator": "Declared publication date 2026-03-25, but technical creation 2026-04-20 and modification 2026-04-21. Retrospective publication metadata does not prove access on March 25."}
+      ],
+      "release_condition": "A later editorial expansion can use the verified journal date and scoped counts. Do not claim independent observing confirmation, complete planet census, or March 25 deposit availability.",
+      "source_ids": ["KR_RAVEN_PAPER", "KR_RAVEN_HISTORY", "KR_RAVEN_WRAP", "KR_RAVEN_DATA"]
+    },
+    {
+      "candidate_id": "SIG_2025_GENERATIVE_ANTIBIOTICS_PRECLINICAL_VALIDATION",
+      "decision": "defer",
+      "deferral_kind": "editorial_reserve_with_full_protocol_limit",
+      "reason": "The narrow abstract-level result is supported, but no full protocol was audited after publisher/PMC retrieval blocks. Kept outside the six prioritized actions; stronger efficacy, reproducibility or synthesis-success claims remain deferred.",
+      "dedup": {"exact_existing_ids": [], "same_family_existing_ids": [], "related_existing_ids": ["SIG_2025_RENTOSERTIB_PHASE2A", "SIG_2026_GOOGLE_WETLAB_AGENTS"], "decision": "distinct_NG1_DN1_study; publication, issue and later coverage are one family"},
+      "verified_date": "2025-08-14",
+      "date_basis": "Europe PMC's indexed author record explicitly gives firstPublicationDate and electronicPublicationDate 2025-08-14; MIT release is also August 14. Exact October issue day was not independently resolved and is not retained.",
+      "claim_audit": [
+        {"claim": "Seven of 24 synthesized compounds showed selective antibacterial activity; two leads reduced bacterial burden in mouse models.", "result": "verified_in_author_abstract_not_independently_replicated", "source_ids": ["KR_ANTIBIOTICS_ABSTRACT"], "locator": "abstractText; DOI 10.1016/j.cell.2025.07.033, PMID 40816267."},
+        {"claim": "Two of 80 selected molecules in the fragment branch could be synthesized; 22 in the unconstrained branch were synthesized.", "result": "verified_as_institutional_account", "source_ids": ["KR_ANTIBIOTICS_MIT"], "locator": "Exploring chemical space; Unconstrained design. These are different selection stages, not a single denominator for generation success."},
+        {"claim": "This establishes a treatment ready for patients or general drug-development cost savings.", "result": "rejected", "source_ids": ["KR_ANTIBIOTICS_ABSTRACT", "KR_ANTIBIOTICS_MIT"], "locator": "Preclinical study; medicinal-chemistry follow-up remains separate."}
+      ],
+      "release_condition": "Narrow animal/laboratory wording can be reconsidered in a later expansion. Full protocol and controls would be needed for stronger effect-size or reproducibility claims.",
+      "source_ids": ["KR_ANTIBIOTICS_ABSTRACT", "KR_ANTIBIOTICS_MIT"]
+    },
+    {
+      "candidate_id": "SIG_2025_WIKIMEDIA_ENTERPRISE_REVENUE_OPEN_ACCESS",
+      "decision": "accept",
+      "reason": "Adds realized audited revenue and the distinction between charging for delivery infrastructure and exclusive control of content.",
+      "dedup": {"exact_existing_ids": [], "same_family_existing_ids": [], "related_existing_ids": ["SIG_2024_NEWS_CORP_OPENAI_PARTNERSHIP", "SIG_2026_MICROSOFT_PUBLISHER_CONTENT_MARKETPLACE", "SIG_2026_WIKIMEDIA_AGENT_ACTIVITY_INVESTIGATION"], "decision": "new_financial_disclosure; existing deals and agent-activity investigation are different events"},
+      "claim_audit": [
+        {"claim": "FY2024-25 recognized revenue $8,297,917; cash collected $7,467,500; prior-year recognized revenue $3,351,250.", "result": "verified", "source_ids": ["KR_WMF_AUDIT"], "locator": "Note 1(o), printed p.10 (PDF index 11). Cash receipts are not accrual revenue or profit."},
+        {"claim": "Date and period.", "result": "verified_with_narrowed_basis", "source_ids": ["KR_WMF_REPORT", "KR_WMF_AUDIT"], "locator": "Public report 2025-11-24; fiscal year ended 2025-06-30; auditor opinion 2025-09-30. Blog displays later update 2026-11-04. Audit-upload day was not reverified and is not needed."},
+        {"claim": "Free access, nonexclusive contracts and community editorial control.", "result": "verified_as_operating_principles_not_contract_compliance_audit", "source_ids": ["KR_WMF_PRINCIPLES"], "locator": "No restriction on free use; No exclusive contracts; No editorial influence. Page identifies revision 30178240, edited 2026-03-05, not policy inception."},
+        {"claim": "January 2026 partners paid the previous fiscal year's revenue.", "result": "rejected_attribution", "source_ids": ["KR_WMF_PARTNERS"], "locator": "Announcement 2026-01-15 names Amazon, Meta, Microsoft, Mistral AI and Perplexity; relationships were formalized over the preceding year, without per-partner terms."}
+      ],
+      "ready_record_id": "SIG_2025_WIKIMEDIA_ENTERPRISE_REVENUE_OPEN_ACCESS"
+    },
+    {
+      "candidate_id": "SIG_2026_WIKIPEDIA_AIO_REFERRAL_DID",
+      "decision": "accept",
+      "reason": "Distinct publisher-side observational study; keep one family with explicit revised-version chronology and an assumption-qualified estimate.",
+      "dedup": {"exact_existing_ids": [], "same_family_existing_ids": [], "related_existing_ids": ["SIG_2025_PEW_AI_SUMMARY_CLICK_OBSERVATION", "SIG_2023_GEO_VISIBILITY_EXPERIMENT"], "decision": "new_study_family; neither Pew click observation nor GEO visibility experiment"},
+      "claim_audit": [
+        {"claim": "English search referrals declined an estimated 5.45% relative to German and 4.82% relative to French.", "result": "verified_in_v7", "source_ids": ["KR_WIKI_V7"], "locator": "Abstract and PPML DiD results; external-search referrals, not all pageviews or revenue."},
+        {"claim": "These are February findings or new October estimates.", "result": "both_framings_rejected", "source_ids": ["KR_WIKI_HISTORY", "KR_WIKI_V2", "KR_WIKI_V5"], "locator": "v1 2026-02-05; v2 withdrawn 2026-03-26 pending expanded data; revised numbers already appear in v5 2026-08-26. v7 2026-10-25 is the reviewed version, not first appearance of the estimates."},
+        {"claim": "Controlled exposure and parallel trends.", "result": "qualified", "source_ids": ["KR_WIKI_V7"], "locator": "December 2023-December 2024 article-language panel; language proxies for country exposure; referrals combine search engines. Appendix B explicitly documents pretrend deviations and sensitivity assumptions."},
+        {"claim": "Wikimedia's roughly 8% aggregate human-pageview decline independently confirms this causal estimate.", "result": "rejected", "source_ids": ["KR_WIKI_OPERATOR"], "locator": "Different outcome and period; revised bot classification. AI/social-media attribution is operator interpretation."}
+      ],
+      "ready_record_id": "SIG_2026_WIKIPEDIA_AIO_REFERRAL_DID"
+    },
+    {
+      "candidate_id": "SIG_2025_EBU_BBC_MULTILINGUAL_NEWS_INTEGRITY",
+      "decision": "accept",
+      "reason": "Adds a multi-market human-rated sourcing audit, distinct from visibility manipulation and outlet-identity experiments.",
+      "dedup": {"exact_existing_ids": [], "same_family_existing_ids": [], "related_existing_ids": ["SIG_2025_MEDIA_IDENTITY_CITATION_BIAS", "SIG_2026_CHINESE_SEARCH_WEB_APP_SOURCE_DIFFERENCES", "SIG_2026_PUBLIC_POSTS_AI_SEARCH_CITATION_EXPERIMENT"], "decision": "new_audit_family; prior BBC round is contextual, not a second new event"},
+      "claim_audit": [
+        {"claim": "45% significant issues; 31% significant sourcing issues; 14 languages, 18 countries, four assistants.", "result": "verified_with_denominator", "source_ids": ["KR_EBU_REPORT", "KR_EBU_LAUNCH"], "locator": "Report introduction and findings: percentages use 2,709 evaluated core responses; 353 custom responses are additional, not the percentage denominator."},
+        {"claim": "Historical versions and dates.", "result": "verified", "source_ids": ["KR_EBU_REPORT", "KR_EBU_LAUNCH"], "locator": "Launch 2025-10-22; response generation 2025-05-24 to 2025-06-10. Printed p.62: free/default ChatGPT GPT-4o, Gemini 2.5 Flash; Copilot and Perplexity default consumer products with no exact backend version specified."},
+        {"claim": "BBC-only significant-issue rate improved from 51% to 37%.", "result": "verified_but_not_like_for_like_causal_comparison", "source_ids": ["KR_EBU_REPORT"], "locator": "Printed pp.3 and 19; question selection and product timing differ."},
+        {"claim": "The audit proves intentional censorship or November 2026 model failure rates.", "result": "rejected", "source_ids": ["KR_EBU_REPORT"], "locator": "Methods pp.61-65; prompts favored participant sources where possible, technical blocks were lifted, and ratings did not penalize use of other publishers."}
+      ],
+      "ready_record_id": "SIG_2025_EBU_BBC_MULTILINGUAL_NEWS_INTEGRITY"
+    },
+    {
+      "candidate_id": "SIG_2025_COMMON_PILE_OPEN_LICENSED_PRETRAINING",
+      "decision": "accept",
+      "reason": "Adds a released corpus plus trained-model evidence for an open-data alternative, not a legal ruling or merely an openness definition.",
+      "dedup": {"exact_existing_ids": [], "same_family_existing_ids": [], "related_existing_ids": ["SIG_2025_BARTZ_ANTHROPIC_SPLIT_FAIR_USE", "SIG_2024_OSI_OPEN_SOURCE_AI_DEFINITION"], "decision": "one_Common_Pile_v0.1_and_Comma_family; later venue publication is not independent replication"},
+      "claim_audit": [
+        {"claim": "8 TB, 30 sources, two 7B Comma models.", "result": "verified", "source_ids": ["KR_COMMON_ABSTRACT", "KR_COMMON_ARTIFACTS"], "locator": "Paper abstract and official artifact inventory. Living inventory says over 30 sources; the record pins the paper's v0.1 count."},
+        {"claim": "Competitive with Llama 1/2 7B at similar compute budgets.", "result": "narrowed_to_parameter_and_token_budgets", "source_ids": ["KR_COMMON_PAPER"], "locator": "Section 4.4: Comma-1T versus Llama 1 7B and other 1T baselines; Comma-2T versus Llama 2 7B and other 2T baselines. Not matched dollar cost or uniform superiority on every benchmark."},
+        {"claim": "Dates and peer-review status.", "result": "publication_date_verified_conference_status_not_reverified", "source_ids": ["KR_COMMON_ABSTRACT", "KR_COMMON_ARTIFACTS"], "locator": "arXiv v1 2025-06-05; official project index lists announcement Jun 6, 2025. NeurIPS proceedings URL timed out; the ready record does not depend on a peer-review claim."},
+        {"claim": "Open data removes all licensing, language and infrastructure constraints.", "result": "rejected", "source_ids": ["KR_COMMON_PAPER"], "locator": "Sections 2 and 4.1: licensing diligence has limitations; English filtering; bounded model scale. Compute and distribution remain separate dependencies."}
+      ],
+      "ready_record_id": "SIG_2025_COMMON_PILE_OPEN_LICENSED_PRETRAINING"
+    }
+  ],
+  "ready_records": [
+    {
+      "id": "SIG_2026_FIRST_PROOF_BATCH3_EXTERNAL_EVALUATION",
+      "date": "2026-10-14",
+      "date_basis": "Publication of Batch 3 report v1 and results. Testing: 2026-10-02 through 2026-10-05; expert meeting: 2026-10-08 through 2026-10-09.",
+      "title_ru": "First Proof: внешняя оценка отделяет корректность доказательства от изложения",
+      "title_en": "First Proof: external review separates proof correctness from exposition",
+      "summary_ru": "В Batch 3 эксперты засчитали по порогу корректности 9 из 10 задач ProofCouncil, 7 прямому GPT-6 Astra и 0 системе Humanize на Kimi K3. Решения, рецензии, журналы и код опубликованы.",
+      "summary_en": "In Batch 3, experts judged 9 of 10 ProofCouncil solutions, 7 direct GPT-6 Astra solutions and none from Humanize using Kimi K3 to have met the correctness threshold. Solutions, reviews, logs and code were published.",
+      "caveat_ru": "Порог допускает исправимые ошибки и не является формальной проверкой. Люди уже решили эти задачи. Различия оболочек и инструментов, один открытый участник и отраслевое финансирование ограничивают обобщение.",
+      "caveat_en": "The threshold allows repairable errors and is not formal verification. Humans had already solved the problems. Harness/tool differences, one open-weight entrant and industry funding limit generalization.",
+      "mechanism_ru": "Публикация материалов проверки позволяет отделять результат модели от решения экспертного сообщества и условий доступа к вычислениям.",
+      "mechanism_en": "Publishing review artifacts separates model output from expert validation and the conditions of compute access.",
+      "actors": ["First Proof Foundation", "IMProofBench", "OpenAI", "Anthropic", "Moonshot AI"],
+      "actor_types": ["research", "company"],
+      "jurisdictions": ["US"],
+      "geographic_scope_basis": "US denotes the documented review meeting at Carnegie Mellon ICARM; not a country ranking or the full nationality of participating teams.",
+      "layers": ["decision_support_cognition", "model_weights", "cloud_inference"],
+      "arcs": ["ARC_KNOWLEDGE_PRODUCTION_VALIDATION", "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"],
+      "source_ids": ["KR_FIRST_REPORT", "KR_FIRST_RELEASE", "KR_FIRST_ARTIFACTS"],
+      "evidence_kind": "external_benchmark_with_anonymized_expert_review",
+      "contexts": ["benchmark", "controlled_evaluation"],
+      "outcome_stage": "expert_scored_solutions_not_formal_verification",
+      "numbers": {"problems": 10, "correctness_threshold": 0.5, "proofcouncil_correct": 9, "direct_astra_correct": 7, "humanize_kimi_k3_correct": 0}
+    },
+    {
+      "id": "SIG_2025_WIKIMEDIA_ENTERPRISE_REVENUE_OPEN_ACCESS",
+      "date": "2025-11-24",
+      "date_basis": "Dated public financial report, not accrual date or contract signing. FY2024-25 ended 2025-06-30; auditor opinion dated 2025-09-30. Blog later updated 2026-11-04.",
+      "title_ru": "Wikimedia Enterprise: выручка от сервиса при сохранении открытого контента",
+      "title_en": "Wikimedia Enterprise: service revenue alongside open content",
+      "summary_ru": "Аудит FY2024-25 отражает $8 297 917 признанной выручки Enterprise и $7 467 500 денежных поступлений. Платный продукт предоставляет инфраструктуру API и сервисные гарантии; принципы сохраняют свободное использование контента.",
+      "summary_en": "The FY2024-25 audit records $8,297,917 in recognized Enterprise revenue and $7,467,500 in cash receipts. The paid product provides API infrastructure and service guarantees; its principles preserve free content reuse.",
+      "caveat_ru": "Это не прибыль и не выручка исключительно от ИИ. Партнёрские платежи не раскрыты; январское объявление 2026 года не определяет состав выручки прошлого года. Принципы не заменяют аудит соблюдения договоров.",
+      "caveat_en": "These are not profit or AI-only revenue. Partner payments are undisclosed; the January 2026 announcement does not allocate prior-year revenue. Operating principles are not an audit of contract compliance.",
+      "mechanism_ru": "Платная доставка данных может финансировать поставщика открытых знаний без исключительного права на сам контент.",
+      "mechanism_en": "Paid data delivery can fund an open-knowledge supplier without exclusive rights to the content itself.",
+      "actors": ["Wikimedia Foundation", "Wikimedia Enterprise", "KPMG LLP"],
+      "actor_types": ["civil_society", "company"],
+      "jurisdictions": ["US"],
+      "layers": ["data_telemetry", "finance_rent", "governance_law"],
+      "arcs": ["ARC_DATA_LICENSING_AS_INPUT_LAYER"],
+      "source_ids": ["KR_WMF_REPORT", "KR_WMF_AUDIT", "KR_WMF_PRINCIPLES", "KR_WMF_PARTNERS"],
+      "evidence_kind": "audited_financial_results_with_operator_access_principles",
+      "artifact": "report",
+      "contexts": ["ecosystem_measurement", "governance_document"],
+      "outcome_stage": "realized_revenue_not_marketwide_sustainability",
+      "numbers": {"currency": "USD", "recognized_revenue_fy2025": 8297917, "cash_collected_fy2025": 7467500, "recognized_revenue_fy2024": 3351250}
+    },
+    {
+      "id": "SIG_2026_WIKIPEDIA_AIO_REFERRAL_DID",
+      "date": "2026-10-25",
+      "date_basis": "Publication of reviewed v7, not first disclosure of the study or estimates. First preprint 2026-02-05; v2 withdrawal 2026-03-26; revised estimates already in v5 2026-08-26. Observations cover 2023-12 through 2024-12.",
+      "title_ru": "Wikipedia: версия v7 оценивает снижение поисковых переходов примерно на 5%",
+      "title_en": "Wikipedia: v7 estimates roughly 5% fewer search referrals",
+      "summary_ru": "В пересмотренном препринте модель difference-in-differences оценивает снижение поисковых переходов к английским статьям на 5,45% относительно немецких и на 4,82% относительно французских после запуска AI Overviews в США.",
+      "summary_en": "In the revised preprint, a difference-in-differences model estimates English-article search referrals falling 5.45% relative to German and 4.82% relative to French after the US AI Overviews rollout.",
+      "caveat_ru": "Наблюдательная оценка зависит от трендов и языкового приближения экспозиции. Она не измеряет все просмотры, индивидуальный показ AIO или выручку. Отозванная v2 и её 15% не подтверждают v7 независимо.",
+      "caveat_en": "The observational estimate depends on trends and language-based exposure proxies. It measures neither all pageviews, individual AIO exposure nor revenue. Withdrawn v2 and its 15% estimate are not independent corroboration.",
+      "mechanism_ru": "Ответ внутри поискового интерфейса может перераспределять внимание от источника; финансовые последствия этим исследованием непосредственно не измерены.",
+      "mechanism_en": "Answers inside search interfaces may redirect attention away from sources; this study does not directly measure financial consequences.",
+      "actors": ["University of Washington", "Google", "Wikimedia Foundation"],
+      "actor_types": ["research", "company", "civil_society"],
+      "jurisdictions": ["US"],
+      "geographic_scope_basis": "US rollout is the treatment regime. German/French editions are comparison proxies, not observed reader-country assignments.",
+      "layers": ["data_telemetry", "decision_support_cognition"],
+      "arcs": ["ARC_DATA_LICENSING_AS_INPUT_LAYER"],
+      "source_ids": ["KR_WIKI_V7", "KR_WIKI_HISTORY", "KR_WIKI_V2", "KR_WIKI_V5", "KR_WIKI_OPERATOR"],
+      "evidence_kind": "observational_difference_in_differences_revised_preprint",
+      "contexts": ["ecosystem_measurement"],
+      "outcome_stage": "estimated_referral_effect_not_revenue_loss",
+      "numbers": {"english_vs_german_estimated_change_percent": -5.45, "english_vs_french_estimated_change_percent": -4.82, "reviewed_version": 7}
+    },
+    {
+      "id": "SIG_2025_EBU_BBC_MULTILINGUAL_NEWS_INTEGRITY",
+      "date": "2025-10-22",
+      "date_basis": "Report launch. Tested responses were generated 2025-05-24 through 2025-06-10; not a November 2026 product assessment.",
+      "title_ru": "BBC/EBU: международная проверка выявляет ошибки в новостных ответах",
+      "title_en": "BBC/EBU: international audit identifies flaws in news answers",
+      "summary_ru": "В проверке четырёх ассистентов на 14 языках в 18 странах существенные проблемы отмечены в 45% из 2709 основных ответов, включая проблемы с источниками в 31%. Это оценки журналистов по заданной методике.",
+      "summary_en": "Across four assistants, 14 languages and 18 countries, journalists rated 45% of 2,709 core answers as having significant issues, including sourcing issues in 31%, under the study's rubric.",
+      "caveat_ru": "Проверялись бесплатные версии мая-июня 2025 года с предпочтением источников участников. Это не универсальная частота ошибок или доказательство цензуры; сравнение только BBC показывает улучшение, но раунды не идентичны.",
+      "caveat_en": "Tests used May-June 2025 free products and prompts favoring participant sources. This is not a universal error rate or evidence of censorship; the BBC-only comparison improved, but the rounds were not identical.",
+      "mechanism_ru": "Доступ к источнику и его корректное представление в ответе являются разными условиями доступа к знанию.",
+      "mechanism_en": "Access to a source and accurate representation of it in an answer are separate conditions of knowledge access.",
+      "actors": ["BBC", "European Broadcasting Union", "OpenAI", "Microsoft", "Google", "Perplexity"],
+      "actor_types": ["media_rights", "company", "research"],
+      "jurisdictions": ["UK"],
+      "geographic_scope_basis": "UK denotes BBC leadership; the report's 18-country sample is multinational and must not be interpreted as UK-only or as a country ranking.",
+      "layers": ["data_telemetry", "decision_support_cognition"],
+      "arcs": ["ARC_DATA_LICENSING_AS_INPUT_LAYER"],
+      "source_ids": ["KR_EBU_LAUNCH", "KR_EBU_REPORT"],
+      "evidence_kind": "multi_organization_human_rated_product_audit",
+      "contexts": ["controlled_evaluation"],
+      "outcome_stage": "historical_answer_and_attribution_quality",
+      "numbers": {"core_answers": 2709, "custom_answers_not_in_core_denominator": 353, "assistants": 4, "languages": 14, "countries": 18, "significant_issues_percent": 45, "significant_sourcing_issues_percent": 31}
+    },
+    {
+      "id": "SIG_2025_COMMON_PILE_OPEN_LICENSED_PRETRAINING",
+      "date": "2025-06-05",
+      "date_basis": "First arXiv publication, v1. Official project announcement followed on 2025-06-06. No separate event is created for a later proceedings version.",
+      "title_ru": "Common Pile: открытые данные проверены обучением моделей 7B",
+      "title_en": "Common Pile: open data tested through 7B model training",
+      "summary_ru": "Common Pile v0.1 описывает 8 ТБ текстов из 30 источников. Авторы обучили две модели Comma 7B и получили конкурентные результаты относительно Llama 1/2 7B при сопоставимых числе параметров и токенов обучения.",
+      "summary_en": "Common Pile v0.1 describes 8 TB of text from 30 sources. The authors trained two Comma 7B models and reported competitive results against Llama 1/2 7B at comparable parameter and training-token budgets.",
+      "caveat_ru": "Преимущественно английские данные и ограниченный масштаб; не превосходство по всем тестам и не паритет с передовыми моделями 2026 года. Сопоставимые токены не означают одинаковую денежную стоимость или юридическую гарантию каждого документа.",
+      "caveat_en": "Predominantly English and limited in scale: neither superiority on every benchmark nor parity with 2026 frontier models. Comparable tokens do not imply equal monetary cost or legal certainty for every document.",
+      "mechanism_ru": "Открытый корпус и модели дают проверяемую альтернативу закрытым данным, но не устраняют зависимость от вычислений и распространения.",
+      "mechanism_en": "An open corpus and models provide an inspectable alternative to closed data without eliminating compute and distribution dependencies.",
+      "actors": ["University of Toronto", "Vector Institute", "EleutherAI", "Allen Institute for AI", "Hugging Face"],
+      "actor_types": ["research", "company"],
+      "jurisdictions": ["Canada", "US"],
+      "geographic_scope_basis": "Research affiliations, not a measurement of country-level availability or multilingual performance.",
+      "layers": ["data_telemetry", "model_weights"],
+      "arcs": ["ARC_DATA_LICENSING_AS_INPUT_LAYER", "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"],
+      "source_ids": ["KR_COMMON_ABSTRACT", "KR_COMMON_PAPER", "KR_COMMON_ARTIFACTS"],
+      "evidence_kind": "released_dataset_and_models_with_author_training_evaluations",
+      "contexts": ["training", "benchmark"],
+      "outcome_stage": "released_artifacts_and_budget_matched_evaluation",
+      "numbers": {"corpus_tb_reported": 8, "paper_source_count": 30, "model_parameter_billions": 7, "training_token_trillions": [1, 2]}
+    }
+  ],
+  "updates": [
+    {
+      "event_id": "SIG_2025_MATTERGEN_SYNTHESIS",
+      "fields": {
+        "date": "2025-01-16",
+        "source_date": "2025-01-16",
+        "date_precision": "day",
+        "date_basis": "Original Nature online publication verified by publisher Crossmark. Independent critique: preprint v1 2025-06-19, v2 2026-01-05, journal publication 2026-04-20; the original event is not redated to the critique.",
+        "status_update_date": "2026-04-20",
+        "research_evidence_kind": "peer_reviewed_study_with_independent_crystallographic_reanalysis",
+        "research_review_status": "original_claim_qualified_by_independent_reanalysis",
+        "research_outcome_stage": "reported_physical_testing_with_disputed_structure_and_novelty",
+        "classification_review": {"date": "2026-11-10", "source_account_reviewed": true, "independent_source_reverification": true, "independent_replication": false}
+      },
+      "bilingual_fields": ["summary", "claim_supported", "safe_wording", "caveat", "caveats", "notes"],
+      "summary_ru": "Лабораторная демонстрация MatterGen получила независимую опубликованную критику новизны и состава полученного материала.",
+      "summary_en": "MatterGen's laboratory demonstration now has a published independent challenge to the material's novelty and composition.",
+      "claim_supported_ru": "Лабораторная демонстрация MatterGen получила независимую опубликованную критику новизны и состава полученного материала.",
+      "claim_supported_en": "MatterGen's laboratory demonstration now has a published independent challenge to the material's novelty and composition.",
+      "safe_wording_ru": "Лабораторная демонстрация MatterGen получила независимую опубликованную критику новизны и состава полученного материала.",
+      "safe_wording_en": "MatterGen's laboratory demonstration now has a published independent challenge to the material's novelty and composition.",
+      "caveat_ru": "Критика является повторным анализом, а не новым синтезом или отзывом статьи; её автор также отмечает инструментальную неопределённость. Промышленная готовность не установлена.",
+      "caveat_en": "The critique is a reanalysis, not a new synthesis or retraction; its author also acknowledges instrumental uncertainty. Industrial readiness is not established.",
+      "caveats_ru": ["Критика является повторным анализом, а не новым синтезом или отзывом статьи; её автор также отмечает инструментальную неопределённость. Промышленная готовность не установлена."],
+      "caveats_en": ["The critique is a reanalysis, not a new synthesis or retraction; its author also acknowledges instrumental uncertainty. Industrial readiness is not established."],
+      "notes_ru": "Исходная работа оценивает объёмный модуль через наноиндентирование и коэффициент Пуассона из DFT: максимум 169 ГПа при цели 200 ГПа, среднее 158 +/- 11 ГПа. Формулировка «в пределах 20%» относится к максимуму, не среднему.",
+      "notes_en": "The original study estimates bulk modulus using nanoindentation and a DFT-derived Poisson ratio: maximum 169 GPa against a 200 GPa target, mean 158 +/- 11 GPa. The 'within 20%' description applies to the maximum, not the mean.",
+      "source_ids": ["KR_MATTERGEN_ORIGINAL", "KR_MATTERGEN_CROSSMARK", "KR_MATTERGEN_REANALYSIS", "KR_MATTERGEN_REPOSITORY", "KR_MATTERGEN_PREPRINT"]
+    }
+  ],
+  "update_preservation_notes": [
+    "Preserve the existing MatterGen ID, title, arcs, actors, layers, original sources and prior research_updates. The migration appends the review marker; no discovery node is added.",
+    "Existing research_provenance is the historical 2026-11-07 candidate packet and is intentionally retained as provenance, not silently rewritten. Current presentation aliases are replaced through bilingual_fields.",
+    "add_source() deduplicates by URL and does not upsert the old Nature source's empty date. Current source_date and the added Crossmark source carry the verified day. The integrator may normalize source metadata separately, but it is not required to apply this update."
+  ],
+  "source_audit": {
+    "mattergen_access_resolution": {
+      "status": "resolved_for_reanalysis_full_text",
+      "blocked_urls": ["https://pubs.rsc.org/en/content/articlehtml/2026/mh/d6mh00268d", "https://pubs.rsc.org/en/content/articlepdf/2026/mh/d6mh00268d"],
+      "working_primary_mirror": "https://edoc.hu-berlin.de/bitstreams/09d6e492-2266-4a06-bce2-5c45b82f6f07/download",
+      "identity": "Eight-page publisher PDF, Materials Horizons 13, 5672-5679, DOI 10.1039/d6mh00268d, linked by the author's institutional repository.",
+      "original_paper_access": "Nature direct HTML/PDF redirected to an inaccessible gateway. Publisher-indexed Experimental validation text was readable; Crossmark publication history opened directly. Do not claim a full original-paper download.",
+      "date_limit": "The repository's issued date is publication metadata; its accession date is later and is not the criticism's first disclosure."
+    },
+    "wikipedia_revision_resolution": {
+      "status": "resolved_with_version_specific_record",
+      "v1": {"date": "2026-02-05", "url": "https://arxiv.org/abs/2602.18455v1", "finding": "Earlier approximately 15% daily-traffic estimate with different language controls."},
+      "v2": {"date": "2026-03-26", "source_id": "KR_WIKI_V2", "finding": "Explicit author withdrawal pending a more comprehensive data sample."},
+      "v5": {"date": "2026-08-26", "source_id": "KR_WIKI_V5", "finding": "Revised 5.45% and 4.82% search-referral estimates already present."},
+      "v6": {"date": "2026-09-02", "url": "https://arxiv.org/abs/2602.18455v6", "finding": "Same headline revised estimates."},
+      "v7": {"date": "2026-10-25", "source_id": "KR_WIKI_V7", "finding": "Reviewed full text; current family result retained, not another independent study."},
+      "guardrail": "Historical pages can display stale 'latest version' banners. Use the explicit v7 submission history and pinned v7 full text. Do not describe the current v7 as itself withdrawn merely because v2 was."
+    },
+    "remaining_access_limits": [
+      {"url": "https://proceedings.nips.cc/paper_files/paper/2025/hash/52acc050138d6f40dad6f12f91a4ce22-Abstract-Datasets_and_Benchmarks_Track.html", "status": "timeout", "effect": "NeurIPS status is not newly certified here; Common Pile acceptance rests on directly reviewed v1 and released artifacts."},
+      {"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12790861/", "status": "browser_challenge", "effect": "No full antibiotic protocol claim. Structured Europe PMC metadata and author abstract were retrieved directly, plus MIT's account."},
+      {"url": "https://www.cell.com/cell/abstract/S0092-8674%2825%2900855-4", "status": "403", "effect": "Exact issue day and detailed animal-effect sizes are not retained."}
+    ]
+  },
+  "rejected_or_deferred_extensions": [
+    {"item": "Wikipedia's historical 15% estimate as current evidence or independent corroboration", "decision": "reject", "reason": "Superseded outcome/design within the same study family; v2 explicitly withdrawn.", "urls": ["https://arxiv.org/abs/2602.18455v2", "https://arxiv.org/html/2602.18455v7"]},
+    {"item": "MatterGen critique as a retraction or proof every generated material is known", "decision": "reject", "reason": "The publication is a scoped crystallographic reanalysis; neither universal failure nor retraction is established.", "urls": ["https://edoc.hu-berlin.de/bitstreams/09d6e492-2266-4a06-bce2-5c45b82f6f07/download", "https://crossmark.crossref.org/dialog/?doi=10.1038/s41586-025-08628-5"]},
+    {"item": "First Proof as universal open-versus-closed superiority", "decision": "reject", "reason": "One open-weight system, different tools and harnesses, narrow expert-scored tasks.", "urls": ["https://hexagonmath.org/pdf/2610.00244v1"]},
+    {"item": "Wikimedia Enterprise as exclusive AI licences or AI-only revenue", "decision": "reject", "reason": "Service access and disclosed principles do not establish exclusive content ownership or partner-specific revenue allocation.", "urls": ["https://meta.wikimedia.org/wiki/Wikimedia_Enterprise/Principles", "https://enterprise.wikimedia.com/blog/wikipedia-25-enterprise-partners/"]},
+    {"item": "BBC/EBU figures as a 2026 model ranking or all-use error rate", "decision": "reject", "reason": "Historical selected-prompt product audit with a defined core denominator.", "urls": ["https://www.ebu.ch/Report/MIS-BBC/NI_AI_2025.pdf"]},
+    {"item": "Common Pile as frontier parity, zero-cost training or universal copyright clearance", "decision": "reject", "reason": "Bounded author evaluation with licensing limitations and unmatched monetary costs.", "urls": ["https://arxiv.org/html/2506.05209v1"]},
+    {"item": "FineWeb2 and R1dacted original reserves", "decision": "defer", "reason": "Outside the eight selected candidates; no fresh broad search or promotion. Prior packet status is not renewed verification.", "urls": ["https://arxiv.org/abs/2506.20920", "https://arxiv.org/abs/2505.12625"]}
+  ],
+  "validation": {
+    "required_checks": ["JSON parse", "eight unique decisions", "ready_records and updates agree with decisions", "all source_ids resolve", "new IDs absent in both canonical languages", "existing update ID resolves in both languages", "arcs, layers and actor_types resolve", "dates are at or before cutoff", "in-memory construction using the migration helpers without writes"],
+    "status": "passed",
+    "checked_on": "2026-11-10",
+    "execution_note": "Imported migrate_crosscutting_expansion.migrate with Python bytecode writes disabled and called it on in-memory copies for both languages. No migration CLI, canonical write, generator, HTML build, commit or publishing command was run.",
+    "results": {
+      "unique_decisions": 8,
+      "new_records": 5,
+      "existing_updates": 1,
+      "source_records": 28,
+      "required_fields_and_decision_mapping": "passed",
+      "source_ids_and_date_cutoff": "passed",
+      "canonical_new_existing_and_related_ids": "passed_in_both_languages",
+      "arcs_layers_actor_types_contexts": "passed_in_both_languages",
+      "localized_update_fields": "passed_in_both_languages",
+      "in_memory_migration": {
+        "ru": {"events": 572, "arcs": 30, "sources": 858, "reference_integrity_valid": true},
+        "en": {"events": 572, "arcs": 30, "sources": 858, "reference_integrity_valid": true}
+      },
+      "canonical_sha256_matches_review_snapshot": true,
+      "canonical_bytes_unchanged_after_simulation": true
+    },
+    "anti_overfit": "The review uses study-family identity, version-specific outcomes and explicit denominators, not headline agreement or source-count accumulation."
+  }
+}

@@ -1,0 +1,464 @@
+{
+  "schema_version": "crosscutting-research-packet.v1",
+  "review_date": "2026-11-10",
+  "topic": "Sovereignty and ability to exit",
+  "review_status": "four_candidates_recommended_for_lead_review_not_ingested",
+  "integration_contract": "scripts/migrate_crosscutting_expansion.py; events and sources use the requested integration fields",
+  "scope": {
+    "owned_output": "review/crosscutting-expansion-2026-11-10/sovereignty-research.json",
+    "canonical_editing": false,
+    "published": false,
+    "committed": false,
+    "parallel_agents": "No subagent or parallel-agent execution tool was available in this session. This packet is a single-agent source review, not independent multi-agent verification.",
+    "selection": "Four substantive mechanisms; no quota padding. Brazil remains an explicit evidence gap, not a negative finding about Brazilian capability.",
+    "verification": "Primary publications and accessible artifact metadata reviewed. No independent replication, workload migration, GPU allocation test or legal opinion performed."
+  },
+  "dedup_baseline": {
+    "files": {
+      "ai_power_storygraph_en.json": {
+        "events": 567,
+        "sha256_at_review": "2d7f80a70901c5c783760a2ceae72085748234057ee27b2a0c11d8b78f01567a"
+      },
+      "ai_power_storygraph_ru.json": {
+        "events": 567,
+        "sha256_at_review": "e5664dd9bbb6798905d2bfe94a16d81161f9aa56249a0fd33ed9b572e222c12f"
+      }
+    },
+    "method": "Parsed both language files, searched full event objects by names, mechanisms, identifiers and URLs, and read the existing sovereignty/open-weight/cloud arcs and nearest event bodies. The four proposed events are absent from both files. Related program milestones are distinguished below.",
+    "existing_baselines": [
+      "SIG_UAE_2024_MICROSOFT_G42_HUAWEI_DIVORCE",
+      "SIG_2026_PALANTIR_UK_MOD_240M",
+      "SIG_2025_PALANTIR_NATO_MSS",
+      "SIG_2026_NATO_MAVEN_FTOC_MULTIMODEL",
+      "SIG_2025_EU_DATA_ACT_CLOUD_SWITCHING",
+      "SIG_2025_CMA_CLOUD_SWITCHING_AEC",
+      "SIG_2025_OMB_AI_PROCUREMENT_PORTABILITY",
+      "SIG_EU_2026_SOVEREIGN_CLOUD_PROCUREMENT",
+      "SIG_AWS_2026_EUROPEAN_SOVEREIGN_CLOUD",
+      "SIG_2026_AWS_EU_DISCONNECTION_EXERCISE",
+      "SIG_2024_INDIAAI_MISSION_1_25B",
+      "SIG_2026_SARVAM_30B_105B_APACHE_RELEASE"
+    ],
+    "arc_ids_reviewed": [
+      "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE",
+      "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN",
+      "ARC_SOVEREIGN_FLOW_GATING",
+      "ARC_GULF_CONDITIONAL_SOVEREIGNTY"
+    ],
+    "arc_membership_rule": "Existing arc IDs only. Membership is thematic, not automatic support for the whole arc thesis. No causal edges or new arcs proposed."
+  },
+  "sources": {
+    "SOV_CMA_CLOUD_UPDATE_20261016": {
+      "name": "UK Competition and Markets Authority",
+      "title": "Update on cloud actions: Covering March-October 2026",
+      "date": "2026-10-16",
+      "url": "https://assets.publishing.service.gov.uk/media/6ad1cb60e5db84746b4796d1/Update_on_cloud_actions_-_covering_March_to_October_2026.pdf",
+      "type": "Government / policy",
+      "source_class": "government",
+      "primary_or_secondary": "primary",
+      "reviewed_sections": "Summary paragraphs 5-9; Progress to date paragraphs 6-10; IAM paragraphs 15-17; container portability paragraphs 18-19; annexes distinguish implemented and pending actions.",
+      "excerpt": "Given their novelty, the uptake of these schemes has been limited so far",
+      "source_supported_claims": [
+        "The regulator reports UK contractual free-switching and reduced multicloud egress provisions, with some actions still outstanding.",
+        "IAM authorization translation and cloud-specific Kubernetes integrations remain portability barriers; no solution timetable is settled."
+      ],
+      "limitations": "Regulatory monitoring incorporating provider data and customer engagement, not a controlled migration-cost experiment. Some fee waivers predate March 2026."
+    },
+    "SOV_CMA_NEWS_20261016": {
+      "name": "UK Competition and Markets Authority",
+      "title": "CMA takes first steps to ensure choice in business software",
+      "date": "2026-10-16",
+      "url": "https://www.gov.uk/government/news/cma-takes-first-steps-to-ensure-choice-in-business-software",
+      "type": "Government / policy",
+      "source_class": "government",
+      "primary_or_secondary": "primary",
+      "reviewed_sections": "Update on cloud services monitoring; Notes to editors",
+      "excerpt": "The CMA’s findings are provisional",
+      "source_supported_claims": [
+        "The same-day Microsoft business-software SMS proposal is consultative, distinct from voluntary cloud engagement.",
+        "The regulator explicitly connects customer choice, switching and combining AI services with resilience and strategic autonomy."
+      ],
+      "limitations": "Same institution and publication package as the report, not independent corroboration."
+    },
+    "SOV_CMA_MARCH_ACTIONS": {
+      "name": "UK Competition and Markets Authority",
+      "title": "CMA announces package of actions on business software and cloud services",
+      "date": "2026-03-31",
+      "url": "https://www.gov.uk/government/news/cma-announces-package-of-actions-on-business-software-and-cloud-services",
+      "type": "Government / policy",
+      "source_class": "government",
+      "primary_or_secondary": "primary",
+      "source_supported_claims": [
+        "The October report follows a March package combining a planned Microsoft business-software investigation with provider actions on egress and interoperability."
+      ],
+      "limitations": "Announcement-stage predecessor; do not count it separately from the reviewed implementation follow-up in this packet."
+    },
+    "SOV_APERTUS_RELEASE": {
+      "name": "ETH Zurich / EPFL / CSCS",
+      "title": "Apertus: a fully open, transparent, multilingual language model",
+      "date": "2025-09-02",
+      "url": "https://ethz.ch/en/news-and-events/eth-news/news/2025/09/press-release-apertus-a-fully-open-transparent-multilingual-language-model.html",
+      "type": "Research / university",
+      "source_class": "research",
+      "primary_or_secondary": "primary",
+      "reviewed_sections": "Release heading; Accessibility; Transparency and compliance",
+      "excerpt": "deploy it for their own projects",
+      "source_supported_claims": [
+        "The institutions identify September 2 as the release of 8B and 70B models and describe downloadable weights and permissive commercial use.",
+        "Practical use still requires infrastructure and application components."
+      ],
+      "limitations": "Developer announcement; its broad reproducibility and compliance language is not an independent audit."
+    },
+    "SOV_APERTUS_MODEL_CARD": {
+      "name": "Swiss AI Initiative",
+      "title": "swiss-ai/Apertus-8B-Instruct-2509 model card",
+      "date": "2026-11-10",
+      "date_basis": "Observation date of mutable repository metadata; not its initial publication date.",
+      "url": "https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509",
+      "type": "Model card / repository",
+      "source_class": "research",
+      "primary_or_secondary": "primary",
+      "reviewed_sections": "License metadata; Deployment; Software & hardware; Open resources; Limitations",
+      "excerpt": "Training data reconstruction scripts",
+      "source_supported_claims": [
+        "The card labels the release Apache-2.0 and links reconstruction scripts and intermediate checkpoint branches.",
+        "It names 4096 GH200 GPUs and documents supported deployment frameworks."
+      ],
+      "limitations": "Mutable card observed in November 2026; current framework support is not backdated to launch. License-file fetch returned HTTP 429; license naming is supported by repository metadata, not a clause-by-clause legal review."
+    },
+    "SOV_APERTUS_TECH_REPORT": {
+      "name": "Project Apertus and authors",
+      "title": "Apertus: Democratizing Open and Compliant LLMs for Global Language Environments",
+      "date": "2025-09-17",
+      "url": "https://arxiv.org/abs/2509.14233",
+      "type": "Research preprint",
+      "source_class": "research",
+      "primary_or_secondary": "primary",
+      "date_basis": "arXiv v1 submission; v2 is dated 2025-12-01.",
+      "reviewed_sections": "Abstract and submission history",
+      "source_supported_claims": [
+        "Authors report releasing preparation scripts, checkpoints, evaluations and training code alongside the models."
+      ],
+      "limitations": "Developer-authored preprint and abstract-level review. Benchmark superiority and legal compliance are not adopted as independently established facts."
+    },
+    "SOV_APERTUS_ALPS_ENGINEERING": {
+      "name": "Apertus / Alps engineering authors",
+      "title": "An Engineering Journey Training Large Language Models at Scale on Alps: The Apertus Experience",
+      "date": "2026-04-14",
+      "url": "https://arxiv.org/abs/2604.12973",
+      "type": "Research preprint",
+      "source_class": "research",
+      "primary_or_secondary": "primary",
+      "date_basis": "arXiv v1 submission; v2 is dated 2026-04-15.",
+      "reviewed_sections": "Abstract and submission history",
+      "excerpt": "powered by NVIDIA GH200 Grace Hopper Superchips",
+      "source_supported_claims": [
+        "The training team describes the NVIDIA-based Alps infrastructure and storage/interconnect engineering work needed for the training campaign."
+      ],
+      "limitations": "Retrospective engineering report, not another model release or evidence of hardware-independent training."
+    },
+    "SOV_INDIAAI_PORTAL_LAUNCH": {
+      "name": "Government of India, Ministry of Electronics & IT / PIB",
+      "title": "MeitY launches AIKosha; Ashwini Vaishnaw unveils India AI compute portal and other initiatives",
+      "date": "2025-03-06",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2108961&reg=48&lang=2",
+      "type": "Government / policy",
+      "source_class": "government",
+      "primary_or_secondary": "primary",
+      "reviewed_sections": "Opening ministerial remarks; Launch of IndiaAI Compute Portal",
+      "excerpt": "Eligible AI users will receive up to 40% subsidy",
+      "source_supported_claims": [
+        "The portal launch is explicitly dated March 6; initial access is described as 10,000 GPUs, with 8,693 more to be added.",
+        "The cloud procurement mechanism lists NVIDIA, AMD, Intel and AWS accelerators and eligibility-conditioned subsidies."
+      ],
+      "limitations": "Government launch report. Announced, empanelled and actually consumed compute are different quantities."
+    },
+    "SOV_INDIAAI_JULY_CAPACITY": {
+      "name": "Government of India, Ministry of Electronics & IT / PIB",
+      "title": "India to host AI Impact Summit in February 2026, focusing on democratizing AI to solve real-world challenges across sectors",
+      "date": "2025-07-30",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2150204&lang=2&reg=48",
+      "type": "Government / policy",
+      "source_class": "government",
+      "primary_or_secondary": "primary",
+      "reviewed_sections": "IndiaAI Compute Capacity table",
+      "excerpt": "34,381 GPUs through the IndiaAI Compute Portal",
+      "source_supported_claims": [
+        "A later government update reports 34,381 provisioned GPUs, government pricing support and NVIDIA/Intel/AMD hardware."
+      ],
+      "limitations": "Same government reporting chain, not independent validation. Provisioned count does not measure utilization, ownership or guaranteed simultaneous availability."
+    },
+    "SOV_SH_MAIL_MIGRATION": {
+      "name": "State Chancellery of Schleswig-Holstein",
+      "title": "Meilenstein für digitale Souveränität im Land",
+      "date": "2025-10-06",
+      "url": "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/I/_startseite/Artikel2025/IV/251006_ox-umstellung-abschluss",
+      "type": "Government / deployment report",
+      "source_class": "government",
+      "primary_or_secondary": "primary",
+      "date_basis": "Page update/publication date; text explicitly dates migration completion to 2025-10-02.",
+      "reviewed_sections": "Opening migration paragraph; Landes-IT wird konsequent und schrittweise umgestellt",
+      "excerpt": "mehr als 40.000 Postfächern",
+      "source_supported_claims": [
+        "The administration reports a six-month migration from Exchange/Outlook to Open-Xchange/Thunderbird, completed October 2, covering over 40,000 mailboxes.",
+        "Linux remains a trial in the same report; the announcement does not establish a complete Microsoft exit."
+      ],
+      "limitations": "Implementing government's account; no independently audited service-quality or migration-cost series was reviewed."
+    },
+    "SOV_SH_OFFICE_FOLLOWUP": {
+      "name": "State Chancellery of Schleswig-Holstein",
+      "title": "LibreOffice ersetzt Microsoft: Schon fast 80 Prozent der Arbeitsplätze auf quelloffene Office-Lösung umgestellt",
+      "date": "2025-12-04",
+      "url": "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/I/Presse/PI/2025/cds/251204_cds_open-source",
+      "type": "Government / deployment report",
+      "source_class": "government",
+      "primary_or_secondary": "primary",
+      "reviewed_sections": "Office adoption; remaining technical dependencies",
+      "excerpt": "außerhalb der Steuerverwaltung",
+      "source_supported_claims": [
+        "Nearly 80% LibreOffice adoption excludes the tax administration; roughly 20% still need Microsoft Office in some workflows because of specialized-application dependencies."
+      ],
+      "limitations": "Later milestone in the same migration program. License savings are not adopted as a net total-cost-of-ownership result."
+    }
+  },
+  "events": [
+    {
+      "id": "SIG_2026_CMA_CLOUD_EXIT_IMPLEMENTATION_REVIEW",
+      "date": "2026-10-16",
+      "date_basis": "Publication of CMA's implementation review covering March-October 2026, not a common go-live date for all measures. The separate SMS decision was only proposed.",
+      "title_ru": "CMA: условия выхода из облаков улучшены, но переносимость IAM и Kubernetes остаётся нерешённой",
+      "title_en": "CMA: cloud exit terms improve while IAM and Kubernetes portability remain unresolved",
+      "summary_ru": "CMA сообщает об изменении британских договоров AWS и Microsoft: бесплатном переносе данных при смене облака и снижении платы для нескольких облаков. При этом регулятор отмечает пока ограниченное использование новых механизмов и сохраняющиеся технические барьеры.",
+      "summary_en": "The CMA reports UK AWS and Microsoft contract changes providing free switching-related data transfer and reduced multicloud charges. Uptake of new mechanisms remains limited, and technical barriers persist.",
+      "caveat_ru": "Это мониторинг исполнения, а не измеренное устранение зависимости. Не все меры завершены; предложение о статусе SMS для бизнес-ПО Microsoft не является окончательным решением или облачным предписанием.",
+      "caveat_en": "Implementation monitoring does not establish that lock-in has ended. Some actions remain unfinished; the Microsoft business-software SMS proposal is neither a final designation nor a cloud conduct requirement.",
+      "mechanism_ru": "Интерпретация: договорное право вывезти данные устраняет лишь часть издержек выхода; логика авторизации и привязанные к облаку сервисы требуют отдельной переносимости.",
+      "mechanism_en": "Inference: contractual data-exit rights remove only part of switching costs; authorization logic and cloud-specific services require separate portability work.",
+      "actors": ["UK Competition and Markets Authority", "Amazon Web Services", "Microsoft"],
+      "actor_types": ["regulator", "company"],
+      "jurisdictions": ["UK"],
+      "actor_jurisdictions": ["UK", "US"],
+      "geographic_scopes": ["National"],
+      "layers": ["cloud_inference", "governance_law", "data_telemetry"],
+      "arcs": ["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN", "ARC_SOVEREIGN_FLOW_GATING"],
+      "source_ids": ["SOV_CMA_CLOUD_UPDATE_20261016", "SOV_CMA_NEWS_20261016", "SOV_CMA_MARCH_ACTIONS"],
+      "evidence_kind": "regulatory_implementation_monitoring",
+      "artifact": "governance_document",
+      "force": "mixed_contractual_rights_and_voluntary_engagement",
+      "stage": "partial_implementation",
+      "delegation": "not_applicable",
+      "contexts": ["governance_document", "ecosystem_measurement"],
+      "outcome_stage": "measures_partly_implemented_market_effect_not_established",
+      "claim_types": {
+        "fact": "The CMA published the review on October 16.",
+        "reported_finding": "Provider contract changes, limited uptake and remaining IAM/container barriers are CMA findings.",
+        "forecast_or_plan": "Further IAM and Kubernetes work; no ready-made solution or completion timeline.",
+        "inference": "Improved exit rights are narrower than demonstrated practical portability."
+      },
+      "dedup": {
+        "decision": "accept_distinct_implementation_milestone",
+        "related_existing_ids": ["SIG_2025_CMA_CLOUD_SWITCHING_AEC", "SIG_2025_EU_DATA_ACT_CLOUD_SWITCHING"],
+        "reason": "The existing CMA event records July 2025 market findings. This adds monitored contractual implementation and residual technical mechanisms in October 2026. Do not duplicate March announcements or imply the initial fee waivers began in October."
+      }
+    },
+    {
+      "id": "SIG_2025_APERTUS_OPEN_MODEL_RECIPE_RELEASE",
+      "date": "2025-09-02",
+      "date_basis": "Release date explicitly stated by ETH Zurich. Technical report v1 was submitted September 17; the April 2026 engineering paper is retrospective supporting evidence, not a new release.",
+      "title_ru": "Apertus: открытые веса и процесс обучения расширяют выход из модельного сервиса",
+      "title_en": "Apertus: open weights and training artifacts broaden the exit from a model service",
+      "summary_ru": "EPFL, ETH Zurich и CSCS выпустили Apertus 8B и 70B для самостоятельного развёртывания. Карточка модели указывает Apache 2.0 и публикуемые артефакты обучения; инженерный отчёт описывает обучение на Alps с ускорителями NVIDIA GH200.",
+      "summary_en": "EPFL, ETH Zurich and CSCS released Apertus 8B and 70B for self-deployment. The model card identifies Apache 2.0 and training artifacts; an engineering report describes training on NVIDIA GH200-based Alps infrastructure.",
+      "caveat_ru": "Открытые артефакты не доказывают независимость аппаратуры, дешёвое переобучение или паритет возможностей. Проверены публикации и метаданные, но обучение не воспроизведено; текущая поддержка библиотек не приписана дню релиза.",
+      "caveat_en": "Open artifacts do not establish hardware independence, affordable retraining or capability parity. Publications and metadata were reviewed, not training reproduced; current library support is not backdated to release.",
+      "mechanism_ru": "Интерпретация: переносимая копия модели и доступ к рецепту обучения уменьшают зависимость от API и обновлений поставщика, сохраняя отдельные ограничения вычислительного слоя.",
+      "mechanism_en": "Inference: a deployable model copy and training recipe reduce API and update dependence while leaving compute-layer constraints separate.",
+      "actors": ["EPFL", "ETH Zurich", "Swiss National Supercomputing Centre (CSCS)", "Swiss AI Initiative"],
+      "actor_types": ["research"],
+      "jurisdictions": ["Switzerland"],
+      "actor_jurisdictions": ["Switzerland"],
+      "geographic_scopes": ["National", "Global"],
+      "geographic_scope_basis": "Swiss institutions and training infrastructure; downloadable artifacts intended for international use, not a measured global adoption footprint.",
+      "layers": ["model_weights", "energy_compute_chips", "data_telemetry"],
+      "arcs": ["ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "source_ids": ["SOV_APERTUS_RELEASE", "SOV_APERTUS_MODEL_CARD", "SOV_APERTUS_TECH_REPORT", "SOV_APERTUS_ALPS_ENGINEERING"],
+      "evidence_kind": "released_model_artifact_with_developer_documentation",
+      "artifact": "model_release",
+      "force": "license_terms",
+      "stage": "released",
+      "delegation": "not_applicable",
+      "contexts": ["training", "public_registries"],
+      "outcome_stage": "artifact_available_independent_reproducibility_not_tested",
+      "claim_types": {
+        "fact": "Dated release publication and accessible repository metadata.",
+        "developer_claim": "Training provenance, reproducibility and benchmark results are developer reports; no broad compliance or superiority claim is adopted.",
+        "forecast_or_plan": "Future versions in the launch announcement are not counted as released.",
+        "inference": "Self-deployment changes the model-service dependency, not the origin or replaceability of accelerators."
+      },
+      "dedup": {
+        "decision": "accept_one_model_family_event",
+        "related_existing_ids": ["SIG_2026_SOOFI_S_SOVEREIGN_OPEN_MODEL_PREVIEW", "SIG_2026_SARVAM_30B_105B_APACHE_RELEASE"],
+        "reason": "No Apertus event or source-family match in either canonical file. Swiss institutional release is distinct from Soofi and Sarvam. Release, September/December report versions and April engineering retrospective remain one evidence family, not several events."
+      }
+    },
+    {
+      "id": "SIG_2025_INDIAAI_COMPUTE_PORTAL_LAUNCH",
+      "date": "2025-03-06",
+      "date_basis": "Launch and same-day PIB publication. July 30 provisioning figures are a later program update, not the launch inventory or current November 2026 capacity.",
+      "title_ru": "IndiaAI запускает субсидируемый доступ к вычислениям на внешних аппаратных платформах",
+      "title_en": "IndiaAI launches subsidized compute access on externally supplied hardware platforms",
+      "summary_ru": "IndiaAI запустила портал облачных вычислений с субсидией до 40% для подходящих пользователей. В июле правительство сообщило о 34 381 предоставленном через портал GPU; перечень включает NVIDIA, Intel и AMD.",
+      "summary_en": "IndiaAI launched a cloud-compute portal offering eligible users subsidies of up to 40%. In July the government reported 34,381 GPUs provisioned through the portal, listing NVIDIA, Intel and AMD hardware.",
+      "caveat_ru": "Предоставленная мощность не равна фактическому потреблению или собственности государства. Субсидируемый доступ не доказывает беспрепятственную смену провайдера либо независимость поставок ускорителей.",
+      "caveat_en": "Provisioned capacity is not measured consumption or state ownership. Subsidized access establishes neither frictionless provider switching nor independent accelerator supply.",
+      "mechanism_ru": "Интерпретация: государство снижает входную стоимость разработки ИИ через закупку и субсидирование, не обязательно заменяя технологическую зависимость отечественной аппаратурой.",
+      "mechanism_en": "Inference: public procurement and subsidies lower the entry cost of AI development without necessarily replacing technological dependence with domestic hardware.",
+      "actors": ["IndiaAI", "India Ministry of Electronics and Information Technology"],
+      "actor_types": ["government"],
+      "jurisdictions": ["India"],
+      "actor_jurisdictions": ["India"],
+      "geographic_scopes": ["National"],
+      "layers": ["cloud_inference", "energy_compute_chips", "finance_rent", "governance_law"],
+      "arcs": ["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN", "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"],
+      "source_ids": ["SOV_INDIAAI_PORTAL_LAUNCH", "SOV_INDIAAI_JULY_CAPACITY"],
+      "evidence_kind": "public_compute_access_program_launch",
+      "artifact": "public_program",
+      "force": "program_eligibility_and_subsidy_terms",
+      "stage": "launched",
+      "delegation": "not_applicable",
+      "contexts": ["governance_document", "production"],
+      "outcome_stage": "access_program_operational_as_reported_utilization_not_verified",
+      "claim_types": {
+        "fact": "The government published a dated portal-launch announcement.",
+        "government_claim": "Subsidy terms and provisioned capacity are attributed to MeitY/PIB, not independently audited.",
+        "forecast_or_plan": "The launch's additional 8,693 GPUs were prospective at that date; the July inventory is recorded separately.",
+        "inference": "This Global South case demonstrates an access-policy mechanism, not full-stack autonomy."
+      },
+      "dedup": {
+        "decision": "accept_implementation_after_existing_program_authorization",
+        "related_existing_ids": ["SIG_2024_INDIAAI_MISSION_1_25B", "SIG_2026_SARVAM_30B_105B_APACHE_RELEASE", "SIG_INDIA_2026_AMAZON_13B_CLOUD_AI"],
+        "reason": "The canonical mission approval concerns 2024 funding; Sarvam concerns a 2026 model release; Amazon concerns a foreign investment announcement. The portal launch and procurement/subsidy access mechanism are absent. Keep July expansion as supporting evidence rather than another event."
+      }
+    },
+    {
+      "id": "SIG_2025_SCHLESWIG_HOLSTEIN_MAIL_EXIT",
+      "date": "2025-10-02",
+      "date_basis": "Completion date explicitly reported on the state page updated 2025-10-06. December 4 Office-adoption data are a later scope check, not the mail-migration date.",
+      "title_ru": "Шлезвиг-Гольштейн сообщает о завершении перехода с Exchange и Outlook на открытые решения",
+      "title_en": "Schleswig-Holstein reports completing its migration from Exchange and Outlook to open-source alternatives",
+      "summary_ru": "Земельная администрация сообщает о завершении шестимесячного переноса более 40 000 почтовых ящиков на Open-Xchange и Thunderbird. Позднейший отчёт о LibreOffice сохраняет исключение для налоговой администрации и технические зависимости части рабочих мест от Microsoft Office.",
+      "summary_en": "The state administration reports completing a six-month migration of over 40,000 mailboxes to Open-Xchange and Thunderbird. Its later LibreOffice report retains a tax-administration exclusion and technical Microsoft Office dependencies in some workplaces.",
+      "caveat_ru": "Это отчёт самого внедряющего органа, не независимый аудит качества или полной стоимости. Перенос почты не означает выход из всего стека Microsoft и не является проверкой переносимости ИИ-моделей.",
+      "caveat_en": "This is the implementing authority's report, not an independent quality or total-cost audit. Mail migration is neither a complete Microsoft-stack exit nor an AI-model portability test.",
+      "mechanism_ru": "Интерпретация: завершённый перенос данных и рабочего процесса показывает возможность ограниченного выхода; специализированные интеграции сохраняют издержки переключения на соседнем слое.",
+      "mechanism_en": "Inference: completed data and workflow migration demonstrates a bounded exit; specialized integrations retain switching costs in an adjacent layer.",
+      "actors": ["Government of Schleswig-Holstein"],
+      "actor_types": ["government"],
+      "jurisdictions": ["Germany"],
+      "actor_jurisdictions": ["Germany"],
+      "geographic_scopes": ["Subnational"],
+      "geographic_scope_basis": "Schleswig-Holstein state administration, not all German public-sector institutions.",
+      "layers": ["data_telemetry", "governance_law"],
+      "arcs": ["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "source_ids": ["SOV_SH_MAIL_MIGRATION", "SOV_SH_OFFICE_FOLLOWUP"],
+      "evidence_kind": "reported_completed_migration_non_ai_context",
+      "artifact": "deployment_report",
+      "force": "institutional_policy",
+      "stage": "deployed",
+      "delegation": "not_applicable",
+      "contexts": ["internal_deployment"],
+      "outcome_stage": "mail_migration_completed_as_reported_other_stack_layers_incomplete",
+      "claim_types": {
+        "fact": "The government published a dated completion account.",
+        "operator_claim": "Migration size and completion are state-reported; the December partial Office migration is also self-reported.",
+        "forecast_or_plan": "Remaining Office migrations and Linux exploration are not counted as completed.",
+        "inference": "Counter-evidence to inevitable lock-in, with explicit non-AI and workload-specific scope."
+      },
+      "dedup": {
+        "decision": "accept_one_contextual_migration_program_event",
+        "related_existing_ids": ["SIG_2026_PALANTIR_UK_MOD_240M"],
+        "reason": "No Schleswig-Holstein event in either canonical file. Contrast with UK MOD is editorial, not a claim that mail and defence-platform replacement have comparable cost or risk. October mail completion and December Office progress are not separate quota items."
+      }
+    }
+  ],
+  "updates": [],
+  "relations": [],
+  "decisions": [
+    {"id": "SIG_2026_CMA_CLOUD_EXIT_IMPLEMENTATION_REVIEW", "decision": "recommend_new_distinct_milestone", "priority": "high"},
+    {"id": "SIG_2025_APERTUS_OPEN_MODEL_RECIPE_RELEASE", "decision": "recommend_new_model_family", "priority": "high"},
+    {"id": "SIG_2025_INDIAAI_COMPUTE_PORTAL_LAUNCH", "decision": "recommend_new_program_implementation", "priority": "high"},
+    {"id": "SIG_2025_SCHLESWIG_HOLSTEIN_MAIL_EXIT", "decision": "recommend_new_contextual_counterexample", "priority": "medium", "condition": "Retain the explicit non-AI context label and narrow workload scope."}
+  ],
+  "rejected_or_deferred": [
+    {
+      "item": "Brazil TCU Acórdão 1380/2026, Nuvem de Governo sovereignty audit",
+      "decision": "defer_source_resolution",
+      "urls": [
+        "https://pesquisa.apps.tcu.gov.br/documento/acordao-completo/alternativamente/%2520/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/17",
+        "https://btcu.apps.tcu.gov.br/api/obterDocumentoPdf/80488450"
+      ],
+      "reason": "Indexed TCU text exposes an audit with differentiated vendor dependencies and workload-allocation recommendations. Direct decision-page reading returned a JavaScript shell; PDF opening exposed a 221-page bulletin but targeted retrieval repeatedly timed out, and a direct download returned HTML. Session date in indexed metadata and bulletin publication date also require reconciliation. No vendor ranking or legal finding is promoted from snippets.",
+      "next_evidence_needed": "Read the complete original decision and technical report, establish session/publication dates and recommendation-versus-binding-order status, and verify the product versions/configurations behind comparisons. A domestic operator must not be equated with technology independence."
+    },
+    {
+      "item": "Brazil Nuvem Brasileira and Serpro sovereignty gradient",
+      "decision": "defer_as_planning_context",
+      "urls": [
+        "https://www.serpro.gov.br/menu/noticias/noticias-2026/serpro-soberania-na-nuvem/",
+        "https://www.gov.br/governodigital/pt-br/infraestrutura-nacional-de-dados/ambiente-tecnologico/nuvem/nuvem-brasileira",
+        "https://www.abdi.com.br/escuta-de-mercado-da-inicio-ao-projeto-nuvem-brasileira/"
+      ],
+      "reason": "Serpro's August 21 primary article describes a proposed infrastructure and a 15-criterion methodology spanning data, operations and technology. This is useful procurement design, but the reviewed evidence does not establish a deployed independent stack or tested exit. Prefer the audit or an actual contract/continuity test for a later addition."
+    },
+    {
+      "item": "EU Data Act cloud switching and Article 32",
+      "decision": "reject_duplicate",
+      "existing_ids": ["SIG_2025_EU_DATA_ACT_CLOUD_SWITCHING", "SIG_2025_EU_DATA_ACT_ARTICLE_32"],
+      "urls": ["https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"],
+      "reason": "Already canonical with the September 12, 2025 application date. Do not create a second law event or represent the January 2027 switching-fee ban as already effective in November 2026. This pass uses canonical review for the dedup decision, not a new comprehensive legal audit."
+    },
+    {
+      "item": "CMA July 2025 cloud-market final decision",
+      "decision": "reject_duplicate_keep_october_implementation_followup",
+      "existing_ids": ["SIG_2025_CMA_CLOUD_SWITCHING_AEC"],
+      "urls": ["https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf"],
+      "reason": "Existing record already covers concentration, switching frequency, technical/egress/licensing barriers and limited contemporaneous AI effect. New candidate addresses a later implementation stage instead."
+    },
+    {
+      "item": "European Commission sovereign-cloud procurement",
+      "decision": "reject_duplicate",
+      "existing_ids": ["SIG_EU_2026_SOVEREIGN_CLOUD_PROCUREMENT"],
+      "urls": ["https://commission.europa.eu/news-and-media/news/sovereign-cloud-framework-explained-2026-06-01_en"],
+      "reason": "The April 2026 award and tiered criteria are already canonical. A more precise primary award date could improve the existing record later, but it is not another substantive event. Framework ceiling is not realized spending or measured independence."
+    },
+    {
+      "item": "AWS European Sovereign Cloud launch and disconnection exercise",
+      "decision": "reject_duplicate",
+      "existing_ids": ["SIG_AWS_2026_EUROPEAN_SOVEREIGN_CLOUD", "SIG_2026_AWS_EU_DISCONNECTION_EXERCISE"],
+      "urls": ["https://aws.amazon.com/blogs/security/inside-a-successful-aws-european-sovereign-cloud-exercise-to-demonstrate-independent-operation/"],
+      "reason": "Both launch and October exercise already exist. Canonical caveats already distinguish vendor-reported operational isolation from internet disconnection, indefinite autonomy, cross-provider portability and legal immunity."
+    },
+    {
+      "item": "Sarvam 30B and 105B release",
+      "decision": "reject_duplicate",
+      "existing_ids": ["SIG_2026_SARVAM_30B_105B_APACHE_RELEASE"],
+      "urls": ["https://www.sarvam.ai/blogs/sarvam-30b-105b"],
+      "reason": "Already canonical. IndiaAI compute procurement is a separate access mechanism; do not count this model family again as a second Global South candidate."
+    },
+    {
+      "item": "Current IndiaAI portal eligibility and automatic-approval thresholds",
+      "decision": "defer_live_policy_details",
+      "urls": ["https://www.compute.indiaai.gov.in/login", "https://compute.indiaai.gov.in/files/end-user-policy.pdf"],
+      "reason": "Search-indexed official portal text describes eligibility and approvals, but direct page retrieval timed out. Detailed thresholds are excluded from accepted claims; the dated launch and July government update suffice for the bounded event."
+    }
+  ],
+  "editorial_checks": {
+    "facts_claims_forecasts_inferences_separated": true,
+    "event_dates_distinguished_from_publication_dates": true,
+    "model_and_study_families_deduplicated": true,
+    "local_origin_not_equated_with_independence": true,
+    "no_claim_of_measured_global_south_representativeness": true,
+    "counterevidence": "A completed, bounded non-AI migration; real but incomplete UK exit measures; public Indian access despite foreign hardware; Swiss open artifacts despite NVIDIA training infrastructure.",
+    "remaining_limitations": "No independent workload-exit cost measurements, no tested indefinite disconnection, no independently reproduced full model training, and no accepted Brazilian audit until original decision access is resolved."
+  }
+}

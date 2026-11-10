@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-10",
+  "selections": [
+    {
+      "packet": "sovereignty-research.json",
+      "id": "SIG_2026_CMA_CLOUD_EXIT_IMPLEMENTATION_REVIEW",
+      "decision": "accept",
+      "reason": "Distinct implementation follow-up to the 2025 investigation; primary report and regulator page directly reviewed by lead.",
+      "overrides": {
+        "actors": ["UK Competition and Markets Authority", "Amazon / AWS", "Microsoft"],
+        "artifact": "supervisory_communication",
+        "force": "advisory",
+        "stage": "published",
+        "outcome_stage": "institutional_practice"
+      }
+    },
+    {
+      "packet": "sovereignty-research.json",
+      "id": "SIG_2025_APERTUS_OPEN_MODEL_RECIPE_RELEASE",
+      "decision": "accept",
+      "reason": "Distinct open model family; release verified on ETH primary page. No capability parity or hardware independence asserted.",
+      "overrides": {"artifact":"product","force":"contractual","stage":"available","outcome_stage":"public_research_resource","contexts":["training","ecosystem_measurement"]}
+    },
+    {
+      "packet": "sovereignty-research.json",
+      "id": "SIG_2025_INDIAAI_COMPUTE_PORTAL_LAUNCH",
+      "decision": "accept",
+      "reason": "Implementation milestone distinct from 2024 mission authorization. Primary launch page reviewed; retain only launch-state numbers in the event summary.",
+      "overrides": {
+        "summary_ru":"IndiaAI запустила портал облачных вычислений с субсидией до 40% для подходящих пользователей. На старте было заявлено предоставление доступа к 10 000 GPU. Перечень оборудования включает NVIDIA, AMD, Intel и ускорители AWS.",
+        "summary_en":"IndiaAI launched a cloud-compute portal with subsidies of up to 40% for eligible users. The launch announcement described initial access to 10,000 GPUs. The hardware catalogue includes NVIDIA, AMD, Intel and AWS accelerators.",
+        "source_ids":["SOV_INDIAAI_PORTAL_LAUNCH"],
+        "actors":["IndiaAI Mission","India Ministry of Electronics and Information Technology"],
+        "artifact":"government_program","force":"conditional","stage":"launched","outcome_stage":"research_tool_access"
+      }
+    },
+    {"packet":"delegation-research.json","collection":"candidates","id":"SIG_2025_OMB_HIGH_IMPACT_AI_DEPLOYMENT_ACCOUNTABILITY","decision":"accept","reason":"Deployment accountability is distinct from the existing procurement memo. Primary memorandum checked.","overrides":{"actors":["White House Office of Management and Budget"],"outcome_stage":"institutional_practice"}},
+    {"packet":"delegation-research.json","collection":"candidates","id":"SIG_2026_CMS_WISER_REVIEW_WORKFLOW","decision":"accept","reason":"CMS confirms the workflow and incentive mechanism. No observed denial or harm rate inferred.","overrides":{"actors":["Centers for Medicare & Medicaid Services"],"actor_types":["government"],"outcome_stage":"clinical_workflow"}},
+    {"packet":"delegation-research.json","collection":"candidates","id":"SIG_2026_UTAH_NOLLA_STAGED_INITIAL_PRESCRIPTIONS","decision":"accept","reason":"Narrow staged authorization; operator primary announcement checked. Actual transition beyond initial physician review is not established.","overrides":{"actors":["Utah Office of Artificial Intelligence Policy","Utah Division of Professional Licensing","Nolla Health"],"actor_types":["regulator","government","company"],"summary_ru":"По сообщению Nolla, пилот в Юте допускает первичные рецепты на ограниченные местные средства от акне. Сначала каждый рецепт проверяют два врача; переход к последующему и выборочному контролю требует письменного согласия штата.","summary_en":"According to Nolla, its Utah pilot permits initial prescriptions for limited topical acne treatments. Two physicians initially review every prescription; moving to retrospective and sampled review requires written state approval.","outcome_stage":"clinical_workflow"}},
+    {"packet":"delegation-research.json","collection":"candidates","id":"SIG_2025_CJEU_DNB_AUTOMATED_DECISION_EXPLANATION","decision":"accept","reason":"Court judgment and official explanation checked; not a new general ban or universal code-disclosure rule.","overrides":{"artifact":"judgment","outcome_stage":"institutional_practice"}},
+    {"packet":"delegation-research.json","collection":"candidates","id":"SIG_2026_UK_DUAA_AUTOMATED_DECISIONS_COMMENCE","decision":"accept","reason":"Commencement instrument checked separately from 2025 assent; expansion and safeguards both retained.","overrides":{"actors":["UK Parliament","Information Commissioner's Office"],"outcome_stage":"institutional_practice"}},
+    {"packet":"delegation-research.json","collection":"candidates","id":"SIG_2026_DWP_ADVANCES_REVIEW_CONTINUATION","decision":"accept","reason":"Operator assessment directly confirms concealed risk score and human decision; disparity and incomplete evidence retained.","overrides":{"actors":["UK Department for Work and Pensions"],"actor_types":["government"],"outcome_stage":"institutional_practice"}},
+    {"packet":"economy-review.json","collection":"ready_records","id":"SIG_2026_COREWEAVE_Q2_CASH_CAPEX_DEBT","decision":"accept","reason":"Reviewed reporting event with cash flow, debt and lease distinctions."},
+    {"packet":"economy-review.json","collection":"ready_records","id":"SIG_2025_AEP_OHIO_DATACENTER_MINIMUM_BILLING","decision":"accept","reason":"Enacted local cost allocation, without invented household savings."},
+    {"packet":"economy-review.json","collection":"ready_records","id":"SIG_2026_KENYA_AI_BUSINESS_ADVICE_HETEROGENEITY","decision":"accept","reason":"Null average and subgroup uncertainty retained; specific institutions only in actor filter.","overrides":{"actors":["UC Berkeley Haas","Harvard Business School"],"actor_types":["research"]}},
+    {"packet":"economy-review.json","collection":"ready_records","id":"SIG_2025_FREELANCE_GENAI_DEMAND_DECLINE","decision":"accept","reason":"Relative postings estimate, not layoffs; observational design explicitly qualified.","overrides":{"actors":["Imperial College London","DIW Berlin"],"actor_types":["research"]}},
+    {"packet":"economy-review.json","collection":"ready_records","id":"SIG_2026_COPILOT_THREE_FIRM_PRODUCTIVITY_RCTS","decision":"accept","reason":"Weighted IV and task outcome retained; unnamed firm described in study, not invented as actor entity.","overrides":{"actors":["Microsoft","Accenture","Massachusetts Institute of Technology"],"actor_types":["company","research"]}},
+    {"packet":"economy-review.json","collection":"ready_records","id":"SIG_2025_COPILOT_66_FIRMS_WORK_PATTERNS","decision":"accept","reason":"Version history resolved; ITT and LATE separately stated.","overrides":{"actors":["Microsoft Research","Harvard Business School"],"actor_types":["research"]}},
+    {"packet":"knowledge-review.json","collection":"ready_records","id":"SIG_2026_FIRST_PROOF_BATCH3_EXTERNAL_EVALUATION","decision":"accept","reason":"External expert scoring and inspectable artifacts; not proof certification or all-open-model comparison.","overrides":{"contexts":["benchmark","controlled_simulation"]}},
+    {"packet":"knowledge-review.json","collection":"ready_records","id":"SIG_2025_WIKIMEDIA_ENTERPRISE_REVENUE_OPEN_ACCESS","decision":"accept","reason":"Audited revenue, service access and nonexclusive content distinguished.","overrides":{"artifact":"disclosure"}},
+    {"packet":"knowledge-review.json","collection":"ready_records","id":"SIG_2026_WIKIPEDIA_AIO_REFERRAL_DID","decision":"accept","reason":"One versioned study family; later estimates not independent confirmation of withdrawn version."},
+    {"packet":"knowledge-review.json","collection":"ready_records","id":"SIG_2025_EBU_BBC_MULTILINGUAL_NEWS_INTEGRITY","decision":"accept","reason":"Dated multilingual sourcing audit with response denominator and historical product scope.","overrides":{"contexts":["controlled_simulation"]}},
+    {"packet":"knowledge-review.json","collection":"ready_records","id":"SIG_2025_COMMON_PILE_OPEN_LICENSED_PRETRAINING","decision":"accept","reason":"Open-data feasibility at bounded scale; not frontier parity or blanket licensing guarantee."},
+    {
+      "packet":"economy-review.json","id":"SIG_2025_AWS_P4_P5_GPU_PRICE_CUT","decision":"accept_narrowed","reason":"Promote verified reserve: posted price reductions are substantive counterevidence to uniformly increasing access prices. No inference about economic rent.",
+      "record": {
+        "id":"SIG_2025_AWS_P4_P5_GPU_PRICE_CUT","date":"2025-06-01","date_basis":"On-Demand effective date in June 5 announcement; Savings Plan changes apply after June 4.",
+        "title_ru":"AWS снизила опубликованные цены на аренду GPU P4 и P5","title_en":"AWS reduced posted P4 and P5 GPU rental prices",
+        "summary_ru":"По сравнению с 31 мая AWS снизила On-Demand цены P4d/P4de на 33%, P5 на 44%, P5en на 25%. Максимальная скидка 45% относилась к трёхлетнему плану P5, а не ко всем инстансам.",
+        "summary_en":"Against May 31 prices, AWS reduced On-Demand P4d/P4de prices by 33%, P5 by 44% and P5en by 25%. The maximum 45% cut applied to a three-year P5 plan, not every instance.",
+        "caveat_ru":"Исторический прайс-лист не измеряет среднюю оплачиваемую цену, полную стоимость задачи или экономическую ренту. Условия зависят от ОС и плана; обязательства и издержки смены поставщика сохраняются.",
+        "caveat_en":"Historical list prices do not measure average paid prices, total task cost or economic rent. OS and plan conditions apply; commitments and switching costs remain.",
+        "mechanism_ru":"Цена входа в облачные вычисления может снижаться при сохраняющейся зависимости от инфраструктуры поставщика.",
+        "mechanism_en":"Cloud-compute entry prices can fall while dependence on the provider's infrastructure persists.",
+        "actors":["Amazon / AWS"],"actor_types":["company"],"jurisdictions":["US"],"geographic_scopes":["Global"],
+        "layers":["cloud_inference","energy_compute_chips","finance_rent"],"arcs":["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],"source_ids":["ECON_AWS_BLOG","ECON_AWS_NOTICE"],
+        "evidence_kind":"provider_posted_price_change","artifact":"market_observation","force":"contractual","stage":"effective","contexts":["ecosystem_measurement"],"outcome_stage":"reported_operational_result"
+      }
+    },
+    {
+      "packet":"economy-review.json","id":"SIG_2026_MICROSOFT_Q1FY27_CAPEX_LEASE_BOUNDARY","decision":"accept_narrowed","reason":"Promote verified accounting reserve as distinct from CoreWeave; measures are kept separate, without an invented reconciliation.",
+      "record": {
+        "id":"SIG_2026_MICROSOFT_Q1FY27_CAPEX_LEASE_BOUNDARY","date":"2026-10-28","date_basis":"Publication of FY2027 Q1 results for July-September 2026; building-life change announced July 29.",
+        "title_ru":"Microsoft: денежные вложения и CapEx с арендой различаются","title_en":"Microsoft: cash investment and lease-inclusive CapEx differ",
+        "summary_ru":"Microsoft сообщила о $45,2 млрд квартального CapEx и $39,367 млрд денежных приобретений основных средств. Изменение расчётного срока службы зданий с 15 до 25 лет влияет на классификацию будущих арендных договоров.",
+        "summary_en":"Microsoft reported $45.2bn of quarterly CapEx and $39.367bn of cash property additions. Changing estimated building lives from 15 to 25 years affects the classification of future leases.",
+        "caveat_ru":"Показатели относятся ко всей компании, не только к ИИ, и не складываются друг с другом. Срок службы зданий не относится к GPU. Изменение учёта не измеряет физическое сокращение инвестиций.",
+        "caveat_en":"These are company-wide, not AI-only measures and cannot be added together. Building lives are not GPU lives. Accounting changes do not measure a physical investment reduction.",
+        "mechanism_ru":"Доступ к вычислениям зависит от капиталоёмкой инфраструктуры; сравнение её финансирования требует учитывать признание аренды и реальные денежные потоки.",
+        "mechanism_en":"Compute access depends on capital-intensive infrastructure; comparisons of its financing require distinguishing lease recognition from actual cash flows.",
+        "actors":["Microsoft"],"actor_types":["company"],"jurisdictions":["US"],"geographic_scopes":["Global"],
+        "layers":["finance_rent","cloud_inference","energy_compute_chips"],"arcs":["ARC_CAPITAL_MIX_PUBLIC_PRIVATE","ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],"source_ids":["ECON_MS_Q1_RELEASE","ECON_MS_Q1_CALL","ECON_MS_Q4_CALL"],
+        "evidence_kind":"issuer_financial_reporting","artifact":"disclosure","force":"not_applicable","stage":"published","contexts":["ecosystem_measurement"],"outcome_stage":"reported_operational_result"
+      }
+    },
+    {
+      "packet":"knowledge-review.json","id":"SIG_2026_RAVEN_TESS_STATISTICAL_VALIDATION","decision":"accept_narrowed","reason":"Promote verified reserve: distinct research family and current astronomy evidence. Primary paper read; bounded counts without same-day data-availability claim.",
+      "record": {
+        "id":"SIG_2026_RAVEN_TESS_STATISTICAL_VALIDATION","date":"2026-03-25","date_basis":"Journal availability recorded by Warwick; first preprint March 23. Later deposited data do not establish launch-day access.",
+        "title_ru":"RAVEN: 118 новых статистических валидаций экзопланет","title_en":"RAVEN: 118 newly statistically validated exoplanets",
+        "summary_ru":"RAVEN обработал данные TESS о более чем 2,2 млн звёзд. Авторы сообщают о 118 новых статистических валидациях, включая 31 впервые обнаруженный в этой работе объект.",
+        "summary_en":"RAVEN processed TESS data for over 2.2 million stars. The authors report 118 newly statistically validated planets, including 31 first detected in this study.",
+        "caveat_ru":"Статистическая валидация не равна независимому наблюдательному подтверждению. Выборка ограничена короткими орбитами и критериями отбора; кандидаты не прибавляются к числу валидированных планет.",
+        "caveat_en":"Statistical validation is not independent observational confirmation. Short orbital periods and selection criteria limit the sample; candidates are not added to validated-planet counts.",
+        "mechanism_ru":"Открытые наблюдательные архивы и вычислительная проверка расширяют научный результат за пределами организаций, владеющих телескопами.",
+        "mechanism_en":"Open observational archives and computational validation extend scientific production beyond the organizations operating telescopes.",
+        "actors":["University of Warwick","CONICET"],"actor_types":["research"],"jurisdictions":["UK","Argentina"],
+        "layers":["data_telemetry","model_weights"],"arcs":["ARC_KNOWLEDGE_PRODUCTION_VALIDATION"],"source_ids":["KR_RAVEN_PAPER","KR_RAVEN_WRAP","KR_RAVEN_HISTORY"],
+        "evidence_kind":"research_statistical_validation","artifact":"research","force":"not_applicable","stage":"published","contexts":["ecosystem_measurement"],"outcome_stage":"statistical_validation"
+      }
+    },
+    {
+      "packet":"knowledge-review.json","id":"SIG_2025_GENERATIVE_ANTIBIOTICS_PRECLINICAL_VALIDATION","decision":"accept_narrowed","reason":"Promote only author-abstract result after direct PubMed verification; no clinical efficacy or full-protocol audit claimed.",
+      "record": {
+        "id":"SIG_2025_GENERATIVE_ANTIBIOTICS_PRECLINICAL_VALIDATION","date":"2025-08-14","date_basis":"First electronic publication; October issue date is not the discovery date.",
+        "title_ru":"Генеративный дизайн антибиотиков: лабораторная и доклиническая проверка","title_en":"Generative antibiotic design: laboratory and preclinical testing",
+        "summary_ru":"Авторы сообщили об избирательной антибактериальной активности семи из 24 синтезированных соединений. Два ведущих соединения снизили бактериальную нагрузку в мышиных моделях.",
+        "summary_en":"The authors reported selective antibacterial activity in seven of 24 synthesized compounds. Two lead compounds reduced bacterial burden in mouse models.",
+        "caveat_ru":"Проверены авторская аннотация и сообщение института, не полный экспериментальный протокол. Результат доклинический; безопасность и эффективность у людей, общий процент успеха генерации и экономия разработки не установлены.",
+        "caveat_en":"The author abstract and institutional account were reviewed, not the full experimental protocol. This is preclinical: human safety and efficacy, overall generation success and development-cost savings are not established.",
+        "mechanism_ru":"Вычислительный поиск становится научным результатом через синтез и биологическую проверку; лабораторная инфраструктура остаётся отдельным условием доступа.",
+        "mechanism_en":"Computational search becomes a scientific result through synthesis and biological testing; laboratory infrastructure remains a separate access requirement.",
+        "actors":["Massachusetts Institute of Technology"],"actor_types":["research"],"jurisdictions":["US"],
+        "layers":["model_weights","data_telemetry"],"arcs":["ARC_KNOWLEDGE_PRODUCTION_VALIDATION","ARC_MEDICAL_AI_TRANSLATION"],"source_ids":["KR_ANTIBIOTICS_ABSTRACT","KR_ANTIBIOTICS_MIT"],
+        "evidence_kind":"author_reported_preclinical_result","artifact":"research","force":"not_applicable","stage":"published","contexts":["evaluation_with_real_effect"],"outcome_stage":"physical_lab_validation"
+      }
+    }
+  ],
+  "updates": [{
+    "packet":"knowledge-review.json","id":"SIG_2026_MATTERGEN_NOVELTY_REANALYSIS","decision":"update_existing","update_index":0,
+    "reason":"Update the original study instead of adding a discovery; refine January month precision to verified January 16 and date the independent challenge separately.",
+    "fields_overrides": {
+      "current_state": {
+        "observed_at":"2026-04-20",
+        "title_ru":"MatterGen: опубликован независимый разбор новизны и состава образца",
+        "title_en":"MatterGen: independent reanalysis of sample novelty and composition published",
+        "summary_ru":"Рецензируемая работа оспаривает новизну и состав экспериментального примера. Это повторный анализ, не новый синтез и не отзыв исходной статьи; автор отмечает инструментальную неопределённость.",
+        "summary_en":"A peer-reviewed paper challenges the experimental example's novelty and composition. This is reanalysis, not new synthesis or retraction; the author notes instrumental uncertainty.",
+        "date_note_ru":"Препринт критики появился 19 июня 2025 года; здесь указана дата журнальной публикации.",
+        "date_note_en":"The critique's preprint first appeared on June 19, 2025; this is the journal publication date."
+      }
+    },
+    "overrides": {
+      "summary_ru":"Авторы MatterGen представили генеративную модель неорганических материалов и лабораторное испытание полученного образца. Новизна и состав этого образца позднее стали предметом независимой критики.",
+      "summary_en":"MatterGen's authors presented a generative model for inorganic materials and laboratory testing of a resulting sample. The sample's novelty and composition were subsequently challenged independently.",
+      "claim_supported_ru":"Генеративный поиск соединён с лабораторным испытанием; соответствие образца предсказанию и его новизна оспариваются.",
+      "claim_supported_en":"Generative search is connected to laboratory testing; the sample's match to the prediction and its novelty are disputed.",
+      "safe_wording_ru":"MatterGen включает лабораторный пример, но новизну и состав полученного материала нельзя считать бесспорно установленными.",
+      "safe_wording_en":"MatterGen includes a laboratory example, but the resulting material's novelty and composition cannot be treated as undisputed."
+    }
+  }],
+  "relations": [],
+  "deferred_or_rejected": [
+    {"packet":"sovereignty-research.json","id":"SIG_2025_SCHLESWIG_HOLSTEIN_MAIL_EXIT","decision":"defer_context_only","reason":"Useful bounded exit analogy, but it is a non-AI mail/office migration. Keep in the packet without expanding the AI event corpus."}
+  ],
+  "source_overrides": {
+    "SOV_APERTUS_RELEASE":{"type":"Research / technical"},
+    "SOV_APERTUS_MODEL_CARD":{"type":"Research / technical"},
+    "SOV_APERTUS_TECH_REPORT":{"type":"Research / preprint"},
+    "SOV_APERTUS_ALPS_ENGINEERING":{"type":"Research / preprint"},
+    "KR_ANTIBIOTICS_ABSTRACT":{"url":"https://pubmed.ncbi.nlm.nih.gov/40816267/"}
+  }
+}

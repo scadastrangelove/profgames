@@ -1,0 +1,11 @@
+{
+  "assertions": 35,
+  "errors": [],
+  "screenshots": [
+    "ru-1440.png",
+    "ru-390.png",
+    "en-1440.png",
+    "en-390.png"
+  ],
+  "passed": true
+}

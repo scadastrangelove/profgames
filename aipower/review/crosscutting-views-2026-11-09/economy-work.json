@@ -1,0 +1,420 @@
+{
+  "schema_version": "atlas_research_packet.v1",
+  "packet_id": "economy-work",
+  "cutoff_date": "2026-11-09",
+  "scope": "AI effects on labor, productivity, hiring, work organization and benefit distribution",
+  "status": "bounded_research_complete_not_canonical",
+  "selection_note": "The lead agent bounded this pass to four source-reviewed candidates. Pending items are not recommendations for immediate ingestion.",
+  "audit": {
+    "canonical_file": "aipower/ai_power_storygraph_en.json",
+    "initial_canonical_sha256": "53183ca871b712252ed7af9463d2ffccf686e81350c84bc10ed3ae29b4d53e08",
+    "final_recheck_canonical_sha256": "ce1ac67afa1b5fddfc5dc125ac0b30eb31cc12acf27de43aea2dd19b420f68a1",
+    "concurrent_change_note": "Canonical JSON changed during parallel UI work; this research task did not edit it. Deduplication, proposed IDs, counterevidence IDs, arc IDs and stack layers were revalidated against the final recheck hash, still containing 567 events.",
+    "events_reviewed_for_duplicates": 567,
+    "source_index_entries": 837,
+    "existing_arc_count": 30,
+    "instructions_read": ["../CLAUDE.md", "../zhet/BIBLE.md", "../zhet/PROJECT_REFERENCE.md (loop-summary section)"],
+    "local_instruction_search": "No additional AGENTS.md or CLAUDE.md found inside this repository, including hidden paths outside .git and node_modules.",
+    "dedup_method": "Inspected the existing work arc and related event summaries/sources first, then searched the complete parsed JSON for authors, study titles, DOI suffixes, working-paper identifiers and source URLs. Research revisions and journal publications belong to their original study family; a different URL alone does not constitute new evidence.",
+    "existing_families_not_new": [
+      "SIG_2023_NBER_GENAI_TACIT_KNOWLEDGE",
+      "SIG_2025_METR_PRODUCTIVITY_RCT",
+      "SIG_2026_METR_PRODUCTIVITY_SELECTION_UPDATE",
+      "SIG_2026_DENMARK_LABOR_REVISION",
+      "SIG_2026_STANFORD_CANARIES_UPDATE",
+      "SIG_2026_PG_CYBERNETIC_TEAMMATE",
+      "SIG_2025_ILO_TASK_EXPOSURE",
+      "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+      "SIG_2026_FAROS_DELIVERY_REVIEW_PRESSURE",
+      "SIG_2024_KLARNA_WORKLOAD_EQUIVALENT"
+    ],
+    "verification_boundary": "Primary publisher pages, author manuscripts and author research accounts were checked. This is source verification, not independent replication. Search-result dates were not substituted for publication dates. All selected publication anchors precede the cutoff; observation periods are stated separately.",
+    "canonical_edits": false,
+    "commits": false,
+    "validation": {
+      "json_parse": "passed",
+      "candidate_count": 4,
+      "counterevidence_count": 3,
+      "rejected_count": 5,
+      "pending_count": 5,
+      "arc_and_layer_references": "passed",
+      "proposed_ids_absent_from_canonical": true,
+      "selected_source_urls_absent_from_canonical": true,
+      "url_normalization": "DOI host aliases collapsed; www, trailing slash and tracking parameters normalized. AEA article query ID retained.",
+      "all_dated_selected_sources_within_cutoff": true
+    }
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "proposed_id": "SIG_2026_KENYA_AI_BUSINESS_ADVICE_HETEROGENEITY",
+      "study_family_id": "OTIS_CLARKE_DELECOURT_HOLTZ_KONING_KENYA_640",
+      "recommendation": "add_new_study_family",
+      "event_date": "2026-07-10",
+      "date_basis": "Journal online publication, explicitly dated by Management Science. Not the experiment date or first circulation of the study.",
+      "observation_period": "Late May to early November 2023; approximately five months.",
+      "title_ru": "Кения: ИИ-советник не улучшил средний результат малого бизнеса",
+      "title_en": "Kenya: AI advice did not improve average small-business performance",
+      "summary_ru": "Рандомизированный эксперимент с 640 предпринимателями не выявил значимого среднего эффекта на выручку и прибыль. У исходно менее успешных участников результат ухудшился; выигрыш более успешных был лишь предположительным.",
+      "summary_en": "A randomized trial with 640 entrepreneurs found no significant average revenue-and-profit effect. Initially lower-performing businesses did worse; gains among higher performers were only suggestive.",
+      "caveat_ru": "Доступ к совету не гарантирует полезного применения. Самоотчёты, одна страна и короткий горизонт; положительный эффект сильной подгруппы не значим на уровне 5%.",
+      "caveat_en": "Access to advice does not ensure beneficial implementation. Outcomes are self-reported, in one country over a short horizon; the higher-performing subgroup's positive estimate is not significant at 5%.",
+      "evidence_stage": {
+        "publication": "peer_reviewed_journal_article",
+        "design": "randomized_field_experiment",
+        "causal_scope": "Assignment to GPT-4 business advice via WhatsApp versus business guides; subgroup effects within this sample, not national inequality.",
+        "headline_outcome": "Business performance index, not employee wages or headcount.",
+        "key_estimates": {
+          "average_effect_sd": 0.05,
+          "average_95ci_sd": [-0.05, 0.14],
+          "low_baseline_effect_sd": -0.08,
+          "low_baseline_95ci_sd": [-0.13, -0.03],
+          "high_baseline_effect_sd": 0.16,
+          "high_baseline_95ci_sd": [-0.01, 0.34]
+        }
+      },
+      "sources": [
+        {
+          "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2024.06909",
+          "title": "The Uneven Impact of Generative Artificial Intelligence on Entrepreneurial Performance: Evidence from a Field Experiment in Kenya",
+          "publisher": "Management Science",
+          "date": "2026-07-10",
+          "date_basis": "Published Online",
+          "verification": "Primary full text: publication metadata, experiment description and sections 4.1-4.2 checked."
+        },
+        {
+          "url": "https://newsroom.haas.berkeley.edu/research/gen-ai-experiment-shows-mixed-results-in-helping-small-businesses-grow/",
+          "title": "Gen AI field experiment shows mixed results in helping small businesses grow",
+          "publisher": "UC Berkeley Haas",
+          "date": "2024-04-01",
+          "date_basis": "Institutional research announcement",
+          "verification": "First-party institutional account confirms the earlier study family and 640-person trial; final effect estimates above come from the journal, not this older account."
+        }
+      ],
+      "relevant_existing_arc_ids": ["ARC_WORK_COMPETENCE_DISTRIBUTION", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "stack_layers": ["model_weights", "decision_support_cognition", "data_telemetry"],
+      "view_relevance": {
+        "AI Economy": "Firm outcomes and unequal benefits, including a null average and harmful subgroup effect.",
+        "Knowledge and Access": "Distinguishes access to business expertise from the capacity to evaluate and implement advice."
+      },
+      "counterevidence_refs": ["CE_EXISTING_SUPPORT_NOVICE_GAINS"],
+      "dedup": {
+        "verdict": "new_to_canonical_event_and_study_family",
+        "event_match_ids": [],
+        "study_family_match_ids": [],
+        "url_match_ids": [],
+        "checked_keys": ["Otis", "06909", "Kenyan entrepreneurs"],
+        "nearest_existing_ids": ["SIG_2023_NBER_GENAI_TACIT_KNOWLEDGE", "SIG_2026_PG_CYBERNETIC_TEAMMATE"],
+        "reason": "Different participants, intervention and economic outcomes. The 2024 manuscript and 2026 journal article must become one event family, not two independent findings."
+      }
+    },
+    {
+      "rank": 2,
+      "proposed_id": "SIG_2025_FREELANCE_GENAI_DEMAND_DECLINE",
+      "study_family_id": "DEMIRCI_HANNANE_ZHU_FREELANCE_DEMAND",
+      "recommendation": "add_new_study_family",
+      "event_date": "2025-01-24",
+      "date_basis": "Journal online publication; the October 2025 issue and August 2024 working paper are not separate empirical events.",
+      "observation_period": "July 2021 to July 2023, including eight months following ChatGPT's introduction.",
+      "title_ru": "Фриланс: спрос на задания по текстам и коду снизился относительно контрольных категорий",
+      "title_en": "Freelancing: writing and coding demand fell relative to comparison categories",
+      "summary_ru": "Анализ 1,388,711 объявлений оценивает относительное снижение числа автоматизируемых заданий примерно на 21%. Оставшиеся задания стали сложнее и предлагали более высокую оплату.",
+      "summary_en": "An analysis of 1,388,711 postings estimates an approximately 21% relative decline in automation-prone work. Remaining jobs were more complex and offered higher pay.",
+      "caveat_ru": "Это объявления одной платформы, не число увольнений или заработки работников. Нерандомизированный DiD зависит от сопоставимости трендов; предложенная оплата не равна полученной зарплате.",
+      "caveat_en": "These are postings on one platform, not layoffs or worker earnings. Nonrandomized DiD relies on comparable trends; offered pay is not realized wages.",
+      "evidence_stage": {
+        "publication": "peer_reviewed_journal_article",
+        "design": "observational_quasi_experimental_difference_in_differences",
+        "causal_scope": "Differential changes after tool releases across task clusters, with synthetic and doubly robust DiD checks; not randomized adoption.",
+        "headline_outcome": "Posting demand relative to lower-exposure, manual-intensive comparison categories.",
+        "internal_counterevidence": "Higher offered pay among surviving postings means fewer postings cannot be translated mechanically into a uniform wage decline."
+      },
+      "sources": [
+        {
+          "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2024.05420",
+          "title": "Who Is AI Replacing? The Impact of Generative AI on Online Freelancing Platforms",
+          "publisher": "Management Science",
+          "date": "2025-01-24",
+          "date_basis": "Published Online",
+          "verification": "Primary publisher abstract and publication metadata checked."
+        },
+        {
+          "url": "https://www.ifo.de/sites/default/files/docbase/docs/cesifo1_wp11276.pdf",
+          "title": "Who Is AI Replacing? The Impact of Generative AI on Online Freelancing Platforms, CESifo Working Paper 11276",
+          "publisher": "CESifo / ifo Institute",
+          "date": "2024-08",
+          "date_basis": "Working-paper cover, month precision",
+          "verification": "Primary manuscript checked for sample, observation window and DiD design; main result agrees with the journal abstract."
+        }
+      ],
+      "relevant_existing_arc_ids": ["ARC_WORK_COMPETENCE_DISTRIBUTION", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "stack_layers": ["data_telemetry", "model_weights", "decision_support_cognition"],
+      "view_relevance": {"AI Economy": "Observed task-market demand and changing job composition rather than modeled exposure or company layoff claims."},
+      "counterevidence_refs": ["CE_EXISTING_DENMARK_NULL"],
+      "dedup": {
+        "verdict": "new_to_canonical_event_and_study_family",
+        "event_match_ids": [],
+        "study_family_match_ids": [],
+        "url_match_ids": [],
+        "checked_keys": ["Demirci", "Hannane", "05420", "11276"],
+        "nearest_existing_ids": ["SIG_2026_STANFORD_CANARIES_UPDATE", "SIG_2025_ILO_TASK_EXPOSURE", "SIG_2024_KLARNA_WORKLOAD_EQUIVALENT"],
+        "reason": "Independent platform-demand study, not ADP payroll, an occupational exposure index or Klarna's workload-equivalent claim."
+      }
+    },
+    {
+      "rank": 3,
+      "proposed_id": "SIG_2026_COPILOT_THREE_FIRM_PRODUCTIVITY_RCTS",
+      "study_family_id": "CUI_DEMIRER_JAFFE_MUSOLFF_PENG_SALZ_4867",
+      "recommendation": "add_new_study_family",
+      "event_date": "2026-02-27",
+      "date_basis": "Management Science online publication. Earlier manuscripts and the November 2026 issue are the same study, not new replications.",
+      "observation_period": "Company experiments began in 2022-2023 and lasted approximately two to eight months; these are not tests of late-2026 coding agents.",
+      "title_ru": "Три компании: Copilot увеличил выполнение задач, особенно у менее опытных разработчиков",
+      "title_en": "Three firms: Copilot increased task completion, especially for less-experienced developers",
+      "summary_ru": "В трёх рандомизированных внедрениях с 4,867 разработчиками объединённая IV-оценка даёт рост выполненных задач на 26.08% (SE 10.3%). Менее опытные сотрудники чаще использовали инструмент и больше выигрывали.",
+      "summary_en": "Across three randomized rollouts covering 4,867 developers, the pooled IV estimate is 26.08% more completed tasks (SE 10.3%). Less-experienced employees adopted more and gained more.",
+      "caveat_ru": "Оценка использования инструмента не равна эффекту назначения доступа для всех. Испытания неоднородны и зарегистрированы постфактум; выпуск задач не доказывает рост зарплат, качества или сокращение штата.",
+      "caveat_en": "The tool-use estimate is not the access-assignment effect for everyone. Trials are heterogeneous and postregistered; task output does not establish wage gains, quality gains or staffing reductions.",
+      "evidence_stage": {
+        "publication": "peer_reviewed_journal_article",
+        "design": "three_randomized_field_experiments_with_noncompliance",
+        "causal_scope": "Random assignment instruments actual use; pooled treatment-on-the-treated estimate at Microsoft, Accenture and an anonymous Fortune 100 firm.",
+        "headline_outcome": "Completed development tasks, operationalized through pull-request activity; not economy-wide productivity.",
+        "disclosure": "Vendor-affiliated coauthors and company-run experiments; inspect alongside independent evidence."
+      },
+      "sources": [
+        {
+          "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535",
+          "title": "The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers",
+          "publisher": "Management Science",
+          "date": "2026-02-27",
+          "date_basis": "Published Online",
+          "verification": "Primary abstract, metadata and postregistration disclosure checked."
+        },
+        {
+          "url": "https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf",
+          "title": "The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers",
+          "publisher": "Authors / MIT",
+          "date": "2025-02",
+          "date_basis": "Manuscript cover, month precision",
+          "verification": "Primary manuscript checked for randomized access, noncompliance, IV estimand and study periods. Main estimate agrees with the final publisher abstract."
+        }
+      ],
+      "relevant_existing_arc_ids": ["ARC_WORK_COMPETENCE_DISTRIBUTION", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "stack_layers": ["model_weights", "data_telemetry", "decision_support_cognition"],
+      "view_relevance": {
+        "AI Economy": "Causal workplace output evidence with experience heterogeneity.",
+        "Knowledge and Access": "Embedded assistance can change who can complete professional tasks; wages and independent competence remain separate outcomes."
+      },
+      "counterevidence_refs": ["CE_EXISTING_METR_SLOWDOWN_AND_FOLLOWUP", "CE_EXISTING_DENMARK_NULL"],
+      "dedup": {
+        "verdict": "new_to_canonical_event_and_study_family",
+        "event_match_ids": [],
+        "study_family_match_ids": [],
+        "url_match_ids": [],
+        "checked_keys": ["Cui", "Demirer", "00535", "4945566"],
+        "nearest_existing_ids": ["SIG_2021_GITHUB_COPILOT_TECH_PREVIEW", "SIG_2025_METR_PRODUCTIVITY_RCT", "SIG_2026_FAROS_DELIVERY_REVIEW_PRESSURE"],
+        "reason": "Product launch, METR's experienced open-source developers and Faros telemetry are different events and samples. The three company trials are one pooled study family."
+      }
+    },
+    {
+      "rank": 4,
+      "proposed_id": "SIG_2025_COPILOT_66_FIRMS_WORK_PATTERNS",
+      "study_family_id": "DILLON_JAFFE_IMMORLICA_STANTON_66_FIRMS",
+      "recommendation": "add_new_study_family_with_version_note",
+      "event_date": "2025-04-15",
+      "date_basis": "First public arXiv submission of this research family. Figures below describe the later verified version, not necessarily the first manuscript. No dated journal-publication event is asserted.",
+      "observation_period": "September 2023 to October 2024 across firms; approximately six months per participating worker.",
+      "title_ru": "66 компаний: ИИ сократил время на почту, но не изменил состав задач",
+      "title_en": "66 firms: AI reduced email time without changing the task mix",
+      "summary_ru": "Эксперимент с 7,137 работниками показал экономию около двух часов на почте в неделю у использовавших инструмент во второй половине испытания. Изменений объёма и состава задач не обнаружено.",
+      "summary_en": "A trial with 7,137 workers found approximately two fewer weekly email hours among tool users in the second half of the experiment. Task quantity and composition did not detectably change.",
+      "caveat_ru": "Экономия времени не равна росту выпуска. Рандомизация индивидуального доступа не проверяет полную перестройку команды; телеметрия охватывает не всю работу. Даты версии требуют отдельного примечания.",
+      "caveat_en": "Time savings are not output gains. Individual access randomization does not test wholesale team redesign, and telemetry misses some work. Version dates require a separate note.",
+      "evidence_stage": {
+        "publication": "accepted_forthcoming_AER_Insights_with_public_working_paper",
+        "design": "randomized_cross_industry_field_experiment",
+        "causal_scope": "Randomized individual access to Microsoft 365 Copilot. The two-hour user estimate must not be described as the intention-to-treat effect for all assigned workers.",
+        "headline_outcome": "Application time and task activity, with a null result for task quantity/composition.",
+        "disclosure": "Microsoft-run trial with vendor-affiliated authors and participating customer firms."
+      },
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2504.11436",
+          "title": "Shifting Work Patterns with Generative AI",
+          "publisher": "Authors / arXiv",
+          "date": "2025-04-15",
+          "revision_date": "2025-11-13",
+          "date_basis": "Submission history: first submission and latest displayed v4 revision",
+          "verification": "Primary abstract and submission history checked; later abstract specifies 7,137 workers and two-hour email result."
+        },
+        {
+          "url": "https://www.aeaweb.org/articles?id=10.1257/aeri.20250275",
+          "title": "Shifting Work Patterns with Generative AI",
+          "publisher": "American Economic Review: Insights",
+          "date": null,
+          "date_basis": "Forthcoming page; no publication day shown, checked 2026-11-09",
+          "verification": "Primary publisher abstract confirms the later sample, email result and task-mix null."
+        }
+      ],
+      "version_warning": "The arXiv v4 HTML header displays August 24, 2026 while the submission-history page lists v4 as November 13, 2025. Do not invent a new August publication event or combine the early 3.6-hour frequent-user estimate with the later two-hour result. The current publisher abstract corroborates the selected result; precise revision chronology remains pending.",
+      "relevant_existing_arc_ids": ["ARC_WORK_COMPETENCE_DISTRIBUTION", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "stack_layers": ["model_weights", "data_telemetry", "decision_support_cognition"],
+      "view_relevance": {
+        "AI Economy": "Separates individual time savings from organizational change and measured output.",
+        "Knowledge and Access": "Access through existing work applications is an intervention, not evidence that an entire organization has acquired new capabilities."
+      },
+      "counterevidence_refs": ["CE_EXISTING_DENMARK_NULL"],
+      "dedup": {
+        "verdict": "new_to_canonical_event_and_study_family",
+        "event_match_ids": [],
+        "study_family_match_ids": [],
+        "url_match_ids": [],
+        "checked_keys": ["Dillon", "Shifting Work Patterns", "33795", "2504.11436"],
+        "nearest_existing_ids": ["SIG_2026_PG_CYBERNETIC_TEAMMATE", "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP", "SIG_2026_DENMARK_LABOR_REVISION"],
+        "reason": "Different from P&G's bounded innovation tasks, executive surveys and Danish administrative outcomes. NBER 33795, arXiv and the forthcoming journal article are one family."
+      }
+    }
+  ],
+  "counterevidence": [
+    {
+      "id": "CE_EXISTING_DENMARK_NULL",
+      "existing_event_id": "SIG_2026_DENMARK_LABOR_REVISION",
+      "title_ru": "Дания: изменения задач без значимого среднего роста заработка и часов",
+      "title_en": "Denmark: tasks changed without a significant average earnings or hours effect",
+      "summary_ru": "Авторы связали опросы 25,000 работников с административными данными до декабря 2024 года. DiD-оценки исключают средние эффекты на заработок и часы больше 2% в изученных условиях.",
+      "summary_en": "The authors linked surveys of 25,000 workers to administrative records through December 2024. DiD estimates rule out average earnings and hours effects larger than 2% in the studied setting.",
+      "caveat_ru": "Наблюдательное исследование одной страны; это не доказательство отсутствия будущих эффектов или равенства всех подгрупп.",
+      "caveat_en": "Observational evidence from one country, not proof against future effects or effects in every subgroup.",
+      "evidence_stage": "survey_linked_administrative_data_difference_in_differences",
+      "source": {
+        "url": "https://www.brookings.edu/articles/still-waters-rapid-currents-early-labor-market-transformation-under-generative-ai/",
+        "title": "Still waters, rapid currents: Early labor market transformation under generative AI",
+        "date": "2026-10-06",
+        "publisher": "Brookings; authored by study researchers Anders Humlum and Emilie Vestergaard",
+        "verification": "Primary author account read. The later article is not a new independent study or a later administrative observation window."
+      },
+      "dedup_verdict": "already_in_canonical_study_family; useful additional author source, not a new event"
+    },
+    {
+      "id": "CE_EXISTING_METR_SLOWDOWN_AND_FOLLOWUP",
+      "existing_event_ids": ["SIG_2025_METR_PRODUCTIVITY_RCT", "SIG_2026_METR_PRODUCTIVITY_SELECTION_UPDATE"],
+      "title_ru": "METR: замедление в раннем эксперименте, ненадёжная оценка в продолжении",
+      "title_en": "METR: an early slowdown and an unreliable follow-up estimate",
+      "summary_ru": "Ранний RCT показал увеличение времени выполнения на 19% у опытных разработчиков в знакомых репозиториях. Продолжение выявило отбор участников и задач, не позволяющий уверенно оценить новый выигрыш.",
+      "summary_en": "The early RCT found tasks took 19% longer for experienced developers in familiar repositories. Follow-up participation and task selection prevented a reliable estimate of newer gains.",
+      "caveat_ru": "Не опровергает другой эксперимент с иными инструментами, участниками и метриками; также не задаёт универсальную скорость работы с ИИ в 2026 году.",
+      "caveat_en": "This does not invalidate experiments with different tools, populations and metrics, or establish a universal 2026 speed factor.",
+      "evidence_stage": "randomized_trial_plus_methodological_followup",
+      "sources": [
+        {
+          "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+          "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+          "date": "2025-07-10",
+          "publisher": "METR"
+        },
+        {
+          "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+          "title": "We are Changing our Developer Productivity Experiment Design",
+          "date": "2026-02-24",
+          "publisher": "METR"
+        }
+      ],
+      "dedup_verdict": "both_events_and_urls_already_in_canonical; retain_as_counterevidence"
+    },
+    {
+      "id": "CE_EXISTING_SUPPORT_NOVICE_GAINS",
+      "existing_event_id": "SIG_2023_NBER_GENAI_TACIT_KNOWLEDGE",
+      "title_ru": "Поддержка клиентов: менее опытные сотрудники выигрывали больше",
+      "title_en": "Customer support: less-experienced workers gained more",
+      "summary_ru": "Исследование поэтапного внедрения среди 5,172 агентов сообщает о росте решённых обращений в час примерно на 15%, с большим выигрышем новичков. Это ограничивает обобщение кенийского результата.",
+      "summary_en": "A staggered rollout involving 5,172 agents reports about 15% more resolved issues per hour, with greater gains for novices. It limits generalization of the Kenyan result.",
+      "caveat_ru": "Это другая рабочая среда, а не независимая репликация или универсальный эффект на неравенство.",
+      "caveat_en": "A different work setting, not an independent replication or a universal inequality effect.",
+      "evidence_stage": "peer_reviewed_staggered_deployment_field_study_not_randomized_trial",
+      "source": {
+        "url": "https://doi.org/10.1093/qje/qjae044",
+        "title": "Generative AI at Work",
+        "date": "2025-02-04",
+        "publisher": "Quarterly Journal of Economics",
+        "verification": "Primary journal abstract and online-publication date checked."
+      },
+      "dedup_verdict": "already_in_canonical_including_journal_DOI; no_new_event"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "label": "P&G Cybernetic Teammate as a new 2025 or 2026 event",
+      "existing_event_ids": ["SIG_2026_PG_CYBERNETIC_TEAMMATE"],
+      "url": "https://doi.org/10.1287/orsc.2025.20702",
+      "reason": "Study family and journal publication already represented. A preprint or alternate title is not independent evidence."
+    },
+    {
+      "label": "Stanford Canaries as newly discovered labor displacement",
+      "existing_event_ids": ["SIG_2026_STANFORD_CANARIES_UPDATE"],
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+      "reason": "The August 12, 2026 update is already represented. Exposure-linked payroll patterns must not be presented as a randomized causal effect."
+    },
+    {
+      "label": "Danish labor null, METR slowdown and NBER customer-support journal publication as new candidates",
+      "existing_event_ids": ["SIG_2026_DENMARK_LABOR_REVISION", "SIG_2025_METR_PRODUCTIVITY_RCT", "SIG_2026_METR_PRODUCTIVITY_SELECTION_UPDATE", "SIG_2023_NBER_GENAI_TACIT_KNOWLEDGE"],
+      "reason": "Existing event/study families. Retained above only as counterevidence."
+    },
+    {
+      "label": "ILO exposure estimates as observed job losses",
+      "existing_event_ids": ["SIG_2025_ILO_TASK_EXPOSURE"],
+      "reason": "Already represented and methodologically unsuitable as observed displacement."
+    },
+    {
+      "label": "Executive forecasts, Faros telemetry or Klarna workload equivalents as causal employment estimates",
+      "existing_event_ids": ["SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP", "SIG_2026_FAROS_DELIVERY_REVIEW_PRESSURE", "SIG_2024_KLARNA_WORKLOAD_EQUIVALENT"],
+      "reason": "Already represented; forecasts, selected vendor telemetry and workload equivalents do not establish causal layoffs, realized wages or economy-wide productivity."
+    }
+  ],
+  "pending": [
+    {
+      "label": "Voice AI in Firms: A Natural Field Experiment on Automated Job Interviews",
+      "url": "https://arxiv.org/html/2607.28222v2",
+      "version_date": "2026-09-11",
+      "status": "verified_reserve_not_selected_due_to_four_candidate_limit",
+      "verified_scope": "Preregistered field trial in Philippine customer-service recruitment; 67,056 eligible applications randomized out of 70,884 received. Offer rates were 8.70% with human interviews and 9.73% with AI interviews; humans made hiring decisions.",
+      "remaining_issue": "Selection only: do not add without a new editorial choice. Not economy-wide job creation or a trial of autonomous hiring decisions. Earlier SSRN publication was August 18, 2025; revisions remain one family. Author's later unpaid role at the partner is disclosed."
+    },
+    {
+      "label": "Artificial Intelligence and the Labor Market",
+      "url": "https://www.bryanseegmiller.com/files/AI_Draft_v202509.pdf",
+      "version_date": "2025-09",
+      "status": "verified_reserve_not_selected_due_to_four_candidate_limit",
+      "verified_scope": "Hampole, Papanikolaou, Schmidt and Seegmiller: task substitution, reallocation and offsetting firm-level labor demand; observational data with a historical university-hiring-network instrument.",
+      "remaining_issue": "Data cover 2010-2023 and largely the earlier AI wave. IV exclusion assumptions and a public-company sample limit causal/external scope; not a direct evaluation of current generative agents."
+    },
+    {
+      "label": "The Wage Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5842084",
+      "version_date": "2026-09-16",
+      "status": "not_promoted_full_methodology_pending",
+      "verified_scope": "Primary indexed SSRN abstract and author-linked identity report negative relative wage associations and no detectable employment change.",
+      "remaining_issue": "Direct SSRN full-text retrieval failed. Estimation details, observation horizon, parallel-trend diagnostics and uncertainty were not fully checked. Do not turn the abstract's wage figure into an established causal effect."
+    },
+    {
+      "label": "Does Generative AI Narrow Education-Based Productivity Gaps?",
+      "url": "https://www.nber.org/papers/w34851",
+      "status": "not_promoted_version_reconciliation_pending",
+      "verified_scope": "Primary arXiv version describes a randomized task experiment with 1,174 adults and a smaller education-linked performance gap under AI assistance.",
+      "remaining_issue": "NBER metadata reports an October 2026 revision, but that full version could not be retrieved. Inspected arXiv text is an earlier manuscript. Task performance is not a wage or employment outcome."
+    },
+    {
+      "label": "Shifting Work Patterns revision chronology",
+      "url": "https://arxiv.org/html/2504.11436v4",
+      "status": "candidate_date_note_required",
+      "remaining_issue": "Resolve November 13, 2025 arXiv history versus August 24, 2026 embedded manuscript date before asserting a precise later revision event. Retain the verified first-public-release anchor and publisher-corroborated later abstract meanwhile."
+    }
+  ],
+  "editorial_guardrails": [
+    "Do not equate task throughput, time saved, job postings, actual hires, employment stocks, earnings and business profits.",
+    "Keep assignment effects separate from IV estimates of tool use, and causal designs separate from observational comparisons.",
+    "Do not count manuscripts, journal articles, institutional summaries and updates from one family as independent replications.",
+    "A null average can coexist with harmful and beneficial subgroups; a nonsignificant positive estimate is not a demonstrated gain.",
+    "No selected candidate establishes economy-wide job destruction, universal wage gains or a single distributional direction."
+  ]
+}

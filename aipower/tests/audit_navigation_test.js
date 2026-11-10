@@ -122,6 +122,7 @@ function harness(ru, initialHash = '') {
   const run = source => vm.runInContext(source, context);
   run(section(language, 'var graphState =', 'function esc('));
   run(common);
+  run(fs.readFileSync(path.join(root, 'src/atlas-lenses.js'), 'utf8'));
   if (ru) {
     run(section(language, 'function setBackButton()', 'function bindSvgTooltips('));
   } else {
@@ -130,7 +131,7 @@ function harness(ru, initialHash = '') {
   }
   const afterCommon = language.slice(language.indexOf('/* COMMON_RUNTIME */') + '/* COMMON_RUNTIME */'.length);
   run(afterCommon.slice(0, afterCommon.indexOf(ru ? 'var footerArcCount' : 'renderHeader();')));
-  ['renderCatalog', 'renderFacts', 'renderStoryMap', 'renderStory', 'renderRecipes', 'renderTimeline'].forEach(name => {
+  ['renderCatalog', 'renderFacts', 'renderStoryMap', 'renderStory', 'renderRecipes', 'renderTimeline', 'renderLens'].forEach(name => {
     context[name] = () => renders.push(name);
   });
   // renderCyber writes the route, including when called inside switchTab/restore.

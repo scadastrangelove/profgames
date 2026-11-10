@@ -1,0 +1,459 @@
+{
+  "packet_id": "crosscutting-knowledge-research-2026-11-09",
+  "research_cutoff": "2026-11-09",
+  "scope": "Scientific knowledge production, validation, reproducibility and research-tool access; medicine, materials, mathematics, history and space.",
+  "status": "bounded_research_packet_not_canonical_data",
+  "selection_note": "The lead agent bounded this pass to four strongest candidates. Other leads are explicitly deferred or rejected, not silently treated as verified outcomes.",
+  "canonical_audit": {
+    "file": "aipower/ai_power_storygraph_en.json",
+    "sha256": "53183ca871b712252ed7af9463d2ffccf686e81350c84bc10ed3ae29b4d53e08",
+    "event_count": 567,
+    "source_index_count": 837,
+    "arc_count": 30,
+    "events_in_knowledge_or_medical_arcs": 43,
+    "instructions_read": [
+      "/Users/serg/Documents/zhet/build/CLAUDE.md",
+      "/Users/serg/Documents/zhet/build/zhet/BIBLE.md",
+      "/Users/serg/Documents/zhet/build/zhet/PROJECT_REFERENCE.md:146"
+    ],
+    "local_instruction_search": "No AGENTS.md or CLAUDE.md found inside the target repository, including a hidden/no-ignore search under aipower.",
+    "method": "Inspected all event headings and relevant knowledge/medical records; searched event identifiers, titles, summaries, URLs and source entries for candidate names and study identifiers. Deduplication distinguishes events, study families and URL/DOI aliases. Existing future-dated records were used only for deduplication, never as verification of external facts.",
+    "important_existing_families": [
+      "SIG_2025_MATTERGEN_SYNTHESIS",
+      "SIG_2026_ALETHEIA_RESEARCH_AGENT",
+      "SIG_2024_ALPHAPROOF_IMO",
+      "SIG_2025_ALPHAEVOLVE_ALGORITHMS",
+      "SIG_2025_RENTOSERTIB_PHASE2A",
+      "SIG_2025_EXOMINER_PLUS_TESS_CANDIDATES",
+      "SIG_2021_EXOMINER_301_VALIDATIONS",
+      "SIG_2025_HUBBLE_ANOMALYMATCH_ARCHIVE",
+      "SIG_2024_VESUVIUS_FIRST_PASSAGES",
+      "SIG_2026_VESUVIUS_PHERC1667",
+      "SIG_2025_AENEAS_CONTEXTUALIZATION",
+      "SIG_2025_ENOCH_MANUSCRIPT_DATING"
+    ],
+    "whole_registry_reverification": false,
+    "canonical_edits": false,
+    "concurrent_work_note": "The recorded SHA256 is the initial audit snapshot. Parallel v0.55 UI work changed canonical metadata and added crosscuttingViews during research. Final dedup and reference validation were rerun against the current graph; the event/source counts remained 567/837. No concurrent edits were reverted."
+  },
+  "date_policy": "Use an explicitly dated publication, release or correction. Distinguish first public disclosure, journal publication, testing period and later press coverage. Null source dates mean undated live documentation, not a date inferred from retrieval or a DOI string.",
+  "candidates": [
+    {
+      "rank": 1,
+      "proposed_id": "SIG_2026_FIRST_PROOF_BATCH3_EXTERNAL_EVALUATION",
+      "action": "add_new_event",
+      "event_date": "2026-10-14",
+      "date_basis": "Dated First Proof results release and version 1 of the Third Batch report. Tests occurred October 2-5; expert review occurred October 8-9. This is the results-publication date, not the date a new theorem was first discovered.",
+      "study_family": "First Proof research-mathematics benchmark; Batch 3",
+      "title_ru": "First Proof: независимая проверка доказательств отделяет правильность от качества изложения",
+      "title_en": "First Proof: external proof review separates correctness from exposition",
+      "summary_ru": "В третьем наборе First Proof система ProofCouncil получила положительную оценку корректности для 9 из 10 задач; GPT-6 Astra для 7, а единственная система на открытых весах Kimi K3 для 0. Организаторы публикуют решения, код, журналы и рецензии; качество изложения и ссылок оценивается отдельно.",
+      "summary_en": "In First Proof Batch 3, ProofCouncil met the correctness threshold on 9 of 10 problems, GPT-6 Astra on 7, and the sole open-weight Kimi K3 system on none. Organizers publish solutions, code, logs and referee reports, with exposition and attribution scored separately.",
+      "caveat_ru": "Задачи уже были решены людьми, но решения не публиковались. Порог допускает небольшие исправимые ошибки; это не формальная машинная проверка. Один открытый участник и разные программные оболочки не измеряют все открытые модели.",
+      "caveat_en": "Humans had already solved these unpublished problems. The threshold permits minor repairable errors and is not formal verification. One open-weight entrant and differing harnesses cannot establish a result for all open models.",
+      "evidence_stage": "externally_run_benchmark_with_anonymized_expert_review",
+      "independent_replication": "An external foundation ran and assessed the systems; this packet did not rerun them or independently prove the solutions.",
+      "sources": [
+        {
+          "url": "https://hexagonmath.org/2610.00244",
+          "title": "First Proof Third Batch",
+          "date": "2026-10-14",
+          "primary_or_secondary": "primary",
+          "verification": "Opened report landing page and linked 46-page PDF; checked methodology, correctness rubric and results discussion.",
+          "pdf_url": "https://hexagonmath.org/pdf/2610.00244v1",
+          "locator": "Sections 2.2-2.4; Table 2 and its caption on PDF page index 25; Sections 5-6.",
+          "evidence_paraphrase_en": "Table 2 counts a problem as correct at an average score of at least 0.5; the rubric defines 0.5 as minor errors easily corrected. The report distinguishes these judgments from exposition and attribution. The open-weight system lacked web search, unlike several comparators."
+        },
+        {
+          "url": "https://1stproof.org/third-batch-press-release.html",
+          "title": "Frontier AI Systems Solve up to 9/10 Problems in First Proof Benchmark; Open-Weight Entrant Solves None",
+          "date": "2026-10-14",
+          "primary_or_secondary": "primary",
+          "verification": "Primary organizer release opened.",
+          "locator": "Key findings; About First Proof.",
+          "evidence_paraphrase_en": "The organizer reports costs of $1,888 for ProofCouncil and $36 for the direct OpenAI system in this batch. Only 4 of 10 Astra outputs had adequate citations, versus 7 for ProofCouncil. Funding includes foundations, DARPA and unrestricted Anthropic/OpenAI donations; external review does not mean absence of industry funding."
+        },
+        {
+          "url": "https://1stproof.org/third-batch.html",
+          "title": "Third Batch Benchmark",
+          "date": null,
+          "date_basis": "Live project page checked at the research cutoff; its results timeline explicitly names 2026-10-14.",
+          "primary_or_secondary": "primary",
+          "verification": "Opened; links to human solutions, AI solutions, referee reports, logs and harness source are present.",
+          "evidence_paraphrase_en": "The project requires an open-source harness using publicly available models and one run without additional human interaction. Public harness code is distinct from open model weights."
+        }
+      ],
+      "counterevidence": {
+        "source_urls": ["https://hexagonmath.org/pdf/2610.00244v1", "https://1stproof.org/third-batch-press-release.html"],
+        "point_en": "Correctness gains coexist with weak writing and attribution. Costs, tool access and harness design confound a simple open-versus-closed model comparison.",
+        "point_ru": "Рост корректности сосуществует со слабым изложением и ссылками. Стоимость, инструменты и программная оболочка мешают простому сравнению открытых и закрытых моделей."
+      },
+      "geography_and_access": {
+        "verified_roles": ["Review meeting: Carnegie Mellon ICARM, United States", "Problem-writing meeting: Harvard CMSA, United States", "Academic harnesses and multiple commercial model providers participated"],
+        "access_en": "Open evidence artifacts enable inspection; reproducing hosted-model runs still requires model access and funding. Reported run costs exclude the full cost of training, research and expert review.",
+        "limits_en": "Not a representative global researcher sample or a country ranking. No universal country-availability claim is made."
+      },
+      "relevant_existing_arc_ids": ["ARC_KNOWLEDGE_PRODUCTION_VALIDATION", "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"],
+      "stack_layers": ["model_weights", "cloud_inference", "decision_support_cognition"],
+      "view_relevance": ["Knowledge and Access: validation institutions, inspectable evidence and unequal model access", "AI Economy: task-specific inference cost versus unmeasured total research cost"],
+      "dedup": {
+        "verdict": "new_event_and_new_evaluation_family",
+        "event_match": false,
+        "study_family_match": false,
+        "new_source_url_matches": [],
+        "related_existing_event_ids": ["SIG_2026_ALETHEIA_RESEARCH_AGENT", "SIG_2024_ALPHAPROOF_IMO", "SIG_2025_ALPHAEVOLVE_ALGORITHMS"],
+        "reason": "Existing mathematics records cover developer disclosures, competition problems and algorithm search, not this externally run Batch 3. Earlier First Proof batches are context within the same evaluation family, not additional discoveries to count here."
+      }
+    },
+    {
+      "rank": 2,
+      "proposed_id": "SIG_2026_MATTERGEN_NOVELTY_REANALYSIS",
+      "action": "material_update_to_existing_event",
+      "update_target_id": "SIG_2025_MATTERGEN_SYNTHESIS",
+      "event_date": "2026-04-20",
+      "date_basis": "The publisher's indexed PDF explicitly dates publication to 20 April 2026, not receipt or acceptance.",
+      "study_family": "MatterGen experimental synthesis example; independent crystallographic reanalysis",
+      "title_ru": "MatterGen: независимая работа оспаривает новизну экспериментального примера",
+      "title_en": "MatterGen: independent analysis challenges the experimental example's novelty",
+      "summary_ru": "Независимая рецензируемая работа утверждает, что экспериментальный пример MatterGen соответствует известной разупорядоченной фазе из обучающих данных. Требуется оговорка о новизне, не автоматическая отмена измерения свойства.",
+      "summary_en": "An independent peer-reviewed analysis argues that MatterGen's experimental example matches a known disordered phase from its training data. Add a novelty caveat without automatically discarding the property measurement.",
+      "caveat_ru": "Это опубликованная независимая критика, а не отзыв исходной статьи. Она не доказывает бесполезность всех результатов MatterGen; ответ авторов в этой проверке не установлен.",
+      "caveat_en": "This is published independent criticism, not retraction of the original paper. It does not invalidate every MatterGen output; an author response was not established in this review.",
+      "evidence_stage": "peer_reviewed_independent_reanalysis_of_published_experimental_data",
+      "independent_replication": "Crystallographic reanalysis, not a fresh independent synthesis experiment.",
+      "sources": [
+        {
+          "url": "https://pubs.rsc.org/en/content/articlehtml/2026/mh/d6mh00268d",
+          "title": "Continued challenges in high-throughput materials predictions: MatterGen predicts compounds from the training dataset",
+          "date": "2026-04-20",
+          "primary_or_secondary": "primary",
+          "verification": "Publisher-indexed article and PDF excerpts inspected. Direct HTML/PDF opens returned 403; do not describe this as an unrestricted full-text download.",
+          "pdf_url": "https://pubs.rsc.org/en/content/articlepdf/2026/mh/d6mh00268d",
+          "locator": "Abstract and Results and discussion; printed pages 5672-5673; DOI 10.1039/d6mh00268d.",
+          "evidence_paraphrase_en": "The crystallographic comparison concerns a structure reported in 1971-1972; disorder and symmetry handling explain the alleged false novelty."
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-025-08628-5",
+          "title": "A generative model for inorganic materials design",
+          "date": "2025-01",
+          "date_basis": "Month from the canonical record; exact original publication day was not reverified in this bounded pass.",
+          "primary_or_secondary": "primary",
+          "verification": "Existing canonical source and study identity inspected locally; original full paper was not newly re-audited in this bounded pass.",
+          "evidence_paraphrase_en": "The canonical event describes synthesis and a measured property within 20% of its target; its caveat currently addresses industrial readiness, not disputed novelty. Retain the measured-outcome claim separately from the new novelty challenge."
+        }
+      ],
+      "counterevidence": {
+        "source_urls": ["https://pubs.rsc.org/en/content/articlehtml/2026/mh/d6mh00268d"],
+        "point_en": "Laboratory measurement is insufficient by itself to establish novelty; provenance and structural equivalence also need auditing.",
+        "point_ru": "Лабораторное измерение само по себе не устанавливает новизну: нужны проверка происхождения и структурной эквивалентности."
+      },
+      "geography_and_access": {
+        "verified_roles": ["Reanalysis author affiliated with Humboldt University Berlin and Max Planck Institute for Coal Research, Germany"],
+        "access_en": "The critique is marked open access by the publisher, but the research tool encountered a retrieval block. Open publication rights and practical retrieval availability are different.",
+        "limits_en": "No inference about national scientific superiority or all MatterGen collaborators is made."
+      },
+      "relevant_existing_arc_ids": ["ARC_KNOWLEDGE_PRODUCTION_VALIDATION"],
+      "stack_layers": ["data_telemetry", "model_weights"],
+      "view_relevance": ["Knowledge and Access: independent verification can revise a model-origin discovery claim"],
+      "dedup": {
+        "verdict": "material_update_same_study_family_not_another_discovery",
+        "event_match": false,
+        "study_family_match": true,
+        "new_source_url_matches": [],
+        "reused_existing_source_urls": ["https://www.nature.com/articles/s41586-025-08628-5"],
+        "related_existing_event_ids": ["SIG_2025_MATTERGEN_SYNTHESIS"],
+        "reason": "Existing record lacks this criticism. Prefer a sourced caveat/research update on the original event; create a separate correction node only if the Atlas explicitly distinguishes scientific disputes from discovery counts."
+      }
+    },
+    {
+      "rank": 3,
+      "proposed_id": "SIG_2026_RAVEN_TESS_STATISTICAL_VALIDATION",
+      "action": "add_new_event",
+      "event_date": "2026-03-25",
+      "date_basis": "Warwick's institutional repository lists 25 March 2026 as the official available date of the peer-reviewed article, also the university release date. The preprint was submitted 23 March; the May journal issue and 24 April preprint revision are not new discoveries.",
+      "study_family": "RAVEN: pipeline paper 2509.17645 and TESS catalogue paper 2603.22597 / MNRAS stag512",
+      "title_ru": "RAVEN: 118 новых статистических валидаций экзопланет на открытых данных TESS",
+      "title_en": "RAVEN: 118 new statistical exoplanet validations from public TESS data",
+      "summary_ru": "Команда Warwick и CONICET применила RAVEN к данным более 2,2 млн звёзд. Работа сообщает о 118 новых статистических валидациях, включая 31 впервые обнаруженный здесь объект. Авторы открыли каталоги и диагностические материалы; это отдельная исследовательская семья от ExoMiner.",
+      "summary_en": "The Warwick/CONICET team applied RAVEN to observations of over 2.2 million stars, reporting 118 new statistical validations, including 31 objects first detected in this work. Catalogues and diagnostic materials are public; this is a separate study family from ExoMiner.",
+      "caveat_ru": "Статистическая валидация не равна независимому подтверждению другим методом. 118 не означает 118 впервые замеченных сигналов; более 2000 кандидатов нельзя прибавлять к числу подтверждённых планет. Выборка ограничена короткими орбитами и критериями отбора.",
+      "caveat_en": "Statistical validation is not independent confirmation by another observing method. The 118 are not all newly detected signals, and over 2,000 candidates must not be added to the planet count. Selection targets short-period systems under specific cuts.",
+      "evidence_stage": "peer_reviewed_archive_analysis_and_statistical_validation",
+      "independent_replication": "Public catalogues support checking; no independent rerun or object-by-object observing confirmation was performed for this packet.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2603.22597",
+          "title": "Automatic search for transiting planets in TESS-SPOC FFIs with RAVEN: over 100 newly validated planets and over 2000 vetted candidates",
+          "date": "2026-03-23",
+          "updated_date": "2026-04-24",
+          "primary_or_secondary": "primary",
+          "verification": "Opened version history; inspected author abstract and publisher-indexed result text.",
+          "locator": "Abstract; submission history. Journal DOI: 10.1093/mnras/stag512.",
+          "evidence_paraphrase_en": "The authors distinguish 118 newly validated planets, 31 newly detected planets, and a larger candidate population. The search covers TESS sectors 1-55 and periods of 0.5-16 days. The journal conclusion's 143 validated objects includes previously known planets, so 143 and 118 have different denominators."
+        },
+        {
+          "url": "https://wrap.warwick.ac.uk/id/eprint/199487/",
+          "title": "Automatic search for transiting planets in TESS-SPOC FFIs with RAVEN: over 100 newly validated planets and over 2000 vetted candidates",
+          "date": "2026-03-25",
+          "primary_or_secondary": "primary",
+          "verification": "Institutional repository's indexed metadata inspected.",
+          "locator": "Official Date; Dates; Status; DOI.",
+          "evidence_paraphrase_en": "Repository metadata records acceptance on 7 March, availability on 25 March 2026 and peer-reviewed status. The May issue date must not replace the online publication date."
+        },
+        {
+          "url": "https://zenodo.org/records/19661443",
+          "title": "Online material for article Automatic search for transiting planets in TESS-SPOC FFIs with RAVEN: over 100 newly validated planets and over 2000 vetted candidates",
+          "date": "2026-03-25",
+          "primary_or_secondary": "primary",
+          "verification": "Opened author-deposited dataset page; inspected catalogue descriptions and affiliations.",
+          "evidence_paraphrase_en": "The deposit exposes candidate tables and summary plots, identifies Warwick and CONICET affiliations, and links the article DOI and arXiv identifier. Distinct files encode different vetting/validation thresholds."
+        },
+        {
+          "url": "https://arxiv.org/abs/2509.17645",
+          "title": "RAVEN: RAnking and Validation of ExoplaNets",
+          "date": "2025-09-22",
+          "primary_or_secondary": "primary",
+          "verification": "Primary abstract inspected in search output.",
+          "evidence_paraphrase_en": "The methods paper reports external-sample testing and a publicly released cloud app. Its published probability thresholds, false-positive scenarios and recall limits constrain what the later catalogue can establish."
+        }
+      ],
+      "counterevidence": {
+        "source_urls": ["https://arxiv.org/abs/2509.17645", "https://arxiv.org/abs/2603.22597"],
+        "point_en": "Validation remains model- and selection-dependent; this does not establish habitability, new physics, or complete coverage of the TESS planet population.",
+        "point_ru": "Валидация зависит от модели и отбора; работа не устанавливает обитаемость, новую физику или полноту каталога планет TESS."
+      },
+      "geography_and_access": {
+        "verified_roles": ["Analysis: University of Warwick, United Kingdom", "Coauthors: CONICET, Argentina", "Observations: NASA TESS, United States; Gaia measurements also used"],
+        "access_en": "Public space-mission observations and author-deposited catalogues enable cross-border reuse. A public cloud app is documented, but its uptime, account rules and geographic restrictions were not tested.",
+        "limits_en": "Researcher affiliation, observational infrastructure and hosting location are different roles; this is not evidence of independent national telescope capacity."
+      },
+      "relevant_existing_arc_ids": ["ARC_KNOWLEDGE_PRODUCTION_VALIDATION"],
+      "stack_layers": ["data_telemetry", "model_weights"],
+      "view_relevance": ["Knowledge and Access: open observations plus specialist validation infrastructure enable new findings outside the data-producing agency"],
+      "dedup": {
+        "verdict": "new_event_and_new_study_family_shared_observational_archive",
+        "event_match": false,
+        "study_family_match": false,
+        "new_source_url_matches": [],
+        "related_existing_event_ids": ["SIG_2021_EXOMINER_301_VALIDATIONS", "SIG_2025_EXOMINER_PLUS_TESS_CANDIDATES"],
+        "reason": "Sharing TESS data does not make RAVEN an ExoMiner revision. Its methods paper, catalogue paper, university release and dataset are one linked family; do not count them as four outcomes. Cross-catalogue object overlap was not audited, so do not sum planet totals across Atlas events."
+      }
+    },
+    {
+      "rank": 4,
+      "proposed_id": "SIG_2025_GENERATIVE_ANTIBIOTICS_PRECLINICAL_VALIDATION",
+      "action": "add_new_event",
+      "event_date": "2025-08-14",
+      "date_basis": "Cell electronic publication date, corroborated by the dated MIT release. The 16 October 2025 issue date and a February 2026 interview refer to the same study.",
+      "study_family": "Krishnan et al.; Cell DOI 10.1016/j.cell.2025.07.033; NG1/DN1 study",
+      "title_ru": "Генеративный дизайн антибиотиков: активность проверена в лаборатории и на мышах",
+      "title_en": "Generative antibiotic design reaches laboratory and mouse-model validation",
+      "summary_ru": "В работе MIT и соавторов 7 из 24 синтезированных соединений показали избирательную антибактериальную активность. Два ведущих соединения снизили бактериальную нагрузку в мышиных моделях. Это экспериментальная проверка сгенерированных молекул, а не только вычислительный рейтинг.",
+      "summary_en": "In the MIT-led study, 7 of 24 synthesized compounds showed selective antibacterial activity. Two lead compounds reduced bacterial burden in mouse models. This is experimental testing of generated molecules, not only a computational ranking.",
+      "caveat_ru": "Доклинические результаты не устанавливают безопасность или эффективность у людей. Небольшой отобранный набор не измеряет общий процент успеха генерации; химическая синтезируемость остаётся отдельным ограничением.",
+      "caveat_en": "Preclinical results do not establish human safety or efficacy. The selected experimental set is not the overall generation success rate, and chemical synthesizability remains a separate bottleneck.",
+      "evidence_stage": "peer_reviewed_in_vitro_and_animal_model_validation",
+      "independent_replication": "Research-team experiments; no independent replication or clinical trial established in this packet.",
+      "sources": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40816267/",
+          "title": "A generative deep learning approach to de novo antibiotic design",
+          "date": "2025-08-14",
+          "issue_date": "2025-10-16",
+          "primary_or_secondary": "primary",
+          "verification": "Indexed author abstract and bibliographic dates inspected; Cell direct page returned 403 and PMC browser access was blocked.",
+          "locator": "Abstract; Article date versus Publication date; DOI 10.1016/j.cell.2025.07.033.",
+          "evidence_paraphrase_en": "The authors report 24 synthesized compounds, seven selectively active compounds and two leads with reduced bacterial burden in mouse infection models. The abstract does not report a human trial."
+        },
+        {
+          "url": "https://news.mit.edu/2025/using-generative-ai-researchers-design-compounds-kill-drug-resistant-bacteria-0814",
+          "title": "Using generative AI, researchers design compounds that can kill drug-resistant bacteria",
+          "date": "2025-08-14",
+          "primary_or_secondary": "primary",
+          "verification": "Full university release opened.",
+          "locator": "Exploring chemical space; Unconstrained design; follow-up work with Phare Bio.",
+          "evidence_paraphrase_en": "The university identifies an important bottleneck: only two of 80 selected molecules in one branch could be synthesized; a second branch synthesized 22. Further medicinal-chemistry work was still planned. Candidate counts, synthesis counts and demonstrated activity are separate stages."
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12790861/",
+          "title": "A generative deep learning approach to de novo antibiotic design",
+          "date": "2025-08-14",
+          "primary_or_secondary": "primary",
+          "verification": "Author-manuscript identity and indexed content found; direct full-text retrieval encountered a browser challenge. Provided for parent verification, not represented as a fully reviewed protocol."
+        }
+      ],
+      "counterevidence": {
+        "source_urls": ["https://news.mit.edu/2025/using-generative-ai-researchers-design-compounds-kill-drug-resistant-bacteria-0814"],
+        "point_en": "Generating candidate molecules does not remove synthesis, selection or translational work. The study provides no general cost or time reduction estimate for drug development.",
+        "point_ru": "Генерация молекул не устраняет синтез, отбор и клиническую разработку. Работа не даёт общего коэффициента удешевления или ускорения разработки лекарств."
+      },
+      "geography_and_access": {
+        "verified_roles": ["Lead institutions: MIT, Broad Institute and Harvard-associated research groups, United States", "The author metadata also lists Mila, Canada; this is an affiliation, not evidence of a trial site"],
+        "access_en": "Primary publication and an author manuscript are identifiable. Model-weight licensing, synthesis-service country availability and global laboratory access were not established.",
+        "limits_en": "No patient-access or approved-treatment claim. Experimental capacity is not distributed merely by publishing a generative model."
+      },
+      "relevant_existing_arc_ids": ["ARC_KNOWLEDGE_PRODUCTION_VALIDATION", "ARC_MEDICAL_AI_TRANSLATION"],
+      "stack_layers": ["model_weights", "data_telemetry"],
+      "view_relevance": ["Knowledge and Access: generated candidates become knowledge through physical testing", "AI Economy: synthesis and validation remain unmeasured downstream costs"],
+      "dedup": {
+        "verdict": "new_event_and_new_study_family",
+        "event_match": false,
+        "study_family_match": false,
+        "new_source_url_matches": [],
+        "related_existing_event_ids": ["SIG_2025_RENTOSERTIB_PHASE2A", "SIG_2026_GOOGLE_WETLAB_AGENTS"],
+        "reason": "Different compounds, investigators and experiments from rentosertib or the Google wet-lab-agent disclosure. The August release, October issue and 2026 follow-up interview must remain one study family."
+      }
+    }
+  ],
+  "additional_counterevidence": [
+    {
+      "id": "COUNTER_2026_ALAB_CORRECTION",
+      "date": "2026-01-19",
+      "title_ru": "A-Lab: авторское исправление сужает утверждения о новизне и успехе синтеза",
+      "title_en": "A-Lab correction narrows novelty and synthesis-success claims",
+      "source": {
+        "url": "https://www.nature.com/articles/s41586-025-09992-y",
+        "title": "Author Correction: An autonomous laboratory for the accelerated synthesis of inorganic materials",
+        "date": "2026-01-19",
+        "primary_or_secondary": "primary",
+        "verification": "Publisher-indexed full correction text inspected; direct Nature retrieval redirected to an inaccessible identity endpoint."
+      },
+      "evidence_paraphrase_en": "The authors clarify that novelty meant new to the prediction platform, not necessarily to science. Their peer-reviewed reanalysis confirms 36 of 40 reported successes, leaves four inconclusive and removes one compound mistakenly present in training data.",
+      "caveat_en": "This is a correction to the 2023 A-Lab paper, not a correction or retraction of MatterGen. It illustrates the same verification problem but is a separate study family.",
+      "dedup_verdict": "No A-Lab event or correction URL found; retained as contextual counterevidence rather than a fifth main candidate."
+    }
+  ],
+  "pending_or_deferred": [
+    {
+      "proposed_id": "SIG_2026_BOLTZGEN_CROSS_LAB_ASSAY_REASSESSMENT",
+      "status": "pending_updated_quantitative_validation_audit",
+      "verified_date": "2026-06-16",
+      "title_ru": "BoltzGen: открытый инструмент и пересмотр лабораторной оценки",
+      "title_en": "BoltzGen: an open tool with revised experimental evaluation",
+      "sources": [
+        {
+          "url": "https://boltz.com/experimental-protocol",
+          "title": "A note on de novo binder design model evaluation",
+          "date": "2026-06-16",
+          "verification": "Dated primary author statement inspected in search-indexed content; direct open failed.",
+          "evidence_paraphrase_en": "The authors report that some initial Adaptyv binder classifications disagreed with another CRO, prompting retesting and stricter reporting. They distinguish convincing binding, no interaction and ambiguous signals."
+        },
+        {
+          "url": "https://boltz.com/boltzgen",
+          "title": "Introducing BoltzGen: Toward Universal Binder Design",
+          "date": "2025-10-26",
+          "verification": "Opened release page; it states MIT licensing for academic and commercial use."
+        },
+        {
+          "url": "https://github.com/HannesStark/boltzgen",
+          "title": "BoltzGen: Toward Universal Binder Design",
+          "date": null,
+          "date_basis": "Live repository checked at cutoff.",
+          "verification": "Opened repository and linked author manuscript at https://hannes-stark.com/assets/boltzgen.pdf."
+        }
+      ],
+      "pending_en": "Reconcile versioned manuscript tables with the June retesting before using any hit-rate or affinity headline. Do not carry the original 6/9 nanomolar claim forward unchanged. The publication status of the revised manuscript was not established.",
+      "dedup_verdict": "No BoltzGen event, family or URL found. One future candidate should connect the original release and its evaluation revision rather than present them as independent discoveries."
+    },
+    {
+      "proposed_id": "SIG_2026_ALPHAGENOME_RESEARCH_WEIGHTS",
+      "status": "verified_lead_deferred_by_four_candidate_limit",
+      "verified_date": "2026-01-28",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41586-025-10014-0",
+          "title": "Advancing regulatory variant effect prediction with AlphaGenome",
+          "date": "2026-01-28",
+          "verification": "Publisher-indexed article text and PubMed metadata inspected."
+        },
+        {
+          "url": "https://github.com/google-deepmind/alphagenome_research",
+          "title": "Research code accompanying AlphaGenome",
+          "date": null,
+          "date_basis": "Live repository checked at cutoff.",
+          "verification": "Opened; code is Apache 2.0, while obtaining weights requires accepting separate non-commercial model terms."
+        }
+      ],
+      "evidence_paraphrase_en": "The Nature paper evaluates regulatory-variant prediction, not clinical outcomes. Repository licensing separates software from weights. The live product page also advertises commercial cloud access, so the weights restriction must not be described as a blanket ban on commercial AlphaGenome use.",
+      "pending_en": "The later AlphaGenome Atlas release, clinical reclassification example and exact current geographic availability need a separate dated audit; do not backdate them to January.",
+      "dedup_verdict": "New family relative to the canonical graph, not an AlphaFold revision. Deferred to keep the final packet bounded."
+    },
+    {
+      "proposed_id": "SIG_2026_SARA_H_MATERIALS_PHASE_MAPPING",
+      "status": "verified_lead_deferred_by_four_candidate_limit",
+      "verified_date": "2026-09-10",
+      "sources": [
+        {
+          "url": "https://journals.aps.org/prxintelligence/abstract/10.1103/c362-349b",
+          "title": "Autonomous Materials Exploration Integrates Automated Phase Identification and AI Agents Enhanced by Human Guidance",
+          "date": "2026-09-10",
+          "verification": "Opened primary publication, date, abstract and US institutional affiliations."
+        },
+        {
+          "url": "https://arxiv.org/abs/2601.08185",
+          "title": "Autonomous Materials Exploration by Integrating Automated Phase Identification and AI-Assisted Human Reasoning",
+          "date": "2026-01-13",
+          "verification": "Opened preprint history and HTML."
+        }
+      ],
+      "evidence_paraphrase_en": "The team reports robotic thin-film experiments and improved sampling with human guidance. This is evidence for a human-in-the-loop materials workflow, not a general autonomous scientist.",
+      "pending_en": "Independent replication, code/data release completeness and transferable cost savings were not established.",
+      "dedup_verdict": "New family, but below the four-candidate selection; the January preprint and September paper are one study."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "NASA January 2026 ExoMiner++ announcement as a new discovery",
+      "source_url": "https://science.nasa.gov/open-science/deep-learning-exoplanets-tess/",
+      "source_title": "NASA AI Model That Found 370 Exoplanets Now Digs Into TESS Data",
+      "source_date": "2026-01-22",
+      "existing_event_ids": ["SIG_2025_EXOMINER_PLUS_TESS_CANDIDATES", "SIG_2021_EXOMINER_301_VALIDATIONS"],
+      "reason": "Exact source URL and research family already represented. The newer publicity date does not create a new TESS discovery event; headline totals require historical reconciliation, not blind replacement."
+    },
+    {
+      "candidate": "Vesuvius October 2026 first-letter prizes as full-scroll recoveries",
+      "source_url": "https://scrollprize.org/winners",
+      "source_title": "Winners",
+      "source_date": null,
+      "date_basis": "Live primary page lists October 2026 prizes, without exact award days in inspected text.",
+      "existing_event_ids": ["SIG_2024_VESUVIUS_FIRST_PASSAGES", "SIG_2026_VESUVIUS_PHERC1667"],
+      "reason": "New scroll-specific fragments are real leads but limited in scope and only month-dated here. They do not establish complete texts, and rank below the selected results. Do not merge different scrolls or call the entire family a duplicate."
+    },
+    {
+      "candidate": "AI-generated bacteriophages as an established human treatment",
+      "source_url": "https://news.stanford.edu/stories/2026/08/evo-2-ai-tool-e-coli-killer-bacteriophages",
+      "source_title": "AI designs a novel E. coli killer",
+      "source_date": "2026-08-06",
+      "existing_event_ids": [],
+      "reason": "Primary university disclosure supports laboratory proof of concept, not clinical efficacy. The Science paper's direct full text was inaccessible and the earlier preprint chronology was not completely checked against primary version history. Deferred rather than upgraded to a treatment claim."
+    },
+    {
+      "candidate": "Another Aeneas, Ithaca, Enoch or existing Vesuvius overview",
+      "existing_event_ids": ["SIG_2025_AENEAS_CONTEXTUALIZATION", "SIG_2022_ITHACA_EPIGRAPHY", "SIG_2025_ENOCH_MANUSCRIPT_DATING", "SIG_2026_VESUVIUS_PHERC1667"],
+      "reason": "Already represented by distinct study families. No fully verified material change to those particular records was established during this bounded pass."
+    },
+    {
+      "candidate": "Invented or inferred future scientific breakthroughs",
+      "existing_event_ids": [],
+      "reason": "No date or outcome is accepted merely because it appears in existing graph text, search recency labels, a DOI string or a model-generated narrative. Undated access pages and planned future studies are not completed events."
+    }
+  ],
+  "integration_guardrails": [
+    "Three proposed new study/evaluation families plus one material update; do not inflate the discovery count with press releases, datasets or revisions.",
+    "Preserve per-source verification limits. Indexed primary text can establish a bounded claim without implying that all methods, tables or protocols were reviewed.",
+    "Do not turn public code, a cloud app or an open paper into a claim of globally unrestricted practical access.",
+    "Do not sum overlapping astronomical catalogues without object-level deduplication.",
+    "Do not equate independent expert review, independent reanalysis and independent experimental replication.",
+    "No general productivity, GDP, clinical-benefit or national-sovereignty multiplier follows from these studies."
+  ],
+  "verification_scope": {
+    "primary_sources_only_for_accepted_claims": true,
+    "new_web_searches_stopped_after_lead_agent_bound": true,
+    "model_or_experiment_reruns": false,
+    "clinical_advice": false,
+    "code_or_canonical_data_changed": false,
+    "commits_created": false,
+    "only_authored_file": "aipower/review/crosscutting-views-2026-11-09/knowledge-research.json",
+    "packet_checks": "JSON parsed; four accepted candidates; proposed IDs absent from current events; all referenced event IDs, arc IDs and stack layers exist; accepted event dates precede cutoff; normalized URL scan matches only the explicitly reused MatterGen original source."
+  }
+}

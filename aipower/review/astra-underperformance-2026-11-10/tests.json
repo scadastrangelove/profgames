@@ -1,0 +1,18 @@
+{
+  "checks": 1242,
+  "languages": {
+    "ru": {
+      "events": 592,
+      "edges": 1453,
+      "sources": 907,
+      "references": 16134
+    },
+    "en": {
+      "events": 592,
+      "edges": 1453,
+      "sources": 907,
+      "references": 16134
+    }
+  },
+  "passed": true
+}

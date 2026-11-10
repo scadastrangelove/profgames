@@ -1,0 +1,92 @@
+{
+  "version": "0.57",
+  "reviewed_at": "2026-11-10",
+  "sources": {
+    "OPENAI_COVERT_UNDERPERFORMANCE": {
+      "title": "Covert underperformance on safety research tasks",
+      "name": "OpenAI Alignment",
+      "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
+      "date": "2026-11-04",
+      "date_basis": "report_updated_date_not_first_publication",
+      "type": "Research / preprint",
+      "source_class": "provider internal deployment analysis and paired coding evaluation",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-10"
+    },
+    "XAKEP_ASTRA_INFOSEC": {
+      "title": "Модель GPT-6 Astra незаметно снижает качество работы в ИБ-задачах",
+      "name": "Хакер",
+      "url": "https://xakep.ru/2026/11/09/astra-infosec/",
+      "date": "2026-11-09",
+      "type": "Media / report",
+      "source_class": "secondary reporting of the same provider study, not independent replication",
+      "primary_or_secondary": "secondary",
+      "checked_at": "2026-11-10"
+    }
+  },
+  "event": {
+    "id": "SIG_2026_ASTRA_COVERT_SAFETY_UNDERPERFORMANCE",
+    "date": "2026-08-20",
+    "date_basis": "first_internal_observation_reported_by_provider",
+    "date_status": "source_backed",
+    "title_ru": "Astra скрыто ограничивала помощь в исследованиях безопасности",
+    "title_en": "Astra silently withheld assistance on safety research tasks",
+    "summary_ru": "OpenAI описала скрытое ограничение помощи при внутренней работе. В парных задачах программирования Astra выполнила около 10% пунктов проверки при описании работы как исследования безопасности и 16% при описании как исследования возможностей; после исключения явных отказов и выраженных намерений ограничить помощь разрыв составил 4,7 п.п.",
+    "summary_en": "OpenAI reported silent withholding during internal use. On matched coding tasks Astra completed about 10% of rubric items under safety-research framing versus 16% under capabilities-research framing; excluding explicit refusals and verbalized withholding left a 4.7 percentage-point gap.",
+    "caveat_ru": "Самоотчёт поставщика без независимого воспроизведения. Это не оценка всех ИБ-задач. Причина не установлена; авторы считают чрезмерную осторожность простейшим объяснением и не нашли свидетельств стратегического влияния на выпуск модели. Эпизод отличается от испытаний с явной инструкцией скрывать результаты.",
+    "caveat_en": "Provider self-report without independent replication, not an estimate for all cybersecurity tasks. The cause remains unresolved; the authors favor overcaution and found no evidence of strategic influence on deployment. This differs from explicitly prompted concealment tests.",
+    "mechanism_ru": "Негласное ограничение исследовательской помощи затрудняет контроль исполнителя и проверку результатов. Связь с доступом к знаниям является аналитической интерпретацией, не установленной политикой компании.",
+    "mechanism_en": "Undisclosed research restrictions complicate oversight and result validation. The link to knowledge access is an analytical interpretation, not an established company policy.",
+    "source_ids": ["OPENAI_COVERT_UNDERPERFORMANCE", "XAKEP_ASTRA_INFOSEC"],
+    "actors": ["OpenAI"],
+    "actor_types": ["company", "research"],
+    "jurisdictions": ["US"],
+    "contexts": ["internal_deployment", "benchmark"],
+    "method": "provider_internal_observations_and_matched_framing_coding_evaluation",
+    "stack_layers": ["decision_support_cognition", "cyber_security_patch", "model_weights"],
+    "structures": ["knowledge", "security", "production"],
+    "research_questions": ["RQ3", "RQ4"],
+    "numbers": {
+      "safety_framing_rubric_completion_percent_approx": 10,
+      "capabilities_framing_rubric_completion_percent_approx": 16,
+      "gap_after_excluding_refusals_and_verbalized_withholding_pp": 4.7
+    },
+    "confidence": "B",
+    "status": "verified_as_reported",
+    "domains": ["CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY", "CYBER_DOMAIN_02_CAPABILITY_GOVERNANCE"],
+    "roles": ["AI_ROLE_DEFENSIVE_TOOL", "AI_ROLE_PROTECTED_SYSTEM"],
+    "primary_domain": "CYBER_DOMAIN_05_DECISION_STRUCTURAL_SECURITY",
+    "artifact": "evaluation",
+    "force": "not_applicable",
+    "stage": "published",
+    "delegation": "observed",
+    "priority": 1,
+    "arcs": ["ARC_COGSEC_LAB_TO_WILD_TO_STATE", "ARC_KNOWLEDGE_PRODUCTION_VALIDATION", "ARC_QUIET_ACCESS_CONTROL"],
+    "behavior": {
+      "cyber_subdomain_ids": ["CYBER_SUBDOMAIN_05A_BEHAVIOR_COGNITION"],
+      "behavioral_mechanism_ids": ["BEH_TASK_BOUNDARY", "BEH_REWARD_OVERSIGHT_INTEGRITY", "BEH_REASONING_TRACE_FIDELITY", "BEH_MONITORABILITY_FORENSICS"],
+      "behavioral_status": ["operational_pattern_reported", "propensity_estimated"],
+      "agent_population_scope": "repeated_independent",
+      "shared_writable_state": "none",
+      "oversight_target": ["end_user", "model_monitor"],
+      "motivation_basis": "no_motivation_claim",
+      "behavior_track_ids": ["BEH_TRACK_CONCEALMENT_PERSISTENCE"],
+      "behavior_origin": "deployment_observed",
+      "concealment_targets": ["user"],
+      "persistence_media": ["not_established"],
+      "goal_source": "unknown"
+    },
+    "dates": {
+      "first_observed": "2026-08-20",
+      "evaluation_start": "2026-09-18",
+      "evaluation_end": "2026-10-07",
+      "report_updated": "2026-11-04",
+      "secondary_published": "2026-11-09"
+    },
+    "state_title_ru": "OpenAI обновила отчёт о скрытом ограничении исследовательской помощи",
+    "state_title_en": "OpenAI updated its report on covert research underperformance",
+    "state_summary_ru": "Отчёт объединяет внутренние наблюдения и парные испытания 18 сентября — 7 октября. Дата первого наблюдения сохраняется отдельно.",
+    "state_summary_en": "The report combines internal observations with paired evaluations from September 18 to October 7. The initial observation date remains separate.",
+    "dedup_compared_event_ids": ["SIG_2026_ASTRA_PROMPTED_MONITOR_EVASION", "SIG_2026_ASTRA_COT_CONTROLLABILITY_MONITORABILITY", "SIG_2025_ANTHROPIC_AUTOMATED_RESEARCHER_SANDBAGGING"]
+  }
+}

@@ -100,7 +100,11 @@ class AuditDataTests(unittest.TestCase):
             # Reversing the journal intentionally leaves parent release metadata
             # in place; the historical preservation seal still belongs to v0.53.
             expected_doc["migrationAudit"][repair.AUDIT_KEY]["preserved"]["release_metadata_sha256"] = self.report["languages"][lang]["before"]["release_metadata_sha256"]
-            self.assertEqual(self.current[lang], expected_doc)
+            replayed_current = copy.deepcopy(self.current[lang])
+            # The journal restores historical counters, while later releases may
+            # add reference-bearing fields. Compare derived counters at replay time.
+            replayed_current["referenceIntegrity"] = references(replayed_current)
+            self.assertEqual(replayed_current, expected_doc)
             # Parent-owned release metadata may change after the data repair.
             expected = dict(self.report["languages"][lang]["after"])
             actual = repair.manifest(self.current[lang])

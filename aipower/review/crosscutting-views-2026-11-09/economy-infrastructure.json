@@ -1,0 +1,478 @@
+{
+  "schema_version": "research-packet-1.0",
+  "packet_id": "economy-infrastructure",
+  "cutoff_date": "2026-11-09",
+  "research_date": "2026-11-09",
+  "scope": "AI infrastructure economy: capital, debt, cloud rent, energy cost allocation, pricing and switching costs",
+  "target_views": ["AI Economy", "Knowledge and Access"],
+  "status": "research_only_not_integrated",
+  "candidate_count": 4,
+  "baseline_audit": {
+    "path": "aipower/ai_power_storygraph_en.json",
+    "git_head": "89919b6029900446ff81426c2664db71c046d25f",
+    "sha256": "53183ca871b712252ed7af9463d2ffccf686e81350c84bc10ed3ae29b4d53e08",
+    "event_records": 567,
+    "arc_records": 30,
+    "source_index_records": 837,
+    "url_occurrences_recursively_inspected": 4256,
+    "method": [
+      "Read parent CLAUDE.md, referenced constitution, applicable loop-summary procedure and aipower/README.md; no local AGENTS.md or CLAUDE.md was found in the repository scan.",
+      "Search all event records for infrastructure, finance, energy, provider, pricing and switching terms; inspect related records and arc definitions before web research.",
+      "Compare event identity, reporting or study family, and source URLs, including URLs nested outside sourceIndex.",
+      "Normalize scheme/host case, trailing slash, tracking parameters and CoreWeave default.aspx variants; preserve substantive query parameters such as releaseID.",
+      "Treat issuer release, earnings call and SEC filing for one reporting period as one evidence family, not independent corroborating studies.",
+      "Verify dates in primary-page bodies or SEC filing metadata. Fiscal-year labels are not event dates: Microsoft FY2027 Q1 was reported in October 2026. Do not infer chronology from search crawl dates."
+    ],
+    "limits": "This is a novelty audit, not revalidation of all 567 baseline events. Existing dates and claims are not endorsed merely because they occur in the baseline. This research worker wrote only this named packet and made no commits. Concurrent UI work changed other files; it was not modified or reverted by this worker.",
+    "concurrent_recheck": {
+      "current_sha256": "90591cdefcce9ec0bc550dd5480af1db8dad323b25761291562715da15739b1b",
+      "changed_top_level_keys": ["crosscuttingViews"],
+      "event_records_unchanged": true,
+      "arc_records_unchanged": true,
+      "source_index_unchanged": true,
+      "effect_on_dedup": "None: the concurrent change added view metadata only."
+    }
+  },
+  "accounting_rules": [
+    "Do not aggregate the packet into a total AI investment number.",
+    "Separate cash expenditure, accrual expense, debt principal, lease recognition, future purchase commitments, backlog, forecasts and valuation.",
+    "Provider revenue and customer cloud purchases can describe opposite sides of one transaction; do not add them as independent economic activity.",
+    "A quarter is not a year. A reporting date is not the date all the reported money was spent.",
+    "Do not add CoreWeave backlog or individual OpenAI contracts to Stargate pledges or Microsoft commercial RPO; overlap and fulfillment schedules are not reconciled here.",
+    "Company-wide cloud and property expenditure is not an audited AI-only expenditure series. Debt and leases are not synonymous, and neither is automatically financial distress.",
+    "A posted price reduction is a historical tariff event, not evidence of current customer invoices, model-quality parity or lower total spending."
+  ],
+  "candidates": [
+    {
+      "rank": 1,
+      "proposed_id": "SIG_2026_COREWEAVE_Q2_CASH_CAPEX_DEBT",
+      "date": "2026-08-11",
+      "date_precision": "day",
+      "date_basis": "Publication of Q2 results; balance-sheet date 2026-06-30, cash-flow period 2026-01-01 through 2026-06-30. Supporting 10-Q was accepted August 11 and has SEC filing date August 12.",
+      "title_ru": "CoreWeave: реальные расходы на инфраструктуру и долг за контрактным ростом",
+      "title_en": "CoreWeave: actual infrastructure spending and debt behind contract growth",
+      "summary_ru": "За первое полугодие 2026 CoreWeave раскрыла $14,117 млрд денежных затрат на основные средства и ПО при $3,663 млрд операционного денежного потока. На 30 июня график погашения основного долга составлял $35,551 млрд.",
+      "summary_en": "For H1 2026, CoreWeave disclosed $14.117bn of cash purchases of property, equipment and capitalized software against $3.663bn operating cash flow. Its June 30 debt-principal repayment schedule totaled $35.551bn.",
+      "caveat_ru": "Долг не равен расходам периода; портфель заказов не равен выручке. Квартальная отчётность не аудирована и сама по себе не доказывает неплатёжеспособность.",
+      "caveat_en": "Debt is not period expenditure; backlog is not revenue. Quarterly statements are unaudited and do not by themselves establish insolvency.",
+      "evidence_stage": "realized_financial_flows_and_reported_debt_stock",
+      "evidence_kind": "issuer_quarterly_results_and_sec_10q",
+      "source_ids": ["CW_Q2_2026", "CW_10Q_2026_06", "CW_10Q_INDEX"],
+      "financial_observations": [
+        {"metric": "cash_property_equipment_and_capitalized_software_purchases", "value": 14.117, "unit": "USD_billion", "period": "2026-H1", "status": "realized_cash_outflow", "source_id": "CW_10Q_2026_06"},
+        {"metric": "operating_cash_flow", "value": 3.663, "unit": "USD_billion", "period": "2026-H1", "status": "realized_net_cash_inflow", "source_id": "CW_10Q_2026_06"},
+        {"metric": "debt_principal_repayment_schedule_total", "value": 35.551, "unit": "USD_billion", "as_of": "2026-06-30", "status": "outstanding_principal_not_new_borrowing_or_lease_total", "source_id": "CW_10Q_2026_06"},
+        {"metric": "revenue", "value": 2.575, "unit": "USD_billion", "period": "2026-Q2", "status": "recognized_revenue_not_cash_receipts", "source_id": "CW_Q2_2026"},
+        {"metric": "interest_expense_net", "value": 0.640, "unit": "USD_billion", "period": "2026-Q2", "status": "accrual_expense_not_cash_interest_paid", "source_id": "CW_Q2_2026"},
+        {"metric": "revenue_backlog", "value": 104, "unit": "USD_billion", "as_of": "2026-06-30", "status": "approximate_future_contract_revenue_conditional_on_delivery", "source_id": "CW_Q2_2026"}
+      ],
+      "counterevidence": {
+        "ru": "Квартальная выручка выросла с $1,212 до $2,575 млрд; положительный операционный денежный поток не позволяет описывать бизнес как отсутствие реального спроса.",
+        "en": "Quarterly revenue rose from $1.212bn to $2.575bn; positive operating cash flow contradicts a claim of no realized demand.",
+        "source_ids": ["CW_Q2_2026", "CW_10Q_2026_06"]
+      },
+      "proposed_arc_ids": ["ARC_CAPITAL_MIX_PUBLIC_PRIVATE", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "stack_layers": ["finance_rent", "cloud_inference", "energy_compute_chips"],
+      "view_relevance": "Adds a realized spending and financing layer to AI Economy; links access expansion to suppliers' financing capacity without predicting a shutdown.",
+      "dedup": {
+        "verdict": "new_reporting_event_with_material_operational_finance_evidence",
+        "event_key": "CoreWeave|2026-Q2-results|2026-08-11",
+        "study_family_key": "CoreWeave_financial_reporting_2026_Q2",
+        "related_existing_event_ids": ["SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY", "SIG_2026_BIS_CIRCULAR_AI_FINANCE"],
+        "exact_url_duplicate_event_ids": [],
+        "family_reason": "The baseline has a March 2025 customer contract and a sector-level BIS study, not CoreWeave Q2 financial statements. Annual results and Q2 release/10-Q must not become three independent candidates.",
+        "overlap_guard": "The $104bn backlog may include earlier customer deals. Do not add the baseline $11.9bn OpenAI contract to it, or equate either with H1 cash capex."
+      }
+    },
+    {
+      "rank": 2,
+      "proposed_id": "SIG_2026_MICROSOFT_Q1FY27_CAPEX_LEASE_BOUNDARY",
+      "date": "2026-10-28",
+      "date_precision": "day",
+      "date_basis": "Q1 FY2027 earnings publication for the quarter ended 2026-09-30; accounting context was disclosed 2026-07-29, effective from the start of FY2027.",
+      "title_ru": "Microsoft: денежные вложения, аренда и прогноз CapEx требуют разных шкал",
+      "title_en": "Microsoft: cash investment, leases and CapEx guidance need separate measures",
+      "summary_ru": "Microsoft сообщила о $45,2 млрд квартального CapEx; денежные приобретения основных средств составили $39,367 млрд. Июльское изменение сроков службы зданий меняет классификацию будущей аренды, а октябрьский прогноз отражает задержки поставок мощностей.",
+      "summary_en": "Microsoft reported $45.2bn quarterly CapEx; cash property additions were $39.367bn. July's building-life change affects future lease classification, while October guidance reflects delayed capacity deliveries.",
+      "caveat_ru": "Это не расходы исключительно на ИИ. Денежный поток и CapEx с арендой нельзя складывать; изменение учёта и прогноз не измеряют физическое сокращение инвестиций.",
+      "caveat_en": "These are not AI-only expenses. Cash flows and lease-inclusive CapEx are not additive; accounting changes and guidance do not measure a physical investment reduction.",
+      "evidence_stage": "reported_realized_quarterly_spending_with_accounting_change_and_separate_guidance",
+      "evidence_kind": "issuer_earnings_statements_and_cfo_transcripts",
+      "source_ids": ["MS_Q1FY27_RELEASE", "MS_Q1FY27_CALL", "MS_Q4FY26_CALL"],
+      "financial_observations": [
+        {"metric": "management_reported_capex", "value": 45.2, "unit": "USD_billion", "period": "2026-07-01/2026-09-30", "status": "reported_capex_including_finance_lease_recognition", "source_id": "MS_Q1FY27_CALL"},
+        {"metric": "cash_additions_to_property_and_equipment", "value": 39.367, "unit": "USD_billion", "period": "2026-07-01/2026-09-30", "status": "realized_cash_outflow", "source_id": "MS_Q1FY27_RELEASE"},
+        {"metric": "finance_leases_reported_in_quarter", "value": 7.4, "unit": "USD_billion", "period": "2026-07-01/2026-09-30", "status": "lease_principal_recognition_not_cash_paid", "source_id": "MS_Q1FY27_CALL"},
+        {"metric": "calendar_2026_capex_guidance", "value": 170, "unit": "USD_billion", "as_of": "2026-10-28", "status": "approximate_forecast_not_realized_annual_spend", "source_id": "MS_Q1FY27_CALL"}
+      ],
+      "accounting_context": "On July 29, Microsoft said estimated useful lives of datacenters and office buildings would increase from 15 to 25 years, shifting more future leases from finance to operating classification. This concerns buildings, not a claim that GPUs last 25 years. Its CapEx measure excludes operating leases. Cash property purchases and lease-inclusive CapEx are different measures, not an exact additive bridge.",
+      "counterevidence": {
+        "ru": "Microsoft Cloud дала $63,9 млрд квартальной выручки. Расходы сопровождаются действующим облачным бизнесом, но его выручка не устанавливает доходность именно новых ИИ-вложений.",
+        "en": "Microsoft Cloud produced $63.9bn quarterly revenue. Spending accompanies an operating cloud business, but that revenue does not establish returns on new AI investment.",
+        "source_ids": ["MS_Q1FY27_RELEASE"]
+      },
+      "proposed_arc_ids": ["ARC_CAPITAL_MIX_PUBLIC_PRIVATE", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "stack_layers": ["finance_rent", "cloud_inference", "energy_compute_chips"],
+      "view_relevance": "Supplies realized infrastructure expenditure and a comparability warning for AI Economy. Capacity-delivery timing is relevant to access but does not establish a specific customer's denial of service.",
+      "dedup": {
+        "verdict": "new_financial_reporting_event",
+        "event_key": "Microsoft|FY2027-Q1-results|2026-10-28",
+        "study_family_key": "Microsoft_infrastructure_accounting_FY2026_FY2027",
+        "related_existing_event_ids": ["SIG_2026_STANFORD_AGGREGATE_INVESTMENT", "SIG_2026_BIS_CIRCULAR_AI_FINANCE"],
+        "exact_url_duplicate_event_ids": [],
+        "family_reason": "No Microsoft quarterly CapEx or building-life accounting event exists in the baseline. July accounting context is folded into the October reporting candidate, not offered as a second financial datapoint or independent study.",
+        "overlap_guard": "Do not sum cash additions, finance leases, reported CapEx and annual guidance. Do not add Microsoft supplier-side spending to OpenAI customer commitments as an aggregate AI investment flow."
+      }
+    },
+    {
+      "rank": 3,
+      "proposed_id": "SIG_2025_AEP_OHIO_DATACENTER_MINIMUM_BILLING",
+      "date": "2025-07-09",
+      "date_precision": "day",
+      "date_basis": "PUCO order date, independently stated by regulator and utility. Compliance tariff filed July 11; effective July 23 according to utility implementation page.",
+      "effective_date": "2025-07-23",
+      "title_ru": "Огайо закрепляет за дата-центрами риск недозагрузки электросетей",
+      "title_en": "Ohio assigns data centers the risk of underused grid investment",
+      "summary_ru": "PUCO одобрила отдельный тариф AEP Ohio: для крупных новых дата-центров предусмотрены минимальные платежи относительно договорной мощности, проверка финансовой состоятельности и плата за выход. Коммунальный риск превращается в обязательство покупателя вычислительной инфраструктуры.",
+      "summary_en": "PUCO approved an AEP Ohio tariff with minimum billing tied to contracted capacity, financial-viability checks and exit fees for large new data centers. Utility investment risk becomes a compute-infrastructure customer's obligation.",
+      "caveat_ru": "Только соответствующая территория и категория клиентов, не все американские дата-центры и не только ИИ. Эффект для счетов жителей не измерен; исход апелляции здесь не установлен.",
+      "caveat_en": "Limited to the relevant territory and customer class, not all US data centers or AI alone. Household-bill effects are unmeasured; the appeal outcome is not established here.",
+      "evidence_stage": "regulatory_order_with_confirmed_tariff_effective_date",
+      "evidence_kind": "regulator_order_announcement_and_utility_implementation",
+      "source_ids": ["PUCO_ORDER_2025", "AEP_TARIFF_ANNOUNCEMENT", "AEP_TARIFF_IMPLEMENTATION", "OCC_TARIFF_CASE"],
+      "financial_observations": [
+        {"metric": "large_customer_minimum_billing_reference", "value": 85, "unit": "percent_of_contracted_capacity", "status": "tariff_obligation_not_measured_consumption", "source_id": "OCC_TARIFF_CASE"},
+        {"metric": "maximum_described_contract_period", "value": 12, "unit": "years", "status": "includes_four_year_ramp_up_and_size_dependent_terms", "source_id": "AEP_TARIFF_ANNOUNCEMENT"}
+      ],
+      "counterevidence": {
+        "ru": "Решение одновременно предусматривает снятие моратория на новые подключения. Плата за риск может открыть доступ, а не просто запретить строительство.",
+        "en": "The order also provides for ending the connection moratorium. Pricing risk can enable access rather than simply prohibit construction.",
+        "source_ids": ["PUCO_ORDER_2025"]
+      },
+      "proposed_arc_ids": ["ARC_ENERGY_GRID_POLITICS", "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"],
+      "stack_layers": ["energy_compute_chips", "finance_rent", "governance_law"],
+      "view_relevance": "Connects AI Economy to enforceable cost allocation and Knowledge and Access to the financial conditions of grid entry.",
+      "dedup": {
+        "verdict": "new_enacted_local_cost_allocation_mechanism",
+        "event_key": "PUCO|24-0508-EL-ATA|2025-07-09-order",
+        "study_family_key": "AEP_Ohio_Data_Center_Tariff_24_0508",
+        "related_existing_event_ids": ["SIG_2026_US_RATEPAYER_PROTECTION_PLEDGE", "SIG_2026_TEXAS_DATACENTER_INTERCONNECTION_AUDIT", "SIG_2026_UK_DATACENTRE_COVENANT"],
+        "exact_url_duplicate_event_ids": [],
+        "family_reason": "No Ohio/AEP/PUCO tariff record or source exists in the baseline. This is a utility-specific effective tariff, not the later voluntary federal pledge, Texas audit or UK covenant.",
+        "overlap_guard": "Do not convert reserved power or minimum charges into delivered electricity, commissioned AI compute, or observed household savings."
+      }
+    },
+    {
+      "rank": 4,
+      "proposed_id": "SIG_2025_AWS_P4_P5_GPU_PRICE_CUT",
+      "date": "2025-06-01",
+      "date_precision": "day",
+      "date_basis": "Effective date for On-Demand purchases, stated in the June 5 announcement. Savings Plan changes apply to purchases effective after June 4; announcement date is not substituted for effective date.",
+      "source_publication_date": "2025-06-05",
+      "title_ru": "AWS снижает цены аренды GPU: контрпример неизбежному росту ренты",
+      "title_en": "AWS cuts GPU rental prices: a counterexample to inevitably rising rent",
+      "summary_ru": "AWS снизила цены On-Demand на P4d/P4de с A100 на 33%, P5 с H100 на 44% и P5en с H200 на 25% относительно 31 мая 2025. Максимальные 45% в заголовке относятся к отдельному варианту Savings Plan, а не ко всем инстансам.",
+      "summary_en": "AWS cut On-Demand prices by 33% for A100 P4d/P4de, 44% for H100 P5 and 25% for H200 P5en versus May 31, 2025. The headline 45% maximum applies to a specific Savings Plan, not every instance.",
+      "caveat_ru": "Прайс-лист не равен средней оплаченной цене или полной стоимости задачи. Скидки зависят от ОС и плана; долгосрочный план сам создаёт обязательство расходов.",
+      "caveat_en": "List prices are not average paid prices or total task costs. Discounts depend on OS and plan; a long-term plan itself creates spending commitments.",
+      "evidence_stage": "effective_vendor_pricing_change",
+      "evidence_kind": "dated_provider_price_schedule_announcement",
+      "source_ids": ["AWS_GPU_PRICE_BLOG", "AWS_GPU_PRICE_NOTICE"],
+      "counterevidence": {
+        "ru": "Опровергает обязательный рост удельной облачной ренты; не опровергает концентрацию рынка или технические издержки смены поставщика.",
+        "en": "Counters inevitable growth in unit cloud rent; does not refute market concentration or technical switching costs.",
+        "source_ids": ["AWS_GPU_PRICE_BLOG"],
+        "interpretation": "Editorial inference from the observed direction of posted prices, not a competition or pass-through study."
+      },
+      "proposed_arc_ids": ["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN", "ARC_OPEN_WEIGHT_EXIT_OR_DEPENDENCE"],
+      "stack_layers": ["cloud_inference", "energy_compute_chips", "finance_rent"],
+      "view_relevance": "Adds direct price counterevidence to AI Economy and a lower compute-entry price to Knowledge and Access; no claim that open-weight deployment becomes affordable for every organization.",
+      "dedup": {
+        "verdict": "new_pricing_event_and_substantive_counterevidence",
+        "event_key": "AWS|P4_P5_GPU_price_revision|effective_2025-06-01",
+        "study_family_key": "AWS_June_2025_GPU_price_revision",
+        "related_existing_event_ids": ["SIG_2025_CMA_CLOUD_SWITCHING_AEC", "SIG_2025_EU_DATA_ACT_CLOUD_SWITCHING", "SIG_2026_IBM_LLMD_OPEN_MODEL_SERVING"],
+        "exact_url_duplicate_event_ids": [],
+        "family_reason": "No matching AWS price revision or source exists. CMA studies competition, Data Act regulates exit, and IBM estimates workload token costs; none is this published GPU-instance price change. Blog and What's New notice are one event.",
+        "overlap_guard": "Do not sum discount percentages, treat Savings Plan savings as cash transfers, or extrapolate this historical price change into a current market-wide price index."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "CW_Q2_2026",
+      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+      "title": "CoreWeave Reports Strong Second Quarter 2026 Results",
+      "publisher": "CoreWeave",
+      "date": "2026-08-11",
+      "date_basis": "Dated release body",
+      "type": "primary_issuer_results",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "Q2 financial highlights; backlog definition; consolidated statements"
+    },
+    {
+      "id": "CW_10Q_2026_06",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm",
+      "title": "CoreWeave, Inc. Form 10-Q for the quarter ended June 30, 2026",
+      "publisher": "CoreWeave / SEC EDGAR",
+      "date": "2026-08-12",
+      "date_basis": "SEC filing date; accepted 2026-08-11 19:24:42",
+      "type": "primary_regulatory_filing",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "Condensed cash flows for six months; Note 10 Debt, future principal payment schedule"
+    },
+    {
+      "id": "CW_10Q_INDEX",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/0001769628-26-000366-index.html",
+      "title": "EDGAR filing detail: CoreWeave 0001769628-26-000366",
+      "publisher": "SEC EDGAR",
+      "date": "2026-08-12",
+      "date_basis": "Filing metadata, distinct from acceptance timestamp",
+      "type": "primary_filing_metadata",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09"
+    },
+    {
+      "id": "MS_Q1FY27_RELEASE",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast",
+      "title": "Microsoft Announces First Quarter Results: Earnings Release FY27 Q1",
+      "publisher": "Microsoft Investor Relations",
+      "date": "2026-10-28",
+      "date_basis": "Release dateline; reporting period ended 2026-09-30",
+      "type": "primary_issuer_results",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "Cash Flows Statements, additions to property and equipment; business highlights"
+    },
+    {
+      "id": "MS_Q1FY27_CALL",
+      "url": "https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1",
+      "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+      "publisher": "Microsoft Investor Relations",
+      "date": "2026-10-28",
+      "date_basis": "Dated call transcript",
+      "type": "primary_management_statement",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "Amy Hood: capital expenditures, finance leases, cash PP&E and calendar-year guidance"
+    },
+    {
+      "id": "MS_Q4FY26_CALL",
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+      "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+      "publisher": "Microsoft Investor Relations",
+      "date": "2026-07-29",
+      "date_basis": "Dated call transcript",
+      "type": "primary_management_statement",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "Amy Hood, immediately before outlook: useful lives and finance-to-operating lease classification"
+    },
+    {
+      "id": "PUCO_ORDER_2025",
+      "url": "https://content.govdelivery.com/accounts/OHPUC/bulletins/3e8bb79",
+      "title": "PUCO orders AEP Ohio to create data center specific tariff",
+      "publisher": "Public Utilities Commission of Ohio",
+      "date": "2025-07-09",
+      "date_basis": "Regulator bulletin timestamp and dateline",
+      "type": "primary_regulator_announcement",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "limitation": "Linked docket document returned Request Rejected. This packet does not claim to have inspected the full order."
+    },
+    {
+      "id": "AEP_TARIFF_ANNOUNCEMENT",
+      "url": "https://www.aepohio.com/company/news/view?releaseID=10326",
+      "title": "AEP Ohio Proposal on Data Centers to Protect Ohio Consumers Adopted by PUCO",
+      "publisher": "AEP Ohio",
+      "date": "2025-07-09",
+      "date_basis": "Dated utility announcement",
+      "type": "primary_implementing_utility_statement",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "Minimum payment, sliding scale, financial viability, exit fee and ramp-up descriptions"
+    },
+    {
+      "id": "AEP_TARIFF_IMPLEMENTATION",
+      "url": "https://www.aepohio.com/company/about/rates/data-center-tariff/",
+      "title": "Data Center Tariff",
+      "publisher": "AEP Ohio / Ohio Power",
+      "date": null,
+      "date_basis": "Undated maintained page; explicitly states order 2025-07-09, filing 2025-07-11 and effectiveness 2025-07-23",
+      "type": "primary_implementation_page",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09"
+    },
+    {
+      "id": "OCC_TARIFF_CASE",
+      "url": "https://www.occ.ohio.gov/content/data-center-costs-24-0508-el-ata",
+      "title": "Data Center Costs 24-0508-EL-ATA",
+      "publisher": "Office of the Ohio Consumers' Counsel",
+      "date": null,
+      "date_basis": "Maintained case page with dated events; publication/update date not established",
+      "type": "primary_state_consumer_advocate_case_account",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "Update paragraph: capacity billing, term and November 2025 appeal",
+      "limitation": "OCC participated in the settlement; its characterization of consumer benefits is not independent impact evaluation."
+    },
+    {
+      "id": "MS_OPENAI_OCT2025",
+      "url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
+      "title": "The next chapter of the Microsoft-OpenAI partnership",
+      "publisher": "Microsoft",
+      "date": "2025-10-28",
+      "date_basis": "Dated announcement of signed definitive agreement",
+      "type": "primary_contracting_party_announcement",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "What has evolved: incremental Azure purchase contract and removal of right of first refusal"
+    },
+    {
+      "id": "MS_10Q_SUBSEQUENT_EVENT",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312525256321/R26.htm",
+      "title": "Microsoft Form 10-Q, Note 17: Subsequent Event",
+      "publisher": "Microsoft / SEC EDGAR",
+      "date": "2025-10-29",
+      "date_basis": "Filing metadata; note explicitly dates agreement to 2025-10-28",
+      "type": "primary_regulatory_filing",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09"
+    },
+    {
+      "id": "MS_10Q_OCT2025_INDEX",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312525256321/0001193125-25-256321-index.html",
+      "title": "EDGAR filing detail: Microsoft 0001193125-25-256321",
+      "publisher": "SEC EDGAR",
+      "date": "2025-10-29",
+      "date_basis": "SEC filing metadata",
+      "type": "primary_filing_metadata",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09"
+    },
+    {
+      "id": "OPENAI_APR2026_AMENDMENT",
+      "url": "https://openai.com/index/next-phase-of-microsoft-partnership/",
+      "title": "The next phase of the Microsoft OpenAI partnership",
+      "publisher": "OpenAI",
+      "date": "2026-04-27",
+      "date_basis": "Dated amended-agreement announcement",
+      "type": "primary_contracting_party_announcement",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "role": "Already represented in baseline; reused only to qualify the historical October 2025 milestone"
+    },
+    {
+      "id": "AWS_GPU_PRICE_BLOG",
+      "url": "https://aws.amazon.com/blogs/aws/announcing-up-to-45-price-reduction-for-amazon-ec2-nvidia-gpu-accelerated-instances/",
+      "title": "Announcing up to 45% price reduction for Amazon EC2 NVIDIA GPU-accelerated instances",
+      "publisher": "AWS / Channy Yun",
+      "date": "2025-06-05",
+      "date_basis": "Dated blog; separate June 1 and June 4 effective-date conditions",
+      "type": "primary_provider_price_announcement",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "Instance-type and pricing-plan table relative to May 31, 2025"
+    },
+    {
+      "id": "AWS_GPU_PRICE_NOTICE",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2025/06/pricing-usage-model-ec2-instances-nvidia-gpus/",
+      "title": "Pricing and usage model updates for Amazon EC2 instances accelerated by NVIDIA GPUs",
+      "publisher": "AWS",
+      "date": "2025-06-05",
+      "date_basis": "Posted-on date and explicit pricing effective dates",
+      "type": "primary_provider_price_announcement",
+      "access": "primary_full_text_reviewed",
+      "checked_at": "2026-11-09",
+      "locator": "Operating-system qualification; do not read the up-to headline as a universal discount"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "name": "FTC January 2025 cloud-AI partnership report",
+      "url": "https://search.ftc.gov/news-events/news/press-releases/2025/01/ftc-issues-staff-report-ai-partnerships-investments-study",
+      "date": "2025-01-17",
+      "existing_event_ids": ["SIG_2025_FTC_CSP_AI_PARTNERSHIP_LOCKIN"],
+      "reason": "Exact event, study family and primary announcement/report URLs already present; no new finding established."
+    },
+    {
+      "name": "CMA final cloud competition decision",
+      "url": "https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf",
+      "date": "2025-07-31",
+      "existing_event_ids": ["SIG_2025_CMA_CLOUD_SWITCHING_AEC"],
+      "reason": "Baseline already includes low switching, concentration, exit barriers and the limited AI-specific effect. No new candidate from the same report."
+    },
+    {
+      "name": "EU Data Act cloud-switching duties",
+      "url": "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained",
+      "date": "2025-09-12",
+      "existing_event_ids": ["SIG_2025_EU_DATA_ACT_CLOUD_SWITCHING"],
+      "reason": "Existing event already distinguishes application in 2025 from removal of switching charges in January 2027. Do not turn the future deadline into an observed 2026 outcome."
+    },
+    {
+      "name": "IEA Energy and AI global/local electricity baseline",
+      "url": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+      "date": "2025-04-10",
+      "existing_event_ids": ["SIG_2025_IEA_ENERGY_LOCAL_NOT_GLOBAL"],
+      "reason": "Same report family already supplies the local-versus-global counterargument. The baseline URL's encoded trailing space does not make the cleaned URL a new source."
+    },
+    {
+      "name": "BIS circular AI investment relationships",
+      "url": "https://www.bis.org/publications/bulletin-137-circular-relationships-among-ai-firms",
+      "date": "2026-10-01",
+      "existing_event_ids": ["SIG_2026_BIS_CIRCULAR_AI_FINANCE"],
+      "reason": "Same institutional study and sample are already present. Do not relabel supply-linked investment as fraudulent revenue or count it as a new debt event."
+    },
+    {
+      "name": "CoreWeave FY2025 results as an additional standalone candidate",
+      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Fourth-Quarter-and-Fiscal-Year-2025-Results/",
+      "date": "2026-02-26",
+      "existing_event_ids": [],
+      "reason": "Primary results were checked, but the verified Q2 2026 packet supplies the stronger reporting-period extension. Do not pad the shortlist with two successive CoreWeave earnings events."
+    },
+    {
+      "name": "Microsoft FY2025 annual capex as a separate addition",
+      "url": "https://www.microsoft.com/investor/reports/ar25/index.html",
+      "date": null,
+      "existing_event_ids": [],
+      "reason": "Discovery lead superseded by directly reviewed October 2026 results and July accounting context; no need for a second hyperscaler-spending candidate. Annual-report publication date was not established in this packet."
+    },
+    {
+      "name": "Stargate initial $500bn announcement and CoreWeave initial $11.9bn OpenAI contract",
+      "urls": ["https://openai.com/index/announcing-the-stargate-project/", "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Agreement-with-OpenAI-to-Deliver-AI-Infrastructure/default.aspx"],
+      "existing_event_ids": ["SIG_2025_STARGATE_US_500B_PLEDGE", "SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY"],
+      "reason": "Both events already exist. Repackaging pledge totals adds no realized-spending evidence and risks overlap with subsequent customer backlog."
+    },
+    {
+      "name": "October 2025 Microsoft-OpenAI Azure commitment and ROFR removal",
+      "proposed_id": "SIG_2025_MICROSOFT_OPENAI_AZURE_250B_ROFR_END",
+      "date": "2025-10-28",
+      "url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
+      "source_ids": ["MS_OPENAI_OCT2025", "MS_10Q_SUBSEQUENT_EVENT", "MS_10Q_OCT2025_INDEX", "OPENAI_APR2026_AMENDMENT"],
+      "existing_event_ids": ["SIG_2023_MICROSOFT_OPENAI_AZURE_LOCKIN", "SIG_2026_MICROSOFT_OPENAI_NONEXCLUSIVE_AMENDMENT"],
+      "status": "verified_but_deferred_for_bounded_shortlist",
+      "reason": "A genuinely missing historical milestone: $250bn incremental Azure purchase commitment and removal of Microsoft's right of first refusal, confirmed in the October 29 SEC note. Lower priority than the four distinct mechanisms retained in this bounded pass. Same partnership family is already represented through April 2026; the current unfulfilled balance is not established. Not spent cash and not additive with Stargate, backlog or supplier CapEx."
+    },
+    {
+      "name": "Microsoft-OpenAI April 2026 amendment as a new event",
+      "url": "https://openai.com/index/next-phase-of-microsoft-partnership/",
+      "date": "2026-04-27",
+      "existing_event_ids": ["SIG_2026_MICROSOFT_OPENAI_NONEXCLUSIVE_AMENDMENT"],
+      "reason": "Exact duplicate, rechecked only to qualify the now-deferred October 2025 contractual milestone."
+    },
+    {
+      "name": "Current aggregate AI investment, cloud-contract or debt total",
+      "existing_event_ids": [],
+      "reason": "Rejected as an invalid synthesis: commitments, provider CapEx, equity valuations, revenue, backlog and debt stocks overlap and have incompatible periods. No aggregate total is proposed."
+    }
+  ],
+  "research_limits": [
+    "Four candidates were retained in a pass bounded by the lead agent, selected for distinct mechanisms rather than publication recency alone. No claim of exhaustive coverage or globally representative pricing is made.",
+    "Corporate sources establish what issuers reported, not independent verification of physical utilization, total AI-only returns or every contract term.",
+    "The full PUCO order was inaccessible in the web tool. Regulator and implementing-utility pages support the scoped event; tariff edge cases and appeal disposition need docket review before detailed legal claims.",
+    "No source dated after 2026-11-09 supports a candidate. Unknown publication dates remain null rather than being replaced with retrieval dates.",
+    "Existing evidence supplies important counterarguments, but already covered FTC/CMA/IEA/Data Act/BIS records are not counted as new research candidates."
+  ]
+}

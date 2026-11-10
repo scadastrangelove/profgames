@@ -631,9 +631,9 @@ function initNav(){
     return '<button type="button" class="' + (index ? '' : 'active') + '" data-tab="' + tab[0] + '">' + esc(tab[1]) + '</button>';
   }).join('');
   document.querySelectorAll('#nav button').forEach(function(button){
-    button.addEventListener('click', function(){
+    button.onclick = function(){
       switchTab(button.dataset.tab);
-    });
+    };
   });
 }
 
