@@ -1,0 +1,227 @@
+[
+  {
+    "input_id": "ECON_BIS_CREDIT_STRUCTURES",
+    "target_id": "SIG_ECON_BIS_CREDIT_STRUCTURES",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "ECON_IMF_INTERDEPENDENT_COMMITMENTS",
+    "target_id": "SIG_ECON_IMF_INTERDEPENDENT_COMMITMENTS",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "ECON_FED_VALUATIONS_AND_EXPECTED_EARNINGS",
+    "target_id": "SIG_ECON_FED_VALUATIONS_AND_EXPECTED_EARNINGS",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "ECON_FED_AI_RISK_SENTIMENT",
+    "target_id": "SIG_ECON_FED_VALUATIONS_AND_EXPECTED_EARNINGS",
+    "decision": "merge_same_disclosure"
+  },
+  {
+    "input_id": "ECON_US_AI_EXPORT_FINANCING_POLICY",
+    "target_id": "SIG_ECON_US_AI_EXPORT_FINANCING_POLICY",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "ECON_BIS_INVESTMENT_RACE_MODEL",
+    "target_id": "SIG_ECON_BIS_INVESTMENT_RACE_MODEL",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIECON_ALPHABET_2026Q3_COMMITMENTS_BACKSTOPS",
+    "target_id": "SIG_ECON_ALPHABET_2026Q3_COMMITMENTS_BACKSTOPS",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIECON_ALPHABET_2026_CRUX_RELATED_BACKLOG",
+    "target_id": "SIG_ECON_ALPHABET_2026Q3_COMMITMENTS_BACKSTOPS",
+    "decision": "merge_same_disclosure"
+  },
+  {
+    "input_id": "AIECON_META_2026Q3_CASH_CAPEX_AND_FCF",
+    "target_id": "SIG_ECON_META_2026Q3_CASH_CAPEX_AND_FCF",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIECON_META_2026Q3_LONG_DATED_OBLIGATIONS",
+    "target_id": "SIG_ECON_META_2026Q3_CASH_CAPEX_AND_FCF",
+    "decision": "merge_same_disclosure"
+  },
+  {
+    "input_id": "AIECON_NVIDIA_2027Q2_REAL_REVENUE_AND_MARGIN",
+    "target_id": "SIG_ECON_NVIDIA_2027Q2_REAL_REVENUE_AND_MARGIN",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIECON_NVIDIA_2027Q2_CLOUD_CAPACITY_SUPPORT",
+    "target_id": "SIG_ECON_NVIDIA_2027Q2_REAL_REVENUE_AND_MARGIN",
+    "decision": "merge_same_disclosure"
+  },
+  {
+    "input_id": "AIECON_ORACLE_2027Q1_PREPAYMENTS_AND_CASHFLOW",
+    "target_id": "SIG_ECON_ORACLE_2027Q1_PREPAYMENTS_AND_CASHFLOW",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIECON_ORACLE_2027Q1_RPO_RECOGNITION_HORIZON",
+    "target_id": "SIG_ECON_ORACLE_2027Q1_PREPAYMENTS_AND_CASHFLOW",
+    "decision": "merge_same_disclosure"
+  },
+  {
+    "input_id": "AIECON_COREWEAVE_2026Q3_EBITDA_INTEREST_DEBT",
+    "target_id": "SIG_ECON_COREWEAVE_2026Q3_EBITDA_INTEREST_DEBT",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIECON_COREWEAVE_2026Q3_CONCENTRATION_AND_RPO",
+    "target_id": "SIG_ECON_COREWEAVE_2026Q3_EBITDA_INTEREST_DEBT",
+    "decision": "merge_same_disclosure"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_OPENAI_REVENUE_RUN_RATE",
+    "target_id": "SIG_ECON_2026_OPENAI_REVENUE_RUN_RATE",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_ANTHROPIC_REALIZED_REVENUE_AND_EXPANSION",
+    "target_id": "SIG_ECON_2026_ANTHROPIC_REALIZED_REVENUE_AND_EXPANSION",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_ANTHROPIC_OPERATING_RESULT_VS_NONCASH_NET_LOSS",
+    "target_id": "SIG_ECON_2026_ANTHROPIC_REALIZED_REVENUE_AND_EXPANSION",
+    "decision": "merge_same_disclosure"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_MICROSOFT_COPILOT_PAID_SEATS",
+    "target_id": "SIG_ECON_2026_MICROSOFT_COPILOT_PAID_SEATS",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_SALESFORCE_ARR_PERIMETER",
+    "target_id": "SIG_ECON_2026_SALESFORCE_ARR_PERIMETER",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_CHATGPT_COHORT_REUSE",
+    "target_id": "SIG_ECON_2026_CHATGPT_COHORT_REUSE",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2025_OPENAI_ENTERPRISE_TELEMETRY_VS_SELF_REPORT",
+    "target_id": "SIG_ECON_2025_OPENAI_ENTERPRISE_TELEMETRY_VS_SELF_REPORT",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_RAMP_SPEND_CONCENTRATION",
+    "target_id": "SIG_ECON_2026_RAMP_SPEND_CONCENTRATION",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_CENSUS_DIFFUSION_AND_DEFINITION",
+    "target_id": "SIG_ECON_2026_CENSUS_DIFFUSION_AND_DEFINITION",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_KLARNA_REPORTED_SAVINGS",
+    "target_id": "SIG_ECON_2026_KLARNA_REPORTED_SAVINGS",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2026_EPOCH_QUALITY_ADJUSTED_INFERENCE_PRICE",
+    "target_id": "SIG_ECON_2026_EPOCH_QUALITY_ADJUSTED_INFERENCE_PRICE",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2024_2025_TEST_TIME_COMPUTE_ALLOCATION",
+    "target_id": "SIG_ECON_2024_2025_TEST_TIME_COMPUTE_ALLOCATION",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2026_MLPERF_INFERENCE_61",
+    "target_id": "SIG_ECON_2026_MLPERF_INFERENCE_61",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2026_M365_SAGESERVE_GPU_HOURS",
+    "target_id": "SIG_ECON_2026_M365_SAGESERVE_GPU_HOURS",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2026_M365_AGENT_KV_RESIDENCY",
+    "target_id": "SIG_ECON_2026_M365_AGENT_KV_RESIDENCY",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2026_IEA_DATA_CENTRE_ELECTRICITY_UPDATE",
+    "target_id": "SIG_ECON_2026_IEA_DATA_CENTRE_ELECTRICITY_UPDATE",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2026_LBNL_ENERGY_LIFETIME_SENSITIVITY",
+    "target_id": "SIG_ECON_2026_LBNL_ENERGY_LIFETIME_SENSITIVITY",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2026_PJM_FIRM_LOAD_VETTING",
+    "target_id": "SIG_ECON_2026_PJM_FIRM_LOAD_VETTING",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2025_2026_AMAZON_SERVER_USEFUL_LIFE",
+    "target_id": "SIG_ECON_2025_2026_AMAZON_SERVER_USEFUL_LIFE",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "AIEC_2026_PATENT_LAWYER_AI_RCT",
+    "target_id": "SIG_ECON_2026_PATENT_LAWYER_AI_RCT",
+    "decision": "new_event"
+  },
+  {
+    "input_id": "ECON_FTC_FINANCING_TIED_TO_CLOUD",
+    "target_id": "SIG_2025_FTC_CSP_AI_PARTNERSHIP_LOCKIN",
+    "decision": "enrich_existing"
+  },
+  {
+    "input_id": "ECON_BIS_CIRCULAR_RELATIONSHIPS",
+    "target_id": "SIG_2026_BIS_CIRCULAR_AI_FINANCE",
+    "decision": "enrich_existing"
+  },
+  {
+    "input_id": "ECON_CMA_CLOUD_SWITCHING_RENTS",
+    "target_id": "SIG_2025_CMA_CLOUD_SWITCHING_AEC",
+    "decision": "enrich_existing"
+  },
+  {
+    "input_id": "ECON_OPENAI_ROUND_PRICE_VS_COMMITMENT",
+    "target_id": "SIG_2026_OPENAI_122B_COMMITTED_ROUND",
+    "decision": "enrich_existing"
+  },
+  {
+    "input_id": "AIECON_MSFT_2026Q1_CAPEX_CASH_LEASE_BASES",
+    "target_id": "SIG_2026_MICROSOFT_Q1FY27_CAPEX_LEASE_BOUNDARY",
+    "decision": "enrich_existing"
+  },
+  {
+    "input_id": "AIECON_MSFT_2026_BUILDING_LIFE_LEASE_CLASSIFICATION",
+    "target_id": "SIG_2026_MICROSOFT_Q1FY27_CAPEX_LEASE_BOUNDARY",
+    "decision": "enrich_existing"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2025_2026_COPILOT_WORK_PATTERNS_RCT",
+    "target_id": "SIG_2025_COPILOT_66_FIRMS_WORK_PATTERNS",
+    "decision": "enrich_existing"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_FIRM_SURVEY_EXPECTATIONS_GAP",
+    "target_id": "SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP",
+    "decision": "enrich_existing"
+  },
+  {
+    "input_id": "SIG_AI_ECON_2026_METR_SELECTION_AND_TIME_COST",
+    "target_id": "SIG_2026_METR_PRODUCTIVITY_SELECTION_UPDATE",
+    "decision": "enrich_existing"
+  }
+]

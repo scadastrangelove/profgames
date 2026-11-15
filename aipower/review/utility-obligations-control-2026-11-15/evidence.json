@@ -1,0 +1,256 @@
+{
+  "packet_id": "utility-obligations-control-2026-11-15",
+  "checked_at": "2026-11-15",
+  "status": "research_draft_not_integrated",
+  "atlas_snapshot": {
+    "version": "0.57",
+    "stored_events": 592,
+    "source_file": "ai_power_storygraph_ru.json",
+    "representative_sample": false
+  },
+  "method": "Primary-source reading and comparison with local atlas events. Corporate outcome claims retain attribution; experimental results, surveys, contracts and theoretical models are distinguished. No independent replication or economy-wide bubble valuation was performed.",
+  "sources": [
+    {
+      "id": "ECMWF_AIFS",
+      "url": "https://www.ecmwf.int/en/about/media-centre/news/2025/ecmwfs-ai-forecasts-become-operational",
+      "date": "2025-02-25",
+      "kind": "operator_report_of_operational_deployment",
+      "finding": "AIFS entered operations alongside IFS with 24/7 support.",
+      "locator": "Opening paragraph; Further plans, statement by Director of Forecasts and Services",
+      "limit": "Operational deployment does not measure provider profitability or economy-wide productivity.",
+      "atlas_event_ids": ["SIG_2025_ECMWF_AIFS_OPERATIONS"],
+      "arc_ids": ["ARC_KNOWLEDGE_PRODUCTION_VALIDATION"],
+      "dedup": "reuse_existing_event"
+    },
+    {
+      "id": "ALPHAEVOLVE",
+      "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+      "date": "2025-05-14",
+      "kind": "company_reported_production_outcome",
+      "finding": "Google reports recovery of an average 0.7% of worldwide compute through a scheduling heuristic already in production for over a year.",
+      "locator": "Improving data center scheduling",
+      "limit": "Company measurement; not independently replicated here; not a 0.7% profit or energy-saving metric.",
+      "atlas_event_ids": ["SIG_2025_ALPHAEVOLVE_ALGORITHMS"],
+      "arc_ids": ["ARC_KNOWLEDGE_PRODUCTION_VALIDATION", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "dedup": "reuse_existing_event"
+    },
+    {
+      "id": "KLARNA_ANNUAL_2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/2003292/000200329226000007/klar-20251231.htm",
+      "observation_period": "2025-01-01/2025-12-31",
+      "publication_date": null,
+      "kind": "company_reported_outcome_in_regulatory_filing",
+      "finding": "Klarna reports 80% of support chats, workload equivalent to over 850 agents, approximately USD 59 million annual savings, and continued access to human support.",
+      "locator": "AI-driven efficiency, paragraphs beginning 'We announced a partnership with OpenAI in 2023'",
+      "limit": "Management estimates, not an independently audited causal AI effect. Workload equivalence is not a dismissal count. Filing date needs confirmation before event creation.",
+      "atlas_event_ids": ["SIG_2024_KLARNA_WORKLOAD_EQUIVALENT"],
+      "arc_ids": ["ARC_WORK_COMPETENCE_DISTRIBUTION", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "dedup": "candidate_followup_to_existing_story_not_independent_replication"
+    },
+    {
+      "id": "BCG_JAGGED_FRONTIER",
+      "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2025.21838",
+      "initial_publication_year": 2023,
+      "journal_publication_year": 2026,
+      "kind": "randomized_experiment",
+      "finding": "758 participants; within-frontier tasks improved on completion and time metrics, while the outside-frontier task produced a roughly 19 percentage-point reduction in correctness with AI.",
+      "locator": "Abstract; Outside the Frontier, Figure 5 and Table 7; discussion referencing September 2023 working paper",
+      "metrics": {
+        "more_tasks_completed_percent": 12.2,
+        "time_improvement_percent": 25.1,
+        "outside_frontier_correctness_change_percentage_points": -19
+      },
+      "limit": "GPT-4-era experiment, not a 2026 model evaluation. Only one outside-frontier task. Abstract's 19% shorthand is clarified as percentage points in the main text.",
+      "atlas_event_ids": [],
+      "arc_ids": ["ARC_WORK_COMPETENCE_DISTRIBUTION", "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"],
+      "dedup": "candidate_historical_evidence_not_new_2026_experiment"
+    },
+    {
+      "id": "METR_HORIZON_METHOD",
+      "url": "https://metr.org/time-horizons/",
+      "page_last_updated": "2026-09-08",
+      "kind": "measurement_methodology",
+      "finding": "Time horizon pairs human-expert task duration with a specified probability of agent success; the page distinguishes 50% and 80% thresholds.",
+      "locator": "Definition; Methodological Details; FAQ on autonomous duration; Task distribution",
+      "limit": "Not elapsed autonomous working time or a general employee replacement metric; mainly software, ML and cyber tasks. Page no longer actively updated.",
+      "atlas_event_ids": [],
+      "arc_ids": ["ARC_WORK_COMPETENCE_DISTRIBUTION", "ARC_KNOWLEDGE_PRODUCTION_VALIDATION"],
+      "dedup": "methodological_note_preferred_over_news_event"
+    },
+    {
+      "id": "FIRM_DATA_AI",
+      "url": "https://wfhresearch.com/wp-content/uploads/2026/03/Firm-Data-on-AI-16-February-2026.pdf",
+      "publication_month": "2026-02",
+      "fieldwork_period": "2025-11/2026-01",
+      "kind": "cross_country_executive_survey",
+      "finding": "Almost 6000 executives across four countries; 89% average share reporting no productivity impact over the preceding three years.",
+      "locator": "Introduction on fieldwork; section 4.4, printed page 15, Figure 10",
+      "limit": "Retrospective self-reports; productivity means sales volume per employee. Does not describe November 2026 model performance.",
+      "atlas_event_ids": ["SIG_2026_NBER_FIRM_DATA_AI_EXPECTATIONS_GAP"],
+      "arc_ids": ["ARC_WORK_COMPETENCE_DISTRIBUTION"],
+      "dedup": "reuse_existing_event"
+    },
+    {
+      "id": "LINUX_NETDEV",
+      "url": "https://lists.openwall.net/linux-kernel/2026/08/18/2125",
+      "date": "2026-08-18",
+      "kind": "maintainer_operational_report",
+      "finding": "Kicinski reports overload, longstanding API races exposed by LLMs, and Meta-supported budget/access for multi-model review.",
+      "locator": "Opening paragraphs before Networking changes for 7.3",
+      "limit": "No causal aggregate productivity estimate. Counts 632/648 describe patches, not AI-discovered vulnerabilities. Sponsor control of the project is not established.",
+      "atlas_event_ids": ["SIG_2026_LINUX_NETDEV_VALID_FIX_OVERLOAD"],
+      "arc_ids": ["ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK", "ARC_WORK_COMPETENCE_DISTRIBUTION"],
+      "dedup": "reuse_existing_event"
+    },
+    {
+      "id": "FTC_PARTNERSHIPS",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-issues-staff-report-ai-partnerships-investments-study",
+      "date": "2025-01-17",
+      "kind": "regulatory_investigation_report",
+      "finding": "Studied cloud-AI partnerships include commitments to spend a large portion of investor funding on the investor's cloud services.",
+      "locator": "Terms and implications bullet lists",
+      "limit": "Studied partnerships, not every AI contract; interconnected funding is not proof of fictitious revenue.",
+      "atlas_event_ids": ["SIG_2025_FTC_CSP_AI_PARTNERSHIP_LOCKIN"],
+      "arc_ids": ["ARC_CAPITAL_MIX_PUBLIC_PRIVATE", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "dedup": "reuse_existing_event"
+    },
+    {
+      "id": "COREWEAVE_OPENAI",
+      "url": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Agreement-with-OpenAI-to-Deliver-AI-Infrastructure/default.aspx",
+      "date": "2025-03-10",
+      "kind": "company_contract_announcement",
+      "finding": "Contract value up to USD 11.9 billion, together with issuance of USD 350 million CoreWeave stock to OpenAI.",
+      "locator": "Opening announcement paragraph",
+      "limit": "Contract ceiling, not recognized revenue or cash received; historical deal, not the total current relationship.",
+      "atlas_event_ids": ["SIG_2025_COREWEAVE_OPENAI_11_9B_CAPACITY"],
+      "arc_ids": ["ARC_CAPITAL_MIX_PUBLIC_PRIVATE", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "dedup": "enrich_existing_event_with_equity_term"
+    },
+    {
+      "id": "BIS_CIRCULAR",
+      "url": "https://www.bis.org/publications/bulletin-137-circular-relationships-among-ai-firms",
+      "date": "2026-10-01",
+      "observation_period": "2021/2025",
+      "kind": "investment_network_measurement",
+      "finding": "Supply relationships accompany 16.1% by count and 46.4% by value of AI-to-AI investment deals in the study.",
+      "locator": "Key takeaways",
+      "limit": "Denominator is AI-to-AI investment deals, not sector revenue or all capital expenditure.",
+      "atlas_event_ids": ["SIG_2026_BIS_CIRCULAR_AI_FINANCE"],
+      "arc_ids": ["ARC_CAPITAL_MIX_PUBLIC_PRIVATE", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "dedup": "reuse_existing_event"
+    },
+    {
+      "id": "IEA_GRID",
+      "url": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+      "publication_year": 2025,
+      "kind": "infrastructure_risk_assessment",
+      "finding": "Around 20% of planned data-centre projects risk delays without remedies; new transmission lines take four to eight years in advanced economies.",
+      "locator": "Smarter is faster when it comes to integrating data centres in electricity grids",
+      "limit": "Conditional risk estimate for data centres generally, not observed cancellations or an AI-only share.",
+      "atlas_event_ids": ["SIG_2025_IEA_ENERGY_LOCAL_NOT_GLOBAL"],
+      "arc_ids": ["ARC_ENERGY_GRID_POLITICS", "ARC_CAPITAL_MIX_PUBLIC_PRIVATE"],
+      "dedup": "reuse_existing_event_and_normalize_source_url",
+      "source_hygiene_note": "Existing executive-summary URL ends with encoded NBSP (%C2%A0); clean URL used here. Atlas not edited."
+    },
+    {
+      "id": "MICROSOFT_FY27Q1",
+      "url": "https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1",
+      "date": "2026-10-28",
+      "reporting_period": "FY2027 Q1",
+      "kind": "company_financial_reporting",
+      "finding": "USD 45.2 billion capex; roughly three quarters short-lived assets, primarily CPUs/GPUs; USD 18.6 billion company-wide free cash flow.",
+      "locator": "Amy Hood prepared remarks, capital expenditures and cash flow",
+      "limit": "Company-wide metrics. Capex including finance-lease recognition differs from cash PP&E payments; FCF does not establish standalone AI profitability.",
+      "atlas_event_ids": ["SIG_2026_MICROSOFT_Q1FY27_CAPEX_LEASE_BOUNDARY"],
+      "arc_ids": ["ARC_CAPITAL_MIX_PUBLIC_PRIVATE", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "dedup": "reuse_existing_event_already_present_in_v057"
+    },
+    {
+      "id": "BIS_CREDIT",
+      "url": "https://www.bis.org/publications/bulletin-140-building-ai-credit-structures-and-spillovers.pdf",
+      "date": "2026-10-27",
+      "kind": "credit_structure_analysis_and_event_association",
+      "finding": "Maps SPV, lease and guarantee exposures; observed broad bond-market spillovers were small and short-lived.",
+      "locator": "Key takeaways; Emerging credit relationships; Spillovers from AI borrowing",
+      "limit": "Market event associations are not causal effects. The paper does not establish an ongoing systemic crisis.",
+      "atlas_event_ids": [],
+      "arc_ids": ["ARC_CAPITAL_MIX_PUBLIC_PRIVATE", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "dedup": "candidate_distinct_followup_to_BIS_CIRCULAR"
+    },
+    {
+      "id": "BIS_RACE",
+      "url": "https://www.bis.org/publications/working-paper-1367-ai-investment-race",
+      "date": "2026-07-14",
+      "kind": "calibrated_theoretical_model",
+      "finding": "Competition for dominant market positions can produce aggregate overinvestment under the model's assumptions.",
+      "locator": "Summary, Contribution and Findings; Abstract",
+      "limit": "Model output is not measured excess physical capacity. Numerical excess-investment estimates are deliberately omitted from the article.",
+      "atlas_event_ids": [],
+      "arc_ids": ["ARC_CAPITAL_MIX_PUBLIC_PRIVATE"],
+      "dedup": "candidate_research_evidence_not_observed_market_outcome"
+    },
+    {
+      "id": "US_EXPORT_STACK",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/07/promoting-the-export-of-the-american-ai-technology-stack/",
+      "date": "2025-07-23",
+      "kind": "executive_order",
+      "finding": "EO 14320 directs support for full-stack AI export packages using financial and diplomatic tools within legal authority and appropriations.",
+      "locator": "Sections 1-3, 4(d), 5(b)",
+      "limit": "Policy direction does not establish disbursements, completed exports or buyer dependence in a specific country.",
+      "atlas_event_ids": [],
+      "arc_ids": ["ARC_CAPITAL_MIX_PUBLIC_PRIVATE", "ARC_SOVEREIGN_FLOW_GATING"],
+      "dedup": "candidate_policy_event_subject_to_semantic_dedup_before_merge"
+    },
+    {
+      "id": "CMA_FINAL_2025",
+      "url": "https://assets.publishing.service.gov.uk/media/688b20e6ff8c05468cb7b120/summary_of_final_decision.pdf",
+      "date": "2025-07-31",
+      "kind": "regulatory_market_investigation",
+      "finding": "Less than 1% annual customer switching and sustained AWS/Microsoft cloud returns above cost of capital in the investigated market.",
+      "locator": "Summary paragraphs 8, 24; technical and licensing barriers sections",
+      "limit": "Cloud-market findings are not a measure of whole-AI-market profitability or proof all customer retention is involuntary.",
+      "atlas_event_ids": ["SIG_2025_CMA_CLOUD_SWITCHING_AEC"],
+      "arc_ids": ["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "dedup": "reuse_existing_event"
+    },
+    {
+      "id": "CMA_FOLLOWUP_2026",
+      "url": "https://assets.publishing.service.gov.uk/media/6ad1cb60e5db84746b4796d1/Update_on_cloud_actions_-_covering_March_to_October_2026.pdf",
+      "date": "2026-10-16",
+      "kind": "regulatory_implementation_monitoring",
+      "finding": "Transfer-cost measures improved exit terms, with limited uptake and continuing IAM and cloud-specific Kubernetes portability barriers.",
+      "locator": "Summary paragraphs 5-9; paragraphs 15-19",
+      "limit": "Some barriers improved; no measured elimination of lock-in. Do not report every measure as first launched in October.",
+      "atlas_event_ids": ["SIG_2026_CMA_CLOUD_EXIT_IMPLEMENTATION_REVIEW"],
+      "arc_ids": ["ARC_CLOUD_CAPACITY_VENDOR_LOCKIN", "ARC_SOVEREIGN_FLOW_GATING"],
+      "dedup": "reuse_existing_followup"
+    },
+    {
+      "id": "UK_MOD_PALANTIR",
+      "url": "https://www.sell2wales.gov.wales/search/show/search_view.aspx?ID=DEC572475&catID=",
+      "date": "2025-12-18",
+      "kind": "procurement_transparency_notice",
+      "finding": "MoD justifies planned GBP 240.6 million direct award through architecture rebuilding, reaccreditation, retraining and disruption from changing supplier.",
+      "locator": "Procedure; Contract value",
+      "limit": "Buyer's justification, not independent cost measurement. This notice precedes signature; article does not treat December 18 as contract-signing date.",
+      "atlas_event_ids": ["SIG_2026_PALANTIR_UK_MOD_240M"],
+      "arc_ids": ["ARC_PALANTIR_DECISION_OS", "ARC_CLOUD_CAPACITY_VENDOR_LOCKIN"],
+      "dedup": "reuse_existing_event"
+    }
+  ],
+  "analysis": {
+    "hypothesis": "Useful AI applications, financial overcommitment and durable supplier power can coexist; none establishes the other automatically.",
+    "tests": [
+      {"measure": "Independent recurring customer cash", "risk_rises_if": "Demand contracts when fresh financing or cloud credits stop", "risk_falls_if": "Renewals persist without subsidy and cover full service costs"},
+      {"measure": "Cost per accepted result", "risk_rises_if": "Review and correction queues absorb task-level savings", "risk_falls_if": "End-to-end cost and time fall at stable quality"},
+      {"measure": "Capacity cash coverage", "risk_rises_if": "Binding costs start before paying utilization", "risk_falls_if": "Operating cash covers operations, financing and refresh"},
+      {"measure": "Exposure concentration", "risk_rises_if": "One counterparty supports several correlated revenue, collateral and guarantee claims", "risk_falls_if": "Loss of the counterparty is absorbable without cascading defaults"},
+      {"measure": "Practical exit cost", "risk_rises_if": "Alternative models leave expensive platform migration", "risk_falls_if": "Customers migrate with predictable cost, time and functional continuity"},
+      {"measure": "Strategic programme outcome", "risk_rises_if": "Withdrawal of support removes both demand and autonomous operational value", "risk_falls_if": "A funded, tested strategic function or sustainable paid service persists"}
+    ],
+    "scenarios_not_facts": [
+      "Financial repricing may concentrate assets and customers among stronger suppliers.",
+      "Excess capacity and practical portability may instead intensify competition and lower prices."
+    ]
+  }
+}

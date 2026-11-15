@@ -286,7 +286,7 @@ function detailHtml(k,id){
   if(k==='claim'){
     var c=byClaim[id];
     var legalUpdate=c.legal_update_en?'<div class="block quote"><h4>Status update'+(c.status_update_date?' · '+esc(c.status_update_date):'')+'</h4><p>'+esc(c.legal_update_en)+'</p>'+(c.legal_update_caveat_en?'<p class="small">'+esc(c.legal_update_caveat_en)+'</p>':'')+'</div>':'';
-    return '<h2>'+esc(c.claim||c.title)+'</h2><div class="id">'+esc(c.id)+'</div><div>'+tag(statusLabel(c.status))+tag(confidenceLabel(c.evidence_level||c.confidence))+tags(c.geography)+'</div>'+legalUpdate+'<div class="block"><h4>Recommended phrasing</h4><p>'+esc(c.recommended_phrasing||'')+'</p></div>'+sourceBlock(c);
+    return '<h2>'+esc(c.claim||c.title)+'</h2><div class="id">'+esc(c.id)+'</div><div>'+tag(statusLabel(c.status))+tag(confidenceLabel(c.evidence_level||c.confidence))+tags(c.geography)+'</div>'+legalUpdate+'<div class="block"><h4>Recommended phrasing</h4><p>'+esc(c.recommended_phrasing||'')+'</p></div>'+(arr(c.caveats).length?'<div class="block caveat"><h4>Limitations</h4><p>'+esc(arr(c.caveats).join(' · '))+'</p></div>':'')+claimEvidenceSections(c,linkButton)+sourceBlock(c);
   }
   if(k==='check'){
     var cc=byCheck[id];

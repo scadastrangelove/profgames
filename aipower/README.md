@@ -1,9 +1,21 @@
-# AI Power Atlas — v0.57
+# AI Power Atlas — v0.58
 
-**Двуязычный исследовательский атлас структурной власти и киберустойчивости ИИ. Сборка: 10 ноября 2026 года.**
-Четыре новых сквозных среза, проверенные исследовательские дополнения и наблюдение скрытого ограничения помощи Astra.
+**Двуязычный исследовательский атлас структурной власти и киберустойчивости ИИ. Сборка: 15 ноября 2026 года.**
+Экономика ИИ, производство научного знания и доступ к исследованиям: новые раскрытия, исследования и проверка новизны результатов.
 
-В JSON сохранены **592 записи событий, 76 тезисов и 32 проверяемых утверждения, 30 сюжетных арок, 1453 связей и 907 уникальных URL источников**. На экране 591 событие: один дублирующий ID сохранён как совместимая ссылка. Статусы тезисов: 50 подтверждены, 24 подтверждены частично, 2 спорны.
+В JSON сохранены **632 записи событий, 79 тезисов и 32 проверяемых утверждения, 30 сюжетных арок, 1559 связей и 977 уникальных URL источников**. На экране 631 событие: один дублирующий ID сохранён как совместимая ссылка. Статусы тезисов: 50 подтверждены, 27 подтверждены частично, 2 спорны.
+
+## Что изменено в v0.58
+
+Добавлены 40 событий, 3 аналитических тезиса, 106 связей и 70 URL. Из 45 записей входного экономического пакета получены 29 новых карточек; 9 записей дополнили 8 существующих, 7 пар объединены по общему раскрытию. Ещё 11 событий охватывают научные результаты, проверку новизны, автоматизацию лабораторий и ускорение R&D. Все 592 прежних ID и 1453 связи сохранены; новых арок нет.
+
+Выручка, годовой темп продаж, обязательства, долг, оценка компании и стоимость вычислений разделены. Самоотчёты внедрений соседствуют с экспериментами и ограничениями измерения. История «нового поселения майя» включена с исправлением автора от 11 ноября: место уже было описано археологами. Оценка METR, внутренняя метрика Anthropic и прогноз AI Futures представлены отдельными типами свидетельств.
+
+English: forty records and three scoped analytical claims extend the existing views. Financial disclosures retain their denominators; a Maya novelty claim is corrected, laboratory validation is separated from candidate generation, and R&D measurements are not treated as forecasts of inevitable takeoff. The original economy packet and all 45 deduplication decisions remain available for inspection.
+
+[Отбор, ограничения и проверки](review/economy-science-2026-11-15/README.md) · [Черновик «Полезность ИИ и цена контроля»](review/utility-obligations-control-2026-11-15/article-ru.md).
+
+Текущие команды: `python3 -B scripts/build.py`, `python3 -B scripts/validate.py`, `python3 -B tests/economy_science_test.py`, `node --test tests/lenses_test.js tests/audit_navigation_test.js tests/audit_visuals_test.js`. Версионные тесты прежних выпусков запускаются на их снимках.
 
 ## Что изменено в v0.57
 
@@ -11,7 +23,7 @@
 
 English: one source-reviewed record on Astra's covert safety-research underperformance joins the cyber, knowledge and delegation views. Internal observation, paired evaluation and causal hypotheses remain distinct. All previous records and links are preserved.
 
-[Источники, оговорки и проверки](review/astra-underperformance-2026-11-10/README.md). Текущие команды: `python3 -B scripts/build.py`, `python3 -B scripts/validate.py`, `python3 -B tests/astra_underperformance_test.py`, `node --test tests/lenses_test.js tests/audit_navigation_test.js tests/audit_visuals_test.js`.
+[Источники, оговорки и проверки v0.57](review/astra-underperformance-2026-11-10/README.md).
 
 ## Что изменено в v0.56
 

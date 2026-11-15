@@ -47,7 +47,7 @@ for (const lang of ['ru', 'en']) {
   const observations = d.events.filter(e => e.current_state).map(e => context.stateObservation(e));
   ok(observations.every(s => s && s.date && s.title && s.summary), 'all historical state formats yield complete updates');
   ok(observations.some(s => s.date.startsWith('2026-10')), 'October updates are not lost');
-  for (const claim of d.claimChecks.filter(c => c.qualifying_evidence?.length)) {
+  for (const claim of d.claimChecks.concat(d.claims).filter(c => c.qualifying_evidence?.length)) {
     const html = context.claimEvidenceSections(claim, id => `[${id}]`);
     ok(claim.qualifying_evidence.every(id => html.includes(id)), 'all qualifying evidence is rendered');
   }

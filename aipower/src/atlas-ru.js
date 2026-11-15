@@ -1324,13 +1324,14 @@ function renderEdgeDetail(edge){
     '<div class="block"><h4>Тип связи</h4><p class="small">' + esc(D.relationTypes[edge.relation] || '') + '</p></div>';
 }
 function renderClaimDetail(claim){
+  var englishPhrasing = claim.recommended_phrasing_en || (claim.recommended_phrasing !== claim.recommended_phrasing_ru ? claim.recommended_phrasing : '');
   return '<h2 id="detail-title">' + esc(claim.claim || claim.title) + '</h2><div class="id">' + esc(claim.id) + '</div>' +
     '<div class="tags">' + tag(statusLabelRu(claim.status), 'status-' + claim.status) + tag(confidenceLabelRu(claim.evidence_level || claim.confidence), confidenceClass(claim.evidence_level || claim.confidence)) + stackTags(claim.stack_layer) + tags(claim.geography) + '</div>' +
     (claim.legal_update_ru ? '<div class="block quote"><h4>Обновление статуса' + (claim.status_update_date ? ' · ' + esc(claim.status_update_date) : '') + '</h4><p>' + esc(claim.legal_update_ru) + '</p>' + (claim.legal_update_caveat_ru ? '<p class="small">' + esc(claim.legal_update_caveat_ru) + '</p>' : '') + '</div>' : '') +
     (claim.recommended_phrasing_ru ? '<div class="block quote"><h4>Рекомендуемая формулировка</h4><p>' + esc(claim.recommended_phrasing_ru) + '</p></div>' : '') +
-    (claim.recommended_phrasing ? '<div class="block"><h4>Формулировка на английском</h4><p>' + esc(claim.recommended_phrasing) + '</p></div>' : '') +
+    (englishPhrasing ? '<div class="block"><h4>Формулировка на английском</h4><p>' + esc(englishPhrasing) + '</p></div>' : '') +
     (claim.caveats && claim.caveats.length ? '<div class="block caveat"><h4>Ограничения</h4><p>' + esc(claim.caveats.join(' · ')) + '</p></div>' : '') +
-    sourceBlock(claim);
+    claimEvidenceSections(claim, detailLink) + sourceBlock(claim);
 }
 function renderClaimCheckDetail(claim){
   return '<h2 id="detail-title">' + esc(claim.claim) + '</h2><div class="id">' + esc(claim.id) + '</div>' +

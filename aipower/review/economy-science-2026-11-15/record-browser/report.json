@@ -1,0 +1,15 @@
+{
+  "assertions": 528,
+  "errors": [],
+  "screenshots": [
+    "ru-economy-1440.png",
+    "ru-economy-390.png",
+    "ru-knowledge-1440.png",
+    "ru-knowledge-390.png",
+    "en-economy-1440.png",
+    "en-economy-390.png",
+    "en-knowledge-1440.png",
+    "en-knowledge-390.png"
+  ],
+  "passed": true
+}
