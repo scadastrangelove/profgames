@@ -1,0 +1,11 @@
+{
+  "assertions": 313,
+  "errors": [],
+  "screenshots": [
+    "ru-courts-1440.png",
+    "ru-courts-390.png",
+    "en-courts-1440.png",
+    "en-courts-390.png"
+  ],
+  "passed": true
+}

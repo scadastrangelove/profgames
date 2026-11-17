@@ -5,7 +5,7 @@ function lensViews(){return alist((D.crosscuttingViews||{}).views);}
 function lensDefinition(){return lensViews().find(function(v){return v.id===lensState.view;})||lensViews()[0];}
 function lensTrackMatches(e,t){
  var ids=alist(e.arcIds);
- return alist(t.arc_ids).some(function(id){return ids.includes(id);})&&alist(t.required_arc_ids).every(function(id){return ids.includes(id);})&&(!alist(t.outcome_stages).length||t.outcome_stages.includes(e.research_outcome_stage));
+ return alist(t.arc_ids).some(function(id){return ids.includes(id);})&&alist(t.required_arc_ids).every(function(id){return ids.includes(id);})&&(!alist(t.outcome_stages).length||t.outcome_stages.includes(e.research_outcome_stage))&&(!alist(t.legal_topics).length||alist(t.legal_topics).some(function(topic){return alist(e.legal_topics).includes(topic);}));
 }
 function lensTracks(e,v){return v.tracks.filter(function(t){return lensTrackMatches(e,t);});}
 function lensAllEvents(v){return EV.filter(function(e){return lensTracks(e,v).length;});}
@@ -106,7 +106,7 @@ function lensCard(e,v){
  var geo=lensGeos(e).join(' · '),caveat=lf(e,'caveat')||alist(lf(e,'caveats')).join(' ');
  return '<article class="lens-record" style="--track-color:'+tracks[0].color+'"><div class="lens-record-meta"><time>'+esc(e.date)+'</time><span>'+esc(geo||tx('География не указана','Geography unspecified'))+'</span></div>'+
  '<h4><button type="button" data-kind="event" data-id="'+esc(e.id)+'">'+esc(e.title)+'</button></h4><p>'+esc(lf(e,'safe_wording')||lf(e,'summary'))+'</p>'+
- '<div class="lens-evidence">'+esc(stage||contexts||tx('Тип не указан','Type unspecified'))+' · '+esc(atlasStatusLabel(e.status))+'</div>'+
+ '<div class="lens-evidence">'+esc(e.legal_proceeding?legalPhaseLabel(e.legal_proceeding.phase):stage||contexts||tx('Тип не указан','Type unspecified'))+' · '+esc(atlasStatusLabel(e.status))+'</div>'+
  (caveat?'<details><summary>'+tx('Границы результата','Scope and limitations')+'</summary><p>'+esc(caveat)+'</p></details>':'')+
  '<div class="lens-record-footer"><span>'+esc(tracks.map(function(t){return lf(t,'label');}).join(' · '))+'</span><span>'+alist(e.sources).length+' '+tx('ист.','sources')+'</span></div></article>';
 }

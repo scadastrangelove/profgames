@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "assertions": 294,
+  "references": {
+    "ru": 17772,
+    "en": 17772
+  },
+  "new_events": 9,
+  "new_edges": 25
+}

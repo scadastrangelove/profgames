@@ -1,0 +1,118 @@
+{
+  "ru": {
+    "date": "2026-11-17",
+    "added_event_ids": [
+      "SIG_2026_CALIFORNIA_OPENAI_AGENT_TESTING_LAWSUIT",
+      "SIG_2026_ARKANSAS_OPENAI_TESTING_RSI_LAWSUIT",
+      "SIG_2026_NGOS_FRONTIER_DEVELOPMENT_FREEZE_COMPLAINT",
+      "SIG_2025_GOOGLE_SEARCH_AI_DISTRIBUTION_REMEDIES",
+      "SIG_2026_GOOGLE_SEARCH_QUALIFIED_COMPETITOR_GATES",
+      "SIG_2026_ANTHROPIC_SUPPLY_CHAIN_3252_RULING",
+      "SIG_2026_ANTHROPIC_SUPPLY_CHAIN_4713_APPEAL",
+      "SIG_2025_GEMA_OPENAI_MEMORIZATION_JUDGMENT",
+      "SIG_2025_GETTY_STABILITY_MODEL_COPY_LIMIT"
+    ],
+    "annotated_event_ids": [
+      "SIG_2025_BARTZ_ANTHROPIC_SPLIT_FAIR_USE",
+      "SIG_2026_AMAZON_PERPLEXITY_AGENT_AUTHORIZATION_INJUNCTION",
+      "SIG_2026_AMAZON_PERPLEXITY_APPEAL_VACATES_INJUNCTION"
+    ],
+    "added_edge_ids": [
+      "EDGE_V060_001",
+      "EDGE_V060_002",
+      "EDGE_V060_003",
+      "EDGE_V060_004",
+      "EDGE_V060_005",
+      "EDGE_V060_006",
+      "EDGE_V060_007",
+      "EDGE_V060_008",
+      "EDGE_V060_009",
+      "EDGE_V060_010",
+      "EDGE_V060_011",
+      "EDGE_V060_012",
+      "EDGE_V060_013",
+      "EDGE_V060_014",
+      "EDGE_V060_015",
+      "EDGE_V060_016",
+      "EDGE_V060_017",
+      "EDGE_V060_018",
+      "EDGE_V060_019",
+      "EDGE_V060_020",
+      "EDGE_V060_021",
+      "EDGE_V060_022",
+      "EDGE_V060_023",
+      "EDGE_V060_024",
+      "EDGE_V060_025"
+    ],
+    "added_source_urls": [
+      "https://arkansasag.gov/news-release/attorney-general-griffin-sues-openai-for-misleading-arkansans-over-safety-of-chatgpt/",
+      "https://media.cadc.uscourts.gov/opinions/docs/2026/09/26-1049-2194984.pdf",
+      "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over",
+      "https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf",
+      "https://www.judiciary.uk/wp-content/uploads/2025/11/Getty-Images-v-Stability-AI.pdf",
+      "https://www.judiciary.uk/wp-content/uploads/2026/11/Appellants-Replacement-Appeal-Skeleton--CA-2026-000007-144861071_1.pdf",
+      "https://www.justice.gov/atr/media/1421546/dl",
+      "https://www.justice.gov/atr/media/1461926/dl",
+      "https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2025/11.php",
+      "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf"
+    ]
+  },
+  "en": {
+    "date": "2026-11-17",
+    "added_event_ids": [
+      "SIG_2026_CALIFORNIA_OPENAI_AGENT_TESTING_LAWSUIT",
+      "SIG_2026_ARKANSAS_OPENAI_TESTING_RSI_LAWSUIT",
+      "SIG_2026_NGOS_FRONTIER_DEVELOPMENT_FREEZE_COMPLAINT",
+      "SIG_2025_GOOGLE_SEARCH_AI_DISTRIBUTION_REMEDIES",
+      "SIG_2026_GOOGLE_SEARCH_QUALIFIED_COMPETITOR_GATES",
+      "SIG_2026_ANTHROPIC_SUPPLY_CHAIN_3252_RULING",
+      "SIG_2026_ANTHROPIC_SUPPLY_CHAIN_4713_APPEAL",
+      "SIG_2025_GEMA_OPENAI_MEMORIZATION_JUDGMENT",
+      "SIG_2025_GETTY_STABILITY_MODEL_COPY_LIMIT"
+    ],
+    "annotated_event_ids": [
+      "SIG_2025_BARTZ_ANTHROPIC_SPLIT_FAIR_USE",
+      "SIG_2026_AMAZON_PERPLEXITY_AGENT_AUTHORIZATION_INJUNCTION",
+      "SIG_2026_AMAZON_PERPLEXITY_APPEAL_VACATES_INJUNCTION"
+    ],
+    "added_edge_ids": [
+      "EDGE_V060_001",
+      "EDGE_V060_002",
+      "EDGE_V060_003",
+      "EDGE_V060_004",
+      "EDGE_V060_005",
+      "EDGE_V060_006",
+      "EDGE_V060_007",
+      "EDGE_V060_008",
+      "EDGE_V060_009",
+      "EDGE_V060_010",
+      "EDGE_V060_011",
+      "EDGE_V060_012",
+      "EDGE_V060_013",
+      "EDGE_V060_014",
+      "EDGE_V060_015",
+      "EDGE_V060_016",
+      "EDGE_V060_017",
+      "EDGE_V060_018",
+      "EDGE_V060_019",
+      "EDGE_V060_020",
+      "EDGE_V060_021",
+      "EDGE_V060_022",
+      "EDGE_V060_023",
+      "EDGE_V060_024",
+      "EDGE_V060_025"
+    ],
+    "added_source_urls": [
+      "https://arkansasag.gov/news-release/attorney-general-griffin-sues-openai-for-misleading-arkansans-over-safety-of-chatgpt/",
+      "https://media.cadc.uscourts.gov/opinions/docs/2026/09/26-1049-2194984.pdf",
+      "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over",
+      "https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf",
+      "https://www.judiciary.uk/wp-content/uploads/2025/11/Getty-Images-v-Stability-AI.pdf",
+      "https://www.judiciary.uk/wp-content/uploads/2026/11/Appellants-Replacement-Appeal-Skeleton--CA-2026-000007-144861071_1.pdf",
+      "https://www.justice.gov/atr/media/1421546/dl",
+      "https://www.justice.gov/atr/media/1461926/dl",
+      "https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2025/11.php",
+      "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf"
+    ]
+  }
+}

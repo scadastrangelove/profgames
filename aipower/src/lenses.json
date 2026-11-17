@@ -45,6 +45,20 @@
       ]
     },
     {
+      "id": "courts",
+      "label_ru": "Суды и границы власти в ИИ",
+      "label_en": "Courts and the Limits of AI Power",
+      "question_ru": "Кто может ограничить испытания, открыть доступ и распределить ответственность?",
+      "question_en": "Who can restrict testing, open access and allocate responsibility?",
+      "tracks": [
+        {"id":"testing","label_ru":"Испытания и темп разработки","label_en":"Testing and development pace","color":"#365f9d","arc_ids":["ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL"],"legal_topics":["testing"]},
+        {"id":"competition","label_ru":"Конкуренция и доступ к инфраструктуре","label_en":"Competition and infrastructure access","color":"#107052","arc_ids":["ARC_DATA_LICENSING_AS_INPUT_LAYER","ARC_QUIET_ACCESS_CONTROL"],"legal_topics":["competition"]},
+        {"id":"procurement","label_ru":"Госзаказ и условия применения","label_en":"Procurement and permitted uses","color":"#86611f","arc_ids":["ARC_SOVEREIGN_FLOW_GATING"],"legal_topics":["procurement"]},
+        {"id":"knowledge","label_ru":"Права на знания и обучение","label_en":"Knowledge rights and training","color":"#8d4b64","arc_ids":["ARC_DATA_LICENSING_AS_INPUT_LAYER"],"legal_topics":["knowledge"]},
+        {"id":"platform_access","label_ru":"Доступ пользовательских агентов","label_en":"User-agent access","color":"#24727a","arc_ids":["ARC_QUIET_ACCESS_CONTROL"],"legal_topics":["platform_access"]}
+      ]
+    },
+    {
       "id": "delegation",
       "label_ru": "Делегирование решений",
       "label_en": "Delegation of Decisions",

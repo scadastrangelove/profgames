@@ -1,0 +1,10 @@
+{
+  "ru": {
+    "path": "baseline-ru.json.gz",
+    "sha256": "7da8ec3985f0a8958bae86a51fec652727ad5c5fb34a5039f78c784c5f371430"
+  },
+  "en": {
+    "path": "baseline-en.json.gz",
+    "sha256": "ce44030a034065c3f49af1372fd28499ad0fdf297d8826c1de3b1de34b8ab064"
+  }
+}

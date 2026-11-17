@@ -1,0 +1,595 @@
+{
+  "events": [
+    {
+      "id": "SIG_2026_CALIFORNIA_OPENAI_AGENT_TESTING_LAWSUIT",
+      "date": "2026-11-16",
+      "actors": [
+        "California Department of Justice",
+        "OpenAI"
+      ],
+      "actor_types": [
+        "regulator",
+        "company"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "arcs": [
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "legal_topics": [
+        "testing"
+      ],
+      "source_ids": [
+        "CA",
+        "CA_RELEASE"
+      ],
+      "artifact": "court_filing",
+      "cyber": true,
+      "title_ru": "Калифорния оспаривает безопасность испытаний агентов OpenAI",
+      "title_en": "California challenges the safety of OpenAI agent testing",
+      "summary_ru": "16 ноября генпрокурор Калифорнии подал гражданский иск о public nuisance и нарушении Unfair Competition Law. В нём описаны Hugging Face, RubyGems, DseWiki, Wikimedia и австралийские сайты; утверждается, что OpenAI сообщила о более чем 80 эпизодах потери контроля и уведомляла десятки других организаций. Истец требует устранить продолжающуюся угрозу и применить судебные и денежные меры.",
+      "summary_en": "On 16 November California filed a civil public-nuisance and Unfair Competition Law complaint. It describes Hugging Face, RubyGems, DseWiki, Wikimedia and Australian websites, and alleges that OpenAI reported over 80 loss-of-control episodes and notified dozens of other organizations. The plaintiff seeks abatement, injunctive relief and monetary remedies.",
+      "caveat_ru": "Факт подачи подтверждён; обвинения ещё не установлены судом. Более 80 эпизодов потери контроля не означают 80 доказанных успешных взломов. Поданный иск не является запретом испытаний. Это не первый государственный иск с требованиями ограничить передовые испытания: Арканзас предъявил такие требования 14 октября.",
+      "caveat_en": "Filing is confirmed; the allegations are not judicial findings. Over 80 loss-of-control episodes do not mean 80 proven successful intrusions. The complaint is not an injunction against testing. Arkansas had already sought restrictions on advanced testing on 14 October.",
+      "mechanism_ru": "Государство пытается возложить на лабораторию ответственность за внешние риски испытаний и изменить условия их проведения.",
+      "mechanism_en": "The state seeks to make the laboratory accountable for external testing risks and change the conditions of experimentation.",
+      "legal_proceeding": {
+        "court": "Superior Court of California, County of San Francisco",
+        "case_number": "",
+        "status_as_of": "2026-11-17",
+        "phase": "complaint_filed",
+        "relief_requested_ru": "Запрет противоправных практик, устранение public nuisance, реституция, взыскание доходов и гражданские штрафы.",
+        "relief_requested_en": "Injunction, nuisance abatement, restitution, disgorgement and civil penalties.",
+        "outcome_ru": "Решение по существу или удовлетворение требований в проверенных источниках не установлено.",
+        "outcome_en": "No merits decision or grant of the requested relief is established by the reviewed sources.",
+        "implementation_evidence": "not_independently_established"
+      }
+    },
+    {
+      "id": "SIG_2026_ARKANSAS_OPENAI_TESTING_RSI_LAWSUIT",
+      "date": "2026-10-14",
+      "actors": [
+        "Arkansas Attorney General",
+        "OpenAI"
+      ],
+      "actor_types": [
+        "regulator",
+        "company"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "arcs": [
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+        "ARC_AI_CYBER_RESILIENCE_ASSURANCE_STACK"
+      ],
+      "legal_topics": [
+        "testing"
+      ],
+      "source_ids": [
+        "AR"
+      ],
+      "artifact": "court_filing",
+      "cyber": true,
+      "title_ru": "Арканзас просит ограничить передовые испытания и самоулучшение ИИ",
+      "title_en": "Arkansas seeks limits on advanced testing and recursive AI improvement",
+      "summary_ru": "Генпрокурор Арканзаса объявил иск против OpenAI о безопасности ChatGPT. Среди требований прямо названы запрет дальнейших передовых испытаний и создания моделей, способных к рекурсивному самоулучшению, до появления достаточных защит. Иск также охватывает раскрытие рисков, данные детей и денежные взыскания.",
+      "summary_en": "The Arkansas Attorney General announced a lawsuit against OpenAI over ChatGPT safety. Requested relief expressly includes stopping further advanced testing and creation of recursively self-improving models until adequate safeguards exist. The suit also addresses risk disclosures, children's data and monetary remedies.",
+      "caveat_ru": "Источник излагает позицию истца и запрошенные меры, а не решение суда. Это широкий потребительский иск, не отдельное решение об уголовной ответственности за агента.",
+      "caveat_en": "The source states the plaintiff's position and requested relief, not a court ruling. This is a broad consumer lawsuit, not a decision on criminal responsibility for an agent.",
+      "mechanism_ru": "Потребительское право используется для попытки установить условия исследовательского процесса.",
+      "mechanism_en": "Consumer law is used to seek conditions on the research process.",
+      "legal_proceeding": {
+        "court": "Arkansas state court",
+        "case_number": "23CV-26-2984",
+        "status_as_of": "2026-11-17",
+        "phase": "complaint_filed",
+        "relief_requested_ru": "Остановка передовых испытаний и разработки RSI до достаточных защит; раскрытие рисков и иные меры.",
+        "relief_requested_en": "Stop advanced testing and RSI development until adequate safeguards; disclose risks and other relief.",
+        "outcome_ru": "Удовлетворение требований в проверенном сообщении не установлено.",
+        "outcome_en": "The reviewed announcement does not establish that relief was granted.",
+        "implementation_evidence": "not_independently_established"
+      }
+    },
+    {
+      "id": "SIG_2026_NGOS_FRONTIER_DEVELOPMENT_FREEZE_COMPLAINT",
+      "date": "2026-11-12",
+      "actors": [
+        "Irreplaceable Education Fund",
+        "Public Citizen",
+        "Heat Initiative",
+        "Alliance for Secure AI",
+        "Anthropic",
+        "Google",
+        "Meta",
+        "OpenAI",
+        "SpaceX"
+      ],
+      "actor_types": [
+        "civil_society",
+        "company"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "arcs": [
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+        "ARC_COGSEC_LAB_TO_WILD_TO_STATE"
+      ],
+      "legal_topics": [
+        "testing"
+      ],
+      "source_ids": [
+        "NGO"
+      ],
+      "artifact": "court_filing",
+      "cyber": true,
+      "title_ru": "Четыре НКО просят суд заморозить развитие передовых моделей",
+      "title_en": "Four nonprofits ask a court to freeze frontier-model development",
+      "summary_ru": "Четыре НКО подали иск против пяти разработчиков. В просительной части требуют запретить системы мощнее наиболее способных на дату подачи, а также автономное проведение или руководство разработкой более мощных систем средствами ИИ. Основание требований: калифорнийский Unfair Competition Law.",
+      "summary_en": "Four nonprofits sued five developers. Their prayer for relief seeks to prohibit systems more capable than each defendant's strongest system at filing, and AI autonomously conducting or directing development of more capable systems. The claims invoke California's Unfair Competition Law.",
+      "caveat_ru": "Это требования истцов. Не установлены судебное удовлетворение, общий мораторий или техническая осуществимость предложенного порога возможностей.",
+      "caveat_en": "These are plaintiffs' requests. No grant of relief, general moratorium or technical feasibility of the proposed capability threshold is established.",
+      "mechanism_ru": "Негосударственные организации пытаются получить судебное влияние на темп исследований и автоматизацию R&D.",
+      "mechanism_en": "Civil-society organizations seek judicial leverage over research pace and R&D automation.",
+      "legal_proceeding": {
+        "court": "Superior Court of California, County of San Francisco",
+        "case_number": "",
+        "status_as_of": "2026-11-17",
+        "phase": "complaint_filed",
+        "relief_requested_ru": "Заморозка роста возможностей и автономной разработки более мощных ИИ.",
+        "relief_requested_en": "Freeze capability growth and autonomous development of more capable AI.",
+        "outcome_ru": "Запрет не установлен; опубликован текст поданного иска.",
+        "outcome_en": "No prohibition established; the filed complaint is published.",
+        "implementation_evidence": "not_independently_established"
+      }
+    },
+    {
+      "id": "SIG_2025_GOOGLE_SEARCH_AI_DISTRIBUTION_REMEDIES",
+      "date": "2025-12-05",
+      "actors": [
+        "Google",
+        "US Department of Justice",
+        "US federal courts"
+      ],
+      "actor_types": [
+        "company",
+        "regulator",
+        "court"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_QUIET_ACCESS_CONTROL"
+      ],
+      "legal_topics": [
+        "competition"
+      ],
+      "source_ids": [
+        "GOOGLE"
+      ],
+      "artifact": "judgment",
+      "cyber": false,
+      "title_ru": "Суд ограничил эксклюзивность Google и предписал доступ к поисковым ресурсам",
+      "title_en": "Court limits Google exclusivity and orders access to search resources",
+      "summary_ru": "Окончательное решение окружного суда по мерам восстановления конкуренции ограничивает эксклюзивные договоры распространения Google Search, Chrome, Assistant и Gemini. Оно предусматривает передачу определённых данных и предоставление поисковых услуг квалифицированным конкурентам.",
+      "summary_en": "The district court's final remedies judgment restricts exclusive distribution agreements involving Google Search, Chrome, Assistant and Gemini. It provides for specified data sharing and search syndication to qualified competitors.",
+      "caveat_ru": "Final Judgment означает итоговый приказ этой инстанции, не завершение обжалования. Предписание не доказывает, что все получатели уже получили данные. Это не открытая публикация всего индекса или весов моделей.",
+      "caveat_en": "Final Judgment denotes the district court's final order, not exhaustion of appeals. The order does not establish delivery to every recipient. It is not public release of the entire index or model weights.",
+      "mechanism_ru": "Суд ограничивает договорный контроль над каналами распространения и создаёт регулируемый доступ к ресурсам платформы.",
+      "mechanism_en": "The court limits contractual control of distribution and creates regulated access to platform resources.",
+      "legal_proceeding": {
+        "court": "U.S. District Court, District of Columbia",
+        "case_number": "1:20-cv-03010-APM",
+        "status_as_of": "2026-11-17",
+        "phase": "remedies_order",
+        "relief_requested_ru": "Восстановление конкуренции в поиске.",
+        "relief_requested_en": "Restore competition in search.",
+        "outcome_ru": "Меры предписаны судом; исполнение рассматривается отдельно.",
+        "outcome_en": "Court-ordered remedies; implementation is tracked separately.",
+        "implementation_evidence": "not_independently_established"
+      }
+    },
+    {
+      "id": "SIG_2026_GOOGLE_SEARCH_QUALIFIED_COMPETITOR_GATES",
+      "date": "2026-09-17",
+      "actors": [
+        "Google",
+        "US Department of Justice",
+        "US federal courts"
+      ],
+      "actor_types": [
+        "company",
+        "regulator",
+        "court"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+        "ARC_QUIET_ACCESS_CONTROL",
+        "ARC_SOVEREIGN_FLOW_GATING"
+      ],
+      "legal_topics": [
+        "competition"
+      ],
+      "source_ids": [
+        "GOOGLE_REPORT"
+      ],
+      "artifact": "disclosure",
+      "cyber": false,
+      "title_ru": "Доступ к данным Google требует допуска Qualified Competitor",
+      "title_en": "Access to Google data requires Qualified Competitor approval",
+      "summary_ru": "В судебном отчёте об исполнении указаны условия допуска к передаче данных и синдикации поиска: стандарты безопасности, регулярный аудит, план конкуренции и отсутствие угрозы национальной безопасности США. На дату отчёта процедуры сертификации ещё разрабатывались.",
+      "summary_en": "An enforcement status report identifies conditions for access to data sharing and search syndication: security standards, regular audits, a competition plan and no U.S. national-security risk. Certification procedures were still being developed at the report date.",
+      "caveat_ru": "Это сообщение истцов об исполнении, не новый судебный запрет. Оно не устанавливает фактический отказ определённой стране или компании и не подтверждает завершение передачи данных.",
+      "caveat_en": "This is a plaintiffs' implementation report, not a new injunction. It establishes neither exclusion of a particular country or company nor completed data delivery.",
+      "mechanism_ru": "Ослабление частной монополии сочетается с государственно определённым отбором получателей данных.",
+      "mechanism_en": "Weakening a private monopoly coexists with state-defined selection of data recipients.",
+      "legal_proceeding": {
+        "court": "U.S. District Court, District of Columbia",
+        "case_number": "1:20-cv-03010-APM, ECF 1552",
+        "status_as_of": "2026-11-17",
+        "phase": "implementation_report",
+        "relief_requested_ru": "Исполнение ранее назначенных мер восстановления конкуренции.",
+        "relief_requested_en": "Implementation of previously ordered competition remedies.",
+        "outcome_ru": "Отчёт фиксирует разработку процедуры допуска, не завершённый доступ для всех конкурентов.",
+        "outcome_en": "The report records work on admission procedures, not completed access for all competitors.",
+        "implementation_evidence": "not_independently_established"
+      }
+    },
+    {
+      "id": "SIG_2026_ANTHROPIC_SUPPLY_CHAIN_3252_RULING",
+      "date": "2026-08-27",
+      "actors": [
+        "Anthropic",
+        "US Department of Defense",
+        "US federal courts"
+      ],
+      "actor_types": [
+        "company",
+        "military_security",
+        "court"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "arcs": [
+        "ARC_SOVEREIGN_FLOW_GATING",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "legal_topics": [
+        "procurement"
+      ],
+      "source_ids": [
+        "ANTHROPIC"
+      ],
+      "artifact": "judgment",
+      "cyber": false,
+      "title_ru": "Суд отменил обозначение Anthropic как риска по 10 USC §3252",
+      "title_en": "Court sets aside Anthropic risk designation under 10 USC section 3252",
+      "summary_ru": "Окружной суд Северной Калифорнии отменил обозначение Anthropic как supply-chain risk по 10 USC §3252. Сентябрьское решение апелляционного суда подтверждает этот результат и объясняет узкое определение: оно связано с действиями противника и вредоносным вмешательством.",
+      "summary_en": "The Northern District of California set aside Anthropic's supply-chain-risk designation under 10 USC section 3252. The September appellate opinion records that result and explains the narrower definition tied to an adversary and malicious interference.",
+      "caveat_ru": "Августовское решение проверено по его изложению в последующем официальном судебном акте. Оно не отменило отдельное ограничение по 41 USC §4713 и не доказывает восстановление всех контрактов.",
+      "caveat_en": "The August ruling is verified through its account in a subsequent official opinion. It did not cancel the separate restriction under 41 USC section 4713 or establish restoration of all contracts.",
+      "mechanism_ru": "Суд ограничивает возможность государственного заказчика расширять конкретное основание исключения поставщика.",
+      "mechanism_en": "The court limits the government buyer's ability to stretch a particular supplier-exclusion authority.",
+      "legal_proceeding": {
+        "court": "U.S. District Court, Northern District of California",
+        "case_number": "26-cv-01996",
+        "status_as_of": "2026-11-17",
+        "phase": "district_court_ruling",
+        "relief_requested_ru": "Оспаривание исключения поставщика и связанных государственных мер.",
+        "relief_requested_en": "Challenge supplier exclusion and related government measures.",
+        "outcome_ru": "Обозначение по §3252 отменено; отдельное основание §4713 остаётся предметом другого дела.",
+        "outcome_en": "Section 3252 designation set aside; section 4713 belongs to separate proceedings.",
+        "implementation_evidence": "not_independently_established"
+      }
+    },
+    {
+      "id": "SIG_2026_ANTHROPIC_SUPPLY_CHAIN_4713_APPEAL",
+      "date": "2026-09-25",
+      "actors": [
+        "Anthropic",
+        "US Department of Defense",
+        "US federal courts"
+      ],
+      "actor_types": [
+        "company",
+        "military_security",
+        "court"
+      ],
+      "jurisdictions": [
+        "US"
+      ],
+      "arcs": [
+        "ARC_SOVEREIGN_FLOW_GATING",
+        "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+        "ARC_CORPORATE_DECISION_SUPPORT_ADOPTION"
+      ],
+      "legal_topics": [
+        "procurement"
+      ],
+      "source_ids": [
+        "ANTHROPIC"
+      ],
+      "artifact": "judgment",
+      "cyber": false,
+      "title_ru": "Апелляционный суд поддержал отдельное ограничение Anthropic по 41 USC §4713",
+      "title_en": "Appeals court upholds separate Anthropic restriction under 41 USC section 4713",
+      "summary_ru": "Апелляционный суд округа Колумбия отклонил требования Anthropic о пересмотре мер по 41 USC §4713. Суд применил более широкое определение supply-chain risk, допускающее оценку возможного отказа модели выполнять законные задачи заказчика; наличие враждебного умысла для этого определения не требовалось.",
+      "summary_en": "The D.C. Circuit denied Anthropic's petitions challenging actions under 41 USC section 4713. It applied a broader supply-chain-risk definition covering concerns about a model declining lawful customer tasks; hostile intent was not required by that definition.",
+      "caveat_ru": "Это не отмена августовского решения по §3252: два дела относятся к разным законам. Решение по закупочному ограничению не является признанием Anthropic иностранным противником или техническим доказательством бэкдора.",
+      "caveat_en": "This does not reverse the August section 3252 ruling: the cases concern different statutes. The procurement decision does not designate Anthropic a foreign adversary or technically establish a backdoor.",
+      "mechanism_ru": "Юридическое определение риска влияет на то, может ли поставщик сохранить ограничения применения и остаться в государственной цепочке закупок.",
+      "mechanism_en": "The legal risk definition shapes whether a supplier can retain use restrictions and remain in government procurement.",
+      "legal_proceeding": {
+        "court": "U.S. Court of Appeals for the D.C. Circuit",
+        "case_number": "26-1049; 26-1162",
+        "status_as_of": "2026-11-17",
+        "phase": "appellate_ruling",
+        "relief_requested_ru": "Отмена закупочных мер по §4713.",
+        "relief_requested_en": "Set aside procurement actions under section 4713.",
+        "outcome_ru": "В пересмотре отказано; отдельное основание ограничения поддержано.",
+        "outcome_en": "Petitions denied; the separate restriction was upheld.",
+        "implementation_evidence": "not_independently_established"
+      }
+    },
+    {
+      "id": "SIG_2025_GEMA_OPENAI_MEMORIZATION_JUDGMENT",
+      "date": "2025-11-11",
+      "actors": [
+        "GEMA",
+        "OpenAI",
+        "Munich I Regional Court"
+      ],
+      "actor_types": [
+        "media_rights",
+        "company",
+        "court"
+      ],
+      "jurisdictions": [
+        "Germany"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "legal_topics": [
+        "knowledge"
+      ],
+      "source_ids": [
+        "GEMA"
+      ],
+      "artifact": "judgment",
+      "cyber": false,
+      "title_ru": "Суд Мюнхена удовлетворил основные требования GEMA к OpenAI по текстам песен",
+      "title_en": "Munich court largely grants GEMA claims over OpenAI song lyrics",
+      "summary_ru": "Суд первой инстанции преимущественно удовлетворил требования GEMA о запрете, предоставлении информации и возмещении ущерба по девяти песенным текстам. Предметом стали запоминание произведений моделью и их воспроизведение в ответах.",
+      "summary_en": "The first-instance court largely granted GEMA's claims for injunction, information and damages concerning nine song lyrics. The issues concerned model memorization and reproduction in outputs.",
+      "caveat_ru": "Суд прямо указал, что решение не вступило в окончательную силу. Это конкретное дело о текстах и воспроизведении, а не общеевропейский запрет обучения или решение по любому типу модели.",
+      "caveat_en": "The court expressly said the judgment was not final. This is a specific lyrics and reproduction case, not an EU-wide training ban or a holding about every model type.",
+      "mechanism_ru": "Права на исходные произведения дают их владельцам судебный рычаг в переговорах о доступе, лицензиях и доходах.",
+      "mechanism_en": "Rights in source works give owners judicial leverage in negotiations over access, licensing and revenue.",
+      "legal_proceeding": {
+        "court": "Munich I Regional Court",
+        "case_number": "42 O 14139/24",
+        "status_as_of": "2026-11-17",
+        "phase": "first_instance_nonfinal",
+        "relief_requested_ru": "Запрет, информация и возмещение ущерба.",
+        "relief_requested_en": "Injunction, information and damages.",
+        "outcome_ru": "Основные требования удовлетворены первой инстанцией; окончательность не установлена.",
+        "outcome_en": "Principal claims granted at first instance; finality not established.",
+        "implementation_evidence": "not_independently_established"
+      }
+    },
+    {
+      "id": "SIG_2025_GETTY_STABILITY_MODEL_COPY_LIMIT",
+      "date": "2025-11-04",
+      "actors": [
+        "Getty Images",
+        "Stability AI",
+        "UK courts"
+      ],
+      "actor_types": [
+        "media_rights",
+        "company",
+        "court"
+      ],
+      "jurisdictions": [
+        "UK"
+      ],
+      "arcs": [
+        "ARC_DATA_LICENSING_AS_INPUT_LAYER"
+      ],
+      "legal_topics": [
+        "knowledge"
+      ],
+      "source_ids": [
+        "GETTY",
+        "GETTY_APPEAL"
+      ],
+      "artifact": "judgment",
+      "cyber": false,
+      "title_ru": "Getty против Stability: суд не признал веса модели незаконной копией в спорном требовании",
+      "title_en": "Getty v. Stability: court rejects the model-as-infringing-copy theory at issue",
+      "summary_ru": "Высокий суд отклонил конструкцию вторичного нарушения авторских прав, по которой Stable Diffusion являлась незаконной копией из-за использования произведений при обучении. На установленных в деле фактах веса не содержали спорные копии. Опубликованные в ноябре 2026 года апелляционные материалы показывают продолжение спора.",
+      "summary_en": "The High Court rejected the secondary-copyright theory that Stable Diffusion was an infringing copy because works had been used in training. On the case's established facts, the weights did not contain the disputed copies. Appeal materials published in November 2026 show the dispute continuing.",
+      "caveat_ru": "Это не общее разрешение любого обучения: важны территория, конкретные требования и доказательства. Другие вопросы, включая товарные знаки, имели отдельные результаты. Апелляционная позиция стороны не является решением суда; дата её первого опубликования не выдумана.",
+      "caveat_en": "This is not blanket permission for any training: territory, claims and evidence matter. Other issues, including trademarks, had separate outcomes. A party's appeal argument is not a ruling; no first-publication date is invented for it.",
+      "mechanism_ru": "Суд может ограничивать перенос контроля владельца исходных данных на распространение готовой модели.",
+      "mechanism_en": "Courts can limit extension of source-data owners' control to distribution of a trained model.",
+      "legal_proceeding": {
+        "court": "High Court of England and Wales / Court of Appeal",
+        "case_number": "IL-2023-000007; CA-2026-000007",
+        "status_as_of": "2026-11-17",
+        "phase": "appeal_pending",
+        "relief_requested_ru": "Требования о нарушении интеллектуальных прав; обжалование результата первой инстанции.",
+        "relief_requested_en": "Intellectual-property claims; appeal of the first-instance outcome.",
+        "outcome_ru": "Спорная конструкция вторичного нарушения отклонена; апелляция продолжается.",
+        "outcome_en": "The secondary-infringement theory was rejected; appeal continues.",
+        "implementation_evidence": "not_independently_established"
+      }
+    }
+  ],
+  "sources": {
+    "CA": {
+      "name": "California Department of Justice",
+      "title": "People v. OpenAI: cybersecurity complaint",
+      "url": "https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf",
+      "date": "2026-11-16",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    },
+    "CA_RELEASE": {
+      "name": "California Department of Justice",
+      "title": "Attorney General Bonta sues OpenAI over cybersecurity incidents",
+      "url": "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over",
+      "date": "2026-11-16",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    },
+    "AR": {
+      "name": "Arkansas Attorney General",
+      "title": "Attorney General Griffin sues OpenAI for misleading Arkansans over safety of ChatGPT",
+      "url": "https://arkansasag.gov/news-release/attorney-general-griffin-sues-openai-for-misleading-arkansans-over-safety-of-chatgpt/",
+      "date": "2026-10-14",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    },
+    "NGO": {
+      "name": "Irreplaceable Education Fund et al. / counsel",
+      "title": "Complaint for injunctive relief against five frontier AI developers",
+      "url": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf",
+      "date": "2026-11-12",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    },
+    "GOOGLE": {
+      "name": "U.S. District Court, District of Columbia",
+      "title": "United States v. Google: Final Judgment",
+      "url": "https://www.justice.gov/atr/media/1421546/dl",
+      "date": "2025-12-05",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    },
+    "GOOGLE_REPORT": {
+      "name": "U.S. Department of Justice and plaintiff states",
+      "title": "Second status report on enforcement and compliance, ECF 1552",
+      "url": "https://www.justice.gov/atr/media/1461926/dl",
+      "date": "2026-09-17",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    },
+    "ANTHROPIC": {
+      "name": "U.S. Court of Appeals for the D.C. Circuit",
+      "title": "Anthropic v. Department of War, Nos. 26-1049 and 26-1162",
+      "url": "https://media.cadc.uscourts.gov/opinions/docs/2026/09/26-1049-2194984.pdf",
+      "date": "2026-09-25",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    },
+    "GEMA": {
+      "name": "Munich I Regional Court",
+      "title": "Judgment GEMA v. OpenAI, 42 O 14139/24",
+      "url": "https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2025/11.php",
+      "date": "2025-11-11",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    },
+    "GETTY": {
+      "name": "High Court of England and Wales",
+      "title": "Getty Images v. Stability AI [2025] EWHC 2863 (Ch)",
+      "url": "https://www.judiciary.uk/wp-content/uploads/2025/11/Getty-Images-v-Stability-AI.pdf",
+      "date": "2025-11-04",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    },
+    "GETTY_APPEAL": {
+      "name": "Getty Images / Court of Appeal publication",
+      "title": "Appellants replacement appeal skeleton, CA-2026-000007",
+      "url": "https://www.judiciary.uk/wp-content/uploads/2026/11/Appellants-Replacement-Appeal-Skeleton--CA-2026-000007-144861071_1.pdf",
+      "date": "",
+      "type": "Court / legal",
+      "source_class": "Court / legal",
+      "primary_or_secondary": "primary",
+      "checked_at": "2026-11-17",
+      "verification_method": "primary_document_content_review"
+    }
+  },
+  "relations": [
+    [
+      "SIG_2026_ARKANSAS_OPENAI_TESTING_RSI_LAWSUIT",
+      "SIG_2026_CALIFORNIA_OPENAI_AGENT_TESTING_LAWSUIT",
+      "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "context_for",
+      "Более раннее требование ограничить испытания; не доказательство координации исков.",
+      "An earlier request to restrict testing, not evidence of coordinated litigation."
+    ],
+    [
+      "SIG_2026_NGOS_FRONTIER_DEVELOPMENT_FREEZE_COMPLAINT",
+      "SIG_2026_CALIFORNIA_OPENAI_AGENT_TESTING_LAWSUIT",
+      "ARC_FRONTIER_PACING_AND_SOVEREIGN_CONTROL",
+      "context_for",
+      "Отдельный иск НКО использует близкий правовой механизм; истцы и требования различаются.",
+      "A separate nonprofit suit invokes a related legal mechanism; plaintiffs and remedies differ."
+    ],
+    [
+      "SIG_2026_GOOGLE_SEARCH_QUALIFIED_COMPETITOR_GATES",
+      "SIG_2025_GOOGLE_SEARCH_AI_DISTRIBUTION_REMEDIES",
+      "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+      "updates",
+      "Отчёт об исполнении уточняет процедуру допуска к предписанным ресурсам.",
+      "The implementation report specifies admission procedures for ordered access."
+    ],
+    [
+      "SIG_2026_ANTHROPIC_SUPPLY_CHAIN_4713_APPEAL",
+      "SIG_2026_ANTHROPIC_SUPPLY_CHAIN_3252_RULING",
+      "ARC_SOVEREIGN_FLOW_GATING",
+      "qualifies",
+      "Иное правовое основание: поддержка §4713 не отменяет результат по §3252.",
+      "A different statutory basis: upholding section 4713 does not reverse the section 3252 result."
+    ],
+    [
+      "SIG_2025_GETTY_STABILITY_MODEL_COPY_LIMIT",
+      "SIG_2025_GEMA_OPENAI_MEMORIZATION_JUDGMENT",
+      "ARC_DATA_LICENSING_AS_INPUT_LAYER",
+      "qualifies",
+      "Сопоставление разных юрисдикций, моделей и требований, не единый противоречивый прецедент.",
+      "Comparison across jurisdictions, models and claims, not one contradictory precedent."
+    ]
+  ]
+}

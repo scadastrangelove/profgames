@@ -1,9 +1,31 @@
-# AI Power Atlas — v0.58
+# AI Power Atlas — v0.60
 
-**Двуязычный исследовательский атлас структурной власти и киберустойчивости ИИ. Сборка: 15 ноября 2026 года.**
-Экономика ИИ, производство научного знания и доступ к исследованиям: новые раскрытия, исследования и проверка новизны результатов.
+**Двуязычный исследовательский атлас структурной власти и киберустойчивости ИИ. Сборка: 17 ноября 2026 года.**
+Суды и границы власти в ИИ: испытания, конкуренция, закупки, права на знания и доступ пользовательских агентов.
 
-В JSON сохранены **632 записи событий, 79 тезисов и 32 проверяемых утверждения, 30 сюжетных арок, 1559 связей и 977 уникальных URL источников**. На экране 631 событие: один дублирующий ID сохранён как совместимая ссылка. Статусы тезисов: 50 подтверждены, 27 подтверждены частично, 2 спорны.
+В JSON сохранены **650 записей событий, 79 тезисов и 32 проверяемых утверждения, 30 сюжетных арок, 1608 связей и 997 уникальных URL источников**. На экране 649 событий: один дублирующий ID сохранён как совместимая ссылка. Статусы тезисов: 50 подтверждены, 27 подтверждены частично, 2 спорны.
+
+## Что изменено в v0.60
+
+Добавлены девять судебных событий, 25 связей и десять URL источников. Новый сквозной срез включает 12 канонических карточек: новые события и прежние Bartz и Amazon/Perplexity. Иски, решения, обжалование и отчёты об исполнении разделены. Поданные требования не обозначаются как введённые запреты. Все прежние 641 событие, 1583 связи и 987 URL сохранены; статусы тезисов не повышались.
+
+English: nine new judicial events and a twelve-record court lens separate requested relief, rulings, appeals and implementation reports. Existing cases are reused, not duplicated. Courts can both constrain labs and weaken access restrictions. All previous evidence and links remain intact.
+
+[Источники, ограничения и проверки v0.60](review/judicial-power-2026-11-17/README.md).
+
+Текущие команды: `python3 -B scripts/build.py`, `python3 -B scripts/validate.py`, `python3 -B tests/judicial_power_test.py`, `node --test tests/lenses_test.js tests/audit_navigation_test.js tests/audit_visuals_test.js`. Версионные тесты прежних выпусков запускаются на их снимках.
+
+## Что изменено в v0.59
+
+Добавлены девять событий, 24 связи и десять URL: JPMorgan/SmartCash, соглашение с Plaid, сценарии BIS и SAFE, пилот Visa, каталог Shopify, испытание AP2, опрос BoE/FCA и августовская отмена запрета Comet. Мартовская судебная карточка обновлена без изменения даты; две старые подписи связей уточнены с сохранением их истории. Апелляция также привязана как ограничивающее свидетельство к тезису о контроле доступа.
+
+Финансовая арка расширена до клиентского доступа, платёжных полномочий и устойчивости. Новых арок и тезисов нет. Сохранены все 632 прежних события, 1559 рёбер графа и 977 URL. Сценарии не выданы за отток депозитов, лабораторное испытание за взлом банка, а возможная защита доходов за установленный мотив ограничений.
+
+English: nine records cover bank access, payment pilots, agent-facing catalogues, financial scenarios and an appellate limit on platform control. The March injunction remains historical evidence; its August vacatur is a separate event. All previous IDs, edge topology and source URLs are retained.
+
+[Источники, отбор и проверки v0.59](review/agent-commerce-banking-2026-11-15/README.md).
+
+Проверка исторического v0.59: `python3 -B tests/agent_commerce_test.py` на соответствующем снимке.
 
 ## Что изменено в v0.58
 
@@ -15,7 +37,7 @@ English: forty records and three scoped analytical claims extend the existing vi
 
 [Отбор, ограничения и проверки](review/economy-science-2026-11-15/README.md) · [Черновик «Полезность ИИ и цена контроля»](review/utility-obligations-control-2026-11-15/article-ru.md).
 
-Текущие команды: `python3 -B scripts/build.py`, `python3 -B scripts/validate.py`, `python3 -B tests/economy_science_test.py`, `node --test tests/lenses_test.js tests/audit_navigation_test.js tests/audit_visuals_test.js`. Версионные тесты прежних выпусков запускаются на их снимках.
+Проверка исторического v0.58: `python3 -B tests/economy_science_test.py` на соответствующем снимке.
 
 ## Что изменено в v0.57
 

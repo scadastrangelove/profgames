@@ -580,8 +580,16 @@ function researchMetadata(e){
  if(alist(e.historical_versions).length)html+='<details><summary>'+tx('Предыдущая версия исследования','Previous study version')+'</summary>'+e.historical_versions.map(function(v){return'<p><b>'+esc(v.date)+'</b> '+esc(lf(v,'summary'))+'</p>';}).join('')+'</details>';
  return html+'</section>';
 }
+function legalPhaseLabel(phase){
+ var labels={complaint_filed:['Иск подан; решение по требованиям в проверенных источниках не установлено','Complaint filed; no grant of relief established in reviewed sources'],remedies_order:['Судебные меры предписаны','Remedies ordered'],implementation_report:['Отчёт об исполнении','Implementation report'],district_court_ruling:['Решение окружного суда','District court ruling'],appellate_ruling:['Апелляционное решение','Appellate ruling'],first_instance_nonfinal:['Первая инстанция; решение не окончательное','First instance; judgment not final'],appeal_pending:['Обжалование продолжается','Appeal pending'],historical_ruling:['Историческое решение; полный ход дела не отслежен','Historical ruling; full case history not tracked'],historical_order_vacated:['Исторический приказ отменён','Historical order vacated']};
+ var value=labels[phase];return value?tx(value[0],value[1]):tx('Стадия не установлена','Stage not established');
+}
+function legalMetadata(e){
+ var p=e.legal_proceeding;if(!p)return '';
+ return '<section class="block legal-metadata"><h3>'+tx('Судебное производство','Legal proceedings')+'</h3><p><b>'+esc(legalPhaseLabel(p.phase))+'</b></p><p>'+esc([p.court,p.case_number].filter(Boolean).join(' · '))+'</p><dl><dt>'+tx('Требования','Requested relief')+'</dt><dd>'+esc(lf(p,'relief_requested'))+'</dd><dt>'+tx('Установленный результат','Established outcome')+'</dt><dd>'+esc(lf(p,'outcome'))+'</dd></dl><p class="small">'+tx('Срез источников: ','Sources reviewed as of: ')+esc(p.status_as_of)+'. '+tx('Фактическое исполнение независимо не установлено.','Implementation not independently established.')+'</p></section>';
+}
 function metadataBlock(e){
- var html=researchMetadata(e);
+ var html=legalMetadata(e)+researchMetadata(e);
  if(e.primary_domain_id){
   html+='<section class="block governance-card"><h3>'+tx('Тип, сила и область применения','Type, force and scope')+'</h3><dl class="governance-grid">';
   [[tx('Документ / событие','Document / event'),vocab('artifact_kinds',e.artifact_kind)],[tx('Нормативная сила','Normative force'),vocab('normative_forces',e.normative_force)],[tx('Стадия','Stage'),vocab('implementation_stages',e.implementation_stage)],[tx('Основной домен','Primary domain'),lf(cyberDomainMeta(e.primary_domain_id),'label')]].forEach(function(x){html+='<div><dt>'+esc(x[0])+'</dt><dd>'+esc(x[1])+'</dd></div>';});
@@ -838,7 +846,7 @@ function lensViews(){return alist((D.crosscuttingViews||{}).views);}
 function lensDefinition(){return lensViews().find(function(v){return v.id===lensState.view;})||lensViews()[0];}
 function lensTrackMatches(e,t){
  var ids=alist(e.arcIds);
- return alist(t.arc_ids).some(function(id){return ids.includes(id);})&&alist(t.required_arc_ids).every(function(id){return ids.includes(id);})&&(!alist(t.outcome_stages).length||t.outcome_stages.includes(e.research_outcome_stage));
+ return alist(t.arc_ids).some(function(id){return ids.includes(id);})&&alist(t.required_arc_ids).every(function(id){return ids.includes(id);})&&(!alist(t.outcome_stages).length||t.outcome_stages.includes(e.research_outcome_stage))&&(!alist(t.legal_topics).length||alist(t.legal_topics).some(function(topic){return alist(e.legal_topics).includes(topic);}));
 }
 function lensTracks(e,v){return v.tracks.filter(function(t){return lensTrackMatches(e,t);});}
 function lensAllEvents(v){return EV.filter(function(e){return lensTracks(e,v).length;});}
@@ -939,7 +947,7 @@ function lensCard(e,v){
  var geo=lensGeos(e).join(' · '),caveat=lf(e,'caveat')||alist(lf(e,'caveats')).join(' ');
  return '<article class="lens-record" style="--track-color:'+tracks[0].color+'"><div class="lens-record-meta"><time>'+esc(e.date)+'</time><span>'+esc(geo||tx('География не указана','Geography unspecified'))+'</span></div>'+
  '<h4><button type="button" data-kind="event" data-id="'+esc(e.id)+'">'+esc(e.title)+'</button></h4><p>'+esc(lf(e,'safe_wording')||lf(e,'summary'))+'</p>'+
- '<div class="lens-evidence">'+esc(stage||contexts||tx('Тип не указан','Type unspecified'))+' · '+esc(atlasStatusLabel(e.status))+'</div>'+
+ '<div class="lens-evidence">'+esc(e.legal_proceeding?legalPhaseLabel(e.legal_proceeding.phase):stage||contexts||tx('Тип не указан','Type unspecified'))+' · '+esc(atlasStatusLabel(e.status))+'</div>'+
  (caveat?'<details><summary>'+tx('Границы результата','Scope and limitations')+'</summary><p>'+esc(caveat)+'</p></details>':'')+
  '<div class="lens-record-footer"><span>'+esc(tracks.map(function(t){return lf(t,'label');}).join(' · '))+'</span><span>'+alist(e.sources).length+' '+tx('ист.','sources')+'</span></div></article>';
 }

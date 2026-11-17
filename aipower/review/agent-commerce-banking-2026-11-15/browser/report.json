@@ -1,0 +1,15 @@
+{
+  "assertions": 145,
+  "errors": [],
+  "screenshots": [
+    "ru-economy-1440.png",
+    "ru-economy-390.png",
+    "ru-delegation-1440.png",
+    "ru-delegation-390.png",
+    "en-economy-1440.png",
+    "en-economy-390.png",
+    "en-delegation-1440.png",
+    "en-delegation-390.png"
+  ],
+  "passed": true
+}

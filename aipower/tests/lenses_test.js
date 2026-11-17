@@ -29,6 +29,15 @@ for(const lang of ['ru','en']){
   assert.equal(c.lensTrackMatches({arcIds:t.arc_ids},t),false);
   assert.equal(c.lensTrackMatches({arcIds:[...t.arc_ids,...t.required_arc_ids]},t),true);
  });
+ test(lang+' courts uses explicit legal topics, not titles or all governance events',()=>{
+  const c=context(d),v=c.lensViews().find(v=>v.id==='courts');
+  assert.equal(c.lensAllEvents(v).length,12);
+  for(const t of v.tracks){
+   assert.equal(c.lensTrackMatches({arcIds:t.arc_ids,title:'Court judgment lawsuit'},t),false);
+   assert.equal(c.lensTrackMatches({arcIds:t.arc_ids,legal_topics:t.legal_topics,title:'Unrelated'},t),true);
+   assert.ok(c.lensAllEvents(v).some(e=>c.lensTrackMatches(e,t)));
+  }
+ });
  test(lang+' delegation gates outcomes without classifying by title',()=>{
   const c=context(d),view=c.lensViews().find(v=>v.id==='delegation'),t=view.tracks.find(t=>t.id==='human_verification');
   for(const outcome of ['physical_lab_validation','employment_hiring_distribution','job_posting_demand_not_employment','exposure_not_realized_effect']){
